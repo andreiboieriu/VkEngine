@@ -405,6 +405,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
+  /usr/include/vulkan/vk_enum_string_helper.h \
   /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \

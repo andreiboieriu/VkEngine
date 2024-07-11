@@ -5,6 +5,13 @@
 
 #include "vk_types.h"
 
+struct FrameData {
+	VkCommandPool commandPool;
+	VkCommandBuffer mainCommandBuffer; 
+};
+
+constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
+
 class VulkanEngine {
 public:
 	static VulkanEngine& get();
@@ -20,6 +27,10 @@ public:
 
 	//run main loop
 	void run();
+
+	FrameData& getCurrentFrame() {
+		return mFrames[mFrameNumber % MAX_FRAMES_IN_FLIGHT];
+	}
 
 private:
 
@@ -60,6 +71,10 @@ private:
 	bool mUseValidationLayers = true;
 
 	int mFrameNumber = 0;
+
+	FrameData mFrames[MAX_FRAMES_IN_FLIGHT];
+	VkQueue mGraphicsQueue;
+	uint32_t mGraphicsQueueFamily;
 
 	// window size basically
 	VkExtent2D mWindowExtent = {1600, 900};

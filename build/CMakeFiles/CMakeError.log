@@ -1,17 +1,17 @@
 Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_X86 failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4f394/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4f394.dir/build.make CMakeFiles/cmTC_4f394.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_274ac/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_274ac.dir/build.make CMakeFiles/cmTC_274ac.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4f394.dir/src.c.o
-/usr/bin/clang -DCHECK_CPU_ARCHITECTURE_X86   -MD -MT CMakeFiles/cmTC_4f394.dir/src.c.o -MF CMakeFiles/cmTC_4f394.dir/src.c.o.d -o CMakeFiles/cmTC_4f394.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_274ac.dir/src.c.o
+/usr/bin/clang -DCHECK_CPU_ARCHITECTURE_X86   -MD -MT CMakeFiles/cmTC_274ac.dir/src.c.o -MF CMakeFiles/cmTC_274ac.dir/src.c.o.d -o CMakeFiles/cmTC_274ac.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:6:3: error: use of undeclared identifier 'choke'
   choke
   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_4f394.dir/build.make:79: CMakeFiles/cmTC_4f394.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_274ac.dir/build.make:79: CMakeFiles/cmTC_274ac.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_4f394/fast] Error 2
+gmake: *** [Makefile:127: cmTC_274ac/fast] Error 2
 
 
 Source file was:
@@ -27,17 +27,17 @@ int main(int argc, char *argv[]) {
 Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_ARM32 failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_de407/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_de407.dir/build.make CMakeFiles/cmTC_de407.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ab57f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ab57f.dir/build.make CMakeFiles/cmTC_ab57f.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_de407.dir/src.c.o
-/usr/bin/clang -DCHECK_CPU_ARCHITECTURE_ARM32   -MD -MT CMakeFiles/cmTC_de407.dir/src.c.o -MF CMakeFiles/cmTC_de407.dir/src.c.o.d -o CMakeFiles/cmTC_de407.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_ab57f.dir/src.c.o
+/usr/bin/clang -DCHECK_CPU_ARCHITECTURE_ARM32   -MD -MT CMakeFiles/cmTC_ab57f.dir/src.c.o -MF CMakeFiles/cmTC_ab57f.dir/src.c.o.d -o CMakeFiles/cmTC_ab57f.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:6:3: error: use of undeclared identifier 'choke'
   choke
   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_de407.dir/build.make:79: CMakeFiles/cmTC_de407.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_ab57f.dir/build.make:79: CMakeFiles/cmTC_ab57f.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_de407/fast] Error 2
+gmake: *** [Makefile:127: cmTC_ab57f/fast] Error 2
 
 
 Source file was:
@@ -53,17 +53,17 @@ int main(int argc, char *argv[]) {
 Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_ARM64 failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2d2a6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2d2a6.dir/build.make CMakeFiles/cmTC_2d2a6.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_76d66/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_76d66.dir/build.make CMakeFiles/cmTC_76d66.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2d2a6.dir/src.c.o
-/usr/bin/clang -DCHECK_CPU_ARCHITECTURE_ARM64   -MD -MT CMakeFiles/cmTC_2d2a6.dir/src.c.o -MF CMakeFiles/cmTC_2d2a6.dir/src.c.o.d -o CMakeFiles/cmTC_2d2a6.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_76d66.dir/src.c.o
+/usr/bin/clang -DCHECK_CPU_ARCHITECTURE_ARM64   -MD -MT CMakeFiles/cmTC_76d66.dir/src.c.o -MF CMakeFiles/cmTC_76d66.dir/src.c.o.d -o CMakeFiles/cmTC_76d66.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:6:3: error: use of undeclared identifier 'choke'
   choke
   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_2d2a6.dir/build.make:79: CMakeFiles/cmTC_2d2a6.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_76d66.dir/build.make:79: CMakeFiles/cmTC_76d66.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_2d2a6/fast] Error 2
+gmake: *** [Makefile:127: cmTC_76d66/fast] Error 2
 
 
 Source file was:
@@ -79,17 +79,17 @@ int main(int argc, char *argv[]) {
 Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_LOONGARCH64 failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2fba2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2fba2.dir/build.make CMakeFiles/cmTC_2fba2.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_249d5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_249d5.dir/build.make CMakeFiles/cmTC_249d5.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2fba2.dir/src.c.o
-/usr/bin/clang -DCHECK_CPU_ARCHITECTURE_LOONGARCH64   -MD -MT CMakeFiles/cmTC_2fba2.dir/src.c.o -MF CMakeFiles/cmTC_2fba2.dir/src.c.o.d -o CMakeFiles/cmTC_2fba2.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_249d5.dir/src.c.o
+/usr/bin/clang -DCHECK_CPU_ARCHITECTURE_LOONGARCH64   -MD -MT CMakeFiles/cmTC_249d5.dir/src.c.o -MF CMakeFiles/cmTC_249d5.dir/src.c.o.d -o CMakeFiles/cmTC_249d5.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:6:3: error: use of undeclared identifier 'choke'
   choke
   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_2fba2.dir/build.make:79: CMakeFiles/cmTC_2fba2.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_249d5.dir/build.make:79: CMakeFiles/cmTC_249d5.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_2fba2/fast] Error 2
+gmake: *** [Makefile:127: cmTC_249d5/fast] Error 2
 
 
 Source file was:
@@ -105,10 +105,10 @@ int main(int argc, char *argv[]) {
 Performing C SOURCE FILE Test HAVE_ALTIVEC_H_HDR failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_60fb5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_60fb5.dir/build.make CMakeFiles/cmTC_60fb5.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_41dba/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_41dba.dir/build.make CMakeFiles/cmTC_41dba.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_60fb5.dir/src.c.o
-/usr/bin/clang -DHAVE_ALTIVEC_H_HDR  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -maltivec -MD -MT CMakeFiles/cmTC_60fb5.dir/src.c.o -MF CMakeFiles/cmTC_60fb5.dir/src.c.o.d -o CMakeFiles/cmTC_60fb5.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_41dba.dir/src.c.o
+/usr/bin/clang -DHAVE_ALTIVEC_H_HDR  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -maltivec -MD -MT CMakeFiles/cmTC_41dba.dir/src.c.o -MF CMakeFiles/cmTC_41dba.dir/src.c.o.d -o CMakeFiles/cmTC_41dba.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 clang: warning: argument unused during compilation: '-maltivec' [-Wunused-command-line-argument]
 In file included from /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:2:
 /usr/lib/llvm-14/lib/clang/14.0.0/include/altivec.h:13:2: error: "AltiVec support not enabled"
@@ -173,9 +173,9 @@ static __inline__ vector unsigned short __ATTRS_o_ai
                   ^
 fatal error: too many errors emitted, stopping now [-ferror-limit=]
 20 errors generated.
-gmake[1]: *** [CMakeFiles/cmTC_60fb5.dir/build.make:79: CMakeFiles/cmTC_60fb5.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_41dba.dir/build.make:79: CMakeFiles/cmTC_41dba.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_60fb5/fast] Error 2
+gmake: *** [Makefile:127: cmTC_41dba/fast] Error 2
 
 
 Source file was:
@@ -188,10 +188,10 @@ Source file was:
 Performing C SOURCE FILE Test CPU_SUPPORTS_ALTIVEC failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1322f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1322f.dir/build.make CMakeFiles/cmTC_1322f.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f858b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f858b.dir/build.make CMakeFiles/cmTC_f858b.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1322f.dir/src.c.o
-/usr/bin/clang -DCPU_SUPPORTS_ALTIVEC  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -maltivec -MD -MT CMakeFiles/cmTC_1322f.dir/src.c.o -MF CMakeFiles/cmTC_1322f.dir/src.c.o.d -o CMakeFiles/cmTC_1322f.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_f858b.dir/src.c.o
+/usr/bin/clang -DCPU_SUPPORTS_ALTIVEC  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -maltivec -MD -MT CMakeFiles/cmTC_f858b.dir/src.c.o -MF CMakeFiles/cmTC_f858b.dir/src.c.o.d -o CMakeFiles/cmTC_f858b.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 clang: warning: argument unused during compilation: '-maltivec' [-Wunused-command-line-argument]
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:2:11: error: unknown type name 'vector'
           vector unsigned int vzero() {
@@ -200,9 +200,9 @@ clang: warning: argument unused during compilation: '-maltivec' [-Wunused-comman
               return vec_splat_u32(0);
                      ^
 1 warning and 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_1322f.dir/build.make:79: CMakeFiles/cmTC_1322f.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_f858b.dir/build.make:79: CMakeFiles/cmTC_f858b.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_1322f/fast] Error 2
+gmake: *** [Makefile:127: cmTC_f858b/fast] Error 2
 
 
 Source file was:
@@ -214,34 +214,34 @@ Source file was:
 Determining if the include file libunwind.h exists failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4e35f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4e35f.dir/build.make CMakeFiles/cmTC_4e35f.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_88d3b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_88d3b.dir/build.make CMakeFiles/cmTC_88d3b.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4e35f.dir/CheckIncludeFile.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_4e35f.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_4e35f.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_4e35f.dir/CheckIncludeFile.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_88d3b.dir/CheckIncludeFile.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_88d3b.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_88d3b.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_88d3b.dir/CheckIncludeFile.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'libunwind.h' file not found
 #include <libunwind.h>
          ^~~~~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_4e35f.dir/build.make:79: CMakeFiles/cmTC_4e35f.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_88d3b.dir/build.make:79: CMakeFiles/cmTC_88d3b.dir/CheckIncludeFile.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_4e35f/fast] Error 2
+gmake: *** [Makefile:127: cmTC_88d3b/fast] Error 2
 
 
 
 Determining if the strlcpy exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_16722/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_16722.dir/build.make CMakeFiles/cmTC_16722.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3e155/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3e155.dir/build.make CMakeFiles/cmTC_3e155.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_16722.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_16722.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_16722.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_16722.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_3e155.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_3e155.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_3e155.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_3e155.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier 'strlcpy'
   return ((int*)(&strlcpy))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_16722.dir/build.make:79: CMakeFiles/cmTC_16722.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_3e155.dir/build.make:79: CMakeFiles/cmTC_3e155.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_16722/fast] Error 2
+gmake: *** [Makefile:127: cmTC_3e155/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -267,17 +267,17 @@ int main(int argc, char** argv)
 Determining if the strlcat exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_283f0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_283f0.dir/build.make CMakeFiles/cmTC_283f0.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1f14e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1f14e.dir/build.make CMakeFiles/cmTC_1f14e.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_283f0.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_283f0.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_283f0.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_283f0.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_1f14e.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_1f14e.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_1f14e.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_1f14e.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier 'strlcat'
   return ((int*)(&strlcat))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_283f0.dir/build.make:79: CMakeFiles/cmTC_283f0.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_1f14e.dir/build.make:79: CMakeFiles/cmTC_1f14e.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_283f0/fast] Error 2
+gmake: *** [Makefile:127: cmTC_1f14e/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -303,17 +303,17 @@ int main(int argc, char** argv)
 Determining if the _strrev exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c9f89/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c9f89.dir/build.make CMakeFiles/cmTC_c9f89.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_33582/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_33582.dir/build.make CMakeFiles/cmTC_33582.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c9f89.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_c9f89.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_c9f89.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_c9f89.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_33582.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_33582.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_33582.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_33582.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_strrev'
   return ((int*)(&_strrev))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_c9f89.dir/build.make:79: CMakeFiles/cmTC_c9f89.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_33582.dir/build.make:79: CMakeFiles/cmTC_33582.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_c9f89/fast] Error 2
+gmake: *** [Makefile:127: cmTC_33582/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -339,17 +339,17 @@ int main(int argc, char** argv)
 Determining if the _strupr exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f3c4b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f3c4b.dir/build.make CMakeFiles/cmTC_f3c4b.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_64e1b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_64e1b.dir/build.make CMakeFiles/cmTC_64e1b.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f3c4b.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_f3c4b.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_f3c4b.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_f3c4b.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_64e1b.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_64e1b.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_64e1b.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_64e1b.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_strupr'
   return ((int*)(&_strupr))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_f3c4b.dir/build.make:79: CMakeFiles/cmTC_f3c4b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_64e1b.dir/build.make:79: CMakeFiles/cmTC_64e1b.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_f3c4b/fast] Error 2
+gmake: *** [Makefile:127: cmTC_64e1b/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -375,17 +375,17 @@ int main(int argc, char** argv)
 Determining if the _strlwr exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6ec5b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6ec5b.dir/build.make CMakeFiles/cmTC_6ec5b.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_02604/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_02604.dir/build.make CMakeFiles/cmTC_02604.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6ec5b.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_6ec5b.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_6ec5b.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_6ec5b.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_02604.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_02604.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_02604.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_02604.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_strlwr'
   return ((int*)(&_strlwr))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_6ec5b.dir/build.make:79: CMakeFiles/cmTC_6ec5b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_02604.dir/build.make:79: CMakeFiles/cmTC_02604.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_6ec5b/fast] Error 2
+gmake: *** [Makefile:127: cmTC_02604/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -411,17 +411,17 @@ int main(int argc, char** argv)
 Determining if the itoa exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_df7f0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_df7f0.dir/build.make CMakeFiles/cmTC_df7f0.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_19d06/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_19d06.dir/build.make CMakeFiles/cmTC_19d06.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_df7f0.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_df7f0.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_df7f0.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_df7f0.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_19d06.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_19d06.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_19d06.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_19d06.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier 'itoa'
   return ((int*)(&itoa))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_df7f0.dir/build.make:79: CMakeFiles/cmTC_df7f0.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_19d06.dir/build.make:79: CMakeFiles/cmTC_19d06.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_df7f0/fast] Error 2
+gmake: *** [Makefile:127: cmTC_19d06/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -447,17 +447,17 @@ int main(int argc, char** argv)
 Determining if the _ltoa exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7ad6a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7ad6a.dir/build.make CMakeFiles/cmTC_7ad6a.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ae1e4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ae1e4.dir/build.make CMakeFiles/cmTC_ae1e4.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7ad6a.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_7ad6a.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_7ad6a.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_7ad6a.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_ae1e4.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_ae1e4.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ae1e4.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ae1e4.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_ltoa'
   return ((int*)(&_ltoa))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_7ad6a.dir/build.make:79: CMakeFiles/cmTC_7ad6a.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_ae1e4.dir/build.make:79: CMakeFiles/cmTC_ae1e4.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_7ad6a/fast] Error 2
+gmake: *** [Makefile:127: cmTC_ae1e4/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -483,17 +483,17 @@ int main(int argc, char** argv)
 Determining if the _uitoa exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_58ae5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_58ae5.dir/build.make CMakeFiles/cmTC_58ae5.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7f280/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7f280.dir/build.make CMakeFiles/cmTC_7f280.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_58ae5.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_58ae5.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_58ae5.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_58ae5.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_7f280.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_7f280.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_7f280.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_7f280.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_uitoa'
   return ((int*)(&_uitoa))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_58ae5.dir/build.make:79: CMakeFiles/cmTC_58ae5.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_7f280.dir/build.make:79: CMakeFiles/cmTC_7f280.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_58ae5/fast] Error 2
+gmake: *** [Makefile:127: cmTC_7f280/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -519,17 +519,17 @@ int main(int argc, char** argv)
 Determining if the _ultoa exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_80079/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_80079.dir/build.make CMakeFiles/cmTC_80079.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ce6c9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ce6c9.dir/build.make CMakeFiles/cmTC_ce6c9.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_80079.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_80079.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_80079.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_80079.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_ce6c9.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_ce6c9.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ce6c9.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ce6c9.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_ultoa'
   return ((int*)(&_ultoa))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_80079.dir/build.make:79: CMakeFiles/cmTC_80079.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_ce6c9.dir/build.make:79: CMakeFiles/cmTC_ce6c9.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_80079/fast] Error 2
+gmake: *** [Makefile:127: cmTC_ce6c9/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -555,17 +555,17 @@ int main(int argc, char** argv)
 Determining if the _i64toa exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d22e4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d22e4.dir/build.make CMakeFiles/cmTC_d22e4.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_79516/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_79516.dir/build.make CMakeFiles/cmTC_79516.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d22e4.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_d22e4.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d22e4.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d22e4.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_79516.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_79516.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_79516.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_79516.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_i64toa'
   return ((int*)(&_i64toa))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_d22e4.dir/build.make:79: CMakeFiles/cmTC_d22e4.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_79516.dir/build.make:79: CMakeFiles/cmTC_79516.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_d22e4/fast] Error 2
+gmake: *** [Makefile:127: cmTC_79516/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -591,17 +591,17 @@ int main(int argc, char** argv)
 Determining if the _ui64toa exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e0c01/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e0c01.dir/build.make CMakeFiles/cmTC_e0c01.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f122d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f122d.dir/build.make CMakeFiles/cmTC_f122d.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e0c01.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_e0c01.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_e0c01.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e0c01.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_f122d.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_f122d.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_f122d.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_f122d.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_ui64toa'
   return ((int*)(&_ui64toa))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_e0c01.dir/build.make:79: CMakeFiles/cmTC_e0c01.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_f122d.dir/build.make:79: CMakeFiles/cmTC_f122d.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_e0c01/fast] Error 2
+gmake: *** [Makefile:127: cmTC_f122d/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -627,17 +627,17 @@ int main(int argc, char** argv)
 Determining if the _stricmp exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_45db6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_45db6.dir/build.make CMakeFiles/cmTC_45db6.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_17297/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_17297.dir/build.make CMakeFiles/cmTC_17297.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_45db6.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_45db6.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_45db6.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_45db6.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_17297.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_17297.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_17297.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_17297.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_stricmp'
   return ((int*)(&_stricmp))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_45db6.dir/build.make:79: CMakeFiles/cmTC_45db6.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_17297.dir/build.make:79: CMakeFiles/cmTC_17297.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_45db6/fast] Error 2
+gmake: *** [Makefile:127: cmTC_17297/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -663,10 +663,10 @@ int main(int argc, char** argv)
 Determining if the _strnicmp exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_efbff/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_efbff.dir/build.make CMakeFiles/cmTC_efbff.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d3559/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d3559.dir/build.make CMakeFiles/cmTC_d3559.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_efbff.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_efbff.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_efbff.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_efbff.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_d3559.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_d3559.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d3559.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d3559.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_strnicmp'; did you mean 'strncmp'?
   return ((int*)(&_strnicmp))[argc];
                   ^~~~~~~~~
@@ -675,9 +675,9 @@ Building C object CMakeFiles/cmTC_efbff.dir/CheckSymbolExists.c.o
 extern int strncmp (const char *__s1, const char *__s2, size_t __n)
            ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_efbff.dir/build.make:79: CMakeFiles/cmTC_efbff.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_d3559.dir/build.make:79: CMakeFiles/cmTC_d3559.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_efbff/fast] Error 2
+gmake: *** [Makefile:127: cmTC_d3559/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -703,10 +703,10 @@ int main(int argc, char** argv)
 Determining if the _wcsdup exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_44c0b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_44c0b.dir/build.make CMakeFiles/cmTC_44c0b.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ccdb0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ccdb0.dir/build.make CMakeFiles/cmTC_ccdb0.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_44c0b.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_44c0b.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_44c0b.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_44c0b.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_ccdb0.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_ccdb0.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ccdb0.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ccdb0.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_wcsdup'; did you mean 'wcsdup'?
   return ((int*)(&_wcsdup))[argc];
                   ^~~~~~~
@@ -715,9 +715,9 @@ Building C object CMakeFiles/cmTC_44c0b.dir/CheckSymbolExists.c.o
 extern wchar_t *wcsdup (const wchar_t *__s) __THROW
                 ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_44c0b.dir/build.make:79: CMakeFiles/cmTC_44c0b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_ccdb0.dir/build.make:79: CMakeFiles/cmTC_ccdb0.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_44c0b/fast] Error 2
+gmake: *** [Makefile:127: cmTC_ccdb0/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -743,17 +743,17 @@ int main(int argc, char** argv)
 Determining if the wcslcat exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2cd2b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2cd2b.dir/build.make CMakeFiles/cmTC_2cd2b.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_61da7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_61da7.dir/build.make CMakeFiles/cmTC_61da7.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2cd2b.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_2cd2b.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_2cd2b.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_2cd2b.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_61da7.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_61da7.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_61da7.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_61da7.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier 'wcslcat'
   return ((int*)(&wcslcat))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_2cd2b.dir/build.make:79: CMakeFiles/cmTC_2cd2b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_61da7.dir/build.make:79: CMakeFiles/cmTC_61da7.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_2cd2b/fast] Error 2
+gmake: *** [Makefile:127: cmTC_61da7/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -779,17 +779,17 @@ int main(int argc, char** argv)
 Determining if the wcslcpy exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c22ac/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c22ac.dir/build.make CMakeFiles/cmTC_c22ac.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_863ca/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_863ca.dir/build.make CMakeFiles/cmTC_863ca.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c22ac.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_c22ac.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_c22ac.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_c22ac.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_863ca.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_863ca.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_863ca.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_863ca.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier 'wcslcpy'
   return ((int*)(&wcslcpy))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_c22ac.dir/build.make:79: CMakeFiles/cmTC_c22ac.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_863ca.dir/build.make:79: CMakeFiles/cmTC_863ca.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_c22ac/fast] Error 2
+gmake: *** [Makefile:127: cmTC_863ca/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -815,17 +815,17 @@ int main(int argc, char** argv)
 Determining if the _wcsicmp exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dda10/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dda10.dir/build.make CMakeFiles/cmTC_dda10.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fafa4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fafa4.dir/build.make CMakeFiles/cmTC_fafa4.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_dda10.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_dda10.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_dda10.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_dda10.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_fafa4.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_fafa4.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_fafa4.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_fafa4.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_wcsicmp'
   return ((int*)(&_wcsicmp))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_dda10.dir/build.make:79: CMakeFiles/cmTC_dda10.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_fafa4.dir/build.make:79: CMakeFiles/cmTC_fafa4.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_dda10/fast] Error 2
+gmake: *** [Makefile:127: cmTC_fafa4/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -851,10 +851,10 @@ int main(int argc, char** argv)
 Determining if the _wcsnicmp exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7ecae/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7ecae.dir/build.make CMakeFiles/cmTC_7ecae.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_808ff/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_808ff.dir/build.make CMakeFiles/cmTC_808ff.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7ecae.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_7ecae.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_7ecae.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_7ecae.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_808ff.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_808ff.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_808ff.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_808ff.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: use of undeclared identifier '_wcsnicmp'; did you mean 'wcsncmp'?
   return ((int*)(&_wcsnicmp))[argc];
                   ^~~~~~~~~
@@ -863,9 +863,9 @@ Building C object CMakeFiles/cmTC_7ecae.dir/CheckSymbolExists.c.o
 extern int wcsncmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
            ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_7ecae.dir/build.make:79: CMakeFiles/cmTC_7ecae.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_808ff.dir/build.make:79: CMakeFiles/cmTC_808ff.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_7ecae/fast] Error 2
+gmake: *** [Makefile:127: cmTC_808ff/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -891,17 +891,17 @@ int main(int argc, char** argv)
 Determining if the sysctlbyname exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1ebce/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1ebce.dir/build.make CMakeFiles/cmTC_1ebce.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_33b26/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_33b26.dir/build.make CMakeFiles/cmTC_33b26.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1ebce.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_1ebce.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_1ebce.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_1ebce.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_33b26.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_33b26.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_33b26.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_33b26.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:3:10: fatal error: 'sys/sysctl.h' file not found
 #include <sys/sysctl.h>
          ^~~~~~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_1ebce.dir/build.make:79: CMakeFiles/cmTC_1ebce.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_33b26.dir/build.make:79: CMakeFiles/cmTC_33b26.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_1ebce/fast] Error 2
+gmake: *** [Makefile:127: cmTC_33b26/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -922,17 +922,17 @@ int main(int argc, char** argv)
 Determining if the elf_aux_info exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_01c15/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_01c15.dir/build.make CMakeFiles/cmTC_01c15.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_aacf3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aacf3.dir/build.make CMakeFiles/cmTC_aacf3.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_01c15.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_01c15.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_01c15.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_01c15.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_aacf3.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_aacf3.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_aacf3.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_aacf3.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'elf_aux_info'
   return ((int*)(&elf_aux_info))[argc];
                   ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_01c15.dir/build.make:79: CMakeFiles/cmTC_01c15.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_aacf3.dir/build.make:79: CMakeFiles/cmTC_aacf3.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_01c15/fast] Error 2
+gmake: *** [Makefile:127: cmTC_aacf3/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -952,42 +952,42 @@ int main(int argc, char** argv)
 Determining if the function iconv_open exists in the iconv failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_33a29/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_33a29.dir/build.make CMakeFiles/cmTC_33a29.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c1cf1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c1cf1.dir/build.make CMakeFiles/cmTC_c1cf1.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_33a29.dir/CheckFunctionExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_33a29.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_33a29.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_33a29.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
-Linking C executable cmTC_33a29
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33a29.dir/link.txt --verbose=1
-/usr/bin/clang  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open  -D_GNU_SOURCE=1 CMakeFiles/cmTC_33a29.dir/CheckFunctionExists.c.o -o cmTC_33a29  -liconv 
+Building C object CMakeFiles/cmTC_c1cf1.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_c1cf1.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_c1cf1.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_c1cf1.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c1cf1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1cf1.dir/link.txt --verbose=1
+/usr/bin/clang  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open  -D_GNU_SOURCE=1 CMakeFiles/cmTC_c1cf1.dir/CheckFunctionExists.c.o -o cmTC_c1cf1  -liconv 
 /usr/bin/ld: cannot find -liconv: No such file or directory
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-gmake[1]: *** [CMakeFiles/cmTC_33a29.dir/build.make:100: cmTC_33a29] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_c1cf1.dir/build.make:100: cmTC_c1cf1] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_33a29/fast] Error 2
+gmake: *** [Makefile:127: cmTC_c1cf1/fast] Error 2
 
 
 
 Determining if the alloca exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_76fad/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_76fad.dir/build.make CMakeFiles/cmTC_76fad.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_98907/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_98907.dir/build.make CMakeFiles/cmTC_98907.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_76fad.dir/CheckSymbolExists.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_76fad.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_76fad.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_76fad.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_98907.dir/CheckSymbolExists.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_98907.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_98907.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_98907.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: warning: implicitly declaring library function 'alloca' with type 'void *(unsigned long)' [-Wimplicit-function-declaration]
   return ((int*)(&alloca))[argc];
                   ^
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: include the header <stdlib.h> or explicitly provide a declaration for 'alloca'
 1 warning generated.
-Linking C executable cmTC_76fad
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76fad.dir/link.txt --verbose=1
-/usr/bin/clang  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 CMakeFiles/cmTC_76fad.dir/CheckSymbolExists.c.o -o cmTC_76fad 
-/usr/bin/ld: CMakeFiles/cmTC_76fad.dir/CheckSymbolExists.c.o: in function `main':
+Linking C executable cmTC_98907
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98907.dir/link.txt --verbose=1
+/usr/bin/clang  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 CMakeFiles/cmTC_98907.dir/CheckSymbolExists.c.o -o cmTC_98907 
+/usr/bin/ld: CMakeFiles/cmTC_98907.dir/CheckSymbolExists.c.o: in function `main':
 CheckSymbolExists.c:(.text+0x19): undefined reference to `alloca'
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-gmake[1]: *** [CMakeFiles/cmTC_76fad.dir/build.make:100: cmTC_76fad] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_98907.dir/build.make:100: cmTC_98907] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_76fad/fast] Error 2
+gmake: *** [Makefile:127: cmTC_98907/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1007,35 +1007,35 @@ int main(int argc, char** argv)
 Determining if the include file audio/audiolib.h exists failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_03a7d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_03a7d.dir/build.make CMakeFiles/cmTC_03a7d.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4d90f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4d90f.dir/build.make CMakeFiles/cmTC_4d90f.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_03a7d.dir/CheckIncludeFile.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_03a7d.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_03a7d.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_03a7d.dir/CheckIncludeFile.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_4d90f.dir/CheckIncludeFile.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_4d90f.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_4d90f.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_4d90f.dir/CheckIncludeFile.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'audio/audiolib.h' file not found
 #include <audio/audiolib.h>
          ^~~~~~~~~~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_03a7d.dir/build.make:79: CMakeFiles/cmTC_03a7d.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_4d90f.dir/build.make:79: CMakeFiles/cmTC_4d90f.dir/CheckIncludeFile.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_03a7d/fast] Error 2
+gmake: *** [Makefile:127: cmTC_4d90f/fast] Error 2
 
 
 
 Performing C SOURCE FILE Test HAVE_RPI failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e657f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e657f.dir/build.make CMakeFiles/cmTC_e657f.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8d4f0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8d4f0.dir/build.make CMakeFiles/cmTC_8d4f0.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e657f.dir/src.c.o
-/usr/bin/clang -DHAVE_RPI  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1  -I/opt/vc/include -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux/  -L/opt/vc/lib -MD -MT CMakeFiles/cmTC_e657f.dir/src.c.o -MF CMakeFiles/cmTC_e657f.dir/src.c.o.d -o CMakeFiles/cmTC_e657f.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_8d4f0.dir/src.c.o
+/usr/bin/clang -DHAVE_RPI  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1  -I/opt/vc/include -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux/  -L/opt/vc/lib -MD -MT CMakeFiles/cmTC_8d4f0.dir/src.c.o -MF CMakeFiles/cmTC_8d4f0.dir/src.c.o.d -o CMakeFiles/cmTC_8d4f0.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 clang: warning: argument unused during compilation: '-L/opt/vc/lib' [-Wunused-command-line-argument]
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: 'bcm_host.h' file not found
         #include <bcm_host.h>
                  ^~~~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_e657f.dir/build.make:79: CMakeFiles/cmTC_e657f.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_8d4f0.dir/build.make:79: CMakeFiles/cmTC_8d4f0.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_e657f/fast] Error 2
+gmake: *** [Makefile:127: cmTC_8d4f0/fast] Error 2
 
 
 Source file was:
@@ -1049,10 +1049,10 @@ Source file was:
 Determining if the libdecor_frame_get_max_content_size exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ad495/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ad495.dir/build.make CMakeFiles/cmTC_ad495.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a071e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a071e.dir/build.make CMakeFiles/cmTC_a071e.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ad495.dir/CheckSymbolExists.c.o
-/usr/bin/clang  -I/usr/include/libdecor-0 -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_ad495.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ad495.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ad495.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_a071e.dir/CheckSymbolExists.c.o
+/usr/bin/clang  -I/usr/include/libdecor-0 -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_a071e.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_a071e.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_a071e.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'libdecor_frame_get_max_content_size'; did you mean 'libdecor_frame_set_max_content_size'?
   return ((int*)(&libdecor_frame_get_max_content_size))[argc];
                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1061,9 +1061,9 @@ Building C object CMakeFiles/cmTC_ad495.dir/CheckSymbolExists.c.o
 libdecor_frame_set_max_content_size(struct libdecor_frame *frame,
 ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_ad495.dir/build.make:79: CMakeFiles/cmTC_ad495.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_a071e.dir/build.make:79: CMakeFiles/cmTC_a071e.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_ad495/fast] Error 2
+gmake: *** [Makefile:127: cmTC_a071e/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1083,10 +1083,10 @@ int main(int argc, char** argv)
 Determining if the libdecor_frame_get_min_content_size exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a6090/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a6090.dir/build.make CMakeFiles/cmTC_a6090.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2e149/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2e149.dir/build.make CMakeFiles/cmTC_2e149.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a6090.dir/CheckSymbolExists.c.o
-/usr/bin/clang  -I/usr/include/libdecor-0 -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_a6090.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_a6090.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_a6090.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_2e149.dir/CheckSymbolExists.c.o
+/usr/bin/clang  -I/usr/include/libdecor-0 -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_2e149.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_2e149.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_2e149.dir/CheckSymbolExists.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'libdecor_frame_get_min_content_size'; did you mean 'libdecor_frame_set_min_content_size'?
   return ((int*)(&libdecor_frame_get_min_content_size))[argc];
                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1095,9 +1095,9 @@ Building C object CMakeFiles/cmTC_a6090.dir/CheckSymbolExists.c.o
 libdecor_frame_set_min_content_size(struct libdecor_frame *frame,
 ^
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_a6090.dir/build.make:79: CMakeFiles/cmTC_a6090.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_2e149.dir/build.make:79: CMakeFiles/cmTC_2e149.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_a6090/fast] Error 2
+gmake: *** [Makefile:127: cmTC_2e149/fast] Error 2
 
 
 File /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1117,17 +1117,17 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test HAVE_VIVANTE_VDK failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_77dd6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_77dd6.dir/build.make CMakeFiles/cmTC_77dd6.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_51e43/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_51e43.dir/build.make CMakeFiles/cmTC_51e43.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_77dd6.dir/src.c.o
-/usr/bin/clang -DHAVE_VIVANTE_VDK  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_77dd6.dir/src.c.o -MF CMakeFiles/cmTC_77dd6.dir/src.c.o.d -o CMakeFiles/cmTC_77dd6.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_51e43.dir/src.c.o
+/usr/bin/clang -DHAVE_VIVANTE_VDK  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_51e43.dir/src.c.o -MF CMakeFiles/cmTC_51e43.dir/src.c.o.d -o CMakeFiles/cmTC_51e43.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: 'gc_vdk.h' file not found
         #include <gc_vdk.h>
                  ^~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_77dd6.dir/build.make:79: CMakeFiles/cmTC_77dd6.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_51e43.dir/build.make:79: CMakeFiles/cmTC_51e43.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_77dd6/fast] Error 2
+gmake: *** [Makefile:127: cmTC_51e43/fast] Error 2
 
 
 Source file was:
@@ -1137,17 +1137,17 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_VIVANTE_EGL_FB failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9ba61/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9ba61.dir/build.make CMakeFiles/cmTC_9ba61.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_293d3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_293d3.dir/build.make CMakeFiles/cmTC_293d3.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9ba61.dir/src.c.o
-/usr/bin/clang -DHAVE_VIVANTE_EGL_FB  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_9ba61.dir/src.c.o -MF CMakeFiles/cmTC_9ba61.dir/src.c.o.d -o CMakeFiles/cmTC_9ba61.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_293d3.dir/src.c.o
+/usr/bin/clang -DHAVE_VIVANTE_EGL_FB  -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_293d3.dir/src.c.o -MF CMakeFiles/cmTC_293d3.dir/src.c.o.d -o CMakeFiles/cmTC_293d3.dir/src.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c:4:18: fatal error: 'EGL/eglvivante.h' file not found
         #include <EGL/eglvivante.h>
                  ^~~~~~~~~~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_9ba61.dir/build.make:79: CMakeFiles/cmTC_9ba61.dir/src.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_293d3.dir/build.make:79: CMakeFiles/cmTC_293d3.dir/src.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_9ba61/fast] Error 2
+gmake: *** [Makefile:127: cmTC_293d3/fast] Error 2
 
 
 Source file was:
@@ -1159,17 +1159,17 @@ Source file was:
 Determining if files pthread_np.h exist failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8a537/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8a537.dir/build.make CMakeFiles/cmTC_8a537.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ab60a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ab60a.dir/build.make CMakeFiles/cmTC_ab60a.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8a537.dir/HAVE_PTHREAD_NP_H.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -D_REENTRANT -pthread -MD -MT CMakeFiles/cmTC_8a537.dir/HAVE_PTHREAD_NP_H.c.o -MF CMakeFiles/cmTC_8a537.dir/HAVE_PTHREAD_NP_H.c.o.d -o CMakeFiles/cmTC_8a537.dir/HAVE_PTHREAD_NP_H.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+Building C object CMakeFiles/cmTC_ab60a.dir/HAVE_PTHREAD_NP_H.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos"  -D_GNU_SOURCE=1 -D_REENTRANT -pthread -MD -MT CMakeFiles/cmTC_ab60a.dir/HAVE_PTHREAD_NP_H.c.o -MF CMakeFiles/cmTC_ab60a.dir/HAVE_PTHREAD_NP_H.c.o.d -o CMakeFiles/cmTC_ab60a.dir/HAVE_PTHREAD_NP_H.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:2:10: fatal error: 'pthread_np.h' file not found
 #include <pthread_np.h>
          ^~~~~~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_8a537.dir/build.make:79: CMakeFiles/cmTC_8a537.dir/HAVE_PTHREAD_NP_H.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_ab60a.dir/build.make:79: CMakeFiles/cmTC_ab60a.dir/HAVE_PTHREAD_NP_H.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_8a537/fast] Error 2
+gmake: *** [Makefile:127: cmTC_ab60a/fast] Error 2
 
 
 Source:
@@ -1182,17 +1182,17 @@ int main(void){return 0;}
 Determining if the include file samplerate.h exists failed with the following output:
 Change Dir: /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c9dbc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c9dbc.dir/build.make CMakeFiles/cmTC_c9dbc.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_aaa7a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aaa7a.dir/build.make CMakeFiles/cmTC_aaa7a.dir/build
 gmake[1]: Entering directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c9dbc.dir/CheckIncludeFile.c.o
-/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -DHAVE_LINUX_VERSION_H  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_c9dbc.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_c9dbc.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_c9dbc.dir/CheckIncludeFile.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_aaa7a.dir/CheckIncludeFile.c.o
+/usr/bin/clang   -idirafter "/home/unclegoga/Development/VkEngine/third_party/SDL/src/video/khronos" -DHAVE_LINUX_VERSION_H  -D_GNU_SOURCE=1 -MD -MT CMakeFiles/cmTC_aaa7a.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_aaa7a.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_aaa7a.dir/CheckIncludeFile.c.o -c /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'samplerate.h' file not found
 #include <samplerate.h>
          ^~~~~~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_c9dbc.dir/build.make:79: CMakeFiles/cmTC_c9dbc.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_aaa7a.dir/build.make:79: CMakeFiles/cmTC_aaa7a.dir/CheckIncludeFile.c.o] Error 1
 gmake[1]: Leaving directory '/home/unclegoga/Development/VkEngine/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_c9dbc/fast] Error 2
+gmake: *** [Makefile:127: cmTC_aaa7a/fast] Error 2
 
 
 

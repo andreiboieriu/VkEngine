@@ -424,6 +424,7 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/vulkan/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
@@ -1273,6 +1274,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/vulkan/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
@@ -1704,6 +1706,7 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/vulkan/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
@@ -2135,6 +2138,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/vulkan/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
@@ -3137,6 +3141,7 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/vulkan/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
@@ -3980,6 +3985,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/vulkan/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
@@ -4060,6 +4066,8 @@ third_party/SDL/include/SDL2/SDL_keyboard.h:
 third_party/SDL/include/SDL2/SDL_surface.h:
 
 third_party/SDL/include/SDL2/SDL_rect.h:
+
+third_party/SDL/include/SDL2/SDL_pixels.h:
 
 ../third_party/glm/glm/detail/setup.hpp:
 
@@ -4218,6 +4226,8 @@ third_party/SDL/include/SDL2/SDL_clipboard.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/vulkan/vk_enum_string_helper.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -5052,8 +5062,6 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 ../src/main.cpp:
 
 ../src/vk_descriptors.cpp:
-
-third_party/SDL/include/SDL2/SDL_pixels.h:
 
 ../src/vk_engine.cpp:
 

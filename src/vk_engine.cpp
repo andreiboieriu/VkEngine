@@ -93,7 +93,11 @@ void VulkanEngine::initVulkan() {
 
     // get device handles
     mDevice = vkbDevice.device;
-    mPhysicalDevice = vkbPhysicalDevice.physical_device; 
+    mPhysicalDevice = vkbPhysicalDevice.physical_device;
+
+    // get graphics queue using vkb
+    mGraphicsQueue = vkbDevice.get_queue(vkb::QueueType::graphics).value();
+    mGraphicsQueueFamily = vkbDevice.get_queue_index(vkb::QueueType::graphics).value();
 }
 
 void VulkanEngine::initSwapchain() {
@@ -135,7 +139,23 @@ void VulkanEngine::destroySwapchain() {
 }
 
 void VulkanEngine::initCommands() {
+    // create command pool for graphics queue commands
+    VkCommandPoolCreateInfo commandPoolInfo = vkinit::command_pool_create_info(
+        mGraphicsQueueFamily,
+        VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT
+        );
 
+    for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        VK_CHECK(vkCreateCommandPool(mDevice, &commandPoolInfo, nullptr, &mFrames[i].commandPool));
+
+        // allocate command buffer from pool
+        VkCommandBufferAllocateInfo cmdAllocInfo = vkinit::command_buffer_allocate_info(
+            mFrames[i].commandPool,
+            1
+            );
+
+        VK_CHECK(vkAllocateCommandBuffers(mDevice, &cmdAllocInfo, &mFrames[i].mainCommandBuffer));
+    }
 }
 
 void VulkanEngine::initSyncStructs() {
@@ -144,17 +164,27 @@ void VulkanEngine::initSyncStructs() {
 
 void VulkanEngine::cleanup()
 {
-    if (mIsInitialized) {
-        destroySwapchain();
-
-        vkDestroySurfaceKHR(mInstance, mSurface, nullptr);
-        vkDestroyDevice(mDevice, nullptr);
-
-        vkb::destroy_debug_utils_messenger(mInstance, mDebugMessenger);
-        vkDestroyInstance(mInstance, nullptr);
-
-        SDL_DestroyWindow(mWindow);
+    if (!mIsInitialized) {
+        return;
     }
+
+    // wait until gpu stops
+    vkDeviceWaitIdle(mDevice);
+
+    // free command pools
+    for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroyCommandPool(mDevice, mFrames[i].commandPool, nullptr);
+    }
+
+    destroySwapchain();
+
+    vkDestroySurfaceKHR(mInstance, mSurface, nullptr);
+    vkDestroyDevice(mDevice, nullptr);
+
+    vkb::destroy_debug_utils_messenger(mInstance, mDebugMessenger);
+    vkDestroyInstance(mInstance, nullptr);
+
+    SDL_DestroyWindow(mWindow);
 
     // clear engine pointer
     gLoadedEngine = nullptr;
