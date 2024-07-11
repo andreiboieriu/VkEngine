@@ -2288,6 +2288,8 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o
  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h
  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h
  /home/unclegoga/Development/VkEngine/src/vk_initializers.h
+ /home/unclegoga/Development/VkEngine/third_party/vkbootstrap/VkBootstrap.h
+ /home/unclegoga/Development/VkEngine/third_party/vkbootstrap/VkBootstrapDispatch.h
  /usr/include/c++/12/chrono
  /usr/include/c++/12/bits/chrono.h
  /usr/include/c++/12/ratio

@@ -7,15 +7,7 @@
 
 class VulkanEngine {
 public:
-
-	bool _isInitialized{ false };
-	int _frameNumber {0};
-	bool stop_rendering{ false };
-	VkExtent2D _windowExtent{ 1700 , 900 };
-
-	struct SDL_Window* _window{ nullptr };
-
-	static VulkanEngine& Get();
+	static VulkanEngine& get();
 
 	//initializes everything in the engine
 	void init();
@@ -28,4 +20,39 @@ public:
 
 	//run main loop
 	void run();
+
+private:
+
+	void initVulkan();
+	void initSwapchain();
+	void initCommands();
+	void initSyncStructs();
+
+	// Vulkan library handle
+	VkInstance mInstance;
+
+	// Vulkan debug output handle
+	VkDebugUtilsMessengerEXT mDebugMessenger;
+
+	// chosen GPU
+	VkPhysicalDevice mPhysicalDevice;
+
+	// Vulkan logical device
+	VkDevice mDevice;
+
+	// Vulkan window surface
+	VkSurfaceKHR mSurface;
+
+	// flags
+	bool mIsInitialized = false;
+	bool mStopRendering = false;
+	bool mUseValidationLayers = true;
+
+	int mFrameNumber = 0;
+
+	// window size basically
+	VkExtent2D mWindowExtent = {1600, 900};
+
+	// sdl window handle
+	struct SDL_Window* mWindow = nullptr;
 };

@@ -185,7 +185,7 @@ struct GenericFeatureChain {
     template <typename T> void add(T const& features) noexcept {
         // If this struct is already in the list, combine it
         for (auto& node : nodes) {
-            if (features.sType == node.sType) {
+            if (static_cast<VkStructureType>(features.sType) == node.sType) {
                 node.combine(features);
                 return;
             }
@@ -194,7 +194,8 @@ struct GenericFeatureChain {
         nodes.push_back(features);
     }
 
-    bool match(GenericFeatureChain const& extension_requested) const noexcept;
+    bool match_all(GenericFeatureChain const& extension_requested) const noexcept;
+    bool find_and_match(GenericFeatureChain const& extension_requested) const noexcept;
 
     void chain_up(VkPhysicalDeviceFeatures2& feats2) noexcept;
 
@@ -528,6 +529,11 @@ struct PhysicalDevice {
     // Returns true if an extension should be enabled on the device
     bool is_extension_present(const char* extension) const;
 
+    // Returns true if all the features are present
+    template <typename T> bool are_extension_features_present(T const& features) const {
+        return is_features_node_present(detail::GenericFeaturesPNextNode(features));
+    }
+
     // If the given extension is present, make the extension be enabled on the device.
     // Returns true the extension is present.
     bool enable_extension_if_present(const char* extension);
@@ -537,11 +543,11 @@ struct PhysicalDevice {
     bool enable_extensions_if_present(const std::vector<const char*>& extensions);
 
     // If the features from VkPhysicalDeviceFeatures are all present, make all of the features be enable on the device.
-    // Returns true all of the features are present.
+    // Returns true if all the features are present.
     bool enable_features_if_present(const VkPhysicalDeviceFeatures& features_to_enable);
 
     // If the features from the provided features struct are all present, make all of the features be enable on the
-    // device. Returns true all of the features are present.
+    // device. Returns true if all of the features are present.
     template <typename T> bool enable_extension_features_if_present(T const& features_check) {
         return enable_features_node_if_present(detail::GenericFeaturesPNextNode(features_check));
     }
@@ -564,6 +570,7 @@ struct PhysicalDevice {
     friend class PhysicalDeviceSelector;
     friend class DeviceBuilder;
 
+    bool is_features_node_present(detail::GenericFeaturesPNextNode const& node) const;
     bool enable_features_node_if_present(detail::GenericFeaturesPNextNode const& node);
 };
 
@@ -664,15 +671,15 @@ class PhysicalDeviceSelector {
 #if defined(VKB_VK_API_VERSION_1_2)
     // Require a physical device which supports the features in VkPhysicalDeviceVulkan11Features.
     // Must have vulkan version 1.2 - This is due to the VkPhysicalDeviceVulkan11Features struct being added in 1.2, not 1.1
-    PhysicalDeviceSelector& set_required_features_11(VkPhysicalDeviceVulkan11Features const& features_11);
+    PhysicalDeviceSelector& set_required_features_11(VkPhysicalDeviceVulkan11Features& features_11);
     // Require a physical device which supports the features in VkPhysicalDeviceVulkan12Features.
     // Must have vulkan version 1.2
-    PhysicalDeviceSelector& set_required_features_12(VkPhysicalDeviceVulkan12Features const& features_12);
+    PhysicalDeviceSelector& set_required_features_12(VkPhysicalDeviceVulkan12Features& features_12);
 #endif
 #if defined(VKB_VK_API_VERSION_1_3)
     // Require a physical device which supports the features in VkPhysicalDeviceVulkan13Features.
     // Must have vulkan version 1.3
-    PhysicalDeviceSelector& set_required_features_13(VkPhysicalDeviceVulkan13Features const& features_13);
+    PhysicalDeviceSelector& set_required_features_13(VkPhysicalDeviceVulkan13Features& features_13);
 #endif
 
     // Used when surface creation happens after physical device selection.

@@ -2283,6 +2283,8 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   third_party/SDL/include/SDL2/SDL_misc.h \
   third_party/SDL/include/SDL2/SDL_vulkan.h \
   ../src/vk_initializers.h \
+  ../third_party/vkbootstrap/VkBootstrap.h \
+  ../third_party/vkbootstrap/VkBootstrapDispatch.h \
   /usr/include/c++/12/chrono \
   /usr/include/c++/12/bits/chrono.h \
   /usr/include/c++/12/ratio \
@@ -4020,6 +4022,10 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
 /usr/include/c++/12/bits/parse_numbers.h:
 
 /usr/include/c++/12/ratio:
+
+../third_party/vkbootstrap/VkBootstrapDispatch.h:
+
+../third_party/vkbootstrap/VkBootstrap.h:
 
 third_party/SDL/include/SDL2/SDL_locale.h:
 
