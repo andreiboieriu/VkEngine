@@ -425,7 +425,6 @@ src/CMakeFiles/engine.dir/camera.cpp.o
  /usr/include/c++/12/deque
  /usr/include/c++/12/bits/stl_deque.h
  /usr/include/c++/12/bits/deque.tcc
- /usr/include/vulkan/vk_enum_string_helper.h
  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h
  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h
  /usr/include/c++/12/cstring
@@ -1277,7 +1276,6 @@ src/CMakeFiles/engine.dir/main.cpp.o
  /usr/include/c++/12/deque
  /usr/include/c++/12/bits/stl_deque.h
  /usr/include/c++/12/bits/deque.tcc
- /usr/include/vulkan/vk_enum_string_helper.h
  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h
  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h
  /usr/include/c++/12/cstring
@@ -1710,7 +1708,6 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o
  /usr/include/c++/12/deque
  /usr/include/c++/12/bits/stl_deque.h
  /usr/include/c++/12/bits/deque.tcc
- /usr/include/vulkan/vk_enum_string_helper.h
  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h
  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h
  /usr/include/c++/12/cstring
@@ -2143,7 +2140,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o
  /usr/include/c++/12/deque
  /usr/include/c++/12/bits/stl_deque.h
  /usr/include/c++/12/bits/deque.tcc
- /usr/include/vulkan/vk_enum_string_helper.h
  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h
  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h
  /usr/include/c++/12/cstring
@@ -3148,7 +3144,6 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o
  /usr/include/c++/12/deque
  /usr/include/c++/12/bits/stl_deque.h
  /usr/include/c++/12/bits/deque.tcc
- /usr/include/vulkan/vk_enum_string_helper.h
  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h
  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h
  /usr/include/c++/12/cstring
@@ -3994,7 +3989,6 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o
  /usr/include/c++/12/deque
  /usr/include/c++/12/bits/stl_deque.h
  /usr/include/c++/12/bits/deque.tcc
- /usr/include/vulkan/vk_enum_string_helper.h
  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h
  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h
  /usr/include/c++/12/cstring

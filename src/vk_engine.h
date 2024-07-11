@@ -28,6 +28,9 @@ private:
 	void initCommands();
 	void initSyncStructs();
 
+	void createSwapchain(uint32_t width, uint32_t height);
+	void destroySwapchain();
+
 	// Vulkan library handle
 	VkInstance mInstance;
 
@@ -42,6 +45,14 @@ private:
 
 	// Vulkan window surface
 	VkSurfaceKHR mSurface;
+
+	// swapchain related
+	VkSwapchainKHR mSwapchain;
+	VkFormat mSwapchainImageFormat;
+
+	std::vector<VkImage> mSwapchainImages;
+	std::vector<VkImageView> mSwapchainImageViews;
+	VkExtent2D mSwapchainExtent;
 
 	// flags
 	bool mIsInitialized = false;

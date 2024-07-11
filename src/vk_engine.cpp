@@ -97,7 +97,41 @@ void VulkanEngine::initVulkan() {
 }
 
 void VulkanEngine::initSwapchain() {
+    createSwapchain(mWindowExtent.width, mWindowExtent.height);
+}
 
+void VulkanEngine::createSwapchain(uint32_t width, uint32_t height) {
+    // set swapchain image format
+    mSwapchainImageFormat = VK_FORMAT_B8G8R8A8_UNORM;
+
+    // build swapchain using vkb
+    vkb::SwapchainBuilder vkbSwapchainBuilder{mPhysicalDevice, mDevice, mSurface};
+
+    VkSurfaceFormatKHR surfaceFormat{};
+    surfaceFormat.format = mSwapchainImageFormat;
+    surfaceFormat.colorSpace = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR;
+
+    vkb::Swapchain vkbSwapchain = vkbSwapchainBuilder
+        .set_desired_format(surfaceFormat)
+        .set_desired_present_mode(VK_PRESENT_MODE_FIFO_KHR) // vsync present mode
+        .set_desired_extent(width, height)
+        .add_image_usage_flags(VK_IMAGE_USAGE_TRANSFER_DST_BIT)
+        .build()
+        .value();
+
+    // get swapchain and related images from vkbSwapchain
+    mSwapchain = vkbSwapchain.swapchain;
+    mSwapchainImages = vkbSwapchain.get_images().value();
+    mSwapchainImageViews = vkbSwapchain.get_image_views().value();
+}
+
+void VulkanEngine::destroySwapchain() {
+    vkDestroySwapchainKHR(mDevice, mSwapchain, nullptr);
+
+    // destroy swapchain resources
+    for (auto& imageView : mSwapchainImageViews) {
+        vkDestroyImageView(mDevice, imageView, nullptr);
+    }
 }
 
 void VulkanEngine::initCommands() {
@@ -111,6 +145,14 @@ void VulkanEngine::initSyncStructs() {
 void VulkanEngine::cleanup()
 {
     if (mIsInitialized) {
+        destroySwapchain();
+
+        vkDestroySurfaceKHR(mInstance, mSurface, nullptr);
+        vkDestroyDevice(mDevice, nullptr);
+
+        vkb::destroy_debug_utils_messenger(mInstance, mDebugMessenger);
+        vkDestroyInstance(mInstance, nullptr);
+
         SDL_DestroyWindow(mWindow);
     }
 
