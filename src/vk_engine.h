@@ -4,11 +4,8 @@
 #pragma once
 
 #include "vk_types.h"
-
-struct FrameData {
-	VkCommandPool commandPool;
-	VkCommandBuffer mainCommandBuffer; 
-};
+#include "vk_descriptors.h"
+#include "deletion_queue.h"
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -22,9 +19,6 @@ public:
 	//shuts down the engine
 	void cleanup();
 
-	//draw loop
-	void draw();
-
 	//run main loop
 	void run();
 
@@ -32,15 +26,26 @@ public:
 		return mFrames[mFrameNumber % MAX_FRAMES_IN_FLIGHT];
 	}
 
+	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function);
+
 private:
 
 	void initVulkan();
 	void initSwapchain();
 	void initCommands();
 	void initSyncStructs();
+	void initDescriptors();
+	void initPipelines();
+	void initBackgroundPipelines();
+	void initImGui();
 
 	void createSwapchain(uint32_t width, uint32_t height);
 	void destroySwapchain();
+
+	//draw loop
+	void draw();
+	void drawBackground(VkCommandBuffer commandBuffer);
+	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
 
 	// Vulkan library handle
 	VkInstance mInstance;
@@ -65,6 +70,8 @@ private:
 	std::vector<VkImageView> mSwapchainImageViews;
 	VkExtent2D mSwapchainExtent;
 
+	VmaAllocator mAllocator;
+
 	// flags
 	bool mIsInitialized = false;
 	bool mStopRendering = false;
@@ -81,4 +88,27 @@ private:
 
 	// sdl window handle
 	struct SDL_Window* mWindow = nullptr;
+
+	DeletionQueue mMainDeletionQueue;
+
+	// draw resources
+	AllocatedImage mDrawImage;
+	VkExtent2D mDrawExtent;
+
+	// descriptor resources
+	DescriptorAllocator mDescriptorAllocator;
+	VkDescriptorSet mDrawImageDescriptors;
+	VkDescriptorSetLayout mDrawImageDescriptorLayout;
+
+	// pipeline resources
+	VkPipeline mGradientPipeline;
+	VkPipelineLayout mGradientPipelineLayout;
+
+	std::vector<ComputeEffect> backgroundEffects;
+	int currentBackgroundEffect = 0;
+	
+	// immediat submit structures
+	VkFence mImmFence;
+	VkCommandBuffer mImmCommandBuffer;
+	VkCommandPool mImmCommandPool;
 };

@@ -214,6 +214,30 @@ cmake_pch.hxx.s:
 	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
+deletion_queue.o: deletion_queue.cpp.o
+.PHONY : deletion_queue.o
+
+# target to build an object file
+deletion_queue.cpp.o:
+	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.o
+.PHONY : deletion_queue.cpp.o
+
+deletion_queue.i: deletion_queue.cpp.i
+.PHONY : deletion_queue.i
+
+# target to preprocess a source file
+deletion_queue.cpp.i:
+	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.i
+.PHONY : deletion_queue.cpp.i
+
+deletion_queue.s: deletion_queue.cpp.s
+.PHONY : deletion_queue.s
+
+# target to generate assembly for a file
+deletion_queue.cpp.s:
+	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.s
+.PHONY : deletion_queue.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -401,6 +425,9 @@ help:
 	@echo "... cmake_pch.hxx.pch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"
+	@echo "... deletion_queue.o"
+	@echo "... deletion_queue.i"
+	@echo "... deletion_queue.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

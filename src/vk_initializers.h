@@ -20,7 +20,7 @@ VkSemaphoreCreateInfo semaphore_create_info(VkSemaphoreCreateFlags flags = 0);
 
 VkSubmitInfo2 submit_info(VkCommandBufferSubmitInfo* cmd, VkSemaphoreSubmitInfo* signalSemaphoreInfo,
     VkSemaphoreSubmitInfo* waitSemaphoreInfo);
-VkPresentInfoKHR present_info();
+VkPresentInfoKHR present_info(VkSwapchainKHR *swapchain, VkSemaphore *waitSemaphore, uint32_t *swapchainImageIndex);
 
 VkRenderingAttachmentInfo attachment_info(VkImageView view, VkClearValue* clear, VkImageLayout layout /*= VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL*/);
 
@@ -49,4 +49,6 @@ VkPipelineLayoutCreateInfo pipeline_layout_create_info();
 VkPipelineShaderStageCreateInfo pipeline_shader_stage_create_info(VkShaderStageFlagBits stage,
     VkShaderModule shaderModule,
     const char * entry = "main");
+
+VmaAllocatorCreateInfo vmaCreateInfo(VkPhysicalDevice physicalDevice, VkDevice device, VkInstance instance, VmaAllocatorCreateFlags flags);
 } // namespace vkinit

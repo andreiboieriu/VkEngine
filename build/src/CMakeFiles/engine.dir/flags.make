@@ -26,3 +26,5 @@ CXX_FLAGS = -std=gnu++20
 
 # PCH options: src/CMakeFiles/engine.dir/camera.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 
+# PCH options: src/CMakeFiles/engine.dir/deletion_queue.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
+

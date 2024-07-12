@@ -107,17 +107,17 @@ VkSubmitInfo2 vkinit::submit_info(VkCommandBufferSubmitInfo* cmd, VkSemaphoreSub
 }
 //< init_submit
 
-VkPresentInfoKHR vkinit::present_info()
+VkPresentInfoKHR vkinit::present_info(VkSwapchainKHR *swapchain, VkSemaphore *waitSemaphore, uint32_t *swapchainImageIndex)
 {
     VkPresentInfoKHR info = {};
-    info.sType =  VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
-    info.pNext = 0;
+    info.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
+    info.pNext = nullptr;
 
-    info.swapchainCount = 0;
-    info.pSwapchains = nullptr;
-    info.pWaitSemaphores = nullptr;
-    info.waitSemaphoreCount = 0;
-    info.pImageIndices = nullptr;
+    info.swapchainCount = 1;
+    info.pSwapchains = swapchain;
+    info.pWaitSemaphores = waitSemaphore;
+    info.waitSemaphoreCount = 1;
+    info.pImageIndices = swapchainImageIndex;
 
     return info;
 }
@@ -140,8 +140,7 @@ VkRenderingAttachmentInfo vkinit::attachment_info(
 
     return colorAttachment;
 }
-//< color_info
-//> depth_info
+
 VkRenderingAttachmentInfo vkinit::depth_attachment_info(
     VkImageView view, VkImageLayout layout /*= VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL*/)
 {
@@ -157,8 +156,7 @@ VkRenderingAttachmentInfo vkinit::depth_attachment_info(
 
     return depthAttachment;
 }
-//< depth_info
-//> render_info
+
 VkRenderingInfo vkinit::rendering_info(VkExtent2D renderExtent, VkRenderingAttachmentInfo* colorAttachment,
     VkRenderingAttachmentInfo* depthAttachment)
 {
@@ -175,8 +173,7 @@ VkRenderingInfo vkinit::rendering_info(VkExtent2D renderExtent, VkRenderingAttac
 
     return renderInfo;
 }
-//< render_info
-//> subresource
+
 VkImageSubresourceRange vkinit::image_subresource_range(VkImageAspectFlags aspectMask)
 {
     VkImageSubresourceRange subImage {};
@@ -188,9 +185,6 @@ VkImageSubresourceRange vkinit::image_subresource_range(VkImageAspectFlags aspec
 
     return subImage;
 }
-//< subresource
-
-
 
 VkDescriptorSetLayoutBinding vkinit::descriptorset_layout_binding(VkDescriptorType type, VkShaderStageFlags stageFlags,
     uint32_t binding)
@@ -260,7 +254,6 @@ VkDescriptorBufferInfo vkinit::buffer_info(VkBuffer buffer, VkDeviceSize offset,
     return binfo;
 }
 
-//> image_set
 VkImageCreateInfo vkinit::image_create_info(VkFormat format, VkImageUsageFlags usageFlags, VkExtent3D extent)
 {
     VkImageCreateInfo info = {};
@@ -335,3 +328,14 @@ VkPipelineShaderStageCreateInfo vkinit::pipeline_shader_stage_create_info(VkShad
     info.pName = entry;
     return info;
 }
+
+VmaAllocatorCreateInfo vkinit::vmaCreateInfo(VkPhysicalDevice physicalDevice, VkDevice device, VkInstance instance, VmaAllocatorCreateFlags flags) {
+    VmaAllocatorCreateInfo createInfo{};
+    createInfo.physicalDevice = physicalDevice;
+    createInfo.device = device;
+    createInfo.instance = instance;
+    createInfo.flags = flags;
+
+    return createInfo;
+}
+

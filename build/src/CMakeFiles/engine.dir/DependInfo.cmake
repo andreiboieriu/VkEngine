@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/camera.cpp.o" "gcc" "src/CMakeFiles/engine.dir/camera.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx" "src/CMakeFiles/engine.dir/cmake_pch.hxx.pch" "gcc" "src/CMakeFiles/engine.dir/cmake_pch.hxx.pch.d"
   "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/cmake_pch.hxx.pch" "gcc" "src/CMakeFiles/engine.dir/cmake_pch.hxx.pch.d"
+  "/home/unclegoga/Development/VkEngine/src/deletion_queue.cpp" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o" "gcc" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
+  "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o" "gcc" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/src/main.cpp" "src/CMakeFiles/engine.dir/main.cpp.o" "gcc" "src/CMakeFiles/engine.dir/main.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/main.cpp.o" "gcc" "src/CMakeFiles/engine.dir/main.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/src/vk_descriptors.cpp" "src/CMakeFiles/engine.dir/vk_descriptors.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_descriptors.cpp.o.d"

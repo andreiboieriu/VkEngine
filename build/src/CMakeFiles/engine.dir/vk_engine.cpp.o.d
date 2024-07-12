@@ -396,22 +396,24 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /home/unclegoga/Development/VkEngine/src/vk_types.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
+  /usr/include/vulkan/vk_enum_string_helper.h \
+  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
+  /home/unclegoga/Development/VkEngine/src/deletion_queue.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/algorithmfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uniform_int_dist.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
-  /usr/include/vulkan/vk_enum_string_helper.h \
-  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \
   /usr/include/string.h /usr/include/strings.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
+  /home/unclegoga/Development/VkEngine/src/vk_descriptors.h \
   /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h \
   /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h \
   /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
@@ -549,20 +551,35 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h \
   /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
   /home/unclegoga/Development/VkEngine/src/vk_initializers.h \
+  /home/unclegoga/Development/VkEngine/src/vk_images.h \
+  /home/unclegoga/Development/VkEngine/src/vk_pipelines.h \
   /home/unclegoga/Development/VkEngine/third_party/vkbootstrap/VkBootstrap.h \
   /home/unclegoga/Development/VkEngine/third_party/vkbootstrap/VkBootstrapDispatch.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/chrono \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/algorithm \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ranges_algo.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ranges_util.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/mutex \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/chrono.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ratio \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ctime \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/parse_numbers.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unique_lock.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/atomic \
+  /home/unclegoga/Development/VkEngine/third_party/imgui/imgui.h \
+  /home/unclegoga/Development/VkEngine/third_party/imgui/imconfig.h \
+  /home/unclegoga/Development/VkEngine/third_party/imgui/imgui_impl_sdl2.h \
+  /home/unclegoga/Development/VkEngine/third_party/imgui/imgui_impl_vulkan.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/chrono \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/sstream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/istream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/sstream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/thread \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/stop_token \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/atomic \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_thread.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/semaphore \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/semaphore_base.h \

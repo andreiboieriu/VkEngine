@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/camera.cpp.o.d"
   "CMakeFiles/engine.dir/cmake_pch.hxx.pch"
   "CMakeFiles/engine.dir/cmake_pch.hxx.pch.d"
+  "CMakeFiles/engine.dir/deletion_queue.cpp.o"
+  "CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
   "CMakeFiles/engine.dir/main.cpp.o"
   "CMakeFiles/engine.dir/main.cpp.o.d"
   "CMakeFiles/engine.dir/vk_descriptors.cpp.o"
