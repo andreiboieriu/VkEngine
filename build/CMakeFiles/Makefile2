@@ -176,12 +176,12 @@ third_party/fmt/clean: third_party/fmt/CMakeFiles/fmt.dir/clean
 CMakeFiles/Shaders.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num= "Built target Shaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=81 "Built target Shaders"
 .PHONY : CMakeFiles/Shaders.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Shaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Shaders.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
 .PHONY : CMakeFiles/Shaders.dir/rule
@@ -254,12 +254,12 @@ third_party/CMakeFiles/imgui.dir/clean:
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=84 "Built target fastgltf_simdjson"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num= "Built target fastgltf_simdjson"
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
@@ -280,7 +280,7 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/clean:
 third_party/fastgltf/CMakeFiles/fastgltf.dir/all: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num= "Built target fastgltf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=84 "Built target fastgltf"
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf.dir/all
 
 # Build rule for subdir invocation for target.
@@ -436,12 +436,12 @@ third_party/SDL/CMakeFiles/SDL2-static.dir/clean:
 third_party/SDL/CMakeFiles/SDL2_test.dir/all: third_party/SDL/CMakeFiles/sdl_headers_copy.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/SDL/CMakeFiles/SDL2_test.dir/build.make third_party/SDL/CMakeFiles/SDL2_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/SDL/CMakeFiles/SDL2_test.dir/build.make third_party/SDL/CMakeFiles/SDL2_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=79,80,81 "Built target SDL2_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=79,80 "Built target SDL2_test"
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/SDL/CMakeFiles/SDL2_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/SDL/CMakeFiles/SDL2_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/rule

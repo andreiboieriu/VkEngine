@@ -52,6 +52,30 @@ struct ComputeEffect {
     ComputePushConstants pushConstants;
 };
 
+struct AllocatedBuffer {
+    VkBuffer buffer;
+    VmaAllocation allocation;
+    VmaAllocationInfo allocInfo;
+};
+
+struct Vertex {
+    glm::vec3 position;
+    float uvX;
+    glm::vec3 normal;
+    float uvY;
+    glm::vec4 color;
+};
+
+struct GPUMeshBuffers {
+    AllocatedBuffer indexBuffer;
+    AllocatedBuffer vertexBuffer;
+    VkDeviceAddress vertexBufferAddress;
+};
+
+struct GPUDrawPushConstants {
+    glm::mat4 worldMatrix;
+    VkDeviceAddress vertexBuffer;
+};
 
 #define VK_CHECK(x)                                                     \
     do {                                                                \

@@ -1,4 +1,7 @@
 # Hashes of file build rules.
+8189cc3aedc8d61fe865475fe06fe1f7 ../shaders/colored_triangle.frag.spv
+07bf8ff3b36eb51fa13d437b91f6cab4 ../shaders/colored_triangle.vert.spv
+a5c7d2b1d30112f29dec9c7ae0e0faf8 ../shaders/colored_triangle_mesh.vert.spv
 90846c622a56ccb52d236a79ca9b772c ../shaders/gradient.comp.spv
 b5ea6c144a5241a6132bf4926d33a547 ../shaders/gradient_color.comp.spv
 614b04a0310f946ffc6adaa89e0d69c6 ../shaders/sky.comp.spv

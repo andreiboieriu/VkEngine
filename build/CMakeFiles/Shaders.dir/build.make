@@ -66,23 +66,41 @@ include CMakeFiles/Shaders.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/Shaders.dir/progress.make
 
+CMakeFiles/Shaders: ../shaders/colored_triangle.frag.spv
+CMakeFiles/Shaders: ../shaders/colored_triangle.vert.spv
+CMakeFiles/Shaders: ../shaders/colored_triangle_mesh.vert.spv
 CMakeFiles/Shaders: ../shaders/gradient.comp.spv
 CMakeFiles/Shaders: ../shaders/gradient_color.comp.spv
 CMakeFiles/Shaders: ../shaders/sky.comp.spv
 
+../shaders/colored_triangle.frag.spv: ../shaders/colored_triangle.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../shaders/colored_triangle.frag.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/colored_triangle.frag -o /home/unclegoga/Development/VkEngine/shaders/colored_triangle.frag.spv
+
+../shaders/colored_triangle.vert.spv: ../shaders/colored_triangle.vert
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../shaders/colored_triangle.vert.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/colored_triangle.vert -o /home/unclegoga/Development/VkEngine/shaders/colored_triangle.vert.spv
+
+../shaders/colored_triangle_mesh.vert.spv: ../shaders/colored_triangle_mesh.vert
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../shaders/colored_triangle_mesh.vert.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/colored_triangle_mesh.vert -o /home/unclegoga/Development/VkEngine/shaders/colored_triangle_mesh.vert.spv
+
 ../shaders/gradient.comp.spv: ../shaders/gradient.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../shaders/gradient.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ../shaders/gradient.comp.spv"
 	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/gradient.comp -o /home/unclegoga/Development/VkEngine/shaders/gradient.comp.spv
 
 ../shaders/gradient_color.comp.spv: ../shaders/gradient_color.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../shaders/gradient_color.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ../shaders/gradient_color.comp.spv"
 	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/gradient_color.comp -o /home/unclegoga/Development/VkEngine/shaders/gradient_color.comp.spv
 
 ../shaders/sky.comp.spv: ../shaders/sky.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../shaders/sky.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ../shaders/sky.comp.spv"
 	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/sky.comp -o /home/unclegoga/Development/VkEngine/shaders/sky.comp.spv
 
 Shaders: CMakeFiles/Shaders
+Shaders: ../shaders/colored_triangle.frag.spv
+Shaders: ../shaders/colored_triangle.vert.spv
+Shaders: ../shaders/colored_triangle_mesh.vert.spv
 Shaders: ../shaders/gradient.comp.spv
 Shaders: ../shaders/gradient_color.comp.spv
 Shaders: ../shaders/sky.comp.spv

@@ -28,6 +28,11 @@ public:
 
 	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function);
 
+	AllocatedBuffer createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage);
+	void destroyBuffer(const AllocatedBuffer& buffer);
+
+	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
+
 private:
 
 	void initVulkan();
@@ -39,6 +44,14 @@ private:
 	void initBackgroundPipelines();
 	void initImGui();
 
+	// TODO: delete later
+	void initTrianglePipeline();
+
+	void initMeshPipeline();
+
+	void initDefaultData();
+
+
 	void createSwapchain(uint32_t width, uint32_t height);
 	void destroySwapchain();
 
@@ -46,6 +59,7 @@ private:
 	void draw();
 	void drawBackground(VkCommandBuffer commandBuffer);
 	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
+	void drawGeometry(VkCommandBuffer commandBuffer);
 
 	// Vulkan library handle
 	VkInstance mInstance;
@@ -103,6 +117,13 @@ private:
 	// pipeline resources
 	VkPipeline mGradientPipeline;
 	VkPipelineLayout mGradientPipelineLayout;
+
+	VkPipelineLayout mTrianglePipelineLayout;
+	VkPipeline mTrianglePipeline;
+
+	VkPipelineLayout mMeshPipelineLayout;
+	VkPipeline mMeshPipeline;
+	GPUMeshBuffers mRectangle;
 
 	std::vector<ComputeEffect> backgroundEffects;
 	int currentBackgroundEffect = 0;
