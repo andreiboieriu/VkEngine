@@ -6,6 +6,7 @@
 #include "vk_types.h"
 #include "vk_descriptors.h"
 #include "deletion_queue.h"
+#include "vk_loader.h"
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -124,6 +125,8 @@ private:
 	VkPipelineLayout mMeshPipelineLayout;
 	VkPipeline mMeshPipeline;
 	GPUMeshBuffers mRectangle;
+
+	std::vector<std::shared_ptr<MeshAsset>> mTestMeshes;
 
 	std::vector<ComputeEffect> backgroundEffects;
 	int currentBackgroundEffect = 0;

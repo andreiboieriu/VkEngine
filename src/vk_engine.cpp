@@ -486,6 +486,9 @@ void VulkanEngine::initDefaultData() {
         destroyBuffer(mRectangle.indexBuffer);
         destroyBuffer(mRectangle.vertexBuffer);
     });
+
+    // load test meshes
+    mTestMeshes = loadGltfMeshes(this, "assets/basicmesh.glb").value();
 }
 
 void VulkanEngine::initBackgroundPipelines() {
@@ -935,6 +938,13 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     vkCmdBindIndexBuffer(commandBuffer, mRectangle.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
 
     vkCmdDrawIndexed(commandBuffer, 6, 1, 0, 0, 0);
+
+    // pushConstants.vertexBuffer = mTestMeshes[2]->meshBuffers.vertexBufferAddress;
+
+    // vkCmdPushConstants(commandBuffer, mMeshPipelineLayout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(GPUDrawPushConstants), &pushConstants);
+    // vkCmdBindIndexBuffer(commandBuffer, mTestMeshes[2]->meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
+
+    // vkCmdDrawIndexed(commandBuffer, mTestMeshes[2]->surfaces[0].count, 1, mTestMeshes[2]->surfaces[0].startIndex, 0, 0);
 
     vkCmdEndRendering(commandBuffer);
 }

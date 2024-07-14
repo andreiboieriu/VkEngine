@@ -1706,7 +1706,32 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/strings.h \
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
-  ../src/vk_descriptors.h
+  ../src/vk_descriptors.h \
+  ../src/vk_loader.h \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h
 
 src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -2574,6 +2599,31 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
   ../src/vk_descriptors.h \
+  ../src/vk_loader.h \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
   third_party/SDL/include/SDL2/SDL.h \
   third_party/SDL/include/SDL2/SDL_main.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
@@ -2722,10 +2772,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/ranges_util.h \
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
   /usr/include/c++/12/mutex \
-  /usr/include/c++/12/bits/chrono.h \
-  /usr/include/c++/12/ratio \
-  /usr/include/c++/12/ctime \
-  /usr/include/c++/12/bits/parse_numbers.h \
   /usr/include/c++/12/bits/unique_lock.h \
   /usr/include/c++/12/shared_mutex \
   /usr/include/c++/12/atomic \
@@ -2734,10 +2780,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/imgui/imgui_impl_sdl2.h \
   ../third_party/imgui/imgui_impl_vulkan.h \
   /usr/include/c++/12/chrono \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/thread \
   /usr/include/c++/12/stop_token \
   /usr/include/c++/12/bits/std_thread.h \
@@ -4026,7 +4068,177 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_loader.cpp \
-  ../src/vk_loader.h
+  ../third_party/stb_image/stb_image.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  ../src/vk_loader.h \
+  ../src/vk_types.h \
+  /usr/include/c++/12/span \
+  /usr/include/c++/12/array \
+  /usr/include/vulkan/vk_enum_string_helper.h \
+  ../third_party/vma/vk_mem_alloc.h \
+  ../src/deletion_queue.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../third_party/fmt/include/fmt/core.h \
+  /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  ../src/vk_engine.h \
+  ../src/vk_descriptors.h \
+  ../src/vk_initializers.h \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/glm.hpp \
+  /usr/include/c++/12/cfloat \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
+  ../third_party/glm/glm/fwd.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/detail/func_trigonometric.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/packing.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/detail/func_packing.inl \
+  ../third_party/glm/glm/detail/type_half.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/type_half.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/integer.hpp \
+  ../third_party/glm/glm/detail/func_integer.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.inl \
+  ../third_party/glm/glm/gtc/constants.inl \
+  ../third_party/glm/glm/gtc/quaternion.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/vec2.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.inl \
+  ../third_party/glm/glm/ext/matrix_clip_space.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/matrix_clip_space.inl \
+  ../third_party/glm/glm/ext/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/matrix_transform.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/ext/vector_relational.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/type_float.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/ext/quaternion_common.inl \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/detail/type_quat.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/detail/type_quat.inl \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_float_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_double.hpp \
+  ../third_party/glm/glm/ext/quaternion_double_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
+  ../third_party/glm/glm/ext/quaternion_transform.hpp \
+  ../third_party/glm/glm/ext/quaternion_transform.inl \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/gtc/quaternion.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/gtc/epsilon.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtc/epsilon.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.inl \
+  ../third_party/glm/glm/gtx/norm.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/gtx/component_wise.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtx/component_wise.inl \
+  ../third_party/glm/glm/gtx/norm.inl \
+  ../third_party/glm/glm/gtx/quaternion.inl \
+  ../third_party/fastgltf/include/fastgltf/glm_element_traits.hpp \
+  ../third_party/fastgltf/include/fastgltf/tools.hpp \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/variant \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex \
+  ../third_party/glm/glm/glm.hpp \
+  ../third_party/fastgltf/include/fastgltf/parser.hpp
 
 src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -4476,9 +4688,71 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h:
 
-/usr/include/c++/12/bits/codecvt.h:
+../third_party/fastgltf/include/fastgltf/parser.hpp:
 
-../src/vk_loader.h:
+/usr/include/c++/12/memory_resource:
+
+../third_party/fastgltf/include/fastgltf/util.hpp:
+
+../third_party/fastgltf/include/fastgltf/glm_element_traits.hpp:
+
+../third_party/glm/glm/gtx/norm.inl:
+
+../third_party/glm/glm/ext/quaternion_exponential.hpp:
+
+../third_party/glm/glm/gtc/epsilon.hpp:
+
+../third_party/glm/glm/ext/quaternion_transform.inl:
+
+../third_party/glm/glm/ext/quaternion_trigonometric.hpp:
+
+../third_party/glm/glm/ext/quaternion_double_precision.hpp:
+
+../third_party/glm/glm/ext/quaternion_double.hpp:
+
+../third_party/glm/glm/ext/quaternion_float_precision.hpp:
+
+../third_party/glm/glm/detail/type_quat.inl:
+
+../third_party/glm/glm/ext/quaternion_relational.inl:
+
+../third_party/glm/glm/ext/quaternion_relational.hpp:
+
+../third_party/glm/glm/ext/quaternion_geometric.inl:
+
+../third_party/glm/glm/ext/quaternion_geometric.hpp:
+
+../third_party/glm/glm/ext/quaternion_common.hpp:
+
+../third_party/glm/glm/detail/type_float.hpp:
+
+../third_party/glm/glm/ext/vector_relational.hpp:
+
+../third_party/glm/glm/ext/matrix_transform.inl:
+
+../third_party/glm/glm/ext/matrix_transform.hpp:
+
+../third_party/glm/glm/ext/matrix_projection.inl:
+
+../third_party/glm/glm/ext/matrix_projection.hpp:
+
+../third_party/glm/glm/gtc/quaternion.hpp:
+
+../third_party/glm/glm/gtc/constants.inl:
+
+../third_party/glm/glm/ext/scalar_constants.hpp:
+
+../third_party/glm/glm/gtc/constants.hpp:
+
+../third_party/glm/glm/detail/type_half.inl:
+
+../third_party/glm/glm/detail/func_trigonometric.inl:
+
+../third_party/glm/glm/trigonometric.hpp:
+
+../third_party/glm/glm/glm.hpp:
+
+/usr/include/c++/12/iostream:
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
@@ -4490,12 +4764,6 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
 
 /usr/include/c++/12/stop_token:
 
-/usr/include/c++/12/bits/sstream.tcc:
-
-/usr/include/c++/12/istream:
-
-/usr/include/c++/12/sstream:
-
 ../third_party/imgui/imgui_impl_vulkan.h:
 
 ../third_party/imgui/imgui_impl_sdl2.h:
@@ -4504,11 +4772,9 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
 
 /usr/include/c++/12/atomic:
 
+../third_party/glm/glm/ext/vector_relational.inl:
+
 /usr/include/c++/12/shared_mutex:
-
-/usr/include/c++/12/bits/parse_numbers.h:
-
-/usr/include/c++/12/ratio:
 
 /usr/include/c++/12/mutex:
 
@@ -4525,6 +4791,8 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
 ../third_party/vkbootstrap/VkBootstrap.h:
 
 ../src/vk_pipelines.h:
+
+../third_party/glm/glm/ext/matrix_clip_space.hpp:
 
 ../src/vk_images.h:
 
@@ -4552,11 +4820,9 @@ third_party/SDL/include/SDL2/SDL_touch.h:
 
 third_party/SDL/include/SDL2/SDL_gesture.h:
 
+../third_party/glm/glm/ext/matrix_clip_space.inl:
+
 third_party/SDL/include/SDL2/SDL_gamecontroller.h:
-
-/usr/include/c++/12/ctime:
-
-third_party/SDL/include/SDL2/SDL_guid.h:
 
 third_party/SDL/include/SDL2/SDL_joystick.h:
 
@@ -4571,6 +4837,52 @@ third_party/SDL/include/SDL2/SDL_rect.h:
 third_party/SDL/include/SDL2/SDL_pixels.h:
 
 third_party/SDL/include/SDL2/SDL_events.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h:
+
+../third_party/glm/glm/ext/quaternion_float.hpp:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h:
+
+third_party/SDL/include/SDL2/SDL_sensor.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h:
+
+/usr/include/c++/12/chrono:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h:
 
 ../third_party/glm/glm/detail/setup.hpp:
 
@@ -4598,15 +4910,11 @@ third_party/SDL/include/SDL2/SDL_events.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h:
-
 /usr/include/c++/12/bits/shared_ptr_atomic.h:
 
-/usr/include/c++/12/bits/istream.tcc:
-
-/usr/include/c++/12/bits/shared_ptr_base.h:
-
 /usr/include/c++/12/tr1/riemann_zeta.tcc:
+
+../third_party/glm/glm/integer.hpp:
 
 /usr/include/c++/12/pstl/execution_defs.h:
 
@@ -4617,6 +4925,8 @@ third_party/SDL/include/SDL2/SDL_quit.h:
 /usr/include/c++/12/bits/stl_iterator.h:
 
 ../third_party/glm/glm/detail/type_mat2x2.inl:
+
+/usr/include/c++/12/sstream:
 
 /usr/include/c++/12/bits/ranges_uninitialized.h:
 
@@ -4650,11 +4960,19 @@ third_party/SDL/include/SDL2/SDL_video.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
+/usr/include/c++/12/bits/shared_ptr_base.h:
+
+/usr/include/c++/12/bits/istream.tcc:
+
 /usr/include/wctype.h:
+
+../third_party/glm/glm/detail/type_half.hpp:
 
 /usr/include/c++/12/bits/new_allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
+
+../third_party/glm/glm/fwd.hpp:
 
 /usr/include/errno.h:
 
@@ -4667,6 +4985,8 @@ third_party/SDL/include/SDL2/SDL_video.h:
 /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+../third_party/glm/glm/gtx/quaternion.hpp:
 
 third_party/SDL/include/SDL2/SDL_blendmode.h:
 
@@ -4712,6 +5032,8 @@ third_party/SDL/include/SDL2/SDL_clipboard.h:
 
 /usr/include/c++/12/bits/max_size_type.h:
 
+../third_party/glm/glm/gtc/epsilon.inl:
+
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/c++/12/bits/cxxabi_forced.h:
@@ -4719,6 +5041,8 @@ third_party/SDL/include/SDL2/SDL_clipboard.h:
 /usr/include/c++/12/bits/locale_classes.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h:
+
+../third_party/fastgltf/include/fastgltf/tools.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
@@ -4750,10 +5074,6 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h:
 
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
@@ -4776,7 +5096,7 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 ../third_party/glm/glm/ext/matrix_float2x3_precision.hpp:
 
-/usr/include/c++/12/debug/debug.h:
+/usr/include/c++/12/iomanip:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h:
 
@@ -4830,10 +5150,6 @@ third_party/SDL/include/SDL2/SDL_haptic.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-third_party/SDL/include/SDL2/begin_code.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h:
-
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h:
@@ -4857,8 +5173,6 @@ third_party/SDL/include/SDL2/begin_code.h:
 /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h:
 
 /usr/include/c++/12/bits/refwrap.h:
-
-../third_party/glm/glm/detail/type_mat2x3.inl:
 
 /usr/include/stdio.h:
 
@@ -4884,6 +5198,10 @@ third_party/SDL/include/SDL2/begin_code.h:
 
 /usr/include/c++/12/bit:
 
+/usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h:
+
+/usr/include/c++/12/ext/atomicity.h:
+
 /usr/include/c++/12/bits/node_handle.h:
 
 /usr/include/c++/12/thread:
@@ -4896,15 +5214,21 @@ third_party/SDL/include/SDL2/SDL_vulkan.h:
 
 ../src/vk_types.h:
 
+../third_party/glm/glm/ext/quaternion_transform.hpp:
+
 third_party/SDL/include/SDL2/SDL.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h:
-
 /usr/include/c++/12/typeinfo:
 
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h:
+
+/usr/include/c++/12/math.h:
+
 /usr/include/c++/12/bits/exception_ptr.h:
+
+../third_party/glm/glm/ext/quaternion_exponential.inl:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h:
 
@@ -4922,8 +5246,6 @@ third_party/SDL/include/SDL2/SDL.h:
 
 ../third_party/glm/glm/detail/type_vec4.inl:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h:
-
 /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h:
 
 ../third_party/glm/glm/detail/_vectorize.hpp:
@@ -4932,7 +5254,11 @@ third_party/SDL/include/SDL2/SDL.h:
 
 ../third_party/glm/glm/detail/compute_common.hpp:
 
+/usr/include/c++/12/bits/codecvt.h:
+
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h:
 
 ../src/vk_images.cpp:
 
@@ -4956,9 +5282,17 @@ src/CMakeFiles/engine.dir/cmake_pch.hxx:
 
 third_party/SDL/include/SDL2/SDL_audio.h:
 
+/usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h:
 
 /usr/include/c++/12/bits/ostream_insert.h:
+
+../third_party/glm/glm/detail/type_quat.hpp:
 
 /usr/include/c++/12/ext/numeric_traits.h:
 
@@ -5010,6 +5344,10 @@ third_party/SDL/include/SDL2/SDL_audio.h:
 
 /usr/include/stdc-predef.h:
 
+../third_party/fastgltf/include/fastgltf/types.hpp:
+
+../third_party/glm/glm/gtx/quaternion.inl:
+
 /usr/include/c++/12/bits/move.h:
 
 ../third_party/glm/glm/ext/matrix_double4x4.hpp:
@@ -5025,6 +5363,10 @@ third_party/SDL/include/SDL2/SDL_audio.h:
 /usr/include/c++/12/bits/functexcept.h:
 
 /usr/include/linux/close_range.h:
+
+/usr/include/c++/12/cfloat:
+
+/usr/include/c++/12/codecvt:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
@@ -5051,6 +5393,8 @@ third_party/SDL/include/SDL2/SDL_audio.h:
 ../third_party/glm/glm/ext/matrix_float4x2_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+../third_party/glm/glm/packing.hpp:
 
 /usr/include/c++/12/concepts:
 
@@ -5096,6 +5440,8 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/vulkan/vulkan_core.h:
 
+../third_party/glm/glm/ext/quaternion_common.inl:
+
 /usr/include/c++/12/iterator:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
@@ -5111,12 +5457,6 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h:
 
 /usr/include/c++/12/ostream:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h:
-
-/usr/include/c++/12/chrono:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h:
 
 /usr/include/c++/12/ios:
 
@@ -5134,13 +5474,13 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/12/tr1/bessel_function.tcc:
 
+../third_party/glm/glm/gtc/matrix_transform.inl:
+
 /usr/include/c++/12/bits/std_abs.h:
 
 /usr/include/c++/12/bits/char_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
 
@@ -5192,6 +5532,10 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/12/cctype:
 
+../third_party/glm/glm/gtc/quaternion.inl:
+
+../third_party/glm/glm/ext/scalar_constants.inl:
+
 /usr/include/c++/12/bits/localefwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
@@ -5205,8 +5549,6 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 /usr/include/c++/12/backward/auto_ptr.h:
 
 /usr/include/c++/12/bits/locale_facets.tcc:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h:
 
 ../third_party/glm/glm/ext/matrix_double2x2_precision.hpp:
 
@@ -5244,6 +5586,8 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 ../third_party/glm/glm/exponential.hpp:
 
+../third_party/glm/glm/detail/func_packing.inl:
+
 ../third_party/glm/glm/detail/type_mat4x4.inl:
 
 third_party/SDL/include/SDL2/SDL_platform.h:
@@ -5266,11 +5610,7 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 
 ../third_party/glm/glm/ext/vector_uint2_precision.hpp:
 
-/usr/include/c++/12/math.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h:
+../third_party/glm/glm/detail/func_integer.inl:
 
 ../third_party/glm/glm/ext/vector_bool3.hpp:
 
@@ -5280,9 +5620,15 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 
 ../third_party/glm/glm/detail/type_vec3.inl:
 
+../src/vk_loader.h:
+
+../third_party/stb_image/stb_image.h:
+
 ../third_party/glm/glm/ext/vector_bool3_precision.hpp:
 
 ../third_party/glm/glm/ext/vector_float3.hpp:
+
+/usr/include/c++/12/locale:
 
 ../third_party/glm/glm/ext/vector_float3_precision.hpp:
 
@@ -5350,6 +5696,8 @@ third_party/SDL/include/SDL2/SDL_keycode.h:
 
 ../third_party/glm/glm/detail/type_mat2x4.inl:
 
+/usr/include/c++/12/variant:
+
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
 ../third_party/glm/glm/ext/matrix_double2x4_precision.hpp:
@@ -5364,6 +5712,10 @@ third_party/SDL/include/SDL2/SDL_mouse.h:
 
 ../third_party/glm/glm/ext/matrix_float2x4_precision.hpp:
 
+third_party/SDL/include/SDL2/SDL_guid.h:
+
+/usr/include/c++/12/ctime:
+
 ../third_party/glm/glm/mat3x2.hpp:
 
 ../third_party/glm/glm/mat2x2.hpp:
@@ -5371,6 +5723,8 @@ third_party/SDL/include/SDL2/SDL_mouse.h:
 ../third_party/glm/glm/ext/matrix_double4x3.hpp:
 
 ../third_party/glm/glm/detail/type_mat3x2.hpp:
+
+/usr/include/c++/12/bits/locale_facets_nonio.h:
 
 /usr/include/vk_video/vulkan_video_codec_av1std_decode.h:
 
@@ -5392,25 +5746,21 @@ third_party/SDL/include/SDL2/SDL_mouse.h:
 
 ../third_party/glm/glm/detail/type_mat3x3.inl:
 
-../third_party/glm/glm/mat3x4.hpp:
-
 third_party/SDL/include/SDL2/SDL_endian.h:
 
 ../third_party/glm/glm/ext/matrix_double3x3_precision.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h:
 
 /usr/include/c++/12/bits/stl_pair.h:
 
 ../third_party/glm/glm/ext/matrix_double3x4.hpp:
 
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h:
+
+/usr/include/c++/12/bits/stl_algo.h:
+
 ../third_party/glm/glm/ext/matrix_double3x3.hpp:
 
 ../third_party/glm/glm/ext/matrix_float3x4.hpp:
-
-third_party/SDL/include/SDL2/SDL_sensor.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h:
 
 ../third_party/glm/glm/detail/type_mat4x2.hpp:
 
@@ -5466,7 +5816,9 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h:
+../third_party/glm/glm/mat3x4.hpp:
+
+/usr/include/c++/12/bits/fs_fwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
@@ -5478,9 +5830,9 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+/usr/include/c++/12/bits/locale_conv.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/c++/12/tr1/gamma.tcc:
 
@@ -5507,8 +5859,6 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 /usr/include/c++/12/tr1/poly_laguerre.tcc:
 
 ../third_party/glm/glm/vector_relational.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h:
 
 /usr/include/c++/12/memory:
 
@@ -5554,9 +5904,17 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 /usr/include/c++/12/bits/stl_heap.h:
 
+/usr/include/c++/12/debug/debug.h:
+
+/usr/include/c++/12/bits/fs_ops.h:
+
 /usr/include/string.h:
 
+../third_party/glm/glm/gtx/component_wise.hpp:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h:
+
+../third_party/glm/glm/gtx/norm.hpp:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h:
 
@@ -5578,6 +5936,38 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 ../src/main.cpp:
 
+../third_party/glm/glm/detail/type_mat2x3.inl:
+
+/usr/include/c++/12/filesystem:
+
+/usr/include/c++/12/ratio:
+
+/usr/include/c++/12/bits/parse_numbers.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/libintl.h:
+
+/usr/include/c++/12/bits/sstream.tcc:
+
+third_party/SDL/include/SDL2/begin_code.h:
+
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/12/bits/quoted_string.h:
+
+/usr/include/c++/12/istream:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h:
+
+/usr/include/c++/12/bits/fs_dir.h:
+
 ../src/vk_descriptors.cpp:
 
 ../src/vk_engine.cpp:
@@ -5596,9 +5986,7 @@ third_party/SDL/include/SDL2/close_code.h:
 
 /usr/include/c++/12/stdlib.h:
 
-/usr/include/c++/12/bits/stl_algo.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h:
+../third_party/glm/glm/gtx/component_wise.inl:
 
 /usr/include/c++/12/bits/concept_check.h:
 
@@ -5615,6 +6003,8 @@ third_party/SDL/include/SDL2/SDL_atomic.h:
 third_party/SDL/include/SDL2/SDL_error.h:
 
 third_party/SDL/include/SDL2/SDL_thread.h:
+
+../third_party/glm/glm/gtc/matrix_transform.hpp:
 
 third_party/SDL/include/SDL2/SDL_rwops.h:
 
@@ -5636,15 +6026,13 @@ third_party/SDL/include/SDL2/SDL_timer.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h:
 
+../third_party/glm/glm/ext/quaternion_trigonometric.inl:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h:
 
 /usr/include/c++/12/bits/ranges_algo.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -5664,13 +6052,13 @@ third_party/SDL/include/SDL2/SDL_timer.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h:
 
+/usr/include/c++/12/bits/fs_path.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h:
 
 /usr/include/vulkan/vk_platform.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h:
 
 ../third_party/glm/glm/ext/matrix_double4x2.hpp:
 
@@ -5695,23 +6083,3 @@ third_party/SDL/include/SDL2/SDL_timer.h:
 ../third_party/glm/glm/ext/matrix_float3x3.hpp:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h:
-
-/usr/include/c++/12/ext/atomicity.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h:
