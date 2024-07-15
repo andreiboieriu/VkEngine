@@ -10,6 +10,7 @@
 #include <array>
 
 #include <vulkan/vulkan.h>
+#include "vk_descriptors.h"
 #include "vk_enum_string_helper.h"
 #include <vk_mem_alloc.h>
 #include "deletion_queue.h"
@@ -22,10 +23,13 @@
 struct FrameData {
 	VkCommandPool commandPool;
 	VkCommandBuffer mainCommandBuffer;
+
 	VkSemaphore swapchainSemaphore;
 	VkSemaphore renderSemaphore;
 	VkFence renderFence;
+
 	DeletionQueue deletionQueue;
+    DynamicDescriptorAllocator descriptorAllocator;
 };
 
 struct AllocatedImage {
@@ -75,6 +79,15 @@ struct GPUMeshBuffers {
 struct GPUDrawPushConstants {
     glm::mat4 worldMatrix;
     VkDeviceAddress vertexBuffer;
+};
+
+struct GPUSceneData {
+    glm::mat4 view;
+    glm::mat4 projection;
+    glm::mat4 viewProjection;
+    glm::vec4 ambientColor;
+    glm::vec4 sunlightDirection;
+    glm::vec4 sunlightColor;
 };
 
 #define VK_CHECK(x)                                                     \

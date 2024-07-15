@@ -7,6 +7,7 @@
 #include "vk_descriptors.h"
 #include "deletion_queue.h"
 #include "vk_loader.h"
+#include <vulkan/vulkan_core.h>
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -134,4 +135,8 @@ private:
 	VkFence mImmFence;
 	VkCommandBuffer mImmCommandBuffer;
 	VkCommandPool mImmCommandPool;
+
+	// scene resources
+	GPUSceneData sceneData;
+	VkDescriptorSetLayout mGpuSceneDataDescriptorLayout;
 };

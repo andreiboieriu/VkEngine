@@ -397,12 +397,13 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: \
   /home/gooby/Development/VkEngine/src/vk_types.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
-  /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h \
-  /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
-  /home/gooby/Development/VkEngine/src/deletion_queue.h \
+  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
+  /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h \
+  /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
+  /home/gooby/Development/VkEngine/src/deletion_queue.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \

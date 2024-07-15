@@ -10,6 +10,7 @@
 #include "fmt/core.h"
 #include "glm/ext/matrix_clip_space.hpp"
 #include "glm/ext/matrix_transform.hpp"
+#include "vk_descriptors.h"
 #include "vk_enum_string_helper.h"
 #include "vk_initializers.h"
 #include "vk_types.h"
@@ -426,21 +427,10 @@ void VulkanEngine::initDescriptors() {
     // allocate a descriptor set
     mDrawImageDescriptors = mDescriptorAllocator.allocate(mDevice, mDrawImageDescriptorLayout);
 
-    VkDescriptorImageInfo imageInfo{};
-    imageInfo.imageLayout = VK_IMAGE_LAYOUT_GENERAL;
-    imageInfo.imageView = mDrawImage.imageView;
+    DescriptorWriter writer;
+    writer.writeImage(0, mDrawImage.imageView, VK_NULL_HANDLE, VK_IMAGE_LAYOUT_GENERAL, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE)
+          .updateSet(mDevice, mDrawImageDescriptors);
 
-    VkWriteDescriptorSet imageWrite{};
-    imageWrite.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-    imageWrite.pNext = nullptr;
-
-    imageWrite.dstBinding = 0;
-    imageWrite.dstSet = mDrawImageDescriptors;
-    imageWrite.descriptorCount = 1;
-    imageWrite.descriptorType = VK_DESCRIPTOR_TYPE_STORAGE_IMAGE;
-    imageWrite.pImageInfo = &imageInfo;
-
-    vkUpdateDescriptorSets(mDevice, 1, &imageWrite, 0, nullptr);
 
     // add descriptor allocator and layout to deletion queue
     mMainDeletionQueue.push([&]() {
@@ -448,6 +438,29 @@ void VulkanEngine::initDescriptors() {
 
         vkDestroyDescriptorSetLayout(mDevice, mDrawImageDescriptorLayout, nullptr);
     });
+
+    for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        // create a descriptor pool for each frame
+        std::vector<DynamicDescriptorAllocator::PoolSizeRatio> poolRatios = {
+            { VK_DESCRIPTOR_TYPE_STORAGE_IMAGE, 3 },
+			{ VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 3 },
+			{ VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 3 },
+			{ VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, 4 }
+        };
+
+        mFrames[i].descriptorAllocator = DynamicDescriptorAllocator();
+        mFrames[i].descriptorAllocator.init(mDevice, 1000, poolRatios);
+
+        mMainDeletionQueue.push([&, i]() {
+            mFrames[i].descriptorAllocator.destroyPools(mDevice);
+        });
+    }
+
+    {
+        DescriptorLayoutBuilder builder;
+        mGpuSceneDataDescriptorLayout = builder.addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
+                                               .build(mDevice, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT);
+    }
 }
 
 void VulkanEngine::initPipelines() {
@@ -713,6 +726,9 @@ void VulkanEngine::draw() {
     // flush deletion queue of current frame
     getCurrentFrame().deletionQueue.flush();
 
+    // clear descriptor pools for current frame
+    getCurrentFrame().descriptorAllocator.clearPools(mDevice);
+
     // request image from swapchain
     uint32_t swapchainImageIndex;
     VkResult e = vkAcquireNextImageKHR(
@@ -941,7 +957,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     VkRenderingInfo renderInfo = vkinit::rendering_info(mDrawExtent, &colorAttachment, &depthAttachment);
     vkCmdBeginRendering(commandBuffer, &renderInfo);
 
-    // draw meshes
+    // bind pipeline
     vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mMeshPipeline);
 
     // set dynamic viewport and scissor
@@ -962,6 +978,27 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     scissor.extent.height = viewport.height;
 
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
+
+    // allocate a new uniform buffer for the scene data
+    AllocatedBuffer gpuSceneDataBuffer = createBuffer(sizeof(GPUSceneData), VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
+
+    // add buffer to deletion queue
+    getCurrentFrame().deletionQueue.push([=, this]() {
+        destroyBuffer(gpuSceneDataBuffer);
+    });
+
+    // write buffer
+    GPUSceneData* sceneData = (GPUSceneData*)gpuSceneDataBuffer.allocation->GetMappedData();
+    
+    // TODO: add data
+    // sceneData-> ....
+
+    // create Descriptor set that binds the buffer
+    VkDescriptorSet globalDescriptorSet = getCurrentFrame().descriptorAllocator.allocate(mDevice, mGpuSceneDataDescriptorLayout);
+
+    DescriptorWriter writer;
+    writer.writeBuffer(0, gpuSceneDataBuffer.buffer, sizeof(GPUSceneData), 0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
+          .updateSet(mDevice, globalDescriptorSet);
 
     GPUDrawPushConstants pushConstants;
     pushConstants.worldMatrix = glm::mat4(1.f);
