@@ -1,2 +1,2 @@
-/usr/bin/llvm-ar qc libvkbootstrap.a CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o
-/usr/bin/llvm-ranlib libvkbootstrap.a
+/usr/bin/ar qc libvkbootstrap.a CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o
+/usr/bin/ranlib libvkbootstrap.a

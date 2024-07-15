@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unclegoga/Development/VkEngine
+CMAKE_SOURCE_DIR = /home/gooby/Development/VkEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unclegoga/Development/VkEngine/build
+CMAKE_BINARY_DIR = /home/gooby/Development/VkEngine/build
 
 # Include any dependencies generated for this target.
 include third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/depend.make
@@ -72,16 +72,16 @@ include third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/flags.make
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/flags.make
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o: ../third_party/fastgltf/deps/simdjson/simdjson.cpp
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o -MF CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o.d -o CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o -c /home/unclegoga/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o -MF CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o.d -o CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o -c /home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp
 
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp > CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.i
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp > CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.i
 
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp -o CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.s
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp -o CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.s
 
 # Object files for target fastgltf_simdjson
 fastgltf_simdjson_OBJECTS = \
@@ -93,19 +93,19 @@ fastgltf_simdjson_EXTERNAL_OBJECTS =
 third_party/fastgltf/libfastgltf_simdjson.a: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o
 third_party/fastgltf/libfastgltf_simdjson.a: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make
 third_party/fastgltf/libfastgltf_simdjson.a: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libfastgltf_simdjson.a"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf_simdjson.dir/cmake_clean_target.cmake
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fastgltf_simdjson.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libfastgltf_simdjson.a"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf_simdjson.dir/cmake_clean_target.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fastgltf_simdjson.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build: third_party/fastgltf/libfastgltf_simdjson.a
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build
 
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/clean:
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf_simdjson.dir/cmake_clean.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf_simdjson.dir/cmake_clean.cmake
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/clean
 
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/depend:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unclegoga/Development/VkEngine /home/unclegoga/Development/VkEngine/third_party/fastgltf /home/unclegoga/Development/VkEngine/build /home/unclegoga/Development/VkEngine/build/third_party/fastgltf /home/unclegoga/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gooby/Development/VkEngine /home/gooby/Development/VkEngine/third_party/fastgltf /home/gooby/Development/VkEngine/build /home/gooby/Development/VkEngine/build/third_party/fastgltf /home/gooby/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/depend
 

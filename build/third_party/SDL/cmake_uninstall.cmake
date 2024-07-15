@@ -1,8 +1,8 @@
-if (NOT EXISTS "/home/unclegoga/Development/VkEngine/build/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"/home/unclegoga/Development/VkEngine/build/install_manifest.txt\"")
-endif(NOT EXISTS "/home/unclegoga/Development/VkEngine/build/install_manifest.txt")
+if (NOT EXISTS "/home/gooby/Development/VkEngine/build/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"/home/gooby/Development/VkEngine/build/install_manifest.txt\"")
+endif(NOT EXISTS "/home/gooby/Development/VkEngine/build/install_manifest.txt")
 
-file(READ "/home/unclegoga/Development/VkEngine/build/install_manifest.txt" files)
+file(READ "/home/gooby/Development/VkEngine/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach (file ${files})
     message(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

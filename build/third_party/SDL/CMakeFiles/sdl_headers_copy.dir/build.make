@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unclegoga/Development/VkEngine
+CMAKE_SOURCE_DIR = /home/gooby/Development/VkEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unclegoga/Development/VkEngine/build
+CMAKE_BINARY_DIR = /home/gooby/Development/VkEngine/build
 
 # Utility rule file for sdl_headers_copy.
 
@@ -66,20 +66,6 @@ include third_party/SDL/CMakeFiles/sdl_headers_copy.dir/compiler_depend.make
 # Include the progress variables for this target.
 include third_party/SDL/CMakeFiles/sdl_headers_copy.dir/progress.make
 
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/fractional-scale-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/relative-pointer-unstable-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/viewporter-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/xdg-activation-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/xdg-output-unstable-v1-client-protocol.h
-third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h
 third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/include/SDL2/SDL.h
 third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/include/SDL2/SDL_assert.h
 third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/include/SDL2/SDL_atomic.h
@@ -159,368 +145,312 @@ third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/include/SDL2/begin_
 third_party/SDL/CMakeFiles/sdl_headers_copy: third_party/SDL/include/SDL2/close_code.h
 
 third_party/SDL/include/SDL2/SDL.h: ../third_party/SDL/include/SDL.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating include/SDL2/SDL.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating include/SDL2/SDL.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h
 
 third_party/SDL/include/SDL2/SDL_assert.h: ../third_party/SDL/include/SDL_assert.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating include/SDL2/SDL_assert.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_assert.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating include/SDL2/SDL_assert.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_assert.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h
 
 third_party/SDL/include/SDL2/SDL_atomic.h: ../third_party/SDL/include/SDL_atomic.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating include/SDL2/SDL_atomic.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_atomic.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating include/SDL2/SDL_atomic.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_atomic.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h
 
 third_party/SDL/include/SDL2/SDL_audio.h: ../third_party/SDL/include/SDL_audio.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating include/SDL2/SDL_audio.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_audio.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_audio.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating include/SDL2/SDL_audio.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_audio.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_audio.h
 
 third_party/SDL/include/SDL2/SDL_bits.h: ../third_party/SDL/include/SDL_bits.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating include/SDL2/SDL_bits.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_bits.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_bits.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating include/SDL2/SDL_bits.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_bits.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_bits.h
 
 third_party/SDL/include/SDL2/SDL_blendmode.h: ../third_party/SDL/include/SDL_blendmode.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating include/SDL2/SDL_blendmode.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_blendmode.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating include/SDL2/SDL_blendmode.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_blendmode.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h
 
 third_party/SDL/include/SDL2/SDL_clipboard.h: ../third_party/SDL/include/SDL_clipboard.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating include/SDL2/SDL_clipboard.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_clipboard.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_clipboard.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating include/SDL2/SDL_clipboard.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_clipboard.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_clipboard.h
 
 third_party/SDL/include/SDL2/SDL_copying.h: ../third_party/SDL/include/SDL_copying.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating include/SDL2/SDL_copying.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_copying.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_copying.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating include/SDL2/SDL_copying.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_copying.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_copying.h
 
 third_party/SDL/include/SDL2/SDL_cpuinfo.h: ../third_party/SDL/include/SDL_cpuinfo.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating include/SDL2/SDL_cpuinfo.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_cpuinfo.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating include/SDL2/SDL_cpuinfo.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_cpuinfo.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h
 
 third_party/SDL/include/SDL2/SDL_egl.h: ../third_party/SDL/include/SDL_egl.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating include/SDL2/SDL_egl.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_egl.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating include/SDL2/SDL_egl.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_egl.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
 
 third_party/SDL/include/SDL2/SDL_endian.h: ../third_party/SDL/include/SDL_endian.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating include/SDL2/SDL_endian.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_endian.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating include/SDL2/SDL_endian.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_endian.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h
 
 third_party/SDL/include/SDL2/SDL_error.h: ../third_party/SDL/include/SDL_error.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating include/SDL2/SDL_error.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_error.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating include/SDL2/SDL_error.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_error.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h
 
 third_party/SDL/include/SDL2/SDL_events.h: ../third_party/SDL/include/SDL_events.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating include/SDL2/SDL_events.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_events.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating include/SDL2/SDL_events.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_events.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h
 
 third_party/SDL/include/SDL2/SDL_filesystem.h: ../third_party/SDL/include/SDL_filesystem.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating include/SDL2/SDL_filesystem.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_filesystem.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_filesystem.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating include/SDL2/SDL_filesystem.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_filesystem.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_filesystem.h
 
 third_party/SDL/include/SDL2/SDL_gamecontroller.h: ../third_party/SDL/include/SDL_gamecontroller.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating include/SDL2/SDL_gamecontroller.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_gamecontroller.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating include/SDL2/SDL_gamecontroller.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_gamecontroller.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h
 
 third_party/SDL/include/SDL2/SDL_gesture.h: ../third_party/SDL/include/SDL_gesture.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating include/SDL2/SDL_gesture.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_gesture.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating include/SDL2/SDL_gesture.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_gesture.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h
 
 third_party/SDL/include/SDL2/SDL_guid.h: ../third_party/SDL/include/SDL_guid.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating include/SDL2/SDL_guid.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_guid.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating include/SDL2/SDL_guid.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_guid.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h
 
 third_party/SDL/include/SDL2/SDL_haptic.h: ../third_party/SDL/include/SDL_haptic.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating include/SDL2/SDL_haptic.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_haptic.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating include/SDL2/SDL_haptic.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_haptic.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h
 
 third_party/SDL/include/SDL2/SDL_hidapi.h: ../third_party/SDL/include/SDL_hidapi.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating include/SDL2/SDL_hidapi.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_hidapi.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating include/SDL2/SDL_hidapi.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_hidapi.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h
 
 third_party/SDL/include/SDL2/SDL_hints.h: ../third_party/SDL/include/SDL_hints.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating include/SDL2/SDL_hints.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_hints.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating include/SDL2/SDL_hints.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_hints.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h
 
 third_party/SDL/include/SDL2/SDL_joystick.h: ../third_party/SDL/include/SDL_joystick.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating include/SDL2/SDL_joystick.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_joystick.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating include/SDL2/SDL_joystick.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_joystick.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h
 
 third_party/SDL/include/SDL2/SDL_keyboard.h: ../third_party/SDL/include/SDL_keyboard.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating include/SDL2/SDL_keyboard.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_keyboard.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating include/SDL2/SDL_keyboard.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_keyboard.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h
 
 third_party/SDL/include/SDL2/SDL_keycode.h: ../third_party/SDL/include/SDL_keycode.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating include/SDL2/SDL_keycode.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_keycode.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating include/SDL2/SDL_keycode.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_keycode.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h
 
 third_party/SDL/include/SDL2/SDL_loadso.h: ../third_party/SDL/include/SDL_loadso.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating include/SDL2/SDL_loadso.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_loadso.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating include/SDL2/SDL_loadso.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_loadso.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h
 
 third_party/SDL/include/SDL2/SDL_locale.h: ../third_party/SDL/include/SDL_locale.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating include/SDL2/SDL_locale.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_locale.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_locale.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating include/SDL2/SDL_locale.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_locale.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_locale.h
 
 third_party/SDL/include/SDL2/SDL_log.h: ../third_party/SDL/include/SDL_log.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating include/SDL2/SDL_log.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_log.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating include/SDL2/SDL_log.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_log.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h
 
 third_party/SDL/include/SDL2/SDL_main.h: ../third_party/SDL/include/SDL_main.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating include/SDL2/SDL_main.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_main.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating include/SDL2/SDL_main.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_main.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h
 
 third_party/SDL/include/SDL2/SDL_messagebox.h: ../third_party/SDL/include/SDL_messagebox.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating include/SDL2/SDL_messagebox.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_messagebox.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_messagebox.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating include/SDL2/SDL_messagebox.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_messagebox.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_messagebox.h
 
 third_party/SDL/include/SDL2/SDL_metal.h: ../third_party/SDL/include/SDL_metal.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating include/SDL2/SDL_metal.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_metal.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_metal.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating include/SDL2/SDL_metal.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_metal.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_metal.h
 
 third_party/SDL/include/SDL2/SDL_misc.h: ../third_party/SDL/include/SDL_misc.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Generating include/SDL2/SDL_misc.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_misc.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Generating include/SDL2/SDL_misc.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_misc.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h
 
 third_party/SDL/include/SDL2/SDL_mouse.h: ../third_party/SDL/include/SDL_mouse.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Generating include/SDL2/SDL_mouse.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_mouse.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Generating include/SDL2/SDL_mouse.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_mouse.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h
 
 third_party/SDL/include/SDL2/SDL_mutex.h: ../third_party/SDL/include/SDL_mutex.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating include/SDL2/SDL_mutex.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_mutex.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating include/SDL2/SDL_mutex.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_mutex.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h
 
 third_party/SDL/include/SDL2/SDL_name.h: ../third_party/SDL/include/SDL_name.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Generating include/SDL2/SDL_name.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_name.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_name.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Generating include/SDL2/SDL_name.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_name.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_name.h
 
 third_party/SDL/include/SDL2/SDL_opengl.h: ../third_party/SDL/include/SDL_opengl.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Generating include/SDL2/SDL_opengl.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_opengl.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Generating include/SDL2/SDL_opengl.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_opengl.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl.h
 
 third_party/SDL/include/SDL2/SDL_opengl_glext.h: ../third_party/SDL/include/SDL_opengl_glext.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Generating include/SDL2/SDL_opengl_glext.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_opengl_glext.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl_glext.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Generating include/SDL2/SDL_opengl_glext.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_opengl_glext.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl_glext.h
 
 third_party/SDL/include/SDL2/SDL_opengles.h: ../third_party/SDL/include/SDL_opengles.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Generating include/SDL2/SDL_opengles.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_opengles.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Generating include/SDL2/SDL_opengles.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_opengles.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles.h
 
 third_party/SDL/include/SDL2/SDL_opengles2.h: ../third_party/SDL/include/SDL_opengles2.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Generating include/SDL2/SDL_opengles2.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_opengles2.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Generating include/SDL2/SDL_opengles2.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_opengles2.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2.h
 
 third_party/SDL/include/SDL2/SDL_opengles2_gl2.h: ../third_party/SDL/include/SDL_opengles2_gl2.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Generating include/SDL2/SDL_opengles2_gl2.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_opengles2_gl2.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2_gl2.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Generating include/SDL2/SDL_opengles2_gl2.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_opengles2_gl2.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2_gl2.h
 
 third_party/SDL/include/SDL2/SDL_opengles2_gl2ext.h: ../third_party/SDL/include/SDL_opengles2_gl2ext.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Generating include/SDL2/SDL_opengles2_gl2ext.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_opengles2_gl2ext.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2_gl2ext.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Generating include/SDL2/SDL_opengles2_gl2ext.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_opengles2_gl2ext.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2_gl2ext.h
 
 third_party/SDL/include/SDL2/SDL_opengles2_gl2platform.h: ../third_party/SDL/include/SDL_opengles2_gl2platform.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Generating include/SDL2/SDL_opengles2_gl2platform.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_opengles2_gl2platform.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2_gl2platform.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Generating include/SDL2/SDL_opengles2_gl2platform.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_opengles2_gl2platform.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2_gl2platform.h
 
 third_party/SDL/include/SDL2/SDL_opengles2_khrplatform.h: ../third_party/SDL/include/SDL_opengles2_khrplatform.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Generating include/SDL2/SDL_opengles2_khrplatform.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_opengles2_khrplatform.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2_khrplatform.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Generating include/SDL2/SDL_opengles2_khrplatform.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_opengles2_khrplatform.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2_khrplatform.h
 
 third_party/SDL/include/SDL2/SDL_pixels.h: ../third_party/SDL/include/SDL_pixels.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Generating include/SDL2/SDL_pixels.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_pixels.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Generating include/SDL2/SDL_pixels.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_pixels.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h
 
 third_party/SDL/include/SDL2/SDL_platform.h: ../third_party/SDL/include/SDL_platform.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Generating include/SDL2/SDL_platform.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_platform.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Generating include/SDL2/SDL_platform.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_platform.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h
 
 third_party/SDL/include/SDL2/SDL_power.h: ../third_party/SDL/include/SDL_power.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Generating include/SDL2/SDL_power.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_power.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_power.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Generating include/SDL2/SDL_power.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_power.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_power.h
 
 third_party/SDL/include/SDL2/SDL_quit.h: ../third_party/SDL/include/SDL_quit.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Generating include/SDL2/SDL_quit.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_quit.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Generating include/SDL2/SDL_quit.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_quit.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h
 
 third_party/SDL/include/SDL2/SDL_rect.h: ../third_party/SDL/include/SDL_rect.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Generating include/SDL2/SDL_rect.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_rect.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Generating include/SDL2/SDL_rect.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_rect.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h
 
 third_party/SDL/include/SDL2/SDL_render.h: ../third_party/SDL/include/SDL_render.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Generating include/SDL2/SDL_render.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_render.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Generating include/SDL2/SDL_render.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_render.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h
 
 third_party/SDL/include/SDL2/SDL_rwops.h: ../third_party/SDL/include/SDL_rwops.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Generating include/SDL2/SDL_rwops.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_rwops.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Generating include/SDL2/SDL_rwops.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_rwops.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h
 
 third_party/SDL/include/SDL2/SDL_scancode.h: ../third_party/SDL/include/SDL_scancode.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Generating include/SDL2/SDL_scancode.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_scancode.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Generating include/SDL2/SDL_scancode.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_scancode.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h
 
 third_party/SDL/include/SDL2/SDL_sensor.h: ../third_party/SDL/include/SDL_sensor.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Generating include/SDL2/SDL_sensor.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_sensor.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Generating include/SDL2/SDL_sensor.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_sensor.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h
 
 third_party/SDL/include/SDL2/SDL_shape.h: ../third_party/SDL/include/SDL_shape.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Generating include/SDL2/SDL_shape.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_shape.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_shape.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Generating include/SDL2/SDL_shape.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_shape.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_shape.h
 
 third_party/SDL/include/SDL2/SDL_stdinc.h: ../third_party/SDL/include/SDL_stdinc.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Generating include/SDL2/SDL_stdinc.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_stdinc.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Generating include/SDL2/SDL_stdinc.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_stdinc.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h
 
 third_party/SDL/include/SDL2/SDL_surface.h: ../third_party/SDL/include/SDL_surface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Generating include/SDL2/SDL_surface.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_surface.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Generating include/SDL2/SDL_surface.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_surface.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h
 
 third_party/SDL/include/SDL2/SDL_system.h: ../third_party/SDL/include/SDL_system.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Generating include/SDL2/SDL_system.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_system.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_system.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Generating include/SDL2/SDL_system.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_system.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_system.h
 
 third_party/SDL/include/SDL2/SDL_syswm.h: ../third_party/SDL/include/SDL_syswm.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Generating include/SDL2/SDL_syswm.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_syswm.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_syswm.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Generating include/SDL2/SDL_syswm.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_syswm.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_syswm.h
 
 third_party/SDL/include/SDL2/SDL_test.h: ../third_party/SDL/include/SDL_test.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Generating include/SDL2/SDL_test.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Generating include/SDL2/SDL_test.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test.h
 
 third_party/SDL/include/SDL2/SDL_test_assert.h: ../third_party/SDL/include/SDL_test_assert.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Generating include/SDL2/SDL_test_assert.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_assert.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_assert.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Generating include/SDL2/SDL_test_assert.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_assert.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_assert.h
 
 third_party/SDL/include/SDL2/SDL_test_common.h: ../third_party/SDL/include/SDL_test_common.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Generating include/SDL2/SDL_test_common.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_common.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_common.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Generating include/SDL2/SDL_test_common.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_common.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_common.h
 
 third_party/SDL/include/SDL2/SDL_test_compare.h: ../third_party/SDL/include/SDL_test_compare.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Generating include/SDL2/SDL_test_compare.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_compare.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_compare.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Generating include/SDL2/SDL_test_compare.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_compare.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_compare.h
 
 third_party/SDL/include/SDL2/SDL_test_crc32.h: ../third_party/SDL/include/SDL_test_crc32.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Generating include/SDL2/SDL_test_crc32.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_crc32.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_crc32.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Generating include/SDL2/SDL_test_crc32.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_crc32.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_crc32.h
 
 third_party/SDL/include/SDL2/SDL_test_font.h: ../third_party/SDL/include/SDL_test_font.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Generating include/SDL2/SDL_test_font.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_font.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_font.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Generating include/SDL2/SDL_test_font.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_font.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_font.h
 
 third_party/SDL/include/SDL2/SDL_test_fuzzer.h: ../third_party/SDL/include/SDL_test_fuzzer.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Generating include/SDL2/SDL_test_fuzzer.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_fuzzer.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_fuzzer.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Generating include/SDL2/SDL_test_fuzzer.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_fuzzer.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_fuzzer.h
 
 third_party/SDL/include/SDL2/SDL_test_harness.h: ../third_party/SDL/include/SDL_test_harness.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Generating include/SDL2/SDL_test_harness.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_harness.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_harness.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Generating include/SDL2/SDL_test_harness.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_harness.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_harness.h
 
 third_party/SDL/include/SDL2/SDL_test_images.h: ../third_party/SDL/include/SDL_test_images.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Generating include/SDL2/SDL_test_images.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_images.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_images.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Generating include/SDL2/SDL_test_images.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_images.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_images.h
 
 third_party/SDL/include/SDL2/SDL_test_log.h: ../third_party/SDL/include/SDL_test_log.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Generating include/SDL2/SDL_test_log.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_log.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_log.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Generating include/SDL2/SDL_test_log.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_log.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_log.h
 
 third_party/SDL/include/SDL2/SDL_test_md5.h: ../third_party/SDL/include/SDL_test_md5.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Generating include/SDL2/SDL_test_md5.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_md5.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_md5.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Generating include/SDL2/SDL_test_md5.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_md5.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_md5.h
 
 third_party/SDL/include/SDL2/SDL_test_memory.h: ../third_party/SDL/include/SDL_test_memory.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Generating include/SDL2/SDL_test_memory.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_memory.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_memory.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Generating include/SDL2/SDL_test_memory.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_memory.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_memory.h
 
 third_party/SDL/include/SDL2/SDL_test_random.h: ../third_party/SDL/include/SDL_test_random.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Generating include/SDL2/SDL_test_random.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_test_random.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_random.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Generating include/SDL2/SDL_test_random.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_test_random.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_test_random.h
 
 third_party/SDL/include/SDL2/SDL_thread.h: ../third_party/SDL/include/SDL_thread.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Generating include/SDL2/SDL_thread.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_thread.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Generating include/SDL2/SDL_thread.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_thread.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h
 
 third_party/SDL/include/SDL2/SDL_timer.h: ../third_party/SDL/include/SDL_timer.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Generating include/SDL2/SDL_timer.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_timer.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Generating include/SDL2/SDL_timer.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_timer.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h
 
 third_party/SDL/include/SDL2/SDL_touch.h: ../third_party/SDL/include/SDL_touch.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Generating include/SDL2/SDL_touch.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_touch.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Generating include/SDL2/SDL_touch.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_touch.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h
 
 third_party/SDL/include/SDL2/SDL_types.h: ../third_party/SDL/include/SDL_types.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Generating include/SDL2/SDL_types.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_types.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_types.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Generating include/SDL2/SDL_types.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_types.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_types.h
 
 third_party/SDL/include/SDL2/SDL_version.h: ../third_party/SDL/include/SDL_version.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Generating include/SDL2/SDL_version.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_version.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Generating include/SDL2/SDL_version.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_version.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h
 
 third_party/SDL/include/SDL2/SDL_video.h: ../third_party/SDL/include/SDL_video.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Generating include/SDL2/SDL_video.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_video.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Generating include/SDL2/SDL_video.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_video.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h
 
 third_party/SDL/include/SDL2/SDL_vulkan.h: ../third_party/SDL/include/SDL_vulkan.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Generating include/SDL2/SDL_vulkan.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/SDL_vulkan.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Generating include/SDL2/SDL_vulkan.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_vulkan.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h
 
 third_party/SDL/include/SDL2/begin_code.h: ../third_party/SDL/include/begin_code.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Generating include/SDL2/begin_code.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/begin_code.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Generating include/SDL2/begin_code.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/begin_code.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h
 
 third_party/SDL/include/SDL2/close_code.h: ../third_party/SDL/include/close_code.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Generating include/SDL2/close_code.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/unclegoga/Development/VkEngine/third_party/SDL/include/close_code.h /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h
-
-third_party/SDL/wayland-generated-protocols/fractional-scale-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/fractional-scale-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Generating wayland-generated-protocols/fractional-scale-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/fractional-scale-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/fractional-scale-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/idle-inhibit-unstable-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Generating wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/idle-inhibit-unstable-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/keyboard-shortcuts-inhibit-unstable-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Generating wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/keyboard-shortcuts-inhibit-unstable-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/pointer-constraints-unstable-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Generating wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/pointer-constraints-unstable-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/primary-selection-unstable-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Generating wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/primary-selection-unstable-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/relative-pointer-unstable-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/relative-pointer-unstable-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Generating wayland-generated-protocols/relative-pointer-unstable-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/relative-pointer-unstable-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/relative-pointer-unstable-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-client-protocol.h: ../third_party/SDL/wayland-protocols/tablet-unstable-v2.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Generating wayland-generated-protocols/tablet-unstable-v2-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/tablet-unstable-v2.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-client-protocol.h: ../third_party/SDL/wayland-protocols/text-input-unstable-v3.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Generating wayland-generated-protocols/text-input-unstable-v3-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/text-input-unstable-v3.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/viewporter-client-protocol.h: ../third_party/SDL/wayland-protocols/viewporter.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Generating wayland-generated-protocols/viewporter-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/viewporter.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/viewporter-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h: ../third_party/SDL/wayland-protocols/wayland.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Generating wayland-generated-protocols/wayland-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/wayland.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/xdg-activation-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/xdg-activation-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Generating wayland-generated-protocols/xdg-activation-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/xdg-activation-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/xdg-activation-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/xdg-decoration-unstable-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Generating wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/xdg-decoration-unstable-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/xdg-output-unstable-v1-client-protocol.h: ../third_party/SDL/wayland-protocols/xdg-output-unstable-v1.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Generating wayland-generated-protocols/xdg-output-unstable-v1-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/xdg-output-unstable-v1.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/xdg-output-unstable-v1-client-protocol.h
-
-third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h: ../third_party/SDL/wayland-protocols/xdg-shell.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Generating wayland-generated-protocols/xdg-shell-client-protocol.h"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/wayland-scanner client-header /home/unclegoga/Development/VkEngine/third_party/SDL/wayland-protocols/xdg-shell.xml /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Generating include/SDL2/close_code.h"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -E copy_if_different /home/gooby/Development/VkEngine/third_party/SDL/include/close_code.h /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h
 
 sdl_headers_copy: third_party/SDL/CMakeFiles/sdl_headers_copy
 sdl_headers_copy: third_party/SDL/include/SDL2/SDL.h
@@ -600,20 +530,6 @@ sdl_headers_copy: third_party/SDL/include/SDL2/SDL_video.h
 sdl_headers_copy: third_party/SDL/include/SDL2/SDL_vulkan.h
 sdl_headers_copy: third_party/SDL/include/SDL2/begin_code.h
 sdl_headers_copy: third_party/SDL/include/SDL2/close_code.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/fractional-scale-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/relative-pointer-unstable-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/viewporter-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/xdg-activation-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/xdg-output-unstable-v1-client-protocol.h
-sdl_headers_copy: third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h
 sdl_headers_copy: third_party/SDL/CMakeFiles/sdl_headers_copy.dir/build.make
 .PHONY : sdl_headers_copy
 
@@ -622,10 +538,10 @@ third_party/SDL/CMakeFiles/sdl_headers_copy.dir/build: sdl_headers_copy
 .PHONY : third_party/SDL/CMakeFiles/sdl_headers_copy.dir/build
 
 third_party/SDL/CMakeFiles/sdl_headers_copy.dir/clean:
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/sdl_headers_copy.dir/cmake_clean.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/sdl_headers_copy.dir/cmake_clean.cmake
 .PHONY : third_party/SDL/CMakeFiles/sdl_headers_copy.dir/clean
 
 third_party/SDL/CMakeFiles/sdl_headers_copy.dir/depend:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unclegoga/Development/VkEngine /home/unclegoga/Development/VkEngine/third_party/SDL /home/unclegoga/Development/VkEngine/build /home/unclegoga/Development/VkEngine/build/third_party/SDL /home/unclegoga/Development/VkEngine/build/third_party/SDL/CMakeFiles/sdl_headers_copy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gooby/Development/VkEngine /home/gooby/Development/VkEngine/third_party/SDL /home/gooby/Development/VkEngine/build /home/gooby/Development/VkEngine/build/third_party/SDL /home/gooby/Development/VkEngine/build/third_party/SDL/CMakeFiles/sdl_headers_copy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third_party/SDL/CMakeFiles/sdl_headers_copy.dir/depend
 

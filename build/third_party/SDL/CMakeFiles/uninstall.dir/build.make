@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unclegoga/Development/VkEngine
+CMAKE_SOURCE_DIR = /home/gooby/Development/VkEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unclegoga/Development/VkEngine/build
+CMAKE_BINARY_DIR = /home/gooby/Development/VkEngine/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include third_party/SDL/CMakeFiles/uninstall.dir/compiler_depend.make
 include third_party/SDL/CMakeFiles/uninstall.dir/progress.make
 
 third_party/SDL/CMakeFiles/uninstall:
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -P /home/unclegoga/Development/VkEngine/build/third_party/SDL/cmake_uninstall.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/cmake -P /home/gooby/Development/VkEngine/build/third_party/SDL/cmake_uninstall.cmake
 
 uninstall: third_party/SDL/CMakeFiles/uninstall
 uninstall: third_party/SDL/CMakeFiles/uninstall.dir/build.make
@@ -78,10 +78,10 @@ third_party/SDL/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : third_party/SDL/CMakeFiles/uninstall.dir/build
 
 third_party/SDL/CMakeFiles/uninstall.dir/clean:
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : third_party/SDL/CMakeFiles/uninstall.dir/clean
 
 third_party/SDL/CMakeFiles/uninstall.dir/depend:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unclegoga/Development/VkEngine /home/unclegoga/Development/VkEngine/third_party/SDL /home/unclegoga/Development/VkEngine/build /home/unclegoga/Development/VkEngine/build/third_party/SDL /home/unclegoga/Development/VkEngine/build/third_party/SDL/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gooby/Development/VkEngine /home/gooby/Development/VkEngine/third_party/SDL /home/gooby/Development/VkEngine/build /home/gooby/Development/VkEngine/build/third_party/SDL /home/gooby/Development/VkEngine/build/third_party/SDL/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third_party/SDL/CMakeFiles/uninstall.dir/depend
 

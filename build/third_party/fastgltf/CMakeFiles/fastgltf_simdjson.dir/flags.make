@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/unclegoga/Development/VkEngine/third_party/fastgltf/deps/simdjson
+CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson
 
 CXX_FLAGS = -std=gnu++17
 

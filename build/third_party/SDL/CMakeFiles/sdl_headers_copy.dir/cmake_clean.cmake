@@ -77,20 +77,6 @@ file(REMOVE_RECURSE
   "include/SDL2/SDL_vulkan.h"
   "include/SDL2/begin_code.h"
   "include/SDL2/close_code.h"
-  "wayland-generated-protocols/fractional-scale-v1-client-protocol.h"
-  "wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h"
-  "wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h"
-  "wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h"
-  "wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h"
-  "wayland-generated-protocols/relative-pointer-unstable-v1-client-protocol.h"
-  "wayland-generated-protocols/tablet-unstable-v2-client-protocol.h"
-  "wayland-generated-protocols/text-input-unstable-v3-client-protocol.h"
-  "wayland-generated-protocols/viewporter-client-protocol.h"
-  "wayland-generated-protocols/wayland-client-protocol.h"
-  "wayland-generated-protocols/xdg-activation-v1-client-protocol.h"
-  "wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h"
-  "wayland-generated-protocols/xdg-output-unstable-v1-client-protocol.h"
-  "wayland-generated-protocols/xdg-shell-client-protocol.h"
 )
 
 # Per-language clean rules from dependency scanning.

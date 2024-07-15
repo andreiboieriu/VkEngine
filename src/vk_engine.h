@@ -46,14 +46,13 @@ private:
 	void initImGui();
 
 	// TODO: delete later
-	void initTrianglePipeline();
-
 	void initMeshPipeline();
 
 	void initDefaultData();
 
 
 	void createSwapchain(uint32_t width, uint32_t height);
+	void resizeSwapchain();
 	void destroySwapchain();
 
 	//draw loop
@@ -99,16 +98,21 @@ private:
 	uint32_t mGraphicsQueueFamily;
 
 	// window size basically
-	VkExtent2D mWindowExtent = {1600, 900};
+	VkExtent2D mWindowExtent = {1280, 720};
 
 	// sdl window handle
 	struct SDL_Window* mWindow = nullptr;
+
+	bool mResizeRequested = false;
 
 	DeletionQueue mMainDeletionQueue;
 
 	// draw resources
 	AllocatedImage mDrawImage;
 	VkExtent2D mDrawExtent;
+	float mRenderScale = 1.0f;
+
+	AllocatedImage mDepthImage;
 
 	// descriptor resources
 	DescriptorAllocator mDescriptorAllocator;
@@ -119,13 +123,8 @@ private:
 	VkPipeline mGradientPipeline;
 	VkPipelineLayout mGradientPipelineLayout;
 
-	VkPipelineLayout mTrianglePipelineLayout;
-	VkPipeline mTrianglePipeline;
-
 	VkPipelineLayout mMeshPipelineLayout;
 	VkPipeline mMeshPipeline;
-	GPUMeshBuffers mRectangle;
-
 	std::vector<std::shared_ptr<MeshAsset>> mTestMeshes;
 
 	std::vector<ComputeEffect> backgroundEffects;

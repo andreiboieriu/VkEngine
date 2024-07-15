@@ -1,14 +1,14 @@
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o: \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11dyn.c \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/x11/../../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/x11/../../dynapi/SDL_dynapi.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/x11/../../dynapi/SDL_dynapi_overrides.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11dyn.c \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/../../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/../../dynapi/SDL_dynapi.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/../../dynapi/SDL_dynapi_overrides.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
   /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -81,8 +81,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o: \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11dyn.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/Xlib.h /usr/include/X11/X.h \
   /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
   /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
@@ -106,21 +106,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o: \
   /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
   /usr/include/X11/extensions/XShm.h /usr/include/X11/extensions/shm.h \
-  /usr/include/X11/Xcursor/Xcursor.h /usr/include/X11/extensions/Xdbe.h \
-  /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
+  /usr/include/X11/extensions/Xdbe.h /usr/include/X11/extensions/dbe.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11sym.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_name.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11sym.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_name.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h

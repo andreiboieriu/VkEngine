@@ -1,4 +1,4 @@
-# Install script for directory: /home/unclegoga/Development/VkEngine/third_party
+# Install script for directory: /home/gooby/Development/VkEngine/third_party
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/unclegoga/Development/VkEngine/build/third_party/fastgltf/cmake_install.cmake")
+  include("/home/gooby/Development/VkEngine/build/third_party/fastgltf/cmake_install.cmake")
 
 endif()
 

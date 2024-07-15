@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/unclegoga/Development/VkEngine/third_party/fmt/include
+CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/fmt/include
 
 CXX_FLAGS = 
 

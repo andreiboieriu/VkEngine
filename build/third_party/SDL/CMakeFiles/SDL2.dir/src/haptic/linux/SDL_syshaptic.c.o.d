@@ -1,14 +1,14 @@
 third_party/SDL/CMakeFiles/SDL2.dir/src/haptic/linux/SDL_syshaptic.c.o: \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/SDL_syshaptic.c \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../dynapi/SDL_dynapi.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../dynapi/SDL_dynapi_overrides.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/SDL_syshaptic.c \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../dynapi/SDL_dynapi.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../dynapi/SDL_dynapi_overrides.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
   /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -81,20 +81,20 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/haptic/linux/SDL_syshaptic.c.o: \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../SDL_syshaptic.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../joystick/SDL_sysjoystick.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../joystick/../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../joystick/SDL_joystick_c.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../joystick/linux/SDL_sysjoystick_c.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../SDL_syshaptic.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../joystick/SDL_sysjoystick.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../joystick/../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../joystick/SDL_joystick_c.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../joystick/linux/SDL_sysjoystick_c.h \
   /usr/include/linux/input.h /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/x86_64-linux-gnu/sys/ioctl.h \
   /usr/include/x86_64-linux-gnu/bits/ioctls.h \
@@ -113,27 +113,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/haptic/linux/SDL_syshaptic.c.o: \
   /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
   /usr/include/asm-generic/posix_types.h \
   /usr/include/linux/input-event-codes.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../core/linux/SDL_evdev_capabilities.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../core/linux/../../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/haptic/linux/../../core/linux/SDL_udev.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
-  /usr/include/libudev.h /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../core/linux/SDL_evdev_capabilities.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../core/linux/../../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/haptic/linux/../../core/linux/SDL_udev.h \
+  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \

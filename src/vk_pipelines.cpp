@@ -1,6 +1,7 @@
 ﻿#include "vk_pipelines.h"
 
 #include <fstream>
+#include <vulkan/vulkan_core.h>
 #include "vk_initializers.h"
 
 bool vkutil::loadShaderModule(const char* filePath, VkDevice device, VkShaderModule* outShaderModule) {
@@ -141,12 +142,51 @@ PipelineBuilder& PipelineBuilder::disableDepthTesting() {
     return *this;
 }
 
+PipelineBuilder& PipelineBuilder::enableDepthTesting(bool depthWriteEnable, VkCompareOp op) {
+    mDepthStencil.depthTestEnable = VK_TRUE;
+    mDepthStencil.depthWriteEnable = depthWriteEnable;
+    mDepthStencil.depthCompareOp = op;
+    mDepthStencil.depthBoundsTestEnable = VK_FALSE;
+    mDepthStencil.stencilTestEnable = VK_FALSE;
+    mDepthStencil.front = {};
+    mDepthStencil.back = {};
+    mDepthStencil.minDepthBounds = 0.f;
+    mDepthStencil.maxDepthBounds = 1.f;
+
+    return *this;
+}
+
 PipelineBuilder& PipelineBuilder::setLayout(VkPipelineLayout layout) {
     mPipelineLayout = layout;
 
     return *this;
 }
 
+PipelineBuilder& PipelineBuilder::enableBlendingAdditive() {
+    mColorBlendAttachment.colorWriteMask = VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+    mColorBlendAttachment.blendEnable = VK_TRUE;
+    mColorBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+    mColorBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ONE;
+    mColorBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD;
+    mColorBlendAttachment.srcAlphaBlendFactor = VK_BLEND_FACTOR_ONE;
+    mColorBlendAttachment.dstAlphaBlendFactor = VK_BLEND_FACTOR_ZERO;
+    mColorBlendAttachment.alphaBlendOp = VK_BLEND_OP_ADD;
+
+    return *this;
+}
+
+PipelineBuilder& PipelineBuilder::enableBlendingAlphaBlend() {
+    mColorBlendAttachment.colorWriteMask = VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+    mColorBlendAttachment.blendEnable = VK_TRUE;
+    mColorBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+    mColorBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+    mColorBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD;
+    mColorBlendAttachment.srcAlphaBlendFactor = VK_BLEND_FACTOR_ONE;
+    mColorBlendAttachment.dstAlphaBlendFactor = VK_BLEND_FACTOR_ZERO;
+    mColorBlendAttachment.alphaBlendOp = VK_BLEND_OP_ADD;
+
+    return *this;
+}
 
 VkPipeline PipelineBuilder::buildPipeline(VkDevice device) {
     // create viewport state

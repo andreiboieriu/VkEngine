@@ -1,14 +1,14 @@
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/SDL_video.c \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../dynapi/SDL_dynapi.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../dynapi/SDL_dynapi_overrides.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_video.c \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../dynapi/SDL_dynapi.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../dynapi/SDL_dynapi_overrides.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
   /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -81,18 +81,18 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_audio.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_clipboard.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_audio.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_clipboard.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/mm3dnow.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h \
@@ -175,59 +175,43 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_filesystem.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_messagebox.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_metal.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_power.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_shape.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_system.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_locale.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/SDL_sysvideo.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/SDL_vulkan_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/wayland/../../SDL_internal.h \
-  /usr/include/wayland-cursor.h /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h /usr/include/wayland-version.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vk_platform.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan_core.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan_wayland.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_filesystem.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_messagebox.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_metal.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_power.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_shape.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_system.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_locale.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_sysvideo.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_vulkan_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vk_platform.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan_core.h \
   /usr/include/xcb/xcb.h /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
@@ -243,32 +227,32 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: \
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/xcb/xproto.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan_xcb.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan_xcb.h \
   /usr/include/X11/Xlib.h /usr/include/X11/X.h \
   /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan_xlib.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/SDL_blit.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/SDL_pixels_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/SDL_rect_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_events_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/../video/SDL_sysvideo.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_clipboardevents_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_displayevents_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_dropevents_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_gesture_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_keyboard_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_mouse_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_touch_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/../../include/SDL_touch.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../events/SDL_windowevents_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../timer/SDL_timer_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/../timer/../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_syswm.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/./khronos/vulkan/vulkan_xlib.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_blit.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_pixels_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_rect_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_events_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/../video/SDL_sysvideo.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_clipboardevents_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_displayevents_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_dropevents_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_gesture_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_keyboard_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_mouse_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_touch_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/../../include/SDL_touch.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../events/SDL_windowevents_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../timer/SDL_timer_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/../timer/../SDL_internal.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_syswm.h \
   /usr/include/X11/Xatom.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl_glext.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl_glext.h \
   /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
@@ -291,5 +275,4 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/linux/close_range.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11messagebox.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/video/wayland/SDL_waylandmessagebox.h
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11messagebox.h

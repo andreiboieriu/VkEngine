@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unclegoga/Development/VkEngine
+CMAKE_SOURCE_DIR = /home/gooby/Development/VkEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unclegoga/Development/VkEngine/build
+CMAKE_BINARY_DIR = /home/gooby/Development/VkEngine/build
 
 # Include any dependencies generated for this target.
 include third_party/fastgltf/CMakeFiles/fastgltf.dir/depend.make
@@ -72,30 +72,30 @@ include third_party/fastgltf/CMakeFiles/fastgltf.dir/flags.make
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf.dir/flags.make
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/fastgltf/src/fastgltf.cpp
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o -MF CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o.d -o CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o -c /home/unclegoga/Development/VkEngine/third_party/fastgltf/src/fastgltf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o -MF CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o.d -o CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o -c /home/gooby/Development/VkEngine/third_party/fastgltf/src/fastgltf.cpp
 
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fastgltf.dir/src/fastgltf.cpp.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/fastgltf/src/fastgltf.cpp > CMakeFiles/fastgltf.dir/src/fastgltf.cpp.i
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gooby/Development/VkEngine/third_party/fastgltf/src/fastgltf.cpp > CMakeFiles/fastgltf.dir/src/fastgltf.cpp.i
 
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fastgltf.dir/src/fastgltf.cpp.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/fastgltf/src/fastgltf.cpp -o CMakeFiles/fastgltf.dir/src/fastgltf.cpp.s
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gooby/Development/VkEngine/third_party/fastgltf/src/fastgltf.cpp -o CMakeFiles/fastgltf.dir/src/fastgltf.cpp.s
 
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf.dir/flags.make
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o: ../third_party/fastgltf/src/base64.cpp
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o -MF CMakeFiles/fastgltf.dir/src/base64.cpp.o.d -o CMakeFiles/fastgltf.dir/src/base64.cpp.o -c /home/unclegoga/Development/VkEngine/third_party/fastgltf/src/base64.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o -MF CMakeFiles/fastgltf.dir/src/base64.cpp.o.d -o CMakeFiles/fastgltf.dir/src/base64.cpp.o -c /home/gooby/Development/VkEngine/third_party/fastgltf/src/base64.cpp
 
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fastgltf.dir/src/base64.cpp.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/fastgltf/src/base64.cpp > CMakeFiles/fastgltf.dir/src/base64.cpp.i
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gooby/Development/VkEngine/third_party/fastgltf/src/base64.cpp > CMakeFiles/fastgltf.dir/src/base64.cpp.i
 
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fastgltf.dir/src/base64.cpp.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/fastgltf/src/base64.cpp -o CMakeFiles/fastgltf.dir/src/base64.cpp.s
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gooby/Development/VkEngine/third_party/fastgltf/src/base64.cpp -o CMakeFiles/fastgltf.dir/src/base64.cpp.s
 
 # Object files for target fastgltf
 fastgltf_OBJECTS = \
@@ -109,19 +109,19 @@ third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir
 third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o
 third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make
 third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libfastgltf.a"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf.dir/cmake_clean_target.cmake
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fastgltf.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libfastgltf.a"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf.dir/cmake_clean_target.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fastgltf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 third_party/fastgltf/CMakeFiles/fastgltf.dir/build: third_party/fastgltf/libfastgltf.a
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf.dir/build
 
 third_party/fastgltf/CMakeFiles/fastgltf.dir/clean:
-	cd /home/unclegoga/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf.dir/cmake_clean.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf.dir/cmake_clean.cmake
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf.dir/clean
 
 third_party/fastgltf/CMakeFiles/fastgltf.dir/depend:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unclegoga/Development/VkEngine /home/unclegoga/Development/VkEngine/third_party/fastgltf /home/unclegoga/Development/VkEngine/build /home/unclegoga/Development/VkEngine/build/third_party/fastgltf /home/unclegoga/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/fastgltf.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gooby/Development/VkEngine /home/gooby/Development/VkEngine/third_party/fastgltf /home/gooby/Development/VkEngine/build /home/gooby/Development/VkEngine/build/third_party/fastgltf /home/gooby/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/fastgltf.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf.dir/depend
 

@@ -1,6 +1,6 @@
 src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
-  /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx \
-  /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
+  /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx \
+  /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/optional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/type_traits \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -232,120 +232,120 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/node_handle.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_map.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/erase_if.h \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat4x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/type_vec4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/qualifier.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/setup.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat4x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_vec4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/qualifier.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/setup.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cassert \
   /usr/include/assert.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstddef \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/../simd/platform.h \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec4.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/compute_vector_relational.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../simd/platform.h \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec4.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/compute_vector_relational.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/limits \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x4.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/../matrix.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/vec2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_bool2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/type_vec2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec2.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_bool2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_float2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_float2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_double2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_double2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_int2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_int2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_uint2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_uint2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/vec3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_bool3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/type_vec3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec3.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_bool3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_float3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_float3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_double3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_double3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_int3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_int3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_uint3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_uint3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/vec4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_bool4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_bool4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_float4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_float4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_double4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_double4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_int4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_int4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_uint4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/vector_uint4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat2x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x2.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat2x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x3.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat2x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x4.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat3x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x2.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat3x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x3.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat3x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x4.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat4x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x2.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x2.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x2_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat4x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x3.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x3.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x3_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/func_matrix.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/../geometric.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/func_geometric.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/../exponential.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec1.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec1.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x4.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../matrix.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/vec2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_bool2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_vec2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec2.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_bool2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_float2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_float2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_double2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_double2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_int2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_int2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_uint2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_uint2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/vec3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_bool3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_vec3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec3.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_bool3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_float3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_float3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_double3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_double3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_int3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_int3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_uint3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_uint3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/vec4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_bool4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_bool4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_float4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_float4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_double4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_double4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_int4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_int4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_uint4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_uint4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat2x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x2.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat2x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x3.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat2x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat2x4.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double2x4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float2x4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat3x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x2.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat3x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x3.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat3x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat3x4.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double3x4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float3x4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat4x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x2.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x2_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/mat4x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_mat4x3.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x3_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_matrix.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_geometric.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../exponential.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec1.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_vec1.inl \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cmath \
   /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -369,36 +369,37 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/tr1/poly_hermite.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/tr1/poly_laguerre.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/tr1/riemann_zeta.tcc \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/func_exponential.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/../vector_relational.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/func_vector_relational.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/_vectorize.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/../common.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/_fixes.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/func_common.inl \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/compute_common.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
-  /usr/include/vulkan/vulkan_core.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std.h \
-  /usr/include/vk_video/vulkan_video_codecs_common.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  /home/unclegoga/Development/VkEngine/src/vk_engine.cpp \
-  /home/unclegoga/Development/VkEngine/src/vk_engine.h \
-  /home/unclegoga/Development/VkEngine/src/vk_types.h \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_exponential.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../vector_relational.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_vector_relational.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/_vectorize.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../common.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/_fixes.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_common.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/compute_common.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /home/gooby/Development/VkEngine/src/vk_engine.cpp \
+  /home/gooby/Development/VkEngine/src/vk_engine.h \
+  /home/gooby/Development/VkEngine/src/vk_types.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
-  /usr/include/vulkan/vk_enum_string_helper.h \
-  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
-  /home/unclegoga/Development/VkEngine/src/deletion_queue.h \
+  /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h \
+  /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
+  /home/gooby/Development/VkEngine/src/deletion_queue.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
@@ -408,13 +409,13 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/algorithmfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uniform_int_dist.h \
-  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h \
+  /home/gooby/Development/VkEngine/third_party/fmt/include/fmt/core.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \
   /usr/include/string.h /usr/include/strings.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
-  /home/unclegoga/Development/VkEngine/src/vk_descriptors.h \
-  /home/unclegoga/Development/VkEngine/src/vk_loader.h \
+  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
+  /home/gooby/Development/VkEngine/src/vk_loader.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/filesystem \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_fwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/chrono.h \
@@ -439,28 +440,28 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/codecvt \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_dir.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_ops.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/stdlib.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
   /usr/include/inttypes.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/math.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_audio.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_clipboard.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_audio.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_clipboard.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
@@ -541,45 +542,59 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_filesystem.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_messagebox.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_metal.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_power.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_shape.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_system.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_locale.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /home/unclegoga/Development/VkEngine/src/vk_initializers.h \
-  /home/unclegoga/Development/VkEngine/src/vk_images.h \
-  /home/unclegoga/Development/VkEngine/src/vk_pipelines.h \
-  /home/unclegoga/Development/VkEngine/third_party/vkbootstrap/VkBootstrap.h \
-  /home/unclegoga/Development/VkEngine/third_party/vkbootstrap/VkBootstrapDispatch.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_filesystem.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_messagebox.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_metal.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_power.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_shape.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_system.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_locale.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/constants.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../matrix.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_transform.inl \
+  /home/gooby/Development/VkEngine/src/vk_initializers.h \
+  /home/gooby/Development/VkEngine/src/vk_images.h \
+  /home/gooby/Development/VkEngine/src/vk_pipelines.h \
+  /home/gooby/Development/VkEngine/third_party/vkbootstrap/VkBootstrap.h \
+  /home/gooby/Development/VkEngine/third_party/vkbootstrap/VkBootstrapDispatch.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/algorithm \
@@ -590,10 +605,10 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unique_lock.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/atomic \
-  /home/unclegoga/Development/VkEngine/third_party/imgui/imgui.h \
-  /home/unclegoga/Development/VkEngine/third_party/imgui/imconfig.h \
-  /home/unclegoga/Development/VkEngine/third_party/imgui/imgui_impl_sdl2.h \
-  /home/unclegoga/Development/VkEngine/third_party/imgui/imgui_impl_vulkan.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imgui.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imgui_impl_sdl2.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imgui_impl_vulkan.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/chrono \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/thread \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/stop_token \

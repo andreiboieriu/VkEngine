@@ -102,24 +102,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL.c.o: ../third_party/SDL/src/SDL.c \
   /usr/include/linux/close_range.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   third_party/SDL/include/SDL2/SDL.h \
   third_party/SDL/include/SDL2/SDL_main.h \
   third_party/SDL/include/SDL2/SDL_atomic.h \
@@ -254,29 +236,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL.c.o: ../third_party/SDL/src/SDL.c \
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -539,29 +501,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_assert.c.o: ../third_party/SDL/src/S
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -2882,183 +2824,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.o: ../third_party/SDL/s
   ../third_party/SDL/src/audio/SDL_wave.h \
   ../third_party/SDL/src/audio/SDL_audio_c.h
 
-third_party/SDL/CMakeFiles/SDL2.dir/src/audio/alsa/SDL_alsa_audio.c.o: ../third_party/SDL/src/audio/alsa/SDL_alsa_audio.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  ../third_party/SDL/src/audio/SDL_audio_c.h \
-  ../third_party/SDL/src/audio/alsa/SDL_alsa_audio.h \
-  /usr/include/alsa/asoundlib.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/assert.h \
-  /usr/include/poll.h \
-  /usr/include/x86_64-linux-gnu/sys/poll.h \
-  /usr/include/x86_64-linux-gnu/bits/poll.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/alsa/asoundef.h \
-  /usr/include/alsa/version.h \
-  /usr/include/alsa/global.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/alsa/input.h \
-  /usr/include/alsa/output.h \
-  /usr/include/alsa/error.h \
-  /usr/include/alsa/conf.h \
-  /usr/include/alsa/pcm.h \
-  /usr/include/alsa/rawmidi.h \
-  /usr/include/alsa/timer.h \
-  /usr/include/alsa/hwdep.h \
-  /usr/include/alsa/control.h \
-  /usr/include/alsa/mixer.h \
-  /usr/include/alsa/seq_event.h \
-  /usr/include/alsa/seq.h \
-  /usr/include/alsa/seqmid.h \
-  /usr/include/alsa/seq_midi_event.h \
-  ../third_party/SDL/src/audio/SDL_sysaudio.h \
-  ../third_party/SDL/src/SDL_dataqueue.h \
-  ../third_party/SDL/src/audio/SDL_audio_c.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h
-
 third_party/SDL/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.o: ../third_party/SDL/src/audio/disk/SDL_diskaudio.c \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
@@ -3566,462 +3331,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.o: ../third
   ../third_party/SDL/src/SDL_dataqueue.h \
   ../third_party/SDL/src/audio/SDL_audio_c.h
 
-third_party/SDL/CMakeFiles/SDL2.dir/src/audio/pulseaudio/SDL_pulseaudio.c.o: ../third_party/SDL/src/audio/pulseaudio/SDL_pulseaudio.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/pulse/pulseaudio.h \
-  /usr/include/pulse/direction.h \
-  /usr/include/pulse/def.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h \
-  /usr/include/pulse/cdecl.h \
-  /usr/include/pulse/sample.h \
-  /usr/include/x86_64-linux-gnu/sys/param.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/param.h \
-  /usr/include/linux/param.h \
-  /usr/include/x86_64-linux-gnu/asm/param.h \
-  /usr/include/asm-generic/param.h \
-  /usr/include/pulse/gccmacro.h \
-  /usr/include/pulse/version.h \
-  /usr/include/pulse/mainloop-api.h \
-  /usr/include/pulse/format.h \
-  /usr/include/pulse/proplist.h \
-  /usr/include/pulse/channelmap.h \
-  /usr/include/pulse/context.h \
-  /usr/include/pulse/operation.h \
-  /usr/include/pulse/stream.h \
-  /usr/include/pulse/volume.h \
-  /usr/include/pulse/introspect.h \
-  /usr/include/pulse/subscribe.h \
-  /usr/include/pulse/scache.h \
-  /usr/include/pulse/error.h \
-  /usr/include/pulse/xmalloc.h \
-  /usr/include/assert.h \
-  /usr/include/pulse/utf8.h \
-  /usr/include/pulse/thread-mainloop.h \
-  /usr/include/pulse/mainloop.h \
-  /usr/include/pulse/mainloop-signal.h \
-  /usr/include/pulse/util.h \
-  /usr/include/pulse/timeval.h \
-  /usr/include/pulse/rtclock.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  ../third_party/SDL/src/audio/SDL_audio_c.h \
-  ../third_party/SDL/src/audio/pulseaudio/SDL_pulseaudio.h \
-  /usr/include/pulse/simple.h \
-  ../third_party/SDL/src/audio/SDL_sysaudio.h \
-  ../third_party/SDL/src/SDL_dataqueue.h \
-  ../third_party/SDL/src/audio/SDL_audio_c.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  ../third_party/SDL/src/thread/SDL_systhread.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/thread/SDL_thread_c.h \
-  ../third_party/SDL/src/thread/pthread/SDL_systhread_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  ../third_party/SDL/src/SDL_error_c.h \
-  ../third_party/SDL/src/SDL_internal.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/audio/sndio/SDL_sndioaudio.c.o: ../third_party/SDL/src/audio/sndio/SDL_sndioaudio.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/poll.h \
-  /usr/include/x86_64-linux-gnu/sys/poll.h \
-  /usr/include/x86_64-linux-gnu/bits/poll.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  ../third_party/SDL/src/audio/SDL_audio_c.h \
-  ../third_party/SDL/src/audio/sndio/SDL_sndioaudio.h \
-  /usr/include/sndio.h \
-  ../third_party/SDL/src/audio/SDL_sysaudio.h \
-  ../third_party/SDL/src/SDL_dataqueue.h \
-  ../third_party/SDL/src/audio/SDL_audio_c.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_dbus.c.o: ../third_party/SDL/src/core/linux/SDL_dbus.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  ../third_party/SDL/src/core/linux/SDL_sandbox.h \
-  ../third_party/SDL/src/stdlib/SDL_vacopy.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_error.h
-
 third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev.c.o: ../third_party/SDL/src/core/linux/SDL_evdev.c \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
@@ -4289,29 +3598,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev.c.o: ../third_party
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
@@ -4349,10 +3638,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev.c.o: ../third_party
   ../third_party/SDL/src/events/SDL_scancode_tables_c.h \
   ../third_party/SDL/include/SDL_scancode.h \
   ../third_party/SDL/src/core/linux/SDL_evdev_capabilities.h \
-  ../third_party/SDL/src/core/linux/SDL_udev.h \
-  /usr/include/libudev.h \
-  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/bits/sysmacros.h
+  ../third_party/SDL/src/core/linux/SDL_udev.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev_capabilities.c.o: ../third_party/SDL/src/core/linux/SDL_evdev_capabilities.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -4656,29 +3942,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev_kbd.c.o: ../third_p
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
@@ -4715,1445 +3981,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev_kbd.c.o: ../third_p
   ../third_party/SDL/src/events/SDL_windowevents_c.h \
   ../third_party/SDL/src/core/linux/SDL_evdev_kbd_default_accents.h \
   ../third_party/SDL/src/core/linux/SDL_evdev_kbd_default_keymap.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_fcitx.c.o: ../third_party/SDL/src/core/linux/SDL_fcitx.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  ../third_party/SDL/src/core/linux/SDL_fcitx.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  ../third_party/SDL/src/events/SDL_keyboard_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/video/x11/SDL_x11video.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /usr/include/X11/Xutil.h \
-  /usr/include/X11/keysym.h \
-  /usr/include/X11/keysymdef.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
-  /usr/include/X11/extensions/Xdbe.h \
-  /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
-  /usr/include/X11/extensions/Xrandr.h \
-  /usr/include/X11/extensions/randr.h \
-  /usr/include/X11/extensions/Xrender.h \
-  /usr/include/X11/extensions/render.h \
-  /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
-  /usr/include/X11/extensions/shape.h \
-  /usr/include/X11/extensions/shapeconst.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
-  /usr/include/X11/XKBlib.h \
-  /usr/include/X11/extensions/XKBstr.h \
-  /usr/include/X11/extensions/XKB.h \
-  /usr/include/X11/Xlibint.h \
-  /usr/include/X11/Xproto.h \
-  /usr/include/X11/Xmd.h \
-  /usr/include/X11/Xprotostr.h \
-  /usr/include/X11/XlibConf.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/X11/Xfuncs.h \
-  /usr/include/X11/extensions/Xext.h \
-  /usr/include/x86_64-linux-gnu/sys/ipc.h \
-  /usr/include/x86_64-linux-gnu/bits/ipctypes.h \
-  /usr/include/x86_64-linux-gnu/bits/ipc.h \
-  /usr/include/x86_64-linux-gnu/bits/ipc-perm.h \
-  /usr/include/x86_64-linux-gnu/sys/shm.h \
-  /usr/include/x86_64-linux-gnu/bits/shm.h \
-  /usr/include/x86_64-linux-gnu/bits/shmlba.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
-  /usr/include/X11/extensions/XShm.h \
-  /usr/include/X11/extensions/shm.h \
-  ../third_party/SDL/src/video/x11/SDL_x11sym.h \
-  ../third_party/SDL/src/video/x11/SDL_x11clipboard.h \
-  ../third_party/SDL/src/video/x11/SDL_x11events.h \
-  ../third_party/SDL/src/video/x11/SDL_x11keyboard.h \
-  ../third_party/SDL/src/video/x11/SDL_x11modes.h \
-  ../third_party/SDL/src/video/x11/SDL_x11mouse.h \
-  ../third_party/SDL/src/video/x11/SDL_x11opengl.h \
-  third_party/SDL/include/SDL2/SDL_opengl.h \
-  third_party/SDL/include/SDL2/SDL_opengl_glext.h \
-  /usr/include/GL/glx.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GL/glxext.h \
-  ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
-  third_party/SDL/include/SDL2/SDL_hints.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_ibus.c.o: ../third_party/SDL/src/core/linux/SDL_ibus.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm3dnow.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/core/linux/SDL_ibus.h \
-  /usr/include/ibus-1.0/ibus.h \
-  /usr/include/ibus-1.0/ibusversion.h \
-  /usr/include/ibus-1.0/ibusshare.h \
-  /usr/include/glib-2.0/glib.h \
-  /usr/include/glib-2.0/glib/galloca.h \
-  /usr/include/glib-2.0/glib/gtypes.h \
-  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
-  /usr/include/glib-2.0/glib/gmacros.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/glib-2.0/glib/gversionmacros.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/glib-2.0/glib/garray.h \
-  /usr/include/glib-2.0/glib/gasyncqueue.h \
-  /usr/include/glib-2.0/glib/gthread.h \
-  /usr/include/glib-2.0/glib/gatomic.h \
-  /usr/include/glib-2.0/glib/glib-typeof.h \
-  /usr/include/glib-2.0/glib/gerror.h \
-  /usr/include/glib-2.0/glib/gquark.h \
-  /usr/include/glib-2.0/glib/gutils.h \
-  /usr/include/glib-2.0/glib/gbacktrace.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/glib-2.0/glib/gbase64.h \
-  /usr/include/glib-2.0/glib/gbitlock.h \
-  /usr/include/glib-2.0/glib/gbookmarkfile.h \
-  /usr/include/glib-2.0/glib/gdatetime.h \
-  /usr/include/glib-2.0/glib/gtimezone.h \
-  /usr/include/glib-2.0/glib/gbytes.h \
-  /usr/include/glib-2.0/glib/gcharset.h \
-  /usr/include/glib-2.0/glib/gchecksum.h \
-  /usr/include/glib-2.0/glib/gconvert.h \
-  /usr/include/glib-2.0/glib/gdataset.h \
-  /usr/include/glib-2.0/glib/gdate.h \
-  /usr/include/glib-2.0/glib/gdir.h \
-  /usr/include/dirent.h \
-  /usr/include/x86_64-linux-gnu/bits/dirent.h \
-  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
-  /usr/include/glib-2.0/glib/genviron.h \
-  /usr/include/glib-2.0/glib/gfileutils.h \
-  /usr/include/glib-2.0/glib/ggettext.h \
-  /usr/include/glib-2.0/glib/ghash.h \
-  /usr/include/glib-2.0/glib/glist.h \
-  /usr/include/glib-2.0/glib/gmem.h \
-  /usr/include/glib-2.0/glib/gnode.h \
-  /usr/include/glib-2.0/glib/ghmac.h \
-  /usr/include/glib-2.0/glib/ghook.h \
-  /usr/include/glib-2.0/glib/ghostutils.h \
-  /usr/include/glib-2.0/glib/giochannel.h \
-  /usr/include/glib-2.0/glib/gmain.h \
-  /usr/include/glib-2.0/glib/gpoll.h \
-  /usr/include/glib-2.0/glib/gslist.h \
-  /usr/include/glib-2.0/glib/gstring.h \
-  /usr/include/glib-2.0/glib/gunicode.h \
-  /usr/include/glib-2.0/glib/gkeyfile.h \
-  /usr/include/glib-2.0/glib/gmappedfile.h \
-  /usr/include/glib-2.0/glib/gmarkup.h \
-  /usr/include/glib-2.0/glib/gmessages.h \
-  /usr/include/glib-2.0/glib/gvariant.h \
-  /usr/include/glib-2.0/glib/gvarianttype.h \
-  /usr/include/glib-2.0/glib/goption.h \
-  /usr/include/glib-2.0/glib/gpattern.h \
-  /usr/include/glib-2.0/glib/gprimes.h \
-  /usr/include/glib-2.0/glib/gqsort.h \
-  /usr/include/glib-2.0/glib/gqueue.h \
-  /usr/include/glib-2.0/glib/grand.h \
-  /usr/include/glib-2.0/glib/grcbox.h \
-  /usr/include/glib-2.0/glib/grefcount.h \
-  /usr/include/glib-2.0/glib/grefstring.h \
-  /usr/include/glib-2.0/glib/gregex.h \
-  /usr/include/glib-2.0/glib/gscanner.h \
-  /usr/include/glib-2.0/glib/gsequence.h \
-  /usr/include/glib-2.0/glib/gshell.h \
-  /usr/include/glib-2.0/glib/gslice.h \
-  /usr/include/glib-2.0/glib/gspawn.h \
-  /usr/include/glib-2.0/glib/gstrfuncs.h \
-  /usr/include/glib-2.0/glib/gstringchunk.h \
-  /usr/include/glib-2.0/glib/gstrvbuilder.h \
-  /usr/include/glib-2.0/glib/gtestutils.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/glib-2.0/glib/gthreadpool.h \
-  /usr/include/glib-2.0/glib/gtimer.h \
-  /usr/include/glib-2.0/glib/gtrashstack.h \
-  /usr/include/glib-2.0/glib/gtree.h \
-  /usr/include/glib-2.0/glib/guri.h \
-  /usr/include/glib-2.0/glib/guuid.h \
-  /usr/include/glib-2.0/glib/gversion.h \
-  /usr/include/glib-2.0/glib/deprecated/gallocator.h \
-  /usr/include/glib-2.0/glib/deprecated/gcache.h \
-  /usr/include/glib-2.0/glib/deprecated/gcompletion.h \
-  /usr/include/glib-2.0/glib/deprecated/gmain.h \
-  /usr/include/glib-2.0/glib/deprecated/grel.h \
-  /usr/include/glib-2.0/glib/deprecated/gthread.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/glib-2.0/glib/glib-autocleanups.h \
-  /usr/include/ibus-1.0/ibusobject.h \
-  /usr/include/glib-2.0/glib-object.h \
-  /usr/include/glib-2.0/gobject/gbinding.h \
-  /usr/include/glib-2.0/gobject/gobject.h \
-  /usr/include/glib-2.0/gobject/gtype.h \
-  /usr/include/glib-2.0/gobject/gvalue.h \
-  /usr/include/glib-2.0/gobject/gparam.h \
-  /usr/include/glib-2.0/gobject/gclosure.h \
-  /usr/include/glib-2.0/gobject/gsignal.h \
-  /usr/include/glib-2.0/gobject/gmarshal.h \
-  /usr/include/glib-2.0/gobject/gboxed.h \
-  /usr/include/glib-2.0/gobject/glib-types.h \
-  /usr/include/glib-2.0/gobject/gbindinggroup.h \
-  /usr/include/glib-2.0/gobject/genums.h \
-  /usr/include/glib-2.0/gobject/glib-enumtypes.h \
-  /usr/include/glib-2.0/gobject/gparamspecs.h \
-  /usr/include/glib-2.0/gobject/gsignalgroup.h \
-  /usr/include/glib-2.0/gobject/gsourceclosure.h \
-  /usr/include/glib-2.0/gobject/gtypemodule.h \
-  /usr/include/glib-2.0/gobject/gtypeplugin.h \
-  /usr/include/glib-2.0/gobject/gvaluearray.h \
-  /usr/include/glib-2.0/gobject/gvaluetypes.h \
-  /usr/include/glib-2.0/gobject/gobject-autocleanups.h \
-  /usr/include/ibus-1.0/ibustypes.h \
-  /usr/include/ibus-1.0/ibusdebug.h \
-  /usr/include/ibus-1.0/ibusserializable.h \
-  /usr/include/ibus-1.0/ibusattribute.h \
-  /usr/include/ibus-1.0/ibusattrlist.h \
-  /usr/include/ibus-1.0/ibustext.h \
-  /usr/include/ibus-1.0/ibusproxy.h \
-  /usr/include/glib-2.0/gio/gio.h \
-  /usr/include/glib-2.0/gio/giotypes.h \
-  /usr/include/glib-2.0/gio/gioenums.h \
-  /usr/include/glib-2.0/gio/gaction.h \
-  /usr/include/glib-2.0/gio/gactiongroup.h \
-  /usr/include/glib-2.0/gio/gactiongroupexporter.h \
-  /usr/include/glib-2.0/gio/gactionmap.h \
-  /usr/include/glib-2.0/gio/gappinfo.h \
-  /usr/include/glib-2.0/gio/gapplication.h \
-  /usr/include/glib-2.0/gio/gapplicationcommandline.h \
-  /usr/include/glib-2.0/gio/gasyncinitable.h \
-  /usr/include/glib-2.0/gio/ginitable.h \
-  /usr/include/glib-2.0/gio/gasyncresult.h \
-  /usr/include/glib-2.0/gio/gbufferedinputstream.h \
-  /usr/include/glib-2.0/gio/gfilterinputstream.h \
-  /usr/include/glib-2.0/gio/ginputstream.h \
-  /usr/include/glib-2.0/gio/gbufferedoutputstream.h \
-  /usr/include/glib-2.0/gio/gfilteroutputstream.h \
-  /usr/include/glib-2.0/gio/goutputstream.h \
-  /usr/include/glib-2.0/gio/gbytesicon.h \
-  /usr/include/glib-2.0/gio/gcancellable.h \
-  /usr/include/glib-2.0/gio/gcharsetconverter.h \
-  /usr/include/glib-2.0/gio/gconverter.h \
-  /usr/include/glib-2.0/gio/gcontenttype.h \
-  /usr/include/glib-2.0/gio/gconverterinputstream.h \
-  /usr/include/glib-2.0/gio/gconverteroutputstream.h \
-  /usr/include/glib-2.0/gio/gcredentials.h \
-  /usr/include/glib-2.0/gio/gdatagrambased.h \
-  /usr/include/glib-2.0/gio/gdatainputstream.h \
-  /usr/include/glib-2.0/gio/gdataoutputstream.h \
-  /usr/include/glib-2.0/gio/gdbusactiongroup.h \
-  /usr/include/glib-2.0/gio/gdbusaddress.h \
-  /usr/include/glib-2.0/gio/gdbusauthobserver.h \
-  /usr/include/glib-2.0/gio/gdbusconnection.h \
-  /usr/include/glib-2.0/gio/gdbuserror.h \
-  /usr/include/glib-2.0/gio/gdbusinterface.h \
-  /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h \
-  /usr/include/glib-2.0/gio/gdbusintrospection.h \
-  /usr/include/glib-2.0/gio/gdbusmenumodel.h \
-  /usr/include/glib-2.0/gio/gdbusmessage.h \
-  /usr/include/glib-2.0/gio/gdbusmethodinvocation.h \
-  /usr/include/glib-2.0/gio/gdbusnameowning.h \
-  /usr/include/glib-2.0/gio/gdbusnamewatching.h \
-  /usr/include/glib-2.0/gio/gdbusobject.h \
-  /usr/include/glib-2.0/gio/gdbusobjectmanager.h \
-  /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h \
-  /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h \
-  /usr/include/glib-2.0/gio/gdbusobjectproxy.h \
-  /usr/include/glib-2.0/gio/gdbusobjectskeleton.h \
-  /usr/include/glib-2.0/gio/gdbusproxy.h \
-  /usr/include/glib-2.0/gio/gdbusserver.h \
-  /usr/include/glib-2.0/gio/gdbusutils.h \
-  /usr/include/glib-2.0/gio/gdebugcontroller.h \
-  /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h \
-  /usr/include/glib-2.0/gio/gdrive.h \
-  /usr/include/glib-2.0/gio/gdtlsclientconnection.h \
-  /usr/include/glib-2.0/gio/gdtlsconnection.h \
-  /usr/include/glib-2.0/gio/gdtlsserverconnection.h \
-  /usr/include/glib-2.0/gio/gemblemedicon.h \
-  /usr/include/glib-2.0/gio/gicon.h \
-  /usr/include/glib-2.0/gio/gemblem.h \
-  /usr/include/glib-2.0/gio/gfile.h \
-  /usr/include/glib-2.0/gio/gfileattribute.h \
-  /usr/include/glib-2.0/gio/gfileenumerator.h \
-  /usr/include/glib-2.0/gio/gfileicon.h \
-  /usr/include/glib-2.0/gio/gfileinfo.h \
-  /usr/include/glib-2.0/gio/gfileinputstream.h \
-  /usr/include/glib-2.0/gio/gfileiostream.h \
-  /usr/include/glib-2.0/gio/giostream.h \
-  /usr/include/glib-2.0/gio/gioerror.h \
-  /usr/include/glib-2.0/gio/gfilemonitor.h \
-  /usr/include/glib-2.0/gio/gfilenamecompleter.h \
-  /usr/include/glib-2.0/gio/gfileoutputstream.h \
-  /usr/include/glib-2.0/gio/ginetaddress.h \
-  /usr/include/glib-2.0/gio/ginetaddressmask.h \
-  /usr/include/glib-2.0/gio/ginetsocketaddress.h \
-  /usr/include/glib-2.0/gio/gsocketaddress.h \
-  /usr/include/glib-2.0/gio/gioenumtypes.h \
-  /usr/include/glib-2.0/gio/giomodule.h \
-  /usr/include/glib-2.0/gmodule.h \
-  /usr/include/glib-2.0/gio/gioscheduler.h \
-  /usr/include/glib-2.0/gio/glistmodel.h \
-  /usr/include/glib-2.0/gio/gliststore.h \
-  /usr/include/glib-2.0/gio/gloadableicon.h \
-  /usr/include/glib-2.0/gio/gmemoryinputstream.h \
-  /usr/include/glib-2.0/gio/gmemorymonitor.h \
-  /usr/include/glib-2.0/gio/gmemoryoutputstream.h \
-  /usr/include/glib-2.0/gio/gmenu.h \
-  /usr/include/glib-2.0/gio/gmenumodel.h \
-  /usr/include/glib-2.0/gio/gmenuexporter.h \
-  /usr/include/glib-2.0/gio/gmount.h \
-  /usr/include/glib-2.0/gio/gmountoperation.h \
-  /usr/include/glib-2.0/gio/gnativesocketaddress.h \
-  /usr/include/glib-2.0/gio/gnativevolumemonitor.h \
-  /usr/include/glib-2.0/gio/gvolumemonitor.h \
-  /usr/include/glib-2.0/gio/gnetworkaddress.h \
-  /usr/include/glib-2.0/gio/gnetworkmonitor.h \
-  /usr/include/glib-2.0/gio/gnetworkservice.h \
-  /usr/include/glib-2.0/gio/gnotification.h \
-  /usr/include/glib-2.0/gio/gpermission.h \
-  /usr/include/glib-2.0/gio/gpollableinputstream.h \
-  /usr/include/glib-2.0/gio/gpollableoutputstream.h \
-  /usr/include/glib-2.0/gio/gpollableutils.h \
-  /usr/include/glib-2.0/gio/gpowerprofilemonitor.h \
-  /usr/include/glib-2.0/gio/gpropertyaction.h \
-  /usr/include/glib-2.0/gio/gproxy.h \
-  /usr/include/glib-2.0/gio/gproxyaddress.h \
-  /usr/include/glib-2.0/gio/gproxyaddressenumerator.h \
-  /usr/include/glib-2.0/gio/gsocketaddressenumerator.h \
-  /usr/include/glib-2.0/gio/gproxyresolver.h \
-  /usr/include/glib-2.0/gio/gremoteactiongroup.h \
-  /usr/include/glib-2.0/gio/gresolver.h \
-  /usr/include/glib-2.0/gio/gresource.h \
-  /usr/include/glib-2.0/gio/gseekable.h \
-  /usr/include/glib-2.0/gio/gsettings.h \
-  /usr/include/glib-2.0/gio/gsettingsschema.h \
-  /usr/include/glib-2.0/gio/gsimpleaction.h \
-  /usr/include/glib-2.0/gio/gsimpleactiongroup.h \
-  /usr/include/glib-2.0/gio/gsimpleasyncresult.h \
-  /usr/include/glib-2.0/gio/gsimpleiostream.h \
-  /usr/include/glib-2.0/gio/gsimplepermission.h \
-  /usr/include/glib-2.0/gio/gsimpleproxyresolver.h \
-  /usr/include/glib-2.0/gio/gsocket.h \
-  /usr/include/glib-2.0/gio/gsocketclient.h \
-  /usr/include/glib-2.0/gio/gsocketconnectable.h \
-  /usr/include/glib-2.0/gio/gsocketconnection.h \
-  /usr/include/glib-2.0/gio/gsocketcontrolmessage.h \
-  /usr/include/glib-2.0/gio/gsocketlistener.h \
-  /usr/include/glib-2.0/gio/gsocketservice.h \
-  /usr/include/glib-2.0/gio/gsrvtarget.h \
-  /usr/include/glib-2.0/gio/gsubprocess.h \
-  /usr/include/glib-2.0/gio/gsubprocesslauncher.h \
-  /usr/include/glib-2.0/gio/gtask.h \
-  /usr/include/glib-2.0/gio/gtcpconnection.h \
-  /usr/include/glib-2.0/gio/gtcpwrapperconnection.h \
-  /usr/include/glib-2.0/gio/gtestdbus.h \
-  /usr/include/glib-2.0/gio/gthemedicon.h \
-  /usr/include/glib-2.0/gio/gthreadedsocketservice.h \
-  /usr/include/glib-2.0/gio/gtlsbackend.h \
-  /usr/include/glib-2.0/gio/gtlscertificate.h \
-  /usr/include/glib-2.0/gio/gtlsclientconnection.h \
-  /usr/include/glib-2.0/gio/gtlsconnection.h \
-  /usr/include/glib-2.0/gio/gtlsdatabase.h \
-  /usr/include/glib-2.0/gio/gtlsfiledatabase.h \
-  /usr/include/glib-2.0/gio/gtlsinteraction.h \
-  /usr/include/glib-2.0/gio/gtlspassword.h \
-  /usr/include/glib-2.0/gio/gtlsserverconnection.h \
-  /usr/include/glib-2.0/gio/gvfs.h \
-  /usr/include/glib-2.0/gio/gvolume.h \
-  /usr/include/glib-2.0/gio/gzlibcompressor.h \
-  /usr/include/glib-2.0/gio/gzlibdecompressor.h \
-  /usr/include/glib-2.0/gio/gio-autocleanups.h \
-  /usr/include/ibus-1.0/ibusservice.h \
-  /usr/include/ibus-1.0/ibusfactory.h \
-  /usr/include/ibus-1.0/ibusengine.h \
-  /usr/include/ibus-1.0/ibuslookuptable.h \
-  /usr/include/ibus-1.0/ibusproplist.h \
-  /usr/include/ibus-1.0/ibusproperty.h \
-  /usr/include/ibus-1.0/ibusenginesimple.h \
-  /usr/include/ibus-1.0/ibuskeysyms.h \
-  /usr/include/ibus-1.0/ibuserror.h \
-  /usr/include/ibus-1.0/ibusbus.h \
-  /usr/include/ibus-1.0/ibusinputcontext.h \
-  /usr/include/ibus-1.0/ibusenginedesc.h \
-  /usr/include/ibus-1.0/ibusxml.h \
-  /usr/include/ibus-1.0/ibusconfig.h \
-  /usr/include/ibus-1.0/ibuscomponent.h \
-  /usr/include/ibus-1.0/ibusobservedpath.h \
-  /usr/include/ibus-1.0/ibuskeymap.h \
-  /usr/include/ibus-1.0/ibuskeys.h \
-  /usr/include/ibus-1.0/ibusenumtypes.h \
-  /usr/include/ibus-1.0/ibushotkey.h \
-  /usr/include/ibus-1.0/ibusconfigservice.h \
-  /usr/include/ibus-1.0/ibuspanelservice.h \
-  /usr/include/ibus-1.0/ibusxevent.h \
-  /usr/include/ibus-1.0/ibusutil.h \
-  /usr/include/ibus-1.0/ibusregistry.h \
-  /usr/include/ibus-1.0/ibusemoji.h \
-  /usr/include/ibus-1.0/ibusunicode.h \
-  /usr/include/ibus-1.0/ibusaccelgroup.h \
-  /usr/include/ibus-1.0/ibuskeysyms-compat.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/events/SDL_keyboard_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/x11/SDL_x11video.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  /usr/include/X11/Xutil.h \
-  /usr/include/X11/keysym.h \
-  /usr/include/X11/keysymdef.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
-  /usr/include/X11/extensions/Xdbe.h \
-  /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
-  /usr/include/X11/extensions/Xrandr.h \
-  /usr/include/X11/extensions/randr.h \
-  /usr/include/X11/extensions/Xrender.h \
-  /usr/include/X11/extensions/render.h \
-  /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
-  /usr/include/X11/extensions/shape.h \
-  /usr/include/X11/extensions/shapeconst.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
-  /usr/include/X11/XKBlib.h \
-  /usr/include/X11/extensions/XKBstr.h \
-  /usr/include/X11/extensions/XKB.h \
-  /usr/include/X11/Xlibint.h \
-  /usr/include/X11/Xproto.h \
-  /usr/include/X11/Xmd.h \
-  /usr/include/X11/Xprotostr.h \
-  /usr/include/X11/XlibConf.h \
-  /usr/include/X11/Xfuncs.h \
-  /usr/include/X11/extensions/Xext.h \
-  /usr/include/x86_64-linux-gnu/sys/ipc.h \
-  /usr/include/x86_64-linux-gnu/bits/ipctypes.h \
-  /usr/include/x86_64-linux-gnu/bits/ipc.h \
-  /usr/include/x86_64-linux-gnu/bits/ipc-perm.h \
-  /usr/include/x86_64-linux-gnu/sys/shm.h \
-  /usr/include/x86_64-linux-gnu/bits/shm.h \
-  /usr/include/x86_64-linux-gnu/bits/shmlba.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
-  /usr/include/X11/extensions/XShm.h \
-  /usr/include/X11/extensions/shm.h \
-  ../third_party/SDL/src/video/x11/SDL_x11sym.h \
-  ../third_party/SDL/src/video/x11/SDL_x11clipboard.h \
-  ../third_party/SDL/src/video/x11/SDL_x11events.h \
-  ../third_party/SDL/src/video/x11/SDL_x11keyboard.h \
-  ../third_party/SDL/src/video/x11/SDL_x11modes.h \
-  ../third_party/SDL/src/video/x11/SDL_x11mouse.h \
-  ../third_party/SDL/src/video/x11/SDL_x11opengl.h \
-  third_party/SDL/include/SDL2/SDL_opengl.h \
-  third_party/SDL/include/SDL2/SDL_opengl_glext.h \
-  /usr/include/GL/glx.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GL/glxext.h \
-  ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  /usr/include/x86_64-linux-gnu/sys/inotify.h \
-  /usr/include/x86_64-linux-gnu/bits/inotify.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_ime.c.o: ../third_party/SDL/src/core/linux/SDL_ime.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  ../third_party/SDL/src/core/linux/SDL_ibus.h \
-  /usr/include/ibus-1.0/ibus.h \
-  /usr/include/ibus-1.0/ibusversion.h \
-  /usr/include/ibus-1.0/ibusshare.h \
-  /usr/include/glib-2.0/glib.h \
-  /usr/include/glib-2.0/glib/galloca.h \
-  /usr/include/glib-2.0/glib/gtypes.h \
-  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
-  /usr/include/glib-2.0/glib/gmacros.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/glib-2.0/glib/gversionmacros.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/glib-2.0/glib/garray.h \
-  /usr/include/glib-2.0/glib/gasyncqueue.h \
-  /usr/include/glib-2.0/glib/gthread.h \
-  /usr/include/glib-2.0/glib/gatomic.h \
-  /usr/include/glib-2.0/glib/glib-typeof.h \
-  /usr/include/glib-2.0/glib/gerror.h \
-  /usr/include/glib-2.0/glib/gquark.h \
-  /usr/include/glib-2.0/glib/gutils.h \
-  /usr/include/glib-2.0/glib/gbacktrace.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/glib-2.0/glib/gbase64.h \
-  /usr/include/glib-2.0/glib/gbitlock.h \
-  /usr/include/glib-2.0/glib/gbookmarkfile.h \
-  /usr/include/glib-2.0/glib/gdatetime.h \
-  /usr/include/glib-2.0/glib/gtimezone.h \
-  /usr/include/glib-2.0/glib/gbytes.h \
-  /usr/include/glib-2.0/glib/gcharset.h \
-  /usr/include/glib-2.0/glib/gchecksum.h \
-  /usr/include/glib-2.0/glib/gconvert.h \
-  /usr/include/glib-2.0/glib/gdataset.h \
-  /usr/include/glib-2.0/glib/gdate.h \
-  /usr/include/glib-2.0/glib/gdir.h \
-  /usr/include/dirent.h \
-  /usr/include/x86_64-linux-gnu/bits/dirent.h \
-  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
-  /usr/include/glib-2.0/glib/genviron.h \
-  /usr/include/glib-2.0/glib/gfileutils.h \
-  /usr/include/glib-2.0/glib/ggettext.h \
-  /usr/include/glib-2.0/glib/ghash.h \
-  /usr/include/glib-2.0/glib/glist.h \
-  /usr/include/glib-2.0/glib/gmem.h \
-  /usr/include/glib-2.0/glib/gnode.h \
-  /usr/include/glib-2.0/glib/ghmac.h \
-  /usr/include/glib-2.0/glib/ghook.h \
-  /usr/include/glib-2.0/glib/ghostutils.h \
-  /usr/include/glib-2.0/glib/giochannel.h \
-  /usr/include/glib-2.0/glib/gmain.h \
-  /usr/include/glib-2.0/glib/gpoll.h \
-  /usr/include/glib-2.0/glib/gslist.h \
-  /usr/include/glib-2.0/glib/gstring.h \
-  /usr/include/glib-2.0/glib/gunicode.h \
-  /usr/include/glib-2.0/glib/gkeyfile.h \
-  /usr/include/glib-2.0/glib/gmappedfile.h \
-  /usr/include/glib-2.0/glib/gmarkup.h \
-  /usr/include/glib-2.0/glib/gmessages.h \
-  /usr/include/glib-2.0/glib/gvariant.h \
-  /usr/include/glib-2.0/glib/gvarianttype.h \
-  /usr/include/glib-2.0/glib/goption.h \
-  /usr/include/glib-2.0/glib/gpattern.h \
-  /usr/include/glib-2.0/glib/gprimes.h \
-  /usr/include/glib-2.0/glib/gqsort.h \
-  /usr/include/glib-2.0/glib/gqueue.h \
-  /usr/include/glib-2.0/glib/grand.h \
-  /usr/include/glib-2.0/glib/grcbox.h \
-  /usr/include/glib-2.0/glib/grefcount.h \
-  /usr/include/glib-2.0/glib/grefstring.h \
-  /usr/include/glib-2.0/glib/gregex.h \
-  /usr/include/glib-2.0/glib/gscanner.h \
-  /usr/include/glib-2.0/glib/gsequence.h \
-  /usr/include/glib-2.0/glib/gshell.h \
-  /usr/include/glib-2.0/glib/gslice.h \
-  /usr/include/glib-2.0/glib/gspawn.h \
-  /usr/include/glib-2.0/glib/gstrfuncs.h \
-  /usr/include/glib-2.0/glib/gstringchunk.h \
-  /usr/include/glib-2.0/glib/gstrvbuilder.h \
-  /usr/include/glib-2.0/glib/gtestutils.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/glib-2.0/glib/gthreadpool.h \
-  /usr/include/glib-2.0/glib/gtimer.h \
-  /usr/include/glib-2.0/glib/gtrashstack.h \
-  /usr/include/glib-2.0/glib/gtree.h \
-  /usr/include/glib-2.0/glib/guri.h \
-  /usr/include/glib-2.0/glib/guuid.h \
-  /usr/include/glib-2.0/glib/gversion.h \
-  /usr/include/glib-2.0/glib/deprecated/gallocator.h \
-  /usr/include/glib-2.0/glib/deprecated/gcache.h \
-  /usr/include/glib-2.0/glib/deprecated/gcompletion.h \
-  /usr/include/glib-2.0/glib/deprecated/gmain.h \
-  /usr/include/glib-2.0/glib/deprecated/grel.h \
-  /usr/include/glib-2.0/glib/deprecated/gthread.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/glib-2.0/glib/glib-autocleanups.h \
-  /usr/include/ibus-1.0/ibusobject.h \
-  /usr/include/glib-2.0/glib-object.h \
-  /usr/include/glib-2.0/gobject/gbinding.h \
-  /usr/include/glib-2.0/gobject/gobject.h \
-  /usr/include/glib-2.0/gobject/gtype.h \
-  /usr/include/glib-2.0/gobject/gvalue.h \
-  /usr/include/glib-2.0/gobject/gparam.h \
-  /usr/include/glib-2.0/gobject/gclosure.h \
-  /usr/include/glib-2.0/gobject/gsignal.h \
-  /usr/include/glib-2.0/gobject/gmarshal.h \
-  /usr/include/glib-2.0/gobject/gboxed.h \
-  /usr/include/glib-2.0/gobject/glib-types.h \
-  /usr/include/glib-2.0/gobject/gbindinggroup.h \
-  /usr/include/glib-2.0/gobject/genums.h \
-  /usr/include/glib-2.0/gobject/glib-enumtypes.h \
-  /usr/include/glib-2.0/gobject/gparamspecs.h \
-  /usr/include/glib-2.0/gobject/gsignalgroup.h \
-  /usr/include/glib-2.0/gobject/gsourceclosure.h \
-  /usr/include/glib-2.0/gobject/gtypemodule.h \
-  /usr/include/glib-2.0/gobject/gtypeplugin.h \
-  /usr/include/glib-2.0/gobject/gvaluearray.h \
-  /usr/include/glib-2.0/gobject/gvaluetypes.h \
-  /usr/include/glib-2.0/gobject/gobject-autocleanups.h \
-  /usr/include/ibus-1.0/ibustypes.h \
-  /usr/include/ibus-1.0/ibusdebug.h \
-  /usr/include/ibus-1.0/ibusserializable.h \
-  /usr/include/ibus-1.0/ibusattribute.h \
-  /usr/include/ibus-1.0/ibusattrlist.h \
-  /usr/include/ibus-1.0/ibustext.h \
-  /usr/include/ibus-1.0/ibusproxy.h \
-  /usr/include/glib-2.0/gio/gio.h \
-  /usr/include/glib-2.0/gio/giotypes.h \
-  /usr/include/glib-2.0/gio/gioenums.h \
-  /usr/include/glib-2.0/gio/gaction.h \
-  /usr/include/glib-2.0/gio/gactiongroup.h \
-  /usr/include/glib-2.0/gio/gactiongroupexporter.h \
-  /usr/include/glib-2.0/gio/gactionmap.h \
-  /usr/include/glib-2.0/gio/gappinfo.h \
-  /usr/include/glib-2.0/gio/gapplication.h \
-  /usr/include/glib-2.0/gio/gapplicationcommandline.h \
-  /usr/include/glib-2.0/gio/gasyncinitable.h \
-  /usr/include/glib-2.0/gio/ginitable.h \
-  /usr/include/glib-2.0/gio/gasyncresult.h \
-  /usr/include/glib-2.0/gio/gbufferedinputstream.h \
-  /usr/include/glib-2.0/gio/gfilterinputstream.h \
-  /usr/include/glib-2.0/gio/ginputstream.h \
-  /usr/include/glib-2.0/gio/gbufferedoutputstream.h \
-  /usr/include/glib-2.0/gio/gfilteroutputstream.h \
-  /usr/include/glib-2.0/gio/goutputstream.h \
-  /usr/include/glib-2.0/gio/gbytesicon.h \
-  /usr/include/glib-2.0/gio/gcancellable.h \
-  /usr/include/glib-2.0/gio/gcharsetconverter.h \
-  /usr/include/glib-2.0/gio/gconverter.h \
-  /usr/include/glib-2.0/gio/gcontenttype.h \
-  /usr/include/glib-2.0/gio/gconverterinputstream.h \
-  /usr/include/glib-2.0/gio/gconverteroutputstream.h \
-  /usr/include/glib-2.0/gio/gcredentials.h \
-  /usr/include/glib-2.0/gio/gdatagrambased.h \
-  /usr/include/glib-2.0/gio/gdatainputstream.h \
-  /usr/include/glib-2.0/gio/gdataoutputstream.h \
-  /usr/include/glib-2.0/gio/gdbusactiongroup.h \
-  /usr/include/glib-2.0/gio/gdbusaddress.h \
-  /usr/include/glib-2.0/gio/gdbusauthobserver.h \
-  /usr/include/glib-2.0/gio/gdbusconnection.h \
-  /usr/include/glib-2.0/gio/gdbuserror.h \
-  /usr/include/glib-2.0/gio/gdbusinterface.h \
-  /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h \
-  /usr/include/glib-2.0/gio/gdbusintrospection.h \
-  /usr/include/glib-2.0/gio/gdbusmenumodel.h \
-  /usr/include/glib-2.0/gio/gdbusmessage.h \
-  /usr/include/glib-2.0/gio/gdbusmethodinvocation.h \
-  /usr/include/glib-2.0/gio/gdbusnameowning.h \
-  /usr/include/glib-2.0/gio/gdbusnamewatching.h \
-  /usr/include/glib-2.0/gio/gdbusobject.h \
-  /usr/include/glib-2.0/gio/gdbusobjectmanager.h \
-  /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h \
-  /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h \
-  /usr/include/glib-2.0/gio/gdbusobjectproxy.h \
-  /usr/include/glib-2.0/gio/gdbusobjectskeleton.h \
-  /usr/include/glib-2.0/gio/gdbusproxy.h \
-  /usr/include/glib-2.0/gio/gdbusserver.h \
-  /usr/include/glib-2.0/gio/gdbusutils.h \
-  /usr/include/glib-2.0/gio/gdebugcontroller.h \
-  /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h \
-  /usr/include/glib-2.0/gio/gdrive.h \
-  /usr/include/glib-2.0/gio/gdtlsclientconnection.h \
-  /usr/include/glib-2.0/gio/gdtlsconnection.h \
-  /usr/include/glib-2.0/gio/gdtlsserverconnection.h \
-  /usr/include/glib-2.0/gio/gemblemedicon.h \
-  /usr/include/glib-2.0/gio/gicon.h \
-  /usr/include/glib-2.0/gio/gemblem.h \
-  /usr/include/glib-2.0/gio/gfile.h \
-  /usr/include/glib-2.0/gio/gfileattribute.h \
-  /usr/include/glib-2.0/gio/gfileenumerator.h \
-  /usr/include/glib-2.0/gio/gfileicon.h \
-  /usr/include/glib-2.0/gio/gfileinfo.h \
-  /usr/include/glib-2.0/gio/gfileinputstream.h \
-  /usr/include/glib-2.0/gio/gfileiostream.h \
-  /usr/include/glib-2.0/gio/giostream.h \
-  /usr/include/glib-2.0/gio/gioerror.h \
-  /usr/include/glib-2.0/gio/gfilemonitor.h \
-  /usr/include/glib-2.0/gio/gfilenamecompleter.h \
-  /usr/include/glib-2.0/gio/gfileoutputstream.h \
-  /usr/include/glib-2.0/gio/ginetaddress.h \
-  /usr/include/glib-2.0/gio/ginetaddressmask.h \
-  /usr/include/glib-2.0/gio/ginetsocketaddress.h \
-  /usr/include/glib-2.0/gio/gsocketaddress.h \
-  /usr/include/glib-2.0/gio/gioenumtypes.h \
-  /usr/include/glib-2.0/gio/giomodule.h \
-  /usr/include/glib-2.0/gmodule.h \
-  /usr/include/glib-2.0/gio/gioscheduler.h \
-  /usr/include/glib-2.0/gio/glistmodel.h \
-  /usr/include/glib-2.0/gio/gliststore.h \
-  /usr/include/glib-2.0/gio/gloadableicon.h \
-  /usr/include/glib-2.0/gio/gmemoryinputstream.h \
-  /usr/include/glib-2.0/gio/gmemorymonitor.h \
-  /usr/include/glib-2.0/gio/gmemoryoutputstream.h \
-  /usr/include/glib-2.0/gio/gmenu.h \
-  /usr/include/glib-2.0/gio/gmenumodel.h \
-  /usr/include/glib-2.0/gio/gmenuexporter.h \
-  /usr/include/glib-2.0/gio/gmount.h \
-  /usr/include/glib-2.0/gio/gmountoperation.h \
-  /usr/include/glib-2.0/gio/gnativesocketaddress.h \
-  /usr/include/glib-2.0/gio/gnativevolumemonitor.h \
-  /usr/include/glib-2.0/gio/gvolumemonitor.h \
-  /usr/include/glib-2.0/gio/gnetworkaddress.h \
-  /usr/include/glib-2.0/gio/gnetworkmonitor.h \
-  /usr/include/glib-2.0/gio/gnetworkservice.h \
-  /usr/include/glib-2.0/gio/gnotification.h \
-  /usr/include/glib-2.0/gio/gpermission.h \
-  /usr/include/glib-2.0/gio/gpollableinputstream.h \
-  /usr/include/glib-2.0/gio/gpollableoutputstream.h \
-  /usr/include/glib-2.0/gio/gpollableutils.h \
-  /usr/include/glib-2.0/gio/gpowerprofilemonitor.h \
-  /usr/include/glib-2.0/gio/gpropertyaction.h \
-  /usr/include/glib-2.0/gio/gproxy.h \
-  /usr/include/glib-2.0/gio/gproxyaddress.h \
-  /usr/include/glib-2.0/gio/gproxyaddressenumerator.h \
-  /usr/include/glib-2.0/gio/gsocketaddressenumerator.h \
-  /usr/include/glib-2.0/gio/gproxyresolver.h \
-  /usr/include/glib-2.0/gio/gremoteactiongroup.h \
-  /usr/include/glib-2.0/gio/gresolver.h \
-  /usr/include/glib-2.0/gio/gresource.h \
-  /usr/include/glib-2.0/gio/gseekable.h \
-  /usr/include/glib-2.0/gio/gsettings.h \
-  /usr/include/glib-2.0/gio/gsettingsschema.h \
-  /usr/include/glib-2.0/gio/gsimpleaction.h \
-  /usr/include/glib-2.0/gio/gsimpleactiongroup.h \
-  /usr/include/glib-2.0/gio/gsimpleasyncresult.h \
-  /usr/include/glib-2.0/gio/gsimpleiostream.h \
-  /usr/include/glib-2.0/gio/gsimplepermission.h \
-  /usr/include/glib-2.0/gio/gsimpleproxyresolver.h \
-  /usr/include/glib-2.0/gio/gsocket.h \
-  /usr/include/glib-2.0/gio/gsocketclient.h \
-  /usr/include/glib-2.0/gio/gsocketconnectable.h \
-  /usr/include/glib-2.0/gio/gsocketconnection.h \
-  /usr/include/glib-2.0/gio/gsocketcontrolmessage.h \
-  /usr/include/glib-2.0/gio/gsocketlistener.h \
-  /usr/include/glib-2.0/gio/gsocketservice.h \
-  /usr/include/glib-2.0/gio/gsrvtarget.h \
-  /usr/include/glib-2.0/gio/gsubprocess.h \
-  /usr/include/glib-2.0/gio/gsubprocesslauncher.h \
-  /usr/include/glib-2.0/gio/gtask.h \
-  /usr/include/glib-2.0/gio/gtcpconnection.h \
-  /usr/include/glib-2.0/gio/gtcpwrapperconnection.h \
-  /usr/include/glib-2.0/gio/gtestdbus.h \
-  /usr/include/glib-2.0/gio/gthemedicon.h \
-  /usr/include/glib-2.0/gio/gthreadedsocketservice.h \
-  /usr/include/glib-2.0/gio/gtlsbackend.h \
-  /usr/include/glib-2.0/gio/gtlscertificate.h \
-  /usr/include/glib-2.0/gio/gtlsclientconnection.h \
-  /usr/include/glib-2.0/gio/gtlsconnection.h \
-  /usr/include/glib-2.0/gio/gtlsdatabase.h \
-  /usr/include/glib-2.0/gio/gtlsfiledatabase.h \
-  /usr/include/glib-2.0/gio/gtlsinteraction.h \
-  /usr/include/glib-2.0/gio/gtlspassword.h \
-  /usr/include/glib-2.0/gio/gtlsserverconnection.h \
-  /usr/include/glib-2.0/gio/gvfs.h \
-  /usr/include/glib-2.0/gio/gvolume.h \
-  /usr/include/glib-2.0/gio/gzlibcompressor.h \
-  /usr/include/glib-2.0/gio/gzlibdecompressor.h \
-  /usr/include/glib-2.0/gio/gio-autocleanups.h \
-  /usr/include/ibus-1.0/ibusservice.h \
-  /usr/include/ibus-1.0/ibusfactory.h \
-  /usr/include/ibus-1.0/ibusengine.h \
-  /usr/include/ibus-1.0/ibuslookuptable.h \
-  /usr/include/ibus-1.0/ibusproplist.h \
-  /usr/include/ibus-1.0/ibusproperty.h \
-  /usr/include/ibus-1.0/ibusenginesimple.h \
-  /usr/include/ibus-1.0/ibuskeysyms.h \
-  /usr/include/ibus-1.0/ibuserror.h \
-  /usr/include/ibus-1.0/ibusbus.h \
-  /usr/include/ibus-1.0/ibusinputcontext.h \
-  /usr/include/ibus-1.0/ibusenginedesc.h \
-  /usr/include/ibus-1.0/ibusxml.h \
-  /usr/include/ibus-1.0/ibusconfig.h \
-  /usr/include/ibus-1.0/ibuscomponent.h \
-  /usr/include/ibus-1.0/ibusobservedpath.h \
-  /usr/include/ibus-1.0/ibuskeymap.h \
-  /usr/include/ibus-1.0/ibuskeys.h \
-  /usr/include/ibus-1.0/ibusenumtypes.h \
-  /usr/include/ibus-1.0/ibushotkey.h \
-  /usr/include/ibus-1.0/ibusconfigservice.h \
-  /usr/include/ibus-1.0/ibuspanelservice.h \
-  /usr/include/ibus-1.0/ibusxevent.h \
-  /usr/include/ibus-1.0/ibusutil.h \
-  /usr/include/ibus-1.0/ibusregistry.h \
-  /usr/include/ibus-1.0/ibusemoji.h \
-  /usr/include/ibus-1.0/ibusunicode.h \
-  /usr/include/ibus-1.0/ibusaccelgroup.h \
-  /usr/include/ibus-1.0/ibuskeysyms-compat.h \
-  ../third_party/SDL/src/core/linux/SDL_fcitx.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_sandbox.c.o: ../third_party/SDL/src/core/linux/SDL_sandbox.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -6388,171 +4215,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_threadprio.c.o: ../third_
   third_party/SDL/include/SDL2/SDL_surface.h \
   third_party/SDL/include/SDL2/SDL_blendmode.h \
   third_party/SDL/include/SDL2/SDL_render.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_udev.c.o: ../third_party/SDL/src/core/linux/SDL_udev.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/core/linux/SDL_udev.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  /usr/include/libudev.h \
-  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h \
-  /usr/include/linux/input.h \
-  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
-  /usr/include/asm-generic/ioctls.h \
-  /usr/include/linux/ioctl.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/linux/input-event-codes.h \
-  ../third_party/SDL/src/core/linux/SDL_evdev_capabilities.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  ../third_party/SDL/src/core/unix/SDL_poll.h \
-  ../third_party/SDL/src/SDL_internal.h
+  ../third_party/SDL/src/core/linux/SDL_dbus.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/core/unix/SDL_poll.c.o: ../third_party/SDL/src/core/unix/SDL_poll.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -7186,29 +4849,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.o: ../third
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -7366,29 +5009,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.o: ../third_p
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -7546,29 +5169,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.o: ../third_part
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -7825,29 +5428,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_events.c.o: ../third_party/SD
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -8013,29 +5596,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.o: ../third_party/S
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -8195,29 +5758,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.o: ../third_party/
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -8494,29 +6037,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.o: ../third_party/SDL
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -8707,29 +6230,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.o: ../third_party/SDL/
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -8985,29 +6488,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.o: ../third_party/SDL
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -9165,29 +6648,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.o: ../third_pa
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -9799,24 +7262,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/haptic/linux/SDL_syshaptic.c.o: ../third
   ../third_party/SDL/src/core/linux/SDL_evdev_capabilities.h \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/core/linux/SDL_udev.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  /usr/include/libudev.h \
-  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -9956,33 +7401,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o: ../third_party/SD
   ../third_party/SDL/src/hidapi/SDL_hidapi_c.h \
   ../third_party/SDL/src/core/linux/SDL_udev.h \
   ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  /usr/include/libudev.h \
-  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h \
-  /usr/include/poll.h \
-  /usr/include/x86_64-linux-gnu/sys/poll.h \
-  /usr/include/x86_64-linux-gnu/bits/poll.h \
-  ../third_party/SDL/src/core/linux/SDL_sandbox.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -10015,46 +7433,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/sys/inotify.h \
-  /usr/include/x86_64-linux-gnu/bits/inotify.h \
-  ../third_party/SDL/src/hidapi/linux/hid.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  /usr/include/locale.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h \
-  /usr/include/linux/stat.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
-  /usr/include/asm-generic/ioctls.h \
-  /usr/include/linux/ioctl.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
-  /usr/include/x86_64-linux-gnu/sys/utsname.h \
-  /usr/include/x86_64-linux-gnu/bits/utsname.h \
-  /usr/include/linux/hidraw.h \
-  /usr/include/linux/hid.h \
-  /usr/include/linux/version.h \
-  /usr/include/linux/input.h \
-  /usr/include/linux/input-event-codes.h \
-  ../third_party/SDL/src/hidapi/hidapi/hidapi.h
+  /usr/include/x86_64-linux-gnu/bits/inotify.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.o: ../third_party/SDL/src/joystick/SDL_gamecontroller.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -10186,29 +7565,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.o: ../thir
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -10470,29 +7829,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.o: ../third_part
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -12780,29 +10119,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/linux/SDL_sysjoystick.c.o: ../t
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
@@ -12847,10 +10166,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/linux/SDL_sysjoystick.c.o: ../t
   ../third_party/SDL/src/core/linux/SDL_evdev_capabilities.h \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/core/linux/SDL_udev.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  /usr/include/libudev.h \
-  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   ../third_party/SDL/src/core/linux/SDL_sandbox.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/steam/SDL_steamcontroller.c.o: ../third_party/SDL/src/joystick/steam/SDL_steamcontroller.c \
@@ -15710,25 +13025,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/power/linux/SDL_syspower.c.o: ../third_p
   third_party/SDL/include/SDL2/SDL_power.h \
   ../third_party/SDL/src/power/SDL_syspower.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h
+  ../third_party/SDL/src/SDL_internal.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.o: ../third_party/SDL/src/render/SDL_d3dmath.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -16926,29 +14223,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.o: ../thir
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -17189,96 +14466,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.o: ../
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  third_party/SDL/include/SDL2/SDL_opengles.h \
-  /usr/include/GLES/gl.h \
-  /usr/include/GLES/glplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/GLES/glext.h \
-  ../third_party/SDL/src/render/SDL_sysrender.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../third_party/SDL/src/render/SDL_yuv_sw_c.h \
-  ../third_party/SDL/src/SDL_utils_c.h \
-  ../third_party/SDL/src/render/opengles/SDL_glesfuncs.h
+  third_party/SDL/include/SDL2/SDL_log.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o: ../third_party/SDL/src/render/opengles2/SDL_render_gles2.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -17389,29 +14577,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o: .
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -17439,10 +14607,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o: .
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
   third_party/SDL/include/SDL2/SDL_vulkan.h \
   third_party/SDL/include/SDL2/SDL_opengles2.h \
-  /usr/include/GLES2/gl2platform.h \
+  ../third_party/SDL/src/video/khronos/GLES2/gl2platform.h \
   /usr/include/KHR/khrplatform.h \
-  /usr/include/GLES2/gl2.h \
-  /usr/include/GLES2/gl2ext.h \
+  ../third_party/SDL/src/video/khronos/GLES2/gl2.h \
+  ../third_party/SDL/src/video/khronos/GLES2/gl2ext.h \
   ../third_party/SDL/src/render/SDL_sysrender.h \
   third_party/SDL/include/SDL2/SDL_render.h \
   third_party/SDL/include/SDL2/SDL_events.h \
@@ -17646,10 +14814,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.o: 
   third_party/SDL/include/SDL2/SDL_surface.h \
   third_party/SDL/include/SDL2/SDL_blendmode.h \
   third_party/SDL/include/SDL2/SDL_opengles2.h \
-  /usr/include/GLES2/gl2platform.h \
+  ../third_party/SDL/src/video/khronos/GLES2/gl2platform.h \
   /usr/include/KHR/khrplatform.h \
-  /usr/include/GLES2/gl2.h \
-  /usr/include/GLES2/gl2ext.h \
+  ../third_party/SDL/src/video/khronos/GLES2/gl2.h \
+  ../third_party/SDL/src/video/khronos/GLES2/gl2ext.h \
   ../third_party/SDL/src/render/opengles2/SDL_shaders_gles2.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/render/ps2/SDL_render_ps2.c.o: ../third_party/SDL/src/render/ps2/SDL_render_ps2.c \
@@ -19881,29 +17049,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.o: ../third_party/SD
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -21614,24 +18762,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.o: ../thi
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   /usr/include/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/dl_find_object.h \
@@ -22183,29 +19313,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.o: ../third_party/S
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -22425,29 +19535,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.o: ../third_party/SDL/s
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -22939,29 +20029,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.o: ../third_party/SDL
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -24207,29 +21277,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.o: ../third_party/
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -24364,29 +21414,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.o: ../third_party/SDL/sr
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -24715,29 +21745,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.o: ../third_party/SDL
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -25169,29 +22179,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.o: ../third_party/SDL/
   third_party/SDL/include/SDL2/SDL_misc.h \
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -25512,29 +22502,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.o: ../third_party/SD
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -25883,29 +22853,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: ../third_party/SDL/
   third_party/SDL/include/SDL2/SDL_misc.h \
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -25980,8 +22930,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/linux/close_range.h \
-  ../third_party/SDL/src/video/x11/SDL_x11messagebox.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandmessagebox.h
+  ../third_party/SDL/src/video/x11/SDL_x11messagebox.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.o: ../third_party/SDL/src/video/SDL_vulkan_utils.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -26075,29 +23024,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.o: ../third_par
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
   third_party/SDL/include/SDL2/SDL_log.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -26442,29 +23371,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.o: ../third
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -26611,29 +23520,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.o: ../
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -26770,29 +23659,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.o: ../third_
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -26932,1315 +23801,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.o: ../third_
   ../third_party/SDL/src/video/dummy/SDL_nullframebuffer_c.h \
   third_party/SDL/include/SDL2/SDL_hints.h
 
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/kmsdrm/SDL_kmsdrmdyn.c.o: ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.h \
-  /usr/include/xf86drm.h \
-  /usr/include/libdrm/drm.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/libdrm/drm_mode.h \
-  /usr/include/xf86drmMode.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  /usr/include/gbm.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmsym.h \
-  third_party/SDL/include/SDL2/SDL_name.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_error.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/kmsdrm/SDL_kmsdrmevents.c.o: ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmevents.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvideo.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/xf86drm.h \
-  /usr/include/libdrm/drm.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/libdrm/drm_mode.h \
-  /usr/include/xf86drmMode.h \
-  /usr/include/gbm.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmevents.h \
-  ../third_party/SDL/src/core/linux/SDL_evdev.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/kmsdrm/SDL_kmsdrmmouse.c.o: ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmmouse.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvideo.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/xf86drm.h \
-  /usr/include/libdrm/drm.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/libdrm/drm_mode.h \
-  /usr/include/xf86drmMode.h \
-  /usr/include/gbm.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmmouse.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmsym.h \
-  ../third_party/SDL/src/events/SDL_mouse_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  ../third_party/SDL/src/events/default_cursor.h \
-  ../third_party/SDL/src/video/SDL_pixels_c.h \
-  ../third_party/SDL/src/video/SDL_blit.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm3dnow.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/kmsdrm/SDL_kmsdrmopengles.c.o: ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmopengles.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvideo.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/xf86drm.h \
-  /usr/include/libdrm/drm.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/libdrm/drm_mode.h \
-  /usr/include/xf86drmMode.h \
-  /usr/include/gbm.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmopengles.h \
-  ../third_party/SDL/src/video/SDL_egl_c.h \
-  third_party/SDL/include/SDL2/SDL_egl.h \
-  /usr/include/EGL/eglext.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmsym.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/kmsdrm/SDL_kmsdrmvideo.c.o: ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvideo.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  ../third_party/SDL/src/events/SDL_events_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  ../third_party/SDL/src/events/SDL_clipboardevents_c.h \
-  ../third_party/SDL/src/events/SDL_displayevents_c.h \
-  ../third_party/SDL/src/events/SDL_dropevents_c.h \
-  ../third_party/SDL/src/events/SDL_gesture_c.h \
-  ../third_party/SDL/src/events/SDL_keyboard_c.h \
-  ../third_party/SDL/src/events/SDL_mouse_c.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/src/events/SDL_windowevents_c.h \
-  ../third_party/SDL/src/core/linux/SDL_evdev.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvideo.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/xf86drm.h \
-  /usr/include/libdrm/drm.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/libdrm/drm_mode.h \
-  /usr/include/xf86drmMode.h \
-  /usr/include/gbm.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmevents.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmopengles.h \
-  ../third_party/SDL/src/video/SDL_egl_c.h \
-  third_party/SDL/include/SDL2/SDL_egl.h \
-  /usr/include/EGL/eglext.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmmouse.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmsym.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvulkan.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h \
-  /usr/include/linux/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  /usr/include/x86_64-linux-gnu/sys/param.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/x86_64-linux-gnu/bits/param.h \
-  /usr/include/linux/param.h \
-  /usr/include/x86_64-linux-gnu/asm/param.h \
-  /usr/include/asm-generic/param.h \
-  /usr/include/x86_64-linux-gnu/sys/utsname.h \
-  /usr/include/x86_64-linux-gnu/bits/utsname.h \
-  /usr/include/dirent.h \
-  /usr/include/x86_64-linux-gnu/bits/dirent.h \
-  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
-  /usr/include/poll.h \
-  /usr/include/x86_64-linux-gnu/sys/poll.h \
-  /usr/include/x86_64-linux-gnu/bits/poll.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/kmsdrm/SDL_kmsdrmvulkan.c.o: ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvulkan.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvideo.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/xf86drm.h \
-  /usr/include/libdrm/drm.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/libdrm/drm_mode.h \
-  /usr/include/xf86drmMode.h \
-  /usr/include/gbm.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmsym.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  ../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvulkan.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
-  /usr/include/asm-generic/ioctls.h \
-  /usr/include/linux/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h
-
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenevents.c.o: ../third_party/SDL/src/video/offscreen/SDL_offscreenevents.c \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
@@ -28363,29 +23923,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenevents.c.o:
   third_party/SDL/include/SDL2/SDL_shape.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -28532,29 +24072,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenframebuffer
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -28691,29 +24211,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenopengles.c.
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -28857,29 +24357,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenvideo.c.o: 
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -29024,29 +24504,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o:
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -29081,2681 +24541,6 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o:
   /usr/include/EGL/eglext.h \
   ../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h \
   ../third_party/SDL/src/video/offscreen/SDL_offscreenvideo.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandclipboard.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandclipboard.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/wayland-util.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandevents_c.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandclipboard.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylanddatamanager.c.o: ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  ../third_party/SDL/src/core/unix/SDL_poll.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/wayland-util.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h \
-  third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylanddyn.c.o: ../third_party/SDL/src/video/wayland/SDL_waylanddyn.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  third_party/SDL/include/SDL2/SDL_name.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_error.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandevents.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandevents.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  ../third_party/SDL/src/core/unix/SDL_poll.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/events/SDL_events_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/events/SDL_clipboardevents_c.h \
-  ../third_party/SDL/src/events/SDL_displayevents_c.h \
-  ../third_party/SDL/src/events/SDL_dropevents_c.h \
-  ../third_party/SDL/src/events/SDL_gesture_c.h \
-  ../third_party/SDL/src/events/SDL_keyboard_c.h \
-  ../third_party/SDL/src/events/SDL_mouse_c.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/src/events/SDL_windowevents_c.h \
-  ../third_party/SDL/src/events/SDL_scancode_tables_c.h \
-  ../third_party/SDL/include/SDL_scancode.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandevents_c.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.h \
-  third_party/SDL/wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/relative-pointer-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h \
-  /usr/include/linux/input.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h \
-  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
-  /usr/include/asm-generic/ioctls.h \
-  /usr/include/linux/ioctl.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/linux/input-event-codes.h \
-  /usr/include/x86_64-linux-gnu/sys/mman.h \
-  /usr/include/x86_64-linux-gnu/bits/mman.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  ../third_party/SDL/src/events/imKStoUCS.h \
-  ../third_party/SDL/src/events/SDL_keysym_to_scancode_c.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandkeyboard.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandevents_c.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.h \
-  ../third_party/SDL/src/events/SDL_keyboard_c.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-client-protocol.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandmessagebox.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandmessagebox.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm3dnow.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/sys/wait.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandmessagebox.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandmouse.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandmouse.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  /usr/include/x86_64-linux-gnu/sys/mman.h \
-  /usr/include/x86_64-linux-gnu/bits/mman.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  ../third_party/SDL/src/events/SDL_mouse_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/SDL_pixels_c.h \
-  ../third_party/SDL/src/video/SDL_blit.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm3dnow.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandevents_c.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandmouse.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  ../third_party/SDL/src/SDL_hints_c.h \
-  ../third_party/SDL/src/SDL_internal.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandopengles.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandopengles.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  ../third_party/SDL/src/core/unix/SDL_poll.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/events/SDL_windowevents_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandopengles.h \
-  ../third_party/SDL/src/video/SDL_egl_c.h \
-  third_party/SDL/include/SDL2/SDL_egl.h \
-  /usr/include/EGL/eglext.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandevents_c.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.h \
-  third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandtouch.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandtouch.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandtouch.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/wayland-util.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandvideo.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandvideo.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  ../third_party/SDL/src/events/SDL_events_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/events/SDL_clipboardevents_c.h \
-  ../third_party/SDL/src/events/SDL_displayevents_c.h \
-  ../third_party/SDL/src/events/SDL_dropevents_c.h \
-  ../third_party/SDL/src/events/SDL_gesture_c.h \
-  ../third_party/SDL/src/events/SDL_keyboard_c.h \
-  ../third_party/SDL/src/events/SDL_mouse_c.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/src/events/SDL_windowevents_c.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandevents_c.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandopengles.h \
-  ../third_party/SDL/src/video/SDL_egl_c.h \
-  third_party/SDL/include/SDL2/SDL_egl.h \
-  /usr/include/EGL/eglext.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandmouse.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandtouch.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandclipboard.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvulkan.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/xdg-activation-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/xdg-output-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/viewporter-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/fractional-scale-v1-client-protocol.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandvulkan.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandvulkan.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/wayland-util.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvulkan.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/src/video/wayland/SDL_waylandwindow.c.o: ../third_party/SDL/src/video/wayland/SDL_waylandwindow.c \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi.h \
-  ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/ctype.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  ../third_party/SDL/src/events/SDL_windowevents_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  ../third_party/SDL/src/events/SDL_mouse_c.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  ../third_party/SDL/src/video/SDL_egl_c.h \
-  third_party/SDL/include/SDL2/SDL_egl.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/EGL/eglext.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandevents_c.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandvideo.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandwindow.h \
-  third_party/SDL/include/SDL2/SDL_syswm.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  /usr/include/X11/Xatom.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandtouch.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  ../third_party/SDL/src/SDL_hints_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/xdg-activation-v1-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/viewporter-client-protocol.h \
-  third_party/SDL/wayland-generated-protocols/fractional-scale-v1-client-protocol.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o: ../third_party/SDL/src/video/x11/SDL_x11clipboard.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -31886,29 +24671,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o: ../third
   third_party/SDL/include/SDL2/SDL_atomic.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -31937,43 +24702,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o: ../third
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -32151,21 +24890,13 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o: ../third_party
   /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
   /usr/include/X11/extensions/XShm.h \
   /usr/include/X11/extensions/shm.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/video/x11/SDL_x11sym.h \
@@ -32323,29 +25054,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.o: ../third_pa
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -32374,43 +25085,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.o: ../third_pa
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -32601,29 +25286,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.o: ../thi
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -32654,43 +25319,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.o: ../thi
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -32852,29 +25491,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.o: ../third_
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -32905,43 +25524,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.o: ../third_
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -33227,29 +25820,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.o: ../thir
   ../third_party/SDL/src/video/x11/SDL_x11video.h \
   ../third_party/SDL/src/video/SDL_sysvideo.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -33280,43 +25853,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.o: ../thir
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -33510,29 +26057,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.o: ../third_par
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -33563,43 +26090,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -33761,29 +26262,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.o: ../third_par
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -33814,43 +26295,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -34013,29 +26468,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o: ../third_pa
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -34066,43 +26501,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o: ../third_pa
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -34271,29 +26680,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.o: ../third_
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -34324,43 +26713,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.o: ../third_
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -34523,29 +26886,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o: ../third_par
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -34576,43 +26919,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -34773,29 +27090,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.o: ../third_par
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -34826,43 +27123,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -35039,29 +27310,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: ../third_par
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -35180,43 +27431,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -35384,29 +27609,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o: ../third_pa
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -35437,43 +27642,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o: ../third_pa
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -35631,29 +27810,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o: ../third_pa
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -35794,43 +27953,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o: ../third_pa
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -35979,174 +28112,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xfixes.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  ../third_party/SDL/src/video/x11/SDL_x11video.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  ../third_party/SDL/src/video/SDL_sysvideo.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
-  /usr/include/xcb/xcb.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/xcb/xproto.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
-  /usr/include/X11/Xlib.h \
-  /usr/include/X11/X.h \
-  /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /usr/include/X11/Xutil.h \
-  /usr/include/X11/keysym.h \
-  /usr/include/X11/keysymdef.h \
-  /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
-  /usr/include/X11/extensions/Xdbe.h \
-  /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
-  /usr/include/X11/extensions/Xrandr.h \
-  /usr/include/X11/extensions/randr.h \
-  /usr/include/X11/extensions/Xrender.h \
-  /usr/include/X11/extensions/render.h \
-  /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
-  /usr/include/X11/extensions/shape.h \
-  /usr/include/X11/extensions/shapeconst.h \
-  ../third_party/SDL/src/core/linux/SDL_dbus.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
-  ../third_party/SDL/src/core/linux/SDL_ime.h \
-  ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
-  /usr/include/X11/XKBlib.h \
-  /usr/include/X11/extensions/XKBstr.h \
-  /usr/include/X11/extensions/XKB.h \
-  /usr/include/X11/Xlibint.h \
-  /usr/include/X11/Xproto.h \
-  /usr/include/X11/Xmd.h \
-  /usr/include/X11/Xprotostr.h \
-  /usr/include/X11/XlibConf.h \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/X11/Xfuncs.h \
-  /usr/include/X11/extensions/Xext.h \
-  /usr/include/x86_64-linux-gnu/sys/ipc.h \
-  /usr/include/x86_64-linux-gnu/bits/ipctypes.h \
-  /usr/include/x86_64-linux-gnu/bits/ipc.h \
-  /usr/include/x86_64-linux-gnu/bits/ipc-perm.h \
-  /usr/include/x86_64-linux-gnu/sys/shm.h \
-  /usr/include/x86_64-linux-gnu/bits/shm.h \
-  /usr/include/x86_64-linux-gnu/bits/shmlba.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
-  /usr/include/X11/extensions/XShm.h \
-  /usr/include/X11/extensions/shm.h \
-  ../third_party/SDL/src/video/x11/SDL_x11sym.h \
-  ../third_party/SDL/src/video/x11/SDL_x11clipboard.h \
-  ../third_party/SDL/src/video/x11/SDL_x11events.h \
-  ../third_party/SDL/src/video/x11/SDL_x11keyboard.h \
-  ../third_party/SDL/src/video/x11/SDL_x11modes.h \
-  ../third_party/SDL/src/video/x11/SDL_x11mouse.h \
-  ../third_party/SDL/src/video/x11/SDL_x11opengl.h \
-  third_party/SDL/include/SDL2/SDL_opengl.h \
-  third_party/SDL/include/SDL2/SDL_opengl_glext.h \
-  /usr/include/GL/glx.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GL/glxext.h \
-  ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  /usr/include/EGL/egl.h \
-  /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
-  ../third_party/SDL/src/video/x11/SDL_x11xfixes.h \
-  ../third_party/SDL/src/events/SDL_mouse_c.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  ../third_party/SDL/src/events/SDL_touch_c.h \
-  ../third_party/SDL/include/SDL_touch.h \
-  ../third_party/SDL/include/SDL_stdinc.h \
-  ../third_party/SDL/include/SDL_error.h \
-  ../third_party/SDL/include/SDL_video.h \
-  ../third_party/SDL/include/begin_code.h \
-  ../third_party/SDL/include/close_code.h
+  third_party/SDL/include/SDL2/SDL_log.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o: ../third_party/SDL/src/video/x11/SDL_x11xinput2.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -36258,29 +28224,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o: ../third_p
   third_party/SDL/include/SDL2/SDL_mutex.h \
   third_party/SDL/include/SDL2/SDL_metal.h \
   ../third_party/SDL/src/video/SDL_vulkan_internal.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylanddyn.h \
-  ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/wayland-cursor.h \
-  /usr/include/wayland-util.h \
-  /usr/include/xkbcommon/xkbcommon.h \
-  /usr/include/xkbcommon/xkbcommon-names.h \
-  /usr/include/xkbcommon/xkbcommon-keysyms.h \
-  /usr/include/xkbcommon/xkbcommon-compat.h \
-  /usr/include/xkbcommon/xkbcommon-compose.h \
-  /usr/include/wayland-client-core.h \
-  /usr/include/wayland-version.h \
-  ../third_party/SDL/src/video/wayland/SDL_waylandsym.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
-  third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h \
-  /usr/include/wayland-client.h \
-  /usr/include/wayland-client-protocol.h \
-  /usr/include/wayland-egl.h \
-  /usr/include/wayland-egl-core.h \
-  /usr/include/libdecor-0/libdecor.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
   ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
-  ../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h \
   /usr/include/xcb/xcb.h \
   /usr/include/x86_64-linux-gnu/sys/uio.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -36311,43 +28257,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o: ../third_p
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
-  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
-  /usr/include/X11/extensions/XInput2.h \
-  /usr/include/X11/extensions/XI2.h \
-  /usr/include/X11/extensions/Xge.h \
-  /usr/include/X11/extensions/Xfixes.h \
-  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
   /usr/include/X11/extensions/render.h \
   /usr/include/X11/Xdefs.h \
-  /usr/include/X11/extensions/scrnsaver.h \
-  /usr/include/X11/extensions/saver.h \
   /usr/include/X11/extensions/shape.h \
   /usr/include/X11/extensions/shapeconst.h \
   ../third_party/SDL/src/core/linux/SDL_dbus.h \
   ../third_party/SDL/src/SDL_internal.h \
-  /usr/include/dbus-1.0/dbus/dbus.h \
-  /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
-  /usr/include/dbus-1.0/dbus/dbus-macros.h \
-  /usr/include/dbus-1.0/dbus/dbus-address.h \
-  /usr/include/dbus-1.0/dbus/dbus-types.h \
-  /usr/include/dbus-1.0/dbus/dbus-errors.h \
-  /usr/include/dbus-1.0/dbus/dbus-protocol.h \
-  /usr/include/dbus-1.0/dbus/dbus-bus.h \
-  /usr/include/dbus-1.0/dbus/dbus-connection.h \
-  /usr/include/dbus-1.0/dbus/dbus-memory.h \
-  /usr/include/dbus-1.0/dbus/dbus-message.h \
-  /usr/include/dbus-1.0/dbus/dbus-shared.h \
-  /usr/include/dbus-1.0/dbus/dbus-misc.h \
-  /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
-  /usr/include/dbus-1.0/dbus/dbus-server.h \
-  /usr/include/dbus-1.0/dbus/dbus-signature.h \
-  /usr/include/dbus-1.0/dbus/dbus-syntax.h \
-  /usr/include/dbus-1.0/dbus/dbus-threads.h \
   ../third_party/SDL/src/core/linux/SDL_ime.h \
   ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
   /usr/include/X11/XKBlib.h \
@@ -36678,1792 +28598,960 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.o: ../third_part
   ../third_party/SDL/src/video/yuv2rgb/yuv_rgb_std_func.h \
   ../third_party/SDL/src/video/yuv2rgb/yuv_rgb_sse_func.h
 
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/fractional-scale-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/fractional-scale-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
 
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/idle-inhibit-unstable-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/pointer-constraints-unstable-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/pointer-constraints-unstable-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/primary-selection-unstable-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/relative-pointer-unstable-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/relative-pointer-unstable-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/tablet-unstable-v2-protocol.c.o: third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/text-input-unstable-v3-protocol.c.o: third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/viewporter-protocol.c.o: third_party/SDL/wayland-generated-protocols/viewporter-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/wayland-protocol.c.o: third_party/SDL/wayland-generated-protocols/wayland-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/xdg-activation-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/xdg-activation-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/xdg-decoration-unstable-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/xdg-output-unstable-v1-protocol.c.o: third_party/SDL/wayland-generated-protocols/xdg-output-unstable-v1-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-third_party/SDL/CMakeFiles/SDL2.dir/wayland-generated-protocols/xdg-shell-protocol.c.o: third_party/SDL/wayland-generated-protocols/xdg-shell-protocol.c \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/wayland-util.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
-
-
-third_party/SDL/wayland-generated-protocols/xdg-output-unstable-v1-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/xdg-activation-v1-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/wayland-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/relative-pointer-unstable-v1-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/pointer-constraints-unstable-v1-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-protocol.c:
-
-third_party/SDL/wayland-generated-protocols/fractional-scale-v1-protocol.c:
+../third_party/SDL/src/video/yuv2rgb/yuv_rgb_sse_func.h:
 
 ../third_party/SDL/src/video/yuv2rgb/yuv_rgb_std_func.h:
 
+../third_party/SDL/src/video/x11/edid-parse.c:
+
+../third_party/SDL/src/video/x11/SDL_x11xinput2.c:
+
 ../third_party/SDL/src/video/x11/SDL_x11xfixes.c:
 
-../third_party/SDL/src/video/x11/SDL_x11vulkan.c:
-
-../third_party/SDL/src/video/x11/SDL_x11opengles.c:
-
-../third_party/SDL/src/video/x11/SDL_x11opengl.c:
-
-../third_party/SDL/src/video/x11/SDL_x11mouse.c:
-
-../third_party/SDL/src/video/x11/edid.h:
-
-../third_party/SDL/src/video/x11/SDL_x11messagebox.c:
-
-../third_party/SDL/src/video/x11/SDL_x11keyboard.c:
-
-../third_party/SDL/src/video/x11/SDL_x11framebuffer.h:
-
-../third_party/SDL/src/video/x11/SDL_x11framebuffer.c:
-
-../third_party/SDL/src/video/x11/SDL_x11xfixes.h:
-
-../third_party/SDL/src/video/x11/SDL_x11xinput2.h:
-
-../third_party/SDL/src/video/x11/SDL_x11touch.h:
-
-../third_party/SDL/src/video/x11/SDL_x11events.c:
-
-../third_party/SDL/src/video/x11/SDL_x11clipboard.c:
-
-../third_party/SDL/src/video/wayland/SDL_waylandwindow.c:
-
-third_party/SDL/wayland-generated-protocols/fractional-scale-v1-client-protocol.h:
-
-third_party/SDL/wayland-generated-protocols/viewporter-client-protocol.h:
-
-third_party/SDL/wayland-generated-protocols/xdg-activation-v1-client-protocol.h:
-
-third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h:
-
-third_party/SDL/wayland-generated-protocols/xdg-decoration-unstable-v1-client-protocol.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandvulkan.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandvideo.c:
-
-../third_party/SDL/src/video/wayland/SDL_waylandtouch.h:
-
-third_party/SDL/wayland-generated-protocols/xdg-output-unstable-v1-client-protocol.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandopengles.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandmouse.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandmessagebox.c:
-
-/usr/include/x86_64-linux-gnu/bits/mman-linux.h:
-
-third_party/SDL/wayland-generated-protocols/text-input-unstable-v3-client-protocol.h:
-
-third_party/SDL/wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h:
-
-third_party/SDL/wayland-generated-protocols/xdg-shell-client-protocol.h:
-
-third_party/SDL/wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylanddyn.c:
-
-../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.c:
-
-../third_party/SDL/src/video/wayland/SDL_waylandevents_c.h:
-
-../third_party/SDL/include/close_code.h:
-
-../third_party/SDL/include/begin_code.h:
+../third_party/SDL/src/video/x11/SDL_x11window.c:
 
 ../third_party/SDL/include/SDL_video.h:
 
-../third_party/SDL/src/video/x11/edid-parse.c:
-
 ../third_party/SDL/include/SDL_error.h:
 
-../third_party/SDL/src/video/wayland/SDL_waylandwindow.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandvideo.h:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.c:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenvideo.c:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenopengles.c:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenframebuffer_c.h:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenframebuffer.c:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenvideo.h:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenevents.c:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvideo.c:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmopengles.h:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmopengles.c:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmmouse.h:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmmouse.c:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmevents.c:
-
-third_party/SDL/include/SDL2/SDL_name.h:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmsym.h:
-
-/usr/include/xf86drmMode.h:
-
-/usr/include/libdrm/drm_mode.h:
-
-/usr/include/xf86drm.h:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.h:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.c:
-
-../third_party/SDL/src/video/dummy/SDL_nullvideo.c:
-
-../third_party/SDL/src/video/dummy/SDL_nullframebuffer_c.h:
-
-../third_party/SDL/src/video/dummy/SDL_nullevents_c.h:
-
-../third_party/SDL/src/video/dummy/SDL_nullvideo.h:
-
-../third_party/SDL/src/video/yuv2rgb/yuv_rgb.h:
-
-../third_party/SDL/src/video/SDL_yuv.c:
+../third_party/SDL/src/video/x11/SDL_x11touch.c:
 
 ../third_party/SDL/src/video/x11/SDL_x11shape.c:
 
-../third_party/SDL/src/video/wayland/SDL_waylandmessagebox.h:
+/usr/include/X11/cursorfont.h:
 
-/usr/include/X11/Xfuncs.h:
+../third_party/SDL/src/video/x11/SDL_x11mouse.c:
+
+../third_party/SDL/src/video/x11/SDL_x11modes.c:
+
+../third_party/SDL/src/video/x11/SDL_x11messagebox.c:
+
+/usr/include/locale.h:
+
+../third_party/SDL/src/events/SDL_keysym_to_scancode_c.h:
+
+../third_party/SDL/src/video/x11/SDL_x11keyboard.c:
+
+../third_party/SDL/src/video/x11/SDL_x11xinput2.h:
+
+../third_party/SDL/src/video/x11/SDL_x11events.c:
+
+third_party/SDL/include/SDL2/SDL_name.h:
+
+../third_party/SDL/src/video/x11/SDL_x11dyn.c:
+
+/usr/include/GL/glxext.h:
+
+/usr/include/GL/gl.h:
+
+/usr/include/GL/glx.h:
+
+../third_party/SDL/src/video/x11/SDL_x11mouse.h:
+
+../third_party/SDL/src/video/x11/SDL_x11clipboard.h:
+
+/usr/include/X11/extensions/shm.h:
+
+/usr/include/x86_64-linux-gnu/bits/shm.h:
+
+/usr/include/x86_64-linux-gnu/bits/ipc-perm.h:
+
+/usr/include/x86_64-linux-gnu/bits/ipc.h:
+
+/usr/include/x86_64-linux-gnu/bits/ipctypes.h:
+
+/usr/include/X11/XlibConf.h:
+
+/usr/include/X11/extensions/Xext.h:
+
+/usr/include/X11/Xmd.h:
 
 /usr/include/X11/Xproto.h:
 
 /usr/include/X11/Xlibint.h:
 
-/usr/include/dbus-1.0/dbus/dbus-server.h:
-
-/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
+/usr/include/X11/extensions/XKB.h:
 
 /usr/include/X11/XKBlib.h:
 
 ../third_party/SDL/src/video/x11/SDL_x11dyn.h:
 
-/usr/include/glib-2.0/glib/gstring.h:
-
 ../third_party/SDL/src/core/linux/SDL_ime.h:
 
-/usr/include/X11/extensions/scrnsaver.h:
+/usr/include/X11/extensions/shape.h:
 
 /usr/include/X11/Xdefs.h:
 
-/usr/include/glib-2.0/gio/gresolver.h:
+/usr/include/X11/extensions/Xrender.h:
 
-/usr/include/X11/extensions/randr.h:
+/usr/include/X11/extensions/dbe.h:
 
-/usr/include/ibus-1.0/ibusxevent.h:
-
-../third_party/SDL/src/video/SDL_blit_1.c:
-
-/usr/include/X11/extensions/xfixeswire.h:
-
-../third_party/SDL/src/libm/k_sin.c:
+/usr/include/X11/extensions/Xdbe.h:
 
 /usr/include/X11/keysym.h:
 
-/usr/include/glib-2.0/gio/gactiongroup.h:
+/usr/include/X11/Xutil.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+../third_party/SDL/src/video/x11/SDL_x11video.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h:
+../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h:
 
-../third_party/SDL/src/events/SDL_touch.c:
+../third_party/SDL/src/video/offscreen/SDL_offscreenframebuffer_c.h:
 
-third_party/SDL/include/SDL2/SDL_syswm.h:
+../third_party/SDL/src/video/offscreen/SDL_offscreenframebuffer.c:
 
-../third_party/SDL/src/core/linux/SDL_fcitx.h:
+../third_party/SDL/src/video/offscreen/SDL_offscreenevents_c.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
+../third_party/SDL/src/video/offscreen/SDL_offscreenvideo.h:
 
-../third_party/SDL/src/core/linux/SDL_fcitx.c:
+../third_party/SDL/src/video/dummy/SDL_nullvideo.c:
 
-../third_party/SDL/src/core/linux/SDL_evdev_kbd_default_accents.h:
-
-/usr/include/linux/vt.h:
-
-/usr/include/linux/keyboard.h:
-
-../third_party/SDL/src/joystick/SDL_joystick_c.h:
-
-/usr/include/linux/kd.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.c:
-
-/usr/include/glib-2.0/gio/gtlsserverconnection.h:
-
-../third_party/SDL/include/SDL_scancode.h:
-
-../third_party/SDL/src/audio/sndio/SDL_sndioaudio.c:
-
-../third_party/SDL/src/core/linux/SDL_evdev_kbd_default_keymap.h:
-
-/usr/include/pulse/rtclock.h:
-
-/usr/include/glib-2.0/gio/gbufferedoutputstream.h:
-
-/usr/include/pulse/mainloop-signal.h:
-
-../third_party/SDL/src/joystick/linux/SDL_sysjoystick_c.h:
-
-/usr/include/pulse/utf8.h:
-
-/usr/include/pulse/scache.h:
-
-/usr/include/pulse/introspect.h:
-
-../third_party/SDL/src/power/linux/SDL_syspower.c:
-
-/usr/include/pulse/channelmap.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
-
-/usr/include/asm-generic/param.h:
-
-/usr/include/x86_64-linux-gnu/asm/param.h:
-
-../third_party/SDL/src/audio/sndio/SDL_sndioaudio.h:
-
-../third_party/SDL/src/video/khronos/vulkan/vulkan_wayland.h:
-
-/usr/include/x86_64-linux-gnu/bits/param.h:
-
-../third_party/SDL/src/video/SDL_rect_impl.h:
-
-../third_party/SDL/src/audio/dummy/SDL_dummyaudio.c:
-
-/usr/include/glib-2.0/gio/gfilterinputstream.h:
-
-../third_party/SDL/src/core/linux/SDL_sandbox.h:
-
-/usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
-
-/usr/include/asm-generic/ioctls.h:
-
-/usr/include/ibus-1.0/ibuskeymap.h:
-
-/usr/include/x86_64-linux-gnu/sys/time.h:
-
-../third_party/SDL/src/render/software/SDL_blendpoint.c:
-
-/usr/include/alsa/seq_midi_event.h:
-
-/usr/include/glib-2.0/gio/gio.h:
-
-../third_party/SDL/src/libm/e_log.c:
-
-../third_party/SDL/src/core/linux/SDL_evdev_capabilities.h:
-
-/usr/include/alsa/mixer.h:
-
-/usr/include/alsa/control.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_nintendo.h:
-
-/usr/include/linux/wait.h:
-
-/usr/include/alsa/rawmidi.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-../third_party/SDL/src/SDL_list.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_combined.c:
-
-../third_party/SDL/src/thread/pthread/SDL_syssem.c:
-
-/usr/include/X11/extensions/saver.h:
-
-/usr/include/alsa/output.h:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/fcntl.h:
-
-/usr/include/X11/XlibConf.h:
-
-/usr/include/linux/input-event-codes.h:
-
-/usr/include/linux/errno.h:
-
-../third_party/SDL/src/events/SDL_keysym_to_scancode_c.h:
-
-../third_party/SDL/src/video/SDL_clipboard.c:
-
-/usr/include/x86_64-linux-gnu/sys/poll.h:
-
-/usr/include/fcntl.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio-ext.h:
-
-/usr/include/assert.h:
-
-../third_party/SDL/src/audio/alsa/SDL_alsa_audio.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
-
-/usr/include/glib-2.0/gio/gconverter.h:
-
-/usr/include/glib-2.0/gio/gbufferedinputstream.h:
-
-../third_party/SDL/src/render/direct3d12/SDL_render_d3d12.c:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
-
-/usr/include/x86_64-linux-gnu/asm/ioctl.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
-
-/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
-
-/usr/include/x86_64-linux-gnu/bits/ioctls.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
-
-/usr/include/x86_64-linux-gnu/sys/mman.h:
-
-/usr/include/x86_64-linux-gnu/sys/syscall.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
-
-/usr/include/glib-2.0/gio/gactiongroupexporter.h:
-
-../third_party/SDL/src/render/software/SDL_drawline.c:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-/usr/include/glib-2.0/gio/gvolumemonitor.h:
-
-../third_party/SDL/src/dynapi/SDL_dynapi.c:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/glib-2.0/glib/ggettext.h:
-
-/usr/include/glib-2.0/gobject/gobject.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/glib-2.0/glib/ghash.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h:
-
-/usr/include/ibus-1.0/ibusfactory.h:
-
-../third_party/SDL/src/audio/SDL_wave.c:
-
-/usr/include/X11/extensions/XKB.h:
-
-../third_party/SDL/src/audio/SDL_audiotypecvt.c:
-
-../third_party/SDL/src/joystick/controller_list.h:
-
-../third_party/SDL/src/audio/SDL_audiodev_c.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h:
-
-/usr/include/x86_64-linux-gnu/asm/posix_types.h:
-
-/usr/include/linux/stddef.h:
+../third_party/SDL/src/video/dummy/SDL_nullframebuffer_c.h:
 
 ../third_party/SDL/src/video/dummy/SDL_nullframebuffer.c:
 
-/usr/include/linux/posix_types.h:
+../third_party/SDL/src/video/dummy/SDL_nullevents_c.h:
 
-../third_party/SDL/src/core/linux/SDL_evdev.h:
+../third_party/SDL/src/video/dummy/SDL_nullvideo.h:
 
-/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+../third_party/SDL/src/video/SDL_yuv.c:
 
-/usr/include/asm-generic/int-ll64.h:
+../third_party/SDL/src/video/SDL_vulkan_utils.c:
 
-../third_party/SDL/src/libm/e_sqrt.c:
+../third_party/SDL/src/video/x11/SDL_x11messagebox.h:
 
-/usr/include/x86_64-linux-gnu/asm/types.h:
+../third_party/SDL/src/video/SDL_video.c:
 
-../third_party/SDL/src/timer/SDL_timer.c:
+../third_party/SDL/src/video/SDL_surface.c:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h:
+../third_party/SDL/src/video/SDL_stretch.c:
 
-../third_party/SDL/src/video/dummy/SDL_nullevents.c:
+../third_party/SDL/src/video/SDL_shape.c:
 
-/usr/include/glib-2.0/gio/gicon.h:
+../third_party/SDL/src/video/SDL_rect_c.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+../third_party/SDL/src/video/x11/SDL_x11keyboard.h:
 
-/usr/include/signal.h:
+../third_party/SDL/src/video/SDL_rect.c:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+../third_party/SDL/src/video/SDL_pixels.c:
 
-/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+/usr/include/EGL/eglext.h:
 
-../third_party/SDL/src/audio/SDL_audio_channel_converters.h:
+third_party/SDL/include/SDL2/SDL_egl.h:
 
-../third_party/SDL/src/audio/SDL_audiocvt.c:
+../third_party/SDL/src/video/SDL_egl_c.h:
 
-../third_party/SDL/src/audio/SDL_sysaudio.h:
+../third_party/SDL/src/video/SDL_egl.c:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h:
+../third_party/SDL/src/video/SDL_bmp.c:
 
-/usr/include/asm-generic/bitsperlong.h:
+../third_party/SDL/src/video/SDL_blit_slow.c:
 
-../third_party/SDL/src/video/wayland/SDL_waylandclipboard.h:
+../third_party/SDL/src/video/SDL_blit_copy.c:
 
-/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+../third_party/SDL/src/video/SDL_blit_A.c:
 
-/usr/include/wayland-client-core.h:
+/usr/include/X11/extensions/randr.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h:
+../third_party/SDL/src/video/SDL_blit_1.c:
 
-/usr/include/x86_64-linux-gnu/bits/stat.h:
+../third_party/SDL/src/video/SDL_blit_0.c:
 
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+../third_party/SDL/src/video/SDL_shape_internals.h:
 
-third_party/SDL/include/SDL2/SDL_cpuinfo.h:
+../third_party/SDL/src/video/SDL_blit.c:
 
-../third_party/SDL/src/audio/SDL_audio.c:
+../third_party/SDL/src/video/SDL_RLEaccel_c.h:
 
-../third_party/SDL/src/atomic/SDL_atomic.c:
+../third_party/SDL/src/timer/unix/SDL_systimer.c:
 
-/usr/include/X11/keysymdef.h:
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
 
-/usr/include/pulse/volume.h:
+../third_party/SDL/src/thread/pthread/SDL_systhread.c:
 
-/usr/include/glib-2.0/gio/gliststore.h:
+/usr/include/semaphore.h:
 
-/usr/include/pulse/operation.h:
+../third_party/SDL/src/thread/SDL_thread.c:
 
-/usr/include/xcb/xproto.h:
+../third_party/SDL/src/stdlib/SDL_strtokr.c:
 
-../third_party/SDL/src/SDL_dataqueue.c:
+../third_party/SDL/src/video/x11/SDL_x11touch.h:
 
-/usr/include/glib-2.0/gio/ginetsocketaddress.h:
+../third_party/SDL/src/stdlib/SDL_string.c:
 
-../third_party/SDL/src/SDL_assert.c:
+../third_party/SDL/src/stdlib/SDL_qsort.c:
 
-../third_party/SDL/src/timer/SDL_timer_c.h:
+../third_party/SDL/src/stdlib/SDL_malloc.c:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+../third_party/SDL/src/stdlib/SDL_iconv.c:
 
-../third_party/SDL/src/sensor/SDL_sensor_c.h:
+../third_party/SDL/src/stdlib/SDL_getenv.c:
 
-/usr/include/glib-2.0/gio/gdbusobjectskeleton.h:
+../third_party/SDL/src/stdlib/SDL_crc16.c:
 
-../third_party/SDL/include/SDL_touch.h:
+../third_party/SDL/src/sensor/dummy/SDL_dummysensor.c:
 
-../third_party/SDL/src/audio/SDL_audio_resampler_filter.h:
+../third_party/SDL/src/sensor/SDL_syssensor.h:
 
-../third_party/SDL/src/events/SDL_touch_c.h:
+../third_party/SDL/src/render/vitagxm/SDL_render_vita_gxm_tools.c:
 
-/usr/include/glib-2.0/glib/goption.h:
+../third_party/SDL/src/render/vitagxm/SDL_render_vita_gxm_memory.c:
 
-../third_party/SDL/src/events/SDL_keyboard_c.h:
+../third_party/SDL/src/render/vitagxm/SDL_render_vita_gxm.c:
 
-../third_party/SDL/src/events/SDL_gesture_c.h:
+../third_party/SDL/src/video/x11/SDL_x11sym.h:
 
-/usr/include/pulse/util.h:
+../third_party/SDL/src/render/software/SDL_triangle.h:
 
-/usr/include/glib-2.0/gio/gdtlsclientconnection.h:
+../third_party/SDL/src/render/software/SDL_rotate.h:
 
-../third_party/SDL/src/events/SDL_displayevents_c.h:
+../third_party/SDL/src/render/software/SDL_render_sw.c:
 
-/usr/include/ibus-1.0/ibusshare.h:
+../third_party/SDL/src/render/software/SDL_drawpoint.h:
 
-../third_party/SDL/src/events/SDL_clipboardevents_c.h:
+../third_party/SDL/src/render/software/SDL_drawline.h:
 
-../third_party/SDL/src/haptic/SDL_haptic_c.h:
+../third_party/SDL/src/render/software/SDL_blendpoint.h:
 
-third_party/SDL/include/SDL2/SDL_vulkan.h:
+/usr/include/X11/Xfuncs.h:
 
-../third_party/SDL/src/thread/pthread/SDL_sysmutex.c:
+../third_party/SDL/src/render/software/SDL_blendfillrect.h:
 
-/usr/include/X11/Xosdefs.h:
+../third_party/SDL/src/render/software/SDL_draw.h:
 
-/usr/include/pulse/format.h:
+../third_party/SDL/src/render/psp/SDL_render_psp.c:
 
-../third_party/SDL/src/video/yuv2rgb/yuv_rgb.c:
+../third_party/SDL/src/render/opengles2/SDL_shaders_gles2.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h:
+../third_party/SDL/src/video/khronos/GLES2/gl2ext.h:
+
+../third_party/SDL/src/render/software/SDL_drawpoint.c:
+
+../third_party/SDL/src/video/khronos/GLES2/gl2.h:
+
+/usr/include/KHR/khrplatform.h:
+
+../third_party/SDL/src/video/khronos/GLES2/gl2platform.h:
+
+third_party/SDL/include/SDL2/SDL_opengles2.h:
+
+../third_party/SDL/src/render/opengles2/SDL_render_gles2.c:
+
+../third_party/SDL/src/render/opengles/SDL_render_gles.c:
+
+../third_party/SDL/src/render/opengl/SDL_shaders_gl.c:
+
+../third_party/SDL/src/render/opengl/SDL_glfuncs.h:
+
+../third_party/SDL/src/render/opengl/SDL_shaders_gl.h:
+
+../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h:
 
 /usr/include/linux/tiocl.h:
 
-/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
-
-../third_party/SDL/src/joystick/SDL_joystick.c:
-
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/x86_64-linux-gnu/bits/mman-shared.h:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
-../third_party/SDL/src/video/wayland/SDL_waylandopengles.c:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/usr/include/alsa/error.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/float.h:
 
-/usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
+/usr/include/x86_64-linux-gnu/bits/time.h:
 
-../third_party/SDL/src/video/x11/SDL_x11dyn.c:
+/usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/glib-2.0/glib/glib-typeof.h:
+/usr/include/pthread.h:
 
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+../third_party/SDL/src/thread/pthread/SDL_systls.c:
 
-/usr/include/asm-generic/errno.h:
-
-/usr/include/ibus-1.0/ibusdebug.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
-../third_party/SDL/src/audio/SDL_wave.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/glib-2.0/gio/gseekable.h:
-
-../third_party/SDL/src/atomic/SDL_spinlock.c:
-
-../third_party/SDL/src/audio/dsp/SDL_dspaudio.c:
-
-/usr/include/linux/stat.h:
-
-/usr/include/glib-2.0/glib/gdir.h:
-
-/usr/include/glib-2.0/gio/gfilemonitor.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandmouse.c:
-
-../third_party/SDL/src/video/khronos/vulkan/vulkan.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
-
-/usr/include/ibus-1.0/ibusenginedesc.h:
-
-/usr/include/glib-2.0/glib/gmacros.h:
-
-../third_party/SDL/src/SDL_dataqueue.h:
-
-../third_party/SDL/src/video/x11/SDL_x11window.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h:
-
-third_party/SDL/include/SDL2/SDL_timer.h:
-
-../third_party/SDL/src/events/SDL_windowevents.c:
-
-/usr/include/linux/types.h:
-
-../third_party/SDL/src/render/software/SDL_blendfillrect.c:
-
-/usr/include/wayland-egl-core.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h:
-
-../third_party/SDL/src/video/x11/SDL_x11opengles.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h:
-
-/usr/include/glib-2.0/glib/galloca.h:
-
-/usr/include/X11/extensions/XInput2.h:
-
-/usr/include/glib-2.0/glib/guri.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandsym.h:
-
-/usr/include/wayland-version.h:
-
-/usr/include/x86_64-linux-gnu/bits/poll.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h:
-
-/usr/include/ibus-1.0/ibusaccelgroup.h:
-
-third_party/SDL/include/SDL2/SDL_events.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
-
-third_party/SDL/include/SDL2/SDL_endian.h:
-
-/usr/include/glib-2.0/gio/gdtlsserverconnection.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h:
-
-../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_rumble.c:
-
-/usr/include/time.h:
-
-../third_party/SDL/src/misc/unix/SDL_sysurl.c:
-
-../third_party/SDL/src/audio/pulseaudio/SDL_pulseaudio.c:
-
-../third_party/SDL/src/core/linux/SDL_dbus.h:
-
-/usr/include/iconv.h:
-
-/usr/include/X11/extensions/Xext.h:
-
-/usr/include/dbus-1.0/dbus/dbus-signature.h:
-
-/usr/include/glib-2.0/gio/gsettingsschema.h:
-
-third_party/SDL/include/SDL2/SDL_sensor.h:
-
-/usr/include/libudev.h:
-
-/usr/include/x86_64-linux-gnu/sys/param.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-../third_party/SDL/src/joystick/usb_ids.h:
-
-/usr/include/X11/cursorfont.h:
-
-/usr/include/glib-2.0/gio/gfileattribute.h:
-
-third_party/SDL/wayland-generated-protocols/relative-pointer-unstable-v1-client-protocol.h:
-
-../third_party/SDL/src/video/SDL_blit_auto.c:
-
-/usr/include/dbus-1.0/dbus/dbus-shared.h:
-
-/usr/include/X11/Xlib.h:
-
-/usr/include/dbus-1.0/dbus/dbus-bus.h:
-
-/usr/include/x86_64-linux-gnu/bits/resource.h:
-
-third_party/SDL/include/SDL2/SDL_atomic.h:
-
-/usr/include/glib-2.0/gio/gzlibdecompressor.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h:
 
 /usr/include/x86_64-linux-gnu/sys/uio.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h:
+../third_party/SDL/src/video/SDL_vulkan_internal.h:
 
-/usr/include/pulse/gccmacro.h:
+/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
 
-../third_party/SDL/src/events/scancodes_darwin.h:
+../third_party/SDL/src/video/SDL_sysvideo.h:
 
-/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+third_party/SDL/include/SDL2/SDL_gamecontroller.h:
 
-../third_party/SDL/src/video/offscreen/SDL_offscreenopengles.h:
+../third_party/SDL/src/events/SDL_events_c.h:
 
-/usr/include/glib-2.0/gio/gpermission.h:
+../third_party/SDL/src/thread/SDL_systhread.h:
 
-../third_party/SDL/src/thread/pthread/SDL_systhread_c.h:
+third_party/SDL/include/SDL2/SDL_bits.h:
+
+/usr/include/x86_64-linux-gnu/sys/shm.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h:
+
+third_party/SDL/include/SDL2/SDL_render.h:
+
+third_party/SDL/include/SDL2/SDL_hidapi.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h:
+
+../third_party/SDL/src/thread/pthread/SDL_syscond.c:
+
+third_party/SDL/include/SDL2/SDL_haptic.h:
+
+third_party/SDL/include/SDL2/SDL_gesture.h:
+
+third_party/SDL/include/SDL2/SDL_keycode.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h:
+
+third_party/SDL/include/SDL2/SDL_keyboard.h:
 
 /usr/include/xcb/xcb.h:
 
-/usr/include/glib-2.0/gio/gioerror.h:
+../third_party/SDL/src/thread/pthread/SDL_systhread_c.h:
 
-/usr/include/x86_64-linux-gnu/sys/types.h:
+third_party/SDL/include/SDL2/SDL_mouse.h:
 
-third_party/SDL/include/SDL2/SDL_error.h:
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h:
+../third_party/SDL/src/video/dummy/SDL_nullevents.c:
 
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+third_party/SDL/include/SDL2/SDL_blendmode.h:
 
-/usr/include/wayland-client-protocol.h:
+../third_party/SDL/src/SDL_error.c:
 
-/usr/include/wayland-egl.h:
+../third_party/SDL/src/joystick/hidapi/SDL_hidapijoystick.c:
 
-/usr/include/pulse/error.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h:
 
-/usr/include/alsa/asoundef.h:
+../third_party/SDL/src/render/opengles2/SDL_gles2funcs.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+../third_party/SDL/src/video/offscreen/SDL_offscreenevents.c:
+
+third_party/SDL/include/SDL2/begin_code.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+../third_party/SDL/src/events/scancodes_darwin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h:
+
+../third_party/SDL/src/video/x11/SDL_x11modes.h:
+
+../third_party/SDL/src/video/SDL_blit_N.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h:
+
+../third_party/SDL/src/events/SDL_keyboard.c:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_xboxone.c:
+
+third_party/SDL/include/SDL2/SDL_opengl_glext.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h:
+
+third_party/SDL/include/SDL2/SDL.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h:
+
+../third_party/SDL/src/SDL_log_c.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h:
+
+/usr/include/dlfcn.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h:
+
+../third_party/SDL/src/events/SDL_scancode_tables_c.h:
+
+third_party/SDL/include/SDL2/SDL_messagebox.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h:
 
 third_party/SDL/include/SDL2/SDL_version.h:
 
-/usr/include/glib-2.0/glib/gdatetime.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+/usr/include/X11/X.h:
 
-/usr/include/X11/extensions/XI2.h:
+third_party/SDL/include/SDL2/SDL_filesystem.h:
 
-/usr/include/X11/extensions/XKBstr.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h:
 
-/usr/include/linux/patchkey.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvulkan.c:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h:
 
-/usr/include/glib-2.0/glib/gkeyfile.h:
+../third_party/SDL/src/video/khronos/vulkan/vk_platform.h:
 
-../third_party/SDL/src/libm/s_floor.c:
+../third_party/SDL/src/render/opengles2/SDL_shaders_gles2.c:
 
-/usr/include/asm-generic/ioctl.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h:
 
-/usr/include/glib-2.0/gio/gdtlsconnection.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+../third_party/SDL/src/video/x11/SDL_x11opengl.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h:
+../third_party/SDL/src/audio/SDL_audiodev.c:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h:
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h:
+/usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvideo.h:
+../third_party/SDL/src/sensor/dummy/SDL_dummysensor.h:
 
-/usr/include/alsa/global.h:
+third_party/SDL/include/SDL2/SDL_thread.h:
 
-../third_party/SDL/src/events/default_cursor.h:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+../third_party/SDL/src/joystick/virtual/SDL_virtualjoystick_c.h:
 
-/usr/include/X11/Xutil.h:
+third_party/SDL/include/SDL2/SDL_power.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h:
 
-../third_party/SDL/src/render/software/SDL_triangle.c:
+../third_party/SDL/src/core/linux/SDL_udev.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+../third_party/SDL/src/video/x11/SDL_x11window.h:
 
-/usr/include/linux/falloc.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+third_party/SDL/include/SDL2/SDL_touch.h:
 
-/usr/include/x86_64-linux-gnu/sys/ioctl.h:
+third_party/SDL/include/SDL2/SDL_system.h:
 
-/usr/include/dbus-1.0/dbus/dbus-connection.h:
+/usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/usr/include/dbus-1.0/dbus/dbus.h:
+../third_party/SDL/src/audio/SDL_wave.h:
+
+../third_party/SDL/src/video/SDL_RLEaccel.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h:
+
+../third_party/SDL/src/video/yuv2rgb/yuv_rgb.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_steam.c:
+
+../third_party/SDL/src/SDL_assert_c.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_gamecube.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h:
+
+/usr/include/X11/extensions/XShm.h:
+
+../third_party/SDL/src/events/SDL_quit.c:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+../third_party/SDL/src/render/direct3d/SDL_render_d3d.c:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+third_party/SDL/include/SDL2/SDL_joystick.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h:
+
+../third_party/SDL/src/audio/dummy/SDL_dummyaudio.h:
+
+../third_party/SDL/src/audio/disk/SDL_diskaudio.h:
+
+third_party/SDL/include-config-/SDL2/SDL_config.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
+
+third_party/SDL/include/SDL2/SDL_surface.h:
+
+third_party/SDL/include/SDL2/SDL_shape.h:
+
+../third_party/SDL/src/SDL_utils.c:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+../third_party/SDL/src/render/opengl/SDL_render_gl.c:
+
+../third_party/SDL/src/hidapi/SDL_hidapi_c.h:
+
+third_party/SDL/include/SDL2/SDL_misc.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h:
+
+../third_party/SDL/src/loadso/dlopen/SDL_sysloadso.c:
+
+/usr/include/stdio.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_ps4.c:
+
+third_party/SDL/include/SDL2/SDL_rwops.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h:
+
+../third_party/SDL/include/SDL_stdinc.h:
+
+../third_party/SDL/src/video/x11/SDL_x11vulkan.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+../third_party/SDL/src/video/offscreen/SDL_offscreenopengles.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+../third_party/SDL/src/video/x11/SDL_x11events.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+../third_party/SDL/src/render/software/SDL_blendline.h:
+
+third_party/SDL/include/SDL2/SDL_guid.h:
+
+third_party/SDL/include/SDL2/SDL_revision.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h:
+
+/usr/include/linux/input.h:
+
+../third_party/SDL/src/libm/k_cos.c:
+
+/usr/include/features.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
+
+/usr/include/ctype.h:
+
+../third_party/SDL/src/events/SDL_gesture.c:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/hwcap.h:
 
 ../third_party/SDL/src/events/imKStoUCS.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h:
-
-../third_party/SDL/src/core/linux/SDL_evdev_capabilities.c:
-
-/usr/include/glib-2.0/gio/gsocketcontrolmessage.h:
-
-/usr/include/pulse/mainloop-api.h:
-
-third_party/SDL/include/SDL2/SDL_loadso.h:
-
-/usr/include/glib-2.0/gio/gioscheduler.h:
-
-/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
-
-../third_party/SDL/src/stdlib/SDL_crc32.c:
-
-/usr/include/glib-2.0/glib/deprecated/grel.h:
-
-/usr/include/glib-2.0/gio/ginputstream.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h:
-
-../third_party/SDL/src/render/SDL_sysrender.h:
+third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 third_party/SDL/include/SDL2/SDL_platform.h:
 
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+third_party/SDL/include/SDL2/SDL_assert.h:
 
-third_party/SDL/include/SDL2/SDL_mutex.h:
+/usr/include/inttypes.h:
 
-/usr/include/x86_64-linux-gnu/bits/semaphore.h:
+../third_party/SDL/src/SDL_dataqueue.h:
 
-/usr/include/math.h:
+../third_party/SDL/src/core/linux/SDL_evdev_capabilities.c:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h:
 
-../third_party/SDL/src/video/x11/SDL_x11touch.c:
+../third_party/SDL/src/events/SDL_displayevents.c:
 
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+../third_party/SDL/src/thread/pthread/SDL_sysmutex_c.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h:
+../third_party/SDL/src/libm/s_fabs.c:
 
-/usr/include/alloca.h:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h:
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+/usr/include/x86_64-linux-gnu/sys/ipc.h:
 
-/usr/include/features-time64.h:
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h:
+../third_party/SDL/src/events/SDL_keysym_to_scancode.c:
 
-third_party/SDL/include/SDL2/SDL_stdinc.h:
+../third_party/SDL/src/video/x11/SDL_x11framebuffer.c:
 
-/usr/include/glib-2.0/glib/gqsort.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h:
 
-/usr/include/stdio.h:
+../third_party/SDL/src/SDL_internal.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/X11/Xprotostr.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+../third_party/SDL/src/thread/SDL_thread_c.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+third_party/SDL/include/SDL2/close_code.h:
+
+../third_party/SDL/src/video/x11/SDL_x11opengl.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h:
+
+../third_party/SDL/src/stdlib/SDL_stdlib.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h:
+
+/usr/include/string.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_nintendo.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+../third_party/SDL/src/SDL_guid.c:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/syscall.h:
+
+../third_party/SDL/src/events/SDL_mouse_c.h:
+
+third_party/SDL/include/SDL2/SDL_loadso.h:
+
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+
+third_party/SDL/include/SDL2/SDL_sensor.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h:
+
+../third_party/SDL/src/render/direct3d12/SDL_shaders_d3d12.c:
+
+/usr/include/endian.h:
+
+/usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+../third_party/SDL/src/joystick/SDL_sysjoystick.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+../third_party/SDL/src/misc/SDL_url.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+../third_party/SDL/src/video/SDL_fillrect.c:
+
+/usr/include/strings.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h:
+
+/usr/include/EGL/eglplatform.h:
+
+../third_party/SDL/src/events/SDL_scancode_tables.c:
+
+../third_party/SDL/src/libm/s_atan.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h:
+
+/usr/include/sched.h:
+
+../third_party/SDL/src/video/x11/SDL_x11vulkan.c:
+
+third_party/SDL/include/SDL2/SDL_locale.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h:
+
+../third_party/SDL/src/dynapi/SDL_dynapi.h:
+
+../third_party/SDL/src/video/x11/SDL_x11opengles.h:
+
+../third_party/SDL/src/stdlib/SDL_mslibc.c:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/asm-generic/errno.h:
+
+../third_party/SDL/src/SDL.c:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+../third_party/SDL/src/misc/SDL_sysurl.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h:
+
+/usr/include/asm-generic/types.h:
+
+../third_party/SDL/src/libm/s_tan.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h:
+
+../third_party/SDL/src/events/SDL_dropevents.c:
+
+../third_party/SDL/src/SDL_utils_c.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+../third_party/SDL/src/libm/e_log.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h:
 
 /usr/include/stdlib.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h:
 
-/usr/include/dbus-1.0/dbus/dbus-threads.h:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/usr/include/ibus-1.0/ibusproxy.h:
+../third_party/SDL/src/joystick/controller_type.c:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_ps3.c:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+/usr/include/alloca.h:
 
-../third_party/SDL/src/core/unix/SDL_poll.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h:
 
-third_party/SDL/include/SDL2/SDL_quit.h:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h:
 
-/usr/include/ibus-1.0/ibusconfig.h:
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/usr/include/glib-2.0/glib/gstrvbuilder.h:
+/usr/include/math.h:
 
-/usr/include/dbus-1.0/dbus/dbus-pending-call.h:
+../third_party/SDL/src/video/offscreen/SDL_offscreenvideo.c:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h:
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
 
-/usr/include/glib-2.0/gobject/gvaluetypes.h:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/x86_64-linux-gnu/bits/shmlba.h:
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
-/usr/include/glib-2.0/gio/gdbusauthobserver.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-../third_party/SDL/src/misc/SDL_sysurl.h:
+../third_party/SDL/src/video/x11/SDL_x11shape.h:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
+third_party/SDL/include/SDL2/SDL_clipboard.h:
 
-../third_party/SDL/src/SDL.c:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h:
 
-/usr/include/X11/Xmd.h:
+/usr/include/linux/falloc.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h:
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-../third_party/SDL/src/thread/pthread/SDL_systls.c:
+../third_party/SDL/src/video/x11/SDL_x11video.c:
+
+../third_party/SDL/src/render/software/SDL_triangle.c:
+
+../third_party/SDL/src/video/SDL_yuv_c.h:
+
+third_party/SDL/include/SDL2/SDL_rect.h:
+
+../third_party/SDL/src/render/software/SDL_rotate.c:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/X11/Xlib.h:
+
+../third_party/SDL/src/video/SDL_rect_impl.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+../third_party/SDL/src/video/x11/edid.h:
+
+third_party/SDL/include/SDL2/SDL_pixels.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+../third_party/SDL/src/haptic/SDL_haptic.c:
+
+../third_party/SDL/src/joystick/usb_ids.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+third_party/SDL/include/SDL2/SDL_log.h:
+
+/usr/include/asm-generic/ioctl.h:
+
+../third_party/SDL/src/libm/s_floor.c:
+
+../third_party/SDL/src/core/linux/SDL_evdev.c:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx.h:
+
+/usr/include/linux/patchkey.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+../third_party/SDL/src/joystick/SDL_joystick.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/mm3dnow.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/iconv.h:
+
+../third_party/SDL/src/core/linux/SDL_dbus.h:
+
+third_party/SDL/include/SDL2/SDL_main.h:
+
+../third_party/SDL/src/joystick/SDL_gamecontroller.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
+/usr/include/stdc-predef.h:
+
+../third_party/SDL/src/locale/SDL_syslocale.h:
+
+third_party/SDL/include/SDL2/SDL_atomic.h:
+
+third_party/SDL/include/SDL2/SDL_hints.h:
+
+/usr/include/time.h:
+
+third_party/SDL/include/SDL2/SDL_video.h:
+
+../third_party/SDL/src/joystick/virtual/SDL_virtualjoystick.c:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_rumble.c:
+
+third_party/SDL/include/SDL2/SDL_audio.h:
+
+../third_party/SDL/src/render/software/SDL_blendfillrect.c:
+
+third_party/SDL/include/SDL2/SDL_timer.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h:
+
+../third_party/SDL/src/events/SDL_windowevents.c:
+
+../third_party/SDL/src/core/unix/SDL_poll.c:
+
+../third_party/SDL/src/render/SDL_yuv_sw_c.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h:
+
+third_party/SDL/include/SDL2/SDL_error.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+../third_party/SDL/src/misc/unix/SDL_sysurl.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h:
+
+../third_party/SDL/src/dynapi/SDL_dynapi_procs.h:
+
+../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h:
+
+third_party/SDL/include/SDL2/SDL_endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+../third_party/SDL/src/locale/unix/SDL_syslocale.c:
+
+/usr/include/features-time64.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h:
+
+../third_party/SDL/src/render/SDL_render.c:
+
+../third_party/SDL/src/video/yuv2rgb/yuv_rgb.h:
+
+third_party/SDL/include/SDL2/SDL_mutex.h:
+
+../third_party/SDL/src/video/SDL_blit_auto.h:
+
+third_party/SDL/include/SDL2/SDL_events.h:
+
+../third_party/SDL/src/libm/k_sin.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/poll.h:
+
+/usr/include/elf.h:
+
+../third_party/SDL/src/video/khronos/vulkan/vulkan.h:
+
+/usr/include/linux/stat.h:
+
+../third_party/SDL/src/audio/dsp/SDL_dspaudio.c:
+
+../third_party/SDL/src/video/SDL_blit_copy.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_luna.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_rumble.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -38471,1399 +29559,491 @@ third_party/SDL/include/SDL2/SDL_quit.h:
 
 ../third_party/SDL/src/libm/math_private.h:
 
-../third_party/SDL/src/dynapi/SDL_dynapi.h:
-
-/usr/include/glib-2.0/glib/gcharset.h:
-
-third_party/SDL/include/SDL2/SDL_opengles.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/X11/Xcursor/Xcursor.h:
-
-../third_party/SDL/src/libm/k_tan.c:
-
-../third_party/SDL/src/video/SDL_blit_slow.h:
-
-third_party/SDL/include/SDL2/SDL_locale.h:
-
-/usr/include/glib-2.0/gio/gfilteroutputstream.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/strings.h:
-
-third_party/SDL/wayland-generated-protocols/xdg-shell-protocol.c:
-
-../third_party/SDL/src/video/SDL_fillrect.c:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/glib-2.0/gio/gsrvtarget.h:
-
-../third_party/SDL/src/haptic/SDL_syshaptic.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/stdint.h:
-
-/usr/include/X11/extensions/dbe.h:
-
-/usr/include/x86_64-linux-gnu/bits/statx.h:
-
-../third_party/SDL/src/events/SDL_mouse_c.h:
-
-/usr/include/glib-2.0/gio/gthreadedsocketservice.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-../third_party/SDL/src/SDL_guid.c:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-third_party/SDL/include/SDL2/close_code.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h:
-
-../third_party/SDL/src/video/SDL_yuv_c.h:
-
-/usr/include/dbus-1.0/dbus/dbus-errors.h:
-
-/usr/include/glib-2.0/gio/gnetworkservice.h:
-
-../third_party/SDL/src/thread/SDL_thread_c.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/X11/Xprotostr.h:
-
-../third_party/SDL/src/SDL_internal.h:
-
-/usr/include/glib-2.0/gio/ginetaddressmask.h:
-
-/usr/include/glib-2.0/glib/deprecated/gallocator.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:
-
-../third_party/SDL/src/SDL_log.c:
-
-/usr/include/ibus-1.0/ibusattribute.h:
-
-/usr/include/dbus-1.0/dbus/dbus-syntax.h:
-
-/usr/include/X11/extensions/XShm.h:
-
-/usr/include/glib-2.0/gio/gvfs.h:
-
-../third_party/SDL/src/events/SDL_quit.c:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/glib-2.0/glib/gslist.h:
-
-../third_party/SDL/src/video/x11/SDL_x11shape.h:
-
-third_party/SDL/include/SDL2/SDL_render.h:
-
-/usr/include/alsa/pcm.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h:
-
-/usr/include/x86_64-linux-gnu/sys/ipc.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/float.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/glib-2.0/gio/gconverteroutputstream.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_rumble.h:
-
-/usr/include/inttypes.h:
-
-../third_party/SDL/src/audio/alsa/SDL_alsa_audio.c:
-
-third_party/SDL/include/SDL2/SDL_log.h:
-
-third_party/SDL/include/SDL2/SDL_assert.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/glib-2.0/gio/gsettings.h:
-
-../third_party/SDL/src/events/SDL_gesture.c:
-
-/usr/include/ctype.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-../third_party/SDL/src/video/x11/SDL_x11modes.c:
-
-/usr/include/features.h:
-
-/usr/include/linux/ioctl.h:
-
-../third_party/SDL/src/video/x11/SDL_x11video.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/glib-2.0/gio/gasyncresult.h:
-
-/usr/include/sndio.h:
-
-third_party/SDL/include/SDL2/SDL_guid.h:
-
-../third_party/SDL/src/render/software/SDL_blendline.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/X11/extensions/Xge.h:
-
-../third_party/SDL/src/video/x11/SDL_x11events.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h:
-
-/usr/include/glib-2.0/glib/ghostutils.h:
-
-/usr/include/glib-2.0/gio/gdebugcontroller.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/mman.h:
-
-/usr/include/libdecor-0/libdecor.h:
-
-../third_party/SDL/src/video/x11/SDL_x11vulkan.h:
-
-/usr/include/X11/extensions/shape.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h:
-
-/usr/include/ibus-1.0/ibusserializable.h:
-
-/usr/include/pulse/def.h:
-
-/usr/include/glib-2.0/gio/gtlsbackend.h:
-
-third_party/SDL/include/SDL2/SDL_rwops.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/stdc-predef.h:
-
-../third_party/SDL/src/locale/SDL_syslocale.h:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/glib-2.0/gio/gfileicon.h:
-
-../third_party/SDL/src/SDL_utils.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
-
-third_party/SDL/include/SDL2/SDL_shape.h:
-
-/usr/include/glib-2.0/glib/gpattern.h:
-
-third_party/SDL/include/SDL2/SDL_surface.h:
-
-/usr/include/dbus-1.0/dbus/dbus-misc.h:
-
-../third_party/SDL/src/render/direct3d/SDL_render_d3d.c:
-
-third_party/SDL/include-config-/SDL2/SDL_config.h:
-
-/usr/include/linux/close_range.h:
-
-/usr/include/glib-2.0/gio/ginetaddress.h:
-
-third_party/SDL/include/SDL2/SDL_clipboard.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h:
-
-../third_party/SDL/src/file/SDL_rwops.c:
-
-/usr/include/pulse/proplist.h:
-
-/usr/include/glib-2.0/gio/gsocketservice.h:
-
-../third_party/SDL/src/core/linux/SDL_dbus.c:
-
-/usr/include/alsa/version.h:
-
-/usr/include/wayland-cursor.h:
-
-/usr/include/string.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h:
-
-../third_party/SDL/src/stdlib/SDL_stdlib.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h:
-
-/usr/include/X11/X.h:
-
-/usr/include/glib-2.0/glib/gasyncqueue.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h:
-
-../third_party/SDL/src/audio/pulseaudio/SDL_pulseaudio.h:
-
-third_party/SDL/include/SDL2/SDL_haptic.h:
-
-/usr/include/linux/limits.h:
-
-../third_party/SDL/src/thread/pthread/SDL_syscond.c:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h:
-
-third_party/SDL/wayland-generated-protocols/wayland-client-protocol.h:
-
-/usr/include/x86_64-linux-gnu/sys/auxv.h:
-
-../third_party/SDL/src/hidapi/hidapi/hidapi.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-third_party/SDL/include/SDL2/SDL_revision.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h:
-
-/usr/include/glib-2.0/gio/gtlsfiledatabase.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h:
 
 /usr/include/X11/Xfuncproto.h:
 
-/usr/include/glib-2.0/gio/gvolume.h:
+../third_party/SDL/src/SDL_list.c:
 
-/usr/include/xkbcommon/xkbcommon-keysyms.h:
+../third_party/SDL/src/video/x11/SDL_x11clipboard.c:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h:
-
-../third_party/SDL/src/events/SDL_dropevents_c.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h:
-
-../third_party/SDL/src/core/linux/SDL_evdev_kbd.c:
-
-/usr/include/glib-2.0/glib/gmessages.h:
-
-/usr/include/glib-2.0/gio/gnetworkmonitor.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandtouch.c:
-
-../third_party/SDL/src/events/scancodes_linux.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h:
-
-third_party/SDL/include/SDL2/SDL_misc.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h:
-
-third_party/SDL/include/SDL2/SDL_joystick.h:
-
-/usr/include/wayland-client.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/X11/extensions/render.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/glib-2.0/gio/gdataoutputstream.h:
-
-/usr/include/dbus-1.0/dbus/dbus-address.h:
-
-/usr/include/x86_64-linux-gnu/bits/dirent.h:
-
-../third_party/SDL/src/libm/k_rem_pio2.c:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-../third_party/SDL/src/SDL_assert_c.h:
-
-/usr/include/pulse/version.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h:
-
-/usr/include/errno.h:
-
-/usr/include/glib-2.0/glib/gquark.h:
-
-../third_party/SDL/src/video/SDL_vulkan_utils.c:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h:
-
-/usr/include/glib-2.0/glib/guuid.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h:
-
-../third_party/SDL/src/video/yuv2rgb/yuv_rgb_sse_func.h:
-
-/usr/include/x86_64-linux-gnu/sys/shm.h:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmevents.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h:
-
-/usr/include/poll.h:
-
-../third_party/SDL/src/power/SDL_syspower.h:
-
-../third_party/SDL/src/video/SDL_RLEaccel.c:
-
-/usr/include/dbus-1.0/dbus/dbus-message.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h:
-
-third_party/SDL/include/SDL2/SDL_system.h:
-
-../third_party/SDL/src/video/kmsdrm/SDL_kmsdrmvulkan.h:
-
-third_party/SDL/include/SDL2/SDL_touch.h:
-
-/usr/include/alsa/input.h:
-
-/usr/include/glib-2.0/gmodule.h:
-
-/usr/include/glib-2.0/gio/gproxyresolver.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h:
-
-third_party/SDL/include/SDL2/SDL_power.h:
-
-/usr/include/pulse/direction.h:
-
-/usr/include/glib-2.0/gio/gnativevolumemonitor.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_wii.c:
-
-../third_party/SDL/src/video/khronos/vulkan/vk_platform.h:
-
-../third_party/SDL/src/SDL_error_c.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h:
-
-/usr/include/glib-2.0/gobject/gvalue.h:
-
-../third_party/SDL/src/render/opengles2/SDL_shaders_gles2.c:
-
-/usr/include/xkbcommon/xkbcommon-compose.h:
-
-third_party/SDL/include/SDL2/SDL_thread.h:
-
-../third_party/SDL/src/video/SDL_blit_slow.c:
-
-/usr/include/glib-2.0/gio/gtestdbus.h:
-
-/usr/include/glib-2.0/gobject/gsignalgroup.h:
-
-../third_party/SDL/src/sensor/dummy/SDL_dummysensor.h:
-
-../third_party/SDL/src/audio/SDL_audiodev.c:
-
-../third_party/SDL/src/video/x11/SDL_x11opengl.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h:
-
-/usr/include/glib-2.0/gobject/genums.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h:
-
-third_party/SDL/include/SDL2/SDL_filesystem.h:
-
-/usr/include/glib-2.0/gio/gcharsetconverter.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h:
-
-../third_party/SDL/src/events/SDL_scancode_tables_c.h:
-
-/usr/include/pulse/subscribe.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h:
-
-/usr/include/glib-2.0/gio/gsocketclient.h:
-
-../third_party/SDL/src/stdlib/SDL_mslibc.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h:
-
-/usr/include/glib-2.0/gio/gzlibcompressor.h:
-
-../third_party/SDL/src/libm/k_cos.c:
-
-/usr/include/alsa/timer.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h:
-
-/usr/include/glib-2.0/glib/gsequence.h:
-
-/usr/include/X11/extensions/Xrender.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h:
-
-/usr/include/pulse/simple.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_switch.c:
-
-../third_party/SDL/src/SDL_log_c.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandevents.c:
-
-/usr/include/glib-2.0/glib/garray.h:
-
-third_party/SDL/include/SDL2/SDL.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h:
-
-../third_party/SDL/src/video/x11/SDL_x11modes.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
-
-/usr/include/ibus-1.0/ibusenumtypes.h:
-
-../third_party/SDL/src/video/SDL_blit_N.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h:
-
-third_party/SDL/include/SDL2/begin_code.h:
-
-third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-client-protocol.h:
-
-/usr/include/glib-2.0/glib/ghook.h:
-
-../third_party/SDL/src/joystick/SDL_gamecontrollerdb.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/glib-2.0/gio/gtlsclientconnection.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/glib-2.0/gio/gcancellable.h:
-
-../third_party/SDL/src/render/opengles2/SDL_gles2funcs.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h:
-
-third_party/SDL/wayland-generated-protocols/viewporter-protocol.c:
-
-/usr/include/glib-2.0/glib/gbase64.h:
-
-/usr/include/glib-2.0/glib/deprecated/gmain.h:
-
-/usr/include/ibus-1.0/ibusemoji.h:
-
-../third_party/SDL/src/events/SDL_displayevents.c:
-
-third_party/SDL/include/SDL2/SDL_blendmode.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylanddatamanager.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigstack.h:
-
-/usr/include/glib-2.0/glib/gqueue.h:
-
-third_party/SDL/include/SDL2/SDL_mouse.h:
-
-/usr/include/glib-2.0/gobject/glib-enumtypes.h:
-
-third_party/SDL/include/SDL2/SDL_video.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-../third_party/SDL/src/joystick/virtual/SDL_virtualjoystick_c.h:
-
-third_party/SDL/include/SDL2/SDL_keycode.h:
-
-../third_party/SDL/src/events/SDL_windowevents_c.h:
-
-../third_party/SDL/src/core/linux/SDL_udev.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapijoystick_c.h:
-
-../third_party/SDL/src/video/SDL_sysvideo.h:
-
-/usr/include/glib-2.0/glib/gunicode.h:
-
-third_party/SDL/wayland-generated-protocols/tablet-unstable-v2-client-protocol.h:
-
-/usr/include/GLES2/gl2platform.h:
-
-/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
-
-third_party/SDL/include/SDL2/SDL_gamecontroller.h:
-
-third_party/SDL/include/SDL2/SDL_metal.h:
-
-/usr/include/glib-2.0/gio/gbytesicon.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/xkbcommon/xkbcommon-names.h:
-
-third_party/SDL/include/SDL2/SDL_gesture.h:
-
-/usr/include/wayland-util.h:
-
-/usr/include/ibus-1.0/ibusversion.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h:
-
-third_party/SDL/include/SDL2/SDL_hidapi.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-third_party/SDL/include/SDL2/SDL_bits.h:
-
-../third_party/SDL/src/SDL_hints_c.h:
-
-../third_party/SDL/src/thread/SDL_systhread.h:
-
-/usr/include/xkbcommon/xkbcommon.h:
-
-../third_party/SDL/src/events/SDL_events_c.h:
-
-../third_party/SDL/src/video/SDL_vulkan_internal.h:
-
-/usr/include/X11/extensions/Xdbe.h:
-
-/usr/include/alsa/asoundlib.h:
-
-/usr/include/x86_64-linux-gnu/bits/ipctypes.h:
-
-/usr/include/x86_64-linux-gnu/bits/ipc.h:
-
-/usr/include/x86_64-linux-gnu/bits/ipc-perm.h:
-
-/usr/include/x86_64-linux-gnu/bits/shm.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h:
-
-/usr/include/pulse/context.h:
-
-../third_party/SDL/src/events/scancodes_xfree86.h:
-
-/usr/include/alsa/seq.h:
-
-/usr/include/X11/extensions/shm.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h:
 
 /usr/include/X11/extensions/shapeconst.h:
 
-third_party/SDL/include/SDL2/SDL_scancode.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
 
-../third_party/SDL/src/video/x11/SDL_x11sym.h:
+/usr/include/X11/Xosdefs.h:
 
-../third_party/SDL/src/render/software/SDL_triangle.h:
-
-../third_party/SDL/src/video/x11/SDL_x11keyboard.h:
-
-/usr/include/alsa/conf.h:
-
-../third_party/SDL/src/video/SDL_rect.c:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenevents_c.h:
-
-../third_party/SDL/src/video/x11/SDL_x11mouse.h:
-
-third_party/SDL/include/SDL2/SDL_opengl.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h:
-
-/usr/include/glib-2.0/glib/gtimezone.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
-
-third_party/SDL/include/SDL2/SDL_opengl_glext.h:
-
-/usr/include/GL/glx.h:
-
-/usr/include/GL/gl.h:
-
-/usr/include/glib-2.0/gio/gsocketconnection.h:
-
-/usr/include/GL/glxext.h:
-
-/usr/include/EGL/egl.h:
-
-../third_party/SDL/src/audio/disk/SDL_diskaudio.c:
-
-../third_party/SDL/src/render/software/SDL_blendline.c:
-
-/usr/include/EGL/eglplatform.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylanddyn.h:
-
-/usr/include/glib-2.0/gio/gmenu.h:
-
-/usr/include/KHR/khrplatform.h:
-
-third_party/SDL/include/SDL2/SDL_audio.h:
-
-/usr/include/glib-2.0/gio/gmemoryinputstream.h:
-
-/usr/include/glib-2.0/gio/gpollableoutputstream.h:
-
-/usr/include/ibus-1.0/ibusproplist.h:
-
-../third_party/SDL/src/core/linux/SDL_ibus.c:
-
-../third_party/SDL/src/SDL_list.c:
-
-/usr/include/glib-2.0/glib/glist.h:
-
-/usr/include/ibus-1.0/ibus.h:
-
-../third_party/SDL/src/video/SDL_blit_auto.h:
-
-/usr/include/glib-2.0/glib.h:
-
-/usr/include/glib-2.0/gio/gsimpleactiongroup.h:
-
-../third_party/SDL/src/video/x11/SDL_x11clipboard.h:
-
-/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:
-
-/usr/include/alsa/hwdep.h:
-
-/usr/include/glib-2.0/glib/gtestutils.h:
-
-/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
-
-/usr/include/ibus-1.0/ibusengine.h:
-
-/usr/include/glib-2.0/glib/gthread.h:
-
-/usr/include/glib-2.0/glib/gatomic.h:
-
-/usr/include/libdrm/drm.h:
-
-/usr/include/glib-2.0/glib/gerror.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h:
-
-/usr/include/glib-2.0/glib/gutils.h:
-
-/usr/include/glib-2.0/gio/gdbusinterface.h:
-
-/usr/include/glib-2.0/gio/gnetworkaddress.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-../third_party/SDL/src/core/linux/SDL_threadprio.c:
-
-../third_party/SDL/src/events/SDL_scancode_tables.c:
-
-/usr/include/glib-2.0/glib/gbacktrace.h:
-
-/usr/include/glib-2.0/glib/gbitlock.h:
-
-../third_party/SDL/src/video/wayland/SDL_waylandclipboard.c:
-
-/usr/include/glib-2.0/gio/gproxy.h:
-
-/usr/include/glib-2.0/glib/gbookmarkfile.h:
-
-/usr/include/glib-2.0/glib/gbytes.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_ps4.c:
-
-/usr/include/glib-2.0/glib/gchecksum.h:
-
-/usr/include/glib-2.0/glib/gdataset.h:
-
-/usr/include/pulse/cdecl.h:
-
-/usr/include/glib-2.0/glib/gdate.h:
-
-../third_party/SDL/src/video/SDL_surface.c:
-
-../third_party/SDL/src/audio/SDL_audio_c.h:
-
-/usr/include/dirent.h:
-
-/usr/include/glib-2.0/glib/gconvert.h:
-
-/usr/include/glib-2.0/glib/gregex.h:
-
-/usr/include/glib-2.0/glib/genviron.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h:
-
-/usr/include/glib-2.0/glib/gmappedfile.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
-
-/usr/include/glib-2.0/gobject/glib-types.h:
-
-/usr/include/glib-2.0/glib/gmem.h:
-
-/usr/include/x86_64-linux-gnu/bits/dirent_ext.h:
-
-../third_party/SDL/src/events/SDL_keyboard.c:
-
-/usr/include/glib-2.0/glib/giochannel.h:
-
-/usr/include/sched.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
-
-/usr/include/glib-2.0/glib/gmain.h:
-
-/usr/include/unistd.h:
-
-../third_party/SDL/src/events/imKStoUCS.c:
-
-/usr/include/glib-2.0/glib/gpoll.h:
-
-../third_party/SDL/src/render/ps2/SDL_render_ps2.c:
-
-third_party/SDL/include/SDL2/SDL_rect.h:
-
-/usr/include/glib-2.0/glib/gthreadpool.h:
-
-../third_party/SDL/src/SDL_utils_c.h:
-
-/usr/include/glib-2.0/glib/gmarkup.h:
-
-/usr/include/glib-2.0/glib/gvariant.h:
-
-/usr/include/glib-2.0/gio/gfilenamecompleter.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
-
-/usr/include/glib-2.0/glib/gvarianttype.h:
-
-/usr/include/glib-2.0/glib/gprimes.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/glib-2.0/glib/grand.h:
-
-../third_party/SDL/src/SDL_hints.c:
-
-/usr/include/glib-2.0/glib/grcbox.h:
-
-/usr/include/glib-2.0/glib/grefcount.h:
-
-/usr/include/glib-2.0/glib/grefstring.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h:
-
-/usr/include/glib-2.0/glib/gshell.h:
-
-/usr/include/glib-2.0/glib/gslice.h:
-
-/usr/include/pulse/timeval.h:
-
-/usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h:
-
-/usr/include/glib-2.0/glib/gstrfuncs.h:
-
-/usr/include/pthread.h:
-
-/usr/include/glib-2.0/glib/gscanner.h:
-
-/usr/include/glib-2.0/glib/gstringchunk.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h:
-
-/usr/include/x86_64-linux-gnu/bits/inotify.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
-
-third_party/SDL/include/SDL2/SDL_keyboard.h:
-
-/usr/include/glib-2.0/glib/gtimer.h:
-
-/usr/include/glib-2.0/gobject/gvaluearray.h:
-
-/usr/include/glib-2.0/glib/gtrashstack.h:
-
-/usr/include/ibus-1.0/ibusenginesimple.h:
-
-/usr/include/glib-2.0/glib/gtree.h:
-
-/usr/include/glib-2.0/glib/gversionmacros.h:
-
-/usr/include/glib-2.0/glib/gversion.h:
-
-third_party/SDL/include/SDL2/SDL_pixels.h:
-
-third_party/SDL/include/SDL2/SDL_egl.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/glib-2.0/glib/deprecated/gcache.h:
-
-/usr/include/glib-2.0/glib/deprecated/gcompletion.h:
-
-../third_party/SDL/src/video/SDL_shape.c:
-
-../third_party/SDL/src/core/linux/SDL_evdev.c:
-
-/usr/include/glib-2.0/glib/glib-autocleanups.h:
-
-/usr/include/ibus-1.0/ibusobject.h:
-
-/usr/include/glib-2.0/gio/gtcpwrapperconnection.h:
-
-/usr/include/glib-2.0/glib-object.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h:
-
-/usr/include/glib-2.0/gobject/gbinding.h:
-
-/usr/include/pulse/pulseaudio.h:
-
-third_party/SDL/include/SDL2/SDL_hints.h:
-
-/usr/include/glib-2.0/gobject/gtype.h:
-
-/usr/include/glib-2.0/glib/gfileutils.h:
-
-/usr/include/glib-2.0/gobject/gparam.h:
-
-/usr/include/gbm.h:
-
-/usr/include/glib-2.0/gobject/gclosure.h:
-
-/usr/include/glib-2.0/gobject/gsignal.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/glib-2.0/gobject/gboxed.h:
-
-/usr/include/glib-2.0/gobject/gtypemodule.h:
-
-/usr/include/glib-2.0/gobject/gmarshal.h:
-
-/usr/include/glib-2.0/gobject/gtypeplugin.h:
-
-/usr/include/glib-2.0/gobject/gobject-autocleanups.h:
-
-/usr/include/glib-2.0/gio/gcontenttype.h:
-
-/usr/include/ibus-1.0/ibustypes.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h:
-
-/usr/include/ibus-1.0/ibusattrlist.h:
-
-/usr/include/dbus-1.0/dbus/dbus-memory.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapijoystick.c:
-
-/usr/include/ibus-1.0/ibustext.h:
-
-/usr/include/glib-2.0/gio/gioenums.h:
-
-/usr/include/glib-2.0/gio/gaction.h:
-
-/usr/include/glib-2.0/glib/gtypes.h:
-
-../third_party/SDL/src/joystick/SDL_gamecontroller.c:
-
-../third_party/SDL/src/video/x11/SDL_x11window.h:
-
-/usr/include/glib-2.0/gio/gappinfo.h:
-
-../third_party/SDL/src/audio/dsp/SDL_dspaudio.h:
-
-/usr/include/glib-2.0/gio/gapplication.h:
-
-/usr/include/glib-2.0/gio/gdrive.h:
-
-../third_party/SDL/include/SDL_stdinc.h:
-
-/usr/include/glib-2.0/gio/gapplicationcommandline.h:
-
-/usr/include/glib-2.0/gobject/gsourceclosure.h:
-
-/usr/include/glib-2.0/gio/gasyncinitable.h:
-
-/usr/include/glib-2.0/gio/ginitable.h:
-
-../third_party/SDL/src/stdlib/SDL_string.c:
-
-../third_party/SDL/src/joystick/steam/SDL_steamcontroller.h:
-
-/usr/include/glib-2.0/gio/goutputstream.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h:
-
-/usr/include/glib-2.0/gio/gconverterinputstream.h:
-
-/usr/include/GLES/glplatform.h:
-
-/usr/include/glib-2.0/gio/gcredentials.h:
-
-../third_party/SDL/src/locale/unix/SDL_syslocale.c:
-
-/usr/include/glib-2.0/gio/gtlscertificate.h:
-
-/usr/include/glib-2.0/gio/gdatagrambased.h:
-
-/usr/include/ibus-1.0/ibuscomponent.h:
-
-/usr/include/wchar.h:
-
-/usr/include/glib-2.0/gio/gdatainputstream.h:
-
-/usr/include/glib-2.0/gio/gdbusactiongroup.h:
-
-/usr/include/ibus-1.0/ibusutil.h:
-
-../third_party/SDL/src/libm/s_cos.c:
-
-/usr/include/pulse/stream.h:
-
-/usr/include/glib-2.0/gio/gdbusaddress.h:
-
-/usr/include/glib-2.0/gio/gdbusconnection.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h:
-
-/usr/include/glib-2.0/gio/gdbuserror.h:
-
-../third_party/SDL/src/render/SDL_yuv_sw.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h:
-
-/usr/include/glib-2.0/gio/gdbusintrospection.h:
-
-/usr/include/glib-2.0/gio/gdbusmenumodel.h:
-
-../third_party/SDL/src/video/x11/SDL_x11xinput2.c:
-
-/usr/include/glib-2.0/gio/gdbusnameowning.h:
-
-/usr/include/glib-2.0/gio/gpollableinputstream.h:
-
-/usr/include/glib-2.0/gio/gdbusmessage.h:
-
-../third_party/SDL/src/stdlib/SDL_vacopy.h:
-
-/usr/include/glib-2.0/gio/gdbusmethodinvocation.h:
-
-/usr/include/glib-2.0/gio/gdbusnamewatching.h:
-
-/usr/include/glib-2.0/gio/gdbusobjectmanager.h:
-
-/usr/include/ibus-1.0/ibusservice.h:
-
-/usr/include/glib-2.0/gio/gfileiostream.h:
-
-/usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h:
-
-/usr/include/glib-2.0/gio/gdbusobjectproxy.h:
-
-/usr/include/glib-2.0/gio/gdbusproxy.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_xbox360.c:
-
-/usr/include/alsa/seq_event.h:
-
-/usr/include/dbus-1.0/dbus/dbus-protocol.h:
-
-/usr/include/glib-2.0/gio/gdbusutils.h:
-
-/usr/include/glib-2.0/gio/gdebugcontrollerdbus.h:
-
-/usr/include/glib-2.0/gio/gemblemedicon.h:
-
-/usr/include/glib-2.0/gio/gfile.h:
-
-../third_party/SDL/src/video/SDL_blit_A.c:
-
-/usr/include/glib-2.0/gio/gfileenumerator.h:
-
-/usr/include/glib-2.0/gio/gfileinfo.h:
-
-/usr/include/glib-2.0/gio/gfileinputstream.h:
-
-../third_party/SDL/src/stdlib/SDL_strtokr.c:
-
-/usr/include/glib-2.0/gio/giostream.h:
-
-../third_party/SDL/src/render/software/SDL_draw.h:
-
-../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h:
-
-/usr/include/glib-2.0/gio/gsocketaddress.h:
-
-/usr/include/glib-2.0/glib/ghmac.h:
-
-/usr/include/glib-2.0/gio/gioenumtypes.h:
-
-../third_party/SDL/src/core/linux/SDL_ibus.h:
-
-/usr/include/glib-2.0/gio/glistmodel.h:
-
-/usr/include/glib-2.0/gio/gloadableicon.h:
-
-/usr/include/glib-2.0/gio/gmemorymonitor.h:
-
-/usr/include/xkbcommon/xkbcommon-compat.h:
-
-/usr/include/ibus-1.0/ibusunicode.h:
-
-/usr/include/glib-2.0/gio/gmenumodel.h:
-
-/usr/include/glib-2.0/gio/gmenuexporter.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/glib-2.0/gio/gsubprocess.h:
-
-../third_party/SDL/src/render/SDL_d3dmath.c:
-
-/usr/include/glib-2.0/gio/gmount.h:
-
-/usr/include/glib-2.0/gio/gmountoperation.h:
-
-../third_party/SDL/src/video/SDL_blit.c:
-
-../third_party/SDL/src/video/SDL_shape_internals.h:
-
-/usr/include/glib-2.0/gio/gnativesocketaddress.h:
-
-/usr/include/glib-2.0/gio/gnotification.h:
-
-/usr/include/pulse/mainloop.h:
-
-../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h:
-
-/usr/include/glib-2.0/gio/gpollableutils.h:
-
-/usr/include/pulse/sample.h:
-
-/usr/include/glib-2.0/gio/gpowerprofilemonitor.h:
-
-/usr/include/glib-2.0/gio/gpropertyaction.h:
-
-/usr/include/glib-2.0/gio/gproxyaddress.h:
-
-/usr/include/ibus-1.0/ibusproperty.h:
-
-../third_party/SDL/src/render/software/SDL_rotate.c:
-
-/usr/include/x86_64-linux-gnu/sys/resource.h:
-
-/usr/include/glib-2.0/gio/gremoteactiongroup.h:
-
-/usr/include/GLES/gl.h:
-
-/usr/include/glib-2.0/gio/gsimpleaction.h:
-
-/usr/include/glib-2.0/gio/gsimpleasyncresult.h:
-
-/usr/include/glib-2.0/gio/gsimpleiostream.h:
-
-/usr/include/glib-2.0/gio/gsimplepermission.h:
+../third_party/SDL/src/thread/pthread/SDL_sysmutex.c:
 
 ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h:
 
-/usr/include/dlfcn.h:
+../third_party/SDL/src/locale/SDL_locale.c:
 
-/usr/include/glib-2.0/gio/gsimpleproxyresolver.h:
+third_party/SDL/include/SDL2/SDL_vulkan.h:
 
-/usr/include/dbus-1.0/dbus/dbus-macros.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h:
 
-/usr/include/glib-2.0/gio/gsocket.h:
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/usr/include/x86_64-linux-gnu/asm/ioctls.h:
+../third_party/SDL/src/haptic/SDL_haptic_c.h:
 
-/usr/include/glib-2.0/gio/gsocketconnectable.h:
+../third_party/SDL/src/events/SDL_clipboardevents_c.h:
 
-/usr/include/glib-2.0/gio/gsocketlistener.h:
+../third_party/SDL/src/events/SDL_displayevents_c.h:
 
-/usr/include/pulse/thread-mainloop.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/usr/include/glib-2.0/gio/gsubprocesslauncher.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h:
 
-/usr/include/glib-2.0/gio/gtask.h:
+../third_party/SDL/src/events/SDL_dropevents_c.h:
 
-/usr/include/glib-2.0/gio/gactionmap.h:
+/usr/include/x86_64-linux-gnu/sys/resource.h:
 
-/usr/include/glib-2.0/gio/gtcpconnection.h:
+../third_party/SDL/src/events/SDL_gesture_c.h:
 
-/usr/include/limits.h:
+../third_party/SDL/src/events/SDL_keyboard_c.h:
 
-/usr/include/glib-2.0/gio/gthemedicon.h:
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
-../third_party/SDL/src/video/wayland/SDL_waylandvulkan.c:
+../third_party/SDL/src/events/SDL_touch_c.h:
 
-/usr/include/glib-2.0/gio/gtlsconnection.h:
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-../third_party/SDL/src/video/SDL_blit_0.c:
+../third_party/SDL/src/audio/SDL_audio_resampler_filter.h:
 
-/usr/include/x86_64-linux-gnu/bits/dl_find_object.h:
+../third_party/SDL/include/SDL_touch.h:
 
-/usr/include/glib-2.0/gio/gtlsdatabase.h:
+../third_party/SDL/src/sensor/SDL_sensor_c.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+../third_party/SDL/src/timer/SDL_timer_c.h:
 
-/usr/include/glib-2.0/gio/gtlsinteraction.h:
+../third_party/SDL/src/SDL_assert.c:
 
-/usr/include/glib-2.0/glib/gspawn.h:
+../third_party/SDL/src/events/imKStoUCS.c:
 
-/usr/include/GLES2/gl2ext.h:
+../third_party/SDL/src/SDL_dataqueue.c:
 
-/usr/include/glib-2.0/gio/gio-autocleanups.h:
+../third_party/SDL/src/SDL_error_c.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h:
+../third_party/SDL/src/SDL_hints.c:
 
-/usr/include/ibus-1.0/ibuslookuptable.h:
+../third_party/SDL/src/SDL_hints_c.h:
 
-/usr/include/ibus-1.0/ibuskeysyms.h:
+../third_party/SDL/src/video/SDL_pixels_c.h:
 
-/usr/include/ibus-1.0/ibuserror.h:
+../third_party/SDL/src/SDL_log.c:
 
-/usr/include/ibus-1.0/ibusbus.h:
+../third_party/SDL/src/video/x11/SDL_x11opengles.c:
 
-/usr/include/glib-2.0/gio/gdbusobject.h:
+/usr/include/xcb/xproto.h:
 
-/usr/include/glib-2.0/gio/giotypes.h:
+../third_party/SDL/src/stdlib/SDL_vacopy.h:
 
-/usr/include/ibus-1.0/ibusinputcontext.h:
+/usr/include/X11/keysymdef.h:
+
+../third_party/SDL/src/atomic/SDL_atomic.c:
+
+/usr/include/x86_64-linux-gnu/bits/shmlba.h:
+
+../third_party/SDL/src/atomic/SDL_spinlock.c:
+
+../third_party/SDL/src/audio/SDL_audio.c:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+third_party/SDL/include/SDL2/SDL_cpuinfo.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/usr/include/EGL/egl.h:
+
+../third_party/SDL/src/render/software/SDL_blendline.c:
+
+../third_party/SDL/src/joystick/steam/SDL_steamcontroller.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+../third_party/SDL/src/audio/SDL_audio_c.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h:
+
+../third_party/SDL/src/audio/SDL_sysaudio.h:
+
+/usr/include/x86_64-linux-gnu/bits/resource.h:
+
+../third_party/SDL/src/audio/SDL_audiocvt.c:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+../third_party/SDL/src/audio/SDL_audio_channel_converters.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/signal.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h:
+
+/usr/include/linux/types.h:
+
+/usr/include/X11/extensions/Xrandr.h:
+
+../third_party/SDL/src/timer/SDL_timer.c:
+
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
+../third_party/SDL/src/libm/e_sqrt.c:
+
+/usr/include/asm-generic/int-ll64.h:
 
 ../third_party/SDL/src/haptic/linux/SDL_syshaptic.c:
 
-third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-protocol.c:
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
 
-/usr/include/X11/extensions/Xfixes.h:
-
-/usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h:
-
-/usr/include/ibus-1.0/ibusxml.h:
-
-/usr/include/ibus-1.0/ibusobservedpath.h:
+../third_party/SDL/src/core/linux/SDL_evdev.h:
 
 /usr/include/x86_64-linux-gnu/sys/soundcard.h:
 
-/usr/include/ibus-1.0/ibuskeys.h:
+/usr/include/linux/posix_types.h:
 
-/usr/include/X11/Xatom.h:
+../third_party/SDL/src/video/SDL_blit_slow.h:
 
-/usr/include/glib-2.0/gio/gtlspassword.h:
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-/usr/include/ibus-1.0/ibushotkey.h:
+../third_party/SDL/src/libm/k_tan.c:
 
-/usr/include/ibus-1.0/ibusconfigservice.h:
+/usr/include/linux/stddef.h:
 
-../third_party/SDL/src/libm/s_copysign.c:
+../third_party/SDL/src/stdlib/SDL_crc32.c:
 
-../third_party/SDL/src/SDL_error.c:
+../third_party/SDL/src/render/ps2/SDL_render_ps2.c:
 
-/usr/include/ibus-1.0/ibuspanelservice.h:
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
-../third_party/SDL/src/render/opengles2/SDL_render_gles2.c:
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
 
-/usr/include/ibus-1.0/ibusregistry.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
 
-../third_party/SDL/src/video/SDL_blit.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h:
+
+../third_party/SDL/src/audio/SDL_audiodev_c.h:
+
+third_party/SDL/include/SDL2/SDL_metal.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
+../third_party/SDL/src/audio/SDL_audiotypecvt.c:
 
 ../third_party/SDL/src/audio/SDL_mixer.c:
 
-../third_party/SDL/src/sensor/SDL_sensor.c:
+../third_party/SDL/src/audio/SDL_wave.c:
 
-/usr/include/ibus-1.0/ibuskeysyms-compat.h:
+third_party/SDL/include/SDL2/SDL_quit.h:
 
-../third_party/SDL/src/hidapi/SDL_hidapi.c:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h:
 
-/usr/include/x86_64-linux-gnu/sys/inotify.h:
+../third_party/SDL/src/joystick/controller_list.h:
 
-/usr/include/linux/input.h:
+/usr/include/limits.h:
 
-../third_party/SDL/src/core/linux/SDL_ime.c:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
-../third_party/SDL/src/libm/e_fmod.c:
-
-../third_party/SDL/src/core/linux/SDL_sandbox.c:
-
-../third_party/SDL/src/core/linux/SDL_udev.c:
-
-../third_party/SDL/src/core/unix/SDL_poll.c:
-
-../third_party/SDL/src/render/SDL_yuv_sw_c.h:
-
-/usr/include/glib-2.0/gio/gmemoryoutputstream.h:
-
-../third_party/SDL/src/cpuinfo/SDL_cpuinfo.c:
-
-/usr/include/x86_64-linux-gnu/bits/syscall.h:
-
-/usr/include/x86_64-linux-gnu/bits/hwcap.h:
-
-../third_party/SDL/src/thread/pthread/SDL_sysmutex_c.h:
-
-../third_party/SDL/src/dynapi/SDL_dynapi_procs.h:
-
-/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
-
-../third_party/SDL/src/events/SDL_dropevents.c:
-
-../third_party/SDL/src/events/SDL_events.c:
-
-/usr/include/asm-generic/types.h:
-
-../third_party/SDL/src/events/scancodes_ascii.h:
-
-../third_party/SDL/src/events/SDL_keysym_to_scancode.c:
-
-/usr/include/endian.h:
-
-../third_party/SDL/src/events/SDL_mouse.c:
-
-/usr/include/glib-2.0/gio/giomodule.h:
-
-../third_party/SDL/src/libm/e_atan2.c:
-
-../third_party/SDL/src/filesystem/unix/SDL_sysfilesystem.c:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/mm3dnow.h:
-
-../third_party/SDL/src/haptic/SDL_haptic.c:
-
-/usr/include/glib-2.0/gio/gdbusserver.h:
-
-../third_party/SDL/src/joystick/SDL_sysjoystick.h:
-
-../third_party/SDL/src/hidapi/SDL_hidapi_c.h:
-
-../third_party/SDL/src/render/opengl/SDL_render_gl.c:
-
-/usr/include/glib-2.0/gio/gresource.h:
-
-../third_party/SDL/src/hidapi/linux/hid.c:
-
-/usr/include/linux/param.h:
-
-../third_party/SDL/src/joystick/linux/SDL_sysjoystick.c:
-
-/usr/include/locale.h:
-
-/usr/include/x86_64-linux-gnu/sys/utsname.h:
-
-/usr/include/x86_64-linux-gnu/bits/utsname.h:
-
-/usr/include/linux/hid.h:
-
-/usr/include/linux/version.h:
-
-../third_party/SDL/src/joystick/controller_type.h:
-
-../third_party/SDL/src/joystick/controller_type.c:
-
-../third_party/SDL/src/video/wayland/SDL_waylandkeyboard.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_luna.c:
-
-../third_party/SDL/src/video/SDL_blit_copy.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_ps3.c:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_ps5.c:
-
-/usr/include/alsa/seqmid.h:
-
-/usr/include/glib-2.0/glib/gnode.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_shield.c:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_stadia.c:
-
-/usr/include/glib-2.0/gobject/gbindinggroup.h:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_steam.c:
-
-../third_party/SDL/src/joystick/hidapi/steam/controller_constants.h:
-
-../third_party/SDL/src/joystick/hidapi/steam/controller_structs.h:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 ../third_party/SDL/src/joystick/hidapi/SDL_hidapi_xbox360w.c:
 
 ../third_party/SDL/src/render/direct3d11/SDL_render_d3d11.c:
 
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/dirent_ext.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_xbox360.c:
+
+../third_party/SDL/src/dynapi/SDL_dynapi.c:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+../third_party/SDL/src/joystick/controller_type.h:
+
+../third_party/SDL/src/audio/disk/SDL_diskaudio.c:
+
+/usr/include/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
+
+../third_party/SDL/src/filesystem/unix/SDL_sysfilesystem.c:
+
+../third_party/SDL/src/video/SDL_clipboard.c:
+
+/usr/include/linux/errno.h:
+
+/usr/include/X11/extensions/render.h:
+
+/usr/include/linux/input-event-codes.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/x86_64-linux-gnu/sys/wait.h:
+
+../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.c:
+
+/usr/include/poll.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+../third_party/SDL/src/render/software/SDL_drawline.c:
+
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
+
+/usr/include/x86_64-linux-gnu/sys/syscall.h:
+
+/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/ioctls.h:
+
+../third_party/SDL/src/events/scancodes_ascii.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
+
+/usr/include/x86_64-linux-gnu/asm/ioctl.h:
+
+../third_party/SDL/src/joystick/SDL_gamecontrollerdb.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+../third_party/SDL/src/render/direct3d12/SDL_render_d3d12.c:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h:
+
+../third_party/SDL/src/events/scancodes_linux.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+../third_party/SDL/src/joystick/linux/SDL_sysjoystick_c.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h:
+
+/usr/include/X11/extensions/XKBstr.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/sys/ioctl.h:
+
+../third_party/SDL/src/video/SDL_blit_auto.c:
+
+/usr/include/x86_64-linux-gnu/asm/ioctls.h:
+
+/usr/include/asm-generic/ioctls.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h:
+
+../third_party/SDL/src/power/SDL_syspower.h:
+
+/usr/include/linux/ioctl.h:
+
+../third_party/SDL/src/libm/e_rem_pio2.c:
+
+/usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
+
+../third_party/SDL/src/core/linux/SDL_sandbox.h:
+
+/usr/include/linux/soundcard.h:
+
+../third_party/SDL/src/audio/dsp/SDL_dspaudio.h:
+
+../third_party/SDL/include/begin_code.h:
+
+../third_party/SDL/src/sensor/SDL_sensor.c:
+
+../third_party/SDL/src/video/SDL_blit.h:
+
+../third_party/SDL/src/audio/dummy/SDL_dummyaudio.c:
+
+../third_party/SDL/src/core/linux/SDL_evdev_kbd.h:
+
+../third_party/SDL/include/SDL_scancode.h:
+
+../third_party/SDL/src/core/linux/SDL_evdev_capabilities.h:
+
+../third_party/SDL/src/video/x11/SDL_x11xfixes.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h:
+
+../third_party/SDL/src/core/linux/SDL_evdev_kbd.c:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/linux/kd.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h:
+
+../third_party/SDL/src/render/SDL_sysrender.h:
+
+../third_party/SDL/src/joystick/SDL_joystick_c.h:
+
+/usr/include/linux/keyboard.h:
+
+../third_party/SDL/include/close_code.h:
+
+/usr/include/linux/wait.h:
+
+/usr/include/linux/vt.h:
+
+/usr/include/x86_64-linux-gnu/bits/dl_find_object.h:
+
+../third_party/SDL/src/core/linux/SDL_evdev_kbd_default_accents.h:
+
+../third_party/SDL/src/core/linux/SDL_evdev_kbd_default_keymap.h:
+
+../third_party/SDL/src/core/linux/SDL_sandbox.c:
+
+../third_party/SDL/src/core/linux/SDL_threadprio.c:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+../third_party/SDL/src/core/unix/SDL_poll.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio-ext.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/x86_64-linux-gnu/sys/poll.h:
+
+../third_party/SDL/src/cpuinfo/SDL_cpuinfo.c:
+
+../third_party/SDL/src/video/x11/SDL_x11framebuffer.h:
+
+/usr/include/x86_64-linux-gnu/sys/auxv.h:
+
+third_party/SDL/include/SDL2/SDL_syswm.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h:
+
+../third_party/SDL/src/events/SDL_touch.c:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/X11/Xatom.h:
+
+/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
+
 ../third_party/SDL/src/events/SDL_clipboardevents.c:
 
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_xboxone.c:
+../third_party/SDL/src/libm/e_fmod.c:
 
-../third_party/SDL/src/audio/disk/SDL_diskaudio.h:
+../third_party/SDL/src/events/SDL_events.c:
+
+../third_party/SDL/src/libm/e_atan2.c:
+
+../third_party/SDL/src/events/SDL_mouse.c:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h:
+
+../third_party/SDL/src/events/scancodes_xfree86.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h:
+
+../third_party/SDL/src/file/SDL_rwops.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
+
+../third_party/SDL/src/haptic/SDL_syshaptic.h:
+
+../third_party/SDL/src/hidapi/SDL_hidapi.c:
+
+/usr/include/x86_64-linux-gnu/sys/inotify.h:
+
+/usr/include/x86_64-linux-gnu/bits/inotify.h:
+
+../third_party/SDL/src/events/SDL_windowevents_c.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapijoystick_c.h:
+
+../third_party/SDL/src/thread/pthread/SDL_syssem.c:
+
+../third_party/SDL/src/SDL_list.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_combined.c:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_ps5.c:
+
+../third_party/SDL/src/video/offscreen/SDL_offscreenopengles.c:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_shield.c:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_stadia.c:
+
+../third_party/SDL/src/joystick/hidapi/steam/controller_constants.h:
+
+../third_party/SDL/src/joystick/hidapi/steam/controller_structs.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_switch.c:
+
+third_party/SDL/include/SDL2/SDL_opengl.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h:
+
+../third_party/SDL/src/joystick/hidapi/SDL_hidapi_wii.c:
+
+../third_party/SDL/src/joystick/linux/SDL_sysjoystick.c:
+
+/usr/include/dirent.h:
+
+../third_party/SDL/src/libm/k_rem_pio2.c:
+
+/usr/include/x86_64-linux-gnu/bits/dirent.h:
 
 /usr/include/linux/joystick.h:
 
+../third_party/SDL/src/libm/s_cos.c:
+
 ../third_party/SDL/src/joystick/steam/SDL_steamcontroller.c:
-
-/usr/include/elf.h:
-
-../third_party/SDL/src/joystick/virtual/SDL_virtualjoystick.c:
 
 ../third_party/SDL/src/libm/math_libm.h:
 
@@ -39873,164 +30053,30 @@ third_party/SDL/wayland-generated-protocols/idle-inhibit-unstable-v1-protocol.c:
 
 ../third_party/SDL/src/libm/e_pow.c:
 
-/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-../third_party/SDL/src/libm/s_atan.c:
-
-../third_party/SDL/src/libm/s_fabs.c:
-
-../third_party/SDL/src/video/x11/SDL_x11video.c:
+../third_party/SDL/src/libm/s_copysign.c:
 
 ../third_party/SDL/src/libm/s_scalbn.c:
 
 ../third_party/SDL/src/libm/s_sin.c:
 
-/usr/include/glib-2.0/gio/gsocketaddressenumerator.h:
-
-../third_party/SDL/src/libm/s_tan.c:
-
-../third_party/SDL/src/loadso/dlopen/SDL_sysloadso.c:
-
-third_party/SDL/wayland-generated-protocols/primary-selection-unstable-v1-protocol.c:
-
-third_party/SDL/include/SDL2/SDL_main.h:
-
-/usr/include/pulse/xmalloc.h:
-
-../third_party/SDL/src/locale/SDL_locale.c:
-
-/usr/include/X11/extensions/Xrandr.h:
-
-../third_party/SDL/src/render/direct3d12/SDL_shaders_d3d12.c:
-
-../third_party/SDL/src/misc/SDL_url.c:
-
-/usr/include/x86_64-linux-gnu/sys/wait.h:
-
 ../third_party/SDL/src/power/SDL_power.c:
 
-../third_party/SDL/src/audio/dummy/SDL_dummyaudio.h:
+third_party/SDL/include/SDL2/SDL_scancode.h:
 
-../third_party/SDL/src/render/SDL_render.c:
+../third_party/SDL/src/power/linux/SDL_syspower.c:
 
-../third_party/SDL/src/render/software/SDL_render_sw_c.h:
+../third_party/SDL/src/render/software/SDL_blendpoint.c:
 
-/usr/include/linux/soundcard.h:
+/usr/include/x86_64-linux-gnu/sys/time.h:
 
-../third_party/SDL/src/render/direct3d11/SDL_shaders_d3d11.c:
+../third_party/SDL/src/render/SDL_d3dmath.c:
 
-../third_party/SDL/src/video/SDL_pixels_c.h:
+../third_party/SDL/src/render/SDL_yuv_sw.c:
 
 ../third_party/SDL/src/render/direct3d/SDL_shaders_d3d.c:
 
-../third_party/SDL/src/render/opengl/SDL_shaders_gl.h:
+../third_party/SDL/src/render/software/SDL_render_sw_c.h:
 
-../third_party/SDL/src/render/opengl/SDL_glfuncs.h:
-
-third_party/SDL/include/SDL2/SDL_messagebox.h:
-
-../third_party/SDL/src/render/opengl/SDL_shaders_gl.c:
-
-../third_party/SDL/src/render/opengles/SDL_render_gles.c:
-
-/usr/include/dbus-1.0/dbus/dbus-types.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
-
-/usr/include/GLES/glext.h:
-
-../third_party/SDL/src/render/opengles/SDL_glesfuncs.h:
-
-third_party/SDL/include/SDL2/SDL_opengles2.h:
-
-/usr/include/GLES2/gl2.h:
-
-../third_party/SDL/src/render/opengles2/SDL_shaders_gles2.h:
-
-../third_party/SDL/src/render/psp/SDL_render_psp.c:
-
-../third_party/SDL/src/render/software/SDL_blendpoint.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h:
-
-../third_party/SDL/src/render/software/SDL_drawline.h:
-
-../third_party/SDL/src/render/software/SDL_drawpoint.h:
-
-../third_party/SDL/src/render/software/SDL_drawpoint.c:
-
-../third_party/SDL/src/render/software/SDL_render_sw.c:
-
-../third_party/SDL/src/render/software/SDL_rotate.h:
-
-../third_party/SDL/src/render/vitagxm/SDL_render_vita_gxm.c:
-
-../third_party/SDL/src/render/vitagxm/SDL_render_vita_gxm_memory.c:
-
-../third_party/SDL/src/render/vitagxm/SDL_render_vita_gxm_tools.c:
-
-../third_party/SDL/src/sensor/SDL_syssensor.h:
-
-../third_party/SDL/src/sensor/dummy/SDL_dummysensor.c:
-
-/usr/include/glib-2.0/gio/gfileoutputstream.h:
-
-../third_party/SDL/src/stdlib/SDL_crc16.c:
-
-/usr/include/glib-2.0/gobject/gparamspecs.h:
-
-../third_party/SDL/src/stdlib/SDL_getenv.c:
-
-../third_party/SDL/src/core/linux/SDL_evdev_kbd.h:
-
-../third_party/SDL/src/stdlib/SDL_iconv.c:
-
-../third_party/SDL/src/stdlib/SDL_malloc.c:
-
-../third_party/SDL/src/render/software/SDL_blendfillrect.h:
-
-/usr/include/linux/hidraw.h:
-
-../third_party/SDL/src/stdlib/SDL_qsort.c:
-
-../third_party/SDL/src/thread/SDL_thread.c:
-
-/usr/include/semaphore.h:
-
-/usr/include/glib-2.0/gio/gproxyaddressenumerator.h:
-
-../third_party/SDL/src/thread/pthread/SDL_systhread.c:
-
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
-
-../third_party/SDL/src/timer/unix/SDL_systimer.c:
-
-../third_party/SDL/src/video/SDL_RLEaccel_c.h:
-
-/usr/include/glib-2.0/gio/gemblem.h:
-
-../third_party/SDL/src/video/SDL_blit_copy.c:
-
-../third_party/SDL/src/video/SDL_bmp.c:
-
-../third_party/SDL/src/joystick/hidapi/SDL_hidapi_gamecube.c:
-
-../third_party/SDL/src/video/SDL_egl.c:
-
-../third_party/SDL/src/video/SDL_egl_c.h:
-
-/usr/include/EGL/eglext.h:
-
-../third_party/SDL/src/video/SDL_pixels.c:
-
-../third_party/SDL/src/video/SDL_rect_c.h:
-
-../third_party/SDL/src/video/SDL_stretch.c:
-
-../third_party/SDL/src/video/SDL_video.c:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-../third_party/SDL/src/libm/e_rem_pio2.c:
-
-../third_party/SDL/src/video/x11/SDL_x11messagebox.h:
+../third_party/SDL/src/render/direct3d11/SDL_shaders_d3d11.c:

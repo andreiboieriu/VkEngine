@@ -14,6 +14,7 @@ add_executable (engine
   vk_engine.cpp
   vk_loader.h
   vk_loader.cpp
+  vk_enum_string_helper.h
   camera.cpp
   camera.h
   deletion_queue.h

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/unclegoga/Development/VkEngine/third_party/SDL/src/main/dummy/SDL_dummy_main.c" "third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o" "gcc" "third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o.d"
+  "/home/gooby/Development/VkEngine/third_party/SDL/src/main/dummy/SDL_dummy_main.c" "third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o" "gcc" "third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o.d"
   )
 
 # Targets to which this target links.

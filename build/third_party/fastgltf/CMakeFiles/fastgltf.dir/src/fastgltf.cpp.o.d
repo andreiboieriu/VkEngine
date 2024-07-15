@@ -1,5 +1,5 @@
 third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/src/fastgltf.cpp \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/src/fastgltf.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/compare \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/initializer_list \
@@ -236,7 +236,7 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unique_lock.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.h \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cassert \
   /usr/include/assert.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstddef \
@@ -287,8 +287,8 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/algorithm \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_algorithm_defs.h \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/parser.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/parser.hpp \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/filesystem \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_fwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_path.h \
@@ -297,11 +297,11 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_ops.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/optional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/variant \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/memory_resource \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uses_allocator_args.h \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/base64.hpp \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/base64.hpp \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/nmmintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \

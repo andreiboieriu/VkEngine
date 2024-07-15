@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unclegoga/Development/VkEngine
+CMAKE_SOURCE_DIR = /home/gooby/Development/VkEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unclegoga/Development/VkEngine/build
+CMAKE_BINARY_DIR = /home/gooby/Development/VkEngine/build
 
 # Include any dependencies generated for this target.
 include third_party/SDL/CMakeFiles/SDL2main.dir/depend.make
@@ -72,16 +72,16 @@ include third_party/SDL/CMakeFiles/SDL2main.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o: third_party/SDL/CMakeFiles/SDL2main.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o: ../third_party/SDL/src/main/dummy/SDL_dummy_main.c
 third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o: third_party/SDL/CMakeFiles/SDL2main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o -MF CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o.d -o CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/main/dummy/SDL_dummy_main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o -MF CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o.d -o CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/main/dummy/SDL_dummy_main.c
 
 third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/main/dummy/SDL_dummy_main.c > CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/main/dummy/SDL_dummy_main.c > CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.i
 
 third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/main/dummy/SDL_dummy_main.c -o CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/main/dummy/SDL_dummy_main.c -o CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.s
 
 # Object files for target SDL2main
 SDL2main_OBJECTS = \
@@ -93,19 +93,19 @@ SDL2main_EXTERNAL_OBJECTS =
 third_party/SDL/libSDL2main.a: third_party/SDL/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o
 third_party/SDL/libSDL2main.a: third_party/SDL/CMakeFiles/SDL2main.dir/build.make
 third_party/SDL/libSDL2main.a: third_party/SDL/CMakeFiles/SDL2main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libSDL2main.a"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/SDL2main.dir/cmake_clean_target.cmake
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDL2main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libSDL2main.a"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/SDL2main.dir/cmake_clean_target.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDL2main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 third_party/SDL/CMakeFiles/SDL2main.dir/build: third_party/SDL/libSDL2main.a
 .PHONY : third_party/SDL/CMakeFiles/SDL2main.dir/build
 
 third_party/SDL/CMakeFiles/SDL2main.dir/clean:
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/SDL2main.dir/cmake_clean.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/SDL2main.dir/cmake_clean.cmake
 .PHONY : third_party/SDL/CMakeFiles/SDL2main.dir/clean
 
 third_party/SDL/CMakeFiles/SDL2main.dir/depend:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unclegoga/Development/VkEngine /home/unclegoga/Development/VkEngine/third_party/SDL /home/unclegoga/Development/VkEngine/build /home/unclegoga/Development/VkEngine/build/third_party/SDL /home/unclegoga/Development/VkEngine/build/third_party/SDL/CMakeFiles/SDL2main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gooby/Development/VkEngine /home/gooby/Development/VkEngine/third_party/SDL /home/gooby/Development/VkEngine/build /home/gooby/Development/VkEngine/build/third_party/SDL /home/gooby/Development/VkEngine/build/third_party/SDL/CMakeFiles/SDL2main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third_party/SDL/CMakeFiles/SDL2main.dir/depend
 

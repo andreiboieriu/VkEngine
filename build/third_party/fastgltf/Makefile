@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unclegoga/Development/VkEngine
+CMAKE_SOURCE_DIR = /home/gooby/Development/VkEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unclegoga/Development/VkEngine/build
+CMAKE_BINARY_DIR = /home/gooby/Development/VkEngine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles /home/unclegoga/Development/VkEngine/build/third_party/fastgltf//CMakeFiles/progress.marks
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles /home/gooby/Development/VkEngine/build/third_party/fastgltf//CMakeFiles/progress.marks
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/clean
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/preinstall
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/preinstall
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ fastgltf_simdjson: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
 
 # fast build rule for target.
 fastgltf_simdjson/fast:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build
 .PHONY : fastgltf_simdjson/fast
 
 # Convenience name for target.
 third_party/fastgltf/CMakeFiles/fastgltf.dir/rule:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/CMakeFiles/fastgltf.dir/rule
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/CMakeFiles/fastgltf.dir/rule
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ fastgltf: third_party/fastgltf/CMakeFiles/fastgltf.dir/rule
 
 # fast build rule for target.
 fastgltf/fast:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/build
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/build
 .PHONY : fastgltf/fast
 
 deps/simdjson/simdjson.o: deps/simdjson/simdjson.cpp.o
@@ -194,7 +194,7 @@ deps/simdjson/simdjson.o: deps/simdjson/simdjson.cpp.o
 
 # target to build an object file
 deps/simdjson/simdjson.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o
 .PHONY : deps/simdjson/simdjson.cpp.o
 
 deps/simdjson/simdjson.i: deps/simdjson/simdjson.cpp.i
@@ -202,7 +202,7 @@ deps/simdjson/simdjson.i: deps/simdjson/simdjson.cpp.i
 
 # target to preprocess a source file
 deps/simdjson/simdjson.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.i
 .PHONY : deps/simdjson/simdjson.cpp.i
 
 deps/simdjson/simdjson.s: deps/simdjson/simdjson.cpp.s
@@ -210,7 +210,7 @@ deps/simdjson/simdjson.s: deps/simdjson/simdjson.cpp.s
 
 # target to generate assembly for a file
 deps/simdjson/simdjson.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.s
 .PHONY : deps/simdjson/simdjson.cpp.s
 
 src/base64.o: src/base64.cpp.o
@@ -218,7 +218,7 @@ src/base64.o: src/base64.cpp.o
 
 # target to build an object file
 src/base64.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o
 .PHONY : src/base64.cpp.o
 
 src/base64.i: src/base64.cpp.i
@@ -226,7 +226,7 @@ src/base64.i: src/base64.cpp.i
 
 # target to preprocess a source file
 src/base64.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.i
 .PHONY : src/base64.cpp.i
 
 src/base64.s: src/base64.cpp.s
@@ -234,7 +234,7 @@ src/base64.s: src/base64.cpp.s
 
 # target to generate assembly for a file
 src/base64.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.s
 .PHONY : src/base64.cpp.s
 
 src/fastgltf.o: src/fastgltf.cpp.o
@@ -242,7 +242,7 @@ src/fastgltf.o: src/fastgltf.cpp.o
 
 # target to build an object file
 src/fastgltf.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o
 .PHONY : src/fastgltf.cpp.o
 
 src/fastgltf.i: src/fastgltf.cpp.i
@@ -250,7 +250,7 @@ src/fastgltf.i: src/fastgltf.cpp.i
 
 # target to preprocess a source file
 src/fastgltf.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.i
 .PHONY : src/fastgltf.cpp.i
 
 src/fastgltf.s: src/fastgltf.cpp.s
@@ -258,7 +258,7 @@ src/fastgltf.s: src/fastgltf.cpp.s
 
 # target to generate assembly for a file
 src/fastgltf.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.s
 .PHONY : src/fastgltf.cpp.s
 
 # Help Target
@@ -295,6 +295,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

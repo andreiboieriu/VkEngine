@@ -1,14 +1,14 @@
 third_party/SDL/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o: \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/SDL_hidapi.c \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/../dynapi/SDL_dynapi.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/../dynapi/SDL_dynapi_overrides.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/hidapi/SDL_hidapi.c \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/hidapi/../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/hidapi/../dynapi/SDL_dynapi.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/hidapi/../dynapi/SDL_dynapi_overrides.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
   /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -81,42 +81,17 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o: \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/SDL_hidapi_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/../core/linux/SDL_udev.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/../core/linux/../../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
-  /usr/include/libudev.h /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/poll.h \
-  /usr/include/x86_64-linux-gnu/sys/poll.h \
-  /usr/include/x86_64-linux-gnu/bits/poll.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/../core/linux/SDL_sandbox.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/hidapi/SDL_hidapi_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/hidapi/../core/linux/SDL_udev.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/hidapi/../core/linux/../../SDL_internal.h \
   /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
@@ -142,35 +117,4 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o: \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/sys/inotify.h \
-  /usr/include/x86_64-linux-gnu/bits/inotify.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/linux/hid.c \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/linux/../../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h \
-  /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
-  /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
-  /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
-  /usr/include/asm-generic/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
-  /usr/include/x86_64-linux-gnu/sys/utsname.h \
-  /usr/include/x86_64-linux-gnu/bits/utsname.h \
-  /usr/include/linux/hidraw.h /usr/include/linux/hid.h \
-  /usr/include/linux/version.h /usr/include/linux/input.h \
-  /usr/include/linux/input-event-codes.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/hidapi/linux/../hidapi/hidapi.h
+  /usr/include/x86_64-linux-gnu/bits/inotify.h

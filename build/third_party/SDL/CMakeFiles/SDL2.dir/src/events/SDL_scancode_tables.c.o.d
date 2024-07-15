@@ -1,14 +1,14 @@
 third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_scancode_tables.c.o: \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/SDL_scancode_tables.c \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/../dynapi/SDL_dynapi.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/../dynapi/SDL_dynapi_overrides.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/SDL_scancode_tables.c \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/../dynapi/SDL_dynapi.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/../dynapi/SDL_dynapi_overrides.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
   /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -81,10 +81,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_scancode_tables.c.o: \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/SDL_scancode_tables_c.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/../../include/SDL_scancode.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/../../include/SDL_stdinc.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/scancodes_darwin.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/scancodes_linux.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/events/scancodes_xfree86.h
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/SDL_scancode_tables_c.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/../../include/SDL_scancode.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/../../include/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/scancodes_darwin.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/scancodes_linux.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/events/scancodes_xfree86.h

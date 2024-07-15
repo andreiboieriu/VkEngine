@@ -1,14 +1,14 @@
 third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.o: \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/render/software/SDL_triangle.c \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/render/software/../../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/render/software/../../dynapi/SDL_dynapi.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/render/software/../../dynapi/SDL_dynapi_overrides.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/render/software/SDL_triangle.c \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/render/software/../../SDL_internal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/render/software/../../dynapi/SDL_dynapi.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/render/software/../../dynapi/SDL_dynapi_overrides.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
   /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -81,18 +81,18 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.o: \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/render/software/SDL_triangle.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/render/software/../../video/SDL_blit.h \
-  /home/unclegoga/Development/VkEngine/third_party/SDL/src/render/software/../../video/../SDL_internal.h \
-  /home/unclegoga/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/render/software/SDL_triangle.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/render/software/../../video/SDL_blit.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/render/software/../../video/../SDL_internal.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/mm3dnow.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h \

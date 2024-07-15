@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unclegoga/Development/VkEngine
+CMAKE_SOURCE_DIR = /home/gooby/Development/VkEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unclegoga/Development/VkEngine/build
+CMAKE_BINARY_DIR = /home/gooby/Development/VkEngine/build
 
 # Include any dependencies generated for this target.
 include third_party/SDL/CMakeFiles/SDL2_test.dir/depend.make
@@ -72,226 +72,226 @@ include third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o: ../third_party/SDL/src/test/SDL_test_assert.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_assert.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_assert.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_assert.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_assert.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_assert.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_assert.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o: ../third_party/SDL/src/test/SDL_test_common.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_common.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_common.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_common.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_common.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_common.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_common.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o: ../third_party/SDL/src/test/SDL_test_compare.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_compare.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_compare.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_compare.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_compare.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_compare.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_compare.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o: ../third_party/SDL/src/test/SDL_test_crc32.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_crc32.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_crc32.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_crc32.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_crc32.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_crc32.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_crc32.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o: ../third_party/SDL/src/test/SDL_test_font.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_font.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_font.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_font.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_font.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_font.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_font.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o: ../third_party/SDL/src/test/SDL_test_fuzzer.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_fuzzer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_fuzzer.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_fuzzer.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_fuzzer.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_fuzzer.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_fuzzer.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o: ../third_party/SDL/src/test/SDL_test_harness.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_harness.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_harness.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_harness.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_harness.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_harness.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_harness.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o: ../third_party/SDL/src/test/SDL_test_imageBlit.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlit.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlit.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlit.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlit.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlit.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o: ../third_party/SDL/src/test/SDL_test_imageBlitBlend.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlitBlend.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlitBlend.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlitBlend.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlitBlend.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlitBlend.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageBlitBlend.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o: ../third_party/SDL/src/test/SDL_test_imageFace.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageFace.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageFace.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageFace.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageFace.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageFace.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imageFace.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o: ../third_party/SDL/src/test/SDL_test_imagePrimitives.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitives.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitives.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitives.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitives.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitives.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitives.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o: ../third_party/SDL/src/test/SDL_test_imagePrimitivesBlend.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitivesBlend.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitivesBlend.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitivesBlend.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitivesBlend.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitivesBlend.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_imagePrimitivesBlend.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o: ../third_party/SDL/src/test/SDL_test_log.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_log.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_log.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_log.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_log.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_log.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o: ../third_party/SDL/src/test/SDL_test_md5.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_md5.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_md5.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_md5.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_md5.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_md5.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_md5.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o: ../third_party/SDL/src/test/SDL_test_memory.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_memory.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_memory.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_memory.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_memory.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_memory.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_memory.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.s
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/flags.make
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o: ../third_party/SDL/src/test/SDL_test_random.c
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o: third_party/SDL/CMakeFiles/SDL2_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o -c /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_random.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o -MF CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o.d -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o -c /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_random.c
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.i"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_random.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.i
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_random.c > CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.i
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.s"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/unclegoga/Development/VkEngine/third_party/SDL/src/test/SDL_test_random.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.s
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gooby/Development/VkEngine/third_party/SDL/src/test/SDL_test_random.c -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.s
 
 # Object files for target SDL2_test
 SDL2_test_OBJECTS = \
@@ -333,19 +333,19 @@ third_party/SDL/libSDL2_test.a: third_party/SDL/CMakeFiles/SDL2_test.dir/src/tes
 third_party/SDL/libSDL2_test.a: third_party/SDL/CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o
 third_party/SDL/libSDL2_test.a: third_party/SDL/CMakeFiles/SDL2_test.dir/build.make
 third_party/SDL/libSDL2_test.a: third_party/SDL/CMakeFiles/SDL2_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking C static library libSDL2_test.a"
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/SDL2_test.dir/cmake_clean_target.cmake
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDL2_test.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking C static library libSDL2_test.a"
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/SDL2_test.dir/cmake_clean_target.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDL2_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 third_party/SDL/CMakeFiles/SDL2_test.dir/build: third_party/SDL/libSDL2_test.a
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/build
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/clean:
-	cd /home/unclegoga/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/SDL2_test.dir/cmake_clean.cmake
+	cd /home/gooby/Development/VkEngine/build/third_party/SDL && $(CMAKE_COMMAND) -P CMakeFiles/SDL2_test.dir/cmake_clean.cmake
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/clean
 
 third_party/SDL/CMakeFiles/SDL2_test.dir/depend:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unclegoga/Development/VkEngine /home/unclegoga/Development/VkEngine/third_party/SDL /home/unclegoga/Development/VkEngine/build /home/unclegoga/Development/VkEngine/build/third_party/SDL /home/unclegoga/Development/VkEngine/build/third_party/SDL/CMakeFiles/SDL2_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gooby/Development/VkEngine /home/gooby/Development/VkEngine/third_party/SDL /home/gooby/Development/VkEngine/build /home/gooby/Development/VkEngine/build/third_party/SDL /home/gooby/Development/VkEngine/build/third_party/SDL/CMakeFiles/SDL2_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/depend
 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unclegoga/Development/VkEngine
+CMAKE_SOURCE_DIR = /home/gooby/Development/VkEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unclegoga/Development/VkEngine/build
+CMAKE_BINARY_DIR = /home/gooby/Development/VkEngine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles /home/unclegoga/Development/VkEngine/build/src//CMakeFiles/progress.marks
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles /home/gooby/Development/VkEngine/build/src//CMakeFiles/progress.marks
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/engine.dir/rule:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/engine.dir/rule
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/engine.dir/rule
 .PHONY : src/CMakeFiles/engine.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ engine: src/CMakeFiles/engine.dir/rule
 
 # fast build rule for target.
 engine/fast:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/build
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/build
 .PHONY : engine/fast
 
 camera.o: camera.cpp.o
@@ -180,7 +180,7 @@ camera.o: camera.cpp.o
 
 # target to build an object file
 camera.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/camera.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/camera.cpp.o
 .PHONY : camera.cpp.o
 
 camera.i: camera.cpp.i
@@ -188,7 +188,7 @@ camera.i: camera.cpp.i
 
 # target to preprocess a source file
 camera.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/camera.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/camera.cpp.i
 .PHONY : camera.cpp.i
 
 camera.s: camera.cpp.s
@@ -196,22 +196,22 @@ camera.s: camera.cpp.s
 
 # target to generate assembly for a file
 camera.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/camera.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
 # target to build an object file
 cmake_pch.hxx.pch:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 .PHONY : cmake_pch.hxx.pch
 
 # target to preprocess a source file
 cmake_pch.hxx.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.i
 .PHONY : cmake_pch.hxx.i
 
 # target to generate assembly for a file
 cmake_pch.hxx.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
 deletion_queue.o: deletion_queue.cpp.o
@@ -219,7 +219,7 @@ deletion_queue.o: deletion_queue.cpp.o
 
 # target to build an object file
 deletion_queue.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.o
 .PHONY : deletion_queue.cpp.o
 
 deletion_queue.i: deletion_queue.cpp.i
@@ -227,7 +227,7 @@ deletion_queue.i: deletion_queue.cpp.i
 
 # target to preprocess a source file
 deletion_queue.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.i
 .PHONY : deletion_queue.cpp.i
 
 deletion_queue.s: deletion_queue.cpp.s
@@ -235,7 +235,7 @@ deletion_queue.s: deletion_queue.cpp.s
 
 # target to generate assembly for a file
 deletion_queue.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.s
 .PHONY : deletion_queue.cpp.s
 
 main.o: main.cpp.o
@@ -243,7 +243,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -251,7 +251,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -259,7 +259,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 vk_descriptors.o: vk_descriptors.cpp.o
@@ -267,7 +267,7 @@ vk_descriptors.o: vk_descriptors.cpp.o
 
 # target to build an object file
 vk_descriptors.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_descriptors.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_descriptors.cpp.o
 .PHONY : vk_descriptors.cpp.o
 
 vk_descriptors.i: vk_descriptors.cpp.i
@@ -275,7 +275,7 @@ vk_descriptors.i: vk_descriptors.cpp.i
 
 # target to preprocess a source file
 vk_descriptors.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_descriptors.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_descriptors.cpp.i
 .PHONY : vk_descriptors.cpp.i
 
 vk_descriptors.s: vk_descriptors.cpp.s
@@ -283,7 +283,7 @@ vk_descriptors.s: vk_descriptors.cpp.s
 
 # target to generate assembly for a file
 vk_descriptors.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_descriptors.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_descriptors.cpp.s
 .PHONY : vk_descriptors.cpp.s
 
 vk_engine.o: vk_engine.cpp.o
@@ -291,7 +291,7 @@ vk_engine.o: vk_engine.cpp.o
 
 # target to build an object file
 vk_engine.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_engine.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_engine.cpp.o
 .PHONY : vk_engine.cpp.o
 
 vk_engine.i: vk_engine.cpp.i
@@ -299,7 +299,7 @@ vk_engine.i: vk_engine.cpp.i
 
 # target to preprocess a source file
 vk_engine.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_engine.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_engine.cpp.i
 .PHONY : vk_engine.cpp.i
 
 vk_engine.s: vk_engine.cpp.s
@@ -307,7 +307,7 @@ vk_engine.s: vk_engine.cpp.s
 
 # target to generate assembly for a file
 vk_engine.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_engine.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_engine.cpp.s
 .PHONY : vk_engine.cpp.s
 
 vk_images.o: vk_images.cpp.o
@@ -315,7 +315,7 @@ vk_images.o: vk_images.cpp.o
 
 # target to build an object file
 vk_images.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_images.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_images.cpp.o
 .PHONY : vk_images.cpp.o
 
 vk_images.i: vk_images.cpp.i
@@ -323,7 +323,7 @@ vk_images.i: vk_images.cpp.i
 
 # target to preprocess a source file
 vk_images.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_images.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_images.cpp.i
 .PHONY : vk_images.cpp.i
 
 vk_images.s: vk_images.cpp.s
@@ -331,7 +331,7 @@ vk_images.s: vk_images.cpp.s
 
 # target to generate assembly for a file
 vk_images.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_images.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_images.cpp.s
 .PHONY : vk_images.cpp.s
 
 vk_initializers.o: vk_initializers.cpp.o
@@ -339,7 +339,7 @@ vk_initializers.o: vk_initializers.cpp.o
 
 # target to build an object file
 vk_initializers.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_initializers.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_initializers.cpp.o
 .PHONY : vk_initializers.cpp.o
 
 vk_initializers.i: vk_initializers.cpp.i
@@ -347,7 +347,7 @@ vk_initializers.i: vk_initializers.cpp.i
 
 # target to preprocess a source file
 vk_initializers.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_initializers.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_initializers.cpp.i
 .PHONY : vk_initializers.cpp.i
 
 vk_initializers.s: vk_initializers.cpp.s
@@ -355,7 +355,7 @@ vk_initializers.s: vk_initializers.cpp.s
 
 # target to generate assembly for a file
 vk_initializers.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_initializers.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_initializers.cpp.s
 .PHONY : vk_initializers.cpp.s
 
 vk_loader.o: vk_loader.cpp.o
@@ -363,7 +363,7 @@ vk_loader.o: vk_loader.cpp.o
 
 # target to build an object file
 vk_loader.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_loader.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_loader.cpp.o
 .PHONY : vk_loader.cpp.o
 
 vk_loader.i: vk_loader.cpp.i
@@ -371,7 +371,7 @@ vk_loader.i: vk_loader.cpp.i
 
 # target to preprocess a source file
 vk_loader.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_loader.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_loader.cpp.i
 .PHONY : vk_loader.cpp.i
 
 vk_loader.s: vk_loader.cpp.s
@@ -379,7 +379,7 @@ vk_loader.s: vk_loader.cpp.s
 
 # target to generate assembly for a file
 vk_loader.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_loader.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_loader.cpp.s
 .PHONY : vk_loader.cpp.s
 
 vk_pipelines.o: vk_pipelines.cpp.o
@@ -387,7 +387,7 @@ vk_pipelines.o: vk_pipelines.cpp.o
 
 # target to build an object file
 vk_pipelines.cpp.o:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_pipelines.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_pipelines.cpp.o
 .PHONY : vk_pipelines.cpp.o
 
 vk_pipelines.i: vk_pipelines.cpp.i
@@ -395,7 +395,7 @@ vk_pipelines.i: vk_pipelines.cpp.i
 
 # target to preprocess a source file
 vk_pipelines.cpp.i:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_pipelines.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_pipelines.cpp.i
 .PHONY : vk_pipelines.cpp.i
 
 vk_pipelines.s: vk_pipelines.cpp.s
@@ -403,7 +403,7 @@ vk_pipelines.s: vk_pipelines.cpp.s
 
 # target to generate assembly for a file
 vk_pipelines.cpp.s:
-	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_pipelines.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_pipelines.cpp.s
 .PHONY : vk_pipelines.cpp.s
 
 # Help Target
@@ -460,6 +460,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/unclegoga/Development/VkEngine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
