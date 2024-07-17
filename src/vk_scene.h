@@ -1,27 +1,11 @@
 #pragma once
 
-#include "vk_loader.h"
-#include "vk_materials.h"
+#include "vk_types.h"
 #include <memory>
-
-struct RenderObject {
-    uint32_t indexCount;
-    uint32_t firstIndex;
-    VkBuffer indexBuffer;
-
-    MaterialInstance* material;
-
-    glm::mat4 transform;
-    VkDeviceAddress vertexBufferAddress;
-};
-
-struct RenderContext {
-    std::vector<RenderObject> opaqueObjects;
-};
 
 class IRenderable {
 public:
-
+    virtual ~IRenderable() = 0;
     virtual void draw(const glm::mat4& topMatrix, RenderContext& context) = 0;
 };
 
@@ -29,7 +13,7 @@ class Node : public IRenderable {
 public:
 
     void refreshTransform(const glm::mat4& parentMatrix);
-    virtual void draw(const glm::mat4& topMatrix, RenderContext& context);
+    void draw(const glm::mat4& topMatrix, RenderContext& context);
 
     void setLocalTransform(glm::mat4 transform) {
         mLocalTransform = transform;
@@ -37,6 +21,22 @@ public:
 
     void setWorldTransform(glm::mat4 transform) {
         mWorldTransform = transform;
+    }
+
+    glm::mat4& getLocalTransform() {
+        return mLocalTransform;
+    }
+
+    void addChild(std::shared_ptr<Node> child) {
+        mChildren.push_back(child);
+    }
+
+    void setParent(std::weak_ptr<Node> parent) {
+        mParent = parent;
+    }
+
+    bool hasParent() {
+        return mParent.lock() != nullptr;
     }
 
 protected:
@@ -51,7 +51,7 @@ protected:
 class MeshNode : public Node {
 public:
 
-    virtual void draw(const glm::mat4& topMatrix, RenderContext& context) override;
+    void draw(const glm::mat4& topMatrix, RenderContext& context) override;
 
     void setMesh(std::shared_ptr<MeshAsset> mesh) {
         mMesh = mesh;

@@ -4,7 +4,6 @@
 #include "vk_initializers.h"
 #include "vk_pipelines.h"
 #include "vk_types.h"
-#include <cstddef>
 #include <vulkan/vulkan_core.h>
 
 void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat) {

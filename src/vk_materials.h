@@ -4,23 +4,6 @@
 #include "vk_types.h"
 #include <vulkan/vulkan_core.h>
 
-enum class MaterialPass : uint8_t {
-    Opaque,
-    Transparent,
-    Other
-};
-
-struct MaterialPipeline {
-    VkPipeline pipeline;
-    VkPipelineLayout layout;
-};
-
-struct MaterialInstance {
-    MaterialPipeline* pipeline;
-    VkDescriptorSet descriptorSet;
-    MaterialPass passType;
-};
-
 class GLTFMetallicRoughness {
 public:
 

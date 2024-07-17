@@ -34,6 +34,30 @@ public:
 		return mFrames[mFrameNumber % MAX_FRAMES_IN_FLIGHT];
 	}
 
+	VkDevice& getDevice() {
+		return mDevice;
+	}
+
+	AllocatedImage& getErrorTexture() {
+		return mErrorCheckerboardImage;
+	}
+
+	AllocatedImage& getWhiteTexture() {
+		return mWhiteImage;
+	}
+
+	VkSampler& getDefaultLinearSampler() {
+		return mDefaultSamplerLinear;
+	}
+
+	VkSampler& getDefaultNearestSampler() {
+		return mDefaultSamplerNearest;
+	}
+
+	GLTFMetallicRoughness& getGLTFMRCreator() {
+		return mMetalRoughMaterial;
+	}
+
 	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function);
 
 	AllocatedBuffer createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage);
@@ -171,4 +195,6 @@ private:
 
 	// TODO: move somewhere else
 	Camera mCamera;
+
+	std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedScenes;
 };

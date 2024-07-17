@@ -76,6 +76,15 @@ void VulkanEngine::init()
 
     // everything went fine
     mIsInitialized = true;
+
+    std::string structurePath = "assets/structure.glb";
+    auto structureFile = loadGltf(structurePath);
+
+    assert(structureFile.has_value() && "Structure file doesnt have value");
+
+    mLoadedScenes["structure"] = structureFile.value();
+
+    fmt::println("loaded structure");
 }
 
 AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage) {
@@ -535,9 +544,6 @@ void VulkanEngine::initMeshPipeline() {
 }
 
 void VulkanEngine::initDefaultData() {
-    // load test meshes
-    mTestMeshes = loadGltfMeshes(this, "assets/basicmesh.glb").value();
-
     uint32_t white = glm::packUnorm4x8(glm::vec4(1, 1, 1, 1));
 	mWhiteImage = createImage((void*)&white, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
 		VK_IMAGE_USAGE_SAMPLED_BIT);
@@ -604,22 +610,6 @@ void VulkanEngine::initDefaultData() {
     materialResources.dataBufferOffset = 0;
 
     mDefaultMaterialInstance = mMetalRoughMaterial.writeMaterial(mDevice, MaterialPass::Opaque, materialResources, mDescriptorAllocator);
-
-
-    for (auto& mesh : mTestMeshes) {
-        std::shared_ptr<MeshNode> newNode = std::make_shared<MeshNode>();
-        newNode->setMesh(mesh);
-
-        newNode->setLocalTransform(glm::mat4(1.f));
-        newNode->setWorldTransform(glm::mat4(1.f));
-
-        for (auto& surface : newNode->getMesh()->surfaces) {
-            surface.material = std::make_shared<GLTFMaterial>();
-            surface.material->materialInstance = mDefaultMaterialInstance;
-        }
-
-        mLoadedNodes[mesh->name] = std::move(newNode);
-    }
 }
 
 void VulkanEngine::initBackgroundPipelines() {
@@ -766,6 +756,8 @@ void VulkanEngine::cleanup() {
 
     // wait until gpu stops
     vkDeviceWaitIdle(mDevice);
+
+    mLoadedScenes.clear();
 
     // free command pools
     for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
@@ -1105,7 +1097,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     writer.writeBuffer(0, gpuSceneDataBuffer.buffer, sizeof(GPUSceneData), 0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
           .updateSet(mDevice, globalDescriptorSet);
 
-    for (const RenderObject& object : mMainRenderContext.opaqueObjects) {
+    auto draw = [&](const RenderObject& object) {
         vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->pipeline);
         vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 0, 1, &globalDescriptorSet, 0, nullptr);
         vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, 1, &object.material->descriptorSet, 0, nullptr);
@@ -1119,6 +1111,15 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         vkCmdPushConstants(commandBuffer, object.material->pipeline->layout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(GPUDrawPushConstants), &pushConstants);
 
         vkCmdDrawIndexed(commandBuffer, object.indexCount, 1, object.firstIndex, 0, 0);
+    };
+
+    for (auto& object : mMainRenderContext.opaqueObjects) {
+        draw(object);
+    }
+
+    // draw transparent objects after opaque ones
+    for (auto& object : mMainRenderContext.transparentObjects) {
+        draw(object);
     }
 
     vkCmdEndRendering(commandBuffer);
@@ -1199,10 +1200,9 @@ void VulkanEngine::destroyImage(const AllocatedImage& image) {
 
 void VulkanEngine::updateScene() {
     mMainRenderContext.opaqueObjects.clear();
+    mMainRenderContext.transparentObjects.clear();
 
     mCamera.update();
-
-    mLoadedNodes["Suzanne"]->draw(glm::mat4(1.f), mMainRenderContext);
 
     mSceneData.view = mCamera.getViewMatrix();
     mSceneData.projection = glm::perspective(glm::radians(70.f), (float)mWindowExtent.width / (float)mWindowExtent.height, 10000.f, 0.1f);
@@ -1215,10 +1215,6 @@ void VulkanEngine::updateScene() {
     mSceneData.sunlightColor = glm::vec4(1.f);
     mSceneData.sunlightDirection = glm::vec4(0.f, 1.0f, .5f, 1.f);
 
-    for (int i = -3; i < 3; i++) {
-        glm::mat4 scale = glm::scale(glm::mat4(1.f), glm::vec3(0.2));
-        glm::mat4 translation = glm::translate(glm::mat4(1.f), glm::vec3(i, 1, 0));
 
-        mLoadedNodes["Cube"]->draw(translation * scale, mMainRenderContext);
-    }
+    mLoadedScenes["structure"]->draw(glm::mat4(1.f), mMainRenderContext);
 }

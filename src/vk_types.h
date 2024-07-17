@@ -3,17 +3,14 @@
 #pragma once
 
 #include <memory>
-#include <optional>
 #include <string>
 #include <vector>
-#include <span>
-#include <array>
 
 #include <vulkan/vulkan.h>
 #include "vk_descriptors.h"
-#include "vk_enum_string_helper.h"
 #include <vk_mem_alloc.h>
 #include "deletion_queue.h"
+#include "vk_enum_string_helper.h"
 
 #include <fmt/core.h>
 
@@ -89,6 +86,56 @@ struct GPUSceneData {
     glm::vec4 ambientColor;
     glm::vec4 sunlightDirection;
     glm::vec4 sunlightColor;
+};
+
+enum class MaterialPass : uint8_t {
+    Opaque,
+    Transparent,
+    Other
+};
+
+struct MaterialPipeline {
+    VkPipeline pipeline;
+    VkPipelineLayout layout;
+};
+
+struct MaterialInstance {
+    MaterialPipeline* pipeline;
+    VkDescriptorSet descriptorSet;
+    MaterialPass passType;
+};
+
+struct RenderObject {
+    uint32_t indexCount;
+    uint32_t firstIndex;
+    VkBuffer indexBuffer;
+
+    MaterialInstance* material;
+
+    glm::mat4 transform;
+    VkDeviceAddress vertexBufferAddress;
+};
+
+struct RenderContext {
+    std::vector<RenderObject> opaqueObjects;
+    std::vector<RenderObject> transparentObjects;
+};
+
+struct GLTFMaterial {
+    MaterialInstance materialInstance;
+};
+
+struct GeoSurface {
+    uint32_t startIndex;
+    uint32_t count;
+    std::shared_ptr<GLTFMaterial> material;
+};
+
+struct MeshAsset {
+    std::string name;
+
+    std::vector<GeoSurface> surfaces;
+    GPUMeshBuffers meshBuffers;
 };
 
 #define VK_CHECK(x)                                                     \

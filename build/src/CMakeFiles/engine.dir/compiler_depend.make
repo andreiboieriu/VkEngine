@@ -446,13 +446,12 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   third_party/SDL/include/SDL2/SDL_gesture.h \
   third_party/SDL/include/SDL2/SDL_touch.h \
   ../src/vk_types.h \
+  ../src/vk_descriptors.h \
   /usr/include/c++/12/span \
   /usr/include/c++/12/array \
-  ../src/vk_descriptors.h \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -461,6 +460,7 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/c++/12/iterator \
@@ -1835,7 +1835,6 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
   ../src/vk_types.h \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -1844,6 +1843,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
@@ -1852,6 +1852,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/c++/12/bits/stream_iterator.h \
   ../src/vk_scene.h \
   ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -1876,6 +1877,12 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/variant \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex \
   ../src/camera.h \
   third_party/SDL/include/SDL2/SDL_events.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
@@ -2326,7 +2333,6 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
   ../src/vk_types.h \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -2335,6 +2341,7 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
@@ -2761,7 +2768,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
   ../src/vk_types.h \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -2770,6 +2776,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
@@ -2778,6 +2785,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/stream_iterator.h \
   ../src/vk_scene.h \
   ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -2802,6 +2810,12 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/variant \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex \
   ../src/camera.h \
   third_party/SDL/include/SDL2/SDL_events.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
@@ -2960,15 +2974,12 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../src/vk_pipelines.h \
   ../third_party/vkbootstrap/VkBootstrap.h \
   ../third_party/vkbootstrap/VkBootstrapDispatch.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/bits/ranges_algo.h \
   /usr/include/c++/12/bits/ranges_util.h \
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
   /usr/include/c++/12/mutex \
   /usr/include/c++/12/bits/unique_lock.h \
-  /usr/include/c++/12/shared_mutex \
   /usr/include/c++/12/atomic \
   ../third_party/imgui/imgui.h \
   ../third_party/imgui/imconfig.h \
@@ -3417,13 +3428,12 @@ src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../src/vk_images.h \
   ../src/vk_initializers.h \
   ../src/vk_types.h \
+  ../src/vk_descriptors.h \
   /usr/include/c++/12/span \
   /usr/include/c++/12/array \
-  ../src/vk_descriptors.h \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -3432,12 +3442,20 @@ src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h
+  /usr/include/c++/12/bits/stream_iterator.h \
+  ../third_party/stb_image/stb_image.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/include/c++/12/math.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h
 
 src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -3851,13 +3869,12 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   ../src/vk_initializers.cpp \
   ../src/vk_initializers.h \
   ../src/vk_types.h \
+  ../src/vk_descriptors.h \
   /usr/include/c++/12/span \
   /usr/include/c++/12/array \
-  ../src/vk_descriptors.h \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -3866,6 +3883,7 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
@@ -4283,35 +4301,10 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_loader.cpp \
-  ../third_party/stb_image/stb_image.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/include/c++/12/iostream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  ../src/vk_loader.h \
-  ../src/vk_materials.h \
-  ../src/vk_descriptors.h \
-  /usr/include/c++/12/span \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/deque \
-  /usr/include/c++/12/bits/stl_deque.h \
-  /usr/include/c++/12/bits/deque.tcc \
-  ../src/vk_types.h \
-  ../src/vk_enum_string_helper.h \
-  ../third_party/vma/vk_mem_alloc.h \
-  ../src/deletion_queue.h \
-  /usr/include/c++/12/functional \
-  /usr/include/c++/12/bits/std_function.h \
-  /usr/include/c++/12/bits/stl_algo.h \
-  /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_heap.h \
-  /usr/include/c++/12/bits/uniform_int_dist.h \
-  ../third_party/fmt/include/fmt/core.h \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -4330,12 +4323,41 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
   /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  ../src/vk_engine.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/variant \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex \
+  /usr/include/c++/12/span \
+  ../third_party/fmt/include/fmt/core.h \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  ../src/vk_loader.h \
+  ../src/vk_descriptors.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
+  ../src/vk_materials.h \
+  ../src/vk_types.h \
+  ../third_party/vma/vk_mem_alloc.h \
+  ../src/deletion_queue.h \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../src/vk_scene.h \
+  ../src/vk_engine.h \
   ../src/camera.h \
   third_party/SDL/include/SDL2/SDL_events.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
@@ -4343,6 +4365,7 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
+  /usr/include/c++/12/stdlib.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
   /usr/include/inttypes.h \
   /usr/include/c++/12/math.h \
@@ -4367,7 +4390,6 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   third_party/SDL/include/SDL2/SDL_quit.h \
   third_party/SDL/include/SDL2/SDL_gesture.h \
   third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_initializers.h \
   ../third_party/glm/glm/gtx/quaternion.hpp \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
@@ -4477,15 +4499,9 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/glm/glm/gtx/quaternion.inl \
   ../third_party/fastgltf/include/fastgltf/glm_element_traits.hpp \
   ../third_party/fastgltf/include/fastgltf/tools.hpp \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
-  /usr/include/c++/12/variant \
-  ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/memory_resource \
-  /usr/include/c++/12/shared_mutex \
   ../third_party/glm/glm/glm.hpp \
-  ../third_party/fastgltf/include/fastgltf/parser.hpp
+  ../third_party/fastgltf/include/fastgltf/parser.hpp \
+  ../third_party/stb_image/stb_image.h
 
 src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -4905,7 +4921,6 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
   ../src/vk_types.h \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -4914,6 +4929,7 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
@@ -5335,13 +5351,12 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   ../src/vk_pipelines.cpp \
   ../src/vk_pipelines.h \
   ../src/vk_types.h \
+  ../src/vk_descriptors.h \
   /usr/include/c++/12/span \
   /usr/include/c++/12/array \
-  ../src/vk_descriptors.h \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -5350,6 +5365,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
@@ -5776,16 +5792,13 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_scene.cpp \
   ../src/vk_scene.h \
-  ../src/vk_loader.h \
-  ../src/vk_materials.h \
+  ../src/vk_types.h \
   ../src/vk_descriptors.h \
   /usr/include/c++/12/span \
   /usr/include/c++/12/array \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  ../src/vk_types.h \
-  ../src/vk_enum_string_helper.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
@@ -5794,36 +5807,13 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h \
-  /usr/include/c++/12/filesystem \
-  /usr/include/c++/12/bits/fs_fwd.h \
-  /usr/include/c++/12/bits/chrono.h \
-  /usr/include/c++/12/ratio \
-  /usr/include/c++/12/ctime \
-  /usr/include/c++/12/bits/parse_numbers.h \
-  /usr/include/c++/12/bits/fs_path.h \
-  /usr/include/c++/12/locale \
-  /usr/include/c++/12/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/12/bits/locale_conv.h \
-  /usr/include/c++/12/iomanip \
-  /usr/include/c++/12/bits/quoted_string.h \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/sstream.tcc \
-  /usr/include/c++/12/codecvt \
-  /usr/include/c++/12/bits/fs_dir.h \
-  /usr/include/c++/12/bits/fs_ops.h
+  /usr/include/c++/12/bits/stream_iterator.h
 
 
 /usr/include/c++/12/bits/fstream.tcc:
@@ -5834,13 +5824,7 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
 
 ../third_party/fastgltf/include/fastgltf/parser.hpp:
 
-/usr/include/c++/12/memory_resource:
-
-../third_party/fastgltf/include/fastgltf/util.hpp:
-
 ../third_party/fastgltf/include/fastgltf/glm_element_traits.hpp:
-
-/usr/include/c++/12/iostream:
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
@@ -5867,8 +5851,6 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
 /usr/include/c++/12/bits/ranges_util.h:
 
 /usr/include/c++/12/algorithm:
-
-/usr/include/c++/12/bits/stl_relops.h:
 
 ../third_party/vkbootstrap/VkBootstrapDispatch.h:
 
@@ -6010,6 +5992,12 @@ third_party/SDL/include/SDL2/SDL_main.h:
 
 ../src/vk_descriptors.cpp:
 
+/usr/include/c++/12/memory_resource:
+
+../third_party/fastgltf/include/fastgltf/util.hpp:
+
+/usr/include/c++/12/bits/stl_relops.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h:
 
 /usr/include/c++/12/bits/fs_dir.h:
@@ -6021,6 +6009,8 @@ third_party/SDL/include/SDL2/SDL_main.h:
 /usr/include/c++/12/sstream:
 
 /usr/include/c++/12/bits/quoted_string.h:
+
+/usr/include/c++/12/iomanip:
 
 ../third_party/glm/glm/detail/setup.hpp:
 
@@ -6245,8 +6235,6 @@ third_party/SDL/include/SDL2/SDL_render.h:
 /usr/include/c++/12/bits/fs_ops.h:
 
 /usr/include/c++/12/debug/debug.h:
-
-/usr/include/c++/12/iomanip:
 
 /usr/include/c++/12/bits/stl_raw_storage_iter.h:
 
@@ -7202,12 +7190,6 @@ third_party/SDL/include/SDL2/SDL_gamecontroller.h:
 
 ../third_party/glm/glm/gtx/component_wise.inl:
 
-../third_party/fastgltf/include/fastgltf/types.hpp:
-
-/usr/include/c++/12/bits/move.h:
-
-../third_party/glm/glm/gtx/quaternion.inl:
-
 /usr/lib/llvm-14/lib/clang/14.0.0/include/sanitizer/tsan_interface.h:
 
 /usr/include/c++/12/cerrno:
@@ -7221,6 +7203,12 @@ third_party/SDL/include/SDL2/SDL_gamecontroller.h:
 /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h:
 
 ../src/vk_materials.h:
+
+/usr/include/c++/12/bits/move.h:
+
+../third_party/glm/glm/gtx/quaternion.inl:
+
+../third_party/fastgltf/include/fastgltf/types.hpp:
 
 ../third_party/glm/glm/detail/type_mat2x3.inl:
 
