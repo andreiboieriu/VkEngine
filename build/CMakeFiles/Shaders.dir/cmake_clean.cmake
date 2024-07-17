@@ -4,7 +4,10 @@ file(REMOVE_RECURSE
   "../shaders/colored_triangle_mesh.vert.spv"
   "../shaders/gradient.comp.spv"
   "../shaders/gradient_color.comp.spv"
+  "../shaders/mesh.frag.spv"
+  "../shaders/mesh.vert.spv"
   "../shaders/sky.comp.spv"
+  "../shaders/tex_image.frag.spv"
   "CMakeFiles/Shaders"
 )
 

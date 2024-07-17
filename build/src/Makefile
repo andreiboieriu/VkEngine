@@ -382,6 +382,30 @@ vk_loader.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_loader.cpp.s
 .PHONY : vk_loader.cpp.s
 
+vk_materials.o: vk_materials.cpp.o
+.PHONY : vk_materials.o
+
+# target to build an object file
+vk_materials.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_materials.cpp.o
+.PHONY : vk_materials.cpp.o
+
+vk_materials.i: vk_materials.cpp.i
+.PHONY : vk_materials.i
+
+# target to preprocess a source file
+vk_materials.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_materials.cpp.i
+.PHONY : vk_materials.cpp.i
+
+vk_materials.s: vk_materials.cpp.s
+.PHONY : vk_materials.s
+
+# target to generate assembly for a file
+vk_materials.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_materials.cpp.s
+.PHONY : vk_materials.cpp.s
+
 vk_pipelines.o: vk_pipelines.cpp.o
 .PHONY : vk_pipelines.o
 
@@ -405,6 +429,30 @@ vk_pipelines.s: vk_pipelines.cpp.s
 vk_pipelines.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_pipelines.cpp.s
 .PHONY : vk_pipelines.cpp.s
+
+vk_scene.o: vk_scene.cpp.o
+.PHONY : vk_scene.o
+
+# target to build an object file
+vk_scene.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_scene.cpp.o
+.PHONY : vk_scene.cpp.o
+
+vk_scene.i: vk_scene.cpp.i
+.PHONY : vk_scene.i
+
+# target to preprocess a source file
+vk_scene.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_scene.cpp.i
+.PHONY : vk_scene.cpp.i
+
+vk_scene.s: vk_scene.cpp.s
+.PHONY : vk_scene.s
+
+# target to generate assembly for a file
+vk_scene.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_scene.cpp.s
+.PHONY : vk_scene.cpp.s
 
 # Help Target
 help:
@@ -446,9 +494,15 @@ help:
 	@echo "... vk_loader.o"
 	@echo "... vk_loader.i"
 	@echo "... vk_loader.s"
+	@echo "... vk_materials.o"
+	@echo "... vk_materials.i"
+	@echo "... vk_materials.s"
 	@echo "... vk_pipelines.o"
 	@echo "... vk_pipelines.i"
 	@echo "... vk_pipelines.s"
+	@echo "... vk_scene.o"
+	@echo "... vk_scene.i"
+	@echo "... vk_scene.s"
 .PHONY : help
 
 

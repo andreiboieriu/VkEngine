@@ -4,7 +4,10 @@
 d7158fa209cf62428ac37e03cf66e7f4 ../shaders/colored_triangle_mesh.vert.spv
 e22d65a1fd762f945c550e1954b4bac1 ../shaders/gradient.comp.spv
 8b6c5fdaec2ae34caa343b4e1fcd8e3c ../shaders/gradient_color.comp.spv
+c7181b16af4bf24bbd95f8275c4fed04 ../shaders/mesh.frag.spv
+ab7a404db69d049486091132d820f4e4 ../shaders/mesh.vert.spv
 0f1e1854d6331a1940c4d56f29ca3e95 ../shaders/sky.comp.spv
+f08243018ff704df251381a1ee600877 ../shaders/tex_image.frag.spv
 f88146ff694674a67db1a6915f68b1d5 CMakeFiles/Shaders
 6d6e2d138216d9ebc3725744c7d4a2e6 third_party/SDL/CMakeFiles/sdl_headers_copy
 6522fe8b0968e58dd3eeb755b34e2ea0 third_party/SDL/CMakeFiles/uninstall

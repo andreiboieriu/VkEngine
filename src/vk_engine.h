@@ -3,11 +3,17 @@
 
 #pragma once
 
+#include "vk_materials.h"
+#include "vk_scene.h"
 #include "vk_types.h"
 #include "vk_descriptors.h"
 #include "deletion_queue.h"
 #include "vk_loader.h"
+#include <memory>
+#include <string>
+#include <unordered_map>
 #include <vulkan/vulkan_core.h>
+#include "camera.h"
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -33,7 +39,13 @@ public:
 	AllocatedBuffer createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage);
 	void destroyBuffer(const AllocatedBuffer& buffer);
 
+	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
+	AllocatedImage createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
+	void destroyImage(const AllocatedImage& image);
+
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
+
+	void updateScene();
 
 private:
 
@@ -116,9 +128,11 @@ private:
 	AllocatedImage mDepthImage;
 
 	// descriptor resources
-	DescriptorAllocator mDescriptorAllocator;
+	DynamicDescriptorAllocator mDescriptorAllocator;
 	VkDescriptorSet mDrawImageDescriptors;
 	VkDescriptorSetLayout mDrawImageDescriptorLayout;
+
+	VkDescriptorSetLayout mSingleImageDescriptorLayout;
 
 	// pipeline resources
 	VkPipeline mGradientPipeline;
@@ -137,6 +151,24 @@ private:
 	VkCommandPool mImmCommandPool;
 
 	// scene resources
-	GPUSceneData sceneData;
+	GPUSceneData mSceneData;
 	VkDescriptorSetLayout mGpuSceneDataDescriptorLayout;
+
+	// texture test resources
+	AllocatedImage mWhiteImage;
+	AllocatedImage mBlackImage;
+	AllocatedImage mGreyImage;
+	AllocatedImage mErrorCheckerboardImage;
+
+	VkSampler mDefaultSamplerLinear;
+	VkSampler mDefaultSamplerNearest;
+
+	MaterialInstance mDefaultMaterialInstance;
+	GLTFMetallicRoughness mMetalRoughMaterial;
+
+	RenderContext mMainRenderContext;
+	std::unordered_map<std::string, std::shared_ptr<Node>> mLoadedNodes;
+
+	// TODO: move somewhere else
+	Camera mCamera;
 };

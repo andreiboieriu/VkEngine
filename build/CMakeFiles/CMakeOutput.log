@@ -4568,3 +4568,48 @@ gmake[1]: Leaving directory '/home/gooby/Development/VkEngine/build/CMakeFiles/C
 
 Source file was:
 int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_XINPUT2_MULTITOUCH succeeded with the following output:
+Change Dir: /home/gooby/Development/VkEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a4675/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a4675.dir/build.make CMakeFiles/cmTC_a4675.dir/build
+gmake[1]: Entering directory '/home/gooby/Development/VkEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4675.dir/src.c.o
+/usr/bin/clang -DHAVE_XINPUT2_MULTITOUCH  -idirafter "/home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos"  -MD -MT CMakeFiles/cmTC_a4675.dir/src.c.o -MF CMakeFiles/cmTC_a4675.dir/src.c.o.d -o CMakeFiles/cmTC_a4675.dir/src.c.o -c /home/gooby/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a4675
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4675.dir/link.txt --verbose=1
+/usr/bin/clang  -idirafter "/home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos"  CMakeFiles/cmTC_a4675.dir/src.c.o -o cmTC_a4675  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libX11.so 
+gmake[1]: Leaving directory '/home/gooby/Development/VkEngine/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+            #include <X11/Xlib.h>
+            #include <X11/Xproto.h>
+            #include <X11/extensions/XInput2.h>
+            int event_type = XI_TouchBegin;
+            XITouchClassInfo *t;
+            Status XIAllowTouchEvents(Display *a,int b,unsigned int c,Window d,int f) {
+              return (Status)0;
+            }
+            int main(int argc, char **argv) { return 0; }
+Performing C SOURCE FILE Test HAVE_XFIXES_H succeeded with the following output:
+Change Dir: /home/gooby/Development/VkEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_44900/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_44900.dir/build.make CMakeFiles/cmTC_44900.dir/build
+gmake[1]: Entering directory '/home/gooby/Development/VkEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_44900.dir/src.c.o
+/usr/bin/clang -DHAVE_XFIXES_H  -idirafter "/home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos"  -MD -MT CMakeFiles/cmTC_44900.dir/src.c.o -MF CMakeFiles/cmTC_44900.dir/src.c.o.d -o CMakeFiles/cmTC_44900.dir/src.c.o -c /home/gooby/Development/VkEngine/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_44900
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44900.dir/link.txt --verbose=1
+/usr/bin/clang  -idirafter "/home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos"  CMakeFiles/cmTC_44900.dir/src.c.o -o cmTC_44900  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libX11.so 
+gmake[1]: Leaving directory '/home/gooby/Development/VkEngine/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+            #include <X11/Xlib.h>
+            #include <X11/Xproto.h>
+            #include <X11/extensions/XInput2.h>
+            #include <X11/extensions/Xfixes.h>
+            BarrierEventID b;
+            int main(int argc, char **argv) { return 0; }

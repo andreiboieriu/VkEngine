@@ -17,8 +17,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/vk_initializers.cpp.o.d"
   "CMakeFiles/engine.dir/vk_loader.cpp.o"
   "CMakeFiles/engine.dir/vk_loader.cpp.o.d"
+  "CMakeFiles/engine.dir/vk_materials.cpp.o"
+  "CMakeFiles/engine.dir/vk_materials.cpp.o.d"
   "CMakeFiles/engine.dir/vk_pipelines.cpp.o"
   "CMakeFiles/engine.dir/vk_pipelines.cpp.o.d"
+  "CMakeFiles/engine.dir/vk_scene.cpp.o"
+  "CMakeFiles/engine.dir/vk_scene.cpp.o.d"
   "engine"
   "engine.pdb"
 )

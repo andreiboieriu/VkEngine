@@ -1,12 +1,18 @@
 ﻿#pragma once
 
+#include "vk_materials.h"
 #include <vk_types.h>
 #include <unordered_map>
 #include <filesystem>
 
+struct GLTFMaterial {
+    MaterialInstance materialInstance;
+};
+
 struct GeoSurface {
     uint32_t startIndex;
     uint32_t count;
+    std::shared_ptr<GLTFMaterial> material;
 };
 
 struct MeshAsset {

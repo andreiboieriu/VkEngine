@@ -19,6 +19,10 @@ add_executable (engine
   camera.h
   deletion_queue.h
   deletion_queue.cpp
+  vk_materials.cpp
+  vk_materials.h
+  vk_scene.cpp
+  vk_scene.h
 )
 
 set_property(TARGET engine PROPERTY CXX_STANDARD 20)

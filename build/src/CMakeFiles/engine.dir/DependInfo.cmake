@@ -26,8 +26,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/vk_initializers.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_initializers.cpp.o.d"
   "/home/gooby/Development/VkEngine/src/vk_loader.cpp" "src/CMakeFiles/engine.dir/vk_loader.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_loader.cpp.o.d"
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/vk_loader.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_loader.cpp.o.d"
+  "/home/gooby/Development/VkEngine/src/vk_materials.cpp" "src/CMakeFiles/engine.dir/vk_materials.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_materials.cpp.o.d"
+  "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/vk_materials.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_materials.cpp.o.d"
   "/home/gooby/Development/VkEngine/src/vk_pipelines.cpp" "src/CMakeFiles/engine.dir/vk_pipelines.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_pipelines.cpp.o.d"
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/vk_pipelines.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_pipelines.cpp.o.d"
+  "/home/gooby/Development/VkEngine/src/vk_scene.cpp" "src/CMakeFiles/engine.dir/vk_scene.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_scene.cpp.o.d"
+  "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/vk_scene.cpp.o" "gcc" "src/CMakeFiles/engine.dir/vk_scene.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -24702,8 +24702,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o: ../third
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -24890,8 +24896,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o: ../third_party
   /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
   /usr/include/X11/extensions/XShm.h \
   /usr/include/X11/extensions/shm.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -25085,8 +25097,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.o: ../third_pa
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -25319,8 +25337,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.o: ../thi
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -25524,8 +25548,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.o: ../third_
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -25853,8 +25883,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.o: ../thir
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -26090,8 +26126,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -26295,8 +26337,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -26501,8 +26549,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o: ../third_pa
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -26713,8 +26767,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.o: ../third_
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -26919,8 +26979,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -27123,8 +27189,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -27431,8 +27503,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: ../third_par
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -27642,8 +27720,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o: ../third_pa
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -27953,8 +28037,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o: ../third_pa
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -28112,7 +28202,134 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xfixes.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_log.h
+  third_party/SDL/include/SDL2/SDL_log.h \
+  ../third_party/SDL/src/video/x11/SDL_x11video.h \
+  third_party/SDL/include/SDL2/SDL_keycode.h \
+  third_party/SDL/include/SDL2/SDL_scancode.h \
+  ../third_party/SDL/src/video/SDL_sysvideo.h \
+  third_party/SDL/include/SDL2/SDL_messagebox.h \
+  third_party/SDL/include/SDL2/SDL_video.h \
+  third_party/SDL/include/SDL2/SDL_pixels.h \
+  third_party/SDL/include/SDL2/SDL_endian.h \
+  third_party/SDL/include/SDL2/SDL_rect.h \
+  third_party/SDL/include/SDL2/SDL_error.h \
+  third_party/SDL/include/SDL2/SDL_rwops.h \
+  third_party/SDL/include/SDL2/SDL_surface.h \
+  third_party/SDL/include/SDL2/SDL_blendmode.h \
+  third_party/SDL/include/SDL2/SDL_shape.h \
+  third_party/SDL/include/SDL2/SDL_thread.h \
+  third_party/SDL/include/SDL2/SDL_atomic.h \
+  third_party/SDL/include/SDL2/SDL_mutex.h \
+  third_party/SDL/include/SDL2/SDL_metal.h \
+  ../third_party/SDL/src/video/SDL_vulkan_internal.h \
+  ../third_party/SDL/src/video/khronos/vulkan/vulkan.h \
+  ../third_party/SDL/src/video/khronos/vulkan/vk_platform.h \
+  ../third_party/SDL/src/video/khronos/vulkan/vulkan_core.h \
+  /usr/include/xcb/xcb.h \
+  /usr/include/x86_64-linux-gnu/sys/uio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/xcb/xproto.h \
+  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h \
+  /usr/include/X11/Xlib.h \
+  /usr/include/X11/X.h \
+  /usr/include/X11/Xfuncproto.h \
+  /usr/include/X11/Xosdefs.h \
+  ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
+  third_party/SDL/include/SDL2/SDL_vulkan.h \
+  /usr/include/X11/Xutil.h \
+  /usr/include/X11/keysym.h \
+  /usr/include/X11/keysymdef.h \
+  /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
+  /usr/include/X11/extensions/Xdbe.h \
+  /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
+  /usr/include/X11/extensions/Xrandr.h \
+  /usr/include/X11/extensions/randr.h \
+  /usr/include/X11/extensions/Xrender.h \
+  /usr/include/X11/extensions/render.h \
+  /usr/include/X11/Xdefs.h \
+  /usr/include/X11/extensions/shape.h \
+  /usr/include/X11/extensions/shapeconst.h \
+  ../third_party/SDL/src/core/linux/SDL_dbus.h \
+  ../third_party/SDL/src/SDL_internal.h \
+  ../third_party/SDL/src/core/linux/SDL_ime.h \
+  ../third_party/SDL/src/video/x11/SDL_x11dyn.h \
+  /usr/include/X11/XKBlib.h \
+  /usr/include/X11/extensions/XKBstr.h \
+  /usr/include/X11/extensions/XKB.h \
+  /usr/include/X11/Xlibint.h \
+  /usr/include/X11/Xproto.h \
+  /usr/include/X11/Xmd.h \
+  /usr/include/X11/Xprotostr.h \
+  /usr/include/X11/XlibConf.h \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/X11/Xfuncs.h \
+  /usr/include/X11/extensions/Xext.h \
+  /usr/include/x86_64-linux-gnu/sys/ipc.h \
+  /usr/include/x86_64-linux-gnu/bits/ipctypes.h \
+  /usr/include/x86_64-linux-gnu/bits/ipc.h \
+  /usr/include/x86_64-linux-gnu/bits/ipc-perm.h \
+  /usr/include/x86_64-linux-gnu/sys/shm.h \
+  /usr/include/x86_64-linux-gnu/bits/shm.h \
+  /usr/include/x86_64-linux-gnu/bits/shmlba.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
+  /usr/include/X11/extensions/XShm.h \
+  /usr/include/X11/extensions/shm.h \
+  ../third_party/SDL/src/video/x11/SDL_x11sym.h \
+  ../third_party/SDL/src/video/x11/SDL_x11clipboard.h \
+  ../third_party/SDL/src/video/x11/SDL_x11events.h \
+  ../third_party/SDL/src/video/x11/SDL_x11keyboard.h \
+  ../third_party/SDL/src/video/x11/SDL_x11modes.h \
+  ../third_party/SDL/src/video/x11/SDL_x11mouse.h \
+  ../third_party/SDL/src/video/x11/SDL_x11opengl.h \
+  third_party/SDL/include/SDL2/SDL_opengl.h \
+  third_party/SDL/include/SDL2/SDL_opengl_glext.h \
+  /usr/include/GL/glx.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glxext.h \
+  ../third_party/SDL/src/video/x11/SDL_x11window.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
+  /usr/include/KHR/khrplatform.h \
+  ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
+  ../third_party/SDL/src/video/x11/SDL_x11xfixes.h \
+  ../third_party/SDL/src/events/SDL_mouse_c.h \
+  ../third_party/SDL/src/SDL_internal.h \
+  third_party/SDL/include/SDL2/SDL_mouse.h \
+  ../third_party/SDL/src/events/SDL_touch_c.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o: ../third_party/SDL/src/video/x11/SDL_x11xinput2.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -28257,8 +28474,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o: ../third_p
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/X11/Xatom.h \
+  /usr/include/X11/Xcursor/Xcursor.h \
   /usr/include/X11/extensions/Xdbe.h \
   /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h \
+  /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
@@ -28685,9 +28908,17 @@ third_party/SDL/include/SDL2/SDL_name.h:
 
 /usr/include/X11/extensions/Xrender.h:
 
+/usr/include/X11/extensions/XI2.h:
+
+/usr/include/X11/extensions/Xfixes.h:
+
+/usr/include/X11/extensions/XInput2.h:
+
 /usr/include/X11/extensions/dbe.h:
 
 /usr/include/X11/extensions/Xdbe.h:
+
+/usr/include/X11/Xcursor/Xcursor.h:
 
 /usr/include/X11/keysym.h:
 
@@ -28888,6 +29119,8 @@ third_party/SDL/include/SDL2/SDL_bits.h:
 /usr/include/x86_64-linux-gnu/sys/shm.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h:
+
+/usr/include/X11/extensions/Xge.h:
 
 third_party/SDL/include/SDL2/SDL_render.h:
 
@@ -29522,6 +29755,8 @@ third_party/SDL/include/SDL2/SDL_mutex.h:
 ../third_party/SDL/src/video/SDL_blit_auto.h:
 
 third_party/SDL/include/SDL2/SDL_events.h:
+
+/usr/include/X11/extensions/xfixeswire.h:
 
 ../third_party/SDL/src/libm/k_sin.c:
 

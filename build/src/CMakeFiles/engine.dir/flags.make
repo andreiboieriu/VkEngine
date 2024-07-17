@@ -28,3 +28,7 @@ CXX_FLAGS = -std=gnu++20
 
 # PCH options: src/CMakeFiles/engine.dir/deletion_queue.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 
+# PCH options: src/CMakeFiles/engine.dir/vk_materials.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
+
+# PCH options: src/CMakeFiles/engine.dir/vk_scene.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
+

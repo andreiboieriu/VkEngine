@@ -379,7 +379,7 @@ GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 GLSL_VALIDATOR:FILEPATH=/home/gooby/vulkan/1.3.283.0/x86_64/bin/glslangValidator
 
 //Path to a file.
-HAVE_XCURSOR_H:FILEPATH=HAVE_XCURSOR_H-NOTFOUND
+HAVE_XCURSOR_H:FILEPATH=/usr/include/X11/Xcursor/Xcursor.h
 
 //Path to a file.
 HAVE_XDBE_H:FILEPATH=/usr/include/X11/extensions/Xdbe.h
@@ -388,10 +388,10 @@ HAVE_XDBE_H:FILEPATH=/usr/include/X11/extensions/Xdbe.h
 HAVE_XEXT_H:FILEPATH=/usr/include/X11/extensions/Xext.h
 
 //Path to a file.
-HAVE_XFIXES_H_:FILEPATH=HAVE_XFIXES_H_-NOTFOUND
+HAVE_XFIXES_H_:FILEPATH=/usr/include/X11/extensions/Xfixes.h
 
 //Path to a file.
-HAVE_XINPUT2_H:FILEPATH=HAVE_XINPUT2_H-NOTFOUND
+HAVE_XINPUT2_H:FILEPATH=/usr/include/X11/extensions/XInput2.h
 
 //Path to a file.
 HAVE_XRANDR_H:FILEPATH=/usr/include/X11/extensions/Xrandr.h
@@ -773,16 +773,16 @@ Vulkan_LIBRARY:FILEPATH=/home/gooby/vulkan/1.3.283.0/x86_64/lib/libvulkan.so
 X11_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libX11.so
 
 //Path to a library.
-XCURSOR_LIB:FILEPATH=XCURSOR_LIB-NOTFOUND
+XCURSOR_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXcursor.so
 
 //Path to a library.
 XEXT_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXext.so
 
 //Path to a library.
-XFIXES_LIB:FILEPATH=XFIXES_LIB-NOTFOUND
+XFIXES_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXfixes.so
 
 //Path to a library.
-XI_LIB:FILEPATH=XI_LIB-NOTFOUND
+XI_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXi.so
 
 //Path to a library.
 XRANDR_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXrandr.so
@@ -1445,8 +1445,12 @@ HAVE_WCSNCASECMP:INTERNAL=1
 HAVE_WCSNCMP:INTERNAL=1
 //Have symbol wcsstr
 HAVE_WCSSTR:INTERNAL=1
+//Test HAVE_XFIXES_H
+HAVE_XFIXES_H:INTERNAL=1
 //Test HAVE_XGENERICEVENT
 HAVE_XGENERICEVENT:INTERNAL=1
+//Test HAVE_XINPUT2_MULTITOUCH
+HAVE_XINPUT2_MULTITOUCH:INTERNAL=1
 //Have symbol _Exit
 HAVE__EXIT:INTERNAL=1
 //Have symbol _i64toa

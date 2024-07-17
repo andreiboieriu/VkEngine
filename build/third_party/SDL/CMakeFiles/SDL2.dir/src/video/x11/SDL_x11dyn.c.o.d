@@ -106,7 +106,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o: \
   /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
   /usr/include/X11/extensions/XShm.h /usr/include/X11/extensions/shm.h \
-  /usr/include/X11/extensions/Xdbe.h /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/Xcursor/Xcursor.h /usr/include/X11/extensions/Xdbe.h \
+  /usr/include/X11/extensions/dbe.h \
+  /usr/include/X11/extensions/XInput2.h \
+  /usr/include/X11/extensions/XI2.h /usr/include/X11/extensions/Xge.h \
+  /usr/include/X11/extensions/Xfixes.h \
+  /usr/include/X11/extensions/xfixeswire.h \
   /usr/include/X11/extensions/Xrandr.h \
   /usr/include/X11/extensions/randr.h \
   /usr/include/X11/extensions/Xrender.h \
