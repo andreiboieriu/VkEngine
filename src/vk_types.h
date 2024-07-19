@@ -105,6 +105,12 @@ struct MaterialInstance {
     MaterialPass passType;
 };
 
+struct Bounds {
+    glm::vec3 origin;
+    float sphereRadius;
+    glm::vec3 extents;
+};
+
 struct RenderObject {
     uint32_t indexCount;
     uint32_t firstIndex;
@@ -114,6 +120,8 @@ struct RenderObject {
 
     glm::mat4 transform;
     VkDeviceAddress vertexBufferAddress;
+
+    Bounds bounds;
 };
 
 struct RenderContext {
@@ -129,6 +137,8 @@ struct GeoSurface {
     uint32_t startIndex;
     uint32_t count;
     std::shared_ptr<GLTFMaterial> material;
+
+    Bounds bounds;
 };
 
 struct MeshAsset {

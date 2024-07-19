@@ -9,6 +9,7 @@
 #include <memory>
 #include <vulkan/vulkan_core.h>
 
+#include "SDL_rect.h"
 #include "SDL_stdinc.h"
 #include "SDL_video.h"
 #include "fmt/core.h"
@@ -55,10 +56,20 @@ void VulkanEngine::init()
 
     SDL_WindowFlags windowFlags = (SDL_WindowFlags)(SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE);
 
+    // choose external display
+    int displays = SDL_GetNumVideoDisplays();
+    assert(displays > 1);
+
+    std::vector<SDL_Rect> displayBounds;
+    for (int i = 0; i < displays; i++) {
+        displayBounds.push_back(SDL_Rect());
+        SDL_GetDisplayBounds(i, &displayBounds.back());
+    }
+
     mWindow = SDL_CreateWindow(
         "Vulkan Engine",
-        SDL_WINDOWPOS_UNDEFINED,
-        SDL_WINDOWPOS_UNDEFINED,
+        displayBounds[1].x + 100,
+        displayBounds[1].y + 100,
         mWindowExtent.width,
         mWindowExtent.height,
         windowFlags);
@@ -1110,6 +1121,44 @@ void VulkanEngine::run() {
     }
 }
 
+bool isVisible(const RenderObject& obj, const glm::mat4& viewProj) {
+    std::array<glm::vec3, 8> corners {
+        glm::vec3 { 1, 1, 1 },
+        glm::vec3 { 1, 1, -1 },
+        glm::vec3 { 1, -1, 1 },
+        glm::vec3 { 1, -1, -1 },
+        glm::vec3 { -1, 1, 1 },
+        glm::vec3 { -1, 1, -1 },
+        glm::vec3 { -1, -1, 1 },
+        glm::vec3 { -1, -1, -1 },
+    };
+
+    glm::mat4 matrix = viewProj * obj.transform;
+
+    glm::vec3 min = { 1.5, 1.5, 1.5 };
+    glm::vec3 max = { -1.5, -1.5, -1.5 };
+
+    for (int c = 0; c < 8; c++) {
+        // project each corner into clip space
+        glm::vec4 v = matrix * glm::vec4(obj.bounds.origin + (corners[c] * obj.bounds.extents), 1.f);
+
+        // perspective correction
+        v.x = v.x / v.w;
+        v.y = v.y / v.w;
+        v.z = v.z / v.w;
+
+        min = glm::min(glm::vec3 { v.x, v.y, v.z }, min);
+        max = glm::max(glm::vec3 { v.x, v.y, v.z }, max);
+    }
+
+    // check the clip space box is within the view
+    if (min.z > 1.f || max.z < 0.f || min.x > 1.f || max.x < -1.f || min.y > 1.f || max.y < -1.f) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     // reset stat counters
     mStats.drawCallCount = 0;
@@ -1220,6 +1269,9 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     };
 
     for (auto& index : opaqueObjectIndices) {
+        if (!isVisible(mMainRenderContext.opaqueObjects[index], sceneData->viewProjection))
+            continue;
+
         draw(mMainRenderContext.opaqueObjects[index]);
     }
 
