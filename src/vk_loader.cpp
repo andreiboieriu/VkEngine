@@ -386,7 +386,7 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
                     imageSize.height = height;
                     imageSize.depth = 1;
 
-                    newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, false);
+                    newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, true);
 
                     stbi_image_free(data);
                 }
@@ -400,7 +400,7 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
                     imageSize.height = height;
                     imageSize.depth = 1;
 
-                    newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, false);
+                    newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, true);
 
                     stbi_image_free(data);
                 }
@@ -420,7 +420,7 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
                             imageSize.height = height;
                             imageSize.depth = 1;
 
-                            newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, false);
+                            newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, true);
 
                             stbi_image_free(data);
                         }

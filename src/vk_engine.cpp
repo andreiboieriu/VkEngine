@@ -1186,6 +1186,25 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         }
     });
 
+    std::vector<uint32_t> transparentObjectIndices;
+    transparentObjectIndices.reserve(mMainRenderContext.transparentObjects.size());
+
+    for (uint32_t i = 0; i < mMainRenderContext.transparentObjects.size(); i++) {
+        transparentObjectIndices.push_back(i);
+    }
+
+    // sort transparent objects by material and mesh
+    std::sort(transparentObjectIndices.begin(), transparentObjectIndices.end(), [&](const auto& iA, const auto& iB) {
+        const RenderObject& A = mMainRenderContext.transparentObjects[iA];
+        const RenderObject& B = mMainRenderContext.transparentObjects[iB];
+
+        if (A.material == B.material) {
+            return A.indexBuffer < B.indexBuffer;
+        } else {
+            return A.material < B.material;
+        }
+    });
+
     VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, nullptr, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
     VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
 
@@ -1276,8 +1295,11 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     }
 
     // draw transparent objects after opaque ones
-    for (auto& object : mMainRenderContext.transparentObjects) {
-        draw(object);
+    for (auto& index : transparentObjectIndices) {
+        if (!isVisible(mMainRenderContext.transparentObjects[index], sceneData->viewProjection))
+            continue;
+
+        draw(mMainRenderContext.transparentObjects[index]);
     }
 
     vkCmdEndRendering(commandBuffer);
@@ -1349,7 +1371,11 @@ AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat f
 
         vkCmdCopyBufferToImage(commandBuffer, uploadBuffer.buffer, newImage.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, 1, &copyRegion);
 
-        vkutil::transitionImage(commandBuffer, newImage.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        if (mipMapped) {
+            vkutil::generateMipmaps(commandBuffer, newImage.image, VkExtent2D{newImage.imageExtent.width, newImage.imageExtent.height});
+        } else {
+            vkutil::transitionImage(commandBuffer, newImage.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }
     });
 
     destroyBuffer(uploadBuffer);
