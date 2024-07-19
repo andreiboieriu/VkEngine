@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/vkbootstrap -isystem /home/gooby/vulkan/1.3.283.0/x86_64/include
+CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/vkbootstrap
 
-CXX_FLAGS = -std=gnu++20
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++20
 

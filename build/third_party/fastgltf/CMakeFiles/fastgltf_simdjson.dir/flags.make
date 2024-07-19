@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -O3 -DNDEBUG -O3 -DNDEBUG -std=gnu++17
 

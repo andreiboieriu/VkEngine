@@ -19,6 +19,25 @@ constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
 
 class VulkanEngine {
 public:
+	struct Stats {
+		float frameTime;
+		int triangleCount;
+		int drawCallCount;
+		float updateTime;
+		float drawGeometryTime;
+		float drawTime;
+
+		float frameTimeBuffer;
+		float updateTimeBuffer;
+		float drawGeometryTimeBuffer;
+		float drawTimeBuffer;
+
+		float msElapsed;
+		int frameCount;
+
+		int fps;
+	};
+
 	static VulkanEngine& get();
 
 	//initializes everything in the engine
@@ -126,7 +145,7 @@ private:
 	// flags
 	bool mIsInitialized = false;
 	bool mStopRendering = false;
-	bool mUseValidationLayers = true;
+	bool mUseValidationLayers = false;
 
 	int mFrameNumber = 0;
 
@@ -135,7 +154,7 @@ private:
 	uint32_t mGraphicsQueueFamily;
 
 	// window size basically
-	VkExtent2D mWindowExtent = {1280, 720};
+	VkExtent2D mWindowExtent = {1600, 900};
 
 	// sdl window handle
 	struct SDL_Window* mWindow = nullptr;
@@ -197,4 +216,6 @@ private:
 	Camera mCamera;
 
 	std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedScenes;
+
+	Stats mStats{};
 };

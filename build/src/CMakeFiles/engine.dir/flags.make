@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -DFASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0 -DFASTGLTF_ENABLE_DEPRECATED_EXT=0 -DFASTGLTF_USE_64BIT_FLOAT=0 -DFASTGLTF_USE_CUSTOM_SMALLVECTOR=0 -DGLM_FORCE_DEPTH_ZERO_TO_ONE
 
-CXX_INCLUDES = -I/home/gooby/Development/VkEngine/src -I/home/gooby/Development/VkEngine/third_party/vma -I/home/gooby/Development/VkEngine/third_party/glm -I/home/gooby/Development/VkEngine/third_party/fmt/include -I/home/gooby/Development/VkEngine/third_party/stb_image -I/home/gooby/Development/VkEngine/build/third_party/SDL/include -I/home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2 -I/home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2 -I/home/gooby/Development/VkEngine/third_party/vkbootstrap -I/home/gooby/Development/VkEngine/third_party/imgui -I/home/gooby/Development/VkEngine/third_party/fastgltf/include -isystem /home/gooby/vulkan/1.3.283.0/x86_64/include
+CXX_INCLUDES = -I/home/gooby/Development/VkEngine/src -I/home/gooby/Development/VkEngine/third_party/vma -I/home/gooby/Development/VkEngine/third_party/glm -I/home/gooby/Development/VkEngine/third_party/fmt/include -I/home/gooby/Development/VkEngine/third_party/stb_image -I/home/gooby/Development/VkEngine/build/third_party/SDL/include -I/home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2 -I/home/gooby/Development/VkEngine/build/third_party/SDL/include-config-release/SDL2 -I/home/gooby/Development/VkEngine/third_party/vkbootstrap -I/home/gooby/Development/VkEngine/third_party/imgui -I/home/gooby/Development/VkEngine/third_party/fastgltf/include
 
-CXX_FLAGS = -g -std=gnu++20
+CXX_FLAGS = -g -O3 -DNDEBUG -std=gnu++20
 
 # PCH options: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch_OPTIONS = -Winvalid-pch;-fpch-instantiate-templates;-Xclang;-emit-pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx;-x;c++-header
 

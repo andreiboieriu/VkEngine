@@ -169,6 +169,7 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -178,6 +179,7 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -398,23 +400,23 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/camera.cpp \
   ../src/camera.h \
   third_party/SDL/include/SDL2/SDL_events.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
+  third_party/SDL/include-config-release/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -744,6 +746,7 @@ src/CMakeFiles/engine.dir/cmake_pch.hxx.pch: src/CMakeFiles/engine.dir/cmake_pch
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -753,6 +756,7 @@ src/CMakeFiles/engine.dir/cmake_pch.hxx.pch: src/CMakeFiles/engine.dir/cmake_pch
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -981,18 +985,18 @@ src/CMakeFiles/engine.dir/cmake_pch.hxx.pch: src/CMakeFiles/engine.dir/cmake_pch
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h
 
 src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -1162,6 +1166,7 @@ src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -1171,6 +1176,7 @@ src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -1391,18 +1397,18 @@ src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/cmake_
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/deletion_queue.cpp \
   ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
@@ -1584,6 +1590,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -1593,6 +1600,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -1813,18 +1821,18 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/main.cpp \
   ../src/vk_engine.h \
   ../src/vk_materials.h \
@@ -1886,7 +1894,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   ../src/camera.h \
   third_party/SDL/include/SDL2/SDL_events.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
+  third_party/SDL/include-config-release/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -2084,6 +2092,7 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -2093,6 +2102,7 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -2313,18 +2323,18 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_descriptors.cpp \
   ../src/vk_descriptors.h \
   /usr/include/c++/12/span \
@@ -2517,6 +2527,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -2526,6 +2537,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -2746,18 +2758,18 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_engine.cpp \
   ../src/vk_engine.h \
   ../src/vk_materials.h \
@@ -2819,7 +2831,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../src/camera.h \
   third_party/SDL/include/SDL2/SDL_events.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
+  third_party/SDL/include-config-release/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -3183,6 +3195,7 @@ src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -3192,6 +3205,7 @@ src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -3412,18 +3426,18 @@ src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_images.cpp \
   ../src/vk_images.h \
   ../src/vk_initializers.h \
@@ -3625,6 +3639,7 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -3634,6 +3649,7 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -3854,18 +3870,18 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_initializers.cpp \
   ../src/vk_initializers.h \
   ../src/vk_types.h \
@@ -4059,6 +4075,7 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -4068,6 +4085,7 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -4288,18 +4306,18 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_loader.cpp \
   ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/cstring \
@@ -4361,7 +4379,7 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../src/camera.h \
   third_party/SDL/include/SDL2/SDL_events.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
+  third_party/SDL/include-config-release/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -4671,6 +4689,7 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -4680,6 +4699,7 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -4900,18 +4920,18 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_materials.cpp \
   ../src/vk_materials.h \
   ../src/vk_descriptors.h \
@@ -5107,6 +5127,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -5116,6 +5137,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -5336,18 +5358,18 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_pipelines.cpp \
   ../src/vk_pipelines.h \
   ../src/vk_types.h \
@@ -5549,6 +5571,7 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -5558,6 +5581,7 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -5778,18 +5802,18 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_scene.cpp \
   ../src/vk_scene.h \
   ../src/vk_types.h \
@@ -5934,8 +5958,6 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h:
-
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h:
@@ -6016,12 +6038,6 @@ third_party/SDL/include/SDL2/SDL_main.h:
 
 ../third_party/glm/glm/mat4x4.hpp:
 
-/usr/include/assert.h:
-
-/usr/include/c++/12/span:
-
-../third_party/glm/glm/ext/matrix_transform.inl:
-
 /usr/include/c++/12/bits/erase_if.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h:
@@ -6033,8 +6049,6 @@ third_party/SDL/include/SDL2/SDL_main.h:
 /usr/include/c++/12/bits/std_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
-
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
 
 ../src/vk_pipelines.cpp:
 
@@ -6068,6 +6082,8 @@ third_party/SDL/include/SDL2/SDL_main.h:
 
 /usr/include/c++/12/bits/basic_string.tcc:
 
+/usr/include/vulkan/vulkan.h:
+
 ../third_party/glm/glm/common.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
@@ -6099,8 +6115,6 @@ third_party/SDL/include/SDL2/SDL_main.h:
 /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
@@ -6156,8 +6170,6 @@ third_party/SDL/include/SDL2/SDL_cpuinfo.h:
 
 /usr/include/c++/12/bits/max_size_type.h:
 
-/usr/include/c++/12/bits/ranges_base.h:
-
 /usr/include/c++/12/bits/cxxabi_forced.h:
 
 /usr/include/c++/12/bits/locale_classes.h:
@@ -6198,8 +6210,6 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h:
 
-../third_party/glm/glm/detail/func_matrix.inl:
-
 /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
@@ -6226,6 +6236,12 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 ../third_party/glm/glm/ext/matrix_double2x2.hpp:
 
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+../third_party/glm/glm/ext/matrix_float3x2.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 ../third_party/glm/glm/ext/matrix_float2x3_precision.hpp:
@@ -6242,6 +6258,8 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 /usr/include/ctype.h:
 
+/usr/include/vk_video/vulkan_video_codec_h265std_encode.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
@@ -6251,8 +6269,6 @@ third_party/SDL/include/SDL2/SDL_render.h:
 /usr/include/c++/12/cstring:
 
 /usr/include/c++/12/bits/streambuf_iterator.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -6289,6 +6305,10 @@ third_party/SDL/include/SDL2/SDL_haptic.h:
 /usr/include/c++/12/numbers:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
+third_party/SDL/include/SDL2/begin_code.h:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
@@ -6466,8 +6486,6 @@ src/CMakeFiles/engine.dir/cmake_pch.hxx:
 
 ../third_party/glm/glm/ext/quaternion_trigonometric.hpp:
 
-/usr/include/c++/12/bits/locale_facets_nonio.h:
-
 /usr/include/c++/12/bits/memoryfwd.h:
 
 /usr/include/c++/12/bits/cxxabi_init_exception.h:
@@ -6475,6 +6493,8 @@ src/CMakeFiles/engine.dir/cmake_pch.hxx:
 /usr/include/c++/12/backward/binders.h:
 
 ../third_party/glm/glm/detail/qualifier.hpp:
+
+/usr/include/vk_video/vulkan_video_codec_h265std.h:
 
 ../third_party/glm/glm/trigonometric.hpp:
 
@@ -6550,6 +6570,10 @@ third_party/SDL/include/SDL2/SDL_sensor.h:
 
 /usr/include/c++/12/clocale:
 
+../third_party/glm/glm/ext/matrix_float3x3_precision.hpp:
+
+../third_party/glm/glm/ext/matrix_float4x2_precision.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
@@ -6568,6 +6592,10 @@ third_party/SDL/include/SDL2/SDL_sensor.h:
 
 /usr/include/c++/12/cwctype:
 
+/usr/include/c++/12/bits/vector.tcc:
+
+/usr/include/c++/12/tr1/hypergeometric.tcc:
+
 ../third_party/fmt/include/fmt/core.h:
 
 /usr/include/c++/12/bits/unique_ptr.h:
@@ -6577,6 +6605,8 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 ../third_party/glm/glm/detail/type_vec2.hpp:
 
 ../third_party/glm/glm/ext/vector_double4_precision.hpp:
+
+/usr/include/vulkan/vulkan_core.h:
 
 ../third_party/glm/glm/ext/quaternion_common.inl:
 
@@ -6686,6 +6716,12 @@ third_party/SDL/include/SDL2/SDL_timer.h:
 
 /usr/include/c++/12/bits/stl_deque.h:
 
+/usr/include/assert.h:
+
+/usr/include/c++/12/span:
+
+../third_party/glm/glm/ext/matrix_transform.inl:
+
 ../third_party/glm/glm/simd/platform.h:
 
 ../third_party/glm/glm/detail/compute_vector_relational.hpp:
@@ -6737,8 +6773,6 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 ../third_party/glm/glm/ext/vector_double2.hpp:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h:
 
@@ -6794,8 +6828,6 @@ third_party/SDL/include/SDL2/SDL.h:
 
 ../third_party/glm/glm/ext/vector_int4.hpp:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h:
-
 ../src/vk_enum_string_helper.h:
 
 ../third_party/glm/glm/ext/vector_int4_precision.hpp:
@@ -6850,9 +6882,11 @@ third_party/SDL/include/SDL2/SDL_loadso.h:
 
 ../third_party/glm/glm/detail/type_mat3x2.hpp:
 
-../third_party/glm/glm/ext/matrix_double3x2_precision.hpp:
+/usr/include/c++/12/bits/locale_facets_nonio.h:
 
-../third_party/glm/glm/ext/matrix_float3x2.hpp:
+/usr/include/vk_video/vulkan_video_codec_av1std_decode.h:
+
+../third_party/glm/glm/ext/matrix_double3x2_precision.hpp:
 
 ../third_party/glm/glm/ext/matrix_float3x2_precision.hpp:
 
@@ -6946,7 +6980,13 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h:
+
+/usr/include/vulkan/vk_platform.h:
+
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 ../third_party/glm/glm/mat2x3.hpp:
 
@@ -6992,43 +7032,37 @@ third_party/SDL/include/SDL2/SDL_keycode.h:
 
 ../third_party/glm/glm/vector_relational.hpp:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h:
-
 /usr/include/c++/12/memory:
 
 /usr/include/c++/12/type_traits:
 
 ../third_party/glm/glm/detail/func_common.inl:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h:
+/usr/include/vk_video/vulkan_video_codec_h264std.h:
 
-../third_party/glm/glm/ext/matrix_float3x3_precision.hpp:
+../third_party/glm/glm/detail/func_matrix.inl:
 
-../third_party/glm/glm/ext/matrix_float4x2_precision.hpp:
+/usr/include/vk_video/vulkan_video_codecs_common.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h:
+third_party/SDL/include/SDL2/SDL_gesture.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h:
+/usr/include/c++/12/bits/ranges_base.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h:
+/usr/include/vk_video/vulkan_video_codec_h264std_encode.h:
 
-/usr/include/c++/12/bits/vector.tcc:
+/usr/include/vk_video/vulkan_video_codec_h264std_decode.h:
 
-/usr/include/c++/12/tr1/hypergeometric.tcc:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h:
+/usr/include/vk_video/vulkan_video_codec_h265std_decode.h:
 
 third_party/SDL/include/SDL2/SDL_events.h:
 
-third_party/SDL/include-config-/SDL2/SDL_config.h:
+third_party/SDL/include-config-release/SDL2/SDL_config.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 third_party/SDL/include/SDL2/close_code.h:
 
 /usr/include/c++/12/stdlib.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h:
 
 /usr/include/string.h:
 
@@ -7072,8 +7106,6 @@ third_party/SDL/include/SDL2/SDL_mutex.h:
 
 third_party/SDL/include/SDL2/SDL_quit.h:
 
-third_party/SDL/include/SDL2/SDL_gesture.h:
-
 third_party/SDL/include/SDL2/SDL_system.h:
 
 third_party/SDL/include/SDL2/SDL_touch.h:
@@ -7093,6 +7125,8 @@ third_party/SDL/include/SDL2/SDL_touch.h:
 /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h:
 
 /usr/include/c++/12/bits/std_function.h:
+
+/usr/include/vk_video/vulkan_video_codec_av1std.h:
 
 /usr/include/c++/12/bits/stl_heap.h:
 
@@ -7200,8 +7234,6 @@ third_party/SDL/include/SDL2/SDL_gamecontroller.h:
 
 ../src/main.cpp:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h:
-
 ../src/vk_materials.h:
 
 /usr/include/c++/12/bits/move.h:
@@ -7223,7 +7255,3 @@ third_party/SDL/include/SDL2/SDL_gamecontroller.h:
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/libintl.h:
-
-third_party/SDL/include/SDL2/begin_code.h:
-
-/usr/include/c++/12/bits/locale_facets_nonio.tcc:

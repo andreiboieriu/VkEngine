@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/fmt/include
 
-CXX_FLAGS = 
+CXX_FLAGS = -O3 -DNDEBUG
 

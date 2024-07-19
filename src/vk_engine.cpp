@@ -346,6 +346,7 @@ void VulkanEngine::createSwapchain(uint32_t width, uint32_t height) {
     vkb::Swapchain vkbSwapchain = vkbSwapchainBuilder
         .set_desired_format(surfaceFormat)
         .set_desired_present_mode(VK_PRESENT_MODE_FIFO_KHR) // vsync present mode
+        // .set_desired_present_mode(VK_PRESENT_MODE_MAILBOX_KHR)
         .set_desired_extent(width, height)
         .add_image_usage_flags(VK_IMAGE_USAGE_TRANSFER_DST_BIT)
         .build()
@@ -815,7 +816,8 @@ void VulkanEngine::resizeSwapchain() {
 }
 
 void VulkanEngine::draw() {
-    updateScene();
+    // get start time
+    auto start = std::chrono::system_clock::now();
 
     // wait until gpu finishes rendering last frame
     VK_CHECK(vkWaitForFences(mDevice, 1, &getCurrentFrame().renderFence, true, 1e9));
@@ -836,6 +838,8 @@ void VulkanEngine::draw() {
         nullptr,
         &swapchainImageIndex
         );
+
+    auto end = std::chrono::system_clock::now();
 
     if (e == VK_ERROR_OUT_OF_DATE_KHR || e == VK_SUBOPTIMAL_KHR) {
         mResizeRequested = true;
@@ -919,6 +923,11 @@ void VulkanEngine::draw() {
 
     // increment frame number
     mFrameNumber++;
+
+    // get end time
+    auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+
+    mStats.drawTimeBuffer += elapsed.count() / 1000.f;
 }
 
 void VulkanEngine::drawBackground(VkCommandBuffer commandBuffer) {
@@ -972,6 +981,9 @@ void VulkanEngine::run() {
 
     // main loop
     while (!bQuit) {
+        // get start time
+        auto start = std::chrono::system_clock::now();
+
         // Handle events on queue
         while (SDL_PollEvent(&e) != 0) {
             switch (e.type) {
@@ -1025,7 +1037,12 @@ void VulkanEngine::run() {
         // demo window
         // ImGui::ShowDemoWindow();
 
-        if (ImGui::Begin("background")) {
+        ImVec2 backgroundPos;
+        ImVec2 backgroundSize;
+
+        if (ImGui::Begin("background", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoTitleBar)) {
+            ImGui::SetWindowPos({0.0f, 0.0f});
+
             ComputeEffect& effect = backgroundEffects[currentBackgroundEffect];
 
             ImGui::SliderFloat("Render Scale", &mRenderScale, 0.3f, 1.f);
@@ -1038,18 +1055,67 @@ void VulkanEngine::run() {
             ImGui::InputFloat4("data2", (float*)& effect.pushConstants.data2);
             ImGui::InputFloat4("data3", (float*)& effect.pushConstants.data3);
             ImGui::InputFloat4("data4", (float*)& effect.pushConstants.data4);
+
+            backgroundPos = ImGui::GetWindowPos();
+            backgroundSize = ImGui::GetWindowSize();
         }
+
+        ImGui::End();
+
+        ImGui::Begin("Stats");
+        ImGui::Text("fps %i", mStats.fps);
+        ImGui::Text("frametime %f ms", mStats.frameTime);
+        ImGui::Text("update time %f ms", mStats.updateTime);
+        ImGui::Text("draw time %f ms", mStats.drawTime);
+        ImGui::Text("draw geometry time %f ms", mStats.drawGeometryTime);
+        ImGui::Text("triangles %i", mStats.triangleCount);
+        ImGui::Text("draws %i", mStats.drawCallCount);
 
         ImGui::End();
 
         // render ImGui
         ImGui::Render();
 
+        updateScene();
         draw();
+
+        // get frame end time
+        auto end = std::chrono::system_clock::now();
+
+        // calculate elapsed time
+        auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        mStats.frameTimeBuffer += elapsed.count() / 1000.f; // convert to milliseconds
+
+        mStats.frameCount++;
+        mStats.msElapsed += elapsed.count() / 1000.f;
+
+        if (mStats.msElapsed >= 1000.f) {
+            mStats.frameTime = mStats.frameTimeBuffer / mStats.frameCount;
+            mStats.updateTime = mStats.updateTimeBuffer / mStats.frameCount;
+            mStats.drawGeometryTime = mStats.drawGeometryTimeBuffer / mStats.frameCount;
+            mStats.drawTime = mStats.drawTimeBuffer / mStats.frameCount;
+
+            mStats.frameTimeBuffer = 0;
+            mStats.updateTimeBuffer = 0;
+            mStats.drawGeometryTimeBuffer = 0;
+            mStats.drawTimeBuffer = 0;
+
+            mStats.fps = mStats.frameCount;
+
+            mStats.msElapsed -= 1000.f;
+            mStats.frameCount = 0;
+        }
     }
 }
 
 void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
+    // reset stat counters
+    mStats.drawCallCount = 0;
+    mStats.triangleCount = 0;
+
+    // get start time
+    auto start = std::chrono::system_clock::now();
+
     VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, nullptr, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
     VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
 
@@ -1111,6 +1177,10 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         vkCmdPushConstants(commandBuffer, object.material->pipeline->layout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(GPUDrawPushConstants), &pushConstants);
 
         vkCmdDrawIndexed(commandBuffer, object.indexCount, 1, object.firstIndex, 0, 0);
+    
+        // update stats
+        mStats.drawCallCount++;
+        mStats.triangleCount += object.indexCount / 3;
     };
 
     for (auto& object : mMainRenderContext.opaqueObjects) {
@@ -1123,6 +1193,12 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     }
 
     vkCmdEndRendering(commandBuffer);
+
+    // get end time
+    auto end = std::chrono::system_clock::now();
+
+    auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    mStats.drawGeometryTimeBuffer += elapsed.count() / 1000.f;
 }
 
 AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {
@@ -1199,6 +1275,9 @@ void VulkanEngine::destroyImage(const AllocatedImage& image) {
 }
 
 void VulkanEngine::updateScene() {
+    // get start time
+    auto start = std::chrono::system_clock::now();
+
     mMainRenderContext.opaqueObjects.clear();
     mMainRenderContext.transparentObjects.clear();
 
@@ -1215,6 +1294,11 @@ void VulkanEngine::updateScene() {
     mSceneData.sunlightColor = glm::vec4(1.f);
     mSceneData.sunlightDirection = glm::vec4(0.f, 1.0f, .5f, 1.f);
 
-
     mLoadedScenes["structure"]->draw(glm::mat4(1.f), mMainRenderContext);
+
+    // get end time
+    auto end = std::chrono::system_clock::now();
+
+    auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    mStats.updateTimeBuffer += elapsed.count() / 1000.f;
 }

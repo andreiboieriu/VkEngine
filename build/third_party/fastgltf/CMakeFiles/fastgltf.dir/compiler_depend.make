@@ -85,6 +85,7 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o: ../third_party/fa
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/specfun.h \
   /usr/include/c++/12/limits \
@@ -186,6 +187,7 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o: ../third_party/fa
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -455,6 +457,7 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/specfun.h \
   /usr/include/c++/12/limits \
@@ -553,6 +556,7 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -769,8 +773,6 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
-
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h:
@@ -863,6 +865,10 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 
 /usr/include/c++/12/pstl/execution_defs.h:
 
+/usr/include/c++/12/pstl/glue_memory_defs.h:
+
+/usr/include/c++/12/backward/auto_ptr.h:
+
 /usr/include/c++/12/bits/hashtable.h:
 
 /usr/include/c++/12/ext/concurrence.h:
@@ -880,8 +886,6 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 /usr/include/c++/12/unordered_map:
 
 /usr/include/c++/12/bits/stl_construct.h:
-
-/usr/include/c++/12/pstl/glue_memory_defs.h:
 
 /usr/include/c++/12/bits/refwrap.h:
 
@@ -932,12 +936,6 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h:
 
 /usr/include/c++/12/ostream:
-
-/usr/include/c++/12/bits/erase_if.h:
-
-../third_party/fastgltf/include/fastgltf/util.hpp:
-
-/usr/include/assert.h:
 
 /usr/include/c++/12/bits/specfun.h:
 
@@ -1034,6 +1032,12 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 /usr/include/c++/12/bits/exception_defines.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h:
+
+/usr/include/c++/12/cfloat:
+
+/usr/include/c++/12/bits/char_traits.h:
 
 /usr/include/c++/12/bits/stl_iterator_base_types.h:
 
@@ -1221,6 +1225,12 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+/usr/include/c++/12/bits/erase_if.h:
+
+../third_party/fastgltf/include/fastgltf/util.hpp:
+
+/usr/include/assert.h:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/c++/12/vector:
@@ -1230,6 +1240,10 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 /usr/include/c++/12/bits/locale_conv.h:
 
 /usr/include/c++/12/bits/stl_uninitialized.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/c++/12/bits/stl_vector.h:
 
@@ -1288,12 +1302,6 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h:
-
-/usr/include/c++/12/cfloat:
-
-/usr/include/c++/12/bits/char_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -1409,8 +1417,6 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 
 /usr/include/sched.h:
 
-/usr/include/c++/12/backward/auto_ptr.h:
-
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h:
@@ -1460,6 +1466,8 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o: ../third_party/
 /usr/include/c++/12/tr1/riemann_zeta.tcc:
 
 /usr/include/c++/12/bits/basic_ios.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 

@@ -62,11 +62,11 @@ set_target_properties(fmt::fmt-header-only PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "/home/gooby/Development/VkEngine/third_party/fmt/include"
 )
 
-# Import target "fmt::fmt" for configuration ""
-set_property(TARGET fmt::fmt APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "fmt::fmt" for configuration "Release"
+set_property(TARGET fmt::fmt APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(fmt::fmt PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/gooby/Development/VkEngine/build/third_party/fmt/libfmt.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/home/gooby/Development/VkEngine/build/third_party/fmt/libfmt.a"
   )
 
 # This file does not depend on other imported targets which have

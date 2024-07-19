@@ -290,12 +290,12 @@ src/engine: src/CMakeFiles/engine.dir/deletion_queue.cpp.o
 src/engine: src/CMakeFiles/engine.dir/vk_materials.cpp.o
 src/engine: src/CMakeFiles/engine.dir/vk_scene.cpp.o
 src/engine: src/CMakeFiles/engine.dir/build.make
-src/engine: /home/gooby/vulkan/1.3.283.0/x86_64/lib/libvulkan.so
+src/engine: /usr/lib/x86_64-linux-gnu/libvulkan.so
 src/engine: third_party/fmt/libfmt.a
 src/engine: third_party/libvkbootstrap.a
 src/engine: third_party/libimgui.a
 src/engine: third_party/fastgltf/libfastgltf.a
-src/engine: /home/gooby/vulkan/1.3.283.0/x86_64/lib/libvulkan.so
+src/engine: /usr/lib/x86_64-linux-gnu/libvulkan.so
 src/engine: third_party/SDL/libSDL2-2.0.so.0.2800.4
 src/engine: third_party/fastgltf/libfastgltf_simdjson.a
 src/engine: src/CMakeFiles/engine.dir/link.txt

@@ -38,6 +38,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui.cpp.o: ../third_party/imgui/imgui.c
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/stdlib.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -70,6 +71,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui.cpp.o: ../third_party/imgui/imgui.c
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/math.h \
@@ -263,6 +265,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.o: ../third_party/imgui/im
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -273,6 +276,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.o: ../third_party/imgui/im
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/stdlib.h \
   /usr/include/c++/12/cstdlib \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
@@ -319,6 +323,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o: ../third_party/imgui/im
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/stdlib.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -351,6 +356,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o: ../third_party/imgui/im
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/math.h \
@@ -486,7 +492,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_sdl2.cpp.o: ../third_party/img
   third_party/SDL/include/SDL2/SDL.h \
   third_party/SDL/include/SDL2/SDL_main.h \
   third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
+  third_party/SDL/include-config-release/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -527,6 +533,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_sdl2.cpp.o: ../third_party/img
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/stdlib.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -536,6 +543,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_sdl2.cpp.o: ../third_party/img
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/wchar.h \
@@ -715,8 +723,8 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_vulkan.cpp.o: ../third_party/i
   /usr/include/strings.h \
   /usr/include/assert.h \
   ../third_party/imgui/imgui_impl_vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
@@ -725,16 +733,16 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_vulkan.cpp.o: ../third_party/i
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -745,7 +753,8 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_vulkan.cpp.o: ../third_party/i
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h
 
 third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o: ../third_party/imgui/imgui_tables.cpp \
   ../third_party/imgui/imgui.h \
@@ -784,6 +793,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o: ../third_party/imgui/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/stdlib.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -816,6 +826,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o: ../third_party/imgui/
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/math.h \
@@ -964,6 +975,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: ../third_party/imgui
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/stdlib.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -996,6 +1008,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: ../third_party/imgui
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/math.h \
@@ -1110,9 +1123,13 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: ../third_party/imgui
 
 ../third_party/imgui/imgui_widgets.cpp:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h:
+/usr/include/vk_video/vulkan_video_codec_av1std_decode.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h:
+/usr/include/vk_video/vulkan_video_codec_av1std.h:
+
+/usr/include/vk_video/vulkan_video_codec_h264std_decode.h:
+
+/usr/include/vk_video/vulkan_video_codec_h265std.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h:
 
@@ -1150,13 +1167,11 @@ third_party/SDL/include/SDL2/SDL_misc.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h:
+/usr/include/vk_video/vulkan_video_codec_h264std.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-third_party/SDL/include/SDL2/SDL_gesture.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
@@ -1188,8 +1203,6 @@ third_party/SDL/include/SDL2/SDL_pixels.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h:
 
-third_party/SDL/include/SDL2/SDL_system.h:
-
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
@@ -1210,8 +1223,6 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h:
-
 /usr/include/limits.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
@@ -1220,9 +1231,9 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-../third_party/imgui/imgui_tables.cpp:
+third_party/SDL/include/SDL2/SDL_gesture.h:
 
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+/usr/include/vk_video/vulkan_video_codecs_common.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
@@ -1232,15 +1243,19 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 
 third_party/SDL/include/SDL2/SDL_rect.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
 /usr/include/assert.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h:
 
 third_party/SDL/include/SDL2/SDL_rwops.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h:
 
@@ -1306,11 +1321,7 @@ third_party/SDL/include/SDL2/close_code.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h:
-
 ../third_party/imgui/imgui.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h:
 
@@ -1330,11 +1341,11 @@ third_party/SDL/include/SDL2/SDL_surface.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h:
-
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/c++/12/ext/type_traits.h:
 
 /usr/include/stdlib.h:
 
@@ -1342,13 +1353,15 @@ third_party/SDL/include/SDL2/SDL_scancode.h:
 
 /usr/include/stdc-predef.h:
 
+../third_party/imgui/imgui_tables.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/vulkan/vk_platform.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/c++/12/ext/type_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -1380,11 +1393,15 @@ third_party/SDL/include/SDL2/SDL_keycode.h:
 
 /usr/include/features-time64.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h:
-
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h:
+
+/usr/include/string.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h:
 
@@ -1404,17 +1421,7 @@ third_party/SDL/include/SDL2/SDL_guid.h:
 
 /usr/include/X11/Xosdefs.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h:
-
-/usr/include/string.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -1446,6 +1453,10 @@ third_party/SDL/include/SDL2/SDL_guid.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h:
 
+third_party/SDL/include/SDL2/SDL_system.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
@@ -1456,7 +1467,13 @@ third_party/SDL/include/SDL2/SDL_power.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h:
 
+third_party/SDL/include-config-release/SDL2/SDL_config.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
+
+/usr/include/vk_video/vulkan_video_codec_h265std_encode.h:
 
 /usr/include/ctype.h:
 
@@ -1492,6 +1509,8 @@ third_party/SDL/include/SDL2/SDL_loadso.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h:
 
+/usr/include/vk_video/vulkan_video_codec_h265std_decode.h:
+
 /usr/include/X11/X.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h:
@@ -1501,6 +1520,8 @@ third_party/SDL/include/SDL2/SDL_version.h:
 /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h:
 
 third_party/SDL/include/SDL2/SDL_messagebox.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h:
 
@@ -1576,9 +1597,9 @@ third_party/SDL/include/SDL2/SDL_locale.h:
 
 ../third_party/imgui/imgui_impl_sdl2.cpp:
 
-third_party/SDL/include/SDL2/SDL_stdinc.h:
+third_party/SDL/include/SDL2/SDL_main.h:
 
-third_party/SDL/include-config-/SDL2/SDL_config.h:
+third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 third_party/SDL/include/SDL2/SDL_assert.h:
 
@@ -1602,8 +1623,6 @@ third_party/SDL/include/SDL2/SDL_gamecontroller.h:
 
 third_party/SDL/include/SDL2/SDL_sensor.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h:
-
 third_party/SDL/include/SDL2/SDL_quit.h:
 
 third_party/SDL/include/SDL2/SDL_haptic.h:
@@ -1626,10 +1645,8 @@ third_party/SDL/include/SDL2/SDL_syswm.h:
 
 ../third_party/imgui/imgui_impl_vulkan.cpp:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h:
+/usr/include/vulkan/vulkan.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h:
+/usr/include/vulkan/vulkan_core.h:
 
-third_party/SDL/include/SDL2/SDL_main.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h:
+/usr/include/vk_video/vulkan_video_codec_h264std_encode.h:

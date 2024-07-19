@@ -23,6 +23,15 @@ add_executable (engine
   vk_materials.h
   vk_scene.cpp
   vk_scene.h
+  ecs_core/component_array.h
+  ecs_core/component_manager.h
+  ecs_core/coordinator.h
+  ecs_core/entity_manager.h
+  ecs_core/event_manager.h
+  ecs_core/event.h
+  ecs_core/system_manager.h
+  ecs_core/system.h
+  ecs_core/types.h
 )
 
 set_property(TARGET engine PROPERTY CXX_STANDARD 20)

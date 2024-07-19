@@ -1,13 +1,13 @@
 # Hashes of file build rules.
-0813dd0c35cbdf088390ef0133decac4 ../shaders/colored_triangle.frag.spv
-4c329e87f1b43f62105a2fe4469ee9c2 ../shaders/colored_triangle.vert.spv
-d7158fa209cf62428ac37e03cf66e7f4 ../shaders/colored_triangle_mesh.vert.spv
-e22d65a1fd762f945c550e1954b4bac1 ../shaders/gradient.comp.spv
-8b6c5fdaec2ae34caa343b4e1fcd8e3c ../shaders/gradient_color.comp.spv
-c7181b16af4bf24bbd95f8275c4fed04 ../shaders/mesh.frag.spv
-ab7a404db69d049486091132d820f4e4 ../shaders/mesh.vert.spv
-0f1e1854d6331a1940c4d56f29ca3e95 ../shaders/sky.comp.spv
-f08243018ff704df251381a1ee600877 ../shaders/tex_image.frag.spv
+cac14f35e9c7958a59fc1ed6c8ea8cad ../shaders/colored_triangle.frag.spv
+0abf02f05c7d97151fa337e53e2b9dc4 ../shaders/colored_triangle.vert.spv
+0640812842bcd411ea4f0aebb3e3f4e0 ../shaders/colored_triangle_mesh.vert.spv
+4bedb509757b5e1bd58ecb003f9cde6a ../shaders/gradient.comp.spv
+edbd9bb3571bc17c87681eda2d05c8bb ../shaders/gradient_color.comp.spv
+97b118ffefe2ee097a5df32b8e480eb5 ../shaders/mesh.frag.spv
+fb3a508492451bab6df52d947fd258ba ../shaders/mesh.vert.spv
+a0745da857eeb41d88ae246f61b450ed ../shaders/sky.comp.spv
+24de61ff6abc3a632b500cccdffea1d3 ../shaders/tex_image.frag.spv
 f88146ff694674a67db1a6915f68b1d5 CMakeFiles/Shaders
 6d6e2d138216d9ebc3725744c7d4a2e6 third_party/SDL/CMakeFiles/sdl_headers_copy
 6522fe8b0968e58dd3eeb755b34e2ea0 third_party/SDL/CMakeFiles/uninstall

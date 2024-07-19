@@ -39,6 +39,10 @@ public:
         return mParent.lock() != nullptr;
     }
 
+    std::vector<std::shared_ptr<Node>>& getChildren() {
+        return mChildren;
+    }
+
 protected:
 
     std::weak_ptr<Node> mParent;

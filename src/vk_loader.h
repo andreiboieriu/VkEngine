@@ -38,6 +38,10 @@ public:
 
     void addImage(std::string name, AllocatedImage image);
 
+    std::vector<std::shared_ptr<Node>>& getTopNodes() {
+        return mTopNodes;
+    }
+
 private:
     void freeResources();
 

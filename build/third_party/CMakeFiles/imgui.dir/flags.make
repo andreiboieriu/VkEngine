@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/imgui -I/home/gooby/Development/VkEngine/build/third_party/SDL/include -I/home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2 -I/home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2 -isystem /home/gooby/vulkan/1.3.283.0/x86_64/include
+CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/imgui -I/home/gooby/Development/VkEngine/build/third_party/SDL/include -I/home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2 -I/home/gooby/Development/VkEngine/build/third_party/SDL/include-config-release/SDL2
 
-CXX_FLAGS = 
+CXX_FLAGS = -O3 -DNDEBUG
 
