@@ -347,6 +347,7 @@ void VulkanEngine::createSwapchain(uint32_t width, uint32_t height) {
         .set_desired_format(surfaceFormat)
         .set_desired_present_mode(VK_PRESENT_MODE_FIFO_KHR) // vsync present mode
         // .set_desired_present_mode(VK_PRESENT_MODE_MAILBOX_KHR)
+        .set_desired_min_image_count(vkb::SwapchainBuilder::DOUBLE_BUFFERING)
         .set_desired_extent(width, height)
         .add_image_usage_flags(VK_IMAGE_USAGE_TRANSFER_DST_BIT)
         .build()
@@ -828,6 +829,7 @@ void VulkanEngine::draw() {
     // clear descriptor pools for current frame
     getCurrentFrame().descriptorAllocator.clearPools(mDevice);
 
+
     // request image from swapchain
     uint32_t swapchainImageIndex;
     VkResult e = vkAcquireNextImageKHR(
@@ -1116,14 +1118,30 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     // get start time
     auto start = std::chrono::system_clock::now();
 
+    std::vector<uint32_t> opaqueObjectIndices;
+    opaqueObjectIndices.reserve(mMainRenderContext.opaqueObjects.size());
+
+    for (uint32_t i = 0; i < mMainRenderContext.opaqueObjects.size(); i++) {
+        opaqueObjectIndices.push_back(i);
+    }
+
+    // sort opaque objects by material and mesh
+    std::sort(opaqueObjectIndices.begin(), opaqueObjectIndices.end(), [&](const auto& iA, const auto& iB) {
+        const RenderObject& A = mMainRenderContext.opaqueObjects[iA];
+        const RenderObject& B = mMainRenderContext.opaqueObjects[iB];
+
+        if (A.material == B.material) {
+            return A.indexBuffer < B.indexBuffer;
+        } else {
+            return A.material < B.material;
+        }
+    });
+
     VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, nullptr, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
     VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
 
     VkRenderingInfo renderInfo = vkinit::rendering_info(mDrawExtent, &colorAttachment, &depthAttachment);
     vkCmdBeginRendering(commandBuffer, &renderInfo);
-
-    // bind pipeline
-    vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mMeshPipeline);
 
     // set dynamic viewport and scissor
     VkViewport viewport{};
@@ -1163,12 +1181,30 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     writer.writeBuffer(0, gpuSceneDataBuffer.buffer, sizeof(GPUSceneData), 0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
           .updateSet(mDevice, globalDescriptorSet);
 
-    auto draw = [&](const RenderObject& object) {
-        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->pipeline);
-        vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 0, 1, &globalDescriptorSet, 0, nullptr);
-        vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, 1, &object.material->descriptorSet, 0, nullptr);
+    // track state
+    MaterialPipeline* lastPipeline = nullptr;
+    MaterialInstance* lastMaterialInstance = nullptr;
+    VkBuffer lastIndexBuffer = VK_NULL_HANDLE;
 
-        vkCmdBindIndexBuffer(commandBuffer, object.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
+    auto draw = [&](const RenderObject& object) {
+        if (object.material != lastMaterialInstance) {
+            lastMaterialInstance = object.material;
+
+            if (object.material->pipeline != lastPipeline) {
+                lastPipeline = object.material->pipeline;
+
+                vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->pipeline);
+                vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 0, 1, &globalDescriptorSet, 0, nullptr);
+            }
+
+            vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, 1, &object.material->descriptorSet, 0, nullptr);
+        }
+
+        if (object.indexBuffer != lastIndexBuffer) {
+            lastIndexBuffer = object.indexBuffer;
+
+            vkCmdBindIndexBuffer(commandBuffer, object.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
+        }
 
         GPUDrawPushConstants pushConstants;
         pushConstants.vertexBuffer = object.vertexBufferAddress;
@@ -1183,8 +1219,8 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         mStats.triangleCount += object.indexCount / 3;
     };
 
-    for (auto& object : mMainRenderContext.opaqueObjects) {
-        draw(object);
+    for (auto& index : opaqueObjectIndices) {
+        draw(mMainRenderContext.opaqueObjects[index]);
     }
 
     // draw transparent objects after opaque ones
