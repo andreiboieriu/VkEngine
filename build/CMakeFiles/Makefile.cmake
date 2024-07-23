@@ -104,7 +104,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "third_party/SDL/sdl2-config"
   "third_party/SDL/SDL2.spec"
   "third_party/SDL/cmake_uninstall.cmake"
-  "third_party/SDL/include-config-release/SDL2/SDL_config.h"
+  "third_party/SDL/include-config-/SDL2/SDL_config.h"
   "third_party/SDL/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -113,6 +113,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Shaders.dir/DependInfo.cmake"
   "third_party/CMakeFiles/vkbootstrap.dir/DependInfo.cmake"
+  "third_party/CMakeFiles/volk.dir/DependInfo.cmake"
   "third_party/CMakeFiles/imgui.dir/DependInfo.cmake"
   "third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/DependInfo.cmake"
   "third_party/fastgltf/CMakeFiles/fastgltf.dir/DependInfo.cmake"

@@ -176,6 +176,20 @@ vkbootstrap/fast:
 .PHONY : vkbootstrap/fast
 
 # Convenience name for target.
+third_party/CMakeFiles/volk.dir/rule:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/volk.dir/rule
+.PHONY : third_party/CMakeFiles/volk.dir/rule
+
+# Convenience name for target.
+volk: third_party/CMakeFiles/volk.dir/rule
+.PHONY : volk
+
+# fast build rule for target.
+volk/fast:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/volk.dir/build.make third_party/CMakeFiles/volk.dir/build
+.PHONY : volk/fast
+
+# Convenience name for target.
 third_party/CMakeFiles/imgui.dir/rule:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/imgui.dir/rule
 .PHONY : third_party/CMakeFiles/imgui.dir/rule
@@ -381,6 +395,30 @@ vkbootstrap/VkBootstrap.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/vkbootstrap.dir/build.make third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.s
 .PHONY : vkbootstrap/VkBootstrap.cpp.s
 
+volk/volk.o: volk/volk.c.o
+.PHONY : volk/volk.o
+
+# target to build an object file
+volk/volk.c.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/volk.dir/build.make third_party/CMakeFiles/volk.dir/volk/volk.c.o
+.PHONY : volk/volk.c.o
+
+volk/volk.i: volk/volk.c.i
+.PHONY : volk/volk.i
+
+# target to preprocess a source file
+volk/volk.c.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/volk.dir/build.make third_party/CMakeFiles/volk.dir/volk/volk.c.i
+.PHONY : volk/volk.c.i
+
+volk/volk.s: volk/volk.c.s
+.PHONY : volk/volk.s
+
+# target to generate assembly for a file
+volk/volk.c.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/volk.dir/build.make third_party/CMakeFiles/volk.dir/volk/volk.c.s
+.PHONY : volk/volk.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -395,6 +433,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... imgui"
 	@echo "... vkbootstrap"
+	@echo "... volk"
 	@echo "... imgui/imgui.o"
 	@echo "... imgui/imgui.i"
 	@echo "... imgui/imgui.s"
@@ -419,6 +458,9 @@ help:
 	@echo "... vkbootstrap/VkBootstrap.o"
 	@echo "... vkbootstrap/VkBootstrap.i"
 	@echo "... vkbootstrap/VkBootstrap.s"
+	@echo "... volk/volk.o"
+	@echo "... volk/volk.i"
+	@echo "... volk/volk.s"
 .PHONY : help
 
 

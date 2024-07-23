@@ -188,6 +188,19 @@ vkbootstrap/fast:
 .PHONY : vkbootstrap/fast
 
 #=============================================================================
+# Target rules for targets named volk
+
+# Build rule for target.
+volk: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 volk
+.PHONY : volk
+
+# fast build rule for target.
+volk/fast:
+	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/volk.dir/build.make third_party/CMakeFiles/volk.dir/build
+.PHONY : volk/fast
+
+#=============================================================================
 # Target rules for targets named imgui
 
 # Build rule for target.
@@ -355,6 +368,7 @@ help:
 	@echo "... fmt"
 	@echo "... imgui"
 	@echo "... vkbootstrap"
+	@echo "... volk"
 .PHONY : help
 
 

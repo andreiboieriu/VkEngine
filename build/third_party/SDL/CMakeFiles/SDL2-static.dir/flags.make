@@ -4,7 +4,7 @@
 # compile C with /usr/bin/clang
 C_DEFINES = -DSDL_STATIC_LIB -DUSING_GENERATED_CONFIG_H
 
-C_INCLUDES = -I/home/gooby/Development/VkEngine/build/third_party/SDL/include -I/home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2 -I/home/gooby/Development/VkEngine/build/third_party/SDL/include-config-release/SDL2 -I/home/gooby/Development/VkEngine/build/third_party/SDL/include-config-release
+C_INCLUDES = -I/home/gooby/Development/VkEngine/build/third_party/SDL/include -I/home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2 -I/home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2 -I/home/gooby/Development/VkEngine/build/third_party/SDL/include-config-
 
-C_FLAGS =  -idirafter "/home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -Wno-unused-local-typedefs -mmmx -m3dnow -msse -msse2 -msse3 -I/usr/include -D_REENTRANT  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=28 -DSDL_BUILD_MICRO_VERSION=4 -O3 -DNDEBUG
+C_FLAGS =  -idirafter "/home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -Wno-unused-local-typedefs -mmmx -m3dnow -msse -msse2 -msse3 -I/usr/include -D_REENTRANT  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=28 -DSDL_BUILD_MICRO_VERSION=4
 

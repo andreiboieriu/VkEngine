@@ -34,7 +34,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -376,7 +376,7 @@ FMT_WERROR:BOOL=OFF
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
 //Path to a program.
-GLSL_VALIDATOR:FILEPATH=GLSL_VALIDATOR-NOTFOUND
+GLSL_VALIDATOR:FILEPATH=/usr/bin/glslangValidator
 
 //Path to a file.
 HAVE_XCURSOR_H:FILEPATH=/usr/include/X11/Xcursor/Xcursor.h
@@ -758,7 +758,7 @@ SDL_XINPUT:BOOL=OFF
 SampleRate_DIR:PATH=SampleRate_DIR-NOTFOUND
 
 //Path to a program.
-Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-NOTFOUND
+Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=/bin/glslangValidator
 
 //Path to a program.
 Vulkan_GLSLC_EXECUTABLE:FILEPATH=Vulkan_GLSLC_EXECUTABLE-NOTFOUND
@@ -806,7 +806,7 @@ fastgltf_IS_TOP_LEVEL:STATIC=OFF
 fastgltf_SOURCE_DIR:STATIC=/home/gooby/Development/VkEngine/third_party/fastgltf
 
 //Dependencies for the target
-imgui_LIB_DEPENDS:STATIC=general;Vulkan::Vulkan;general;SDL2::SDL2;
+imgui_LIB_DEPENDS:STATIC=general;volk;general;SDL2::SDL2;
 
 //Path to a library.
 pkgcfg_lib_EGL_EGL:FILEPATH=/usr/lib/x86_64-linux-gnu/libEGL.so

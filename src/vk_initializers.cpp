@@ -1,4 +1,6 @@
 ﻿#include "vk_initializers.h"
+#include "vk_descriptors.h"
+#include "vk_types.h"
 
 //> init_cmd
 VkCommandPoolCreateInfo vkinit::command_pool_create_info(uint32_t queueFamilyIndex,

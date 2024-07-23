@@ -3,7 +3,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.o: \
   /home/gooby/Development/VkEngine/third_party/SDL/src/audio/../SDL_internal.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/audio/../dynapi/SDL_dynapi.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/audio/../dynapi/SDL_dynapi_overrides.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
@@ -55,13 +55,11 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.o: \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h /usr/include/strings.h /usr/include/wchar.h \

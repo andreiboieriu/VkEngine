@@ -2,7 +2,7 @@
 
 #include "vk_descriptors.h"
 #include "vk_types.h"
-#include <vulkan/vulkan_core.h>
+#include "volk.h"
 
 class GLTFMetallicRoughness {
 public:
@@ -27,7 +27,7 @@ public:
     void buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
     void clearResources(VkDevice device);
 
-    MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources, DynamicDescriptorAllocator& descriptorAllocator);
+    MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources);
 
 private:
 

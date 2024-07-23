@@ -1,7 +1,7 @@
 ﻿#include "vk_pipelines.h"
 
 #include <fstream>
-#include <vulkan/vulkan_core.h>
+#include "volk.h"
 #include "vk_initializers.h"
 
 bool vkutil::loadShaderModule(const char* filePath, VkDevice device, VkShaderModule* outShaderModule) {

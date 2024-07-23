@@ -5,7 +5,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL.c.o: ../third_party/SDL/src/SDL.c \
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -60,14 +60,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL.c.o: ../third_party/SDL/src/SDL.c \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -287,7 +285,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_assert.c.o: ../third_party/SDL/src/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -342,14 +340,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_assert.c.o: ../third_party/SDL/src/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -539,7 +535,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_dataqueue.c.o: ../third_party/SDL/sr
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -594,14 +590,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_dataqueue.c.o: ../third_party/SDL/sr
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -759,7 +753,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_error.c.o: ../third_party/SDL/src/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -814,14 +808,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_error.c.o: ../third_party/SDL/src/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -855,7 +847,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_guid.c.o: ../third_party/SDL/src/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -910,14 +902,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_guid.c.o: ../third_party/SDL/src/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -951,7 +941,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_hints.c.o: ../third_party/SDL/src/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -1006,14 +996,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_hints.c.o: ../third_party/SDL/src/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -1048,7 +1036,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_list.c.o: ../third_party/SDL/src/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -1103,14 +1091,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_list.c.o: ../third_party/SDL/src/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -1268,7 +1254,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_log.c.o: ../third_party/SDL/src/SDL_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -1323,14 +1309,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_log.c.o: ../third_party/SDL/src/SDL_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -1366,7 +1350,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_utils.c.o: ../third_party/SDL/src/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -1421,14 +1405,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/SDL_utils.c.o: ../third_party/SDL/src/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -1461,7 +1443,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/atomic/SDL_atomic.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -1516,14 +1498,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/atomic/SDL_atomic.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -1556,7 +1536,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.o: ../third_party/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -1611,14 +1591,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -1654,7 +1632,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -1709,14 +1687,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -1898,7 +1874,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audiocvt.c.o: ../third_party/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -1953,14 +1929,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audiocvt.c.o: ../third_party/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -2121,7 +2095,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audiodev.c.o: ../third_party/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -2176,14 +2150,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audiodev.c.o: ../third_party/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -2376,7 +2348,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audiotypecvt.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -2431,14 +2403,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_audiotypecvt.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -2561,7 +2531,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_mixer.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -2616,14 +2586,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_mixer.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -2749,7 +2717,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.o: ../third_party/SDL/s
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -2804,14 +2772,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.o: ../third_party/SDL/s
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -2862,7 +2828,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.o: ../third_p
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -2917,14 +2883,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.o: ../third_p
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -2969,7 +2933,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/dsp/SDL_dspaudio.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -3024,14 +2988,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/dsp/SDL_dspaudio.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -3268,7 +3230,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.o: ../third
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -3323,14 +3285,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.o: ../third
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -3375,7 +3335,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev.c.o: ../third_party
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -3430,14 +3390,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev.c.o: ../third_party
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -3686,7 +3644,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev_capabilities.c.o: .
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -3741,14 +3699,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev_capabilities.c.o: .
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -3804,7 +3760,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev_kbd.c.o: ../third_p
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -3859,14 +3815,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_evdev_kbd.c.o: ../third_p
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -4032,7 +3986,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_sandbox.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -4087,14 +4041,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_sandbox.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -4135,7 +4087,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_threadprio.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -4190,14 +4142,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/linux/SDL_threadprio.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -4271,7 +4221,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/unix/SDL_poll.c.o: ../third_party/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -4326,14 +4276,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/core/unix/SDL_poll.c.o: ../third_party/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -4376,7 +4324,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.o: ../third_party/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -4431,14 +4379,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -4561,7 +4507,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/hwcap.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/dynapi/SDL_dynapi.c.o: ../third_party/SDL/src/dynapi/SDL_dynapi.c \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -4617,12 +4563,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/dynapi/SDL_dynapi.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -4788,7 +4732,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.o: ../third
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -4843,14 +4787,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.o: ../third
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -4950,7 +4892,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.o: ../third_p
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -5005,14 +4947,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.o: ../third_p
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -5112,7 +5052,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.o: ../third_part
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -5167,14 +5107,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.o: ../third_part
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -5274,7 +5212,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_events.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -5329,14 +5267,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_events.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -5543,7 +5479,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.o: ../third_party/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -5598,14 +5534,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.o: ../third_party/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -5705,7 +5639,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.o: ../third_party/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -5760,14 +5694,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -5870,7 +5802,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_keysym_to_scancode.c.o: ../th
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -5925,14 +5857,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_keysym_to_scancode.c.o: ../th
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -5988,7 +5918,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -6043,14 +5973,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -6154,7 +6082,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -6209,14 +6137,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -6347,7 +6273,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_scancode_tables.c.o: ../third
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -6402,14 +6328,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_scancode_tables.c.o: ../third
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -6447,7 +6371,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -6502,14 +6426,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -6609,7 +6531,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.o: ../third_pa
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -6664,14 +6586,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -6772,7 +6692,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/imKStoUCS.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -6827,14 +6747,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/events/imKStoUCS.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -6867,7 +6785,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/file/SDL_rwops.c.o: ../third_party/SDL/s
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -6922,14 +6840,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/file/SDL_rwops.c.o: ../third_party/SDL/s
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -6973,7 +6889,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/filesystem/unix/SDL_sysfilesystem.c.o: .
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -7028,14 +6944,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/filesystem/unix/SDL_sysfilesystem.c.o: .
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -7118,7 +7032,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/haptic/SDL_haptic.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -7173,14 +7087,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/haptic/SDL_haptic.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -7224,7 +7136,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/haptic/linux/SDL_syshaptic.c.o: ../third
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -7279,14 +7191,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/haptic/linux/SDL_syshaptic.c.o: ../third
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -7394,7 +7304,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -7449,14 +7359,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -7531,7 +7439,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.o: ../thir
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -7586,14 +7494,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.o: ../thir
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -7702,7 +7608,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.o: ../third_part
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -7757,14 +7663,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.o: ../third_part
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -7975,7 +7879,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/controller_type.c.o: ../third_p
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -8030,14 +7934,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/controller_type.c.o: ../third_p
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -8079,7 +7981,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_combined.c.o:
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -8134,14 +8036,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_combined.c.o:
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -8187,7 +8087,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.o:
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -8242,14 +8142,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.o:
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -8316,7 +8214,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_luna.c.o: ../
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -8371,14 +8269,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_luna.c.o: ../
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -8439,7 +8335,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps3.c.o: ../t
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -8494,14 +8390,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps3.c.o: ../t
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -8565,7 +8459,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.o: ../t
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -8620,14 +8514,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.o: ../t
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -8691,7 +8583,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.o: ../t
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -8746,14 +8638,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.o: ../t
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -8817,7 +8707,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.o: .
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -8872,14 +8762,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.o: .
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -8946,7 +8834,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_shield.c.o: .
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -9001,14 +8889,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_shield.c.o: .
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -9070,7 +8956,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.o: .
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -9125,14 +9011,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.o: .
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -9193,7 +9077,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_steam.c.o: ..
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -9248,14 +9132,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_steam.c.o: ..
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -9318,7 +9200,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_switch.c.o: .
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -9373,14 +9255,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_switch.c.o: .
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -9445,7 +9325,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_wii.c.o: ../t
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -9500,14 +9380,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_wii.c.o: ../t
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -9572,7 +9450,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -9627,14 +9505,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -9698,7 +9574,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.o:
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -9753,14 +9629,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.o:
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -9824,7 +9698,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -9879,14 +9753,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -9950,7 +9822,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10005,14 +9877,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10063,7 +9933,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/linux/SDL_sysjoystick.c.o: ../t
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10118,14 +9988,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/linux/SDL_sysjoystick.c.o: ../t
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10304,7 +10172,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/steam/SDL_steamcontroller.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10359,14 +10227,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/steam/SDL_steamcontroller.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10408,7 +10274,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/virtual/SDL_virtualjoystick.c.o
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10463,14 +10329,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/virtual/SDL_virtualjoystick.c.o
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10514,7 +10378,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_atan2.c.o: ../third_party/SDL/src
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10569,14 +10433,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_atan2.c.o: ../third_party/SDL/src
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10611,7 +10473,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_exp.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10666,14 +10528,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_exp.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10708,7 +10568,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_fmod.c.o: ../third_party/SDL/src/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10763,14 +10623,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_fmod.c.o: ../third_party/SDL/src/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10805,7 +10663,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_log.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10860,14 +10718,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_log.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10902,7 +10758,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_log10.c.o: ../third_party/SDL/src
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -10957,14 +10813,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_log10.c.o: ../third_party/SDL/src
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -10999,7 +10853,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_pow.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11054,14 +10908,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_pow.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11096,7 +10948,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11151,14 +11003,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11193,7 +11043,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.o: ../third_party/SDL/src/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11248,14 +11098,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.o: ../third_party/SDL/src/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11290,7 +11138,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/k_cos.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11345,14 +11193,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/k_cos.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11387,7 +11233,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/k_rem_pio2.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11442,14 +11288,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/k_rem_pio2.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11484,7 +11328,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/k_sin.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11539,14 +11383,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/k_sin.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11581,7 +11423,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/k_tan.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11636,14 +11478,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/k_tan.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11678,7 +11518,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_atan.c.o: ../third_party/SDL/src/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11733,14 +11573,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_atan.c.o: ../third_party/SDL/src/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11775,7 +11613,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_copysign.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11830,14 +11668,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_copysign.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11872,7 +11708,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_cos.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -11927,14 +11763,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_cos.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -11969,7 +11803,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_fabs.c.o: ../third_party/SDL/src/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12024,14 +11858,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_fabs.c.o: ../third_party/SDL/src/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12066,7 +11898,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_floor.c.o: ../third_party/SDL/src
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12121,14 +11953,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_floor.c.o: ../third_party/SDL/src
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12163,7 +11993,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_scalbn.c.o: ../third_party/SDL/sr
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12218,14 +12048,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_scalbn.c.o: ../third_party/SDL/sr
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12269,7 +12097,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_sin.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12324,14 +12152,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_sin.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12366,7 +12192,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_tan.c.o: ../third_party/SDL/src/l
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12421,14 +12247,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/libm/s_tan.c.o: ../third_party/SDL/src/l
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12462,7 +12286,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/loadso/dlopen/SDL_sysloadso.c.o: ../thir
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12517,14 +12341,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/loadso/dlopen/SDL_sysloadso.c.o: ../thir
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12561,7 +12383,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/locale/SDL_locale.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12616,14 +12438,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/locale/SDL_locale.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12659,7 +12479,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/locale/unix/SDL_syslocale.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12714,14 +12534,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/locale/unix/SDL_syslocale.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12757,7 +12575,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/misc/SDL_url.c.o: ../third_party/SDL/src
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12812,14 +12630,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/misc/SDL_url.c.o: ../third_party/SDL/src
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12854,7 +12670,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/misc/unix/SDL_sysurl.c.o: ../third_party
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -12909,14 +12725,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/misc/unix/SDL_sysurl.c.o: ../third_party
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -12988,7 +12802,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/power/SDL_power.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -13043,14 +12857,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/power/SDL_power.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -13084,7 +12896,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/power/linux/SDL_syspower.c.o: ../third_p
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -13139,14 +12951,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/power/linux/SDL_syspower.c.o: ../third_p
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -13221,7 +13031,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.o: ../third_party/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -13276,14 +13086,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.o: ../third_party/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -13315,7 +13123,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/SDL_render.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -13370,14 +13178,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/SDL_render.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -13522,7 +13328,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/SDL_yuv_sw.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -13577,14 +13383,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/SDL_yuv_sw.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -13710,7 +13514,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_render_d3d.c.o: ../t
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -13765,14 +13569,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_render_d3d.c.o: ../t
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -13817,7 +13619,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_shaders_d3d.c.o: ../
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -13872,14 +13674,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_shaders_d3d.c.o: ../
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -13924,7 +13724,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -13979,14 +13779,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -14031,7 +13829,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_shaders_d3d11.c.o:
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -14086,14 +13884,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_shaders_d3d11.c.o:
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -14125,7 +13921,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d12/SDL_render_d3d12.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -14180,14 +13976,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d12/SDL_render_d3d12.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -14232,7 +14026,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d12/SDL_shaders_d3d12.c.o:
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -14287,14 +14081,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d12/SDL_shaders_d3d12.c.o:
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -14326,7 +14118,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.o: ../thir
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -14381,14 +14173,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.o: ../thir
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -14487,7 +14277,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengl/SDL_shaders_gl.c.o: ../thi
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -14542,14 +14332,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengl/SDL_shaders_gl.c.o: ../thi
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -14592,7 +14380,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.o: ../
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -14647,14 +14435,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.o: ../
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -14686,7 +14472,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o: .
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -14741,14 +14527,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o: .
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -14933,7 +14717,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -14988,14 +14772,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -15042,7 +14824,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/ps2/SDL_render_ps2.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -15097,14 +14879,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/ps2/SDL_render_ps2.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -15136,7 +14916,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -15191,14 +14971,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -15230,7 +15008,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_blendfillrect.c.o: .
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -15285,14 +15063,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_blendfillrect.c.o: .
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -15418,7 +15194,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.o: ../th
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -15473,14 +15249,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.o: ../th
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -15607,7 +15381,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_blendpoint.c.o: ../t
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -15662,14 +15436,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_blendpoint.c.o: ../t
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -15795,7 +15567,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_drawline.c.o: ../thi
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -15850,14 +15622,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_drawline.c.o: ../thi
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -15984,7 +15754,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.o: ../th
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -16039,14 +15809,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.o: ../th
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -16172,7 +15940,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.o: ../th
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -16227,14 +15995,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.o: ../th
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -16385,7 +16151,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_rotate.c.o: ../third
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -16440,14 +16206,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_rotate.c.o: ../third
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -16605,7 +16369,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.o: ../thi
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -16660,14 +16424,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.o: ../thi
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -16792,7 +16554,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -16847,14 +16609,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -16886,7 +16646,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_memor
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -16941,14 +16701,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_memor
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -16980,7 +16738,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_tools
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17035,14 +16793,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_tools
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -17074,7 +16830,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17129,14 +16885,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -17338,7 +17092,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/sensor/dummy/SDL_dummysensor.c.o: ../thi
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17393,14 +17147,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/sensor/dummy/SDL_dummysensor.c.o: ../thi
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -17437,7 +17189,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc16.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17492,14 +17244,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc16.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -17531,7 +17281,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc32.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17586,14 +17336,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc32.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -17625,7 +17373,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_getenv.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17680,14 +17428,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_getenv.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -17719,7 +17465,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_iconv.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17774,14 +17520,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_iconv.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -17822,7 +17566,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_malloc.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17877,14 +17621,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_malloc.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -17918,7 +17660,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_mslibc.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -17973,14 +17715,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_mslibc.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18012,7 +17752,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_qsort.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18067,14 +17807,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_qsort.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18106,7 +17844,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_stdlib.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18161,14 +17899,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_stdlib.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18202,7 +17938,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_string.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18257,14 +17993,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_string.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18297,7 +18031,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_strtokr.c.o: ../third_party/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18352,14 +18086,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/stdlib/SDL_strtokr.c.o: ../third_party/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18391,7 +18123,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/SDL_thread.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18446,14 +18178,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/SDL_thread.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18509,7 +18239,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syscond.c.o: ../third
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18564,14 +18294,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syscond.c.o: ../third
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18637,7 +18365,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_sysmutex.c.o: ../thir
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18692,14 +18420,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_sysmutex.c.o: ../thir
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18755,7 +18481,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syssem.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18810,14 +18536,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syssem.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -18877,7 +18601,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.o: ../thi
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -18932,14 +18656,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.o: ../thi
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -19056,7 +18778,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systls.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -19111,14 +18833,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systls.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -19172,7 +18892,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/timer/SDL_timer.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -19227,14 +18947,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/timer/SDL_timer.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -19375,7 +19093,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/timer/unix/SDL_systimer.c.o: ../third_pa
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -19430,14 +19148,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/timer/unix/SDL_systimer.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -19494,7 +19210,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.o: ../third_party/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -19549,14 +19265,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.o: ../third_party/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -19718,7 +19432,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.o: ../third_party/SDL/s
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -19773,14 +19487,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.o: ../third_party/SDL/s
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -19946,7 +19658,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_0.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -20001,14 +19713,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_0.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -20132,7 +19842,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -20187,14 +19897,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -20355,7 +20063,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_A.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -20410,14 +20118,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_A.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -20541,7 +20247,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_N.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -20596,14 +20302,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_N.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -20728,7 +20432,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_auto.c.o: ../third_party/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -20783,14 +20487,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_auto.c.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -20915,7 +20617,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_copy.c.o: ../third_party/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -20970,14 +20672,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_copy.c.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -21102,7 +20802,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_slow.c.o: ../third_party/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -21157,14 +20857,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_blit_slow.c.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -21289,7 +20987,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_bmp.c.o: ../third_party/SDL/sr
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -21344,14 +21042,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_bmp.c.o: ../third_party/SDL/sr
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -21477,7 +21173,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.o: ../third_party/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -21532,14 +21228,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.o: ../third_party/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -21617,7 +21311,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.o: ../third_party/SDL/sr
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -21672,14 +21366,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.o: ../third_party/SDL/sr
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -21766,7 +21458,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_fillrect.c.o: ../third_party/S
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -21821,14 +21513,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_fillrect.c.o: ../third_party/S
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -21952,7 +21642,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.o: ../third_party/SDL
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -22007,14 +21697,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.o: ../third_party/SDL
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -22178,7 +21866,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_rect.c.o: ../third_party/SDL/s
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -22233,14 +21921,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_rect.c.o: ../third_party/SDL/s
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -22279,7 +21965,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -22334,14 +22020,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -22530,7 +22214,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_stretch.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -22585,14 +22269,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_stretch.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -22717,7 +22399,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.o: ../third_party/SD
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -22772,14 +22454,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.o: ../third_party/SD
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -22959,7 +22639,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: ../third_party/SDL/
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -23014,14 +22694,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o: ../third_party/SDL/
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -23258,7 +22936,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -23313,14 +22991,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -23390,7 +23066,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_yuv.c.o: ../third_party/SDL/sr
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -23445,14 +23121,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_yuv.c.o: ../third_party/SDL/sr
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -23579,7 +23253,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.o: ../third
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -23634,14 +23308,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.o: ../third
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -23745,7 +23417,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.o: ../
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -23800,14 +23472,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.o: ../
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -23885,7 +23555,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -23940,14 +23610,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -24137,7 +23805,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenevents.c.o:
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -24192,14 +23860,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenevents.c.o:
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -24303,7 +23969,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenframebuffer
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -24358,14 +24024,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenframebuffer
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -24443,7 +24107,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenopengles.c.
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -24498,14 +24162,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenopengles.c.
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -24591,7 +24253,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenvideo.c.o: 
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -24646,14 +24308,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenvideo.c.o: 
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -24741,7 +24401,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o:
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -24796,14 +24456,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o:
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -24888,7 +24546,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o: ../third
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -24943,14 +24601,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o: ../third
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -25116,7 +24772,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o: ../third_party
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -25171,14 +24827,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o: ../third_party
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -25266,7 +24920,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.o: ../third_pa
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -25321,14 +24975,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -25546,7 +25198,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.o: ../thi
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -25601,14 +25253,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.o: ../thi
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -25757,7 +25407,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -25812,14 +25462,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -25987,7 +25635,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.o: ../thir
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -26042,14 +25690,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.o: ../thir
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -26340,7 +25986,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -26395,14 +26041,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -26553,7 +26197,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -26608,14 +26252,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -26768,7 +26410,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o: ../third_pa
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -26823,14 +26465,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -26987,7 +26627,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.o: ../third_
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -27042,14 +26682,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.o: ../third_
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -27202,7 +26840,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -27257,14 +26895,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -27414,7 +27050,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -27469,14 +27105,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -27634,7 +27268,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: ../third_par
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -27689,14 +27323,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: ../third_par
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -27949,7 +27581,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o: ../third_pa
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -28004,14 +27636,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -28160,7 +27790,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o: ../third_pa
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -28215,14 +27845,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -28488,7 +28116,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xfixes.c.o: ../third_pa
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -28543,14 +28171,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xfixes.c.o: ../third_pa
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -28709,7 +28335,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o: ../third_p
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -28764,14 +28390,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o: ../third_p
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -28930,7 +28554,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/edid-parse.c.o: ../third_party
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -28985,14 +28609,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/edid-parse.c.o: ../third_party
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -29025,7 +28647,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.o: ../third_part
   ../third_party/SDL/src/SDL_internal.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi.h \
   ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h \
-  third_party/SDL/include-config-release/SDL2/SDL_config.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
   third_party/SDL/include/SDL2/SDL_platform.h \
   third_party/SDL/include/SDL2/begin_code.h \
   third_party/SDL/include/SDL2/close_code.h \
@@ -29080,14 +28702,12 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.o: ../third_part
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/string.h \
@@ -29378,6 +28998,8 @@ third_party/SDL/include/SDL2/SDL_egl.h:
 
 ../third_party/SDL/src/timer/unix/SDL_systimer.c:
 
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
+
 ../third_party/SDL/src/thread/pthread/SDL_systhread.c:
 
 /usr/include/semaphore.h:
@@ -29455,10 +29077,6 @@ third_party/SDL/include/SDL2/SDL_opengles2.h:
 ../third_party/SDL/src/render/opengl/SDL_glfuncs.h:
 
 ../third_party/SDL/src/render/opengl/SDL_shaders_gl.h:
-
-third_party/SDL/include/SDL2/SDL_opengl_glext.h:
-
-third_party/SDL/include/SDL2/SDL_opengl.h:
 
 ../third_party/SDL/src/video/khronos/vulkan/vulkan_xcb.h:
 
@@ -29564,6 +29182,8 @@ third_party/SDL/include/SDL2/begin_code.h:
 
 ../third_party/SDL/src/joystick/hidapi/SDL_hidapi_xboxone.c:
 
+third_party/SDL/include/SDL2/SDL_opengl_glext.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h:
 
 third_party/SDL/include/SDL2/SDL.h:
@@ -29591,6 +29211,8 @@ third_party/SDL/include/SDL2/SDL_messagebox.h:
 third_party/SDL/include/SDL2/SDL_version.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h:
+
+/usr/include/X11/X.h:
 
 third_party/SDL/include/SDL2/SDL_filesystem.h:
 
@@ -29621,6 +29243,10 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 ../third_party/SDL/src/sensor/dummy/SDL_dummysensor.h:
 
 third_party/SDL/include/SDL2/SDL_thread.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+../third_party/SDL/src/joystick/virtual/SDL_virtualjoystick_c.h:
 
 third_party/SDL/include/SDL2/SDL_power.h:
 
@@ -29686,15 +29312,9 @@ third_party/SDL/include/SDL2/SDL_joystick.h:
 
 ../third_party/SDL/src/audio/dummy/SDL_dummyaudio.h:
 
-third_party/SDL/include/SDL2/SDL_misc.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h:
-
-../third_party/SDL/src/loadso/dlopen/SDL_sysloadso.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h:
-
 ../third_party/SDL/src/audio/disk/SDL_diskaudio.h:
+
+third_party/SDL/include-config-/SDL2/SDL_config.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
 
@@ -29709,6 +29329,12 @@ third_party/SDL/include/SDL2/SDL_shape.h:
 ../third_party/SDL/src/render/opengl/SDL_render_gl.c:
 
 ../third_party/SDL/src/hidapi/SDL_hidapi_c.h:
+
+third_party/SDL/include/SDL2/SDL_misc.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h:
+
+../third_party/SDL/src/loadso/dlopen/SDL_sysloadso.c:
 
 /usr/include/stdio.h:
 
@@ -29760,10 +29386,6 @@ third_party/SDL/include/SDL2/SDL_revision.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
 
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/ctype.h:
 
 ../third_party/SDL/src/events/SDL_gesture.c:
@@ -29774,11 +29396,45 @@ third_party/SDL/include/SDL2/SDL_revision.h:
 
 ../third_party/SDL/src/events/imKStoUCS.h:
 
+third_party/SDL/include/SDL2/SDL_stdinc.h:
+
+third_party/SDL/include/SDL2/SDL_platform.h:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
 third_party/SDL/include/SDL2/SDL_assert.h:
 
 /usr/include/inttypes.h:
 
 ../third_party/SDL/src/SDL_dataqueue.h:
+
+../third_party/SDL/src/core/linux/SDL_evdev_capabilities.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h:
+
+../third_party/SDL/src/events/SDL_displayevents.c:
+
+../third_party/SDL/src/thread/pthread/SDL_sysmutex_c.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h:
+
+../third_party/SDL/src/libm/s_fabs.c:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/x86_64-linux-gnu/sys/ipc.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+../third_party/SDL/src/events/SDL_keysym_to_scancode.c:
+
+../third_party/SDL/src/video/x11/SDL_x11framebuffer.c:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h:
+
+../third_party/SDL/src/SDL_internal.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h:
 
@@ -29820,17 +29476,15 @@ third_party/SDL/include/SDL2/close_code.h:
 
 ../third_party/SDL/src/events/SDL_mouse_c.h:
 
+third_party/SDL/include/SDL2/SDL_loadso.h:
+
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+
 third_party/SDL/include/SDL2/SDL_sensor.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h:
 
 ../third_party/SDL/src/render/direct3d12/SDL_shaders_d3d12.c:
-
-/usr/include/x86_64-linux-gnu/sys/ipc.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-../third_party/SDL/src/events/SDL_keysym_to_scancode.c:
 
 /usr/include/endian.h:
 
@@ -29844,49 +29498,7 @@ third_party/SDL/include/SDL2/SDL_sensor.h:
 
 ../third_party/SDL/src/misc/SDL_url.c:
 
-/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
-
-third_party/SDL/include/SDL2/SDL_loadso.h:
-
-../third_party/SDL/src/core/linux/SDL_evdev_capabilities.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h:
-
-../third_party/SDL/src/events/SDL_displayevents.c:
-
-../third_party/SDL/src/thread/pthread/SDL_sysmutex_c.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h:
-
-../third_party/SDL/src/libm/s_fabs.c:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-../third_party/SDL/src/video/x11/SDL_x11framebuffer.c:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h:
-
-../third_party/SDL/src/SDL_internal.h:
-
-third_party/SDL/include/SDL2/SDL_stdinc.h:
-
-third_party/SDL/include/SDL2/SDL_platform.h:
-
-/usr/include/x86_64-linux-gnu/sys/stat.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-../third_party/SDL/src/joystick/virtual/SDL_virtualjoystick_c.h:
-
-third_party/SDL/include-config-release/SDL2/SDL_config.h:
-
-../third_party/SDL/src/dynapi/SDL_dynapi.h:
-
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
@@ -29916,6 +29528,8 @@ third_party/SDL/include/SDL2/SDL_locale.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h:
 
+../third_party/SDL/src/dynapi/SDL_dynapi.h:
+
 ../third_party/SDL/src/video/x11/SDL_x11opengles.h:
 
 ../third_party/SDL/src/stdlib/SDL_mslibc.c:
@@ -29939,12 +29553,6 @@ third_party/SDL/include/SDL2/SDL_locale.h:
 /usr/include/asm-generic/types.h:
 
 ../third_party/SDL/src/libm/s_tan.c:
-
-../third_party/SDL/src/libm/math_private.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h:
 
@@ -30011,6 +29619,12 @@ third_party/SDL/include/SDL2/SDL_rect.h:
 ../third_party/SDL/src/render/software/SDL_rotate.c:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/X11/Xlib.h:
+
+../third_party/SDL/src/video/SDL_rect_impl.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
 
 ../third_party/SDL/src/video/x11/edid.h:
 
@@ -30172,6 +29786,14 @@ third_party/SDL/include/SDL2/SDL_events.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h:
 
+/usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+../third_party/SDL/src/libm/math_private.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h:
 
 /usr/include/X11/Xfuncproto.h:
@@ -30185,14 +29807,6 @@ third_party/SDL/include/SDL2/SDL_events.h:
 /usr/include/X11/extensions/shapeconst.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
-
-/usr/include/X11/Xlib.h:
-
-../third_party/SDL/src/video/SDL_rect_impl.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
-
-/usr/include/X11/X.h:
 
 /usr/include/X11/Xosdefs.h:
 
@@ -30645,6 +30259,8 @@ third_party/SDL/include/SDL2/SDL_syswm.h:
 /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h:
 
 ../third_party/SDL/src/joystick/hidapi/SDL_hidapi_switch.c:
+
+third_party/SDL/include/SDL2/SDL_opengl.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h:
 

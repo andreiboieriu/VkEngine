@@ -6,7 +6,6 @@
 #include <string>
 #include <vector>
 
-#include <vulkan/vulkan.h>
 #include "vk_descriptors.h"
 #include <vk_mem_alloc.h>
 #include "deletion_queue.h"
@@ -17,6 +16,7 @@
 #include <glm/mat4x4.hpp>
 #include <glm/vec4.hpp>
 #include <vulkan/vulkan_core.h>
+#include "volk.h"
 
 struct FrameData {
 	VkCommandPool commandPool;
@@ -27,7 +27,6 @@ struct FrameData {
 	VkFence renderFence;
 
 	DeletionQueue deletionQueue;
-    DynamicDescriptorAllocator descriptorAllocator;
 };
 
 struct AllocatedImage {
@@ -101,7 +100,7 @@ struct MaterialPipeline {
 
 struct MaterialInstance {
     MaterialPipeline* pipeline;
-    VkDescriptorSet descriptorSet;
+    std::vector<VkWriteDescriptorSet> descriptorWrites;
     MaterialPass passType;
 };
 

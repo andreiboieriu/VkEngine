@@ -61,7 +61,6 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cfloat \
@@ -136,7 +135,6 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -394,6 +392,8 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h:
 
+/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h:
@@ -419,12 +419,6 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h:
 
 /usr/include/c++/12/bits/basic_string.h:
 
@@ -592,6 +586,10 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 
 /usr/include/c++/12/tr1/poly_hermite.tcc:
 
+/usr/lib/llvm-14/lib/clang/14.0.0/include/prfchwintrin.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h:
+
 /usr/include/c++/12/bits/stl_construct.h:
 
 /usr/include/c++/12/pstl/glue_memory_defs.h:
@@ -647,6 +645,8 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 /usr/include/math.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/c++/12/ext/string_conversions.h:
 
 /usr/include/c++/12/bits/hash_bytes.h:
 
@@ -748,8 +748,6 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 
 /usr/include/c++/12/bits/ptr_traits.h:
 
-/usr/include/c++/12/ext/string_conversions.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
@@ -757,12 +755,6 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 /usr/include/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/include/c++/12/bits/stl_uninitialized.h:
 
 /usr/include/errno.h:
 
@@ -781,6 +773,8 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 /usr/include/c++/12/bits/charconv.h:
 
 /usr/include/c++/12/bits/basic_string.tcc:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h:
 
@@ -880,6 +874,8 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 
 /usr/include/c++/12/cstring:
 
+/usr/include/c++/12/bits/stl_uninitialized.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h:
 
 /usr/include/c++/12/array:
@@ -945,8 +941,6 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp
 /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h:
 
 /usr/include/c++/12/atomic:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 

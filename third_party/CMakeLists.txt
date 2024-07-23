@@ -1,9 +1,10 @@
 find_package(Vulkan REQUIRED)
 
 add_library(vkbootstrap STATIC)
+add_library(volk STATIC)
 add_library(glm INTERFACE)
 add_library(vma INTERFACE)
-
+add_library(entt INTERFACE)
 add_library(stb_image INTERFACE)
 
 add_subdirectory(fastgltf)
@@ -19,10 +20,21 @@ target_include_directories(vkbootstrap PUBLIC vkbootstrap)
 target_link_libraries(vkbootstrap PUBLIC Vulkan::Vulkan $<$<BOOL:UNIX>:${CMAKE_DL_LIBS}>)
 set_property(TARGET vkbootstrap PROPERTY CXX_STANDARD 20)
 
+target_sources(volk PRIVATE
+  volk/volk.h
+  volk/volk.c
+  )
+
+target_include_directories(volk PUBLIC volk)
+# target_link_libraries(volk PUBLIC volk)
+set_property(TARGET volk PROPERTY CXX_STANDARD 20)
+
 #both vma and glm and header only libs so we only need the include path
 target_include_directories(vma INTERFACE vma)
 
 target_include_directories(glm INTERFACE glm)
+target_include_directories(entt INTERFACE entt)
+
 
 #add_library(sdl2 INTERFACE)
 
@@ -47,6 +59,6 @@ target_sources(imgui PRIVATE
   imgui/imgui_impl_sdl2.cpp
   )
 
-target_link_libraries(imgui PUBLIC Vulkan::Vulkan SDL2::SDL2)
+target_link_libraries(imgui PUBLIC volk SDL2::SDL2)
 
 target_include_directories(stb_image INTERFACE stb_image)

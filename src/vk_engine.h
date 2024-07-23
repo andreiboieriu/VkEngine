@@ -1,8 +1,6 @@
-﻿// vulkan_guide.h : Include file for standard system include files,
-// or project specific include files.
+﻿#pragma once
 
-#pragma once
-
+#include "game_object.h"
 #include "vk_materials.h"
 #include "vk_scene.h"
 #include "vk_types.h"
@@ -12,8 +10,10 @@
 #include <memory>
 #include <string>
 #include <unordered_map>
-#include <vulkan/vulkan_core.h>
 #include "camera.h"
+
+#include "volk.h"
+#include "entt.hpp"
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -93,6 +93,8 @@ public:
 private:
 
 	void initVulkan();
+	void initVolk();
+	void initVMA();
 	void initSwapchain();
 	void initCommands();
 	void initSyncStructs();
@@ -101,11 +103,9 @@ private:
 	void initBackgroundPipelines();
 	void initImGui();
 
-	// TODO: delete later
-	void initMeshPipeline();
+	void initECS();
 
 	void initDefaultData();
-
 
 	void createSwapchain(uint32_t width, uint32_t height);
 	void resizeSwapchain();
@@ -145,7 +145,7 @@ private:
 	// flags
 	bool mIsInitialized = false;
 	bool mStopRendering = false;
-	bool mUseValidationLayers = false;
+	bool mUseValidationLayers = true;
 
 	int mFrameNumber = 0;
 
@@ -171,20 +171,10 @@ private:
 	AllocatedImage mDepthImage;
 
 	// descriptor resources
-	DynamicDescriptorAllocator mDescriptorAllocator;
 	VkDescriptorSet mDrawImageDescriptors;
 	VkDescriptorSetLayout mDrawImageDescriptorLayout;
 
-	VkDescriptorSetLayout mSingleImageDescriptorLayout;
-
-	// pipeline resources
-	VkPipeline mGradientPipeline;
 	VkPipelineLayout mGradientPipelineLayout;
-
-	VkPipelineLayout mMeshPipelineLayout;
-	VkPipeline mMeshPipeline;
-	std::vector<std::shared_ptr<MeshAsset>> mTestMeshes;
-
 	std::vector<ComputeEffect> backgroundEffects;
 	int currentBackgroundEffect = 0;
 	
@@ -195,7 +185,6 @@ private:
 
 	// scene resources
 	GPUSceneData mSceneData;
-	VkDescriptorSetLayout mGpuSceneDataDescriptorLayout;
 
 	// texture test resources
 	AllocatedImage mWhiteImage;
@@ -206,16 +195,20 @@ private:
 	VkSampler mDefaultSamplerLinear;
 	VkSampler mDefaultSamplerNearest;
 
-	MaterialInstance mDefaultMaterialInstance;
 	GLTFMetallicRoughness mMetalRoughMaterial;
 
 	RenderContext mMainRenderContext;
-	std::unordered_map<std::string, std::shared_ptr<Node>> mLoadedNodes;
 
 	// TODO: move somewhere else
 	Camera mCamera;
 
-	std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedScenes;
+	// std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedScenes;
+	std::shared_ptr<LoadedGLTF> mTestGLTF;
+
+	// GameObject mTestObject;
+	std::shared_ptr<GameObject> mTestObject;
+
+	// std::shared_ptr<System> mRenderSystem;
 
 	Stats mStats{};
 };

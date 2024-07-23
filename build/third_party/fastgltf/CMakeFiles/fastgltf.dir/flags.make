@@ -6,5 +6,5 @@ CXX_DEFINES = -DFASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0 -DFASTGLTF_ENABLE_DEPRECAT
 
 CXX_INCLUDES = -I/home/gooby/Development/VkEngine/third_party/fastgltf/include -I/home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson
 
-CXX_FLAGS = -O3 -DNDEBUG -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -std=gnu++17
 

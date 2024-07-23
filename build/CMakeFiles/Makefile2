@@ -98,6 +98,7 @@ src/clean: src/CMakeFiles/engine.dir/clean
 
 # Recursive "all" directory target.
 third_party/all: third_party/CMakeFiles/vkbootstrap.dir/all
+third_party/all: third_party/CMakeFiles/volk.dir/all
 third_party/all: third_party/CMakeFiles/imgui.dir/all
 third_party/all: third_party/fastgltf/all
 .PHONY : third_party/all
@@ -108,6 +109,7 @@ third_party/preinstall: third_party/fastgltf/preinstall
 
 # Recursive "clean" directory target.
 third_party/clean: third_party/CMakeFiles/vkbootstrap.dir/clean
+third_party/clean: third_party/CMakeFiles/volk.dir/clean
 third_party/clean: third_party/CMakeFiles/imgui.dir/clean
 third_party/clean: third_party/fastgltf/clean
 third_party/clean: third_party/fmt/clean
@@ -176,7 +178,7 @@ third_party/fmt/clean: third_party/fmt/CMakeFiles/fmt.dir/clean
 CMakeFiles/Shaders.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=78,79 "Built target Shaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=77,78 "Built target Shaders"
 .PHONY : CMakeFiles/Shaders.dir/all
 
 # Build rule for subdir invocation for target.
@@ -202,12 +204,12 @@ CMakeFiles/Shaders.dir/clean:
 third_party/CMakeFiles/vkbootstrap.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/vkbootstrap.dir/build.make third_party/CMakeFiles/vkbootstrap.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/vkbootstrap.dir/build.make third_party/CMakeFiles/vkbootstrap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=100 "Built target vkbootstrap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num= "Built target vkbootstrap"
 .PHONY : third_party/CMakeFiles/vkbootstrap.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/CMakeFiles/vkbootstrap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/vkbootstrap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : third_party/CMakeFiles/vkbootstrap.dir/rule
@@ -222,18 +224,45 @@ third_party/CMakeFiles/vkbootstrap.dir/clean:
 .PHONY : third_party/CMakeFiles/vkbootstrap.dir/clean
 
 #=============================================================================
+# Target rules for target third_party/CMakeFiles/volk.dir
+
+# All Build rule for target.
+third_party/CMakeFiles/volk.dir/all:
+	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/volk.dir/build.make third_party/CMakeFiles/volk.dir/depend
+	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/volk.dir/build.make third_party/CMakeFiles/volk.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=100 "Built target volk"
+.PHONY : third_party/CMakeFiles/volk.dir/all
+
+# Build rule for subdir invocation for target.
+third_party/CMakeFiles/volk.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/volk.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
+.PHONY : third_party/CMakeFiles/volk.dir/rule
+
+# Convenience name for target.
+volk: third_party/CMakeFiles/volk.dir/rule
+.PHONY : volk
+
+# clean rule for target.
+third_party/CMakeFiles/volk.dir/clean:
+	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/volk.dir/build.make third_party/CMakeFiles/volk.dir/clean
+.PHONY : third_party/CMakeFiles/volk.dir/clean
+
+#=============================================================================
 # Target rules for target third_party/CMakeFiles/imgui.dir
 
 # All Build rule for target.
+third_party/CMakeFiles/imgui.dir/all: third_party/CMakeFiles/volk.dir/all
 third_party/CMakeFiles/imgui.dir/all: third_party/SDL/CMakeFiles/SDL2.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=84 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=83,84 "Built target imgui"
 .PHONY : third_party/CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/CMakeFiles/imgui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 52
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/imgui.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : third_party/CMakeFiles/imgui.dir/rule
@@ -254,12 +283,12 @@ third_party/CMakeFiles/imgui.dir/clean:
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num= "Built target fastgltf_simdjson"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=82 "Built target fastgltf_simdjson"
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
@@ -280,7 +309,7 @@ third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/clean:
 third_party/fastgltf/CMakeFiles/fastgltf.dir/all: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=82 "Built target fastgltf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num= "Built target fastgltf"
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf.dir/all
 
 # Build rule for subdir invocation for target.
@@ -306,12 +335,12 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/clean:
 third_party/fmt/CMakeFiles/fmt.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/fmt/CMakeFiles/fmt.dir/build.make third_party/fmt/CMakeFiles/fmt.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/fmt/CMakeFiles/fmt.dir/build.make third_party/fmt/CMakeFiles/fmt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=83 "Built target fmt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num= "Built target fmt"
 .PHONY : third_party/fmt/CMakeFiles/fmt.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/fmt/CMakeFiles/fmt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fmt/CMakeFiles/fmt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : third_party/fmt/CMakeFiles/fmt.dir/rule
@@ -436,12 +465,12 @@ third_party/SDL/CMakeFiles/SDL2-static.dir/clean:
 third_party/SDL/CMakeFiles/SDL2_test.dir/all: third_party/SDL/CMakeFiles/sdl_headers_copy.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/SDL/CMakeFiles/SDL2_test.dir/build.make third_party/SDL/CMakeFiles/SDL2_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/SDL/CMakeFiles/SDL2_test.dir/build.make third_party/SDL/CMakeFiles/SDL2_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=74,75,76,77 "Built target SDL2_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=74,75,76 "Built target SDL2_test"
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/SDL/CMakeFiles/SDL2_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/SDL/CMakeFiles/SDL2_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/rule
@@ -486,6 +515,7 @@ third_party/SDL/CMakeFiles/uninstall.dir/clean:
 
 # All Build rule for target.
 src/CMakeFiles/engine.dir/all: third_party/CMakeFiles/vkbootstrap.dir/all
+src/CMakeFiles/engine.dir/all: third_party/CMakeFiles/volk.dir/all
 src/CMakeFiles/engine.dir/all: third_party/CMakeFiles/imgui.dir/all
 src/CMakeFiles/engine.dir/all: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all
 src/CMakeFiles/engine.dir/all: third_party/fastgltf/CMakeFiles/fastgltf.dir/all
@@ -493,12 +523,12 @@ src/CMakeFiles/engine.dir/all: third_party/fmt/CMakeFiles/fmt.dir/all
 src/CMakeFiles/engine.dir/all: third_party/SDL/CMakeFiles/SDL2.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=80,81 "Built target engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=79,80,81 "Built target engine"
 .PHONY : src/CMakeFiles/engine.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 57
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 58
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/engine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/engine.dir/rule

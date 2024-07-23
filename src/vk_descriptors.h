@@ -2,7 +2,7 @@
 
 #include <span>
 #include <deque>
-#include <vulkan/vulkan_core.h>
+#include "volk.h"
 
 class DescriptorLayoutBuilder {
 public:
@@ -16,48 +16,48 @@ private:
     std::vector<VkDescriptorSetLayoutBinding> mBindings;
 };
 
-class DescriptorAllocator {
-public:
-    struct PoolSizeRatio {
-        VkDescriptorType type;
-        float ratio;
-    };
+// class DescriptorAllocator {
+// public:
+//     struct PoolSizeRatio {
+//         VkDescriptorType type;
+//         float ratio;
+//     };
 
-    void initPool(VkDevice device, uint32_t maxSets, std::span<PoolSizeRatio> poolRatios);
-    void clearDescriptors(VkDevice device);
-    void destroyPool(VkDevice device);
+//     void initPool(VkDevice device, uint32_t maxSets, std::span<PoolSizeRatio> poolRatios);
+//     void clearDescriptors(VkDevice device);
+//     void destroyPool(VkDevice device);
 
-    VkDescriptorSet allocate(VkDevice device, VkDescriptorSetLayout layout);
+//     VkDescriptorSet allocate(VkDevice device, VkDescriptorSetLayout layout);
 
-private:
+// private:
 
-    VkDescriptorPool mDescriptorPool;
-};
+//     VkDescriptorPool mDescriptorPool;
+// };
 
-class DynamicDescriptorAllocator {
-public:
-    struct PoolSizeRatio {
-        VkDescriptorType type;
-        float ratio;
-    };
+// class DynamicDescriptorAllocator {
+// public:
+//     struct PoolSizeRatio {
+//         VkDescriptorType type;
+//         float ratio;
+//     };
 
-    void init(VkDevice device, uint32_t initialSets, std::span<PoolSizeRatio> poolRatios);
-    void clearPools(VkDevice device);
-    void destroyPools(VkDevice device);
+//     void init(VkDevice device, uint32_t initialSets, std::span<PoolSizeRatio> poolRatios);
+//     void clearPools(VkDevice device);
+//     void destroyPools(VkDevice device);
 
-    VkDescriptorSet allocate(VkDevice device, VkDescriptorSetLayout layout, void* pNext = nullptr);
+//     VkDescriptorSet allocate(VkDevice device, VkDescriptorSetLayout layout, void* pNext = nullptr);
 
-private:
+// private:
 
-    VkDescriptorPool getPool(VkDevice device);
-    VkDescriptorPool createPool(VkDevice device, uint32_t setCount, std::span<PoolSizeRatio> poolRatios);
+//     VkDescriptorPool getPool(VkDevice device);
+//     VkDescriptorPool createPool(VkDevice device, uint32_t setCount, std::span<PoolSizeRatio> poolRatios);
 
-    std::vector<PoolSizeRatio> mRatios;
-    std::vector<VkDescriptorPool> mFullPools;
-    std::vector<VkDescriptorPool> mAvailablePools;
-    uint32_t mSetsPerPool;
-    uint32_t mMaxSetsPerPool = 4092;
-};
+//     std::vector<PoolSizeRatio> mRatios;
+//     std::vector<VkDescriptorPool> mFullPools;
+//     std::vector<VkDescriptorPool> mAvailablePools;
+//     uint32_t mSetsPerPool;
+//     uint32_t mMaxSetsPerPool = 4092;
+// };
 
 class DescriptorWriter {
 public:
@@ -66,7 +66,11 @@ public:
     DescriptorWriter& writeBuffer(int binding, VkBuffer buffer, size_t size, size_t offset, VkDescriptorType type);
 
     DescriptorWriter& clear();
-    DescriptorWriter& updateSet(VkDevice device, VkDescriptorSet set);
+    // DescriptorWriter& updateSet(VkDevice device, VkDescriptorSet set);
+
+    std::vector<VkWriteDescriptorSet> getWrites() {
+        return mWrites;
+    }
 
 private:
 

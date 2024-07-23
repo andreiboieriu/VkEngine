@@ -4,6 +4,7 @@
 #include "vk_initializers.h"
 #include "vk_pipelines.h"
 #include "vk_types.h"
+#include "volk.h"
 #include <vulkan/vulkan_core.h>
 
 void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat) {
@@ -25,15 +26,15 @@ void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat
     pushConstants.size = sizeof(GPUDrawPushConstants);
     pushConstants.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
 
-    DescriptorLayoutBuilder layoutBuilder;
+    DescriptorLayoutBuilder layoutBuilder{};
     mMaterialLayout = layoutBuilder.addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
                                    .addBinding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
                                    .addBinding(2, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                                   .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT);
+                                   .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
 
     mGpuSceneDataLayout = layoutBuilder.clear()
                                        .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
-                                       .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT);
+                                       .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
 
     VkDescriptorSetLayout layouts[] = {
         mGpuSceneDataLayout,
@@ -63,7 +64,7 @@ void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat
                                               .enableDepthTesting(true, VK_COMPARE_OP_GREATER_OR_EQUAL)
                                               .setColorAttachmentFormat(colorFormat)
                                               .setDepthFormat(depthFormat)
-                                              .setLayout(newLayout)
+                                              .setLayout(mOpaquePipeline.layout)
                                               .buildPipeline(device);
 
     mTransparentPipeline.pipeline =  pipelineBuilder.enableBlendingAdditive()
@@ -78,7 +79,7 @@ void GLTFMetallicRoughness::clearResources(VkDevice device) {
     
 }
 
-MaterialInstance GLTFMetallicRoughness::writeMaterial(VkDevice device, MaterialPass pass, const GLTFMetallicRoughness::MaterialResources& resources, DynamicDescriptorAllocator& descriptorAllocator) {
+MaterialInstance GLTFMetallicRoughness::writeMaterial(VkDevice device, MaterialPass pass, const GLTFMetallicRoughness::MaterialResources& resources) {
     MaterialInstance materialInstance;
     materialInstance.passType = pass;
 
@@ -88,13 +89,10 @@ MaterialInstance GLTFMetallicRoughness::writeMaterial(VkDevice device, MaterialP
         materialInstance.pipeline = &mOpaquePipeline;
     }
 
-    materialInstance.descriptorSet = descriptorAllocator.allocate(device, mMaterialLayout);
-
-    mDescriptorWriter.clear()
-                     .writeBuffer(0, resources.dataBuffer, sizeof(MaterialConstants), resources.dataBufferOffset, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
-                     .writeImage(1, resources.colorImage.imageView, resources.colorSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                     .writeImage(2, resources.metalRoughImage.imageView, resources.metalRoughSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                     .updateSet(device, materialInstance.descriptorSet);
-
+    materialInstance.descriptorWrites = mDescriptorWriter.clear()
+                                                         .writeBuffer(0, resources.dataBuffer, sizeof(MaterialConstants), resources.dataBufferOffset, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
+                                                         .writeImage(1, resources.colorImage.imageView, resources.colorSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+                                                         .writeImage(2, resources.metalRoughImage.imageView, resources.metalRoughSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+                                                         .getWrites();
     return materialInstance;
 }

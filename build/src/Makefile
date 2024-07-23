@@ -238,6 +238,54 @@ deletion_queue.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.s
 .PHONY : deletion_queue.cpp.s
 
+ecs_systems/render_system.o: ecs_systems/render_system.cpp.o
+.PHONY : ecs_systems/render_system.o
+
+# target to build an object file
+ecs_systems/render_system.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o
+.PHONY : ecs_systems/render_system.cpp.o
+
+ecs_systems/render_system.i: ecs_systems/render_system.cpp.i
+.PHONY : ecs_systems/render_system.i
+
+# target to preprocess a source file
+ecs_systems/render_system.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.i
+.PHONY : ecs_systems/render_system.cpp.i
+
+ecs_systems/render_system.s: ecs_systems/render_system.cpp.s
+.PHONY : ecs_systems/render_system.s
+
+# target to generate assembly for a file
+ecs_systems/render_system.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.s
+.PHONY : ecs_systems/render_system.cpp.s
+
+game_object.o: game_object.cpp.o
+.PHONY : game_object.o
+
+# target to build an object file
+game_object.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_object.cpp.o
+.PHONY : game_object.cpp.o
+
+game_object.i: game_object.cpp.i
+.PHONY : game_object.i
+
+# target to preprocess a source file
+game_object.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_object.cpp.i
+.PHONY : game_object.cpp.i
+
+game_object.s: game_object.cpp.s
+.PHONY : game_object.s
+
+# target to generate assembly for a file
+game_object.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_object.cpp.s
+.PHONY : game_object.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -476,6 +524,12 @@ help:
 	@echo "... deletion_queue.o"
 	@echo "... deletion_queue.i"
 	@echo "... deletion_queue.s"
+	@echo "... ecs_systems/render_system.o"
+	@echo "... ecs_systems/render_system.i"
+	@echo "... ecs_systems/render_system.s"
+	@echo "... game_object.o"
+	@echo "... game_object.i"
+	@echo "... game_object.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
