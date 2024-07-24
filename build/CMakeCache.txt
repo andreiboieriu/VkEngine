@@ -761,7 +761,7 @@ SampleRate_DIR:PATH=SampleRate_DIR-NOTFOUND
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=/bin/glslangValidator
 
 //Path to a program.
-Vulkan_GLSLC_EXECUTABLE:FILEPATH=Vulkan_GLSLC_EXECUTABLE-NOTFOUND
+Vulkan_GLSLC_EXECUTABLE:FILEPATH=/home/gooby/vulkan/1.3.283.0/x86_64/bin/glslc
 
 //Path to a file.
 Vulkan_INCLUDE_DIR:PATH=/usr/include

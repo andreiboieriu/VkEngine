@@ -41,13 +41,13 @@ private:
 
 class LoadedGLTF {
 public:
-    LoadedGLTF(std::string_view filePath);
+    LoadedGLTF(std::string_view filePath, DescriptorManager& descriptorManager);
     ~LoadedGLTF();
 
     void draw(const glm::mat4& transform, RenderContext& context);
 
 private:
-    void load(std::string_view filePath);
+    void load(std::string_view filePath, DescriptorManager& descriptorManager);
     void freeResources();
 
     void initMaterialDataBuffer(size_t materialCount);

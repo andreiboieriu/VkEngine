@@ -434,12 +434,6 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   third_party/SDL/include/SDL2/SDL_gesture.h \
   third_party/SDL/include/SDL2/SDL_touch.h \
   ../src/vk_types.h \
-  ../src/vk_descriptors.h \
-  /usr/include/c++/12/span \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/deque \
-  /usr/include/c++/12/bits/stl_deque.h \
-  /usr/include/c++/12/bits/deque.tcc \
   ../third_party/volk/volk.h \
   /usr/include/vulkan/vulkan.h \
   /usr/include/vulkan/vk_platform.h \
@@ -455,8 +449,12 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/array \
   /usr/include/c++/12/bits/stl_algo.h \
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
@@ -1820,7 +1818,6 @@ src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o: src/CMakeFiles/engine
   /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  ../src/vk_materials.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -1831,6 +1828,7 @@ src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o: src/CMakeFiles/engine
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   ../src/vk_enum_string_helper.h \
+  ../src/vk_materials.h \
   ../src/ecs_components/transform.h
 
 src/CMakeFiles/engine.dir/game_object.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
@@ -2260,7 +2258,6 @@ src/CMakeFiles/engine.dir/game_object.cpp.o: src/CMakeFiles/engine.dir/cmake_pch
   /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  ../src/vk_materials.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -2271,6 +2268,7 @@ src/CMakeFiles/engine.dir/game_object.cpp.o: src/CMakeFiles/engine.dir/cmake_pch
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   ../src/vk_enum_string_helper.h \
+  ../src/vk_materials.h \
   ../src/ecs_components/transform.h \
   /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_tree.h \
@@ -2720,7 +2718,6 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  ../src/vk_materials.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -2731,6 +2728,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   ../src/vk_enum_string_helper.h \
+  ../src/vk_materials.h \
   ../src/ecs_components/transform.h \
   /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_tree.h \
@@ -3217,7 +3215,66 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h
+  /usr/include/c++/12/bits/stream_iterator.h \
+  ../src/vk_engine.h \
+  ../src/game_object.h \
+  ../src/ecs_components/components.h \
+  ../src/ecs_components/gltf.h \
+  ../src/vk_loader.h \
+  ../src/vk_materials.h \
+  ../src/ecs_components/transform.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../src/vk_scene.h \
+  ../src/camera.h \
+  third_party/SDL/include/SDL2/SDL_events.h \
+  third_party/SDL/include/SDL2/SDL_stdinc.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
+  third_party/SDL/include/SDL2/SDL_platform.h \
+  third_party/SDL/include/SDL2/begin_code.h \
+  third_party/SDL/include/SDL2/close_code.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/12/math.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
+  third_party/SDL/include/SDL2/SDL_error.h \
+  third_party/SDL/include/SDL2/SDL_video.h \
+  third_party/SDL/include/SDL2/SDL_pixels.h \
+  third_party/SDL/include/SDL2/SDL_endian.h \
+  third_party/SDL/include/SDL2/SDL_rect.h \
+  third_party/SDL/include/SDL2/SDL_rwops.h \
+  third_party/SDL/include/SDL2/SDL_surface.h \
+  third_party/SDL/include/SDL2/SDL_blendmode.h \
+  third_party/SDL/include/SDL2/SDL_keyboard.h \
+  third_party/SDL/include/SDL2/SDL_keycode.h \
+  third_party/SDL/include/SDL2/SDL_scancode.h \
+  third_party/SDL/include/SDL2/SDL_mouse.h \
+  third_party/SDL/include/SDL2/SDL_joystick.h \
+  third_party/SDL/include/SDL2/SDL_guid.h \
+  third_party/SDL/include/SDL2/SDL_mutex.h \
+  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
+  third_party/SDL/include/SDL2/SDL_sensor.h \
+  third_party/SDL/include/SDL2/SDL_quit.h \
+  third_party/SDL/include/SDL2/SDL_gesture.h \
+  third_party/SDL/include/SDL2/SDL_touch.h
 
 src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -3647,7 +3704,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  ../src/vk_materials.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -3658,6 +3714,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   ../src/vk_enum_string_helper.h \
+  ../src/vk_materials.h \
   ../src/ecs_components/transform.h \
   /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_tree.h \
@@ -4296,16 +4353,14 @@ src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_initializers.h \
   ../src/vk_types.h \
-  ../src/vk_descriptors.h \
-  /usr/include/c++/12/span \
-  /usr/include/c++/12/array \
+  ../third_party/vma/vk_mem_alloc.h \
+  ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  ../third_party/vma/vk_mem_alloc.h \
-  ../src/deletion_queue.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/array \
   /usr/include/c++/12/bits/stl_algo.h \
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
@@ -4725,12 +4780,6 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   ../src/vk_initializers.cpp \
   ../src/vk_initializers.h \
   ../src/vk_types.h \
-  ../src/vk_descriptors.h \
-  /usr/include/c++/12/span \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/deque \
-  /usr/include/c++/12/bits/stl_deque.h \
-  /usr/include/c++/12/bits/deque.tcc \
   ../third_party/volk/volk.h \
   /usr/include/vulkan/vulkan.h \
   /usr/include/vulkan/vk_platform.h \
@@ -4746,8 +4795,12 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/array \
   /usr/include/c++/12/bits/stl_algo.h \
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
@@ -4758,7 +4811,9 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h
+  /usr/include/c++/12/bits/stream_iterator.h \
+  ../src/vk_descriptors.h \
+  /usr/include/c++/12/span
 
 src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -5215,7 +5270,6 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  ../src/vk_materials.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -5226,6 +5280,7 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   ../src/vk_enum_string_helper.h \
+  ../src/vk_materials.h \
   ../src/vk_engine.h \
   ../src/game_object.h \
   ../src/ecs_components/components.h \
@@ -6231,12 +6286,6 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   ../src/vk_pipelines.cpp \
   ../src/vk_pipelines.h \
   ../src/vk_types.h \
-  ../src/vk_descriptors.h \
-  /usr/include/c++/12/span \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/deque \
-  /usr/include/c++/12/bits/stl_deque.h \
-  /usr/include/c++/12/bits/deque.tcc \
   ../third_party/volk/volk.h \
   /usr/include/vulkan/vulkan.h \
   /usr/include/vulkan/vk_platform.h \
@@ -6252,8 +6301,12 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/array \
   /usr/include/c++/12/bits/stl_algo.h \
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
@@ -6673,12 +6726,18 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
   ../src/vk_scene.cpp \
   ../src/vk_scene.h \
-  ../src/vk_descriptors.h \
-  /usr/include/c++/12/span \
-  /usr/include/c++/12/array \
+  ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_types.h \
   ../third_party/volk/volk.h \
   /usr/include/vulkan/vulkan.h \
   /usr/include/vulkan/vk_platform.h \
@@ -6692,23 +6751,122 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
-  ../src/deletion_queue.h \
-  /usr/include/c++/12/functional \
-  /usr/include/c++/12/bits/std_function.h \
-  /usr/include/c++/12/bits/stl_algo.h \
-  /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_heap.h \
-  /usr/include/c++/12/bits/uniform_int_dist.h \
   ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h
+  /usr/include/c++/12/bits/stream_iterator.h \
+  ../src/camera.h \
+  third_party/SDL/include/SDL2/SDL_events.h \
+  third_party/SDL/include/SDL2/SDL_stdinc.h \
+  third_party/SDL/include-config-/SDL2/SDL_config.h \
+  third_party/SDL/include/SDL2/SDL_platform.h \
+  third_party/SDL/include/SDL2/begin_code.h \
+  third_party/SDL/include/SDL2/close_code.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/12/math.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
+  third_party/SDL/include/SDL2/SDL_error.h \
+  third_party/SDL/include/SDL2/SDL_video.h \
+  third_party/SDL/include/SDL2/SDL_pixels.h \
+  third_party/SDL/include/SDL2/SDL_endian.h \
+  third_party/SDL/include/SDL2/SDL_rect.h \
+  third_party/SDL/include/SDL2/SDL_rwops.h \
+  third_party/SDL/include/SDL2/SDL_surface.h \
+  third_party/SDL/include/SDL2/SDL_blendmode.h \
+  third_party/SDL/include/SDL2/SDL_keyboard.h \
+  third_party/SDL/include/SDL2/SDL_keycode.h \
+  third_party/SDL/include/SDL2/SDL_scancode.h \
+  third_party/SDL/include/SDL2/SDL_mouse.h \
+  third_party/SDL/include/SDL2/SDL_joystick.h \
+  third_party/SDL/include/SDL2/SDL_guid.h \
+  third_party/SDL/include/SDL2/SDL_mutex.h \
+  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
+  third_party/SDL/include/SDL2/SDL_sensor.h \
+  third_party/SDL/include/SDL2/SDL_quit.h \
+  third_party/SDL/include/SDL2/SDL_gesture.h \
+  third_party/SDL/include/SDL2/SDL_touch.h \
+  ../src/vk_loader.h \
+  ../src/vk_descriptors.h \
+  /usr/include/c++/12/span \
+  ../src/vk_materials.h \
+  ../src/vk_engine.h \
+  ../src/game_object.h \
+  ../src/ecs_components/components.h \
+  ../src/ecs_components/gltf.h \
+  ../src/ecs_components/transform.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/glm/glm/gtx/transform.hpp \
+  ../third_party/glm/glm/glm.hpp \
+  /usr/include/c++/12/cfloat \
+  ../third_party/glm/glm/fwd.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/detail/func_trigonometric.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/packing.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/detail/func_packing.inl \
+  ../third_party/glm/glm/detail/type_half.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/type_half.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/integer.hpp \
+  ../third_party/glm/glm/detail/func_integer.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/vec2.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.inl \
+  ../third_party/glm/glm/gtc/constants.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.inl \
+  ../third_party/glm/glm/ext/matrix_clip_space.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/matrix_clip_space.inl \
+  ../third_party/glm/glm/ext/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/matrix_transform.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/gtx/transform.inl
 
+
+../third_party/glm/glm/gtx/transform.inl:
 
 /usr/include/c++/12/bits/fstream.tcc:
 
@@ -6926,9 +7084,9 @@ third_party/SDL/include/SDL2/SDL_main.h:
 
 /usr/include/assert.h:
 
-/usr/include/c++/12/span:
-
 ../third_party/glm/glm/ext/matrix_transform.inl:
+
+/usr/include/c++/12/span:
 
 /usr/include/c++/12/unordered_set:
 
@@ -6955,6 +7113,8 @@ third_party/SDL/include/SDL2/SDL_main.h:
 /usr/include/c++/12/cstddef:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+../third_party/glm/glm/gtx/transform.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
@@ -7996,12 +8156,6 @@ third_party/SDL/include/SDL2/SDL_system.h:
 
 third_party/SDL/include/SDL2/SDL_touch.h:
 
-/usr/include/c++/12/array:
-
-/usr/include/c++/12/functional:
-
-/usr/include/c++/12/bits/deque.tcc:
-
 /usr/include/c++/12/bits/unordered_set.h:
 
 /usr/include/vk_video/vulkan_video_codec_h264std.h:
@@ -8024,9 +8178,15 @@ third_party/SDL/include/SDL2/SDL_touch.h:
 
 ../src/deletion_queue.h:
 
+/usr/include/c++/12/functional:
+
+/usr/include/c++/12/bits/deque.tcc:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h:
 
 /usr/include/c++/12/bits/std_function.h:
+
+/usr/include/c++/12/array:
 
 /usr/include/vk_video/vulkan_video_codec_av1std.h:
 

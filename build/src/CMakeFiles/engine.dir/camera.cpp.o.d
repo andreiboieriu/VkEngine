@@ -415,12 +415,6 @@ src/CMakeFiles/engine.dir/camera.cpp.o: \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
   /home/gooby/Development/VkEngine/src/vk_types.h \
-  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
   /home/gooby/Development/VkEngine/third_party/volk/volk.h \
   /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
   /usr/include/vulkan/vulkan_core.h \
@@ -435,8 +429,12 @@ src/CMakeFiles/engine.dir/camera.cpp.o: \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/gooby/Development/VkEngine/src/deletion_queue.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/algorithmfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \

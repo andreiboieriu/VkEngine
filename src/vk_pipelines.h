@@ -29,7 +29,7 @@ public:
     PipelineBuilder& enableDepthTesting(bool depthWriteEnable, VkCompareOp op);
 
     PipelineBuilder& setLayout(VkPipelineLayout layout);
-    VkPipeline buildPipeline(VkDevice device);
+    VkPipeline buildPipeline(VkDevice device, VkPipelineCreateFlags flags);
 
 private:
     std::vector<VkPipelineShaderStageCreateInfo> mShaderStages;

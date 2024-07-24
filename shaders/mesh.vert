@@ -15,15 +15,15 @@ layout(set = 0, binding = 0) uniform SceneData {
 	vec4 sunlightColor;
 } sceneData;
 
-layout(set = 1, binding = 0) uniform GLTFMaterialData {   
+// layout(set = 1, binding = 0) uniform GLTFMaterialData {   
 
-	vec4 colorFactors;
-	vec4 metal_rough_factors;
+// 	vec4 colorFactors;
+// 	vec4 metal_rough_factors;
 	
-} materialData;
+// } materialData;
 
-layout(set = 1, binding = 1) uniform sampler2D colorTex;
-layout(set = 1, binding = 2) uniform sampler2D metalRoughTex;
+layout(set = 1, binding = 0) uniform sampler2D colorTex;
+layout(set = 1, binding = 1) uniform sampler2D metalRoughTex;
 
 layout (location = 0) out vec3 outNormal;
 layout (location = 1) out vec3 outColor;
@@ -56,11 +56,10 @@ void main()
 	vec4 position = vec4(v.position, 1.0f);
 
 	gl_Position = sceneData.viewproj * PushConstants.render_matrix * position;
-	// gl_Position = PushConstants.render_matrix * position;
 
 	outNormal = (PushConstants.render_matrix * vec4(v.normal, 0.f)).xyz;
-	outColor = v.color.xyz * materialData.colorFactors.xyz;	
-	// outColor = v.color.xyz;
+	// outColor = v.color.xyz * materialData.colorFactors.xyz;
+	outColor = v.color.xyz;
 	outUV.x = v.uv_x;
 	outUV.y = v.uv_y;
 }

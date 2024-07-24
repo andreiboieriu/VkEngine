@@ -5,7 +5,6 @@
 #include "vk_pipelines.h"
 #include "vk_types.h"
 #include "volk.h"
-#include <vulkan/vulkan_core.h>
 
 void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat) {
     // load shaders
@@ -27,18 +26,18 @@ void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat
     pushConstants.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
 
     DescriptorLayoutBuilder layoutBuilder{};
-    mMaterialLayout = layoutBuilder.addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
+    mMaterialDescriptorLayout = layoutBuilder// .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
+                                   .addBinding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
                                    .addBinding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                                   .addBinding(2, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                                   .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
+                                   .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
-    mGpuSceneDataLayout = layoutBuilder.clear()
+    mGlobalDescriptorLayout = layoutBuilder.clear()
                                        .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
-                                       .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
+                                       .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     VkDescriptorSetLayout layouts[] = {
-        mGpuSceneDataLayout,
-        mMaterialLayout
+        mGlobalDescriptorLayout,
+        mMaterialDescriptorLayout
     };
 
     VkPipelineLayoutCreateInfo meshLayoutInfo = vkinit::pipeline_layout_create_info();
@@ -65,11 +64,11 @@ void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat
                                               .setColorAttachmentFormat(colorFormat)
                                               .setDepthFormat(depthFormat)
                                               .setLayout(mOpaquePipeline.layout)
-                                              .buildPipeline(device);
+                                              .buildPipeline(device,  VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
-    mTransparentPipeline.pipeline =  pipelineBuilder.enableBlendingAdditive()
-                                                    .enableDepthTesting(false, VK_COMPARE_OP_GREATER_OR_EQUAL)
-                                                    .buildPipeline(device);
+    mTransparentPipeline.pipeline = pipelineBuilder.enableBlendingAdditive()
+                                                   .enableDepthTesting(false, VK_COMPARE_OP_GREATER_OR_EQUAL)
+                                                   .buildPipeline(device,  VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     vkDestroyShaderModule(device, vertShader, nullptr);
     vkDestroyShaderModule(device, fragShader, nullptr);
@@ -79,7 +78,7 @@ void GLTFMetallicRoughness::clearResources(VkDevice device) {
     
 }
 
-MaterialInstance GLTFMetallicRoughness::writeMaterial(VkDevice device, MaterialPass pass, const GLTFMetallicRoughness::MaterialResources& resources) {
+MaterialInstance GLTFMetallicRoughness::writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources, DescriptorManager& descriptorManager) {
     MaterialInstance materialInstance;
     materialInstance.passType = pass;
 
@@ -89,10 +88,14 @@ MaterialInstance GLTFMetallicRoughness::writeMaterial(VkDevice device, MaterialP
         materialInstance.pipeline = &mOpaquePipeline;
     }
 
-    materialInstance.descriptorWrites = mDescriptorWriter.clear()
-                                                         .writeBuffer(0, resources.dataBuffer, sizeof(MaterialConstants), resources.dataBufferOffset, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
-                                                         .writeImage(1, resources.colorImage.imageView, resources.colorSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                                                         .writeImage(2, resources.metalRoughImage.imageView, resources.metalRoughSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                                                         .getWrites();
+    // materialInstance.descriptorWrites = mDescriptorWriter.clear()
+    //                                                      .writeBuffer(0, resources.dataBuffer, sizeof(MaterialConstants), resources.dataBufferOffset, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
+    //                                                      .writeImage(1, resources.colorImage.imageView, resources.colorSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+    //                                                      .writeImage(2, resources.metalRoughImage.imageView, resources.metalRoughSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+    //                                                      .getWrites();
+
+    materialInstance.descriptorOffset = descriptorManager.createMaterialDescriptor(resources);
+
+
     return materialInstance;
 }

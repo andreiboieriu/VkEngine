@@ -408,7 +408,6 @@ src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o: \
   /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/gooby/Development/VkEngine/src/deletion_queue.h \
@@ -419,4 +418,5 @@ src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uniform_int_dist.h \
   /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h \
+  /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/src/ecs_components/transform.h

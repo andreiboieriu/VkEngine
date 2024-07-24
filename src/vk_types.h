@@ -2,11 +2,12 @@
 // or project specific include files.
 #pragma once
 
+#include "volk.h"
+
 #include <memory>
 #include <string>
 #include <vector>
 
-#include "vk_descriptors.h"
 #include <vk_mem_alloc.h>
 #include "deletion_queue.h"
 #include "vk_enum_string_helper.h"
@@ -15,19 +16,6 @@
 
 #include <glm/mat4x4.hpp>
 #include <glm/vec4.hpp>
-#include <vulkan/vulkan_core.h>
-#include "volk.h"
-
-struct FrameData {
-	VkCommandPool commandPool;
-	VkCommandBuffer mainCommandBuffer;
-
-	VkSemaphore swapchainSemaphore;
-	VkSemaphore renderSemaphore;
-	VkFence renderFence;
-
-	DeletionQueue deletionQueue;
-};
 
 struct AllocatedImage {
     VkImage image;
@@ -57,6 +45,15 @@ struct AllocatedBuffer {
     VkBuffer buffer;
     VmaAllocation allocation;
     VmaAllocationInfo allocInfo;
+    VkDeviceAddress deviceAddress;
+};
+
+
+struct DescriptorData {
+    VkDescriptorSetLayout layout;
+    AllocatedBuffer buffer;
+    VkDeviceSize size;
+    VkDeviceSize offset;
 };
 
 struct Vertex {
@@ -78,15 +75,6 @@ struct GPUDrawPushConstants {
     VkDeviceAddress vertexBuffer;
 };
 
-struct GPUSceneData {
-    glm::mat4 view;
-    glm::mat4 projection;
-    glm::mat4 viewProjection;
-    glm::vec4 ambientColor;
-    glm::vec4 sunlightDirection;
-    glm::vec4 sunlightColor;
-};
-
 enum class MaterialPass : uint8_t {
     Opaque,
     Transparent,
@@ -100,8 +88,27 @@ struct MaterialPipeline {
 
 struct MaterialInstance {
     MaterialPipeline* pipeline;
-    std::vector<VkWriteDescriptorSet> descriptorWrites;
     MaterialPass passType;
+
+    VkDeviceSize descriptorOffset;
+};
+
+struct MaterialConstants {
+    glm::vec4 colorFactors;
+    glm::vec4 metalRoughFactors;
+
+    // padding
+    glm::vec4 extra[14];
+};
+
+struct MaterialResources {
+    AllocatedImage colorImage;
+    VkSampler colorSampler;
+    AllocatedImage metalRoughImage;
+    VkSampler metalRoughSampler;
+    VkBuffer dataBuffer;
+    uint32_t dataBufferOffset;
+    VkDeviceAddress dataBufferAddress;
 };
 
 struct Bounds {
@@ -146,6 +153,11 @@ struct MeshAsset {
     std::vector<GeoSurface> surfaces;
     GPUMeshBuffers meshBuffers;
 };
+
+inline VkDeviceSize alignedSize(VkDeviceSize value, VkDeviceSize alignment)
+{
+	return (value + alignment - 1) & ~(alignment - 1);
+}
 
 #define VK_CHECK(x)                                                     \
     do {                                                                \

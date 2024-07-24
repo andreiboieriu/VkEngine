@@ -10,7 +10,6 @@
 #include <memory>
 #include <string>
 #include <unordered_map>
-#include "camera.h"
 
 #include "volk.h"
 #include "entt.hpp"
@@ -36,6 +35,18 @@ public:
 		int frameCount;
 
 		int fps;
+	};
+
+	struct FrameData {
+		VkCommandPool commandPool;
+		VkCommandBuffer mainCommandBuffer;
+
+		VkSemaphore swapchainSemaphore;
+		VkSemaphore renderSemaphore;
+		VkFence renderFence;
+
+		DynamicDescriptorAllocator descriptorAllocator;
+		DeletionQueue deletionQueue;
 	};
 
 	static VulkanEngine& get();
@@ -75,6 +86,10 @@ public:
 
 	GLTFMetallicRoughness& getGLTFMRCreator() {
 		return mMetalRoughMaterial;
+	}
+
+	VkPhysicalDeviceDescriptorBufferPropertiesEXT getDescriptorBufferProperties() {
+		return mDescriptorBufferProperties;
 	}
 
 	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function);
@@ -183,9 +198,6 @@ private:
 	VkCommandBuffer mImmCommandBuffer;
 	VkCommandPool mImmCommandPool;
 
-	// scene resources
-	GPUSceneData mSceneData;
-
 	// texture test resources
 	AllocatedImage mWhiteImage;
 	AllocatedImage mBlackImage;
@@ -199,16 +211,9 @@ private:
 
 	RenderContext mMainRenderContext;
 
-	// TODO: move somewhere else
-	Camera mCamera;
-
-	// std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedScenes;
-	std::shared_ptr<LoadedGLTF> mTestGLTF;
-
-	// GameObject mTestObject;
-	std::shared_ptr<GameObject> mTestObject;
-
-	// std::shared_ptr<System> mRenderSystem;
+	std::shared_ptr<Scene3D> mScene;
 
 	Stats mStats{};
+
+	VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties{};
 };

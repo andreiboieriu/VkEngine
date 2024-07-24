@@ -188,7 +188,7 @@ PipelineBuilder& PipelineBuilder::enableBlendingAlphaBlend() {
     return *this;
 }
 
-VkPipeline PipelineBuilder::buildPipeline(VkDevice device) {
+VkPipeline PipelineBuilder::buildPipeline(VkDevice device, VkPipelineCreateFlags flags) {
     // create viewport state
     VkPipelineViewportStateCreateInfo viewportState{};
     viewportState.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
@@ -224,6 +224,7 @@ VkPipeline PipelineBuilder::buildPipeline(VkDevice device) {
     pipelineInfo.pColorBlendState = &colorBlending;
     pipelineInfo.pDepthStencilState = &mDepthStencil;
     pipelineInfo.layout = mPipelineLayout;
+    pipelineInfo.flags = flags;
 
     // setup dynamic state
     VkDynamicState dynamicStates[] = {

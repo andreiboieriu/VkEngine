@@ -7,27 +7,18 @@
 class GLTFMetallicRoughness {
 public:
 
-    struct MaterialConstants {
-        glm::vec4 colorFactors;
-        glm::vec4 metalRoughFactors;
-
-        // padding
-        glm::vec4 extra[14];
-    };
-
-    struct MaterialResources {
-        AllocatedImage colorImage;
-        VkSampler colorSampler;
-        AllocatedImage metalRoughImage;
-        VkSampler metalRoughSampler;
-        VkBuffer dataBuffer;
-        uint32_t dataBufferOffset;
-    };
-
     void buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
     void clearResources(VkDevice device);
 
-    MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources);
+    VkDescriptorSetLayout getGlobalDescriptorSetLayout() {
+        return mGlobalDescriptorLayout;
+    }
+
+    VkDescriptorSetLayout getMaterialDescriptorSetLayout() {
+        return mMaterialDescriptorLayout;
+    }
+
+    MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources, DescriptorManager& descriptorManager);
 
 private:
 
@@ -35,7 +26,7 @@ private:
     MaterialPipeline mOpaquePipeline;
     MaterialPipeline mTransparentPipeline;
 
-    VkDescriptorSetLayout mMaterialLayout;
-    VkDescriptorSetLayout mGpuSceneDataLayout;
+    VkDescriptorSetLayout mMaterialDescriptorLayout;
+    VkDescriptorSetLayout mGlobalDescriptorLayout;
 
 };

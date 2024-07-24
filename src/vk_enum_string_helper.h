@@ -13,6 +13,7 @@
 #ifdef __cplusplus
 #include <string>
 #endif
+#define VK_NO_PROTOTYPES
 #include "volk.h"
 static inline const char* string_VkResult(VkResult input_value) {
     switch (input_value) {

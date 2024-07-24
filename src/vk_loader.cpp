@@ -121,7 +121,7 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
     }
 }
 
-void LoadedGLTF::load(std::string_view filePath) {
+void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorManager) {
     fmt::println("Loading GLTF: {}", filePath);
 
     // define gltf loading options
@@ -214,7 +214,7 @@ void LoadedGLTF::load(std::string_view filePath) {
 
         mMaterials[material.name.c_str()] = newMaterial;
 
-        GLTFMetallicRoughness::MaterialConstants constants;
+        MaterialConstants constants;
         constants.colorFactors.x = material.pbrData.baseColorFactor[0];
         constants.colorFactors.y = material.pbrData.baseColorFactor[1];
         constants.colorFactors.z = material.pbrData.baseColorFactor[2];
@@ -224,7 +224,7 @@ void LoadedGLTF::load(std::string_view filePath) {
         constants.metalRoughFactors.y = material.pbrData.roughnessFactor;
 
         // add material constants to buffer
-        ((GLTFMetallicRoughness::MaterialConstants*)mMaterialDataBuffer.allocInfo.pMappedData)[dataIndex] = constants;
+        ((MaterialConstants*)mMaterialDataBuffer.allocInfo.pMappedData)[dataIndex] = constants;
 
         MaterialPass passType = MaterialPass::Opaque;
 
@@ -232,7 +232,7 @@ void LoadedGLTF::load(std::string_view filePath) {
             passType = MaterialPass::Transparent;
         }
 
-        GLTFMetallicRoughness::MaterialResources materialResources;
+        MaterialResources materialResources;
 
         // default material textures
         materialResources.colorImage = VulkanEngine::get().getWhiteTexture();
@@ -242,7 +242,8 @@ void LoadedGLTF::load(std::string_view filePath) {
 
         // set uniform buffer for the material data
         materialResources.dataBuffer = mMaterialDataBuffer.buffer;
-        materialResources.dataBufferOffset = dataIndex * sizeof(GLTFMetallicRoughness::MaterialConstants);
+        materialResources.dataBufferOffset = dataIndex * sizeof(MaterialConstants);
+        materialResources.dataBufferAddress = mMaterialDataBuffer.deviceAddress;
 
         // get textures from gltf file
         if (material.pbrData.baseColorTexture.has_value()) {
@@ -253,7 +254,7 @@ void LoadedGLTF::load(std::string_view filePath) {
             materialResources.colorSampler = samplers[sampler];
         }
 
-        newMaterial->materialInstance = VulkanEngine::get().getGLTFMRCreator().writeMaterial(VulkanEngine::get().getDevice(), passType, materialResources);
+        newMaterial->materialInstance = VulkanEngine::get().getGLTFMRCreator().writeMaterial(VulkanEngine::get().getDevice(), passType, materialResources, descriptorManager);
 
         dataIndex++;
     }
@@ -418,8 +419,8 @@ void LoadedGLTF::load(std::string_view filePath) {
     }
 }
 
-LoadedGLTF::LoadedGLTF(std::string_view filePath) {
-    load(filePath);
+LoadedGLTF::LoadedGLTF(std::string_view filePath, DescriptorManager& descriptorManager) {
+    load(filePath, descriptorManager);
 }
 
 LoadedGLTF::~LoadedGLTF() {
@@ -434,8 +435,8 @@ void LoadedGLTF::draw(const glm::mat4& transform, RenderContext& context) {
 
 void LoadedGLTF::initMaterialDataBuffer(size_t materialCount) {
     mMaterialDataBuffer = VulkanEngine::get().createBuffer(
-        sizeof(GLTFMetallicRoughness::MaterialConstants) * materialCount,
-        VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
+        sizeof(MaterialConstants) * materialCount,
+        VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
         VMA_MEMORY_USAGE_CPU_TO_GPU
         );
 }

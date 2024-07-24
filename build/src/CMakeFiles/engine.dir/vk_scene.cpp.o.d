@@ -382,12 +382,18 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
   /home/gooby/Development/VkEngine/src/vk_scene.cpp \
   /home/gooby/Development/VkEngine/src/vk_scene.h \
-  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
+  /home/gooby/Development/VkEngine/src/deletion_queue.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/algorithmfwd.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uniform_int_dist.h \
+  /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/volk/volk.h \
   /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
   /usr/include/vulkan/vulkan_core.h \
@@ -400,18 +406,115 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
-  /home/gooby/Development/VkEngine/src/deletion_queue.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/algorithmfwd.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uniform_int_dist.h \
   /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h \
   /home/gooby/Development/VkEngine/third_party/fmt/include/fmt/core.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \
   /usr/include/string.h /usr/include/strings.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
+  /home/gooby/Development/VkEngine/src/camera.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/math.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
+  /home/gooby/Development/VkEngine/src/vk_loader.h \
+  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
+  /home/gooby/Development/VkEngine/src/vk_materials.h \
+  /home/gooby/Development/VkEngine/src/vk_engine.h \
+  /home/gooby/Development/VkEngine/src/game_object.h \
+  /home/gooby/Development/VkEngine/src/ecs_components/components.h \
+  /home/gooby/Development/VkEngine/src/ecs_components/gltf.h \
+  /home/gooby/Development/VkEngine/src/ecs_components/transform.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
+  /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/algorithm \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ranges_algo.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ranges_util.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/list \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_list.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/list.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_map.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../glm.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/fwd.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/packing.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_uint2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_packing.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/matrix.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/vector_relational.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/integer.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_integer.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../mat4x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../vec2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../vec3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../vec4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../ext/matrix_projection.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/constants.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../matrix.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_projection.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../ext/matrix_clip_space.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../ext/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_transform.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/matrix_transform.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../matrix.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/transform.inl

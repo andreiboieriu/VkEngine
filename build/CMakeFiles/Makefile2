@@ -253,8 +253,8 @@ third_party/CMakeFiles/volk.dir/clean:
 # Target rules for target third_party/CMakeFiles/imgui.dir
 
 # All Build rule for target.
-third_party/CMakeFiles/imgui.dir/all: third_party/CMakeFiles/volk.dir/all
 third_party/CMakeFiles/imgui.dir/all: third_party/SDL/CMakeFiles/SDL2.dir/all
+third_party/CMakeFiles/imgui.dir/all: third_party/CMakeFiles/volk.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=83,84 "Built target imgui"
@@ -514,13 +514,13 @@ third_party/SDL/CMakeFiles/uninstall.dir/clean:
 # Target rules for target src/CMakeFiles/engine.dir
 
 # All Build rule for target.
+src/CMakeFiles/engine.dir/all: third_party/SDL/CMakeFiles/SDL2.dir/all
 src/CMakeFiles/engine.dir/all: third_party/CMakeFiles/vkbootstrap.dir/all
 src/CMakeFiles/engine.dir/all: third_party/CMakeFiles/volk.dir/all
 src/CMakeFiles/engine.dir/all: third_party/CMakeFiles/imgui.dir/all
 src/CMakeFiles/engine.dir/all: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/all
 src/CMakeFiles/engine.dir/all: third_party/fastgltf/CMakeFiles/fastgltf.dir/all
 src/CMakeFiles/engine.dir/all: third_party/fmt/CMakeFiles/fmt.dir/all
-src/CMakeFiles/engine.dir/all: third_party/SDL/CMakeFiles/SDL2.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=79,80,81 "Built target engine"
