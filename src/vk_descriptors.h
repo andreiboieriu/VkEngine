@@ -28,16 +28,15 @@ public:
     VkDeviceSize createGlobalDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size);
     VkDeviceSize createMaterialDescriptor(const MaterialResources& resources);
 
+    void freeResources();
+
 private:
 
     void init();
     void createDescriptorBuffers();
 
-    AllocatedBuffer mUniformDescriptorBuffer;
-    VkDeviceSize mUniformCurrentOffset = 0;
-
-    AllocatedBuffer mImageDescriptorBuffer;
-    VkDeviceSize mImageCurrentOffset = 0;
+    AllocatedBuffer mDescriptorBuffer;
+    VkDeviceSize mCurrentOffset = 0;
 
     VkDescriptorSetLayout mGlobalLayout;
     VkDescriptorSetLayout mMaterialLayout;
@@ -49,31 +48,6 @@ private:
     VkDeviceSize mMaterialLayoutOffset;
 
     VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties;
-};
-
-class DynamicDescriptorAllocator {
-public:
-    struct PoolSizeRatio {
-        VkDescriptorType type;
-        float ratio;
-    };
-
-    void init(VkDevice device, uint32_t initialSets, std::span<PoolSizeRatio> poolRatios);
-    void clearPools(VkDevice device);
-    void destroyPools(VkDevice device);
-
-    VkDescriptorSet allocate(VkDevice device, VkDescriptorSetLayout layout, void* pNext = nullptr);
-
-private:
-
-    VkDescriptorPool getPool(VkDevice device);
-    VkDescriptorPool createPool(VkDevice device, uint32_t setCount, std::span<PoolSizeRatio> poolRatios);
-
-    std::vector<PoolSizeRatio> mRatios;
-    std::vector<VkDescriptorPool> mFullPools;
-    std::vector<VkDescriptorPool> mAvailablePools;
-    uint32_t mSetsPerPool;
-    uint32_t mMaxSetsPerPool = 4092;
 };
 
 class DescriptorWriter {

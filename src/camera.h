@@ -6,14 +6,30 @@ public:
 
     glm::mat4 getViewMatrix();
     glm::mat4 getRotationMatrix();
+    glm::mat4 getProjectionMatrix();
 
     void processSDLEvent(SDL_Event& e);
-    void update();
+    void update(float dt, float aspectRatio);
 
 private:
 
     glm::vec3 mVelocity{};
     glm::vec3 mPosition{};
+
+    float mFov = 70.f;
+    float mAspectRatio;
+    float mNear = 0.1f;
+    float mFar = 1000.f;
+
+    const float MOUSE_MOTION_SENSITIVITY = 0.05f;
+    const float MOUSE_WHEEL_SENSITIVITY = 1.0f;
+    const float SPEED = .02f;
+
+    const float MAX_FOV = 130.f;
+    const float MIN_FOV = 40.f;
+
+    const float MAX_PITCH = 90.f;
+    const float MIN_PITCH = -90.f;
 
     // vertical rotation
     float mPitch = 0.f;

@@ -2,6 +2,7 @@
 b2e3679f69bc3c9cb482f5283e61094d ../shaders/colored_triangle.frag.spv
 65ee5b39fd779d3b2d9f24c8d5d6a7d0 ../shaders/colored_triangle.vert.spv
 5466fd0a5f9a38fd92ef9355de4fffb1 ../shaders/colored_triangle_mesh.vert.spv
+a6631fb20d8e96ec138ff95c26d51785 ../shaders/fxaa.comp.spv
 3b0ec99bf95d5b3a89cc90e04c2164e8 ../shaders/gradient.comp.spv
 09225e0b2844c9a50188c0d3a5f26aa5 ../shaders/gradient_color.comp.spv
 d528ce8014eea1d9b48e1725910b83d9 ../shaders/mesh.frag.spv

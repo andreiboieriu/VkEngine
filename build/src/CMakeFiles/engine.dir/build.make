@@ -196,12 +196,44 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/vk_loader.cpp.s"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -S /home/gooby/Development/VkEngine/src/vk_loader.cpp -o CMakeFiles/engine.dir/vk_loader.cpp.s
 
+src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/flags.make
+src/CMakeFiles/engine.dir/vk_window.cpp.o: ../src/vk_window.cpp
+src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
+src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
+src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/engine.dir/vk_window.cpp.o"
+	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_window.cpp.o -MF CMakeFiles/engine.dir/vk_window.cpp.o.d -o CMakeFiles/engine.dir/vk_window.cpp.o -c /home/gooby/Development/VkEngine/src/vk_window.cpp
+
+src/CMakeFiles/engine.dir/vk_window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/vk_window.cpp.i"
+	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -E /home/gooby/Development/VkEngine/src/vk_window.cpp > CMakeFiles/engine.dir/vk_window.cpp.i
+
+src/CMakeFiles/engine.dir/vk_window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/vk_window.cpp.s"
+	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -S /home/gooby/Development/VkEngine/src/vk_window.cpp -o CMakeFiles/engine.dir/vk_window.cpp.s
+
+src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/flags.make
+src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: ../src/vk_swapchain.cpp
+src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
+src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
+src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/engine.dir/vk_swapchain.cpp.o"
+	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_swapchain.cpp.o -MF CMakeFiles/engine.dir/vk_swapchain.cpp.o.d -o CMakeFiles/engine.dir/vk_swapchain.cpp.o -c /home/gooby/Development/VkEngine/src/vk_swapchain.cpp
+
+src/CMakeFiles/engine.dir/vk_swapchain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/vk_swapchain.cpp.i"
+	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -E /home/gooby/Development/VkEngine/src/vk_swapchain.cpp > CMakeFiles/engine.dir/vk_swapchain.cpp.i
+
+src/CMakeFiles/engine.dir/vk_swapchain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/vk_swapchain.cpp.s"
+	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -S /home/gooby/Development/VkEngine/src/vk_swapchain.cpp -o CMakeFiles/engine.dir/vk_swapchain.cpp.s
+
 src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/flags.make
 src/CMakeFiles/engine.dir/camera.cpp.o: ../src/camera.cpp
 src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/engine.dir/camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/engine.dir/camera.cpp.o"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/camera.cpp.o -MF CMakeFiles/engine.dir/camera.cpp.o.d -o CMakeFiles/engine.dir/camera.cpp.o -c /home/gooby/Development/VkEngine/src/camera.cpp
 
 src/CMakeFiles/engine.dir/camera.cpp.i: cmake_force
@@ -217,7 +249,7 @@ src/CMakeFiles/engine.dir/deletion_queue.cpp.o: ../src/deletion_queue.cpp
 src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/engine.dir/deletion_queue.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/engine.dir/deletion_queue.cpp.o"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/deletion_queue.cpp.o -MF CMakeFiles/engine.dir/deletion_queue.cpp.o.d -o CMakeFiles/engine.dir/deletion_queue.cpp.o -c /home/gooby/Development/VkEngine/src/deletion_queue.cpp
 
 src/CMakeFiles/engine.dir/deletion_queue.cpp.i: cmake_force
@@ -233,7 +265,7 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: ../src/vk_materials.cpp
 src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/engine.dir/vk_materials.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/engine.dir/vk_materials.cpp.o"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_materials.cpp.o -MF CMakeFiles/engine.dir/vk_materials.cpp.o.d -o CMakeFiles/engine.dir/vk_materials.cpp.o -c /home/gooby/Development/VkEngine/src/vk_materials.cpp
 
 src/CMakeFiles/engine.dir/vk_materials.cpp.i: cmake_force
@@ -249,7 +281,7 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: ../src/vk_scene.cpp
 src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/engine.dir/vk_scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/engine.dir/vk_scene.cpp.o"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_scene.cpp.o -MF CMakeFiles/engine.dir/vk_scene.cpp.o.d -o CMakeFiles/engine.dir/vk_scene.cpp.o -c /home/gooby/Development/VkEngine/src/vk_scene.cpp
 
 src/CMakeFiles/engine.dir/vk_scene.cpp.i: cmake_force
@@ -265,7 +297,7 @@ src/CMakeFiles/engine.dir/game_object.cpp.o: ../src/game_object.cpp
 src/CMakeFiles/engine.dir/game_object.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/game_object.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/game_object.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/engine.dir/game_object.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/engine.dir/game_object.cpp.o"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/game_object.cpp.o -MF CMakeFiles/engine.dir/game_object.cpp.o.d -o CMakeFiles/engine.dir/game_object.cpp.o -c /home/gooby/Development/VkEngine/src/game_object.cpp
 
 src/CMakeFiles/engine.dir/game_object.cpp.i: cmake_force
@@ -281,7 +313,7 @@ src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o: ../src/ecs_systems/re
 src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o -MF CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o.d -o CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o -c /home/gooby/Development/VkEngine/src/ecs_systems/render_system.cpp
 
 src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.i: cmake_force
@@ -301,6 +333,8 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/vk_pipelines.cpp.o" \
 "CMakeFiles/engine.dir/vk_engine.cpp.o" \
 "CMakeFiles/engine.dir/vk_loader.cpp.o" \
+"CMakeFiles/engine.dir/vk_window.cpp.o" \
+"CMakeFiles/engine.dir/vk_swapchain.cpp.o" \
 "CMakeFiles/engine.dir/camera.cpp.o" \
 "CMakeFiles/engine.dir/deletion_queue.cpp.o" \
 "CMakeFiles/engine.dir/vk_materials.cpp.o" \
@@ -319,6 +353,8 @@ src/engine: src/CMakeFiles/engine.dir/vk_descriptors.cpp.o
 src/engine: src/CMakeFiles/engine.dir/vk_pipelines.cpp.o
 src/engine: src/CMakeFiles/engine.dir/vk_engine.cpp.o
 src/engine: src/CMakeFiles/engine.dir/vk_loader.cpp.o
+src/engine: src/CMakeFiles/engine.dir/vk_window.cpp.o
+src/engine: src/CMakeFiles/engine.dir/vk_swapchain.cpp.o
 src/engine: src/CMakeFiles/engine.dir/camera.cpp.o
 src/engine: src/CMakeFiles/engine.dir/deletion_queue.cpp.o
 src/engine: src/CMakeFiles/engine.dir/vk_materials.cpp.o
@@ -331,12 +367,12 @@ src/engine: third_party/fmt/libfmt.a
 src/engine: third_party/libvkbootstrap.a
 src/engine: third_party/libimgui.a
 src/engine: third_party/fastgltf/libfastgltf.a
-src/engine: /usr/lib/x86_64-linux-gnu/libvulkan.so
+src/engine: /home/gooby/vulkan/1.3.283.0/x86_64/lib/libvulkan.so
 src/engine: third_party/libvolk.a
 src/engine: third_party/SDL/libSDL2-2.0.so.0.2800.4
 src/engine: third_party/fastgltf/libfastgltf_simdjson.a
 src/engine: src/CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable engine"
 	cd /home/gooby/Development/VkEngine/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

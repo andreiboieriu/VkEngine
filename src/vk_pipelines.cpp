@@ -3,6 +3,7 @@
 #include <fstream>
 #include "volk.h"
 #include "vk_initializers.h"
+#include "vk_engine.h"
 
 bool vkutil::loadShaderModule(const char* filePath, VkDevice device, VkShaderModule* outShaderModule) {
     // open shader file
@@ -42,7 +43,27 @@ bool vkutil::loadShaderModule(const char* filePath, VkDevice device, VkShaderMod
     return true;
 }
 
-void PipelineBuilder::clear() {
+VkPipelineLayout vkutil::createPipelineLayout(std::span<VkDescriptorSetLayout> descriptorSetLayouts, std::span<VkPushConstantRange> pushConstantRanges) {
+    VkPipelineLayoutCreateInfo layoutInfo = vkinit::pipeline_layout_create_info();
+
+    if (!descriptorSetLayouts.empty()) {
+        layoutInfo.setLayoutCount = descriptorSetLayouts.size();
+        layoutInfo.pSetLayouts = descriptorSetLayouts.data();
+    }
+
+    if (!pushConstantRanges.empty()) {
+        layoutInfo.pushConstantRangeCount = pushConstantRanges.size();
+        layoutInfo.pPushConstantRanges = pushConstantRanges.data();
+    }
+
+    VkPipelineLayout layout{};
+    VK_CHECK(vkCreatePipelineLayout(VulkanEngine::get().getDevice(), &layoutInfo, nullptr, &layout));
+
+    return layout;
+}
+
+
+PipelineBuilder& PipelineBuilder::clear() {
     mInputAssembly = {};
     mInputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
 
@@ -63,6 +84,8 @@ void PipelineBuilder::clear() {
     mRenderInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_RENDERING_CREATE_INFO;
 
     mShaderStages.clear();
+
+    return *this;
 }
 
 PipelineBuilder& PipelineBuilder::setShaders(VkShaderModule vertexShader, VkShaderModule fragmentShader) {

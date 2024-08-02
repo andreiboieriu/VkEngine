@@ -14,6 +14,10 @@ add_executable (engine
   vk_engine.cpp
   vk_loader.h
   vk_loader.cpp
+  vk_window.h
+  vk_window.cpp
+  vk_swapchain.h
+  vk_swapchain.cpp
   vk_enum_string_helper.h
   camera.cpp
   camera.h

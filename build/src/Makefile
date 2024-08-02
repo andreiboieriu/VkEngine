@@ -502,6 +502,54 @@ vk_scene.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_scene.cpp.s
 .PHONY : vk_scene.cpp.s
 
+vk_swapchain.o: vk_swapchain.cpp.o
+.PHONY : vk_swapchain.o
+
+# target to build an object file
+vk_swapchain.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_swapchain.cpp.o
+.PHONY : vk_swapchain.cpp.o
+
+vk_swapchain.i: vk_swapchain.cpp.i
+.PHONY : vk_swapchain.i
+
+# target to preprocess a source file
+vk_swapchain.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_swapchain.cpp.i
+.PHONY : vk_swapchain.cpp.i
+
+vk_swapchain.s: vk_swapchain.cpp.s
+.PHONY : vk_swapchain.s
+
+# target to generate assembly for a file
+vk_swapchain.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_swapchain.cpp.s
+.PHONY : vk_swapchain.cpp.s
+
+vk_window.o: vk_window.cpp.o
+.PHONY : vk_window.o
+
+# target to build an object file
+vk_window.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_window.cpp.o
+.PHONY : vk_window.cpp.o
+
+vk_window.i: vk_window.cpp.i
+.PHONY : vk_window.i
+
+# target to preprocess a source file
+vk_window.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_window.cpp.i
+.PHONY : vk_window.cpp.i
+
+vk_window.s: vk_window.cpp.s
+.PHONY : vk_window.s
+
+# target to generate assembly for a file
+vk_window.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_window.cpp.s
+.PHONY : vk_window.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -557,6 +605,12 @@ help:
 	@echo "... vk_scene.o"
 	@echo "... vk_scene.i"
 	@echo "... vk_scene.s"
+	@echo "... vk_swapchain.o"
+	@echo "... vk_swapchain.i"
+	@echo "... vk_swapchain.s"
+	@echo "... vk_window.o"
+	@echo "... vk_window.i"
+	@echo "... vk_window.s"
 .PHONY : help
 
 

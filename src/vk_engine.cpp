@@ -9,24 +9,20 @@
 #define VMA_IMPLEMENTATION
 #define VMA_STATIC_VULKAN_FUNCTIONS 0
 #define VMA_DYNAMIC_VULKAN_FUNCTIONS 0
+#define VMA_DEBUG_LOG
 #include "vk_mem_alloc.h"
 
-#include <EGL/eglplatform.h>
-#include <SDL.h>
+// #include <EGL/eglplatform.h>
+// #include <SDL.h>
 #include <cstddef>
 #include <cstring>
 #include <memory>
 #include <SDL_vulkan.h>
-#include "SDL_rect.h"
-#include "SDL_stdinc.h"
 #include "SDL_video.h"
-#include "ecs_systems/render_system.h"
 #include "fmt/core.h"
 #include "game_object.h"
-#include "glm/ext/matrix_clip_space.hpp"
 #include "vk_descriptors.h"
 #include "vk_initializers.h"
-#include "vk_loader.h"
 #include "vk_materials.h"
 #include "vk_types.h"
 #include "vk_images.h"
@@ -43,9 +39,6 @@
 #include <chrono>
 #include <thread>
 
-#include "ecs_components/components.h"
-
-
 VulkanEngine* gLoadedEngine = nullptr;
 
 entt::registry gRegistry;
@@ -60,37 +53,16 @@ void VulkanEngine::init()
     assert(gLoadedEngine == nullptr);
     gLoadedEngine = this;
 
-    // We initialize SDL and create a window with it.
-    SDL_Init(SDL_INIT_VIDEO);
+    // create window
+    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900}, (SDL_WindowFlags)(SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE), 1);
 
-    SDL_WindowFlags windowFlags = (SDL_WindowFlags)(SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE);
-
-    // choose external display
-    int displays = SDL_GetNumVideoDisplays();
-    assert(displays > 1);
-
-    std::vector<SDL_Rect> displayBounds;
-    for (int i = 0; i < displays; i++) {
-        displayBounds.push_back(SDL_Rect());
-        SDL_GetDisplayBounds(i, &displayBounds.back());
-    }
-
-    mWindow = SDL_CreateWindow(
-        "Vulkan Engine",
-        displayBounds[1].x + 100,
-        displayBounds[1].y + 100,
-        mWindowExtent.width,
-        mWindowExtent.height,
-        windowFlags);
-
-    // initialize vulkan
+    // init vulkan
     initVulkan();
-    initVolk();
     initVMA();
+
     initSwapchain();
     initCommands();
     initSyncStructs();
-    initDescriptors();
     initPipelines();
     initImGui();
     initECS();
@@ -101,7 +73,7 @@ void VulkanEngine::init()
     mIsInitialized = true;
 }
 
-AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage) {
+AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memUsage) {
     // allocate buffer
     VkBufferCreateInfo bufferInfo{};
     bufferInfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
@@ -220,18 +192,24 @@ void VulkanEngine::immediateSubmit(std::function<void(VkCommandBuffer commandBuf
 }
 
 void VulkanEngine::initVulkan() {
-    VkResult res = volkInitialize();
-
-    fmt::println("volkinit res: {}", string_VkResult(res));
-
-    vkb::InstanceBuilder builder{};
+    // init volk
+    VK_CHECK(volkInitialize());
 
     // build vulkan instance using vkbootstrap
+    vkb::InstanceBuilder builder{};
+
+    unsigned int sdlExtCount;
+    SDL_Vulkan_GetInstanceExtensions(mWindow->getHandle(), &sdlExtCount, NULL);
+
+    std::vector<const char *> sdlExtensions(sdlExtCount);
+    SDL_Vulkan_GetInstanceExtensions(mWindow->getHandle(), &sdlExtCount, sdlExtensions.data());
+
     vkb::Instance vkbInstance = builder.set_app_name("VkEngine")
         .request_validation_layers(mUseValidationLayers)
         .use_default_debug_messenger()
         .require_api_version(1, 3, 0)
         .enable_extension(VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME)
+        .enable_extensions(sdlExtensions)
         .build()
         .value();
 
@@ -241,9 +219,6 @@ void VulkanEngine::initVulkan() {
     volkLoadInstance(mInstance);
 
     mDebugMessenger = vkbInstance.debug_messenger;
-
-    // create vulkan surface
-    SDL_Vulkan_CreateSurface(mWindow, mInstance, &mSurface);
 
     // get needed vulkan features
     VkPhysicalDeviceVulkan13Features features13{};
@@ -264,13 +239,12 @@ void VulkanEngine::initVulkan() {
     descriptorBufferFeatures.descriptorBufferPushDescriptors = true;
     descriptorBufferFeatures.pNext = nullptr;
 
-    // select gpu using vkbootstrap
     vkb::PhysicalDeviceSelector vkbSelector{vkbInstance};
     vkb::PhysicalDevice vkbPhysicalDevice = vkbSelector
         .set_minimum_version(1, 3)
         .set_required_features_13(features13)
         .set_required_features_12(features12)
-        .set_surface(mSurface)
+        .set_surface(mWindow->getSurface())
         .prefer_gpu_device_type(vkb::PreferredDeviceType::discrete)
         .add_required_extension(VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME)
         .add_required_extension(VK_EXT_DESCRIPTOR_BUFFER_EXTENSION_NAME)
@@ -292,6 +266,17 @@ void VulkanEngine::initVulkan() {
     mGraphicsQueue = vkbDevice.get_queue(vkb::QueueType::graphics).value();
     mGraphicsQueueFamily = vkbDevice.get_queue_index(vkb::QueueType::graphics).value();
 
+    // get descriptor buffer properties
+    mDescriptorBufferProperties.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_PROPERTIES_EXT;
+
+    VkPhysicalDeviceProperties2KHR deviceProperties{};
+    deviceProperties.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2_KHR;
+    deviceProperties.pNext = &mDescriptorBufferProperties;
+
+    vkGetPhysicalDeviceProperties2KHR(mPhysicalDevice, &deviceProperties);
+}
+
+void VulkanEngine::initVMA() {
     // init memory allocator
     VmaAllocatorCreateInfo vmaCreateInfo = vkinit::vmaCreateInfo(
         mPhysicalDevice,
@@ -331,31 +316,15 @@ void VulkanEngine::initVulkan() {
     mMainDeletionQueue.push([&]() {
         vmaDestroyAllocator(mAllocator);
     });
-
-    // get descriptor buffer properties
-    mDescriptorBufferProperties.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_PROPERTIES_EXT;
-
-    VkPhysicalDeviceProperties2KHR deviceProperties{};
-    deviceProperties.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2_KHR;
-    deviceProperties.pNext = &mDescriptorBufferProperties;
-
-    vkGetPhysicalDeviceProperties2KHR(mPhysicalDevice, &deviceProperties);
-}
-
-void VulkanEngine::initVolk() {
-}
-
-void VulkanEngine::initVMA() {
-
 }
 
 void VulkanEngine::initSwapchain() {
-    createSwapchain(mWindowExtent.width, mWindowExtent.height);
+    mWindow->createSwapchain();
 
     // set draw image size to window size
     VkExtent3D drawImageExtent = {
-        2560,
-        1440,
+        1920 * 2,
+        1080 * 2,
         1
     };
 
@@ -394,9 +363,11 @@ void VulkanEngine::initSwapchain() {
     // initialize depth image
     mDepthImage.imageFormat = VK_FORMAT_D32_SFLOAT;
 
+    VkExtent2D windowExtent = mWindow->getExtent();
+
     VkExtent3D depthImageExtent = {
-        mWindowExtent.width,
-        mWindowExtent.height,
+        windowExtent.width,
+        windowExtent.height,
         1
     };
 
@@ -416,50 +387,6 @@ void VulkanEngine::initSwapchain() {
         vkDestroyImageView(mDevice, mDepthImage.imageView, nullptr);
         vmaDestroyImage(mAllocator, mDepthImage.image, mDepthImage.allocation);
     });
-}
-
-void VulkanEngine::createSwapchain(uint32_t width, uint32_t height) {
-    // set swapchain image format
-    mSwapchainImageFormat = VK_FORMAT_B8G8R8A8_UNORM;
-
-    // build swapchain using vkb
-    vkb::SwapchainBuilder vkbSwapchainBuilder{mPhysicalDevice, mDevice, mSurface};
-
-    VkSurfaceFormatKHR surfaceFormat{};
-    surfaceFormat.format = mSwapchainImageFormat;
-    surfaceFormat.colorSpace = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR;
-
-    vkb::Swapchain vkbSwapchain = vkbSwapchainBuilder
-        .set_desired_format(surfaceFormat)
-        .set_desired_present_mode(VK_PRESENT_MODE_FIFO_KHR) // vsync present mode
-        // .set_desired_present_mode(VK_PRESENT_MODE_MAILBOX_KHR)
-        .set_desired_min_image_count(vkb::SwapchainBuilder::DOUBLE_BUFFERING)
-        .set_desired_extent(width, height)
-        .add_image_usage_flags(VK_IMAGE_USAGE_TRANSFER_DST_BIT)
-        .build()
-        .value();
-
-    // get swapchain and related images from vkbSwapchain
-    mSwapchain = vkbSwapchain.swapchain;
-
-    mSwapchainImages = vkbSwapchain.get_images().value();
-    mSwapchainImageViews = vkbSwapchain.get_image_views().value();
-
-    // set swapchain extent
-    mSwapchainExtent.width = width;
-    mSwapchainExtent.height = height;
-}
-
-void VulkanEngine::destroySwapchain() {
-    // destroy swapchain resources
-    for (auto& imageView : mSwapchainImageViews) {
-        vkDestroyImageView(mDevice, imageView, nullptr);
-    }
-
-    vkDestroySwapchainKHR(mDevice, mSwapchain, nullptr);
-
-    mSwapchainImages.clear();
-    mSwapchainImageViews.clear();
 }
 
 void VulkanEngine::initCommands() {
@@ -515,42 +442,13 @@ void VulkanEngine::initSyncStructs() {
     });
 }
 
-void VulkanEngine::initDescriptors() {
-    // TODO: move to compute effects
-    // create descriptor layout
-    {
-        DescriptorLayoutBuilder builder;
-        builder.addBinding(0, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE);
-        mDrawImageDescriptorLayout = builder.build(mDevice, VK_SHADER_STAGE_COMPUTE_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
-    }
-
-    // add descriptor allocator and layout to deletion queue
-    mMainDeletionQueue.push([&]() {
-        vkDestroyDescriptorSetLayout(mDevice, mDrawImageDescriptorLayout, nullptr);
-    });
-
-    // init per frame descriptor allocators
-    for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
-        std::vector<DynamicDescriptorAllocator::PoolSizeRatio> poolRatios = {
-            { VK_DESCRIPTOR_TYPE_STORAGE_IMAGE, 3 },
-			{ VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 3 },
-			{ VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 3 },
-			{ VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, 4 }
-        };
-
-        mFrames[i].descriptorAllocator = DynamicDescriptorAllocator();
-        mFrames[i].descriptorAllocator.init(mDevice, 1000, poolRatios);
-
-        mMainDeletionQueue.push([&, i]() {
-            mFrames[i].descriptorAllocator.destroyPools(mDevice);
-        });
-    }
-}
-
 void VulkanEngine::initPipelines() {
-    initBackgroundPipelines();
+    initComputeEffects();
 
     mMetalRoughMaterial.buildPipelines(mDevice, mDrawImage.imageFormat, mDepthImage.imageFormat);
+    mMainDeletionQueue.push([&]() {
+        mMetalRoughMaterial.freeResources();
+    });
 }
 
 void VulkanEngine::initDefaultData() {
@@ -597,47 +495,31 @@ void VulkanEngine::initDefaultData() {
 		destroyImage(mErrorCheckerboardImage);
 	});
 
-    // metal rough stuff
-    // GLTFMetallicRoughness::MaterialResources materialResources;
-
-    // materialResources.colorImage = mWhiteImage;
-    // materialResources.colorSampler = mDefaultSamplerLinear;
-    // materialResources.metalRoughImage = mWhiteImage;
-    // materialResources.metalRoughSampler = mDefaultSamplerLinear;
-
-    AllocatedBuffer materialConstants = createBuffer(sizeof(MaterialConstants), VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
-
-    MaterialConstants* sceneUniformData = (MaterialConstants*)materialConstants.allocation->GetMappedData();
-    sceneUniformData->colorFactors = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-    sceneUniformData->metalRoughFactors = glm::vec4(1.0f, 0.5f, 0.f, 0.f);
-
-    mMainDeletionQueue.push([=, this] {
-        destroyBuffer(materialConstants);
-    });
-
-    // materialResources.dataBuffer = materialConstants.buffer;
-    // materialResources.dataBufferOffset = 0;
-
-    // load test gltf
-    // std::string structurePath = "assets/structure.glb";
-    // std::string structurePath = "assets/BoxTextured.glb";
-    // mTestGLTF = std::make_shared<LoadedGLTF>(structurePath);
-
-    // fmt::println("loaded structure");
-
-    // create test game object
-    // mTestObject = std::make_shared<GameObject>();
-    // mTestObject->addComponent<GLTF>(mTestGLTF);
-
     mScene = std::make_shared<Scene3D>("testScene", mMetalRoughMaterial);
+
+    mMainDeletionQueue.push([&]() {
+        mScene->freeResources();
+    });
 }
 
-void VulkanEngine::initBackgroundPipelines() {
+void VulkanEngine::initComputeEffects() {
+        // create descriptor layout
+    {
+        DescriptorLayoutBuilder builder;
+        builder.addBinding(0, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE);
+        mComputeDescriptorLayout = builder.build(mDevice, VK_SHADER_STAGE_COMPUTE_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
+    }
+
+    // add descriptor allocator and layout to deletion queue
+    mMainDeletionQueue.push([&]() {
+        vkDestroyDescriptorSetLayout(mDevice, mComputeDescriptorLayout, nullptr);
+    });
+
     // create pipeline layout
     VkPipelineLayoutCreateInfo computeLayout{};
     computeLayout.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
     computeLayout.pNext = nullptr;
-    computeLayout.pSetLayouts = &mDrawImageDescriptorLayout;
+    computeLayout.pSetLayouts = &mComputeDescriptorLayout;
     computeLayout.setLayoutCount = 1;
 
     VkPushConstantRange pushConstant{};
@@ -648,7 +530,7 @@ void VulkanEngine::initBackgroundPipelines() {
     computeLayout.pPushConstantRanges = &pushConstant;
     computeLayout.pushConstantRangeCount = 1;
 
-    VK_CHECK(vkCreatePipelineLayout(mDevice, &computeLayout, nullptr, &mGradientPipelineLayout));
+    VK_CHECK(vkCreatePipelineLayout(mDevice, &computeLayout, nullptr, &mComputePipelineLayout));
     
     // create pipeline
     VkShaderModule gradientShader;
@@ -663,6 +545,12 @@ void VulkanEngine::initBackgroundPipelines() {
         fmt::println("Error when building sky shader\n");
     }
 
+    VkShaderModule fxaaShader;
+
+    if (!vkutil::loadShaderModule("shaders/fxaa.comp.spv", mDevice, &fxaaShader)) {
+        fmt::println("Error when building fxaa shader\n");
+    }
+
 
     VkPipelineShaderStageCreateInfo stageInfo{};
     stageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
@@ -674,11 +562,11 @@ void VulkanEngine::initBackgroundPipelines() {
     VkComputePipelineCreateInfo computePipelineCreateInfo{};
 	computePipelineCreateInfo.sType = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO;
 	computePipelineCreateInfo.pNext = nullptr;
-	computePipelineCreateInfo.layout = mGradientPipelineLayout;
+	computePipelineCreateInfo.layout = mComputePipelineLayout;
 	computePipelineCreateInfo.stage = stageInfo;
 
     ComputeEffect gradientEffect{};
-    gradientEffect.pipelineLayout = mGradientPipelineLayout;
+    gradientEffect.pipelineLayout = mComputePipelineLayout;
     gradientEffect.name = "gradient";
 
     // default colors
@@ -690,7 +578,7 @@ void VulkanEngine::initBackgroundPipelines() {
     computePipelineCreateInfo.stage.module = skyShader;
 
     ComputeEffect skyEffect{};
-    skyEffect.pipelineLayout = mGradientPipelineLayout;
+    skyEffect.pipelineLayout = mComputePipelineLayout;
     skyEffect.name = "sky";
     skyEffect.pushConstants.data1 = glm::vec4(0.1, 0.2, 0.4, 0.97);
 
@@ -699,14 +587,24 @@ void VulkanEngine::initBackgroundPipelines() {
     backgroundEffects.push_back(gradientEffect);
     backgroundEffects.push_back(skyEffect);
 
+    // create fxaa effect
+    computePipelineCreateInfo.stage.module = fxaaShader;
+
+    mFxaaEffect.pipelineLayout = mComputePipelineLayout;
+    mFxaaEffect.name = "fxaa";
+
+    VK_CHECK(vkCreateComputePipelines(mDevice, VK_NULL_HANDLE, 1, &computePipelineCreateInfo, nullptr, &mFxaaEffect.pipeline));
+
     // destroy shader module
     vkDestroyShaderModule(mDevice, skyShader, nullptr);
     vkDestroyShaderModule(mDevice, gradientShader, nullptr);
+    vkDestroyShaderModule(mDevice, fxaaShader, nullptr);
 
     mMainDeletionQueue.push([=, this]() {
-        vkDestroyPipelineLayout(mDevice, mGradientPipelineLayout, nullptr);
+        vkDestroyPipelineLayout(mDevice, mComputePipelineLayout, nullptr);
         vkDestroyPipeline(mDevice, skyEffect.pipeline, nullptr);
         vkDestroyPipeline(mDevice, gradientEffect.pipeline, nullptr);
+        vkDestroyPipeline(mDevice, mFxaaEffect.pipeline, nullptr);
     });
 }
 
@@ -738,7 +636,7 @@ void VulkanEngine::initImGui() {
 
     // initialize imgui library
     ImGui::CreateContext();
-    ImGui_ImplSDL2_InitForVulkan(mWindow);
+    ImGui_ImplSDL2_InitForVulkan(mWindow->getHandle());
 
     ImGui_ImplVulkan_InitInfo initInfo{};
     initInfo.Instance = mInstance;
@@ -750,11 +648,13 @@ void VulkanEngine::initImGui() {
     initInfo.ImageCount = 3;
     initInfo.UseDynamicRendering = true;
 
+    VkFormat swapchainImageFormat = mWindow->getSwapchainImageFormat();
+
     // dynamic rendering parameters
     initInfo.PipelineRenderingCreateInfo = {};
     initInfo.PipelineRenderingCreateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_RENDERING_CREATE_INFO;
     initInfo.PipelineRenderingCreateInfo.colorAttachmentCount = 1;
-    initInfo.PipelineRenderingCreateInfo.pColorAttachmentFormats = &mSwapchainImageFormat;
+    initInfo.PipelineRenderingCreateInfo.pColorAttachmentFormats = &swapchainImageFormat;
 
     initInfo.MSAASamples = VK_SAMPLE_COUNT_1_BIT;
 
@@ -795,39 +695,19 @@ void VulkanEngine::cleanup() {
 
     mMainDeletionQueue.flush();
 
-    destroySwapchain();
+    // destroySwapchain();
 
-    vkDestroySurfaceKHR(mInstance, mSurface, nullptr);
+    // vkDestroySurfaceKHR(mInstance, mSurface, nullptr);
+    mWindow = nullptr;
+
+
     vkDestroyDevice(mDevice, nullptr);
 
     vkb::destroy_debug_utils_messenger(mInstance, mDebugMessenger);
     vkDestroyInstance(mInstance, nullptr);
 
-    SDL_DestroyWindow(mWindow);
-
     // clear engine pointer
     gLoadedEngine = nullptr;
-}
-
-void VulkanEngine::resizeSwapchain() {
-    vkDeviceWaitIdle(mDevice);
-
-    destroySwapchain();
-
-    int w, h;
-    SDL_GetWindowSize(mWindow, &w, &h);
-
-    // get surface capabilities to correct window size (SDL bug)
-    VkSurfaceCapabilitiesKHR surfaceCapabilities{};
-    VK_CHECK(vkGetPhysicalDeviceSurfaceCapabilitiesKHR(mPhysicalDevice, mSurface, &surfaceCapabilities));
-
-    mWindowExtent.width = SDL_clamp(w, surfaceCapabilities.minImageExtent.width, surfaceCapabilities.maxImageExtent.width);
-    mWindowExtent.height = SDL_clamp(h, surfaceCapabilities.minImageExtent.height, surfaceCapabilities.maxImageExtent.height);
-
-    createSwapchain(mWindowExtent.width, mWindowExtent.height);
-    fmt::println("resized swapchain");
-
-    mResizeRequested = false;
 }
 
 void VulkanEngine::draw() {
@@ -839,24 +719,10 @@ void VulkanEngine::draw() {
 
     // flush deletion queue of current frame
     getCurrentFrame().deletionQueue.flush();
-    getCurrentFrame().descriptorAllocator.clearPools(mDevice);
 
-    // request image from swapchain
-    uint32_t swapchainImageIndex;
-    VkResult e = vkAcquireNextImageKHR(
-        mDevice,
-        mSwapchain,
-        1e9,
-        getCurrentFrame().swapchainSemaphore,
-        nullptr,
-        &swapchainImageIndex
-        );
+    VkImage swapchainImage = mWindow->getNextSwapchainImage(getCurrentFrame().swapchainSemaphore);
 
-    auto end = std::chrono::system_clock::now();
-
-    if (e == VK_ERROR_OUT_OF_DATE_KHR || e == VK_SUBOPTIMAL_KHR) {
-        mResizeRequested = true;
-
+    if (swapchainImage == VK_NULL_HANDLE) {
         vkDestroySemaphore(mDevice, getCurrentFrame().swapchainSemaphore, nullptr);
         VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
         VK_CHECK(vkCreateSemaphore(mDevice, &semaphoreCreateInfo, nullptr, &getCurrentFrame().swapchainSemaphore));
@@ -864,9 +730,11 @@ void VulkanEngine::draw() {
         return;
     }
 
+    VkExtent2D windowExtent = mWindow->getExtent();
+
     // set draw extent
-    mDrawExtent.width = std::min(mSwapchainExtent.width, mDrawImage.imageExtent.width) * mRenderScale;
-    mDrawExtent.height = std::min(mSwapchainExtent.height, mDrawImage.imageExtent.height) * mRenderScale;
+    mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mRenderScale;
+    mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mRenderScale;
     
     VK_CHECK(vkResetFences(mDevice, 1, &getCurrentFrame().renderFence));
 
@@ -890,21 +758,26 @@ void VulkanEngine::draw() {
 
     drawGeometry(commandBuffer);
 
+    // transition draw image to general layout for adding post-processing
+    vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
+
+    fxaa(commandBuffer);
+
     // transition draw and swapchain image into transfer layouts
-    vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
-    vkutil::transitionImage(commandBuffer, mSwapchainImages[swapchainImageIndex], VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
+    vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+    vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
 
     // copy draw image to swapchain image
-    vkutil::copyImageToImage(commandBuffer, mDrawImage.image, mSwapchainImages[swapchainImageIndex], mDrawExtent, mSwapchainExtent);
+    vkutil::copyImageToImage(commandBuffer, mDrawImage.image, swapchainImage, mDrawExtent, windowExtent);
 
     // transition swapchain image to Attachment Optimal so we can draw directly to it
-    vkutil::transitionImage(commandBuffer, mSwapchainImages[swapchainImageIndex], VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
+    vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
 
     // draw ImGui into the swapchain image
-    drawImGui(commandBuffer, mSwapchainImageViews[swapchainImageIndex]);
+    drawImGui(commandBuffer, mWindow->getCurrentSwapchainImageView());
 
     // transition swapchain image into a presentable layout
-    vkutil::transitionImage(commandBuffer, mSwapchainImages[swapchainImageIndex], VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_PRESENT_SRC_KHR);
+    vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_PRESENT_SRC_KHR);
 
     // finalize command buffer
     VK_CHECK(vkEndCommandBuffer(commandBuffer));
@@ -920,21 +793,31 @@ void VulkanEngine::draw() {
     // submit command buffer to queue
     VK_CHECK(vkQueueSubmit2(mGraphicsQueue, 1, &submitInfo, getCurrentFrame().renderFence));
 
-    // present image
-    VkPresentInfoKHR presentInfo = vkinit::present_info(&mSwapchain, &getCurrentFrame().renderSemaphore, &swapchainImageIndex);
-
-    e = vkQueuePresentKHR(mGraphicsQueue, &presentInfo);
-
-    if (e == VK_ERROR_OUT_OF_DATE_KHR || e == VK_SUBOPTIMAL_KHR) {
-        mResizeRequested = true;
-    }
+    mWindow->presentSwapchainImage(mGraphicsQueue, getCurrentFrame().renderSemaphore);
 
     // increment frame number
     mFrameNumber++;
 
     // get end time
+    auto end = std::chrono::system_clock::now();
     auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
     mStats.drawTimeBuffer += elapsed.count() / 1000.f;
+}
+
+void VulkanEngine::fxaa(VkCommandBuffer commandBuffer) {
+    // bind fxaa pipeline
+    vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mFxaaEffect.pipeline);
+
+    DescriptorWriter writer;
+    std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mDrawImage.imageView, VK_NULL_HANDLE, VK_IMAGE_LAYOUT_GENERAL, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE)
+                                                               .getWrites();
+
+    vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mComputePipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
+
+    vkCmdPushConstants(commandBuffer, mComputePipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, sizeof(ComputePushConstants), &mFxaaEffect.pushConstants);
+
+    // execute compute shader
+    vkCmdDispatch(commandBuffer, std::ceil(mDrawExtent.width / 16.0), std::ceil(mDrawExtent.height / 16.0), 1);
 }
 
 void VulkanEngine::drawBackground(VkCommandBuffer commandBuffer) {
@@ -948,26 +831,26 @@ void VulkanEngine::drawBackground(VkCommandBuffer commandBuffer) {
     // clear image
     vkCmdClearColorImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, &clearValue, 1, &clearRange);
 
-    // ComputeEffect& effect = backgroundEffects[currentBackgroundEffect];
+    ComputeEffect& effect = backgroundEffects[currentBackgroundEffect];
 
-    // // bind gradient pipeline
-    // vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, effect.pipeline);
+    // bind gradient pipeline
+    vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, effect.pipeline);
 
-    // DescriptorWriter writer;
-    // std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mDrawImage.imageView, VK_NULL_HANDLE, VK_IMAGE_LAYOUT_GENERAL, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE)
-    //                                                            .getWrites();
+    DescriptorWriter writer;
+    std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mDrawImage.imageView, VK_NULL_HANDLE, VK_IMAGE_LAYOUT_GENERAL, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE)
+                                                               .getWrites();
 
-    // vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mGradientPipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
+    vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mComputePipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
 
-    // vkCmdPushConstants(commandBuffer, mGradientPipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, sizeof(ComputePushConstants), &effect.pushConstants);
+    vkCmdPushConstants(commandBuffer, mComputePipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, sizeof(ComputePushConstants), &effect.pushConstants);
 
-    // // execute compute shader
-    // vkCmdDispatch(commandBuffer, std::ceil(mDrawExtent.width / 16.0), std::ceil(mDrawExtent.height / 16.0), 1);
+    // execute compute shader
+    vkCmdDispatch(commandBuffer, std::ceil(mDrawExtent.width / 16.0), std::ceil(mDrawExtent.height / 16.0), 1);
 }
 
 void VulkanEngine::drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView) {
     VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(targetImageView, nullptr, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
-    VkRenderingInfo renderInfo = vkinit::rendering_info(mSwapchainExtent, &colorAttachment, nullptr);
+    VkRenderingInfo renderInfo = vkinit::rendering_info(mWindow->getExtent(), &colorAttachment, nullptr);
 
     vkCmdBeginRendering(commandBuffer, &renderInfo);
 
@@ -978,52 +861,35 @@ void VulkanEngine::drawImGui(VkCommandBuffer commandBuffer, VkImageView targetIm
 
 void VulkanEngine::run() {
     SDL_Event e;
-    bool bQuit = false;
+
+    auto currentTime = std::chrono::system_clock::now();
 
     // main loop
-    while (!bQuit) {
+    while (true) {
         // get start time
         auto start = std::chrono::system_clock::now();
 
-        // Handle events on queue
-        while (SDL_PollEvent(&e) != 0) {
-            switch (e.type) {
-            // close the window when user alt-f4s or clicks the X button
-            case SDL_QUIT:
-                bQuit = true;
-                break;
+        // process SDL events
+        mWindow->processSDLEvents();
 
-            case SDL_WINDOWEVENT:
-                if (e.window.event == SDL_WINDOWEVENT_MINIMIZED) {
-                    mStopRendering = true;
-                }
-
-                if (e.window.event == SDL_WINDOWEVENT_RESTORED) {
-                    mStopRendering = false;
-                }
-
-                break;
-
-            default:
-                break;
-            }
-
-            // send SDL event to imgui
-            ImGui_ImplSDL2_ProcessEvent(&e);
-
-            mScene->processSDLEvent(e);
+        // end loop if window is closed
+        if (mWindow->shouldClose()) {
+            break;
         }
 
-        // do not draw if we are minimized
-        if (mStopRendering) {
-            // throttle the speed to avoid the endless spinning
+        // throttle speed if window is minimized
+        if (mWindow->isMinimized()) {
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
             continue;
         }
 
-        if (mResizeRequested) {
-            resizeSwapchain();
-        }
+        // if (mCursorLocked) {
+        //     SDL_SetRelativeMouseMode(SDL_TRUE);
+        //     SDL_ShowCursor(SDL_DISABLE);
+        // } else {
+        //     SDL_SetRelativeMouseMode(SDL_FALSE);
+        //     SDL_ShowCursor(SDL_ENABLE);
+        // }
 
         // imgui new frame
         ImGui_ImplVulkan_NewFrame();
@@ -1038,7 +904,7 @@ void VulkanEngine::run() {
 
             ComputeEffect& effect = backgroundEffects[currentBackgroundEffect];
 
-            ImGui::SliderFloat("Render Scale", &mRenderScale, 0.3f, 1.f);
+            ImGui::SliderFloat("Render Scale", &mRenderScale, 0.3f, 2.f);
 
             ImGui::Text("Selected effect: ", effect.name.c_str());
 
@@ -1069,7 +935,12 @@ void VulkanEngine::run() {
         // render ImGui
         ImGui::Render();
 
-        updateScene();
+
+        auto newTime = std::chrono::system_clock::now();
+        float dt = std::chrono::duration_cast<std::chrono::microseconds>(newTime - currentTime).count() / 1000.f;
+        currentTime = newTime;
+
+        updateScene(dt);
 
 
         draw();
@@ -1220,8 +1091,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     VkBuffer lastIndexBuffer = VK_NULL_HANDLE;
 
 
-    uint32_t bufferIndexUbo = 0;
-    uint32_t bufferIndexImage = 1;
+    uint32_t bufferIndex = 0;
     VkDeviceSize bufferOffset = 0;
 
     auto draw = [&](const RenderObject& object) {
@@ -1232,15 +1102,11 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
                 lastPipeline = object.material->pipeline;
 
                 vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->pipeline);
-                // vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 0, 1, &globalDescriptorSet, 0, nullptr);
-                // vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 0, (uint32_t)globalWrites.size(), globalWrites.data());
 
                 mScene->setGlobalDescriptorOffset(commandBuffer, object.material->pipeline->layout);
             }
 
-            // vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, 1, &object.material->descriptorSet, 0, nullptr);
-            // vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, (uint32_t)object.material->descriptorWrites.size(), object.material->descriptorWrites.data());
-            vkCmdSetDescriptorBufferOffsetsEXT(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, 1, &bufferIndexImage, &object.material->descriptorOffset);
+            vkCmdSetDescriptorBufferOffsetsEXT(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, 1, &bufferIndex, &object.material->descriptorOffset);
         }
 
         if (object.indexBuffer != lastIndexBuffer) {
@@ -1363,14 +1229,14 @@ void VulkanEngine::destroyImage(const AllocatedImage& image) {
     vmaDestroyImage(mAllocator, image.image, image.allocation);
 }
 
-void VulkanEngine::updateScene() {
+void VulkanEngine::updateScene(float dt) {
     // get start time
     auto start = std::chrono::system_clock::now();
 
     mMainRenderContext.opaqueObjects.clear();
     mMainRenderContext.transparentObjects.clear();
 
-    mScene->update(0, (float)mWindowExtent.width / (float)mWindowExtent.height);
+    mScene->update(dt, mWindow->getAspectRatio());
     mScene->draw(mMainRenderContext);
 
     // get end time

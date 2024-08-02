@@ -10,12 +10,20 @@ Scene3D::Scene3D(const std::string& name, GLTFMetallicRoughness& metalRoughMater
 }
     
 Scene3D::~Scene3D() {
+
+}
+
+void Scene3D::freeResources() {
     mDeletionQueue.flush();
 }
 
 void Scene3D::init() {
     // init descriptor manager
     mDescriptorManager = std::make_unique<DescriptorManager>(mMetalRoughMaterial.getGlobalDescriptorSetLayout(), mMetalRoughMaterial.getGlobalDescriptorSetLayout());
+
+    mDeletionQueue.push([&]() {
+        mDescriptorManager->freeResources();
+    });
 
     // create scene data buffer
     mSceneDataBuffer = VulkanEngine::get().createBuffer(
@@ -32,6 +40,10 @@ void Scene3D::init() {
     mGlobalDescriptorOffset = mDescriptorManager->createGlobalDescriptor(mSceneDataBuffer.deviceAddress, sizeof(SceneData));
 
     mTestGLTF = std::make_shared<LoadedGLTF>("assets/structure.glb", *mDescriptorManager);
+
+    mDeletionQueue.push([&]() {
+        mTestGLTF->freeResources();
+    });
 }
 
 void Scene3D::processSDLEvent(SDL_Event& e) {
@@ -39,12 +51,10 @@ void Scene3D::processSDLEvent(SDL_Event& e) {
 }
 
 void Scene3D::update(float dt, float aspectRatio) {
-    mCamera.update();
+    mCamera.update(dt, aspectRatio);
 
     mSceneData.view = mCamera.getViewMatrix();
-    mSceneData.projection = glm::perspective(glm::radians(70.f), aspectRatio, 10000.f, 0.1f);
-
-    mSceneData.projection[1][1] *= -1;
+    mSceneData.projection = mCamera.getProjectionMatrix();
 
     mSceneData.viewProjection = mSceneData.projection * mSceneData.view;
 

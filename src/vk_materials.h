@@ -6,9 +6,7 @@
 
 class GLTFMetallicRoughness {
 public:
-
     void buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
-    void clearResources(VkDevice device);
 
     VkDescriptorSetLayout getGlobalDescriptorSetLayout() {
         return mGlobalDescriptorLayout;
@@ -19,6 +17,8 @@ public:
     }
 
     MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources, DescriptorManager& descriptorManager);
+
+    void freeResources();
 
 private:
 

@@ -123,7 +123,9 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o:
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/../SDL_egl_c.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h \
-  /usr/include/EGL/egl.h /usr/include/EGL/eglplatform.h \
-  /usr/include/KHR/khrplatform.h /usr/include/EGL/eglext.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/KHR/khrplatform.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/SDL_offscreenvideo.h

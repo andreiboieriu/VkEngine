@@ -30,6 +30,8 @@ public:
     void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
     void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
 
+    void freeResources();
+
     glm::mat4& getViewProj() {
         return mSceneData.viewProjection;
     }

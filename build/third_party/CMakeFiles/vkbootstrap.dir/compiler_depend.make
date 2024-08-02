@@ -164,17 +164,17 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/include/c++/12/typeinfo \
   /usr/include/c++/12/bits/nested_exception.h \
-  /usr/include/vulkan/vulkan_core.h \
-  /usr/include/vulkan/vk_platform.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std.h \
-  /usr/include/vk_video/vulkan_video_codecs_common.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vkbootstrap/VkBootstrapDispatch.h \
   /usr/include/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
@@ -224,8 +224,6 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/c++/12/pstl/glue_algorithm_defs.h:
 
-/usr/include/c++/12/bits/ranges_algobase.h:
-
 /usr/include/c++/12/bits/stl_tempbuf.h:
 
 /usr/include/c++/12/bits/stl_heap.h:
@@ -237,6 +235,8 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/12/bits/unique_lock.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -266,13 +266,15 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/x86_64-linux-gnu/bits/dlfcn.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h:
 
-/usr/include/vk_video/vulkan_video_codec_av1std.h:
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h:
 
-/usr/include/vk_video/vulkan_video_codec_h265std.h:
+/usr/include/c++/12/bits/ranges_algobase.h:
 
-/usr/include/vulkan/vulkan_core.h:
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h:
+
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h:
 
 /usr/include/c++/12/bits/nested_exception.h:
 
@@ -282,11 +284,7 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/c++/12/bits/exception_ptr.h:
 
-/usr/include/vk_video/vulkan_video_codecs_common.h:
-
 /usr/include/c++/12/exception:
-
-/usr/include/vk_video/vulkan_video_codec_h264std_encode.h:
 
 /usr/include/c++/12/system_error:
 
@@ -295,6 +293,8 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 /usr/include/c++/12/bits/charconv.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -312,13 +312,13 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/alloca.h:
 
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h:
+
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/vk_video/vulkan_video_codec_av1std_decode.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
@@ -368,8 +368,6 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/c++/12/initializer_list:
 
-/usr/include/vulkan/vk_platform.h:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/12/bits/move.h:
@@ -396,8 +394,6 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/usr/include/vk_video/vulkan_video_codec_h264std.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/c++/12/ext/alloc_traits.h:
@@ -421,6 +417,8 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 ../third_party/vkbootstrap/VkBootstrap.h:
 
 ../third_party/vkbootstrap/VkBootstrap.cpp:
+
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
 
@@ -502,6 +500,8 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h:
+
 /usr/include/c++/12/bits/postypes.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
@@ -511,8 +511,6 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/c++/12/bits/uniform_int_dist.h:
-
-/usr/include/vk_video/vulkan_video_codec_h265std_encode.h:
 
 /usr/include/c++/12/bits/std_abs.h:
 
@@ -559,10 +557,6 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 /usr/include/c++/12/clocale:
 
 /usr/include/time.h:
-
-/usr/include/vk_video/vulkan_video_codec_h265std_decode.h:
-
-/usr/include/vk_video/vulkan_video_codec_h264std_decode.h:
 
 /usr/include/c++/12/bits/range_access.h:
 
@@ -616,6 +610,8 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h:
+
 /usr/include/c++/12/iosfwd:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
@@ -632,6 +628,8 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 
 /usr/include/c++/12/bits/basic_string.h:
 
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h:
+
 /usr/include/c++/12/stdexcept:
 
 /usr/include/features-time64.h:
@@ -643,6 +641,8 @@ third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.o: ../third_p
 /usr/include/stdlib.h:
 
 /usr/include/c++/12/bits/string_view.tcc:
+
+/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 

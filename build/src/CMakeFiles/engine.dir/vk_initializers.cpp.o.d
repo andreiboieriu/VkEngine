@@ -384,17 +384,18 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: \
   /home/gooby/Development/VkEngine/src/vk_initializers.h \
   /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/volk/volk.h \
-  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
-  /usr/include/vulkan/vulkan_core.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std.h \
-  /usr/include/vk_video/vulkan_video_codecs_common.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/gooby/Development/VkEngine/src/deletion_queue.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \

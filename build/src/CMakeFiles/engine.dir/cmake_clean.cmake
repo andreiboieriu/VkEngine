@@ -27,6 +27,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/vk_pipelines.cpp.o.d"
   "CMakeFiles/engine.dir/vk_scene.cpp.o"
   "CMakeFiles/engine.dir/vk_scene.cpp.o.d"
+  "CMakeFiles/engine.dir/vk_swapchain.cpp.o"
+  "CMakeFiles/engine.dir/vk_swapchain.cpp.o.d"
+  "CMakeFiles/engine.dir/vk_window.cpp.o"
+  "CMakeFiles/engine.dir/vk_window.cpp.o.d"
   "engine"
   "engine.pdb"
 )

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../shaders/colored_triangle.frag.spv"
   "../shaders/colored_triangle.vert.spv"
   "../shaders/colored_triangle_mesh.vert.spv"
+  "../shaders/fxaa.comp.spv"
   "../shaders/gradient.comp.spv"
   "../shaders/gradient_color.comp.spv"
   "../shaders/mesh.frag.spv"

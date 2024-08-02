@@ -1,18 +1,15 @@
 ﻿#pragma once
 
-#include "game_object.h"
 #include "vk_materials.h"
 #include "vk_scene.h"
 #include "vk_types.h"
-#include "vk_descriptors.h"
 #include "deletion_queue.h"
-#include "vk_loader.h"
 #include <memory>
-#include <string>
-#include <unordered_map>
 
 #include "volk.h"
 #include "entt.hpp"
+
+#include "vk_window.h"
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -45,8 +42,11 @@ public:
 		VkSemaphore renderSemaphore;
 		VkFence renderFence;
 
-		DynamicDescriptorAllocator descriptorAllocator;
 		DeletionQueue deletionQueue;
+	};
+
+	struct FXAAConfig {
+
 	};
 
 	static VulkanEngine& get();
@@ -64,8 +64,16 @@ public:
 		return mFrames[mFrameNumber % MAX_FRAMES_IN_FLIGHT];
 	}
 
-	VkDevice& getDevice() {
+	const VkDevice& getDevice() {
 		return mDevice;
+	}
+
+	const VkPhysicalDevice& getPhysicalDevice() {
+		return mPhysicalDevice;
+	}
+
+	const VkInstance& getInstance() {
+		return mInstance;
 	}
 
 	AllocatedImage& getErrorTexture() {
@@ -103,37 +111,32 @@ public:
 
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
 
-	void updateScene();
+	void updateScene(float dt);
 
 private:
 
 	void initVulkan();
-	void initVolk();
 	void initVMA();
 	void initSwapchain();
 	void initCommands();
 	void initSyncStructs();
-	void initDescriptors();
 	void initPipelines();
-	void initBackgroundPipelines();
+	void initComputeEffects();
 	void initImGui();
 
 	void initECS();
 
 	void initDefaultData();
 
-	void createSwapchain(uint32_t width, uint32_t height);
-	void resizeSwapchain();
-	void destroySwapchain();
-
 	//draw loop
 	void draw();
 	void drawBackground(VkCommandBuffer commandBuffer);
 	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
 	void drawGeometry(VkCommandBuffer commandBuffer);
+	void fxaa(VkCommandBuffer commandBuffer);
 
 	// Vulkan library handle
-	VkInstance mInstance;
+	VkInstance mInstance = VK_NULL_HANDLE;
 
 	// Vulkan debug output handle
 	VkDebugUtilsMessengerEXT mDebugMessenger;
@@ -144,22 +147,12 @@ private:
 	// Vulkan logical device
 	VkDevice mDevice;
 
-	// Vulkan window surface
-	VkSurfaceKHR mSurface;
-
-	// swapchain related
-	VkSwapchainKHR mSwapchain;
-	VkFormat mSwapchainImageFormat;
-
-	std::vector<VkImage> mSwapchainImages;
-	std::vector<VkImageView> mSwapchainImageViews;
-	VkExtent2D mSwapchainExtent;
+	std::unique_ptr<Window> mWindow;
 
 	VmaAllocator mAllocator;
 
 	// flags
 	bool mIsInitialized = false;
-	bool mStopRendering = false;
 	bool mUseValidationLayers = true;
 
 	int mFrameNumber = 0;
@@ -167,12 +160,6 @@ private:
 	FrameData mFrames[MAX_FRAMES_IN_FLIGHT];
 	VkQueue mGraphicsQueue;
 	uint32_t mGraphicsQueueFamily;
-
-	// window size basically
-	VkExtent2D mWindowExtent = {1600, 900};
-
-	// sdl window handle
-	struct SDL_Window* mWindow = nullptr;
 
 	bool mResizeRequested = false;
 
@@ -186,10 +173,9 @@ private:
 	AllocatedImage mDepthImage;
 
 	// descriptor resources
-	VkDescriptorSet mDrawImageDescriptors;
-	VkDescriptorSetLayout mDrawImageDescriptorLayout;
+	VkDescriptorSetLayout mComputeDescriptorLayout;
 
-	VkPipelineLayout mGradientPipelineLayout;
+	VkPipelineLayout mComputePipelineLayout;
 	std::vector<ComputeEffect> backgroundEffects;
 	int currentBackgroundEffect = 0;
 	
@@ -216,4 +202,8 @@ private:
 	Stats mStats{};
 
 	VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties{};
+
+	bool mCursorLocked = true;
+
+	ComputeEffect mFxaaEffect{};
 };

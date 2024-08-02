@@ -39,6 +39,11 @@ struct ComputeEffect {
     VkPipelineLayout pipelineLayout;
 
     ComputePushConstants pushConstants;
+
+    struct ComputePass {
+        VkPipeline pipeline;
+        VkPipelineLayout pipelineLayout;
+    };
 };
 
 struct AllocatedBuffer {

@@ -69,6 +69,7 @@ include CMakeFiles/Shaders.dir/progress.make
 CMakeFiles/Shaders: ../shaders/colored_triangle.frag.spv
 CMakeFiles/Shaders: ../shaders/colored_triangle.vert.spv
 CMakeFiles/Shaders: ../shaders/colored_triangle_mesh.vert.spv
+CMakeFiles/Shaders: ../shaders/fxaa.comp.spv
 CMakeFiles/Shaders: ../shaders/gradient.comp.spv
 CMakeFiles/Shaders: ../shaders/gradient_color.comp.spv
 CMakeFiles/Shaders: ../shaders/mesh.frag.spv
@@ -88,34 +89,39 @@ CMakeFiles/Shaders: ../shaders/tex_image.frag.spv
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../shaders/colored_triangle_mesh.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/colored_triangle_mesh.vert -o /home/gooby/Development/VkEngine/shaders/colored_triangle_mesh.vert.spv
 
+../shaders/fxaa.comp.spv: ../shaders/fxaa.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ../shaders/fxaa.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/fxaa.comp -o /home/gooby/Development/VkEngine/shaders/fxaa.comp.spv
+
 ../shaders/gradient.comp.spv: ../shaders/gradient.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ../shaders/gradient.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ../shaders/gradient.comp.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/gradient.comp -o /home/gooby/Development/VkEngine/shaders/gradient.comp.spv
 
 ../shaders/gradient_color.comp.spv: ../shaders/gradient_color.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ../shaders/gradient_color.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ../shaders/gradient_color.comp.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/gradient_color.comp -o /home/gooby/Development/VkEngine/shaders/gradient_color.comp.spv
 
 ../shaders/mesh.frag.spv: ../shaders/mesh.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ../shaders/mesh.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ../shaders/mesh.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh.frag -o /home/gooby/Development/VkEngine/shaders/mesh.frag.spv
 
 ../shaders/mesh.vert.spv: ../shaders/mesh.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ../shaders/mesh.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ../shaders/mesh.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh.vert -o /home/gooby/Development/VkEngine/shaders/mesh.vert.spv
 
 ../shaders/sky.comp.spv: ../shaders/sky.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ../shaders/sky.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating ../shaders/sky.comp.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sky.comp -o /home/gooby/Development/VkEngine/shaders/sky.comp.spv
 
 ../shaders/tex_image.frag.spv: ../shaders/tex_image.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating ../shaders/tex_image.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating ../shaders/tex_image.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/tex_image.frag -o /home/gooby/Development/VkEngine/shaders/tex_image.frag.spv
 
 Shaders: CMakeFiles/Shaders
 Shaders: ../shaders/colored_triangle.frag.spv
 Shaders: ../shaders/colored_triangle.vert.spv
 Shaders: ../shaders/colored_triangle_mesh.vert.spv
+Shaders: ../shaders/fxaa.comp.spv
 Shaders: ../shaders/gradient.comp.spv
 Shaders: ../shaders/gradient_color.comp.spv
 Shaders: ../shaders/mesh.frag.spv

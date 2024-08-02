@@ -16,9 +16,18 @@ glm::mat4 Camera::getViewMatrix() {
     return glm::inverse(cameraTranslation * cameraRotation);
 }
 
+glm::mat4 Camera::getProjectionMatrix() {
+    // invert far and near
+    glm::mat4 projection = glm::perspective(glm::radians(mFov), mAspectRatio, mFar, mNear);
+
+    projection[1][1] *= -1;
+
+    return projection;
+}
+
 glm::mat4 Camera::getRotationMatrix() {
-    glm::quat pitchRotation = glm::angleAxis(mPitch, glm::vec3(1.0f, 0.0f, 0.0f));
-    glm::quat yawRotation = glm::angleAxis(mYaw, glm::vec3(0.0f, -1.0f, 0.0f));
+    glm::quat pitchRotation = glm::angleAxis(glm::radians(mPitch), glm::vec3(1.0f, 0.0f, 0.0f));
+    glm::quat yawRotation = glm::angleAxis(glm::radians(mYaw), glm::vec3(0.0f, -1.0f, 0.0f));
 
     return glm::toMat4(yawRotation) * glm::toMat4(pitchRotation);
 }
@@ -63,12 +72,20 @@ void Camera::processSDLEvent(SDL_Event& e) {
     }
 
     if (e.type == SDL_MOUSEMOTION) {
-        mYaw += (float)e.motion.xrel / 200.f;
-        mPitch -= (float)e.motion.yrel / 200.f;
+        mYaw += (float)e.motion.xrel * MOUSE_MOTION_SENSITIVITY;
+        mPitch -= (float)e.motion.yrel * MOUSE_MOTION_SENSITIVITY;
+
+        mPitch = glm::clamp(mPitch, MIN_PITCH, MAX_PITCH);
+    }
+
+    if (e.type == SDL_MOUSEWHEEL) {
+        mFov -= e.wheel.preciseY * MOUSE_WHEEL_SENSITIVITY;
+        mFov = glm::clamp(mFov, MIN_FOV, MAX_FOV);
     }
 }
 
-void Camera::update() {
+void Camera::update(float dt, float aspectRatio) {
     glm::mat4 cameraRotation = getRotationMatrix();
-    mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * 0.2f, 0.f));
+    mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * SPEED * dt, 0.f));
+    mAspectRatio = aspectRatio;
 }

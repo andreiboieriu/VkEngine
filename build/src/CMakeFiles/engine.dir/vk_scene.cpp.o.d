@@ -395,17 +395,18 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uniform_int_dist.h \
   /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/volk/volk.h \
-  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
-  /usr/include/vulkan/vulkan_core.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std.h \
-  /usr/include/vk_video/vulkan_video_codecs_common.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
+  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h \
   /home/gooby/Development/VkEngine/third_party/fmt/include/fmt/core.h \
@@ -450,14 +451,6 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/game_object.h \
-  /home/gooby/Development/VkEngine/src/ecs_components/components.h \
-  /home/gooby/Development/VkEngine/src/ecs_components/gltf.h \
-  /home/gooby/Development/VkEngine/src/ecs_components/transform.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/set \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
@@ -469,10 +462,120 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_list.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/list.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_map.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
+  /home/gooby/Development/VkEngine/src/vk_window.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_assert.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_atomic.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_audio.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_thread.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_clipboard.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_filesystem.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_haptic.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hidapi.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_log.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_messagebox.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_metal.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_power.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_shape.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_system.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_locale.h \
+  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h \
+  /home/gooby/Development/VkEngine/src/vk_swapchain.h \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/transform.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../glm.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
