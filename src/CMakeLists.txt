@@ -34,6 +34,10 @@ add_executable (engine
   game_object.h
   ecs_systems/render_system.cpp
   ecs_systems/render_system.h
+  compute_effects/compute_effect.cpp
+  compute_effects/compute_effect.h
+  compute_effects/fxaa.cpp
+  compute_effects/fxaa.h
 )
 
 set_property(TARGET engine PROPERTY CXX_STANDARD 20)

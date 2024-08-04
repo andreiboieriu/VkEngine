@@ -178,12 +178,12 @@ third_party/fmt/clean: third_party/fmt/CMakeFiles/fmt.dir/clean
 CMakeFiles/Shaders.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=77,78 "Built target Shaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=76,77,78 "Built target Shaders"
 .PHONY : CMakeFiles/Shaders.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Shaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Shaders.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : CMakeFiles/Shaders.dir/rule
@@ -465,12 +465,12 @@ third_party/SDL/CMakeFiles/SDL2-static.dir/clean:
 third_party/SDL/CMakeFiles/SDL2_test.dir/all: third_party/SDL/CMakeFiles/sdl_headers_copy.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/SDL/CMakeFiles/SDL2_test.dir/build.make third_party/SDL/CMakeFiles/SDL2_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/SDL/CMakeFiles/SDL2_test.dir/build.make third_party/SDL/CMakeFiles/SDL2_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=73,74,75,76 "Built target SDL2_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=73,74,75 "Built target SDL2_test"
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/SDL/CMakeFiles/SDL2_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/SDL/CMakeFiles/SDL2_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles 0
 .PHONY : third_party/SDL/CMakeFiles/SDL2_test.dir/rule

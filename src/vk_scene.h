@@ -22,9 +22,7 @@ public:
     ~Scene3D();
 
     void init();
-
-    void processSDLEvent(SDL_Event& e);
-    void update(float dt, float aspectRatio);
+    void update(float dt, float aspectRatio, const UserInput& userInput);
     void draw(RenderContext &context);
 
     void bindDescriptorBuffers(VkCommandBuffer commandBuffer);

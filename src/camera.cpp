@@ -32,59 +32,49 @@ glm::mat4 Camera::getRotationMatrix() {
     return glm::toMat4(yawRotation) * glm::toMat4(pitchRotation);
 }
 
-// TODO: improve + pass deltaTime
-void Camera::processSDLEvent(SDL_Event& e) {
-    if (e.type == SDL_KEYDOWN) {
-        if (e.key.keysym.sym == SDLK_w) {
+void Camera::update(float dt, float aspectRatio, const UserInput& userInput) {
+    if (!userInput.GuiMode) {
+        if (userInput.pressedKeys.contains(SDLK_w)) {
             mVelocity.z = -1;
         }
 
-        if (e.key.keysym.sym == SDLK_s) {
-            mVelocity.z = 1;
-        }
-
-        if (e.key.keysym.sym == SDLK_a) {
+        if (userInput.pressedKeys.contains(SDLK_a)) {
             mVelocity.x = -1;
         }
 
-        if (e.key.keysym.sym == SDLK_d) {
+        if (userInput.pressedKeys.contains(SDLK_s)) {
+            mVelocity.z = 1;
+        }
+
+        if (userInput.pressedKeys.contains(SDLK_d)) {
             mVelocity.x = 1;
         }
 
-    }
-
-    if (e.type == SDL_KEYUP) {
-        if (e.key.keysym.sym == SDLK_w) {
+        if (userInput.releasedKeys.contains(SDLK_w)) {
             mVelocity.z = 0;
         }
 
-        if (e.key.keysym.sym == SDLK_s) {
+        if (userInput.releasedKeys.contains(SDLK_a)) {
+            mVelocity.x = 0;
+        }
+
+        if (userInput.releasedKeys.contains(SDLK_s)) {
             mVelocity.z = 0;
         }
 
-        if (e.key.keysym.sym == SDLK_a) {
+        if (userInput.releasedKeys.contains(SDLK_d)) {
             mVelocity.x = 0;
         }
 
-        if (e.key.keysym.sym == SDLK_d) {
-            mVelocity.x = 0;
-        }
-    }
-
-    if (e.type == SDL_MOUSEMOTION) {
-        mYaw += (float)e.motion.xrel * MOUSE_MOTION_SENSITIVITY;
-        mPitch -= (float)e.motion.yrel * MOUSE_MOTION_SENSITIVITY;
+        mYaw += userInput.mouseXRel * MOUSE_MOTION_SENSITIVITY;
+        mPitch -= userInput.mouseYRel * MOUSE_MOTION_SENSITIVITY;
 
         mPitch = glm::clamp(mPitch, MIN_PITCH, MAX_PITCH);
-    }
 
-    if (e.type == SDL_MOUSEWHEEL) {
-        mFov -= e.wheel.preciseY * MOUSE_WHEEL_SENSITIVITY;
+        mFov -= userInput.mouseWheel * MOUSE_WHEEL_SENSITIVITY;
         mFov = glm::clamp(mFov, MIN_FOV, MAX_FOV);
     }
-}
 
-void Camera::update(float dt, float aspectRatio) {
     glm::mat4 cameraRotation = getRotationMatrix();
     mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * SPEED * dt, 0.f));
     mAspectRatio = aspectRatio;

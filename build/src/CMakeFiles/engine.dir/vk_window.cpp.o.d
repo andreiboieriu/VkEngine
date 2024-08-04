@@ -532,23 +532,25 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
   /home/gooby/Development/VkEngine/src/vk_swapchain.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
   /home/gooby/Development/VkEngine/third_party/imgui/imgui_impl_sdl2.h \
   /home/gooby/Development/VkEngine/third_party/imgui/imgui.h \
   /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/vk_materials.h \
-  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
+  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
   /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/gooby/Development/VkEngine/src/deletion_queue.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/algorithmfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
@@ -558,6 +560,9 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
+  /home/gooby/Development/VkEngine/src/vk_materials.h \
+  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/src/vk_scene.h \
   /home/gooby/Development/VkEngine/src/camera.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
@@ -572,11 +577,7 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_list.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/list.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/map \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_map.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/set \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h

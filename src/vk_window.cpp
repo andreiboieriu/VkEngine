@@ -38,11 +38,10 @@ void Window::init(SDL_WindowFlags windowFlags, uint32_t monitorIdx) {
         mExtent.height,
         windowFlags
     );
-
 }
 
 void Window::createSwapchain() {
-    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_FIFO_KHR, mSurface);
+    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_MAILBOX_KHR, mSurface);
 }
 
 VkSurfaceKHR Window::getSurface() {
@@ -53,8 +52,10 @@ VkSurfaceKHR Window::getSurface() {
     return mSurface;
 }
 
-void Window::processSDLEvents() {
+UserInput Window::processSDLEvents() {
     SDL_Event e;
+
+    UserInput userInput{};
 
     // Handle events on queue
     while (SDL_PollEvent(&e) != 0) {
@@ -62,18 +63,27 @@ void Window::processSDLEvents() {
         // close the window when user alt-f4s or clicks the X button
         case SDL_QUIT:
             mShouldClose = true;
-            return;
+            return userInput;
 
         case SDL_WINDOWEVENT:
             handleWindowEvent((SDL_WindowEventID)e.window.event);
             break;
 
-        // TODO: Handle user input
-        // case SDL_KEYDOWN:
-        //     if (e.key.keysym.sym == SDLK_ESCAPE) {
-        //         mCursorLocked = !mCursorLocked;
-        //     }
+        case SDL_KEYDOWN:
+            userInput.pressedKeys.insert(e.key.keysym.sym);
+            break;
 
+        case SDL_KEYUP:
+            userInput.releasedKeys.insert(e.key.keysym.sym);
+            break;
+
+        case SDL_MOUSEMOTION:
+            userInput.mouseXRel = e.motion.xrel;
+            userInput.mouseYRel = e.motion.yrel;
+            break;
+
+        case SDL_MOUSEWHEEL:
+            userInput.mouseWheel = e.wheel.preciseY;
             break;
 
         default:
@@ -83,6 +93,15 @@ void Window::processSDLEvents() {
         // send SDL event to imgui
         ImGui_ImplSDL2_ProcessEvent(&e);
     }
+
+    // toggle locked cursor
+    if (userInput.pressedKeys.contains(SDLK_ESCAPE)) {
+        toggleLockedCursor();
+    }
+
+    userInput.GuiMode = !mLockedCursor;
+
+    return userInput;
 }
 
 void Window::handleWindowEvent(SDL_WindowEventID event) {
@@ -140,5 +159,17 @@ VkImage Window::getNextSwapchainImage(VkSemaphore& semaphore) {
 void Window::presentSwapchainImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore) {
     if (!mSwapchain->presentImage(graphicsQueue, waitSemaphore)) {
         resize();
+    }
+}
+
+void Window::toggleLockedCursor() {
+    mLockedCursor = !mLockedCursor;
+
+    if (mLockedCursor) {
+        SDL_SetRelativeMouseMode(SDL_TRUE);
+        SDL_ShowCursor(SDL_DISABLE);
+    } else {
+        SDL_SetRelativeMouseMode(SDL_FALSE);
+        SDL_ShowCursor(SDL_ENABLE);
     }
 }

@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+#include "compute_effects/fxaa.h"
 #include "vk_materials.h"
 #include "vk_scene.h"
 #include "vk_types.h"
@@ -111,7 +112,7 @@ public:
 
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
 
-	void updateScene(float dt);
+	void updateScene(float dt, const UserInput& userInput);
 
 private:
 
@@ -172,12 +173,12 @@ private:
 
 	AllocatedImage mDepthImage;
 
-	// descriptor resources
-	VkDescriptorSetLayout mComputeDescriptorLayout;
+	// // descriptor resources
+	// VkDescriptorSetLayout mComputeDescriptorLayout;
 
-	VkPipelineLayout mComputePipelineLayout;
-	std::vector<ComputeEffect> backgroundEffects;
-	int currentBackgroundEffect = 0;
+	// VkPipelineLayout mComputePipelineLayout;
+	// std::vector<ComputeEffect> backgroundEffects;
+	// int currentBackgroundEffect = 0;
 	
 	// immediat submit structures
 	VkFence mImmFence;
@@ -205,5 +206,6 @@ private:
 
 	bool mCursorLocked = true;
 
-	ComputeEffect mFxaaEffect{};
+	// ComputeEffect mFxaaEffect{};
+	std::unique_ptr<Fxaa> mFxaaEffect;
 };

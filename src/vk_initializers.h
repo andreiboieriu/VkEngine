@@ -50,5 +50,7 @@ VkPipelineShaderStageCreateInfo pipeline_shader_stage_create_info(VkShaderStageF
     VkShaderModule shaderModule,
     const char * entry = "main");
 
+VkComputePipelineCreateInfo computePipelineCreateInfo(VkShaderModule shaderModule, VkPipelineLayout pipelineLayout);
+
 VmaAllocatorCreateInfo vmaCreateInfo(VkPhysicalDevice physicalDevice, VkDevice device, VkInstance instance, VmaAllocatorCreateFlags flags);
 } // namespace vkinit

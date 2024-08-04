@@ -1,6 +1,7 @@
 ﻿#include "vk_initializers.h"
 #include "vk_descriptors.h"
 #include "vk_types.h"
+#include "vk_engine.h"
 
 //> init_cmd
 VkCommandPoolCreateInfo vkinit::command_pool_create_info(uint32_t queueFamilyIndex,
@@ -341,4 +342,17 @@ VmaAllocatorCreateInfo vkinit::vmaCreateInfo(VkPhysicalDevice physicalDevice, Vk
 
     return createInfo;
 }
+
+VkComputePipelineCreateInfo vkinit::computePipelineCreateInfo(VkShaderModule shaderModule, VkPipelineLayout pipelineLayout) {
+    VkPipelineShaderStageCreateInfo shaderStageInfo = vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_COMPUTE_BIT, shaderModule);
+
+    VkComputePipelineCreateInfo computePipelineInfo{};
+    computePipelineInfo.sType = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO;
+    computePipelineInfo.pNext = nullptr;
+    computePipelineInfo.layout = pipelineLayout;
+    computePipelineInfo.stage = shaderStageInfo;
+
+    return computePipelineInfo;
+}
+
 

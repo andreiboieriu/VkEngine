@@ -12,8 +12,6 @@
 #define VMA_DEBUG_LOG
 #include "vk_mem_alloc.h"
 
-// #include <EGL/eglplatform.h>
-// #include <SDL.h>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -323,8 +321,8 @@ void VulkanEngine::initSwapchain() {
 
     // set draw image size to window size
     VkExtent3D drawImageExtent = {
-        1920 * 2,
-        1080 * 2,
+        2560* 2,
+        1440 * 2,
         1
     };
 
@@ -503,108 +501,10 @@ void VulkanEngine::initDefaultData() {
 }
 
 void VulkanEngine::initComputeEffects() {
-        // create descriptor layout
-    {
-        DescriptorLayoutBuilder builder;
-        builder.addBinding(0, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE);
-        mComputeDescriptorLayout = builder.build(mDevice, VK_SHADER_STAGE_COMPUTE_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
-    }
+    mFxaaEffect = std::make_unique<Fxaa>();
 
-    // add descriptor allocator and layout to deletion queue
     mMainDeletionQueue.push([&]() {
-        vkDestroyDescriptorSetLayout(mDevice, mComputeDescriptorLayout, nullptr);
-    });
-
-    // create pipeline layout
-    VkPipelineLayoutCreateInfo computeLayout{};
-    computeLayout.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
-    computeLayout.pNext = nullptr;
-    computeLayout.pSetLayouts = &mComputeDescriptorLayout;
-    computeLayout.setLayoutCount = 1;
-
-    VkPushConstantRange pushConstant{};
-    pushConstant.offset = 0;
-    pushConstant.size = sizeof(ComputePushConstants);
-    pushConstant.stageFlags = VK_SHADER_STAGE_COMPUTE_BIT;
-
-    computeLayout.pPushConstantRanges = &pushConstant;
-    computeLayout.pushConstantRangeCount = 1;
-
-    VK_CHECK(vkCreatePipelineLayout(mDevice, &computeLayout, nullptr, &mComputePipelineLayout));
-    
-    // create pipeline
-    VkShaderModule gradientShader;
-
-    if (!vkutil::loadShaderModule("shaders/gradient_color.comp.spv", mDevice, &gradientShader)) {
-        fmt::println("Error when building gradient shader\n");
-    }
-
-    VkShaderModule skyShader;
-
-    if (!vkutil::loadShaderModule("shaders/sky.comp.spv", mDevice, &skyShader)) {
-        fmt::println("Error when building sky shader\n");
-    }
-
-    VkShaderModule fxaaShader;
-
-    if (!vkutil::loadShaderModule("shaders/fxaa.comp.spv", mDevice, &fxaaShader)) {
-        fmt::println("Error when building fxaa shader\n");
-    }
-
-
-    VkPipelineShaderStageCreateInfo stageInfo{};
-    stageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
-	stageInfo.pNext = nullptr;
-	stageInfo.stage = VK_SHADER_STAGE_COMPUTE_BIT;
-	stageInfo.module = gradientShader;
-	stageInfo.pName = "main";
-
-    VkComputePipelineCreateInfo computePipelineCreateInfo{};
-	computePipelineCreateInfo.sType = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO;
-	computePipelineCreateInfo.pNext = nullptr;
-	computePipelineCreateInfo.layout = mComputePipelineLayout;
-	computePipelineCreateInfo.stage = stageInfo;
-
-    ComputeEffect gradientEffect{};
-    gradientEffect.pipelineLayout = mComputePipelineLayout;
-    gradientEffect.name = "gradient";
-
-    // default colors
-    gradientEffect.pushConstants.data1 = glm::vec4(1, 0, 0, 1);
-    gradientEffect.pushConstants.data2 = glm::vec4(0, 0, 1, 1);
-
-    VK_CHECK(vkCreateComputePipelines(mDevice, VK_NULL_HANDLE, 1, &computePipelineCreateInfo, nullptr, &gradientEffect.pipeline));
-
-    computePipelineCreateInfo.stage.module = skyShader;
-
-    ComputeEffect skyEffect{};
-    skyEffect.pipelineLayout = mComputePipelineLayout;
-    skyEffect.name = "sky";
-    skyEffect.pushConstants.data1 = glm::vec4(0.1, 0.2, 0.4, 0.97);
-
-    VK_CHECK(vkCreateComputePipelines(mDevice, VK_NULL_HANDLE, 1, &computePipelineCreateInfo, nullptr, &skyEffect.pipeline));
-
-    backgroundEffects.push_back(gradientEffect);
-    backgroundEffects.push_back(skyEffect);
-
-    // create fxaa effect
-    computePipelineCreateInfo.stage.module = fxaaShader;
-
-    mFxaaEffect.pipelineLayout = mComputePipelineLayout;
-    mFxaaEffect.name = "fxaa";
-
-    VK_CHECK(vkCreateComputePipelines(mDevice, VK_NULL_HANDLE, 1, &computePipelineCreateInfo, nullptr, &mFxaaEffect.pipeline));
-
-    // destroy shader module
-    vkDestroyShaderModule(mDevice, skyShader, nullptr);
-    vkDestroyShaderModule(mDevice, gradientShader, nullptr);
-    vkDestroyShaderModule(mDevice, fxaaShader, nullptr);
-
-    mMainDeletionQueue.push([=, this]() {
-        vkDestroyPipelineLayout(mDevice, mComputePipelineLayout, nullptr);
-        vkDestroyPipeline(mDevice, skyEffect.pipeline, nullptr);
-        vkDestroyPipeline(mDevice, gradientEffect.pipeline, nullptr);
-        vkDestroyPipeline(mDevice, mFxaaEffect.pipeline, nullptr);
+        mFxaaEffect = nullptr;
     });
 }
 
@@ -695,9 +595,7 @@ void VulkanEngine::cleanup() {
 
     mMainDeletionQueue.flush();
 
-    // destroySwapchain();
 
-    // vkDestroySurfaceKHR(mInstance, mSurface, nullptr);
     mWindow = nullptr;
 
 
@@ -761,7 +659,8 @@ void VulkanEngine::draw() {
     // transition draw image to general layout for adding post-processing
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
 
-    fxaa(commandBuffer);
+    // fxaa(commandBuffer);
+    mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent);
 
     // transition draw and swapchain image into transfer layouts
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
@@ -804,48 +703,15 @@ void VulkanEngine::draw() {
     mStats.drawTimeBuffer += elapsed.count() / 1000.f;
 }
 
-void VulkanEngine::fxaa(VkCommandBuffer commandBuffer) {
-    // bind fxaa pipeline
-    vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mFxaaEffect.pipeline);
-
-    DescriptorWriter writer;
-    std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mDrawImage.imageView, VK_NULL_HANDLE, VK_IMAGE_LAYOUT_GENERAL, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE)
-                                                               .getWrites();
-
-    vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mComputePipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
-
-    vkCmdPushConstants(commandBuffer, mComputePipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, sizeof(ComputePushConstants), &mFxaaEffect.pushConstants);
-
-    // execute compute shader
-    vkCmdDispatch(commandBuffer, std::ceil(mDrawExtent.width / 16.0), std::ceil(mDrawExtent.height / 16.0), 1);
-}
-
 void VulkanEngine::drawBackground(VkCommandBuffer commandBuffer) {
     // set clear color
     VkClearColorValue clearValue;
-    float flash = std::abs(std::sin(mFrameNumber / 120.f));
-    clearValue = { {flash, flash, 0.0f, 1.0f} };
+    clearValue = { {1.0f, 1.0f, 0.0f, 1.0f} };
 
     VkImageSubresourceRange clearRange = vkinit::image_subresource_range(VK_IMAGE_ASPECT_COLOR_BIT);
 
     // clear image
     vkCmdClearColorImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, &clearValue, 1, &clearRange);
-
-    ComputeEffect& effect = backgroundEffects[currentBackgroundEffect];
-
-    // bind gradient pipeline
-    vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, effect.pipeline);
-
-    DescriptorWriter writer;
-    std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mDrawImage.imageView, VK_NULL_HANDLE, VK_IMAGE_LAYOUT_GENERAL, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE)
-                                                               .getWrites();
-
-    vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mComputePipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
-
-    vkCmdPushConstants(commandBuffer, mComputePipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, sizeof(ComputePushConstants), &effect.pushConstants);
-
-    // execute compute shader
-    vkCmdDispatch(commandBuffer, std::ceil(mDrawExtent.width / 16.0), std::ceil(mDrawExtent.height / 16.0), 1);
 }
 
 void VulkanEngine::drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView) {
@@ -870,7 +736,7 @@ void VulkanEngine::run() {
         auto start = std::chrono::system_clock::now();
 
         // process SDL events
-        mWindow->processSDLEvents();
+        UserInput userInput = mWindow->processSDLEvents();
 
         // end loop if window is closed
         if (mWindow->shouldClose()) {
@@ -883,52 +749,32 @@ void VulkanEngine::run() {
             continue;
         }
 
-        // if (mCursorLocked) {
-        //     SDL_SetRelativeMouseMode(SDL_TRUE);
-        //     SDL_ShowCursor(SDL_DISABLE);
-        // } else {
-        //     SDL_SetRelativeMouseMode(SDL_FALSE);
-        //     SDL_ShowCursor(SDL_ENABLE);
-        // }
-
         // imgui new frame
         ImGui_ImplVulkan_NewFrame();
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
-        ImVec2 backgroundPos;
-        ImVec2 backgroundSize;
+        ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
 
-        if (ImGui::Begin("background", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoTitleBar)) {
-            ImGui::SetWindowPos({0.0f, 0.0f});
-
-            ComputeEffect& effect = backgroundEffects[currentBackgroundEffect];
-
+        if (ImGui::Begin("background", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
             ImGui::SliderFloat("Render Scale", &mRenderScale, 0.3f, 2.f);
-
-            ImGui::Text("Selected effect: ", effect.name.c_str());
-
-            ImGui::SliderInt("Effect Index", &currentBackgroundEffect, 0, backgroundEffects.size() - 1);
-
-            ImGui::InputFloat4("data1", (float*)& effect.pushConstants.data1);
-            ImGui::InputFloat4("data2", (float*)& effect.pushConstants.data2);
-            ImGui::InputFloat4("data3", (float*)& effect.pushConstants.data3);
-            ImGui::InputFloat4("data4", (float*)& effect.pushConstants.data4);
-
-            backgroundPos = ImGui::GetWindowPos();
-            backgroundSize = ImGui::GetWindowSize();
         }
 
         ImGui::End();
 
-        ImGui::Begin("Stats");
-        ImGui::Text("fps %i", mStats.fps);
-        ImGui::Text("frametime %f ms", mStats.frameTime);
-        ImGui::Text("update time %f ms", mStats.updateTime);
-        ImGui::Text("draw time %f ms", mStats.drawTime);
-        ImGui::Text("draw geometry time %f ms", mStats.drawGeometryTime);
-        ImGui::Text("triangles %i", mStats.triangleCount);
-        ImGui::Text("draws %i", mStats.drawCallCount);
+        mFxaaEffect->drawGui();
+
+        ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
+
+        if (ImGui::Begin("Stats", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+            ImGui::Text("fps %i", mStats.fps);
+            ImGui::Text("frametime %f ms", mStats.frameTime);
+            ImGui::Text("update time %f ms", mStats.updateTime);
+            ImGui::Text("draw time %f ms", mStats.drawTime);
+            ImGui::Text("draw geometry time %f ms", mStats.drawGeometryTime);
+            ImGui::Text("triangles %i", mStats.triangleCount);
+            ImGui::Text("draws %i", mStats.drawCallCount);
+        }
 
         ImGui::End();
 
@@ -940,7 +786,7 @@ void VulkanEngine::run() {
         float dt = std::chrono::duration_cast<std::chrono::microseconds>(newTime - currentTime).count() / 1000.f;
         currentTime = newTime;
 
-        updateScene(dt);
+        updateScene(dt, userInput);
 
 
         draw();
@@ -1229,14 +1075,14 @@ void VulkanEngine::destroyImage(const AllocatedImage& image) {
     vmaDestroyImage(mAllocator, image.image, image.allocation);
 }
 
-void VulkanEngine::updateScene(float dt) {
+void VulkanEngine::updateScene(float dt, const UserInput& userInput) {
     // get start time
     auto start = std::chrono::system_clock::now();
 
     mMainRenderContext.opaqueObjects.clear();
     mMainRenderContext.transparentObjects.clear();
 
-    mScene->update(dt, mWindow->getAspectRatio());
+    mScene->update(dt, mWindow->getAspectRatio(), userInput);
     mScene->draw(mMainRenderContext);
 
     // get end time

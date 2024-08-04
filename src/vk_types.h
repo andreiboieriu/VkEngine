@@ -32,20 +32,6 @@ struct ComputePushConstants {
     glm::vec4 data4;
 };
 
-struct ComputeEffect {
-    std::string name;
-
-    VkPipeline pipeline;
-    VkPipelineLayout pipelineLayout;
-
-    ComputePushConstants pushConstants;
-
-    struct ComputePass {
-        VkPipeline pipeline;
-        VkPipelineLayout pipelineLayout;
-    };
-};
-
 struct AllocatedBuffer {
     VkBuffer buffer;
     VmaAllocation allocation;

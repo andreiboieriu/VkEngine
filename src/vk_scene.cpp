@@ -46,12 +46,8 @@ void Scene3D::init() {
     });
 }
 
-void Scene3D::processSDLEvent(SDL_Event& e) {
-    mCamera.processSDLEvent(e);
-}
-
-void Scene3D::update(float dt, float aspectRatio) {
-    mCamera.update(dt, aspectRatio);
+void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
+    mCamera.update(dt, aspectRatio, userInput);
 
     mSceneData.view = mCamera.getViewMatrix();
     mSceneData.projection = mCamera.getProjectionMatrix();

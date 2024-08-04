@@ -214,6 +214,54 @@ cmake_pch.hxx.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
+compute_effects/compute_effect.o: compute_effects/compute_effect.cpp.o
+.PHONY : compute_effects/compute_effect.o
+
+# target to build an object file
+compute_effects/compute_effect.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o
+.PHONY : compute_effects/compute_effect.cpp.o
+
+compute_effects/compute_effect.i: compute_effects/compute_effect.cpp.i
+.PHONY : compute_effects/compute_effect.i
+
+# target to preprocess a source file
+compute_effects/compute_effect.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.i
+.PHONY : compute_effects/compute_effect.cpp.i
+
+compute_effects/compute_effect.s: compute_effects/compute_effect.cpp.s
+.PHONY : compute_effects/compute_effect.s
+
+# target to generate assembly for a file
+compute_effects/compute_effect.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.s
+.PHONY : compute_effects/compute_effect.cpp.s
+
+compute_effects/fxaa.o: compute_effects/fxaa.cpp.o
+.PHONY : compute_effects/fxaa.o
+
+# target to build an object file
+compute_effects/fxaa.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o
+.PHONY : compute_effects/fxaa.cpp.o
+
+compute_effects/fxaa.i: compute_effects/fxaa.cpp.i
+.PHONY : compute_effects/fxaa.i
+
+# target to preprocess a source file
+compute_effects/fxaa.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.i
+.PHONY : compute_effects/fxaa.cpp.i
+
+compute_effects/fxaa.s: compute_effects/fxaa.cpp.s
+.PHONY : compute_effects/fxaa.s
+
+# target to generate assembly for a file
+compute_effects/fxaa.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.s
+.PHONY : compute_effects/fxaa.cpp.s
+
 deletion_queue.o: deletion_queue.cpp.o
 .PHONY : deletion_queue.o
 
@@ -569,6 +617,12 @@ help:
 	@echo "... cmake_pch.hxx.pch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"
+	@echo "... compute_effects/compute_effect.o"
+	@echo "... compute_effects/compute_effect.i"
+	@echo "... compute_effects/compute_effect.s"
+	@echo "... compute_effects/fxaa.o"
+	@echo "... compute_effects/fxaa.i"
+	@echo "... compute_effects/fxaa.s"
 	@echo "... deletion_queue.o"
 	@echo "... deletion_queue.i"
 	@echo "... deletion_queue.s"

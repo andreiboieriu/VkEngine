@@ -1,5 +1,6 @@
 #include "SDL_events.h"
 #include "vk_types.h"
+#include "vk_window.h"
 
 class Camera {
 public:
@@ -8,8 +9,7 @@ public:
     glm::mat4 getRotationMatrix();
     glm::mat4 getProjectionMatrix();
 
-    void processSDLEvent(SDL_Event& e);
-    void update(float dt, float aspectRatio);
+    void update(float dt, float aspectRatio, const UserInput& userInput);
 
 private:
 
@@ -21,7 +21,7 @@ private:
     float mNear = 0.1f;
     float mFar = 1000.f;
 
-    const float MOUSE_MOTION_SENSITIVITY = 0.05f;
+    const float MOUSE_MOTION_SENSITIVITY = 0.2f;
     const float MOUSE_WHEEL_SENSITIVITY = 1.0f;
     const float SPEED = .02f;
 

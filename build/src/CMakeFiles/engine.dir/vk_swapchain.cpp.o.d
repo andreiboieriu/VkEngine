@@ -400,18 +400,16 @@ src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: \
   /usr/include/string.h /usr/include/strings.h \
   /home/gooby/Development/VkEngine/third_party/vkbootstrap/VkBootstrapDispatch.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/vk_materials.h \
-  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
+  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
   /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/gooby/Development/VkEngine/src/deletion_queue.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/algorithmfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
@@ -420,6 +418,9 @@ src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/fmt/include/fmt/core.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
+  /home/gooby/Development/VkEngine/src/vk_materials.h \
+  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/src/vk_scene.h \
   /home/gooby/Development/VkEngine/src/camera.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
@@ -453,26 +454,6 @@ src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
-  /home/gooby/Development/VkEngine/src/vk_loader.h \
-  /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/algorithm \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ranges_algo.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ranges_util.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/list \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_list.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/list.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/map \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_map.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/set \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
   /home/gooby/Development/VkEngine/src/vk_window.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_main.h \
@@ -578,4 +559,24 @@ src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_locale.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_misc.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
+  /home/gooby/Development/VkEngine/src/vk_loader.h \
+  /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/algorithm \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ranges_algo.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ranges_util.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/list \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_list.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/list.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_map.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
   /home/gooby/Development/VkEngine/src/vk_initializers.h

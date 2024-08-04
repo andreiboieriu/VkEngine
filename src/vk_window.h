@@ -6,6 +6,16 @@
 #include "volk.h"
 
 #include "vk_swapchain.h"
+#include <set>
+
+struct UserInput {
+    std::set<SDL_Keycode> pressedKeys;
+    std::set<SDL_Keycode> releasedKeys;
+    float mouseXRel;
+    float mouseYRel;
+    float mouseWheel;
+    bool GuiMode;
+};
 
 class Window {
 
@@ -49,7 +59,7 @@ public:
 
     void presentSwapchainImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore);
 
-    void processSDLEvents();
+    UserInput processSDLEvents();
 
     void toggleLockedCursor();
 
@@ -62,7 +72,6 @@ public:
 private:
     void init(SDL_WindowFlags windowFlags, uint32_t monitorIdx);
     void handleWindowEvent(SDL_WindowEventID event);
-    void handleUserInput();
 
     void updateExtent();
     void resize();
@@ -79,4 +88,5 @@ private:
     bool mShouldResize = false;
     bool mShouldClose = false;
     bool mIsMinimized = false;
+    bool mLockedCursor = false;
 };
