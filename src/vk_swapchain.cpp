@@ -56,9 +56,9 @@ VkImage Swapchain::getNextImage(VkSemaphore& semaphore) {
     VkResult e = vkAcquireNextImageKHR(
         VulkanEngine::get().getDevice(),
         mHandle,
-        1e9,
+        UINT64_MAX,
         semaphore,
-        nullptr,
+        VK_NULL_HANDLE,
         &mCurrentImageIndex
     );
 

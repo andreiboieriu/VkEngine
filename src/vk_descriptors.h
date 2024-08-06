@@ -8,9 +8,9 @@
 class DescriptorLayoutBuilder {
 public:
 
-    DescriptorLayoutBuilder& addBinding(uint32_t binding, VkDescriptorType type);
+    DescriptorLayoutBuilder& addBinding(uint32_t binding, VkDescriptorType type, VkShaderStageFlags shaderStages);
     DescriptorLayoutBuilder& clear();
-    VkDescriptorSetLayout build(VkDevice device, VkShaderStageFlags shaderStages, void *pNext = nullptr, VkDescriptorSetLayoutCreateFlags flags = 0);
+    VkDescriptorSetLayout build(VkDevice device, void *pNext = nullptr, VkDescriptorSetLayoutCreateFlags flags = 0);
 
 private:
 

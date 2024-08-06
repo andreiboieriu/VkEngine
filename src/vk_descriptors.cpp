@@ -3,11 +3,12 @@
 #include "volk.h"
 #include "vk_engine.h"
 
-DescriptorLayoutBuilder& DescriptorLayoutBuilder::addBinding(uint32_t binding, VkDescriptorType type) {
+DescriptorLayoutBuilder& DescriptorLayoutBuilder::addBinding(uint32_t binding, VkDescriptorType type, VkShaderStageFlags shaderStages) {
     VkDescriptorSetLayoutBinding newBind{};
     newBind.binding = binding;
     newBind.descriptorCount = 1;
     newBind.descriptorType = type;
+    newBind.stageFlags = shaderStages;
 
     mBindings.push_back(newBind);
 
@@ -20,11 +21,7 @@ DescriptorLayoutBuilder& DescriptorLayoutBuilder::clear() {
     return *this;
 }
 
-VkDescriptorSetLayout DescriptorLayoutBuilder::build(VkDevice device, VkShaderStageFlags shaderStages, void *pNext, VkDescriptorSetLayoutCreateFlags flags) {
-    for (auto& binding : mBindings) {
-        binding.stageFlags |= shaderStages;
-    }
-
+VkDescriptorSetLayout DescriptorLayoutBuilder::build(VkDevice device, void *pNext, VkDescriptorSetLayoutCreateFlags flags) {
     VkDescriptorSetLayoutCreateInfo createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
     createInfo.pNext = pNext;
@@ -147,6 +144,7 @@ void DescriptorManager::bindDescriptorBuffers(VkCommandBuffer commandBuffer) {
 }
  
 VkDeviceSize DescriptorManager::createGlobalDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size) {
+    // create scene data descriptor
     VkDescriptorAddressInfoEXT addressInfo{};
     addressInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_ADDRESS_INFO_EXT;
     addressInfo.address = bufferAddress;

@@ -4,6 +4,7 @@
 #include "vk_types.h"
 #include "camera.h"
 #include "vk_loader.h"
+#include "skybox.h"
 
 class Scene3D {
 
@@ -27,6 +28,10 @@ public:
 
     void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
     void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
+
+    void drawSkybox(VkCommandBuffer commandBuffer) {
+        mSkybox->draw(commandBuffer);
+    }
 
     void freeResources();
 
@@ -53,4 +58,6 @@ private:
     std::unique_ptr<DescriptorManager> mDescriptorManager;
 
     VkDeviceSize mGlobalDescriptorOffset;
+
+    std::unique_ptr<Skybox> mSkybox;
 };

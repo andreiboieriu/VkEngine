@@ -28,14 +28,14 @@ void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat
 
     DescriptorLayoutBuilder layoutBuilder{};
     mMaterialDescriptorLayout = layoutBuilder
-                                   .addBinding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                                   .addBinding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                                   .addBinding(2, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
-                                   .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
+                                   .addBinding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
+                                   .addBinding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
+                                   .addBinding(2, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
+                                   .build(device, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     mGlobalDescriptorLayout = layoutBuilder.clear()
-                                       .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
-                                       .build(device, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
+                                       .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
+                                       .build(device, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     VkDescriptorSetLayout layouts[] = {
         mGlobalDescriptorLayout,
@@ -52,17 +52,17 @@ void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat
     mOpaquePipeline.pipeline = pipelineBuilder.clear().setShaders(vertShader, fragShader)
                                               .setInputTopology(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST)
                                               .setPolygonMode(VK_POLYGON_MODE_FILL)
-                                              .setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_CLOCKWISE)
+                                              .setCullMode(VK_CULL_MODE_BACK_BIT, VK_FRONT_FACE_COUNTER_CLOCKWISE)
                                               .setMultisampling()
                                               .disableBlending()
-                                              .enableDepthTesting(true, VK_COMPARE_OP_GREATER_OR_EQUAL)
+                                              .enableDepthTesting(true, VK_COMPARE_OP_GREATER)
                                               .setColorAttachmentFormat(colorFormat)
                                               .setDepthFormat(depthFormat)
                                               .setLayout(mOpaquePipeline.layout)
                                               .buildPipeline(device,  VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     mTransparentPipeline.pipeline = pipelineBuilder.enableBlendingAdditive()
-                                                   .enableDepthTesting(false, VK_COMPARE_OP_GREATER_OR_EQUAL)
+                                                   .enableDepthTesting(false, VK_COMPARE_OP_GREATER)
                                                    .buildPipeline(device,  VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     vkDestroyShaderModule(device, vertShader, nullptr);

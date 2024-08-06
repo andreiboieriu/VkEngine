@@ -1,15 +1,10 @@
 file(REMOVE_RECURSE
-  "../shaders/colored_triangle.frag.spv"
-  "../shaders/colored_triangle.vert.spv"
-  "../shaders/colored_triangle_mesh.vert.spv"
   "../shaders/fxaa_pass0.comp.spv"
   "../shaders/fxaa_pass1.comp.spv"
-  "../shaders/gradient.comp.spv"
-  "../shaders/gradient_color.comp.spv"
   "../shaders/mesh.frag.spv"
   "../shaders/mesh.vert.spv"
-  "../shaders/sky.comp.spv"
-  "../shaders/tex_image.frag.spv"
+  "../shaders/skybox.frag.spv"
+  "../shaders/skybox.vert.spv"
   "CMakeFiles/Shaders"
 )
 

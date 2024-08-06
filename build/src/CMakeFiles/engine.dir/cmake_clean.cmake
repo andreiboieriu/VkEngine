@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/game_object.cpp.o.d"
   "CMakeFiles/engine.dir/main.cpp.o"
   "CMakeFiles/engine.dir/main.cpp.o.d"
+  "CMakeFiles/engine.dir/skybox.cpp.o"
+  "CMakeFiles/engine.dir/skybox.cpp.o.d"
   "CMakeFiles/engine.dir/vk_descriptors.cpp.o"
   "CMakeFiles/engine.dir/vk_descriptors.cpp.o.d"
   "CMakeFiles/engine.dir/vk_engine.cpp.o"

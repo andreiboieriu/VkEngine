@@ -1,15 +1,10 @@
 # Hashes of file build rules.
-b2e3679f69bc3c9cb482f5283e61094d ../shaders/colored_triangle.frag.spv
-65ee5b39fd779d3b2d9f24c8d5d6a7d0 ../shaders/colored_triangle.vert.spv
-5466fd0a5f9a38fd92ef9355de4fffb1 ../shaders/colored_triangle_mesh.vert.spv
 c91e62ee0c7ba9e60f2b6c4fe51deeed ../shaders/fxaa_pass0.comp.spv
 d69f18821583ff46e8fd5a36330b1e1d ../shaders/fxaa_pass1.comp.spv
-3b0ec99bf95d5b3a89cc90e04c2164e8 ../shaders/gradient.comp.spv
-09225e0b2844c9a50188c0d3a5f26aa5 ../shaders/gradient_color.comp.spv
 d528ce8014eea1d9b48e1725910b83d9 ../shaders/mesh.frag.spv
 df163ff85d487f84bbcc5a5dffdae79f ../shaders/mesh.vert.spv
-81dd0dbcd15824ca8760443c317c89a5 ../shaders/sky.comp.spv
-96f43ee875b249e2b7826a4c17a217d9 ../shaders/tex_image.frag.spv
+7f5b3b1f83072f17dac2f51ca66bb6fb ../shaders/skybox.frag.spv
+91a13faf23aad584d6197c83b2964084 ../shaders/skybox.vert.spv
 f88146ff694674a67db1a6915f68b1d5 CMakeFiles/Shaders
 6d6e2d138216d9ebc3725744c7d4a2e6 third_party/SDL/CMakeFiles/sdl_headers_copy
 6522fe8b0968e58dd3eeb755b34e2ea0 third_party/SDL/CMakeFiles/uninstall

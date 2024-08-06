@@ -9,6 +9,12 @@
 #include <vk_types.h>
 #include <unordered_map>
 
+namespace vkutil {
+
+// Skybox loadSkybox(std::string_view path);
+
+} //namespace vkutil
+
 class GLTFNode {
 public:
 

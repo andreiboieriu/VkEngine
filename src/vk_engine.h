@@ -85,6 +85,10 @@ public:
 		return mWhiteImage;
 	}
 
+	AllocatedImage& getBlackTexture() {
+		return mBlackImage;
+	}
+
 	VkSampler& getDefaultLinearSampler() {
 		return mDefaultSamplerLinear;
 	}
@@ -101,6 +105,14 @@ public:
 		return mDescriptorBufferProperties;
 	}
 
+	VkFormat getDrawImageFormat() {
+		return mDrawImage.imageFormat;
+	}
+
+	VkFormat getDepthImageFormat() {
+		return mDepthImage.imageFormat;
+	}
+
 	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function);
 
 	AllocatedBuffer createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage);
@@ -108,6 +120,7 @@ public:
 
 	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
 	AllocatedImage createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
+	AllocatedImage createSkybox(void* data[6], VkExtent2D size, VkFormat format, VkImageUsageFlags usage);
 	void destroyImage(const AllocatedImage& image);
 
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
@@ -132,6 +145,7 @@ private:
 	//draw loop
 	void draw();
 	void drawBackground(VkCommandBuffer commandBuffer);
+	void drawSkybox(VkCommandBuffer commandBuffer);
 	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
 	void drawGeometry(VkCommandBuffer commandBuffer);
 	void fxaa(VkCommandBuffer commandBuffer);
@@ -206,6 +220,5 @@ private:
 
 	bool mCursorLocked = true;
 
-	// ComputeEffect mFxaaEffect{};
 	std::unique_ptr<Fxaa> mFxaaEffect;
 };

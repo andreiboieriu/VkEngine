@@ -19,9 +19,9 @@ void Scene3D::freeResources() {
 
 void Scene3D::init() {
     // init descriptor manager
-    mDescriptorManager = std::make_unique<DescriptorManager>(mMetalRoughMaterial.getGlobalDescriptorSetLayout(), mMetalRoughMaterial.getGlobalDescriptorSetLayout());
+    mDescriptorManager = std::make_unique<DescriptorManager>(mMetalRoughMaterial.getGlobalDescriptorSetLayout(), mMetalRoughMaterial.getMaterialDescriptorSetLayout());
 
-    mDeletionQueue.push([&]() {
+    mDeletionQueue.push([=, this]() {
         mDescriptorManager->freeResources();
     });
 
@@ -33,17 +33,24 @@ void Scene3D::init() {
         );
 
     // add scene data buffer to deletion queue
-    mDeletionQueue.push([&]() {
+    mDeletionQueue.push([=, this]() {
         VulkanEngine::get().destroyBuffer(mSceneDataBuffer);
+    });
+
+    mSkybox = std::make_unique<Skybox>("assets/skybox/anime/");
+
+    mDeletionQueue.push([=, this]() {
+        mSkybox = nullptr;
     });
 
     mGlobalDescriptorOffset = mDescriptorManager->createGlobalDescriptor(mSceneDataBuffer.deviceAddress, sizeof(SceneData));
 
-    mTestGLTF = std::make_shared<LoadedGLTF>("assets/structure.glb", *mDescriptorManager);
+    mTestGLTF = std::make_shared<LoadedGLTF>("assets/spaceship_corridor_fixglb.glb", *mDescriptorManager);
 
-    mDeletionQueue.push([&]() {
+    mDeletionQueue.push([=, this]() {
         mTestGLTF->freeResources();
     });
+
 }
 
 void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
@@ -59,10 +66,12 @@ void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
     mSceneData.sunlightDirection = glm::vec4(0.f, 1.0f, .5f, 1.f);
 
     *(SceneData*)mSceneDataBuffer.allocInfo.pMappedData = mSceneData;
+
+    mSkybox->update(mSceneData.projection * glm::mat4(glm::mat3(mSceneData.view)));
 }
 
 void Scene3D::draw(RenderContext &context) {
-    mTestGLTF->draw(glm::mat4(1.f), context);
+    mTestGLTF->draw(glm::scale(glm::vec3(5.f)), context);
 }
 
 void Scene3D::bindDescriptorBuffers(VkCommandBuffer commandBuffer) {

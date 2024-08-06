@@ -38,12 +38,14 @@ add_executable (engine
   compute_effects/compute_effect.h
   compute_effects/fxaa.cpp
   compute_effects/fxaa.h
+  skybox.cpp
+  skybox.h
 )
 
 set_property(TARGET engine PROPERTY CXX_STANDARD 20)
 set( CMAKE_CXX_FLAGS "-g")
 
-target_compile_definitions(engine PUBLIC GLM_FORCE_DEPTH_ZERO_TO_ONE)
+target_compile_definitions(engine PUBLIC GLM_FORCE_DEPTH_ZERO_TO_ONE GLM_FORCE_RADIANS)
 target_include_directories(engine PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 
 target_link_libraries(engine PUBLIC volk vma glm entt fmt::fmt stb_image SDL2::SDL2 vkbootstrap imgui fastgltf::fastgltf)

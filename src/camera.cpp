@@ -20,7 +20,7 @@ glm::mat4 Camera::getProjectionMatrix() {
     // invert far and near
     glm::mat4 projection = glm::perspective(glm::radians(mFov), mAspectRatio, mFar, mNear);
 
-    projection[1][1] *= -1;
+    // projection[1][1] *= -1.0f;
 
     return projection;
 }

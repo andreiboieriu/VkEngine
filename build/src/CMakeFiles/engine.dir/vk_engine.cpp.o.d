@@ -562,6 +562,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
+  /home/gooby/Development/VkEngine/src/skybox.h \
   /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
@@ -577,6 +578,26 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/fwd.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/packing.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_uint2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_packing.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/matrix.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/vector_relational.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/integer.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_integer.inl \
   /home/gooby/Development/VkEngine/third_party/volk/volk.c \
   /usr/include/dlfcn.h /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/dl_find_object.h \
@@ -602,26 +623,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h \
   /home/gooby/Development/VkEngine/third_party/imgui/imgui_impl_sdl2.h \
   /home/gooby/Development/VkEngine/third_party/imgui/imgui_impl_vulkan.h \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/fwd.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/packing.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_uint2.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float2.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float4.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_packing.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/geometric.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/matrix.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/vector_relational.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/integer.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_integer.inl \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/chrono \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/sstream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/istream \

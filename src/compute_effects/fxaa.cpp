@@ -25,8 +25,8 @@ Fxaa::~Fxaa() {
 void Fxaa::createPipelineLayout() {
     // create descriptor set layout
     DescriptorLayoutBuilder builder;
-    mDescriptorSetLayout = builder.addBinding(0, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE)
-                                  .build(VulkanEngine::get().getDevice(), VK_SHADER_STAGE_COMPUTE_BIT, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
+    mDescriptorSetLayout = builder.addBinding(0, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE, VK_SHADER_STAGE_COMPUTE_BIT)
+                                  .build(VulkanEngine::get().getDevice(), nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
 
     std::vector<VkDescriptorSetLayout> setLayouts = {mDescriptorSetLayout};
 

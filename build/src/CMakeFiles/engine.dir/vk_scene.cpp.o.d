@@ -560,6 +560,7 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /home/gooby/Development/VkEngine/src/vk_descriptors.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/src/vk_materials.h \
+  /home/gooby/Development/VkEngine/src/skybox.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
   /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
   /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \

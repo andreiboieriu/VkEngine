@@ -153,7 +153,7 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
         auto load = parser.loadBinaryGLTF(&data, fileDirectory, gltfOptions);
 
         if (!load) {
-            fmt::println("Failed to load glTF: {}", fastgltf::to_underlying(load.error()));
+            fmt::println("Failed to load binary glTF: {}", fastgltf::to_underlying(load.error()));
             return;
         }
 
@@ -195,6 +195,12 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
         std::optional<AllocatedImage> newImage = loadImage(asset, image);
 
         if (newImage.has_value()) {
+            if (mImages.contains(image.name.c_str())) {
+                VulkanEngine::get().destroyImage(newImage.value());
+                images.push_back(mImages[image.name.c_str()]);
+                continue;
+            }
+
             images.push_back(newImage.value());
             mImages[image.name.c_str()] = newImage.value();
         } else {
@@ -237,7 +243,7 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
         // default material textures
         materialResources.colorImage = VulkanEngine::get().getWhiteTexture();
         materialResources.colorSampler = VulkanEngine::get().getDefaultLinearSampler();
-        materialResources.metalRoughImage = VulkanEngine::get().getWhiteTexture();
+        materialResources.metalRoughImage = VulkanEngine::get().getBlackTexture();
         materialResources.metalRoughSampler = VulkanEngine::get().getDefaultLinearSampler();
 
         // set uniform buffer for the material data
@@ -254,6 +260,14 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
             materialResources.colorSampler = samplers[sampler];
         }
 
+        if (material.pbrData.metallicRoughnessTexture.has_value()) {
+            size_t image = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].imageIndex.value();
+            size_t sampler = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].samplerIndex.value();
+
+            materialResources.metalRoughImage = images[image];
+            materialResources.metalRoughSampler = samplers[sampler];
+        }
+
         newMaterial->materialInstance = VulkanEngine::get().getGLTFMRCreator().writeMaterial(VulkanEngine::get().getDevice(), passType, materialResources, descriptorManager);
 
         dataIndex++;
@@ -264,6 +278,11 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
     std::vector<Vertex> vertices;
 
     for (auto& mesh : asset.meshes) {
+        if (mMeshes.contains(mesh.name.c_str())) {
+            meshes.push_back(mMeshes[mesh.name.c_str()]);
+            continue;
+        }
+
         std::shared_ptr<MeshAsset> newMesh = std::make_shared<MeshAsset>();
         newMesh->name = mesh.name;
 

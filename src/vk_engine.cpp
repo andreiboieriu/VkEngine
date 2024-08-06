@@ -2,6 +2,10 @@
 #include "vk_engine.h"
 #include "vk_enum_string_helper.h"
 
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#define GLM_FORCE_RADIANS
+#include <glm/glm.hpp>
+
 #define VK_NO_PROTOTYPES
 #define VOLK_IMPLEMENTATION
 #include "volk.h"
@@ -31,8 +35,6 @@
 #include "imgui.h"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_vulkan.h"
-
-#include <glm/glm.hpp>
 
 #include <chrono>
 #include <thread>
@@ -311,7 +313,7 @@ void VulkanEngine::initVMA() {
 
     vmaCreateAllocator(&vmaCreateInfo, &mAllocator);
 
-    mMainDeletionQueue.push([&]() {
+    mMainDeletionQueue.push([=, this]() {
         vmaDestroyAllocator(mAllocator);
     });
 }
@@ -361,13 +363,7 @@ void VulkanEngine::initSwapchain() {
     // initialize depth image
     mDepthImage.imageFormat = VK_FORMAT_D32_SFLOAT;
 
-    VkExtent2D windowExtent = mWindow->getExtent();
-
-    VkExtent3D depthImageExtent = {
-        windowExtent.width,
-        windowExtent.height,
-        1
-    };
+    VkExtent3D depthImageExtent = drawImageExtent;
 
     mDepthImage.imageExtent = depthImageExtent;
 
@@ -414,7 +410,7 @@ void VulkanEngine::initCommands() {
     VK_CHECK(vkAllocateCommandBuffers(mDevice, &allocInfo, &mImmCommandBuffer));
 
     // add imm cmd resources to deletion queue
-    mMainDeletionQueue.push([&]() {
+    mMainDeletionQueue.push([=, this]() {
         vkDestroyCommandPool(mDevice, mImmCommandPool, nullptr);
     });
 }
@@ -435,7 +431,7 @@ void VulkanEngine::initSyncStructs() {
     VK_CHECK(vkCreateFence(mDevice, &fenceCreateInfo, nullptr, &mImmFence));
 
     // add imm cmd fence to deletion queue
-    mMainDeletionQueue.push([&]() {
+    mMainDeletionQueue.push([=, this]() {
         vkDestroyFence(mDevice, mImmFence, nullptr);
     });
 }
@@ -444,7 +440,7 @@ void VulkanEngine::initPipelines() {
     initComputeEffects();
 
     mMetalRoughMaterial.buildPipelines(mDevice, mDrawImage.imageFormat, mDepthImage.imageFormat);
-    mMainDeletionQueue.push([&]() {
+    mMainDeletionQueue.push([=, this]() {
         mMetalRoughMaterial.freeResources();
     });
 }
@@ -483,7 +479,7 @@ void VulkanEngine::initDefaultData() {
 	sampl.minFilter = VK_FILTER_LINEAR;
 	vkCreateSampler(mDevice, &sampl, nullptr, &mDefaultSamplerLinear);
 
-	mMainDeletionQueue.push([&](){
+	mMainDeletionQueue.push([=, this](){
 		vkDestroySampler(mDevice,mDefaultSamplerNearest,nullptr);
 		vkDestroySampler(mDevice,mDefaultSamplerLinear,nullptr);
 
@@ -495,7 +491,7 @@ void VulkanEngine::initDefaultData() {
 
     mScene = std::make_shared<Scene3D>("testScene", mMetalRoughMaterial);
 
-    mMainDeletionQueue.push([&]() {
+    mMainDeletionQueue.push([=, this]() {
         mScene->freeResources();
     });
 }
@@ -503,7 +499,7 @@ void VulkanEngine::initDefaultData() {
 void VulkanEngine::initComputeEffects() {
     mFxaaEffect = std::make_unique<Fxaa>();
 
-    mMainDeletionQueue.push([&]() {
+    mMainDeletionQueue.push([=, this]() {
         mFxaaEffect = nullptr;
     });
 }
@@ -613,7 +609,8 @@ void VulkanEngine::draw() {
     auto start = std::chrono::system_clock::now();
 
     // wait until gpu finishes rendering last frame
-    VK_CHECK(vkWaitForFences(mDevice, 1, &getCurrentFrame().renderFence, true, 1e9));
+    VK_CHECK(vkWaitForFences(mDevice, 1, &getCurrentFrame().renderFence, VK_TRUE, UINT64_MAX));
+    VK_CHECK(vkResetFences(mDevice, 1, &getCurrentFrame().renderFence));
 
     // flush deletion queue of current frame
     getCurrentFrame().deletionQueue.flush();
@@ -634,7 +631,6 @@ void VulkanEngine::draw() {
     mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mRenderScale;
     mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mRenderScale;
     
-    VK_CHECK(vkResetFences(mDevice, 1, &getCurrentFrame().renderFence));
 
     // get command buffer from current frame
     VkCommandBuffer commandBuffer = getCurrentFrame().mainCommandBuffer;
@@ -646,15 +642,11 @@ void VulkanEngine::draw() {
     VkCommandBufferBeginInfo commandBufferBeginInfo = vkinit::command_buffer_begin_info(VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT);
     VK_CHECK(vkBeginCommandBuffer(commandBuffer, &commandBufferBeginInfo));
 
-    // transition draw image to a writeable layout
-    vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
-
-    drawBackground(commandBuffer);
-
-    vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
+    vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
     vkutil::transitionImage(commandBuffer, mDepthImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
 
     drawGeometry(commandBuffer);
+    // drawSkybox(commandBuffer);
 
     // transition draw image to general layout for adding post-processing
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
@@ -704,14 +696,7 @@ void VulkanEngine::draw() {
 }
 
 void VulkanEngine::drawBackground(VkCommandBuffer commandBuffer) {
-    // set clear color
-    VkClearColorValue clearValue;
-    clearValue = { {1.0f, 1.0f, 0.0f, 1.0f} };
 
-    VkImageSubresourceRange clearRange = vkinit::image_subresource_range(VK_IMAGE_ASPECT_COLOR_BIT);
-
-    // clear image
-    vkCmdClearColorImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, &clearValue, 1, &clearRange);
 }
 
 void VulkanEngine::drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView) {
@@ -788,7 +773,6 @@ void VulkanEngine::run() {
 
         updateScene(dt, userInput);
 
-
         draw();
 
         // get frame end time
@@ -858,6 +842,38 @@ bool isVisible(const RenderObject& obj, const glm::mat4& viewProj) {
     }
 }
 
+void VulkanEngine::drawSkybox(VkCommandBuffer commandBuffer) {
+    // VkClearValue clearValue{};
+    // clearValue.color = {1.0, 1.0, 0.0, 1.0};
+    // VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, &clearValue, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
+    // VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
+
+    // VkRenderingInfo renderInfo = vkinit::rendering_info(mDrawExtent, &colorAttachment, &depthAttachment);
+    // vkCmdBeginRendering(commandBuffer, &renderInfo);
+
+    // // set dynamic viewport and scissor
+    // VkViewport viewport{};
+    // viewport.x = 0;
+    // viewport.y = mDrawExtent.height;
+    // viewport.width = mDrawExtent.width;
+    // viewport.height = -(float)(mDrawExtent.height);
+    // viewport.minDepth = 0.0f;
+    // viewport.maxDepth = 1.0f;
+
+    // vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
+
+    // VkRect2D scissor{};
+    // scissor.offset.x = 0;
+    // scissor.offset.y = 0;
+    // scissor.extent.width = mDrawExtent.width;
+    // scissor.extent.height = mDrawExtent.height;
+
+    // vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
+
+    // mScene->bindDescriptorBuffers(commandBuffer);
+
+}
+
 void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     // reset stat counters
     mStats.drawCallCount = 0;
@@ -904,7 +920,9 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         }
     });
 
-    VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, nullptr, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
+    VkClearValue clearValue{};
+    clearValue.color = {1.0, 1.0, 0.0, 1.0};
+    VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, &clearValue, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
     VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
 
     VkRenderingInfo renderInfo = vkinit::rendering_info(mDrawExtent, &colorAttachment, &depthAttachment);
@@ -913,19 +931,19 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     // set dynamic viewport and scissor
     VkViewport viewport{};
     viewport.x = 0;
-    viewport.y = 0;
+    viewport.y = mDrawExtent.height;
     viewport.width = mDrawExtent.width;
-    viewport.height = mDrawExtent.height;
-    viewport.minDepth = 0.f;
-    viewport.maxDepth = 1.f;
+    viewport.height = -(float)(mDrawExtent.height);
+    viewport.minDepth = 0.0f;
+    viewport.maxDepth = 1.0f;
 
     vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
 
     VkRect2D scissor{};
     scissor.offset.x = 0;
     scissor.offset.y = 0;
-    scissor.extent.width = viewport.width;
-    scissor.extent.height = viewport.height;
+    scissor.extent.width = mDrawExtent.width;
+    scissor.extent.height = mDrawExtent.height;
 
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
@@ -989,6 +1007,8 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         draw(mMainRenderContext.transparentObjects[index]);
     }
 
+    mScene->drawSkybox(commandBuffer);
+
     vkCmdEndRendering(commandBuffer);
 
     // get end time
@@ -1032,6 +1052,90 @@ AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkIma
     return newImage;
 }
 
+AllocatedImage VulkanEngine::createSkybox(void* data[6], VkExtent2D size, VkFormat format, VkImageUsageFlags usage) {
+    size_t dataSize = size.width * size.height * 4;
+
+    AllocatedBuffer uploadBuffer = createBuffer(dataSize * 6, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
+
+    // copy data to staging buffer
+    for (int i = 0; i < 6; i++) {
+        memcpy((char *)uploadBuffer.allocInfo.pMappedData + dataSize * i, data[i], dataSize);
+    }
+
+    // create skybox image
+    AllocatedImage skybox{};
+    skybox.imageFormat = format;
+    skybox.imageExtent = {size.width, size.height, 1};
+
+    VkImageCreateInfo skyboxInfo{};
+    skyboxInfo.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;
+    skyboxInfo.imageType = VK_IMAGE_TYPE_2D;
+    skyboxInfo.format = format;
+    skyboxInfo.mipLevels = 1;
+    skyboxInfo.samples = VK_SAMPLE_COUNT_1_BIT;
+    skyboxInfo.tiling = VK_IMAGE_TILING_OPTIMAL;
+    skyboxInfo.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
+    skyboxInfo.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
+    skyboxInfo.extent = {size.width, size.height, 1};
+    skyboxInfo.usage = usage | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT;
+    skyboxInfo.arrayLayers = 6;
+    skyboxInfo.flags = VK_IMAGE_CREATE_CUBE_COMPATIBLE_BIT;
+
+    VmaAllocationCreateInfo allocInfo{};
+    allocInfo.usage = VMA_MEMORY_USAGE_GPU_ONLY;
+    allocInfo.requiredFlags = VkMemoryPropertyFlags(VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+
+    VK_CHECK(vmaCreateImage(mAllocator, &skyboxInfo, &allocInfo, &skybox.image, &skybox.allocation, nullptr));
+
+    // copy data to skybox image
+    immediateSubmit([&](VkCommandBuffer commandBuffer) {
+        // TODO: check if this transitions all array layers
+        vkutil::transitionImage(commandBuffer, skybox.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
+
+        std::vector<VkBufferImageCopy> bufferCopyRegions;
+        uint32_t offset = 0;
+
+        for (uint32_t face = 0; face < 6; face++) {
+            VkBufferImageCopy bufferCopy{};
+            bufferCopy.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+            bufferCopy.imageSubresource.mipLevel = 0;
+            bufferCopy.imageSubresource.baseArrayLayer = face;
+            bufferCopy.imageSubresource.layerCount = 1;
+
+            bufferCopy.imageExtent = {size.width, size.height, 1};
+            bufferCopy.bufferOffset = offset;
+
+            bufferCopyRegions.push_back(bufferCopy);
+
+            offset += dataSize;
+        }
+
+        vkCmdCopyBufferToImage(commandBuffer, uploadBuffer.buffer, skybox.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, static_cast<uint32_t>(bufferCopyRegions.size()), bufferCopyRegions.data());
+
+        vkutil::transitionImage(commandBuffer, skybox.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+    });
+
+    destroyBuffer(uploadBuffer);
+
+    // create skybox image view
+    VkImageViewCreateInfo imageViewInfo{};
+    imageViewInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
+    imageViewInfo.viewType = VK_IMAGE_VIEW_TYPE_CUBE;
+    imageViewInfo.format = format;
+
+    imageViewInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+    imageViewInfo.subresourceRange.baseMipLevel = 0;
+    imageViewInfo.subresourceRange.baseArrayLayer = 0;
+    imageViewInfo.subresourceRange.layerCount = 6;
+    imageViewInfo.subresourceRange.levelCount = VK_REMAINING_MIP_LEVELS;
+    imageViewInfo.image = skybox.image;
+
+    VK_CHECK(vkCreateImageView(mDevice, &imageViewInfo, nullptr, &skybox.imageView));
+
+    return skybox;
+}
+
+
 // hardcoded to rgba 8 bit
 AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {
     size_t dataSize = size.depth * size.width * size.height * 4;
@@ -1053,7 +1157,7 @@ AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat f
         copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
         copyRegion.imageSubresource.mipLevel = 0;
         copyRegion.imageSubresource.baseArrayLayer = 0;
-        copyRegion.imageSubresource.layerCount = 1;
+        copyRegion.imageSubresource.layerCount = size.depth;
         copyRegion.imageExtent = size;
 
         vkCmdCopyBufferToImage(commandBuffer, uploadBuffer.buffer, newImage.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, 1, &copyRegion);

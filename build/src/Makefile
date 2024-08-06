@@ -358,6 +358,30 @@ main.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+skybox.o: skybox.cpp.o
+.PHONY : skybox.o
+
+# target to build an object file
+skybox.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/skybox.cpp.o
+.PHONY : skybox.cpp.o
+
+skybox.i: skybox.cpp.i
+.PHONY : skybox.i
+
+# target to preprocess a source file
+skybox.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/skybox.cpp.i
+.PHONY : skybox.cpp.i
+
+skybox.s: skybox.cpp.s
+.PHONY : skybox.s
+
+# target to generate assembly for a file
+skybox.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/skybox.cpp.s
+.PHONY : skybox.cpp.s
+
 vk_descriptors.o: vk_descriptors.cpp.o
 .PHONY : vk_descriptors.o
 
@@ -635,6 +659,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... skybox.o"
+	@echo "... skybox.i"
+	@echo "... skybox.s"
 	@echo "... vk_descriptors.o"
 	@echo "... vk_descriptors.i"
 	@echo "... vk_descriptors.s"

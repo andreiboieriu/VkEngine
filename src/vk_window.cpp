@@ -41,7 +41,7 @@ void Window::init(SDL_WindowFlags windowFlags, uint32_t monitorIdx) {
 }
 
 void Window::createSwapchain() {
-    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_MAILBOX_KHR, mSurface);
+    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_FIFO_KHR, mSurface);
 }
 
 VkSurfaceKHR Window::getSurface() {

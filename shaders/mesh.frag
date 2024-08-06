@@ -3,6 +3,8 @@
 #extension GL_GOOGLE_include_directive : require
 // #include "input_structures.glsl"
 
+// layout(set = 0, binding = 0) uniform sampler2D skybox;
+
 layout(set = 0, binding = 0) uniform SceneData {   
 
 	mat4 view;
@@ -33,7 +35,7 @@ void main()
 {
 	float lightValue = max(dot(inNormal, sceneData.sunlightDirection.xyz), 0.1f);
 
-	vec3 color = inColor * texture(colorTex,inUV).xyz;
+	vec3 color = inColor * texture(colorTex, inUV).xyz;
 	// vec3 color = inColor;
 	vec3 ambient = color * sceneData.ambientColor.xyz;
 
