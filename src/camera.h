@@ -9,6 +9,10 @@ public:
     glm::mat4 getRotationMatrix();
     glm::mat4 getProjectionMatrix();
 
+    glm::vec3 getPosition() {
+        return mPosition;
+    }
+
     void update(float dt, float aspectRatio, const UserInput& userInput);
 
 private:

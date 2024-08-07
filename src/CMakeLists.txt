@@ -30,8 +30,8 @@ add_executable (engine
   ecs_components/gltf.h
   ecs_components/transform.h
   ecs_components/components.h
-  game_object.cpp
-  game_object.h
+  scene_node.cpp
+  scene_node.h
   ecs_systems/render_system.cpp
   ecs_systems/render_system.h
   compute_effects/compute_effect.cpp
@@ -40,6 +40,8 @@ add_executable (engine
   compute_effects/fxaa.h
   skybox.cpp
   skybox.h
+  resource_manager.cpp
+  resource_manager.h
 )
 
 set_property(TARGET engine PROPERTY CXX_STANDARD 20)

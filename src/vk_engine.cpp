@@ -1,4 +1,4 @@
-﻿//> includes
+//> includes
 #include "vk_engine.h"
 #include "vk_enum_string_helper.h"
 
@@ -22,7 +22,6 @@
 #include <SDL_vulkan.h>
 #include "SDL_video.h"
 #include "fmt/core.h"
-#include "game_object.h"
 #include "vk_descriptors.h"
 #include "vk_initializers.h"
 #include "vk_materials.h"
@@ -56,21 +55,57 @@ void VulkanEngine::init()
     // create window
     mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900}, (SDL_WindowFlags)(SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE), 1);
 
+    mMainDeletionQueue.push([&]() {
+        mWindow = nullptr;
+    });
+
     // init vulkan
     initVulkan();
     initVMA();
-
     initSwapchain();
     initCommands();
     initSyncStructs();
-    initPipelines();
+
+    // ready to draw loading screen?
+    // drawLoadingScreen();
+
+    std::thread t{&VulkanEngine::drawLoadingScreen, this};
+
+    fmt::println("loading screen end");
+
+    mFxaaEffect = std::make_unique<Fxaa>();
+
+    mMainDeletionQueue.push([&]() {
+        mFxaaEffect = nullptr;
+    });
+
+    mMaterialManager = std::make_unique<MaterialManager>();
+
+    mMainDeletionQueue.push([&]() {
+        mMaterialManager = nullptr;
+    });
+
+    mDescriptorManager = std::make_unique<DescriptorManager>(mMaterialManager->getSceneDescriptorSetLayout(), mMaterialManager->getMaterialDescriptorSetLayout());
+    mMainDeletionQueue.push([&]() {
+        mDescriptorManager = nullptr;
+    });
+
     initImGui();
     initECS();
 
     initDefaultData();
 
+    mScene = std::make_shared<Scene3D>("testScene");
+
+    mMainDeletionQueue.push([&]() {
+        mScene = nullptr;
+    });
+
     // everything went fine
     mIsInitialized = true;
+
+    // stop loading screen
+    t.join();
 }
 
 AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memUsage) {
@@ -186,9 +221,9 @@ void VulkanEngine::immediateSubmit(std::function<void(VkCommandBuffer commandBuf
     VkSubmitInfo2 submitInfo = vkinit::submit_info(&commandInfo, nullptr, nullptr);
 
     // submit command buffer to queue
-    VK_CHECK(vkQueueSubmit2(mGraphicsQueue, 1, &submitInfo, mImmFence));
+    VK_CHECK(vkQueueSubmit2(mImmediateCommandsQueue, 1, &submitInfo, mImmFence));
 
-    VK_CHECK(vkWaitForFences(mDevice, 1, &mImmFence, true, 9e9));
+    VK_CHECK(vkWaitForFences(mDevice, 1, &mImmFence, true, UINT64_MAX));
 }
 
 void VulkanEngine::initVulkan() {
@@ -239,6 +274,9 @@ void VulkanEngine::initVulkan() {
     descriptorBufferFeatures.descriptorBufferPushDescriptors = true;
     descriptorBufferFeatures.pNext = nullptr;
 
+    VkPhysicalDeviceFeatures physicalDeviceFeatures{};
+    physicalDeviceFeatures.samplerAnisotropy = VK_TRUE;
+
     vkb::PhysicalDeviceSelector vkbSelector{vkbInstance};
     vkb::PhysicalDevice vkbPhysicalDevice = vkbSelector
         .set_minimum_version(1, 3)
@@ -249,12 +287,33 @@ void VulkanEngine::initVulkan() {
         .add_required_extension(VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME)
         .add_required_extension(VK_EXT_DESCRIPTOR_BUFFER_EXTENSION_NAME)
         .add_required_extension_features(descriptorBufferFeatures)
+        .set_required_features(physicalDeviceFeatures)
         .select()
         .value();
 
     // create logical device using vkbootstrap
+    std::vector<vkb::CustomQueueDescription> queueDescriptions;
+    auto queueFamilies = vkbPhysicalDevice.get_queue_families();
+
+    for (uint32_t i = 0; i < queueFamilies.size(); i++) {
+        if (queueFamilies[i].queueFlags & VK_QUEUE_GRAPHICS_BIT) {
+            queueDescriptions.push_back(vkb::CustomQueueDescription{
+                i,
+                std::vector<float> {
+                    1.0f,
+                    0.0f
+                }
+            });
+
+            mGraphicsQueueFamily = i;
+            mImmediateCommandsQueueFamily = i;
+
+            break;
+        }
+    }
+
     vkb::DeviceBuilder vkbDeviceBuilder{vkbPhysicalDevice};
-    vkb::Device vkbDevice = vkbDeviceBuilder.build().value();
+    vkb::Device vkbDevice = vkbDeviceBuilder.custom_queue_setup(queueDescriptions).build().value();
 
     // get device handles
     mDevice = vkbDevice.device;
@@ -263,8 +322,13 @@ void VulkanEngine::initVulkan() {
     volkLoadDevice(mDevice);
 
     // get graphics queue using vkb
-    mGraphicsQueue = vkbDevice.get_queue(vkb::QueueType::graphics).value();
-    mGraphicsQueueFamily = vkbDevice.get_queue_index(vkb::QueueType::graphics).value();
+    // mGraphicsQueue = vkbDevice.get_queue(vkb::QueueType::graphics).value();
+    // mGraphicsQueueFamily = vkbDevice.get_queue_index(vkb::QueueType::graphics).value();
+
+    // mImmediateCommandsQueue = vkbDevice.get_queue(vkb::QueueType::graphics).value();
+    // mImmediateCommandsQueueFamily = vkbDevice.get_queue_index(vkb::QueueType::graphics).value();
+    vkGetDeviceQueue(mDevice, mGraphicsQueueFamily, 0, &mGraphicsQueue);
+    vkGetDeviceQueue(mDevice, mImmediateCommandsQueueFamily, 1, &mImmediateCommandsQueue);
 
     // get descriptor buffer properties
     mDescriptorBufferProperties.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_PROPERTIES_EXT;
@@ -274,6 +338,8 @@ void VulkanEngine::initVulkan() {
     deviceProperties.pNext = &mDescriptorBufferProperties;
 
     vkGetPhysicalDeviceProperties2KHR(mPhysicalDevice, &deviceProperties);
+
+    mMaxSamplerAnisotropy = deviceProperties.properties.limits.maxSamplerAnisotropy;
 }
 
 void VulkanEngine::initVMA() {
@@ -402,8 +468,13 @@ void VulkanEngine::initCommands() {
         VK_CHECK(vkAllocateCommandBuffers(mDevice, &cmdAllocInfo, &mFrames[i].mainCommandBuffer));
     }
 
+    VkCommandPoolCreateInfo immCommandPoolInfo = vkinit::command_pool_create_info(
+        mImmediateCommandsQueueFamily,
+        VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT
+        );
+
     // create command pool for immediate commands
-    VK_CHECK(vkCreateCommandPool(mDevice, &commandPoolInfo, nullptr, &mImmCommandPool));
+    VK_CHECK(vkCreateCommandPool(mDevice, &immCommandPoolInfo, nullptr, &mImmCommandPool));
 
     // allocate command buffer for immediate commands
     VkCommandBufferAllocateInfo allocInfo = vkinit::command_buffer_allocate_info(mImmCommandPool);
@@ -436,15 +507,6 @@ void VulkanEngine::initSyncStructs() {
     });
 }
 
-void VulkanEngine::initPipelines() {
-    initComputeEffects();
-
-    mMetalRoughMaterial.buildPipelines(mDevice, mDrawImage.imageFormat, mDepthImage.imageFormat);
-    mMainDeletionQueue.push([=, this]() {
-        mMetalRoughMaterial.freeResources();
-    });
-}
-
 void VulkanEngine::initDefaultData() {
     uint32_t white = glm::packUnorm4x8(glm::vec4(1, 1, 1, 1));
 	mWhiteImage = createImage((void*)&white, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
@@ -473,6 +535,8 @@ void VulkanEngine::initDefaultData() {
 
 	sampl.magFilter = VK_FILTER_NEAREST;
 	sampl.minFilter = VK_FILTER_NEAREST;
+    sampl.anisotropyEnable = VK_TRUE;
+    sampl.maxAnisotropy = mMaxSamplerAnisotropy;
 	vkCreateSampler(mDevice, &sampl, nullptr, &mDefaultSamplerNearest);
 
 	sampl.magFilter = VK_FILTER_LINEAR;
@@ -488,20 +552,6 @@ void VulkanEngine::initDefaultData() {
 		destroyImage(mBlackImage);
 		destroyImage(mErrorCheckerboardImage);
 	});
-
-    mScene = std::make_shared<Scene3D>("testScene", mMetalRoughMaterial);
-
-    mMainDeletionQueue.push([=, this]() {
-        mScene->freeResources();
-    });
-}
-
-void VulkanEngine::initComputeEffects() {
-    mFxaaEffect = std::make_unique<Fxaa>();
-
-    mMainDeletionQueue.push([=, this]() {
-        mFxaaEffect = nullptr;
-    });
 }
 
 void VulkanEngine::initImGui() {
@@ -538,7 +588,7 @@ void VulkanEngine::initImGui() {
     initInfo.Instance = mInstance;
     initInfo.PhysicalDevice = mPhysicalDevice;
     initInfo.Device = mDevice;
-    initInfo.Queue = mGraphicsQueue;
+    initInfo.Queue = mImmediateCommandsQueue;
     initInfo.DescriptorPool = imguiDescPool;
     initInfo.MinImageCount = 3;
     initInfo.ImageCount = 3;
@@ -591,10 +641,6 @@ void VulkanEngine::cleanup() {
 
     mMainDeletionQueue.flush();
 
-
-    mWindow = nullptr;
-
-
     vkDestroyDevice(mDevice, nullptr);
 
     vkb::destroy_debug_utils_messenger(mInstance, mDebugMessenger);
@@ -602,6 +648,136 @@ void VulkanEngine::cleanup() {
 
     // clear engine pointer
     gLoadedEngine = nullptr;
+}
+
+void VulkanEngine::drawLoadingScreen() {
+    while (!mIsInitialized) {
+        // process SDL events
+        UserInput userInput = mWindow->processSDLEvents();
+
+        // end loop if window is closed
+        if (mWindow->shouldClose()) {
+            break;
+        }
+
+        // throttle speed if window is minimized
+        if (mWindow->isMinimized()) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            continue;
+        }
+
+        // wait until gpu finishes rendering last frame
+        VK_CHECK(vkWaitForFences(mDevice, 1, &getCurrentFrame().renderFence, VK_TRUE, UINT64_MAX));
+        VK_CHECK(vkResetFences(mDevice, 1, &getCurrentFrame().renderFence));
+
+        // flush deletion queue of current frame
+        getCurrentFrame().deletionQueue.flush();
+
+        VkImage swapchainImage = mWindow->getNextSwapchainImage(getCurrentFrame().swapchainSemaphore);
+
+        if (swapchainImage == VK_NULL_HANDLE) {
+            vkDestroySemaphore(mDevice, getCurrentFrame().swapchainSemaphore, nullptr);
+            VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
+            VK_CHECK(vkCreateSemaphore(mDevice, &semaphoreCreateInfo, nullptr, &getCurrentFrame().swapchainSemaphore));
+        
+            return;
+        }
+
+        VkExtent2D windowExtent = mWindow->getExtent();
+
+        // set draw extent
+        mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mRenderScale;
+        mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mRenderScale;
+        
+        // get command buffer from current frame
+        VkCommandBuffer commandBuffer = getCurrentFrame().mainCommandBuffer;
+
+        // reset command buffer
+        VK_CHECK(vkResetCommandBuffer(commandBuffer, 0));
+
+        // begin recording command buffer
+        VkCommandBufferBeginInfo commandBufferBeginInfo = vkinit::command_buffer_begin_info(VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT);
+        VK_CHECK(vkBeginCommandBuffer(commandBuffer, &commandBufferBeginInfo));
+
+        vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
+        vkutil::transitionImage(commandBuffer, mDepthImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
+
+        // drawGeometry(commandBuffer);
+
+        VkClearValue clearValue{};
+        clearValue.color = {1.0, 1.0, 0.0, 1.0};
+        VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, &clearValue, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
+        VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
+
+        VkRenderingInfo renderInfo = vkinit::rendering_info(mDrawExtent, &colorAttachment, &depthAttachment);
+        vkCmdBeginRendering(commandBuffer, &renderInfo);
+
+        // set dynamic viewport and scissor
+        VkViewport viewport{};
+        viewport.x = 0;
+        viewport.y = mDrawExtent.height;
+        viewport.width = mDrawExtent.width;
+        viewport.height = -(float)(mDrawExtent.height);
+        viewport.minDepth = 0.0f;
+        viewport.maxDepth = 1.0f;
+
+        vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
+
+        VkRect2D scissor{};
+        scissor.offset.x = 0;
+        scissor.offset.y = 0;
+        scissor.extent.width = mDrawExtent.width;
+        scissor.extent.height = mDrawExtent.height;
+
+        vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
+
+        // bind pipeline
+
+        // push descriptors
+
+        vkCmdEndRendering(commandBuffer);
+
+        // transition draw image to general layout for adding post-processing
+        // vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
+
+        // fxaa(commandBuffer);
+        // mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent);
+
+        // transition draw and swapchain image into transfer layouts
+        vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+        vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
+
+        // copy draw image to swapchain image
+        vkutil::copyImageToImage(commandBuffer, mDrawImage.image, swapchainImage, mDrawExtent, windowExtent);
+
+        // transition swapchain image to Attachment Optimal so we can draw directly to it
+        // vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
+
+        // draw ImGui into the swapchain image
+        // drawImGui(commandBuffer, mWindow->getCurrentSwapchainImageView());
+
+        // transition swapchain image into a presentable layout
+        vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_PRESENT_SRC_KHR);
+
+        // finalize command buffer
+        VK_CHECK(vkEndCommandBuffer(commandBuffer));
+
+        // prepare to submit command buffer to queue
+        VkCommandBufferSubmitInfo commandBufferSubmitInfo = vkinit::command_buffer_submit_info(commandBuffer);
+
+        VkSemaphoreSubmitInfo waitInfo = vkinit::semaphore_submit_info(VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT_KHR, getCurrentFrame().swapchainSemaphore);
+        VkSemaphoreSubmitInfo signalInfo = vkinit::semaphore_submit_info(VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT, getCurrentFrame().renderSemaphore);
+
+        VkSubmitInfo2 submitInfo = vkinit::submit_info(&commandBufferSubmitInfo, &signalInfo, &waitInfo);
+
+        // submit command buffer to queue
+        VK_CHECK(vkQueueSubmit2(mGraphicsQueue, 1, &submitInfo, getCurrentFrame().renderFence));
+
+        mWindow->presentSwapchainImage(mGraphicsQueue, getCurrentFrame().renderSemaphore);
+
+        // increment frame number
+        mFrameNumber++;
+    }
 }
 
 void VulkanEngine::draw() {
@@ -693,10 +869,6 @@ void VulkanEngine::draw() {
     auto end = std::chrono::system_clock::now();
     auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
     mStats.drawTimeBuffer += elapsed.count() / 1000.f;
-}
-
-void VulkanEngine::drawBackground(VkCommandBuffer commandBuffer) {
-
 }
 
 void VulkanEngine::drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView) {
@@ -842,38 +1014,6 @@ bool isVisible(const RenderObject& obj, const glm::mat4& viewProj) {
     }
 }
 
-void VulkanEngine::drawSkybox(VkCommandBuffer commandBuffer) {
-    // VkClearValue clearValue{};
-    // clearValue.color = {1.0, 1.0, 0.0, 1.0};
-    // VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, &clearValue, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
-    // VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
-
-    // VkRenderingInfo renderInfo = vkinit::rendering_info(mDrawExtent, &colorAttachment, &depthAttachment);
-    // vkCmdBeginRendering(commandBuffer, &renderInfo);
-
-    // // set dynamic viewport and scissor
-    // VkViewport viewport{};
-    // viewport.x = 0;
-    // viewport.y = mDrawExtent.height;
-    // viewport.width = mDrawExtent.width;
-    // viewport.height = -(float)(mDrawExtent.height);
-    // viewport.minDepth = 0.0f;
-    // viewport.maxDepth = 1.0f;
-
-    // vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
-
-    // VkRect2D scissor{};
-    // scissor.offset.x = 0;
-    // scissor.offset.y = 0;
-    // scissor.extent.width = mDrawExtent.width;
-    // scissor.extent.height = mDrawExtent.height;
-
-    // vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
-
-    // mScene->bindDescriptorBuffers(commandBuffer);
-
-}
-
 void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     // reset stat counters
     mStats.drawCallCount = 0;
@@ -947,7 +1087,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
 
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
-    mScene->bindDescriptorBuffers(commandBuffer);
+    mDescriptorManager->bindDescriptorBuffers(commandBuffer);
 
     // track state
     MaterialPipeline* lastPipeline = nullptr;

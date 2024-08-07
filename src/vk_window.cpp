@@ -91,7 +91,7 @@ UserInput Window::processSDLEvents() {
         }
 
         // send SDL event to imgui
-        ImGui_ImplSDL2_ProcessEvent(&e);
+        // ImGui_ImplSDL2_ProcessEvent(&e);
     }
 
     // toggle locked cursor

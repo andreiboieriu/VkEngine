@@ -21,11 +21,11 @@ class DescriptorManager {
 
 public:
 
-    DescriptorManager(VkDescriptorSetLayout globalLayout, VkDescriptorSetLayout materialLayout);
+    DescriptorManager(VkDescriptorSetLayout sceneLayout, VkDescriptorSetLayout materialLayout);
     ~DescriptorManager();
 
     void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
-    VkDeviceSize createGlobalDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size);
+    VkDeviceSize createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size);
     VkDeviceSize createMaterialDescriptor(const MaterialResources& resources);
 
     void freeResources();

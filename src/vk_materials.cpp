@@ -7,7 +7,15 @@
 #include "volk.h"
 #include "vk_engine.h"
 
-void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat) {
+MaterialManager::MaterialManager() {
+    buildPipelines(VulkanEngine::get().getDevice(), VulkanEngine::get().getDrawImageFormat(), VulkanEngine::get().getDepthImageFormat());
+}
+
+MaterialManager::~MaterialManager() {
+    freeResources();
+}
+
+void MaterialManager::buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat) {
     // load shaders
     VkShaderModule fragShader;
 
@@ -33,12 +41,12 @@ void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat
                                    .addBinding(2, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
                                    .build(device, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
-    mGlobalDescriptorLayout = layoutBuilder.clear()
+    mSceneDescriptorLayout = layoutBuilder.clear()
                                        .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
                                        .build(device, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     VkDescriptorSetLayout layouts[] = {
-        mGlobalDescriptorLayout,
+        mSceneDescriptorLayout,
         mMaterialDescriptorLayout
     };
 
@@ -69,10 +77,10 @@ void GLTFMetallicRoughness::buildPipelines(VkDevice device, VkFormat colorFormat
     vkDestroyShaderModule(device, fragShader, nullptr);
 }
 
-void GLTFMetallicRoughness::freeResources() {
+void MaterialManager::freeResources() {
     VkDevice device = VulkanEngine::get().getDevice();
 
-    vkDestroyDescriptorSetLayout(device, mGlobalDescriptorLayout, nullptr);
+    vkDestroyDescriptorSetLayout(device, mSceneDescriptorLayout, nullptr);
     vkDestroyDescriptorSetLayout(device, mMaterialDescriptorLayout, nullptr);
 
     vkDestroyPipelineLayout(device, mOpaquePipeline.layout, nullptr);
@@ -81,7 +89,7 @@ void GLTFMetallicRoughness::freeResources() {
     vkDestroyPipeline(device, mTransparentPipeline.pipeline, nullptr);
 }
 
-MaterialInstance GLTFMetallicRoughness::writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources, DescriptorManager& descriptorManager) {
+MaterialInstance MaterialManager::writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources) {
     MaterialInstance materialInstance;
     materialInstance.passType = pass;
 
@@ -91,7 +99,7 @@ MaterialInstance GLTFMetallicRoughness::writeMaterial(VkDevice device, MaterialP
         materialInstance.pipeline = &mOpaquePipeline;
     }
 
-    materialInstance.descriptorOffset = descriptorManager.createMaterialDescriptor(resources);
+    materialInstance.descriptorOffset = VulkanEngine::get().getDescriptorManager().createMaterialDescriptor(resources);
 
 
     return materialInstance;

@@ -100,6 +100,7 @@ DescriptorManager::DescriptorManager(VkDescriptorSetLayout globalLayout, VkDescr
 }
 
 DescriptorManager::~DescriptorManager() {
+    freeResources();
 }
 
 void DescriptorManager::init() {
@@ -143,7 +144,7 @@ void DescriptorManager::bindDescriptorBuffers(VkCommandBuffer commandBuffer) {
     vkCmdBindDescriptorBuffersEXT(commandBuffer, 1, &bindingInfo);
 }
  
-VkDeviceSize DescriptorManager::createGlobalDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size) {
+VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size) {
     // create scene data descriptor
     VkDescriptorAddressInfoEXT addressInfo{};
     addressInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_ADDRESS_INFO_EXT;

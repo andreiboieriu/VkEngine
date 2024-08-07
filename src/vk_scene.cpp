@@ -5,12 +5,12 @@
 
 #include <memory>
 
-Scene3D::Scene3D(const std::string& name, GLTFMetallicRoughness& metalRoughMaterial) : mName(name), mMetalRoughMaterial(metalRoughMaterial) {
+Scene3D::Scene3D(const std::string& name) : mName(name) {
     init();
 }
     
 Scene3D::~Scene3D() {
-
+    freeResources();
 }
 
 void Scene3D::freeResources() {
@@ -18,13 +18,6 @@ void Scene3D::freeResources() {
 }
 
 void Scene3D::init() {
-    // init descriptor manager
-    mDescriptorManager = std::make_unique<DescriptorManager>(mMetalRoughMaterial.getGlobalDescriptorSetLayout(), mMetalRoughMaterial.getMaterialDescriptorSetLayout());
-
-    mDeletionQueue.push([=, this]() {
-        mDescriptorManager->freeResources();
-    });
-
     // create scene data buffer
     mSceneDataBuffer = VulkanEngine::get().createBuffer(
         sizeof(SceneData),
@@ -33,21 +26,23 @@ void Scene3D::init() {
         );
 
     // add scene data buffer to deletion queue
-    mDeletionQueue.push([=, this]() {
+    mDeletionQueue.push([&]() {
         VulkanEngine::get().destroyBuffer(mSceneDataBuffer);
     });
 
-    mSkybox = std::make_unique<Skybox>("assets/skybox/anime/");
+    // create skybox
+    mSkybox = std::make_unique<Skybox>("assets/skybox/nebula/");
 
-    mDeletionQueue.push([=, this]() {
+    mDeletionQueue.push([&]() {
         mSkybox = nullptr;
     });
 
-    mGlobalDescriptorOffset = mDescriptorManager->createGlobalDescriptor(mSceneDataBuffer.deviceAddress, sizeof(SceneData));
+    // create scene data descriptor
+    mGlobalDescriptorOffset = VulkanEngine::get().getDescriptorManager().createSceneDescriptor(mSceneDataBuffer.deviceAddress, sizeof(SceneData));
 
-    mTestGLTF = std::make_shared<LoadedGLTF>("assets/spaceship_corridor_fixglb.glb", *mDescriptorManager);
+    mTestGLTF = std::make_shared<LoadedGLTF>("assets/hull_spaceship.glb");
 
-    mDeletionQueue.push([=, this]() {
+    mDeletionQueue.push([&]() {
         mTestGLTF->freeResources();
     });
 
@@ -65,6 +60,8 @@ void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
     mSceneData.sunlightColor = glm::vec4(1.f, 1.f, 1.f, 1.0f);
     mSceneData.sunlightDirection = glm::vec4(0.f, 1.0f, .5f, 1.f);
 
+    mSceneData.viewPosition = glm::vec4(mCamera.getPosition(), 0.0f);
+
     *(SceneData*)mSceneDataBuffer.allocInfo.pMappedData = mSceneData;
 
     mSkybox->update(mSceneData.projection * glm::mat4(glm::mat3(mSceneData.view)));
@@ -72,10 +69,6 @@ void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
 
 void Scene3D::draw(RenderContext &context) {
     mTestGLTF->draw(glm::scale(glm::vec3(5.f)), context);
-}
-
-void Scene3D::bindDescriptorBuffers(VkCommandBuffer commandBuffer) {
-    mDescriptorManager->bindDescriptorBuffers(commandBuffer);
 }
 
 void Scene3D::setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout) {

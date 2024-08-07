@@ -17,29 +17,28 @@ public:
         glm::vec4 ambientColor;
         glm::vec4 sunlightDirection;
         glm::vec4 sunlightColor;
+        glm::vec4 viewPosition;
     };
     
-    Scene3D(const std::string& name, GLTFMetallicRoughness& metalRoughMaterial);
+    Scene3D(const std::string& name);
     ~Scene3D();
 
-    void init();
     void update(float dt, float aspectRatio, const UserInput& userInput);
     void draw(RenderContext &context);
 
-    void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
     void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
 
     void drawSkybox(VkCommandBuffer commandBuffer) {
         mSkybox->draw(commandBuffer);
     }
 
-    void freeResources();
-
-    glm::mat4& getViewProj() {
-        return mSceneData.viewProjection;
+    const glm::mat4 getViewProj() {
+        return mCamera.getProjectionMatrix() * mCamera.getViewMatrix();
     }
     
 private:
+    void init();
+    void freeResources();
 
     DeletionQueue mDeletionQueue;
 
@@ -53,9 +52,6 @@ private:
     std::string mName;
 
     std::shared_ptr<LoadedGLTF> mTestGLTF;
-
-    GLTFMetallicRoughness& mMetalRoughMaterial;
-    std::unique_ptr<DescriptorManager> mDescriptorManager;
 
     VkDeviceSize mGlobalDescriptorOffset;
 

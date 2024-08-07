@@ -121,7 +121,7 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
     }
 }
 
-void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorManager) {
+void LoadedGLTF::load(std::string_view filePath) {
     fmt::println("Loading GLTF: {}", filePath);
 
     // define gltf loading options
@@ -176,6 +176,9 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
         samplerInfo.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
         samplerInfo.maxLod = VK_LOD_CLAMP_NONE;
         samplerInfo.minLod = 0;
+
+        samplerInfo.anisotropyEnable = VK_TRUE;
+        samplerInfo.maxAnisotropy = VulkanEngine::get().getMaxSamplerAnisotropy();
 
         samplerInfo.magFilter = extractFilter(sampler.magFilter.value_or(fastgltf::Filter::Nearest));
         samplerInfo.minFilter = extractFilter(sampler.minFilter.value_or(fastgltf::Filter::Nearest));
@@ -243,13 +246,17 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
         // default material textures
         materialResources.colorImage = VulkanEngine::get().getWhiteTexture();
         materialResources.colorSampler = VulkanEngine::get().getDefaultLinearSampler();
-        materialResources.metalRoughImage = VulkanEngine::get().getBlackTexture();
+        materialResources.metalRoughImage = VulkanEngine::get().getWhiteTexture();
         materialResources.metalRoughSampler = VulkanEngine::get().getDefaultLinearSampler();
 
         // set uniform buffer for the material data
         materialResources.dataBuffer = mMaterialDataBuffer.buffer;
         materialResources.dataBufferOffset = dataIndex * sizeof(MaterialConstants);
         materialResources.dataBufferAddress = mMaterialDataBuffer.deviceAddress;
+
+        if (material.specular && material.specular->specularTexture.has_value()) {
+            fmt::println("found spec texture");
+        }
 
         // get textures from gltf file
         if (material.pbrData.baseColorTexture.has_value()) {
@@ -268,7 +275,7 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
             materialResources.metalRoughSampler = samplers[sampler];
         }
 
-        newMaterial->materialInstance = VulkanEngine::get().getGLTFMRCreator().writeMaterial(VulkanEngine::get().getDevice(), passType, materialResources, descriptorManager);
+        newMaterial->materialInstance = VulkanEngine::get().getMaterialManager().writeMaterial(VulkanEngine::get().getDevice(), passType, materialResources);
 
         dataIndex++;
     }
@@ -438,8 +445,8 @@ void LoadedGLTF::load(std::string_view filePath, DescriptorManager& descriptorMa
     }
 }
 
-LoadedGLTF::LoadedGLTF(std::string_view filePath, DescriptorManager& descriptorManager) {
-    load(filePath, descriptorManager);
+LoadedGLTF::LoadedGLTF(std::string_view filePath) {
+    load(filePath);
 }
 
 LoadedGLTF::~LoadedGLTF() {

@@ -563,6 +563,8 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
   /home/gooby/Development/VkEngine/src/skybox.h \
+  /home/gooby/Development/VkEngine/src/resource_manager.h \
+  /usr/include/memory.h \
   /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
@@ -610,10 +612,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/atomic \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
-  /home/gooby/Development/VkEngine/src/game_object.h \
-  /home/gooby/Development/VkEngine/src/ecs_components/components.h \
-  /home/gooby/Development/VkEngine/src/ecs_components/gltf.h \
-  /home/gooby/Development/VkEngine/src/ecs_components/transform.h \
   /home/gooby/Development/VkEngine/src/vk_initializers.h \
   /home/gooby/Development/VkEngine/src/vk_images.h \
   /home/gooby/Development/VkEngine/src/vk_pipelines.h \

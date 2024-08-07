@@ -36,7 +36,7 @@ CXX_FLAGS = -g -std=gnu++20
 
 # PCH options: src/CMakeFiles/engine.dir/vk_scene.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 
-# PCH options: src/CMakeFiles/engine.dir/game_object.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
+# PCH options: src/CMakeFiles/engine.dir/scene_node.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 
 # PCH options: src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 
@@ -45,4 +45,6 @@ CXX_FLAGS = -g -std=gnu++20
 # PCH options: src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 
 # PCH options: src/CMakeFiles/engine.dir/skybox.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
+
+# PCH options: src/CMakeFiles/engine.dir/resource_manager.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 

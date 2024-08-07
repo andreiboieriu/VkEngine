@@ -5,7 +5,9 @@
 #include "vk_scene.h"
 #include "vk_types.h"
 #include "deletion_queue.h"
+#include "vk_descriptors.h"
 #include <memory>
+#include "resource_manager.h"
 
 #include "volk.h"
 #include "entt.hpp"
@@ -46,7 +48,7 @@ public:
 		DeletionQueue deletionQueue;
 	};
 
-	struct FXAAConfig {
+	struct LoadingScreenData {
 
 	};
 
@@ -97,8 +99,12 @@ public:
 		return mDefaultSamplerNearest;
 	}
 
-	GLTFMetallicRoughness& getGLTFMRCreator() {
-		return mMetalRoughMaterial;
+	MaterialManager& getMaterialManager() {
+		return *mMaterialManager;
+	}
+
+	DescriptorManager& getDescriptorManager() {
+		return *mDescriptorManager;
 	}
 
 	VkPhysicalDeviceDescriptorBufferPropertiesEXT getDescriptorBufferProperties() {
@@ -111,6 +117,10 @@ public:
 
 	VkFormat getDepthImageFormat() {
 		return mDepthImage.imageFormat;
+	}
+
+	float getMaxSamplerAnisotropy() {
+		return mMaxSamplerAnisotropy;
 	}
 
 	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function);
@@ -134,8 +144,6 @@ private:
 	void initSwapchain();
 	void initCommands();
 	void initSyncStructs();
-	void initPipelines();
-	void initComputeEffects();
 	void initImGui();
 
 	void initECS();
@@ -144,11 +152,10 @@ private:
 
 	//draw loop
 	void draw();
-	void drawBackground(VkCommandBuffer commandBuffer);
-	void drawSkybox(VkCommandBuffer commandBuffer);
 	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
 	void drawGeometry(VkCommandBuffer commandBuffer);
-	void fxaa(VkCommandBuffer commandBuffer);
+
+	void drawLoadingScreen();
 
 	// Vulkan library handle
 	VkInstance mInstance = VK_NULL_HANDLE;
@@ -176,6 +183,9 @@ private:
 	VkQueue mGraphicsQueue;
 	uint32_t mGraphicsQueueFamily;
 
+	VkQueue mImmediateCommandsQueue;
+	uint32_t mImmediateCommandsQueueFamily;
+
 	bool mResizeRequested = false;
 
 	DeletionQueue mMainDeletionQueue;
@@ -187,12 +197,6 @@ private:
 
 	AllocatedImage mDepthImage;
 
-	// // descriptor resources
-	// VkDescriptorSetLayout mComputeDescriptorLayout;
-
-	// VkPipelineLayout mComputePipelineLayout;
-	// std::vector<ComputeEffect> backgroundEffects;
-	// int currentBackgroundEffect = 0;
 	
 	// immediat submit structures
 	VkFence mImmFence;
@@ -208,7 +212,9 @@ private:
 	VkSampler mDefaultSamplerLinear;
 	VkSampler mDefaultSamplerNearest;
 
-	GLTFMetallicRoughness mMetalRoughMaterial;
+	std::unique_ptr<DescriptorManager> mDescriptorManager;
+	std::unique_ptr<MaterialManager> mMaterialManager;
+	std::unique_ptr<ResourceManager> mResourceManager;
 
 	RenderContext mMainRenderContext;
 
@@ -221,4 +227,6 @@ private:
 	bool mCursorLocked = true;
 
 	std::unique_ptr<Fxaa> mFxaaEffect;
+
+	float mMaxSamplerAnisotropy;
 };

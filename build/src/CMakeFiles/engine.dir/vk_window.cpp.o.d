@@ -567,6 +567,8 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: \
   /home/gooby/Development/VkEngine/src/camera.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
   /home/gooby/Development/VkEngine/src/skybox.h \
+  /home/gooby/Development/VkEngine/src/resource_manager.h \
+  /usr/include/memory.h \
   /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \

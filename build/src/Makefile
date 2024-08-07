@@ -310,30 +310,6 @@ ecs_systems/render_system.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.s
 .PHONY : ecs_systems/render_system.cpp.s
 
-game_object.o: game_object.cpp.o
-.PHONY : game_object.o
-
-# target to build an object file
-game_object.cpp.o:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_object.cpp.o
-.PHONY : game_object.cpp.o
-
-game_object.i: game_object.cpp.i
-.PHONY : game_object.i
-
-# target to preprocess a source file
-game_object.cpp.i:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_object.cpp.i
-.PHONY : game_object.cpp.i
-
-game_object.s: game_object.cpp.s
-.PHONY : game_object.s
-
-# target to generate assembly for a file
-game_object.cpp.s:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_object.cpp.s
-.PHONY : game_object.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -357,6 +333,54 @@ main.s: main.cpp.s
 main.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+resource_manager.o: resource_manager.cpp.o
+.PHONY : resource_manager.o
+
+# target to build an object file
+resource_manager.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/resource_manager.cpp.o
+.PHONY : resource_manager.cpp.o
+
+resource_manager.i: resource_manager.cpp.i
+.PHONY : resource_manager.i
+
+# target to preprocess a source file
+resource_manager.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/resource_manager.cpp.i
+.PHONY : resource_manager.cpp.i
+
+resource_manager.s: resource_manager.cpp.s
+.PHONY : resource_manager.s
+
+# target to generate assembly for a file
+resource_manager.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/resource_manager.cpp.s
+.PHONY : resource_manager.cpp.s
+
+scene_node.o: scene_node.cpp.o
+.PHONY : scene_node.o
+
+# target to build an object file
+scene_node.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/scene_node.cpp.o
+.PHONY : scene_node.cpp.o
+
+scene_node.i: scene_node.cpp.i
+.PHONY : scene_node.i
+
+# target to preprocess a source file
+scene_node.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/scene_node.cpp.i
+.PHONY : scene_node.cpp.i
+
+scene_node.s: scene_node.cpp.s
+.PHONY : scene_node.s
+
+# target to generate assembly for a file
+scene_node.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/scene_node.cpp.s
+.PHONY : scene_node.cpp.s
 
 skybox.o: skybox.cpp.o
 .PHONY : skybox.o
@@ -653,12 +677,15 @@ help:
 	@echo "... ecs_systems/render_system.o"
 	@echo "... ecs_systems/render_system.i"
 	@echo "... ecs_systems/render_system.s"
-	@echo "... game_object.o"
-	@echo "... game_object.i"
-	@echo "... game_object.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... resource_manager.o"
+	@echo "... resource_manager.i"
+	@echo "... resource_manager.s"
+	@echo "... scene_node.o"
+	@echo "... scene_node.i"
+	@echo "... scene_node.s"
 	@echo "... skybox.o"
 	@echo "... skybox.i"
 	@echo "... skybox.s"
