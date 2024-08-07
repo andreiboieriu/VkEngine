@@ -68,7 +68,7 @@ void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
 }
 
 void Scene3D::draw(RenderContext &context) {
-    mTestGLTF->draw(glm::scale(glm::vec3(5.f)), context);
+    mTestGLTF->draw(glm::scale(glm::vec3(1.f)), context);
 }
 
 void Scene3D::setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout) {

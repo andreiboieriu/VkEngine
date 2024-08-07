@@ -580,11 +580,24 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/constants.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../matrix.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_transform.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
   /home/gooby/Development/VkEngine/third_party/glm/glm/fwd.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/packing.hpp \
@@ -593,7 +606,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float4.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_packing.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/geometric.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/matrix.hpp \
@@ -621,6 +633,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h \
   /home/gooby/Development/VkEngine/third_party/imgui/imgui_impl_sdl2.h \
   /home/gooby/Development/VkEngine/third_party/imgui/imgui_impl_vulkan.h \
+  /home/gooby/Development/VkEngine/third_party/stb_image/stb_image.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/chrono \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/sstream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/istream \

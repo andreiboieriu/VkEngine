@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../shaders/mesh.vert.spv"
   "../shaders/skybox.frag.spv"
   "../shaders/skybox.vert.spv"
+  "../shaders/sprite.frag.spv"
+  "../shaders/sprite.vert.spv"
   "CMakeFiles/Shaders"
 )
 

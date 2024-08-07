@@ -72,6 +72,8 @@ CMakeFiles/Shaders: ../shaders/mesh.frag.spv
 CMakeFiles/Shaders: ../shaders/mesh.vert.spv
 CMakeFiles/Shaders: ../shaders/skybox.frag.spv
 CMakeFiles/Shaders: ../shaders/skybox.vert.spv
+CMakeFiles/Shaders: ../shaders/sprite.frag.spv
+CMakeFiles/Shaders: ../shaders/sprite.vert.spv
 
 ../shaders/fxaa_pass0.comp.spv: ../shaders/fxaa_pass0.comp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../shaders/fxaa_pass0.comp.spv"
@@ -97,6 +99,14 @@ CMakeFiles/Shaders: ../shaders/skybox.vert.spv
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ../shaders/skybox.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox.vert -o /home/gooby/Development/VkEngine/shaders/skybox.vert.spv
 
+../shaders/sprite.frag.spv: ../shaders/sprite.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ../shaders/sprite.frag.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.frag -o /home/gooby/Development/VkEngine/shaders/sprite.frag.spv
+
+../shaders/sprite.vert.spv: ../shaders/sprite.vert
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ../shaders/sprite.vert.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.vert -o /home/gooby/Development/VkEngine/shaders/sprite.vert.spv
+
 Shaders: CMakeFiles/Shaders
 Shaders: ../shaders/fxaa_pass0.comp.spv
 Shaders: ../shaders/fxaa_pass1.comp.spv
@@ -104,6 +114,8 @@ Shaders: ../shaders/mesh.frag.spv
 Shaders: ../shaders/mesh.vert.spv
 Shaders: ../shaders/skybox.frag.spv
 Shaders: ../shaders/skybox.vert.spv
+Shaders: ../shaders/sprite.frag.spv
+Shaders: ../shaders/sprite.vert.spv
 Shaders: CMakeFiles/Shaders.dir/build.make
 .PHONY : Shaders
 

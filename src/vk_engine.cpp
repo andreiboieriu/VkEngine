@@ -1,5 +1,7 @@
 //> includes
 #include "vk_engine.h"
+#include "glm/ext/matrix_clip_space.hpp"
+#include "glm/ext/matrix_transform.hpp"
 #include "vk_enum_string_helper.h"
 
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE
@@ -35,6 +37,7 @@
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_vulkan.h"
 
+#include "stb_image.h"
 #include <chrono>
 #include <thread>
 
@@ -65,14 +68,14 @@ void VulkanEngine::init()
     initSwapchain();
     initCommands();
     initSyncStructs();
+    initDefaultData();
 
-    // ready to draw loading screen?
-    // drawLoadingScreen();
+    loadLoadingScreenData();
 
+    // render loading screen
     std::thread t{&VulkanEngine::drawLoadingScreen, this};
 
-    fmt::println("loading screen end");
-
+    // load all other resources
     mFxaaEffect = std::make_unique<Fxaa>();
 
     mMainDeletionQueue.push([&]() {
@@ -93,7 +96,6 @@ void VulkanEngine::init()
     initImGui();
     initECS();
 
-    initDefaultData();
 
     mScene = std::make_shared<Scene3D>("testScene");
 
@@ -106,6 +108,101 @@ void VulkanEngine::init()
 
     // stop loading screen
     t.join();
+}
+
+void VulkanEngine::loadLoadingScreenData() {
+    // load quad mesh
+    std::vector<Vertex> vertices = {
+        Vertex{.position = glm::vec3(-0.5f, 0.5f, 0.0f), .uvX = 0.f, .uvY = 1.f},
+        Vertex{.position = glm::vec3(-0.5f, -0.5f, 0.0f), .uvX = 0.f, .uvY = 0.f},
+        Vertex{.position = glm::vec3(0.5f, -0.5f, 0.0f), .uvX = 1.f, .uvY = 0.f},
+        Vertex{.position = glm::vec3(0.5f, 0.5f, 0.0f), .uvX = 1.f, .uvY = 1.f},
+    };
+
+    std::vector<uint32_t> indices = {
+        0, 1, 2,
+        2, 3, 0
+    };
+
+    mLoadingScreenData.meshBuffers = uploadMesh(indices, vertices);
+    mLoadingScreenData.indexCount = indices.size();
+
+    mMainDeletionQueue.push([&]() {
+        destroyBuffer(mLoadingScreenData.meshBuffers.indexBuffer);
+        destroyBuffer(mLoadingScreenData.meshBuffers.vertexBuffer);
+    });
+
+    // create descriptor set layout
+    DescriptorLayoutBuilder builder;
+    mLoadingScreenData.descriptorSetLayout = builder.addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT)
+                                                    .addBinding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
+                                                    .build(mDevice, 0, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
+
+    std::vector<VkDescriptorSetLayout> setLayouts = {mLoadingScreenData.descriptorSetLayout};
+    std::vector<VkPushConstantRange> pushConstantRanges;
+
+    // create pipeline layout
+    mLoadingScreenData.pipelineLayout = vkutil::createPipelineLayout(
+        setLayouts,
+        pushConstantRanges
+    );
+    
+    // create pipeline
+    VkShaderModule vertShader;
+    VkShaderModule fragShader;
+
+    if (!vkutil::loadShaderModule("shaders/sprite.vert.spv", mDevice, &vertShader)) {
+        fmt::println("failed to load sprite vertex shader");
+    }
+
+    if (!vkutil::loadShaderModule("shaders/sprite.frag.spv", mDevice, &fragShader)) {
+        fmt::println("failed to load sprite frag shader");
+    }
+
+    PipelineBuilder pipelineBuilder;
+    mLoadingScreenData.pipeline = pipelineBuilder.clear().setShaders(vertShader, fragShader)
+                                              .setInputTopology(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST)
+                                              .setPolygonMode(VK_POLYGON_MODE_FILL)
+                                              .setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
+                                              .setMultisampling()
+                                            //   .enableBlendingAdditive()
+                                              .enableBlendingAlphaBlend()
+                                              .disableDepthTesting()
+                                            //   .enableDepthTesting(false, VK_COMPARE_OP_GREATER)
+                                              .setColorAttachmentFormat(mDrawImage.imageFormat)
+                                              .setDepthFormat(mDepthImage.imageFormat)
+                                              .setLayout(mLoadingScreenData.pipelineLayout)
+                                              .buildPipeline(mDevice,  0);
+
+    vkDestroyShaderModule(mDevice, vertShader, nullptr);
+    vkDestroyShaderModule(mDevice, fragShader, nullptr);
+
+    mMainDeletionQueue.push([&]() {
+        vkDestroyDescriptorSetLayout(mDevice, mLoadingScreenData.descriptorSetLayout, nullptr);
+        vkDestroyPipelineLayout(mDevice, mLoadingScreenData.pipelineLayout, nullptr);
+        vkDestroyPipeline(mDevice, mLoadingScreenData.pipeline, nullptr);
+    });
+
+    // load texture
+    int width, height, channels;
+    unsigned char* data = stbi_load("assets/loading.png", &width, &height , &channels, 4);
+    fmt::println("channels: {}", channels);
+
+    mLoadingScreenData.texture = createImage(data, VkExtent3D{(uint32_t)width, (uint32_t)height, 1}, VK_FORMAT_R8G8B8A8_UNORM,VK_IMAGE_USAGE_SAMPLED_BIT, false);
+
+    stbi_image_free(data);
+
+    mMainDeletionQueue.push([&]() {
+        destroyImage(mLoadingScreenData.texture);
+    });
+
+    // create ubo buffer
+    mLoadingScreenData.uboBuffer = createBuffer(sizeof(LoadingScreenData::Ubo), VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
+
+    mMainDeletionQueue.push([&]() {
+        destroyBuffer(mLoadingScreenData.uboBuffer);
+    });
+
 }
 
 AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memUsage) {
@@ -123,7 +220,7 @@ AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags 
     AllocatedBuffer newBuffer;
     VK_CHECK(vmaCreateBuffer(mAllocator, &bufferInfo, &allocInfo, &newBuffer.buffer, &newBuffer.allocation, &newBuffer.allocInfo));
 
-    if (usage & VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT_COPY) {
+    if (usage & VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT) {
         // get buffer device address
         VkBufferDeviceAddressInfo deviceAddressInfo{};
         deviceAddressInfo.sType = VK_STRUCTURE_TYPE_BUFFER_DEVICE_ADDRESS_INFO;
@@ -321,12 +418,7 @@ void VulkanEngine::initVulkan() {
 
     volkLoadDevice(mDevice);
 
-    // get graphics queue using vkb
-    // mGraphicsQueue = vkbDevice.get_queue(vkb::QueueType::graphics).value();
-    // mGraphicsQueueFamily = vkbDevice.get_queue_index(vkb::QueueType::graphics).value();
-
-    // mImmediateCommandsQueue = vkbDevice.get_queue(vkb::QueueType::graphics).value();
-    // mImmediateCommandsQueueFamily = vkbDevice.get_queue_index(vkb::QueueType::graphics).value();
+    // get queues
     vkGetDeviceQueue(mDevice, mGraphicsQueueFamily, 0, &mGraphicsQueue);
     vkGetDeviceQueue(mDevice, mImmediateCommandsQueueFamily, 1, &mImmediateCommandsQueue);
 
@@ -651,6 +743,8 @@ void VulkanEngine::cleanup() {
 }
 
 void VulkanEngine::drawLoadingScreen() {
+    auto start = std::chrono::system_clock::now();
+
     while (!mIsInitialized) {
         // process SDL events
         UserInput userInput = mWindow->processSDLEvents();
@@ -662,7 +756,7 @@ void VulkanEngine::drawLoadingScreen() {
 
         // throttle speed if window is minimized
         if (mWindow->isMinimized()) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            std::this_thread::sleep_for(std::chrono::microseconds(100));
             continue;
         }
 
@@ -731,9 +825,37 @@ void VulkanEngine::drawLoadingScreen() {
 
         vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
-        // bind pipeline
+        auto end = std::chrono::system_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
-        // push descriptors
+        start = end;
+
+        float dt = elapsed.count() / 1000000.f;
+
+        mLoadingScreenData.rotation -= 90 * dt;
+
+        mLoadingScreenData.uboData.vertexBufferAddress = mLoadingScreenData.meshBuffers.vertexBufferAddress;
+
+        mLoadingScreenData.uboData.modelMatrix = glm::translate(glm::mat4(1.f), glm::vec3(mDrawExtent.width / 2.f, mDrawExtent.height / 2.f, 1.f)) * glm::rotate(glm::mat4(1.f), glm::radians(mLoadingScreenData.rotation), glm::vec3(0.0f, 0.0f, 1.0f)) * glm::scale(glm::mat4(1.f), glm::vec3(150.f, 150.f, 1.0f));
+
+        mLoadingScreenData.uboData.projectionMatrix = glm::ortho(0.0f, (float)mDrawExtent.width, 0.0f, (float)mDrawExtent.height, -100.f, 100.f);
+      
+        *(LoadingScreenData::Ubo*)mLoadingScreenData.uboBuffer.allocInfo.pMappedData = mLoadingScreenData.uboData;
+
+        // bind pipeline
+        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mLoadingScreenData.pipeline);
+
+        // // push descriptors
+        DescriptorWriter writer;
+        std::vector<VkWriteDescriptorSet> writes = writer.writeBuffer(0, mLoadingScreenData.uboBuffer.buffer, sizeof(LoadingScreenData::Ubo), 0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
+                                                         .writeImage(1, mLoadingScreenData.texture.imageView, mDefaultSamplerLinear, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+                                                         .getWrites();
+
+        vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mLoadingScreenData.pipelineLayout, 0, (uint32_t)writes.size(), writes.data());
+
+        vkCmdBindIndexBuffer(commandBuffer, mLoadingScreenData.meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
+
+        vkCmdDrawIndexed(commandBuffer, mLoadingScreenData.indexCount, 1, 0, 0, 0);
 
         vkCmdEndRendering(commandBuffer);
 
@@ -902,7 +1024,7 @@ void VulkanEngine::run() {
 
         // throttle speed if window is minimized
         if (mWindow->isMinimized()) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            std::this_thread::sleep_for(std::chrono::microseconds(100));
             continue;
         }
 
@@ -940,7 +1062,7 @@ void VulkanEngine::run() {
 
 
         auto newTime = std::chrono::system_clock::now();
-        float dt = std::chrono::duration_cast<std::chrono::microseconds>(newTime - currentTime).count() / 1000.f;
+        float dt = std::chrono::duration_cast<std::chrono::microseconds>(newTime - currentTime).count() / 1000000.f;
         currentTime = newTime;
 
         updateScene(dt, userInput);
@@ -952,7 +1074,7 @@ void VulkanEngine::run() {
 
         // calculate elapsed time
         auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-        mStats.frameTimeBuffer += elapsed.count() / 1000.f; // convert to milliseconds
+        mStats.frameTimeBuffer += elapsed.count() / 1000.f; // convert to microseconds
 
         mStats.frameCount++;
         mStats.msElapsed += elapsed.count() / 1000.f;
@@ -1229,7 +1351,6 @@ AllocatedImage VulkanEngine::createSkybox(void* data[6], VkExtent2D size, VkForm
 
     // copy data to skybox image
     immediateSubmit([&](VkCommandBuffer commandBuffer) {
-        // TODO: check if this transitions all array layers
         vkutil::transitionImage(commandBuffer, skybox.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
 
         std::vector<VkBufferImageCopy> bufferCopyRegions;

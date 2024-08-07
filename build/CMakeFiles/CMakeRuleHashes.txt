@@ -5,6 +5,8 @@ d528ce8014eea1d9b48e1725910b83d9 ../shaders/mesh.frag.spv
 df163ff85d487f84bbcc5a5dffdae79f ../shaders/mesh.vert.spv
 7f5b3b1f83072f17dac2f51ca66bb6fb ../shaders/skybox.frag.spv
 91a13faf23aad584d6197c83b2964084 ../shaders/skybox.vert.spv
+01b25c13c1bbca8459c817e6f4254b6a ../shaders/sprite.frag.spv
+dbab7760d1b625c1d36bf2fa6a1ea4fb ../shaders/sprite.vert.spv
 f88146ff694674a67db1a6915f68b1d5 CMakeFiles/Shaders
 6d6e2d138216d9ebc3725744c7d4a2e6 third_party/SDL/CMakeFiles/sdl_headers_copy
 6522fe8b0968e58dd3eeb755b34e2ea0 third_party/SDL/CMakeFiles/uninstall

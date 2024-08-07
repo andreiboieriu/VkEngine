@@ -6252,11 +6252,24 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/stl_multimap.h \
   /usr/include/c++/12/unordered_set \
   /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/glm/glm/ext/matrix_clip_space.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/detail/func_trigonometric.inl \
+  ../third_party/glm/glm/ext/matrix_clip_space.inl \
+  ../third_party/glm/glm/ext/matrix_transform.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/gtc/constants.inl \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/matrix_transform.inl \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
   ../third_party/glm/glm/fwd.hpp \
   ../third_party/glm/glm/trigonometric.hpp \
-  ../third_party/glm/glm/detail/func_trigonometric.inl \
   ../third_party/glm/glm/exponential.hpp \
   ../third_party/glm/glm/common.hpp \
   ../third_party/glm/glm/packing.hpp \
@@ -6265,7 +6278,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/glm/glm/ext/vector_float4.hpp \
   ../third_party/glm/glm/detail/func_packing.inl \
   ../third_party/glm/glm/detail/type_half.hpp \
-  ../third_party/glm/glm/detail/setup.hpp \
   ../third_party/glm/glm/detail/type_half.inl \
   ../third_party/glm/glm/geometric.hpp \
   ../third_party/glm/glm/matrix.hpp \
@@ -6294,6 +6306,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/imgui/imconfig.h \
   ../third_party/imgui/imgui_impl_sdl2.h \
   ../third_party/imgui/imgui_impl_vulkan.h \
+  ../third_party/stb_image/stb_image.h \
   /usr/include/c++/12/chrono \
   /usr/include/c++/12/sstream \
   /usr/include/c++/12/istream \

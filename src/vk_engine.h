@@ -49,7 +49,29 @@ public:
 	};
 
 	struct LoadingScreenData {
+		GPUMeshBuffers meshBuffers;
+		uint32_t indexCount;
 
+		VkPipelineLayout pipelineLayout;
+		VkDescriptorSetLayout descriptorSetLayout;
+		VkPipeline pipeline;
+
+		AllocatedImage texture;
+		AllocatedBuffer uboBuffer;
+
+		struct Ubo {
+			glm::mat4 projectionMatrix;
+			glm::mat4 modelMatrix;
+			VkDeviceAddress vertexBufferAddress;
+			glm::vec2 padding0;
+			glm::vec4 padding1;
+			glm::vec4 padding2;
+			glm::vec4 padding3;
+			glm::mat4 padding4;
+		};
+
+		Ubo uboData;
+		float rotation = 0.f;
 	};
 
 	static VulkanEngine& get();
@@ -150,6 +172,8 @@ private:
 
 	void initDefaultData();
 
+	void loadLoadingScreenData();
+
 	//draw loop
 	void draw();
 	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
@@ -229,4 +253,6 @@ private:
 	std::unique_ptr<Fxaa> mFxaaEffect;
 
 	float mMaxSamplerAnisotropy;
+
+	LoadingScreenData mLoadingScreenData;
 };

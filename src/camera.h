@@ -27,7 +27,7 @@ private:
 
     const float MOUSE_MOTION_SENSITIVITY = 0.2f;
     const float MOUSE_WHEEL_SENSITIVITY = 1.0f;
-    const float SPEED = .02f;
+    const float SPEED = 2.f;
 
     const float MAX_FOV = 130.f;
     const float MIN_FOV = 40.f;
