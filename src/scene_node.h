@@ -33,6 +33,8 @@ public:
         return gRegistry.get<T>(mEntity);
     }
 
+    void drawGui();
+
 private:
     void init();
 

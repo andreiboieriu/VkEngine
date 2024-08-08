@@ -450,7 +450,7 @@ LoadedGLTF::LoadedGLTF(std::string_view filePath) {
 }
 
 LoadedGLTF::~LoadedGLTF() {
-    // freeResources();
+    freeResources();
 }
 
 void LoadedGLTF::draw(const glm::mat4& transform, RenderContext& context) {

@@ -5,12 +5,12 @@
 #include "vk_pipelines.h"
 #include "stb_image.h"
 #include "vk_initializers.h"
+#include "imgui.h"
 
-Skybox::Skybox(std::string_view path) {
+Skybox::Skybox() {
     createPipelineLayout();
     createPipeline();
     createCubeMesh();
-    loadTexture(path);
 }
 
 Skybox::~Skybox() {
@@ -98,36 +98,7 @@ void Skybox::createCubeMesh() {
     mPushConstants.vertexBuffer = mCubeMesh.meshBuffers.vertexBufferAddress;
 }
 
-void Skybox::loadTexture(std::string_view path) {
-    int width, height, nrChannels;
-
-    std::vector<std::string> filePaths;
-    filePaths.push_back(std::string(path) + "px.png");
-    filePaths.push_back(std::string(path) + "nx.png");
-    filePaths.push_back(std::string(path) + "py.png");
-    filePaths.push_back(std::string(path) + "ny.png");
-    filePaths.push_back(std::string(path) + "pz.png");
-    filePaths.push_back(std::string(path) + "nz.png");
-
-    void* data[6]{};
-
-    for (int i = 0; i < 6; i++) {
-        data[i] = stbi_load(filePaths[i].c_str(), &width, &height, &nrChannels, 4);
-
-        if (!data[i]) {
-            fmt::println("failed to load image with stbi: {}", filePaths[i]);
-        }
-    }
-
-    mTexture = VulkanEngine::get().createSkybox(data, VkExtent2D{static_cast<uint32_t>(width), static_cast<uint32_t>(height)}, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT);
-
-    for (int i = 0; i < 6; i++) {
-        stbi_image_free(data[i]);
-    }
-}
-
 void Skybox::freeResources() {
-    VulkanEngine::get().destroyImage(mTexture);
     VulkanEngine::get().destroyBuffer(mCubeMesh.meshBuffers.indexBuffer);
     VulkanEngine::get().destroyBuffer(mCubeMesh.meshBuffers.vertexBuffer);
 
@@ -137,6 +108,10 @@ void Skybox::freeResources() {
 }
 
 void Skybox::draw(VkCommandBuffer commandBuffer) {
+    if (mChosenSkybox == "empty") {
+        return;
+    }
+
     // bind pipeline
     vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mPipeline);
     
@@ -155,4 +130,28 @@ void Skybox::draw(VkCommandBuffer commandBuffer) {
 
     // draw
     vkCmdDrawIndexed(commandBuffer, mCubeMesh.surfaces[0].count, 1, mCubeMesh.surfaces[0].startIndex, 0, 0);
+}
+
+void Skybox::drawGui() {
+    if (ImGui::TreeNode("Skybox")) {
+        if (ImGui::BeginPopupContextItem("select skybox popup")) {
+            if (ImGui::Selectable("nebula")) {
+                mChosenSkybox = "nebula";
+                mTexture = VulkanEngine::get().getResourceManager().getSkyboxCubemap("nebula");
+            }
+
+            if (ImGui::Selectable("anime")) {
+                mChosenSkybox = "anime";
+                mTexture = VulkanEngine::get().getResourceManager().getSkyboxCubemap("anime");
+            }
+
+            ImGui::EndPopup();
+        }
+
+        if (ImGui::Button(mChosenSkybox.c_str())) {
+            ImGui::OpenPopup("select skybox popup");
+        }
+
+        ImGui::TreePop();
+    }
 }

@@ -664,4 +664,6 @@ src/CMakeFiles/engine.dir/camera.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/norm.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_float.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/matrix_transform.hpp
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/imgui/imgui.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h

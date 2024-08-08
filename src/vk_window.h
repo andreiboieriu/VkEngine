@@ -20,7 +20,7 @@ struct UserInput {
 class Window {
 
 public:
-    Window(std::string_view name, VkExtent2D extent, SDL_WindowFlags windowFlags, uint32_t monitorIdx);
+    Window(std::string_view name, VkExtent2D extent, SDL_WindowFlags windowFlags);
     ~Window();
 
     bool shouldClose() {
@@ -70,7 +70,7 @@ public:
     }
 
 private:
-    void init(SDL_WindowFlags windowFlags, uint32_t monitorIdx);
+    void init(SDL_WindowFlags windowFlags);
     void handleWindowEvent(SDL_WindowEventID event);
 
     void updateExtent();

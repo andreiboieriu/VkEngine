@@ -18,8 +18,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o" "gcc" "src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o.d"
   "/home/gooby/Development/VkEngine/src/deletion_queue.cpp" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o" "gcc" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o" "gcc" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
-  "/home/gooby/Development/VkEngine/src/ecs_systems/render_system.cpp" "src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o" "gcc" "src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o.d"
-  "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o" "gcc" "src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o.d"
   "/home/gooby/Development/VkEngine/src/main.cpp" "src/CMakeFiles/engine.dir/main.cpp.o" "gcc" "src/CMakeFiles/engine.dir/main.cpp.o.d"
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/main.cpp.o" "gcc" "src/CMakeFiles/engine.dir/main.cpp.o.d"
   "/home/gooby/Development/VkEngine/src/resource_manager.cpp" "src/CMakeFiles/engine.dir/resource_manager.cpp.o" "gcc" "src/CMakeFiles/engine.dir/resource_manager.cpp.o.d"

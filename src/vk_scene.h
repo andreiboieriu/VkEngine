@@ -5,6 +5,7 @@
 #include "camera.h"
 #include "vk_loader.h"
 #include "skybox.h"
+#include "scene_node.h"
 
 class Scene3D {
 
@@ -24,12 +25,13 @@ public:
     ~Scene3D();
 
     void update(float dt, float aspectRatio, const UserInput& userInput);
-    void draw(RenderContext &context);
+    void drawGui();
 
     void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
 
     void drawSkybox(VkCommandBuffer commandBuffer) {
-        mSkybox->draw(commandBuffer);
+        if (mSkybox != nullptr)
+            mSkybox->draw(commandBuffer);
     }
 
     const glm::mat4 getViewProj() {
@@ -44,16 +46,16 @@ private:
 
     DescriptorData mSceneDataDescriptor;
     AllocatedBuffer mSceneDataBuffer;
+    VkDeviceSize mGlobalDescriptorOffset;
 
     SceneData mSceneData;
     
 	Camera mCamera;
 
     std::string mName;
+    std::unique_ptr<Skybox> mSkybox = nullptr;
 
-    std::shared_ptr<LoadedGLTF> mTestGLTF;
+    std::vector<std::shared_ptr<SceneNode>> mTopNodes;
 
-    VkDeviceSize mGlobalDescriptorOffset;
-
-    std::unique_ptr<Skybox> mSkybox;
+    int mCurrNodeId = 0;
 };

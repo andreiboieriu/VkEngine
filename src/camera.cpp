@@ -9,6 +9,8 @@
 
 #include <glm/gtc/matrix_transform.hpp>
 
+#include "imgui.h"
+
 glm::mat4 Camera::getViewMatrix() {
     glm::mat4 cameraTranslation = glm::translate(glm::mat4(1.f), mPosition);
     glm::mat4 cameraRotation = getRotationMatrix();
@@ -76,6 +78,15 @@ void Camera::update(float dt, float aspectRatio, const UserInput& userInput) {
     }
 
     glm::mat4 cameraRotation = getRotationMatrix();
-    mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * SPEED * dt, 0.f));
+    mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * mSpeed * dt, 0.f));
     mAspectRatio = aspectRatio;
+}
+
+void Camera::drawGui() {
+    if (ImGui::TreeNode("Camera")) {
+        ImGui::PushItemWidth(60);
+        ImGui::InputFloat("speed", &mSpeed);
+
+        ImGui::TreePop();
+    }
 }

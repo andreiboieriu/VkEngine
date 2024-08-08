@@ -2,6 +2,7 @@
 #include "vk_descriptors.h"
 #include "vk_engine.h"
 #include "glm/gtx/transform.hpp"
+#include "imgui.h"
 
 #include <memory>
 
@@ -30,22 +31,8 @@ void Scene3D::init() {
         VulkanEngine::get().destroyBuffer(mSceneDataBuffer);
     });
 
-    // create skybox
-    mSkybox = std::make_unique<Skybox>("assets/skybox/nebula/");
-
-    mDeletionQueue.push([&]() {
-        mSkybox = nullptr;
-    });
-
     // create scene data descriptor
     mGlobalDescriptorOffset = VulkanEngine::get().getDescriptorManager().createSceneDescriptor(mSceneDataBuffer.deviceAddress, sizeof(SceneData));
-
-    mTestGLTF = std::make_shared<LoadedGLTF>("assets/hull_spaceship.glb");
-
-    mDeletionQueue.push([&]() {
-        mTestGLTF->freeResources();
-    });
-
 }
 
 void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
@@ -64,11 +51,44 @@ void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
 
     *(SceneData*)mSceneDataBuffer.allocInfo.pMappedData = mSceneData;
 
-    mSkybox->update(mSceneData.projection * glm::mat4(glm::mat3(mSceneData.view)));
+    if (mSkybox != nullptr)
+        mSkybox->update(mSceneData.projection * glm::mat4(glm::mat3(mSceneData.view)));
 }
 
-void Scene3D::draw(RenderContext &context) {
-    mTestGLTF->draw(glm::scale(glm::vec3(1.f)), context);
+void Scene3D::drawGui() {
+    ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
+
+    if (ImGui::Begin("Scene", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+        // camera
+        mCamera.drawGui();
+        
+        // skybox
+        if (mSkybox == nullptr) {
+            if (ImGui::Button("Add skybox")) {
+                mSkybox = std::make_unique<Skybox>();
+
+                mDeletionQueue.push([&]() {
+                    mSkybox = nullptr;
+                });
+            }
+        } else {
+            mSkybox->drawGui();
+        }
+
+        if (ImGui::TreeNode("Hierarchy")) {
+            for (auto& node : mTopNodes) {
+                node->drawGui();
+            }
+
+            if (ImGui::Button("Add empty node")) {
+                mTopNodes.push_back(std::make_shared<SceneNode>("Node" + std::to_string(mCurrNodeId++)));
+            }
+
+            ImGui::TreePop();
+        }
+    }
+
+    ImGui::End();
 }
 
 void Scene3D::setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout) {

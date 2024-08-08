@@ -4,8 +4,8 @@
 #include "imgui_impl_sdl2.h"
 #include "vk_engine.h"
 
-Window::Window(std::string_view name, VkExtent2D extent, SDL_WindowFlags windowFlags, uint32_t monitorIdx) : mName(name), mExtent(extent) {
-    init(windowFlags, monitorIdx);
+Window::Window(std::string_view name, VkExtent2D extent, SDL_WindowFlags windowFlags) : mName(name), mExtent(extent) {
+    init(windowFlags);
 };
 
 Window::~Window() {
@@ -18,11 +18,23 @@ Window::~Window() {
     }
 }
 
-void Window::init(SDL_WindowFlags windowFlags, uint32_t monitorIdx) {
+void Window::init(SDL_WindowFlags windowFlags) {
     SDL_Init(SDL_INIT_VIDEO);
 
     int displays = SDL_GetNumVideoDisplays();
-    assert(displays > monitorIdx);
+    
+    if (displays == 1) {
+        mHandle = SDL_CreateWindow(
+        mName.c_str(),
+        SDL_WINDOWPOS_CENTERED,
+        SDL_WINDOWPOS_CENTERED,
+        mExtent.width,
+        mExtent.height,
+        windowFlags
+        );
+
+        return;
+    }
 
     std::vector<SDL_Rect> displayBounds;
     for (int i = 0; i < displays; i++) {
@@ -32,8 +44,8 @@ void Window::init(SDL_WindowFlags windowFlags, uint32_t monitorIdx) {
 
     mHandle = SDL_CreateWindow(
         mName.c_str(),
-        displayBounds[monitorIdx].x,
-        displayBounds[monitorIdx].y,
+        SDL_WINDOWPOS_CENTERED_DISPLAY(1),
+        SDL_WINDOWPOS_CENTERED_DISPLAY(1),
         mExtent.width,
         mExtent.height,
         windowFlags
@@ -91,7 +103,7 @@ UserInput Window::processSDLEvents() {
         }
 
         // send SDL event to imgui
-        // ImGui_ImplSDL2_ProcessEvent(&e);
+        ImGui_ImplSDL2_ProcessEvent(&e);
     }
 
     // toggle locked cursor

@@ -286,30 +286,6 @@ deletion_queue.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.s
 .PHONY : deletion_queue.cpp.s
 
-ecs_systems/render_system.o: ecs_systems/render_system.cpp.o
-.PHONY : ecs_systems/render_system.o
-
-# target to build an object file
-ecs_systems/render_system.cpp.o:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o
-.PHONY : ecs_systems/render_system.cpp.o
-
-ecs_systems/render_system.i: ecs_systems/render_system.cpp.i
-.PHONY : ecs_systems/render_system.i
-
-# target to preprocess a source file
-ecs_systems/render_system.cpp.i:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.i
-.PHONY : ecs_systems/render_system.cpp.i
-
-ecs_systems/render_system.s: ecs_systems/render_system.cpp.s
-.PHONY : ecs_systems/render_system.s
-
-# target to generate assembly for a file
-ecs_systems/render_system.cpp.s:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_systems/render_system.cpp.s
-.PHONY : ecs_systems/render_system.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -674,9 +650,6 @@ help:
 	@echo "... deletion_queue.o"
 	@echo "... deletion_queue.i"
 	@echo "... deletion_queue.s"
-	@echo "... ecs_systems/render_system.o"
-	@echo "... ecs_systems/render_system.i"
-	@echo "... ecs_systems/render_system.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

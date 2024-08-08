@@ -41,6 +41,8 @@
 #include <chrono>
 #include <thread>
 
+#include "ecs_systems/systems.h"
+
 VulkanEngine* gLoadedEngine = nullptr;
 
 entt::registry gRegistry;
@@ -56,7 +58,7 @@ void VulkanEngine::init()
     gLoadedEngine = this;
 
     // create window
-    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900}, (SDL_WindowFlags)(SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE), 1);
+    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900}, (SDL_WindowFlags)(SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE));
 
     mMainDeletionQueue.push([&]() {
         mWindow = nullptr;
@@ -69,6 +71,8 @@ void VulkanEngine::init()
     initCommands();
     initSyncStructs();
     initDefaultData();
+    initImGui();
+    initECS();
 
     loadLoadingScreenData();
 
@@ -93,9 +97,10 @@ void VulkanEngine::init()
         mDescriptorManager = nullptr;
     });
 
-    initImGui();
-    initECS();
-
+    mResourceManager = std::make_unique<ResourceManager>();
+    mMainDeletionQueue.push([&]() {
+        mResourceManager = nullptr;
+    });
 
     mScene = std::make_shared<Scene3D>("testScene");
 
@@ -780,8 +785,8 @@ void VulkanEngine::drawLoadingScreen() {
         VkExtent2D windowExtent = mWindow->getExtent();
 
         // set draw extent
-        mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mRenderScale;
-        mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mRenderScale;
+        mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mEngineConfig.renderScale;
+        mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mEngineConfig.renderScale;
         
         // get command buffer from current frame
         VkCommandBuffer commandBuffer = getCurrentFrame().mainCommandBuffer;
@@ -926,8 +931,8 @@ void VulkanEngine::draw() {
     VkExtent2D windowExtent = mWindow->getExtent();
 
     // set draw extent
-    mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mRenderScale;
-    mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mRenderScale;
+    mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mEngineConfig.renderScale;
+    mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mEngineConfig.renderScale;
     
 
     // get command buffer from current frame
@@ -1028,39 +1033,9 @@ void VulkanEngine::run() {
             continue;
         }
 
-        // imgui new frame
-        ImGui_ImplVulkan_NewFrame();
-        ImGui_ImplSDL2_NewFrame();
-        ImGui::NewFrame();
+        drawGui();
 
-        ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
-
-        if (ImGui::Begin("background", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
-            ImGui::SliderFloat("Render Scale", &mRenderScale, 0.3f, 2.f);
-        }
-
-        ImGui::End();
-
-        mFxaaEffect->drawGui();
-
-        ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
-
-        if (ImGui::Begin("Stats", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
-            ImGui::Text("fps %i", mStats.fps);
-            ImGui::Text("frametime %f ms", mStats.frameTime);
-            ImGui::Text("update time %f ms", mStats.updateTime);
-            ImGui::Text("draw time %f ms", mStats.drawTime);
-            ImGui::Text("draw geometry time %f ms", mStats.drawGeometryTime);
-            ImGui::Text("triangles %i", mStats.triangleCount);
-            ImGui::Text("draws %i", mStats.drawCallCount);
-        }
-
-        ImGui::End();
-
-        // render ImGui
-        ImGui::Render();
-
-
+        // get delta time
         auto newTime = std::chrono::system_clock::now();
         float dt = std::chrono::duration_cast<std::chrono::microseconds>(newTime - currentTime).count() / 1000000.f;
         currentTime = newTime;
@@ -1074,6 +1049,8 @@ void VulkanEngine::run() {
 
         // calculate elapsed time
         auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+
+        // update stats
         mStats.frameTimeBuffer += elapsed.count() / 1000.f; // convert to microseconds
 
         mStats.frameCount++;
@@ -1096,6 +1073,47 @@ void VulkanEngine::run() {
             mStats.frameCount = 0;
         }
     }
+}
+
+void VulkanEngine::drawGui() {
+    // imgui new frame
+    ImGui_ImplVulkan_NewFrame();
+    ImGui_ImplSDL2_NewFrame();
+    ImGui::NewFrame();
+
+    ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
+
+    if (ImGui::Begin("Engine Config", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::Checkbox("Enable frustum culling", &mEngineConfig.enableFrustumCulling);
+        ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
+        ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
+
+        if (ImGui::TreeNode("FXAA")) {
+            mFxaaEffect->drawGui();
+            ImGui::TreePop();
+        }
+    }
+
+    ImGui::End();
+
+    ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
+
+    if (ImGui::Begin("Stats", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::Text("fps %i", mStats.fps);
+        ImGui::Text("frametime %f ms", mStats.frameTime);
+        ImGui::Text("update time %f ms", mStats.updateTime);
+        ImGui::Text("draw time %f ms", mStats.drawTime);
+        ImGui::Text("draw geometry time %f ms", mStats.drawGeometryTime);
+        ImGui::Text("triangles %i", mStats.triangleCount);
+        ImGui::Text("draws %i", mStats.drawCallCount);
+    }
+
+    ImGui::End();
+
+    mScene->drawGui();
+
+    // render ImGui
+    ImGui::Render();
 }
 
 bool isVisible(const RenderObject& obj, const glm::mat4& viewProj) {
@@ -1152,16 +1170,18 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     }
 
     // sort opaque objects by material and mesh
-    std::sort(opaqueObjectIndices.begin(), opaqueObjectIndices.end(), [&](const auto& iA, const auto& iB) {
-        const RenderObject& A = mMainRenderContext.opaqueObjects[iA];
-        const RenderObject& B = mMainRenderContext.opaqueObjects[iB];
+    if (mEngineConfig.enableDrawSorting) {
+        std::sort(opaqueObjectIndices.begin(), opaqueObjectIndices.end(), [&](const auto& iA, const auto& iB) {
+            const RenderObject& A = mMainRenderContext.opaqueObjects[iA];
+            const RenderObject& B = mMainRenderContext.opaqueObjects[iB];
 
-        if (A.material == B.material) {
-            return A.indexBuffer < B.indexBuffer;
-        } else {
-            return A.material < B.material;
-        }
-    });
+            if (A.material == B.material) {
+                return A.indexBuffer < B.indexBuffer;
+            } else {
+                return A.material < B.material;
+            }
+        });
+    }
 
     std::vector<uint32_t> transparentObjectIndices;
     transparentObjectIndices.reserve(mMainRenderContext.transparentObjects.size());
@@ -1171,16 +1191,18 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     }
 
     // sort transparent objects by material and mesh
-    std::sort(transparentObjectIndices.begin(), transparentObjectIndices.end(), [&](const auto& iA, const auto& iB) {
-        const RenderObject& A = mMainRenderContext.transparentObjects[iA];
-        const RenderObject& B = mMainRenderContext.transparentObjects[iB];
+    if (mEngineConfig.enableDrawSorting) {
+        std::sort(transparentObjectIndices.begin(), transparentObjectIndices.end(), [&](const auto& iA, const auto& iB) {
+            const RenderObject& A = mMainRenderContext.transparentObjects[iA];
+            const RenderObject& B = mMainRenderContext.transparentObjects[iB];
 
-        if (A.material == B.material) {
-            return A.indexBuffer < B.indexBuffer;
-        } else {
-            return A.material < B.material;
-        }
-    });
+            if (A.material == B.material) {
+                return A.indexBuffer < B.indexBuffer;
+            } else {
+                return A.material < B.material;
+            }
+        });
+    }
 
     VkClearValue clearValue{};
     clearValue.color = {1.0, 1.0, 0.0, 1.0};
@@ -1255,7 +1277,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     };
 
     for (auto& index : opaqueObjectIndices) {
-        if (!isVisible(mMainRenderContext.opaqueObjects[index], mScene->getViewProj()))
+        if (mEngineConfig.enableFrustumCulling && !isVisible(mMainRenderContext.opaqueObjects[index], mScene->getViewProj()))
             continue;
 
         draw(mMainRenderContext.opaqueObjects[index]);
@@ -1263,7 +1285,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
 
     // draw transparent objects after opaque ones
     for (auto& index : transparentObjectIndices) {
-        if (!isVisible(mMainRenderContext.transparentObjects[index], mScene->getViewProj()))
+        if (mEngineConfig.enableFrustumCulling && !isVisible(mMainRenderContext.transparentObjects[index], mScene->getViewProj()))
             continue;
 
         draw(mMainRenderContext.transparentObjects[index]);
@@ -1448,7 +1470,11 @@ void VulkanEngine::updateScene(float dt, const UserInput& userInput) {
     mMainRenderContext.transparentObjects.clear();
 
     mScene->update(dt, mWindow->getAspectRatio(), userInput);
-    mScene->draw(mMainRenderContext);
+    // mScene->draw(mMainRenderContext);
+
+    velocitySystem(dt);
+    renderSystem(mMainRenderContext);
+
 
     // get end time
     auto end = std::chrono::system_clock::now();

@@ -563,8 +563,8 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
-  /home/gooby/Development/VkEngine/src/resource_manager.h \
-  /usr/include/memory.h \
+  /home/gooby/Development/VkEngine/src/scene_node.h \
+  /home/gooby/Development/VkEngine/src/ecs_components/components.h \
   /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
@@ -580,6 +580,10 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
+  /home/gooby/Development/VkEngine/src/resource_manager.h \
+  /usr/include/memory.h \
   /home/gooby/Development/VkEngine/src/vk_pipelines.h \
   /home/gooby/Development/VkEngine/third_party/stb_image/stb_image.h \
-  /home/gooby/Development/VkEngine/src/vk_initializers.h
+  /home/gooby/Development/VkEngine/src/vk_initializers.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imgui.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h

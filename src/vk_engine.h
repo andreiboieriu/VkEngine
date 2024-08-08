@@ -74,6 +74,12 @@ public:
 		float rotation = 0.f;
 	};
 
+	struct EngineConfig {
+		float renderScale = 1.0f;
+		bool enableFrustumCulling = true;
+		bool enableDrawSorting = true;
+	};
+
 	static VulkanEngine& get();
 
 	//initializes everything in the engine
@@ -129,6 +135,10 @@ public:
 		return *mDescriptorManager;
 	}
 
+	ResourceManager& getResourceManager() {
+		return *mResourceManager;
+	}
+
 	VkPhysicalDeviceDescriptorBufferPropertiesEXT getDescriptorBufferProperties() {
 		return mDescriptorBufferProperties;
 	}
@@ -181,6 +191,8 @@ private:
 
 	void drawLoadingScreen();
 
+	void drawGui();
+
 	// Vulkan library handle
 	VkInstance mInstance = VK_NULL_HANDLE;
 
@@ -210,15 +222,13 @@ private:
 	VkQueue mImmediateCommandsQueue;
 	uint32_t mImmediateCommandsQueueFamily;
 
-	bool mResizeRequested = false;
+	EngineConfig mEngineConfig;
 
 	DeletionQueue mMainDeletionQueue;
 
 	// draw resources
 	AllocatedImage mDrawImage;
 	VkExtent2D mDrawExtent;
-	float mRenderScale = 1.0f;
-
 	AllocatedImage mDepthImage;
 
 	

@@ -563,8 +563,8 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
   /home/gooby/Development/VkEngine/src/skybox.h \
-  /home/gooby/Development/VkEngine/src/resource_manager.h \
-  /usr/include/memory.h \
+  /home/gooby/Development/VkEngine/src/scene_node.h \
+  /home/gooby/Development/VkEngine/src/ecs_components/components.h \
   /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
@@ -580,6 +580,8 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
+  /home/gooby/Development/VkEngine/src/resource_manager.h \
+  /usr/include/memory.h \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../ext/scalar_constants.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
@@ -647,4 +649,18 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/atomic_timed_wait.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/this_thread_sleep.h \
   /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
-  /usr/include/x86_64-linux-gnu/bits/semaphore.h
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  /home/gooby/Development/VkEngine/src/ecs_systems/systems.h \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../mat4x4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../vec2.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../vec3.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../vec4.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../ext/matrix_projection.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_projection.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../ext/matrix_clip_space.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../ext/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/matrix_transform.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../matrix.hpp

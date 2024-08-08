@@ -9,8 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o.d"
   "CMakeFiles/engine.dir/deletion_queue.cpp.o"
   "CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
-  "CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o"
-  "CMakeFiles/engine.dir/ecs_systems/render_system.cpp.o.d"
   "CMakeFiles/engine.dir/main.cpp.o"
   "CMakeFiles/engine.dir/main.cpp.o.d"
   "CMakeFiles/engine.dir/resource_manager.cpp.o"

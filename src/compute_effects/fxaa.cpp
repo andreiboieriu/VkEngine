@@ -107,17 +107,11 @@ void Fxaa::execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, V
 }
 
 void Fxaa::drawGui() {
-    ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
-
-    if (ImGui::Begin("fxaa", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
-        ImGui::Checkbox("enable", &mEnabled);
-        ImGui::SliderFloat("fixed threshold", &mPushConstants.fixedThreshold, 0.0312f, 0.0833f);
-        ImGui::SliderFloat("relative threshold", &mPushConstants.relativeThreshold, 0.063f, 0.333f);
-        ImGui::SliderFloat("pixel blend factor", &mPushConstants.pixelBlendStrength, 0.0f, 1.0f);
-        ImGui::SliderInt("quality", &mPushConstants.quality, 0, 2);
-    }
-
-    ImGui::End();
+    ImGui::Checkbox("enable", &mEnabled);
+    ImGui::SliderFloat("fixed threshold", &mPushConstants.fixedThreshold, 0.0312f, 0.0833f);
+    ImGui::SliderFloat("relative threshold", &mPushConstants.relativeThreshold, 0.063f, 0.333f);
+    ImGui::SliderFloat("pixel blend factor", &mPushConstants.pixelBlendStrength, 0.0f, 1.0f);
+    ImGui::SliderInt("quality", &mPushConstants.quality, 0, 2);
 }
 
 void Fxaa::freeResources() {

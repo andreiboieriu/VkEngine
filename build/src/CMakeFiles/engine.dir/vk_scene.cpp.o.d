@@ -561,10 +561,8 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/src/skybox.h \
-  /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
-  /home/gooby/Development/VkEngine/src/resource_manager.h \
-  /usr/include/memory.h \
+  /home/gooby/Development/VkEngine/src/scene_node.h \
+  /home/gooby/Development/VkEngine/src/ecs_components/components.h \
   /home/gooby/Development/VkEngine/third_party/entt/entt.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/utility \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
@@ -580,6 +578,10 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
+  /home/gooby/Development/VkEngine/src/vk_engine.h \
+  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
+  /home/gooby/Development/VkEngine/src/resource_manager.h \
+  /usr/include/memory.h \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/transform.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../glm.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
@@ -624,4 +626,6 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../geometric.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../trigonometric.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../gtc/../matrix.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/transform.inl
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/transform.inl \
+  /home/gooby/Development/VkEngine/third_party/imgui/imgui.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h

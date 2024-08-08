@@ -12,7 +12,7 @@ public:
         VkDeviceAddress vertexBuffer;
     };
 
-    Skybox(std::string_view path);
+    Skybox();
     ~Skybox();
 
     void draw(VkCommandBuffer commandBuffer);
@@ -20,11 +20,12 @@ public:
         mPushConstants.projectionView = projectionView;
     }
 
+    void drawGui();
+
 private:
     void createPipelineLayout();
     void createPipeline();
     void createCubeMesh();
-    void loadTexture(std::string_view path);
     void freeResources();
 
     AllocatedImage mTexture;
@@ -35,4 +36,6 @@ private:
     VkDescriptorSetLayout mDescriptorSetLayout;
     VkPipelineLayout mPipelineLayout;
     VkPipeline mPipeline;
+
+    std::string mChosenSkybox = "empty";
 };

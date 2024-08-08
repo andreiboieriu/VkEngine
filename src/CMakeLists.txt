@@ -27,13 +27,10 @@ add_executable (engine
   vk_materials.h
   vk_scene.cpp
   vk_scene.h
-  ecs_components/gltf.h
-  ecs_components/transform.h
   ecs_components/components.h
   scene_node.cpp
   scene_node.h
-  ecs_systems/render_system.cpp
-  ecs_systems/render_system.h
+  ecs_systems/systems.h
   compute_effects/compute_effect.cpp
   compute_effects/compute_effect.h
   compute_effects/fxaa.cpp
@@ -42,6 +39,8 @@ add_executable (engine
   skybox.h
   resource_manager.cpp
   resource_manager.h
+  scene_node.h
+  scene_node.cpp
 )
 
 set_property(TARGET engine PROPERTY CXX_STANDARD 20)

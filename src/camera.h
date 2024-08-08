@@ -15,6 +15,8 @@ public:
 
     void update(float dt, float aspectRatio, const UserInput& userInput);
 
+    void drawGui();
+
 private:
 
     glm::vec3 mVelocity{};
@@ -25,12 +27,13 @@ private:
     float mNear = 0.1f;
     float mFar = 1000.f;
 
+    float mSpeed = 5.f;
+
     const float MOUSE_MOTION_SENSITIVITY = 0.2f;
     const float MOUSE_WHEEL_SENSITIVITY = 1.0f;
-    const float SPEED = 2.f;
 
-    const float MAX_FOV = 130.f;
-    const float MIN_FOV = 40.f;
+    const float MAX_FOV = 170.f;
+    const float MIN_FOV = 10.f;
 
     const float MAX_PITCH = 90.f;
     const float MIN_PITCH = -90.f;
