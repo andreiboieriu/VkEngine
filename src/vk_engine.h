@@ -119,6 +119,10 @@ public:
 		return mBlackImage;
 	}
 
+	AllocatedImage& getDefaultNormalMap() {
+		return mDefaultNormalMap;
+	}
+
 	VkSampler& getDefaultLinearSampler() {
 		return mDefaultSamplerLinear;
 	}
@@ -242,6 +246,7 @@ private:
 	AllocatedImage mBlackImage;
 	AllocatedImage mGreyImage;
 	AllocatedImage mErrorCheckerboardImage;
+	AllocatedImage mDefaultNormalMap;
 
 	VkSampler mDefaultSamplerLinear;
 	VkSampler mDefaultSamplerNearest;

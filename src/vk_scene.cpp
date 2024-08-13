@@ -8,6 +8,8 @@
 
 Scene3D::Scene3D(const std::string& name) : mName(name) {
     init();
+
+    mSceneData.sunlightColor = glm::vec4(1.0f);
 }
     
 Scene3D::~Scene3D() {
@@ -44,7 +46,7 @@ void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
     mSceneData.viewProjection = mSceneData.projection * mSceneData.view;
 
     mSceneData.ambientColor = glm::vec4(.1f);
-    mSceneData.sunlightColor = glm::vec4(1.f, 1.f, 1.f, 1.0f);
+    // mSceneData.sunlightColor = glm::vec4(1.f, 1.f, 1.f, 1.0f);
     mSceneData.sunlightDirection = glm::vec4(.2f, 1.0f, .5f, 1.f);
 
     mSceneData.viewPosition = glm::vec4(mCamera.getPosition(), 0.0f);
@@ -86,6 +88,15 @@ void Scene3D::drawGui() {
 
             ImGui::TreePop();
         }
+
+
+        ImGui::Checkbox("enable normal mapping", &enableNormalMapping);
+
+        ImGui::InputFloat("light color", &mSceneData.sunlightColor.x);
+
+        mSceneData.data.x = enableNormalMapping ? 1.0f : 0.0f;
+        mSceneData.sunlightColor.y = mSceneData.sunlightColor.x;
+        mSceneData.sunlightColor.z = mSceneData.sunlightColor.x;
     }
 
     ImGui::End();

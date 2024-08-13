@@ -14,22 +14,23 @@ layout(set = 0, binding = 0) uniform SceneData {
 	vec4 sunlightDirection;
 	vec4 sunlightColor;
 	vec4 viewPosition;
+    vec4 data;
 } sceneData;
 
-layout(set = 1, binding = 0) uniform sampler2D colorTex;
-layout(set = 1, binding = 1) uniform sampler2D metalRoughTex;
-
-layout(set = 1, binding = 2) uniform GLTFMaterialData {   
+layout(set = 1, binding = 0) uniform GLTFMaterialData {   
 
 	vec4 colorFactors;
-	vec4 metalRoughFactors; // x = metallic, y = roughness
-	
+	vec4 metalRoughFactors;
+	float normalScale;
 } materialData;
 
+layout(set = 1, binding = 1) uniform sampler2D colorTex;
+layout(set = 1, binding = 2) uniform sampler2D metalRoughTex;
+layout(set = 1, binding = 3) uniform sampler2D normalTex;
+
 layout (location = 0) in vec3 inNormal;
-layout (location = 1) in vec3 inColor;
-layout (location = 2) in vec2 inUV;
-layout (location = 3) in vec3 inFragWorldPos;
+layout (location = 1) in vec2 inUV;
+layout (location = 2) in vec3 inFragWorldPos;
 
 layout (location = 0) out vec4 outFragColor;
 
@@ -60,11 +61,31 @@ float V_SmithGGXCorrelatedFast(float NoV, float NoL, float roughness) {
     return 0.5 / (GGXV + GGXL);
 }
 
-vec3 toneMapping(vec3 color) {
-    vec3 mapped = color / (color + vec3(1.0));
-    // mapped = pow(mapped, vec3(1.0) / 2.2);
+mat3 cotangentFrame(vec3 n, vec3 p, vec2 uv) {
+	// get edge vectors of the pixel triangle
+	vec3 dp1 = dFdx( p );
+	vec3 dp2 = dFdy( p );
+	vec2 duv1 = dFdx( uv );
+	vec2 duv2 = dFdy( uv );
 
-    return mapped;
+	// solve the linear system
+	vec3 dp2perp = cross( dp2, n );
+	vec3 dp1perp = cross( n, dp1 );
+	vec3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+	vec3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+	
+	// construct a scale-invariant frame
+	float invmax = inversesqrt( max( dot(T,T), dot(B,B) ) );
+	
+	return mat3( T * invmax, B * invmax, n );
+}
+
+vec3 perturbNormal(vec3 n, vec3 v) {
+	vec3 map = normalize(texture(normalTex, inUV).xyz * 2.0 - 1.0);
+
+    mat3 TBN = cotangentFrame(n, -v, inUV);
+
+    return normalize(TBN * map);
 }
 
 void main() 
@@ -76,6 +97,9 @@ void main()
 	vec3 l = normalize(sceneData.sunlightDirection.xyz);
 	vec3 v = normalize(sceneData.viewPosition.xyz - inFragWorldPos);
     vec3 h = normalize(v + l);
+
+    if (sceneData.data.x == 1.0)
+        n = perturbNormal(n, v);
 
     float NdotV = abs(dot(n, v)) + 1e-5;
     float NdotL = clamp(dot(n, l), 0.0, 1.0);
@@ -94,5 +118,5 @@ void main()
     vec3 f_diffuse = (1 - F) * (1 / PI) * c_diff;
     vec3 f_specular = F * D_GGX(NdotH, roughness) * V_SmithGGXCorrelatedFast(NdotV, NdotL, roughness);
 
-    outFragColor = vec4((f_diffuse + f_specular) * 5 * NdotL, baseColor.a);
+    outFragColor = vec4((f_diffuse + f_specular) * sceneData.sunlightColor.xyz * NdotL, baseColor.a);
 }

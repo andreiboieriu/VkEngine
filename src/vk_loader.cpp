@@ -232,9 +232,6 @@ void LoadedGLTF::load(std::string_view filePath) {
         constants.metalRoughFactors.x = material.pbrData.metallicFactor;
         constants.metalRoughFactors.y = material.pbrData.roughnessFactor;
 
-        // add material constants to buffer
-        ((MaterialConstants*)mMaterialDataBuffer.allocInfo.pMappedData)[dataIndex] = constants;
-
         MaterialPass passType = MaterialPass::Opaque;
 
         if (material.alphaMode == fastgltf::AlphaMode::Blend) {
@@ -248,6 +245,8 @@ void LoadedGLTF::load(std::string_view filePath) {
         materialResources.colorSampler = VulkanEngine::get().getDefaultLinearSampler();
         materialResources.metalRoughImage = VulkanEngine::get().getWhiteTexture();
         materialResources.metalRoughSampler = VulkanEngine::get().getDefaultLinearSampler();
+        materialResources.normalImage = VulkanEngine::get().getDefaultNormalMap();
+        materialResources.normalSampler = VulkanEngine::get().getDefaultLinearSampler();
 
         // set uniform buffer for the material data
         materialResources.dataBuffer = mMaterialDataBuffer.buffer;
@@ -274,6 +273,23 @@ void LoadedGLTF::load(std::string_view filePath) {
             materialResources.metalRoughImage = images[image];
             materialResources.metalRoughSampler = samplers[sampler];
         }
+
+        if (material.normalTexture.has_value()) {
+            size_t image = asset.textures[material.normalTexture.value().textureIndex].imageIndex.value();
+            size_t sampler = asset.textures[material.normalTexture.value().textureIndex].samplerIndex.value();
+
+            materialResources.normalImage = images[image];
+            materialResources.normalSampler = samplers[sampler];
+
+            constants.normalScale = material.normalTexture.value().scale;
+            fmt::println("normal scale: {}", constants.normalScale);
+        } else {
+            fmt::println("normal map missing");
+        }
+
+
+        // add material constants to buffer
+        ((MaterialConstants*)mMaterialDataBuffer.allocInfo.pMappedData)[dataIndex] = constants;
 
         newMaterial->materialInstance = VulkanEngine::get().getMaterialManager().writeMaterial(VulkanEngine::get().getDevice(), passType, materialResources);
 
@@ -327,7 +343,6 @@ void LoadedGLTF::load(std::string_view filePath) {
                         Vertex newVertex;
                         newVertex.position = v;
                         newVertex.normal = {1, 0, 0};
-                        newVertex.color = glm::vec4(1.f);
                         newVertex.uvX = 0;
                         newVertex.uvY = 0;
                         vertices[initialVtx + index] = newVertex;
@@ -353,15 +368,6 @@ void LoadedGLTF::load(std::string_view filePath) {
                 });
             }
 
-            // load vertex colors
-            auto colors = p.findAttribute("COLOR_0");
-            if (colors != p.attributes.end()) {
-                fastgltf::iterateAccessorWithIndex<glm::vec4>(asset, asset.accessors[(*colors).second],
-                [&](glm::vec4 v, size_t index) {
-                    vertices[initialVtx + index].color = v;
-                });
-            }
-
             if (p.materialIndex.has_value()) {
                 newSurface.material = materials[p.materialIndex.value()];
             } else {
@@ -382,13 +388,6 @@ void LoadedGLTF::load(std::string_view filePath) {
 
             newMesh->surfaces.push_back(newSurface);
         }
-
-        // constexpr bool OverrideColors = false;
-        // if (OverrideColors) {
-        //     for (Vertex& vertex : vertices) {
-        //         vertex.color = glm::vec4(vertex.normal, 1.f);
-        //     }
-        // }
 
         newMesh->meshBuffers = VulkanEngine::get().uploadMesh(indices, vertices);
     }

@@ -123,7 +123,7 @@ void DescriptorManager::createDescriptorBuffers() {
     // get descriptor binding offsets
     vkGetDescriptorSetLayoutBindingOffsetEXT(device, mGlobalLayout, 0u, &mGlobalLayoutOffset);
     
-    for (unsigned int i = 0; i < 3; i++)
+    for (unsigned int i = 0; i < 4; i++)
         vkGetDescriptorSetLayoutBindingOffsetEXT(device, mMaterialLayout, i, &mMaterialLayoutOffset[i]);
 
 
@@ -173,6 +173,25 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
 }
 
 VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources& resources) {
+     // create material constants descriptor
+    VkDescriptorAddressInfoEXT addressInfo{};
+    addressInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_ADDRESS_INFO_EXT;
+    addressInfo.address = resources.dataBufferAddress + resources.dataBufferOffset;
+    addressInfo.range = sizeof(MaterialConstants);
+    addressInfo.format = VK_FORMAT_UNDEFINED;
+
+    VkDescriptorGetInfoEXT descriptorInfo{};
+    descriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    descriptorInfo.type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+    descriptorInfo.data.pUniformBuffer = &addressInfo;
+
+    vkGetDescriptorEXT(
+        VulkanEngine::get().getDevice(),
+        &descriptorInfo,
+        mDescriptorBufferProperties.uniformBufferDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[0]
+    );
+
     // create color texture descriptor
     VkDescriptorImageInfo imageDescriptor{};
 
@@ -189,7 +208,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
         VulkanEngine::get().getDevice(),
         &imageDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
-        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[0]
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[1]
     );
 
     // create metal rough texture descriptor
@@ -208,26 +227,26 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
         VulkanEngine::get().getDevice(),
         &metalDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
-        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[1]
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[2]
     );
 
-    // create material constants descriptor
-    VkDescriptorAddressInfoEXT addressInfo{};
-    addressInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_ADDRESS_INFO_EXT;
-    addressInfo.address = resources.dataBufferAddress + resources.dataBufferOffset;
-    addressInfo.range = sizeof(MaterialConstants);
-    addressInfo.format = VK_FORMAT_UNDEFINED;
+    // create metal rough texture descriptor
+    VkDescriptorImageInfo normalDescriptor{};
 
-    VkDescriptorGetInfoEXT descriptorInfo{};
-    descriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
-    descriptorInfo.type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-    descriptorInfo.data.pUniformBuffer = &addressInfo;
+    normalDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    normalDescriptor.imageView = resources.normalImage.imageView;
+    normalDescriptor.sampler = resources.normalSampler;
+
+    VkDescriptorGetInfoEXT normalDescriptorInfo{};
+    normalDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    normalDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    normalDescriptorInfo.data.pCombinedImageSampler = &normalDescriptor;
 
     vkGetDescriptorEXT(
         VulkanEngine::get().getDevice(),
-        &descriptorInfo,
-        mDescriptorBufferProperties.uniformBufferDescriptorSize,
-        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[2]
+        &normalDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[3]
     );
 
     VkDeviceSize retOffset = mCurrentOffset;

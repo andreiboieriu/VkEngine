@@ -617,6 +617,10 @@ void VulkanEngine::initDefaultData() {
 	mBlackImage = createImage((void*)&black, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
 		VK_IMAGE_USAGE_SAMPLED_BIT);
 
+    uint32_t normal = glm::packUnorm4x8(glm::vec4(0.5f, 0.5f, 1.0f, 0.0f));
+    mDefaultNormalMap = createImage((void*)&normal, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
+		                     VK_IMAGE_USAGE_SAMPLED_BIT);
+
 	//checkerboard image
 	uint32_t magenta = glm::packUnorm4x8(glm::vec4(1, 0, 1, 1));
 	std::array<uint32_t, 16 *16 > pixels; //for 16x16 checkerboard texture

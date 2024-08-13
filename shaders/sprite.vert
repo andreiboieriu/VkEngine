@@ -6,11 +6,10 @@
 // #include "input_structures.glsl"
 struct Vertex {
 
-	vec3 position;
-	float uv_x;
-	vec3 normal;
-	float uv_y;
-	vec4 color;
+    vec3 position;
+    float uvX;
+    vec3 normal;
+    float uvY;
 }; 
 
 layout(buffer_reference, std430) readonly buffer VertexBuffer { 
@@ -38,6 +37,6 @@ void main()
 
 	gl_Position = ubo.projectionMatrix * ubo.modelMatrix * position;
 
-	outUV.x = v.uv_x;
-	outUV.y = v.uv_y;
+	outUV.x = v.uvX;
+	outUV.y = v.uvY;
 }

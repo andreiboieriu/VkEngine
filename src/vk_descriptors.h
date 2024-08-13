@@ -45,7 +45,7 @@ private:
     VkDeviceSize mMaterialLayoutSize;
 
     VkDeviceSize mGlobalLayoutOffset;
-    VkDeviceSize mMaterialLayoutOffset[3];
+    VkDeviceSize mMaterialLayoutOffset[4];
 
     VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties;
 };

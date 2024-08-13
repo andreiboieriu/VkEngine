@@ -19,6 +19,7 @@ public:
         glm::vec4 sunlightDirection;
         glm::vec4 sunlightColor;
         glm::vec4 viewPosition;
+        glm::vec4 data;
     };
     
     Scene3D(const std::string& name);
@@ -58,4 +59,6 @@ private:
     std::vector<std::shared_ptr<SceneNode>> mTopNodes;
 
     int mCurrNodeId = 0;
+
+    bool enableNormalMapping = false;
 };

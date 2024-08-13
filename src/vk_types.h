@@ -47,12 +47,11 @@ struct DescriptorData {
     VkDeviceSize offset;
 };
 
-struct Vertex {
+struct alignas(16) Vertex {
     glm::vec3 position;
     float uvX;
     glm::vec3 normal;
     float uvY;
-    glm::vec4 color;
 };
 
 struct GPUMeshBuffers {
@@ -84,19 +83,22 @@ struct MaterialInstance {
     VkDeviceSize descriptorOffset;
 };
 
-struct MaterialConstants {
+struct alignas(16) MaterialConstants {
     glm::vec4 colorFactors;
     glm::vec4 metalRoughFactors;
-
-    // padding
-    glm::vec4 extra[14];
+    float normalScale;
 };
 
 struct MaterialResources {
     AllocatedImage colorImage;
     VkSampler colorSampler;
+
     AllocatedImage metalRoughImage;
     VkSampler metalRoughSampler;
+
+    AllocatedImage normalImage;
+    VkSampler normalSampler;
+
     VkBuffer dataBuffer;
     uint32_t dataBufferOffset;
     VkDeviceAddress dataBufferAddress;
