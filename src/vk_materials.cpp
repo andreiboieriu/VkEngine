@@ -19,13 +19,13 @@ void MaterialManager::buildPipelines(VkDevice device, VkFormat colorFormat, VkFo
     // load shaders
     VkShaderModule fragShader;
 
-    if (!vkutil::loadShaderModule("shaders/mesh.frag.spv", device, &fragShader)) {
+    if (!vkutil::loadShaderModule("shaders/mesh_pbr.frag.spv", device, &fragShader)) {
         fmt::println("error while building mesh.frag shader");
     }
 
     VkShaderModule vertShader;
 
-    if (!vkutil::loadShaderModule("shaders/mesh.vert.spv", device, &vertShader)) {
+    if (!vkutil::loadShaderModule("shaders/mesh_pbr.vert.spv", device, &vertShader)) {
         fmt::println("error while building mesh.vert shader");
     }
 

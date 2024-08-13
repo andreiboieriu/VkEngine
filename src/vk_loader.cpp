@@ -223,7 +223,7 @@ void LoadedGLTF::load(std::string_view filePath) {
 
         mMaterials[material.name.c_str()] = newMaterial;
 
-        MaterialConstants constants;
+        MaterialConstants constants{};
         constants.colorFactors.x = material.pbrData.baseColorFactor[0];
         constants.colorFactors.y = material.pbrData.baseColorFactor[1];
         constants.colorFactors.z = material.pbrData.baseColorFactor[2];

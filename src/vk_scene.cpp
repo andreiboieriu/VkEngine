@@ -45,7 +45,7 @@ void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
 
     mSceneData.ambientColor = glm::vec4(.1f);
     mSceneData.sunlightColor = glm::vec4(1.f, 1.f, 1.f, 1.0f);
-    mSceneData.sunlightDirection = glm::vec4(0.f, 1.0f, .5f, 1.f);
+    mSceneData.sunlightDirection = glm::vec4(.2f, 1.0f, .5f, 1.f);
 
     mSceneData.viewPosition = glm::vec4(mCamera.getPosition(), 0.0f);
 

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../shaders/fxaa_pass1.comp.spv"
   "../shaders/mesh.frag.spv"
   "../shaders/mesh.vert.spv"
+  "../shaders/mesh_pbr.frag.spv"
+  "../shaders/mesh_pbr.vert.spv"
   "../shaders/skybox.frag.spv"
   "../shaders/skybox.vert.spv"
   "../shaders/sprite.frag.spv"

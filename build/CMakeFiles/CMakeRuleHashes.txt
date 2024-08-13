@@ -3,6 +3,8 @@ c91e62ee0c7ba9e60f2b6c4fe51deeed ../shaders/fxaa_pass0.comp.spv
 d69f18821583ff46e8fd5a36330b1e1d ../shaders/fxaa_pass1.comp.spv
 d528ce8014eea1d9b48e1725910b83d9 ../shaders/mesh.frag.spv
 df163ff85d487f84bbcc5a5dffdae79f ../shaders/mesh.vert.spv
+65279e8920aaa2fcf3e9d3c3da9c2b53 ../shaders/mesh_pbr.frag.spv
+b6190c4dad7a2e44bc919c1ad876612f ../shaders/mesh_pbr.vert.spv
 7f5b3b1f83072f17dac2f51ca66bb6fb ../shaders/skybox.frag.spv
 91a13faf23aad584d6197c83b2964084 ../shaders/skybox.vert.spv
 01b25c13c1bbca8459c817e6f4254b6a ../shaders/sprite.frag.spv

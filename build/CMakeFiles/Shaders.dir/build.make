@@ -70,6 +70,8 @@ CMakeFiles/Shaders: ../shaders/fxaa_pass0.comp.spv
 CMakeFiles/Shaders: ../shaders/fxaa_pass1.comp.spv
 CMakeFiles/Shaders: ../shaders/mesh.frag.spv
 CMakeFiles/Shaders: ../shaders/mesh.vert.spv
+CMakeFiles/Shaders: ../shaders/mesh_pbr.frag.spv
+CMakeFiles/Shaders: ../shaders/mesh_pbr.vert.spv
 CMakeFiles/Shaders: ../shaders/skybox.frag.spv
 CMakeFiles/Shaders: ../shaders/skybox.vert.spv
 CMakeFiles/Shaders: ../shaders/sprite.frag.spv
@@ -91,20 +93,28 @@ CMakeFiles/Shaders: ../shaders/sprite.vert.spv
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ../shaders/mesh.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh.vert -o /home/gooby/Development/VkEngine/shaders/mesh.vert.spv
 
+../shaders/mesh_pbr.frag.spv: ../shaders/mesh_pbr.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ../shaders/mesh_pbr.frag.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh_pbr.frag -o /home/gooby/Development/VkEngine/shaders/mesh_pbr.frag.spv
+
+../shaders/mesh_pbr.vert.spv: ../shaders/mesh_pbr.vert
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ../shaders/mesh_pbr.vert.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh_pbr.vert -o /home/gooby/Development/VkEngine/shaders/mesh_pbr.vert.spv
+
 ../shaders/skybox.frag.spv: ../shaders/skybox.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ../shaders/skybox.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ../shaders/skybox.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox.frag -o /home/gooby/Development/VkEngine/shaders/skybox.frag.spv
 
 ../shaders/skybox.vert.spv: ../shaders/skybox.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ../shaders/skybox.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ../shaders/skybox.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox.vert -o /home/gooby/Development/VkEngine/shaders/skybox.vert.spv
 
 ../shaders/sprite.frag.spv: ../shaders/sprite.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ../shaders/sprite.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating ../shaders/sprite.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.frag -o /home/gooby/Development/VkEngine/shaders/sprite.frag.spv
 
 ../shaders/sprite.vert.spv: ../shaders/sprite.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ../shaders/sprite.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating ../shaders/sprite.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.vert -o /home/gooby/Development/VkEngine/shaders/sprite.vert.spv
 
 Shaders: CMakeFiles/Shaders
@@ -112,6 +122,8 @@ Shaders: ../shaders/fxaa_pass0.comp.spv
 Shaders: ../shaders/fxaa_pass1.comp.spv
 Shaders: ../shaders/mesh.frag.spv
 Shaders: ../shaders/mesh.vert.spv
+Shaders: ../shaders/mesh_pbr.frag.spv
+Shaders: ../shaders/mesh_pbr.vert.spv
 Shaders: ../shaders/skybox.frag.spv
 Shaders: ../shaders/skybox.vert.spv
 Shaders: ../shaders/sprite.frag.spv

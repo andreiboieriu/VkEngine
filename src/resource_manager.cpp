@@ -12,6 +12,7 @@ ResourceManager::~ResourceManager() {
 
 void ResourceManager::loadResources() {
     mLoadedGltfs["hull_spaceship"] = std::make_shared<LoadedGLTF>("assets/hull_spaceship.glb");
+    // mLoadedGltfs["hull_spaceship"] = std::make_shared<LoadedGLTF>("assets/MetalRoughSpheres.gltf");
     mLoadedGltfs["fighter_spaceship"] = std::make_shared<LoadedGLTF>("assets/fighter_spaceship.glb");
 
     mSkyboxCubemaps["nebula"] = loadSkyboxCubemap("assets/skybox/nebula/");

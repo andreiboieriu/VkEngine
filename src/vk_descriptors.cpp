@@ -122,7 +122,9 @@ void DescriptorManager::createDescriptorBuffers() {
 
     // get descriptor binding offsets
     vkGetDescriptorSetLayoutBindingOffsetEXT(device, mGlobalLayout, 0u, &mGlobalLayoutOffset);
-    vkGetDescriptorSetLayoutBindingOffsetEXT(device, mMaterialLayout, 0u, &mMaterialLayoutOffset);
+    
+    for (unsigned int i = 0; i < 3; i++)
+        vkGetDescriptorSetLayoutBindingOffsetEXT(device, mMaterialLayout, i, &mMaterialLayoutOffset[i]);
 
 
     // create descriptor buffer
@@ -187,7 +189,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
         VulkanEngine::get().getDevice(),
         &imageDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
-        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[0]
     );
 
     // create metal rough texture descriptor
@@ -206,7 +208,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
         VulkanEngine::get().getDevice(),
         &metalDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
-        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset + mDescriptorBufferProperties.combinedImageSamplerDescriptorSize
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[1]
     );
 
     // create material constants descriptor
@@ -225,7 +227,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
         VulkanEngine::get().getDevice(),
         &descriptorInfo,
         mDescriptorBufferProperties.uniformBufferDescriptorSize,
-        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset + mDescriptorBufferProperties.combinedImageSamplerDescriptorSize + mDescriptorBufferProperties.combinedImageSamplerDescriptorSize
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[2]
     );
 
     VkDeviceSize retOffset = mCurrentOffset;
