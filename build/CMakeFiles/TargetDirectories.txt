@@ -7,6 +7,7 @@
 /home/gooby/Development/VkEngine/build/CMakeFiles/install/strip.dir
 /home/gooby/Development/VkEngine/build/third_party/CMakeFiles/vkbootstrap.dir
 /home/gooby/Development/VkEngine/build/third_party/CMakeFiles/volk.dir
+/home/gooby/Development/VkEngine/build/third_party/CMakeFiles/spirv_reflect.dir
 /home/gooby/Development/VkEngine/build/third_party/CMakeFiles/imgui.dir
 /home/gooby/Development/VkEngine/build/third_party/CMakeFiles/edit_cache.dir
 /home/gooby/Development/VkEngine/build/third_party/CMakeFiles/rebuild_cache.dir

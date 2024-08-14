@@ -382,7 +382,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
   /home/gooby/Development/VkEngine/src/main.cpp \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
+  /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.h \
   /home/gooby/Development/VkEngine/third_party/volk/volk.h \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
@@ -415,9 +415,11 @@ src/CMakeFiles/engine.dir/main.cpp.o: \
   /usr/include/string.h /usr/include/strings.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/spirv_reflect.h \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/./include/spirv/unified1/spirv.h \
   /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/src/vk_scene.h \
   /home/gooby/Development/VkEngine/src/camera.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \

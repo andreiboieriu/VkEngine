@@ -420,10 +420,7 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
-  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
+  /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/volk/volk.h \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
@@ -437,9 +434,11 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
   /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/gooby/Development/VkEngine/src/deletion_queue.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \
@@ -447,7 +446,6 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uniform_int_dist.h \
   /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h \
-  /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/glm_element_traits.hpp \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/tools.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp \
@@ -473,7 +471,11 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_integer.inl \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/parser.hpp \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
+  /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.h \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/spirv_reflect.h \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/./include/spirv/unified1/spirv.h \
+  /home/gooby/Development/VkEngine/src/vk_materials.h \
+  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
   /home/gooby/Development/VkEngine/src/vk_scene.h \
   /home/gooby/Development/VkEngine/src/camera.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \

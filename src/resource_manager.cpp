@@ -11,7 +11,7 @@ ResourceManager::~ResourceManager() {
 }
 
 void ResourceManager::loadResources() {
-    mLoadedGltfs["hull_spaceship"] = std::make_shared<LoadedGLTF>("assets/hull_spaceship.glb");
+    // mLoadedGltfs["hull_spaceship"] = std::make_shared<LoadedGLTF>("assets/hull_spaceship.glb");
     // mLoadedGltfs["hull_spaceship"] = std::make_shared<LoadedGLTF>("assets/MetalRoughSpheres.gltf");
     mLoadedGltfs["fighter_spaceship"] = std::make_shared<LoadedGLTF>("assets/fighter_spaceship.glb");
 
@@ -52,7 +52,7 @@ AllocatedImage ResourceManager::loadSkyboxCubemap(std::string_view path) {
         }
     }
 
-    newCubemap = VulkanEngine::get().createSkybox(data, VkExtent2D{static_cast<uint32_t>(width), static_cast<uint32_t>(height)}, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT);
+    newCubemap = VulkanEngine::get().createSkybox(data, VkExtent2D{static_cast<uint32_t>(width), static_cast<uint32_t>(height)}, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_USAGE_SAMPLED_BIT);
 
     for (int i = 0; i < 6; i++) {
         stbi_image_free(data[i]);

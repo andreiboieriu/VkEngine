@@ -6,7 +6,6 @@
 #include <string_view>
 #include <vk_loader.h>
 
-#include "vk_descriptors.h"
 #include "vk_engine.h"
 #include "vk_materials.h"
 #include "vk_types.h"

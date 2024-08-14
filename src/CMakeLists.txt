@@ -31,8 +31,8 @@ add_executable (engine
   scene_node.cpp
   scene_node.h
   ecs_systems/systems.h
-  compute_effects/compute_effect.cpp
   compute_effects/compute_effect.h
+  compute_effects/compute_effect.cpp
   compute_effects/fxaa.cpp
   compute_effects/fxaa.h
   skybox.cpp
@@ -49,6 +49,6 @@ set( CMAKE_CXX_FLAGS "-g")
 target_compile_definitions(engine PUBLIC GLM_FORCE_DEPTH_ZERO_TO_ONE GLM_FORCE_RADIANS)
 target_include_directories(engine PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 
-target_link_libraries(engine PUBLIC volk vma glm entt fmt::fmt stb_image SDL2::SDL2 vkbootstrap imgui fastgltf::fastgltf)
+target_link_libraries(engine PUBLIC spirv_reflect volk vma glm entt fmt::fmt stb_image SDL2::SDL2 vkbootstrap imgui fastgltf::fastgltf)
 
 target_precompile_headers(engine PUBLIC <optional> <vector> <memory> <string> <vector> <unordered_map> <glm/mat4x4.hpp>  <glm/vec4.hpp>)

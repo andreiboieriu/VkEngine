@@ -7,10 +7,6 @@ layout(rgba16f,set = 0, binding = 0) uniform image2D image;
 layout( push_constant ) uniform constants
 {
     ivec2 imageExtent;
-    float fixedThreshold;
-    float relativeThreshold;
-    float pixelBlendStrength;
-    int quality;
 } PushConstants;
 
 float getLuma(vec3 color) {

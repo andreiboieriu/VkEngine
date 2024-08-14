@@ -76,6 +76,7 @@ CMakeFiles/Shaders: ../shaders/skybox.frag.spv
 CMakeFiles/Shaders: ../shaders/skybox.vert.spv
 CMakeFiles/Shaders: ../shaders/sprite.frag.spv
 CMakeFiles/Shaders: ../shaders/sprite.vert.spv
+CMakeFiles/Shaders: ../shaders/tone_mapping_pass0.comp.spv
 
 ../shaders/fxaa_pass0.comp.spv: ../shaders/fxaa_pass0.comp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../shaders/fxaa_pass0.comp.spv"
@@ -117,6 +118,10 @@ CMakeFiles/Shaders: ../shaders/sprite.vert.spv
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating ../shaders/sprite.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.vert -o /home/gooby/Development/VkEngine/shaders/sprite.vert.spv
 
+../shaders/tone_mapping_pass0.comp.spv: ../shaders/tone_mapping_pass0.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating ../shaders/tone_mapping_pass0.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/tone_mapping_pass0.comp -o /home/gooby/Development/VkEngine/shaders/tone_mapping_pass0.comp.spv
+
 Shaders: CMakeFiles/Shaders
 Shaders: ../shaders/fxaa_pass0.comp.spv
 Shaders: ../shaders/fxaa_pass1.comp.spv
@@ -128,6 +133,7 @@ Shaders: ../shaders/skybox.frag.spv
 Shaders: ../shaders/skybox.vert.spv
 Shaders: ../shaders/sprite.frag.spv
 Shaders: ../shaders/sprite.vert.spv
+Shaders: ../shaders/tone_mapping_pass0.comp.spv
 Shaders: CMakeFiles/Shaders.dir/build.make
 .PHONY : Shaders
 

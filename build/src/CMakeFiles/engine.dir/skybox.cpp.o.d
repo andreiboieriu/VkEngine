@@ -415,9 +415,6 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
-  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
-  /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/glm_element_traits.hpp \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/tools.hpp \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
@@ -451,6 +448,7 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/memory_resource \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
@@ -473,8 +471,12 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/integer.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_integer.inl \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/parser.hpp \
+  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
+  /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.h \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/spirv_reflect.h \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/./include/spirv/unified1/spirv.h \
+  /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/src/vk_scene.h \
   /home/gooby/Development/VkEngine/src/camera.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \

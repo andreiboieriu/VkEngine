@@ -9,6 +9,7 @@ b6190c4dad7a2e44bc919c1ad876612f ../shaders/mesh_pbr.vert.spv
 91a13faf23aad584d6197c83b2964084 ../shaders/skybox.vert.spv
 01b25c13c1bbca8459c817e6f4254b6a ../shaders/sprite.frag.spv
 dbab7760d1b625c1d36bf2fa6a1ea4fb ../shaders/sprite.vert.spv
+523f782750862c462c03b25b550b3a4d ../shaders/tone_mapping_pass0.comp.spv
 f88146ff694674a67db1a6915f68b1d5 CMakeFiles/Shaders
 6d6e2d138216d9ebc3725744c7d4a2e6 third_party/SDL/CMakeFiles/sdl_headers_copy
 6522fe8b0968e58dd3eeb755b34e2ea0 third_party/SDL/CMakeFiles/uninstall

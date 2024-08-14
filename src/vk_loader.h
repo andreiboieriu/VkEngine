@@ -1,8 +1,5 @@
 ﻿#pragma once
 
-#include "fmt/core.h"
-#include "vk_descriptors.h"
-#include "vk_materials.h"
 #include <memory>
 #include <string>
 #include <string_view>

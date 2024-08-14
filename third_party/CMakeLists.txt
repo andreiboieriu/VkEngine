@@ -2,6 +2,7 @@ find_package(Vulkan REQUIRED)
 
 add_library(vkbootstrap STATIC)
 add_library(volk STATIC)
+add_library(spirv_reflect STATIC)
 add_library(glm INTERFACE)
 add_library(vma INTERFACE)
 add_library(entt INTERFACE)
@@ -28,6 +29,13 @@ target_sources(volk PRIVATE
 target_include_directories(volk PUBLIC volk)
 # target_link_libraries(volk PUBLIC volk)
 set_property(TARGET volk PROPERTY CXX_STANDARD 20)
+
+target_sources(spirv_reflect PRIVATE
+  spirv_reflect/spirv_reflect.h
+  spirv_reflect/spirv_reflect.c
+)
+
+target_include_directories(spirv_reflect PUBLIC spirv_reflect)
 
 #both vma and glm and header only libs so we only need the include path
 target_include_directories(vma INTERFACE vma)

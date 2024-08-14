@@ -557,9 +557,6 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
-  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
-  /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/glm_element_traits.hpp \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/tools.hpp \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
@@ -593,6 +590,7 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/memory_resource \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
   /home/gooby/Development/VkEngine/third_party/glm/glm/fwd.hpp \
@@ -630,8 +628,12 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
+  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
+  /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.h \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/spirv_reflect.h \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/./include/spirv/unified1/spirv.h \
+  /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/src/resource_manager.h \
   /usr/include/memory.h \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/transform.hpp \

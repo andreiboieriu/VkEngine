@@ -190,6 +190,20 @@ volk/fast:
 .PHONY : volk/fast
 
 # Convenience name for target.
+third_party/CMakeFiles/spirv_reflect.dir/rule:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/spirv_reflect.dir/rule
+.PHONY : third_party/CMakeFiles/spirv_reflect.dir/rule
+
+# Convenience name for target.
+spirv_reflect: third_party/CMakeFiles/spirv_reflect.dir/rule
+.PHONY : spirv_reflect
+
+# fast build rule for target.
+spirv_reflect/fast:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/spirv_reflect.dir/build.make third_party/CMakeFiles/spirv_reflect.dir/build
+.PHONY : spirv_reflect/fast
+
+# Convenience name for target.
 third_party/CMakeFiles/imgui.dir/rule:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/imgui.dir/rule
 .PHONY : third_party/CMakeFiles/imgui.dir/rule
@@ -371,6 +385,30 @@ imgui/imgui_widgets.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.s
 .PHONY : imgui/imgui_widgets.cpp.s
 
+spirv_reflect/spirv_reflect.o: spirv_reflect/spirv_reflect.c.o
+.PHONY : spirv_reflect/spirv_reflect.o
+
+# target to build an object file
+spirv_reflect/spirv_reflect.c.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/spirv_reflect.dir/build.make third_party/CMakeFiles/spirv_reflect.dir/spirv_reflect/spirv_reflect.c.o
+.PHONY : spirv_reflect/spirv_reflect.c.o
+
+spirv_reflect/spirv_reflect.i: spirv_reflect/spirv_reflect.c.i
+.PHONY : spirv_reflect/spirv_reflect.i
+
+# target to preprocess a source file
+spirv_reflect/spirv_reflect.c.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/spirv_reflect.dir/build.make third_party/CMakeFiles/spirv_reflect.dir/spirv_reflect/spirv_reflect.c.i
+.PHONY : spirv_reflect/spirv_reflect.c.i
+
+spirv_reflect/spirv_reflect.s: spirv_reflect/spirv_reflect.c.s
+.PHONY : spirv_reflect/spirv_reflect.s
+
+# target to generate assembly for a file
+spirv_reflect/spirv_reflect.c.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/spirv_reflect.dir/build.make third_party/CMakeFiles/spirv_reflect.dir/spirv_reflect/spirv_reflect.c.s
+.PHONY : spirv_reflect/spirv_reflect.c.s
+
 vkbootstrap/VkBootstrap.o: vkbootstrap/VkBootstrap.cpp.o
 .PHONY : vkbootstrap/VkBootstrap.o
 
@@ -432,6 +470,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... imgui"
+	@echo "... spirv_reflect"
 	@echo "... vkbootstrap"
 	@echo "... volk"
 	@echo "... imgui/imgui.o"
@@ -455,6 +494,9 @@ help:
 	@echo "... imgui/imgui_widgets.o"
 	@echo "... imgui/imgui_widgets.i"
 	@echo "... imgui/imgui_widgets.s"
+	@echo "... spirv_reflect/spirv_reflect.o"
+	@echo "... spirv_reflect/spirv_reflect.i"
+	@echo "... spirv_reflect/spirv_reflect.s"
 	@echo "... vkbootstrap/VkBootstrap.o"
 	@echo "... vkbootstrap/VkBootstrap.i"
 	@echo "... vkbootstrap/VkBootstrap.s"

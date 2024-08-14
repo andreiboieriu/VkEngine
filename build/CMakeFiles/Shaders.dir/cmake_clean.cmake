@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "../shaders/skybox.vert.spv"
   "../shaders/sprite.frag.spv"
   "../shaders/sprite.vert.spv"
+  "../shaders/tone_mapping_pass0.comp.spv"
   "CMakeFiles/Shaders"
 )
 

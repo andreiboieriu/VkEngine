@@ -14,9 +14,6 @@ public:
         float relativeThreshold;
         float pixelBlendStrength;
         int quality;
-
-        // glm::ivec4 intData;
-        // glm::vec4 floatData;
     };
 
     struct Subpass {

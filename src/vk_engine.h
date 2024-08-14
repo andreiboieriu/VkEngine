@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "compute_effects/fxaa.h"
+#include "compute_effects/compute_effect.h"
 #include "vk_materials.h"
 #include "vk_scene.h"
 #include "vk_types.h"
@@ -265,7 +265,8 @@ private:
 
 	bool mCursorLocked = true;
 
-	std::unique_ptr<Fxaa> mFxaaEffect;
+	std::unique_ptr<ComputeEffect> mFxaaEffect;
+	std::unique_ptr<ComputeEffect> mToneMappingEffect;
 
 	float mMaxSamplerAnisotropy;
 

@@ -416,6 +416,7 @@ src/engine: src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o
 src/engine: src/CMakeFiles/engine.dir/skybox.cpp.o
 src/engine: src/CMakeFiles/engine.dir/resource_manager.cpp.o
 src/engine: src/CMakeFiles/engine.dir/build.make
+src/engine: third_party/libspirv_reflect.a
 src/engine: third_party/libvolk.a
 src/engine: third_party/fmt/libfmt.a
 src/engine: third_party/libvkbootstrap.a

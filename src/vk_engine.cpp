@@ -43,6 +43,8 @@
 
 #include "ecs_systems/systems.h"
 
+#include "compute_effects/compute_effect.h"
+
 VulkanEngine* gLoadedEngine = nullptr;
 
 entt::registry gRegistry;
@@ -79,11 +81,25 @@ void VulkanEngine::init()
     // render loading screen
     std::thread t{&VulkanEngine::drawLoadingScreen, this};
 
+    std::vector<ComputeEffect::PushConstantData> fxaaData = {
+        ComputeEffect::PushConstantData("fixedThreshold", 0.0312f),
+        ComputeEffect::PushConstantData("relativeThreshold", 0.063f),
+        ComputeEffect::PushConstantData("pixelBlendStrength", 0.75f),
+        ComputeEffect::PushConstantData("quality", 2)
+    };
+
     // load all other resources
-    mFxaaEffect = std::make_unique<Fxaa>();
+    mFxaaEffect = std::make_unique<ComputeEffect>("fxaa", fxaaData);
+
+    std::vector<ComputeEffect::PushConstantData> toneData = {
+        ComputeEffect::PushConstantData("exposure", 1.0f),
+    };
+
+    mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", toneData);
 
     mMainDeletionQueue.push([&]() {
         mFxaaEffect = nullptr;
+        mToneMappingEffect = nullptr;
     });
 
     mMaterialManager = std::make_unique<MaterialManager>();
@@ -954,13 +970,13 @@ void VulkanEngine::draw() {
     vkutil::transitionImage(commandBuffer, mDepthImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
 
     drawGeometry(commandBuffer);
-    // drawSkybox(commandBuffer);
 
     // transition draw image to general layout for adding post-processing
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
 
-    // fxaa(commandBuffer);
-    mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent);
+    // execute post processing effects
+    mToneMappingEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
+    mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent, false);
 
     // transition draw and swapchain image into transfer layouts
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
@@ -1093,10 +1109,8 @@ void VulkanEngine::drawGui() {
         ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
         ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
 
-        if (ImGui::TreeNode("FXAA")) {
-            mFxaaEffect->drawGui();
-            ImGui::TreePop();
-        }
+        mToneMappingEffect->drawGui();
+        mFxaaEffect->drawGui();
     }
 
     ImGui::End();

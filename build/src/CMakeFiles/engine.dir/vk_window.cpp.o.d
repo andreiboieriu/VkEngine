@@ -541,7 +541,7 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/imgui/imgui.h \
   /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
-  /home/gooby/Development/VkEngine/src/compute_effects/fxaa.h \
+  /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.h \
   /home/gooby/Development/VkEngine/src/vk_types.h \
   /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/gooby/Development/VkEngine/src/deletion_queue.h \
@@ -560,9 +560,11 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/spirv_reflect.h \
+  /home/gooby/Development/VkEngine/third_party/spirv_reflect/./include/spirv/unified1/spirv.h \
   /home/gooby/Development/VkEngine/src/vk_materials.h \
   /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
   /home/gooby/Development/VkEngine/src/vk_scene.h \
   /home/gooby/Development/VkEngine/src/camera.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \

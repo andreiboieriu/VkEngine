@@ -201,6 +201,19 @@ volk/fast:
 .PHONY : volk/fast
 
 #=============================================================================
+# Target rules for targets named spirv_reflect
+
+# Build rule for target.
+spirv_reflect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spirv_reflect
+.PHONY : spirv_reflect
+
+# fast build rule for target.
+spirv_reflect/fast:
+	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/spirv_reflect.dir/build.make third_party/CMakeFiles/spirv_reflect.dir/build
+.PHONY : spirv_reflect/fast
+
+#=============================================================================
 # Target rules for targets named imgui
 
 # Build rule for target.
@@ -367,6 +380,7 @@ help:
 	@echo "... fastgltf_simdjson"
 	@echo "... fmt"
 	@echo "... imgui"
+	@echo "... spirv_reflect"
 	@echo "... vkbootstrap"
 	@echo "... volk"
 .PHONY : help
