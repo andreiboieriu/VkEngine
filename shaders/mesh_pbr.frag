@@ -19,14 +19,17 @@ layout(set = 0, binding = 0) uniform SceneData {
 
 layout(set = 1, binding = 0) uniform GLTFMaterialData {   
 
-	vec4 colorFactors;
-	vec4 metalRoughFactors;
-	float normalScale;
+    vec4 colorFactors;
+    vec4 metalRoughFactors;
+    vec4 emissiveFactors;
+    float emissiveStrength;
+    float normalScale;
 } materialData;
 
 layout(set = 1, binding = 1) uniform sampler2D colorTex;
 layout(set = 1, binding = 2) uniform sampler2D metalRoughTex;
 layout(set = 1, binding = 3) uniform sampler2D normalTex;
+layout(set = 1, binding = 4) uniform sampler2D emissiveTex;
 
 layout (location = 0) in vec3 inNormal;
 layout (location = 1) in vec2 inUV;
@@ -118,5 +121,7 @@ void main()
     vec3 f_diffuse = (1 - F) * (1 / PI) * c_diff;
     vec3 f_specular = F * D_GGX(NdotH, roughness) * V_SmithGGXCorrelatedFast(NdotV, NdotL, roughness);
 
-    outFragColor = vec4((f_diffuse + f_specular) * sceneData.sunlightColor.xyz * NdotL, baseColor.a);
+    vec3 emissive = materialData.emissiveFactors.xyz * texture(emissiveTex, inUV).xyz * materialData.emissiveStrength;
+
+    outFragColor = vec4((f_diffuse + f_specular) * sceneData.sunlightColor.xyz * NdotL + emissive, baseColor.a);
 }

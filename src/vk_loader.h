@@ -9,6 +9,10 @@
 #include <vk_types.h>
 #include <unordered_map>
 
+#include <fastgltf/glm_element_traits.hpp>
+#include <fastgltf/parser.hpp>
+#include <fastgltf/tools.hpp>
+
 namespace vkutil {
 
 // Skybox loadSkybox(std::string_view path);
@@ -55,6 +59,7 @@ public:
 
 private:
     void load(std::string_view filePath);
+    AllocatedImage loadImage(fastgltf::Asset& asset, fastgltf::Image& image, VkFormat format, bool mipmapped);
 
     void initMaterialDataBuffer(size_t materialCount);
 

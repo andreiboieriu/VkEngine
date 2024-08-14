@@ -123,7 +123,7 @@ void DescriptorManager::createDescriptorBuffers() {
     // get descriptor binding offsets
     vkGetDescriptorSetLayoutBindingOffsetEXT(device, mGlobalLayout, 0u, &mGlobalLayoutOffset);
     
-    for (unsigned int i = 0; i < 4; i++)
+    for (unsigned int i = 0; i < 5; i++)
         vkGetDescriptorSetLayoutBindingOffsetEXT(device, mMaterialLayout, i, &mMaterialLayoutOffset[i]);
 
 
@@ -230,7 +230,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[2]
     );
 
-    // create metal rough texture descriptor
+    // create normal texture descriptor
     VkDescriptorImageInfo normalDescriptor{};
 
     normalDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
@@ -248,6 +248,26 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[3]
     );
+
+    // create emissive texture descriptor
+    VkDescriptorImageInfo emissiveDescriptor{};
+
+    emissiveDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    emissiveDescriptor.imageView = resources.emissiveImage.imageView;
+    emissiveDescriptor.sampler = resources.emissiveSampler;
+
+    VkDescriptorGetInfoEXT emissiveDescriptorInfo{};
+    emissiveDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    emissiveDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    emissiveDescriptorInfo.data.pCombinedImageSampler = &emissiveDescriptor;
+
+    vkGetDescriptorEXT(
+        VulkanEngine::get().getDevice(),
+        &emissiveDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[4]
+    );
+
 
     VkDeviceSize retOffset = mCurrentOffset;
     mCurrentOffset += mMaterialLayoutSize;

@@ -12,9 +12,6 @@
 #include "vk_types.h"
 #include <glm/gtx/quaternion.hpp>
 
-#include <fastgltf/glm_element_traits.hpp>
-#include <fastgltf/parser.hpp>
-#include <fastgltf/tools.hpp>
 #include "volk.h"
 #include "stb_image.h"
 
@@ -47,7 +44,11 @@ VkSamplerMipmapMode extractMipmapMode(fastgltf::Filter filter) {
     }
 }
 
-std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image& image) {
+AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& image, VkFormat format, bool mipmapped) {
+    if (mImages.contains(image.name.c_str())) {
+        return mImages[image.name.c_str()];
+    }
+    
     AllocatedImage newImage{};
 
     int width, height, nrChannels;
@@ -69,7 +70,7 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
                     imageSize.height = height;
                     imageSize.depth = 1;
 
-                    newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, true);
+                    newImage = VulkanEngine::get().createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
 
                     stbi_image_free(data);
                 }
@@ -83,7 +84,7 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
                     imageSize.height = height;
                     imageSize.depth = 1;
 
-                    newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, true);
+                    newImage = VulkanEngine::get().createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
 
                     stbi_image_free(data);
                 }
@@ -103,7 +104,7 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
                             imageSize.height = height;
                             imageSize.depth = 1;
 
-                            newImage = VulkanEngine::get().createImage(data, imageSize, VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT, true);
+                            newImage = VulkanEngine::get().createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
 
                             stbi_image_free(data);
                         }
@@ -115,8 +116,10 @@ std::optional<AllocatedImage> loadImage(fastgltf::Asset& asset, fastgltf::Image&
         image.data);
 
     if (newImage.image == VK_NULL_HANDLE) {
-        return {};
+        return VulkanEngine::get().getErrorTexture();
     } else {
+        mImages[image.name.c_str()] = newImage;
+
         return newImage;
     }
 }
@@ -166,7 +169,6 @@ void LoadedGLTF::load(std::string_view filePath) {
     // temporal arrays for all the objects to use while creating the GLTF data
     std::vector<std::shared_ptr<MeshAsset>> meshes;
     std::vector<std::shared_ptr<GLTFNode>> nodes;
-    std::vector<AllocatedImage> images;
     std::vector<std::shared_ptr<GLTFMaterial>> materials;
     std::vector<VkSampler> samplers;
 
@@ -192,25 +194,6 @@ void LoadedGLTF::load(std::string_view filePath) {
     }
 
     mSamplers = samplers;
-
-    // load all textures
-    for (auto& image : asset.images) {
-        std::optional<AllocatedImage> newImage = loadImage(asset, image);
-
-        if (newImage.has_value()) {
-            if (mImages.contains(image.name.c_str())) {
-                VulkanEngine::get().destroyImage(newImage.value());
-                images.push_back(mImages[image.name.c_str()]);
-                continue;
-            }
-
-            images.push_back(newImage.value());
-            mImages[image.name.c_str()] = newImage.value();
-        } else {
-            images.push_back(VulkanEngine::get().getErrorTexture());
-            fmt::println("gltf failed to load texture: {}", image.name);
-        }
-    }
 
     // create buffer to hold material data
     initMaterialDataBuffer(asset.materials.size());
@@ -247,6 +230,8 @@ void LoadedGLTF::load(std::string_view filePath) {
         materialResources.metalRoughSampler = VulkanEngine::get().getDefaultLinearSampler();
         materialResources.normalImage = VulkanEngine::get().getDefaultNormalMap();
         materialResources.normalSampler = VulkanEngine::get().getDefaultLinearSampler();
+        materialResources.emissiveImage = VulkanEngine::get().getBlackTexture();
+        materialResources.emissiveSampler = VulkanEngine::get().getDefaultLinearSampler();
 
         // set uniform buffer for the material data
         materialResources.dataBuffer = mMaterialDataBuffer.buffer;
@@ -262,7 +247,7 @@ void LoadedGLTF::load(std::string_view filePath) {
             size_t image = asset.textures[material.pbrData.baseColorTexture.value().textureIndex].imageIndex.value();
             size_t sampler = asset.textures[material.pbrData.baseColorTexture.value().textureIndex].samplerIndex.value();
 
-            materialResources.colorImage = images[image];
+            materialResources.colorImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_SRGB, true);
             materialResources.colorSampler = samplers[sampler];
         }
 
@@ -270,7 +255,7 @@ void LoadedGLTF::load(std::string_view filePath) {
             size_t image = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].imageIndex.value();
             size_t sampler = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].samplerIndex.value();
 
-            materialResources.metalRoughImage = images[image];
+            materialResources.metalRoughImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_UNORM, true);
             materialResources.metalRoughSampler = samplers[sampler];
         }
 
@@ -278,13 +263,29 @@ void LoadedGLTF::load(std::string_view filePath) {
             size_t image = asset.textures[material.normalTexture.value().textureIndex].imageIndex.value();
             size_t sampler = asset.textures[material.normalTexture.value().textureIndex].samplerIndex.value();
 
-            materialResources.normalImage = images[image];
+            materialResources.normalImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_UNORM, true);
             materialResources.normalSampler = samplers[sampler];
 
             constants.normalScale = material.normalTexture.value().scale;
             fmt::println("normal scale: {}", constants.normalScale);
-        } else {
-            fmt::println("normal map missing");
+        }
+
+        if (material.emissiveTexture.has_value()) {
+            size_t image = asset.textures[material.emissiveTexture.value().textureIndex].imageIndex.value();
+            size_t sampler = asset.textures[material.emissiveTexture.value().textureIndex].samplerIndex.value();
+
+            materialResources.emissiveImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_SRGB, true);
+            materialResources.emissiveSampler = samplers[sampler];
+
+            constants.emissiveFactors.x = material.emissiveFactor[0];
+            constants.emissiveFactors.y = material.emissiveFactor[1];
+            constants.emissiveFactors.z = material.emissiveFactor[2];
+
+            if (material.emissiveStrength.has_value()) {
+                constants.emissiveStrength = material.emissiveStrength.value();
+            } else {
+                constants.emissiveStrength = 1;
+            }
         }
 
 

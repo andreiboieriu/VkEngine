@@ -86,6 +86,8 @@ struct MaterialInstance {
 struct alignas(16) MaterialConstants {
     glm::vec4 colorFactors;
     glm::vec4 metalRoughFactors;
+    glm::vec4 emissiveFactors;
+    float emissiveStrength;
     float normalScale;
 };
 
@@ -98,6 +100,9 @@ struct MaterialResources {
 
     AllocatedImage normalImage;
     VkSampler normalSampler;
+
+    AllocatedImage emissiveImage;
+    VkSampler emissiveSampler;
 
     VkBuffer dataBuffer;
     uint32_t dataBufferOffset;

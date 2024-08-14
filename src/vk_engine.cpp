@@ -652,6 +652,7 @@ void VulkanEngine::initDefaultData() {
 		destroyImage(mGreyImage);
 		destroyImage(mBlackImage);
 		destroyImage(mErrorCheckerboardImage);
+        destroyImage(mDefaultNormalMap);
 	});
 }
 

@@ -3,6 +3,8 @@
 #include "volk.h"
 #include "vk_types.h"
 
+// TODO: generalize
+
 class Fxaa {
 
 public:
@@ -12,6 +14,9 @@ public:
         float relativeThreshold;
         float pixelBlendStrength;
         int quality;
+
+        // glm::ivec4 intData;
+        // glm::vec4 floatData;
     };
 
     struct Subpass {
@@ -37,20 +42,4 @@ private:
     std::vector<VkWriteDescriptorSet> mDescriptorWrites;
 
     bool mEnabled;
-
-    // const float fixedThresholdValues[3] = {
-    //     0.0312,
-    //     0.0625,
-    //     0.0833
-    // };
-
-    // int selectedFixedThreshold = 0;
-
-    // const float relativeThresholdValues[3] = {
-    //     0.0312,
-    //     0.0625,
-    //     0.0833
-    // };
-
-    // int selectedRelativeThreshold = 0;
 };
