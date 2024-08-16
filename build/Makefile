@@ -227,19 +227,6 @@ imgui/fast:
 .PHONY : imgui/fast
 
 #=============================================================================
-# Target rules for targets named fastgltf_simdjson
-
-# Build rule for target.
-fastgltf_simdjson: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fastgltf_simdjson
-.PHONY : fastgltf_simdjson
-
-# fast build rule for target.
-fastgltf_simdjson/fast:
-	$(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build
-.PHONY : fastgltf_simdjson/fast
-
-#=============================================================================
 # Target rules for targets named fastgltf
 
 # Build rule for target.
@@ -377,7 +364,6 @@ help:
 	@echo "... SDL2main"
 	@echo "... engine"
 	@echo "... fastgltf"
-	@echo "... fastgltf_simdjson"
 	@echo "... fmt"
 	@echo "... imgui"
 	@echo "... spirv_reflect"

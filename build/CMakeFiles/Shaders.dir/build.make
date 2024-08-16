@@ -66,6 +66,18 @@ include CMakeFiles/Shaders.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/Shaders.dir/progress.make
 
+CMakeFiles/Shaders: ../shaders/bloom_pass0.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass1.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass10.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass11.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass2.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass3.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass4.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass5.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass6.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass7.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass8.comp.spv
+CMakeFiles/Shaders: ../shaders/bloom_pass9.comp.spv
 CMakeFiles/Shaders: ../shaders/fxaa_pass0.comp.spv
 CMakeFiles/Shaders: ../shaders/fxaa_pass1.comp.spv
 CMakeFiles/Shaders: ../shaders/mesh.frag.spv
@@ -78,51 +90,111 @@ CMakeFiles/Shaders: ../shaders/sprite.frag.spv
 CMakeFiles/Shaders: ../shaders/sprite.vert.spv
 CMakeFiles/Shaders: ../shaders/tone_mapping_pass0.comp.spv
 
+../shaders/bloom_pass0.comp.spv: ../shaders/bloom_pass0.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../shaders/bloom_pass0.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass0.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass0.comp.spv
+
+../shaders/bloom_pass1.comp.spv: ../shaders/bloom_pass1.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../shaders/bloom_pass1.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass1.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass1.comp.spv
+
+../shaders/bloom_pass10.comp.spv: ../shaders/bloom_pass10.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../shaders/bloom_pass10.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass10.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass10.comp.spv
+
+../shaders/bloom_pass11.comp.spv: ../shaders/bloom_pass11.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ../shaders/bloom_pass11.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass11.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass11.comp.spv
+
+../shaders/bloom_pass2.comp.spv: ../shaders/bloom_pass2.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ../shaders/bloom_pass2.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass2.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass2.comp.spv
+
+../shaders/bloom_pass3.comp.spv: ../shaders/bloom_pass3.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ../shaders/bloom_pass3.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass3.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass3.comp.spv
+
+../shaders/bloom_pass4.comp.spv: ../shaders/bloom_pass4.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ../shaders/bloom_pass4.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass4.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass4.comp.spv
+
+../shaders/bloom_pass5.comp.spv: ../shaders/bloom_pass5.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ../shaders/bloom_pass5.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass5.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass5.comp.spv
+
+../shaders/bloom_pass6.comp.spv: ../shaders/bloom_pass6.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating ../shaders/bloom_pass6.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass6.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass6.comp.spv
+
+../shaders/bloom_pass7.comp.spv: ../shaders/bloom_pass7.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating ../shaders/bloom_pass7.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass7.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass7.comp.spv
+
+../shaders/bloom_pass8.comp.spv: ../shaders/bloom_pass8.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating ../shaders/bloom_pass8.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass8.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass8.comp.spv
+
+../shaders/bloom_pass9.comp.spv: ../shaders/bloom_pass9.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating ../shaders/bloom_pass9.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/bloom_pass9.comp -o /home/gooby/Development/VkEngine/shaders/bloom_pass9.comp.spv
+
 ../shaders/fxaa_pass0.comp.spv: ../shaders/fxaa_pass0.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../shaders/fxaa_pass0.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating ../shaders/fxaa_pass0.comp.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/fxaa_pass0.comp -o /home/gooby/Development/VkEngine/shaders/fxaa_pass0.comp.spv
 
 ../shaders/fxaa_pass1.comp.spv: ../shaders/fxaa_pass1.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../shaders/fxaa_pass1.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating ../shaders/fxaa_pass1.comp.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/fxaa_pass1.comp -o /home/gooby/Development/VkEngine/shaders/fxaa_pass1.comp.spv
 
 ../shaders/mesh.frag.spv: ../shaders/mesh.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../shaders/mesh.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating ../shaders/mesh.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh.frag -o /home/gooby/Development/VkEngine/shaders/mesh.frag.spv
 
 ../shaders/mesh.vert.spv: ../shaders/mesh.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ../shaders/mesh.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating ../shaders/mesh.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh.vert -o /home/gooby/Development/VkEngine/shaders/mesh.vert.spv
 
 ../shaders/mesh_pbr.frag.spv: ../shaders/mesh_pbr.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ../shaders/mesh_pbr.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating ../shaders/mesh_pbr.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh_pbr.frag -o /home/gooby/Development/VkEngine/shaders/mesh_pbr.frag.spv
 
 ../shaders/mesh_pbr.vert.spv: ../shaders/mesh_pbr.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ../shaders/mesh_pbr.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating ../shaders/mesh_pbr.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/mesh_pbr.vert -o /home/gooby/Development/VkEngine/shaders/mesh_pbr.vert.spv
 
 ../shaders/skybox.frag.spv: ../shaders/skybox.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ../shaders/skybox.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating ../shaders/skybox.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox.frag -o /home/gooby/Development/VkEngine/shaders/skybox.frag.spv
 
 ../shaders/skybox.vert.spv: ../shaders/skybox.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ../shaders/skybox.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating ../shaders/skybox.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox.vert -o /home/gooby/Development/VkEngine/shaders/skybox.vert.spv
 
 ../shaders/sprite.frag.spv: ../shaders/sprite.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating ../shaders/sprite.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating ../shaders/sprite.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.frag -o /home/gooby/Development/VkEngine/shaders/sprite.frag.spv
 
 ../shaders/sprite.vert.spv: ../shaders/sprite.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating ../shaders/sprite.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating ../shaders/sprite.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.vert -o /home/gooby/Development/VkEngine/shaders/sprite.vert.spv
 
 ../shaders/tone_mapping_pass0.comp.spv: ../shaders/tone_mapping_pass0.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating ../shaders/tone_mapping_pass0.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating ../shaders/tone_mapping_pass0.comp.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/tone_mapping_pass0.comp -o /home/gooby/Development/VkEngine/shaders/tone_mapping_pass0.comp.spv
 
 Shaders: CMakeFiles/Shaders
+Shaders: ../shaders/bloom_pass0.comp.spv
+Shaders: ../shaders/bloom_pass1.comp.spv
+Shaders: ../shaders/bloom_pass10.comp.spv
+Shaders: ../shaders/bloom_pass11.comp.spv
+Shaders: ../shaders/bloom_pass2.comp.spv
+Shaders: ../shaders/bloom_pass3.comp.spv
+Shaders: ../shaders/bloom_pass4.comp.spv
+Shaders: ../shaders/bloom_pass5.comp.spv
+Shaders: ../shaders/bloom_pass6.comp.spv
+Shaders: ../shaders/bloom_pass7.comp.spv
+Shaders: ../shaders/bloom_pass8.comp.spv
+Shaders: ../shaders/bloom_pass9.comp.spv
 Shaders: ../shaders/fxaa_pass0.comp.spv
 Shaders: ../shaders/fxaa_pass1.comp.spv
 Shaders: ../shaders/mesh.frag.spv

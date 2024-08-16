@@ -11,10 +11,15 @@ constexpr int MAX_PUSH_CONSTANTS_SIZE = 128;
 class ComputeEffect {
 
 public:
-    struct PushConstantInfo {
+    struct PushConstantLocation {
+        uint32_t subpass;
         uint32_t offset;
+    };
+
+    struct PushConstantInfo {
+        // uint32_t offset;
         uint32_t size;
-        std::string name;
+        std::vector<PushConstantLocation> locations;
         SpvReflectTypeFlags type;
     };
 
@@ -34,6 +39,11 @@ public:
         }
     };
 
+    struct BindingData {
+        std::string name;
+        VkDescriptorType descriptorType;
+    };
+
     struct Subpass {
         VkPipeline pipeline;
         VkPipelineLayout pipelineLayout;
@@ -41,8 +51,11 @@ public:
         
         uint32_t pushConstantsSize;
         char pushConstants[MAX_PUSH_CONSTANTS_SIZE];
-        std::vector<PushConstantInfo> pushInfos;
+
+        std::vector<BindingData> bindings;
     };
+
+
 
     ComputeEffect(std::string name);
     ComputeEffect(std::string name, std::span<PushConstantData> defaultPushConstants);
@@ -54,16 +67,47 @@ public:
 
 protected:
     void createPipelineLayout();
-    void addSubpass();
     void synchronizeWithCompute(VkCommandBuffer commandBuffer);
 
     void load(std::string name);
     void setDefaultPushConstants(std::span<PushConstantData> defaultPushConstants);
-    Subpass createSubpass(std::string path);
+    void addSubpass(std::string path);
+
+    template<typename T>
+    void writePushConstant(const std::string& name, T value) {
+        if (!mPushInfoMap.contains(name)) {
+            return;
+        }
+
+        PushConstantInfo& pushInfo = mPushInfoMap[name];
+
+        if (sizeof(T) != pushInfo.size) {
+            fmt::println("write push constant failed: size mismatch");
+            return;
+        }
+
+        for (auto& location : pushInfo.locations) {
+            *(T*)getAddr(location) = value;
+        }
+    }
+    
+    void writePushConstant(const std::string& name, void* addr, size_t size);
 
     void freeResources();
 
+    void* getAddr(PushConstantLocation pushLocation) {
+        return mSubpasses[pushLocation.subpass].pushConstants + pushLocation.offset;
+    }
+
     std::vector<Subpass> mSubpasses;
+
+    // TODO: improve later
+    bool mUseBufferImage = false;
+    AllocatedImage mBufferImage;
+
+    std::vector<VkImageView> mBufferImageMipViews;
+
+    std::unordered_map<std::string, PushConstantInfo> mPushInfoMap;
 
     std::string mName;
     bool mEnabled;

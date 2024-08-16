@@ -14715,10 +14715,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/GLES2/gl2platform.h
+ /usr/include/GLES2/gl2platform.h
  /usr/include/KHR/khrplatform.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/GLES2/gl2.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/GLES2/gl2ext.h
+ /usr/include/GLES2/gl2.h
+ /usr/include/GLES2/gl2ext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/render/SDL_sysrender.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h
@@ -21599,10 +21599,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.o
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_egl_c.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+ /usr/include/EGL/eglext.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl.h
@@ -24411,10 +24411,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenopengles.c.
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_egl_c.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+ /usr/include/EGL/eglext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/SDL_offscreenvideo.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h
 
@@ -24561,10 +24561,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenvideo.c.o
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/SDL_offscreenopengles.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_egl_c.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+ /usr/include/EGL/eglext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o
@@ -24706,10 +24706,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_egl_c.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+ /usr/include/EGL/eglext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/offscreen/SDL_offscreenvideo.h
 
@@ -24934,8 +24934,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h
@@ -25331,8 +25331,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11touch.h
@@ -25572,8 +25572,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11framebuffer.h
@@ -25784,8 +25784,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/events/SDL_keyboard_c.h
@@ -26120,8 +26120,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11messagebox.h
@@ -26364,8 +26364,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h
@@ -26576,8 +26576,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11xinput2.h
@@ -26789,8 +26789,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_hints.h
@@ -26798,7 +26798,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11opengles.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_egl_c.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+ /usr/include/EGL/eglext.h
  /usr/include/dlfcn.h
  /usr/include/x86_64-linux-gnu/bits/dlfcn.h
  /usr/include/x86_64-linux-gnu/bits/dl_find_object.h
@@ -27008,14 +27008,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11opengles.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_egl_c.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+ /usr/include/EGL/eglext.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11shape.c
@@ -27221,8 +27221,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11shape.h
@@ -27432,8 +27432,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11touch.h
@@ -27747,8 +27747,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11framebuffer.h
@@ -27759,7 +27759,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11opengles.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_egl_c.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+ /usr/include/EGL/eglext.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.c
@@ -27965,8 +27965,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_loadso.h
@@ -28283,8 +28283,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11shape.h
@@ -28293,7 +28293,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11opengles.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/SDL_egl_c.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+ /usr/include/EGL/eglext.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_timer.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_syswm.h
  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_version.h
@@ -28502,8 +28502,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xfixes.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11xfixes.h
@@ -28722,8 +28722,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o
  /usr/include/GL/gl.h
  /usr/include/GL/glxext.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h
- /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h
+ /usr/include/EGL/egl.h
+ /usr/include/EGL/eglplatform.h
  /usr/include/KHR/khrplatform.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h
  /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11xinput2.h

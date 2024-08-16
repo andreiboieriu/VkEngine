@@ -14,8 +14,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/cmake_pch.hxx.pch" "gcc" "src/CMakeFiles/engine.dir/cmake_pch.hxx.pch.d"
   "/home/gooby/Development/VkEngine/src/compute_effects/compute_effect.cpp" "src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o" "gcc" "src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o.d"
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o" "gcc" "src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o.d"
-  "/home/gooby/Development/VkEngine/src/compute_effects/fxaa.cpp" "src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o" "gcc" "src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o.d"
-  "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o" "gcc" "src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o.d"
   "/home/gooby/Development/VkEngine/src/deletion_queue.cpp" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o" "gcc" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
   "/home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o" "gcc" "src/CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
   "/home/gooby/Development/VkEngine/src/main.cpp" "src/CMakeFiles/engine.dir/main.cpp.o" "gcc" "src/CMakeFiles/engine.dir/main.cpp.o.d"
@@ -57,7 +55,6 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/gooby/Development/VkEngine/build/third_party/CMakeFiles/imgui.dir/DependInfo.cmake"
   "/home/gooby/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/fastgltf.dir/DependInfo.cmake"
   "/home/gooby/Development/VkEngine/build/third_party/SDL/CMakeFiles/SDL2.dir/DependInfo.cmake"
-  "/home/gooby/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -1,11 +1,6 @@
-﻿#include "fastgltf/types.hpp"
-#include "fastgltf/util.hpp"
-#include "fmt/core.h"
-#include <filesystem>
-#include <memory>
-#include <string_view>
-#include <vk_loader.h>
+﻿#include "vk_loader.h"
 
+#include "fastgltf/tools.hpp"
 #include "vk_engine.h"
 #include "vk_materials.h"
 #include "vk_types.h"
@@ -13,6 +8,10 @@
 
 #include "volk.h"
 #include "stb_image.h"
+#include "fmt/core.h"
+#include <filesystem>
+#include <memory>
+#include <string_view>
 
 // convert fastgltf opengl filter to vulkan
 VkFilter extractFilter(fastgltf::Filter filter) {
@@ -74,8 +73,8 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
                     stbi_image_free(data);
                 }
             },
-            [&](fastgltf::sources::Vector& vector) {
-                unsigned char* data = stbi_load_from_memory(vector.bytes.data(), static_cast<int>(vector.bytes.size()), &width, &height, &nrChannels, 4);
+            [&](fastgltf::sources::Array& vector) {
+                unsigned char* data = stbi_load_from_memory(reinterpret_cast<const stbi_uc*>(vector.bytes.data()), static_cast<int>(vector.bytes.size()), &width, &height, &nrChannels, 4);
 
                 if (data) {
                     VkExtent3D imageSize;
@@ -94,8 +93,8 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
 
                 std::visit(fastgltf::visitor {
                     [](auto& arg) {},
-                    [&](fastgltf::sources::Vector& vector) {
-                        unsigned char* data = stbi_load_from_memory(vector.bytes.data() + bufferView.byteOffset, static_cast<int>(bufferView.byteLength), &width, &height, &nrChannels, 4);
+                    [&](fastgltf::sources::Array& vector) {
+                        unsigned char* data = stbi_load_from_memory(reinterpret_cast<const stbi_uc*>(vector.bytes.data() + bufferView.byteOffset), static_cast<int>(bufferView.byteLength), &width, &height, &nrChannels, 4);
 
                         if (data) {
                             VkExtent3D imageSize;
@@ -123,47 +122,37 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
     }
 }
 
-void LoadedGLTF::load(std::string_view filePath) {
-    fmt::println("Loading GLTF: {}", filePath);
+void LoadedGLTF::load(std::filesystem::path filePath) {
+    fmt::println("Loading GLTF: {}", filePath.string());
+
+    // check if file exists
+    assert(std::filesystem::exists(filePath) && ("Failed to find gltf file: " + filePath.string()).c_str());
 
     // define gltf loading options
-    constexpr auto gltfOptions = fastgltf::Options::DontRequireValidAssetMember | fastgltf::Options::AllowDouble | fastgltf::Options::LoadGLBBuffers | fastgltf::Options::LoadExternalBuffers;
+    constexpr auto gltfOptions = fastgltf::Options::DontRequireValidAssetMember |
+                                                fastgltf::Options::AllowDouble |
+                                                fastgltf::Options::LoadExternalBuffers;
 
-    // get file directory
-    std::filesystem::path fileDirectory = std::filesystem::path(filePath).parent_path();
+    // create parser
+    fastgltf::Parser parser(fastgltf::Extensions::KHR_materials_emissive_strength);
 
-    // define needed fastgltf variables
-    fastgltf::Parser parser{};
-    fastgltf::Asset asset;
+    // open gltf file
+    auto gltfFile = fastgltf::MappedGltfFile::FromPath(filePath);
 
-    fastgltf::GltfDataBuffer data;
-    data.loadFromFile(filePath);
-
-    // determine gltf type
-    auto type = fastgltf::determineGltfFileType(&data);
-
-    if (type == fastgltf::GltfType::glTF) {
-        auto load = parser.loadGLTF(&data, fileDirectory, gltfOptions);
-
-        if (!load) {
-            fmt::println("Failed to load glTF: {}", fastgltf::to_underlying(load.error()));
-            return;
-        }
-
-        asset = std::move(load.get());
-    } else if (type == fastgltf::GltfType::GLB) {
-        auto load = parser.loadBinaryGLTF(&data, fileDirectory, gltfOptions);
-
-        if (!load) {
-            fmt::println("Failed to load binary glTF: {}", fastgltf::to_underlying(load.error()));
-            return;
-        }
-
-        asset = std::move(load.get());
-    } else {
-        fmt::println("Failed to determine glTF container");
+    if (!gltfFile) {
+        fmt::println("Failed to open gltf file: {}", fastgltf::getErrorMessage(gltfFile.error()));
         return;
     }
+
+    // parse gltf file
+    auto assetExpected = parser.loadGltf(gltfFile.get(), filePath.parent_path(), gltfOptions);
+
+    if (assetExpected.error() != fastgltf::Error::None) {
+        fmt::println("Failed to load gltf: {}", fastgltf::getErrorMessage(assetExpected.error()));
+        return;
+    }
+
+    fastgltf::Asset& asset = assetExpected.get();
 
     // temporal arrays for all the objects to use while creating the GLTF data
     std::vector<std::shared_ptr<MeshAsset>> meshes;
@@ -237,10 +226,6 @@ void LoadedGLTF::load(std::string_view filePath) {
         materialResources.dataBufferOffset = dataIndex * sizeof(MaterialConstants);
         materialResources.dataBufferAddress = mMaterialDataBuffer.deviceAddress;
 
-        if (material.specular && material.specular->specularTexture.has_value()) {
-            fmt::println("found spec texture");
-        }
-
         // get textures from gltf file
         if (material.pbrData.baseColorTexture.has_value()) {
             size_t image = asset.textures[material.pbrData.baseColorTexture.value().textureIndex].imageIndex.value();
@@ -266,7 +251,6 @@ void LoadedGLTF::load(std::string_view filePath) {
             materialResources.normalSampler = samplers[sampler];
 
             constants.normalScale = material.normalTexture.value().scale;
-            fmt::println("normal scale: {}", constants.normalScale);
         }
 
         if (material.emissiveTexture.has_value()) {
@@ -280,11 +264,7 @@ void LoadedGLTF::load(std::string_view filePath) {
             constants.emissiveFactors.y = material.emissiveFactor[1];
             constants.emissiveFactors.z = material.emissiveFactor[2];
 
-            if (material.emissiveStrength.has_value()) {
-                constants.emissiveStrength = material.emissiveStrength.value();
-            } else {
-                constants.emissiveStrength = 1;
-            }
+            constants.emissiveStrength = material.emissiveStrength;
         }
 
 
@@ -335,13 +315,13 @@ void LoadedGLTF::load(std::string_view filePath) {
 
             // load vertex positions
             {
-                fastgltf::Accessor& posAccessor = asset.accessors[p.findAttribute("POSITION")->second];
+                fastgltf::Accessor& posAccessor = asset.accessors[p.findAttribute("POSITION")->accessorIndex];
                 vertices.resize(vertices.size() + posAccessor.count);
 
-                fastgltf::iterateAccessorWithIndex<glm::vec3>(asset, posAccessor,
-                    [&](glm::vec3 v, size_t index) {
+                fastgltf::iterateAccessorWithIndex<fastgltf::math::fvec3>(asset, posAccessor,
+                    [&](fastgltf::math::fvec3 v, size_t index) {
                         Vertex newVertex;
-                        newVertex.position = v;
+                        newVertex.position = glm::vec3(v.x(), v.y(), v.z());
                         newVertex.normal = {1, 0, 0};
                         newVertex.uvX = 0;
                         newVertex.uvY = 0;
@@ -352,19 +332,19 @@ void LoadedGLTF::load(std::string_view filePath) {
             // load vertex normals
             auto normals = p.findAttribute("NORMAL");
             if (normals != p.attributes.end()) {
-                fastgltf::iterateAccessorWithIndex<glm::vec3>(asset, asset.accessors[(*normals).second],
-                    [&](glm::vec3 v, size_t index) {
-                        vertices[initialVtx + index].normal = v;
+                fastgltf::iterateAccessorWithIndex<fastgltf::math::fvec3>(asset, asset.accessors[normals->accessorIndex],
+                    [&](fastgltf::math::fvec3 v, size_t index) {
+                        vertices[initialVtx + index].normal = glm::vec3(v.x(), v.y(), v.z());
                     });
             }
 
             // load UVs
             auto uv = p.findAttribute("TEXCOORD_0");
             if (uv != p.attributes.end()) {
-                fastgltf::iterateAccessorWithIndex<glm::vec2>(asset, asset.accessors[(*uv).second],
-                [&](glm::vec2 v, size_t index) {
-                    vertices[initialVtx + index].uvX = v.x;
-                    vertices[initialVtx + index].uvY = v.y;
+                fastgltf::iterateAccessorWithIndex<fastgltf::math::fvec2>(asset, asset.accessors[uv->accessorIndex],
+                [&](fastgltf::math::fvec2 v, size_t index) {
+                    vertices[initialVtx + index].uvX = v.x();
+                    vertices[initialVtx + index].uvY = v.y();
                 });
             }
 
@@ -405,23 +385,9 @@ void LoadedGLTF::load(std::string_view filePath) {
         nodes.push_back(newNode);
         mNodes[node.name.c_str()] = newNode;
 
-        std::visit(fastgltf::visitor {
-            [&](fastgltf::Node::TransformMatrix matrix) {
-                memcpy(&newNode->getLocalTransform(), matrix.data(), sizeof(matrix));
-            },
-            [&](fastgltf::Node::TRS transform) {
-                glm::vec3 tl(transform.translation[0], transform.translation[1], transform.translation[2]);
-                glm::quat rot(transform.rotation[3], transform.rotation[0], transform.rotation[1], transform.rotation[2]);
-                glm::vec3 sc(transform.scale[0], transform.scale[1], transform.scale[2]);
+        auto transformMatrix = fastgltf::getTransformMatrix(node);
 
-                glm::mat4 tm = glm::translate(glm::mat4(1.f), tl);
-                glm::mat4 rm = glm::toMat4(rot);
-                glm::mat4 sm = glm::scale(glm::mat4(1.f), sc);
-
-                newNode->setLocalTransform(tm * rm * sm);
-            }
-        },
-        node.transform);
+        memcpy(&newNode->getLocalTransform(), transformMatrix.data(), transformMatrix.size_bytes());
     }
 
     // run loop again to setup transform hierarchy
@@ -444,7 +410,7 @@ void LoadedGLTF::load(std::string_view filePath) {
     }
 }
 
-LoadedGLTF::LoadedGLTF(std::string_view filePath) {
+LoadedGLTF::LoadedGLTF(std::filesystem::path filePath) {
     load(filePath);
 }
 

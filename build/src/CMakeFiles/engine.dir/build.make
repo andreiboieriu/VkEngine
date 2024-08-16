@@ -324,28 +324,12 @@ src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.s"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -S /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.cpp -o CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.s
 
-src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o: src/CMakeFiles/engine.dir/flags.make
-src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o: ../src/compute_effects/fxaa.cpp
-src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
-src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
-src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o"
-	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o -MF CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o.d -o CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o -c /home/gooby/Development/VkEngine/src/compute_effects/fxaa.cpp
-
-src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/compute_effects/fxaa.cpp.i"
-	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -E /home/gooby/Development/VkEngine/src/compute_effects/fxaa.cpp > CMakeFiles/engine.dir/compute_effects/fxaa.cpp.i
-
-src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/compute_effects/fxaa.cpp.s"
-	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -S /home/gooby/Development/VkEngine/src/compute_effects/fxaa.cpp -o CMakeFiles/engine.dir/compute_effects/fxaa.cpp.s
-
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/flags.make
 src/CMakeFiles/engine.dir/skybox.cpp.o: ../src/skybox.cpp
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/engine.dir/skybox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/engine.dir/skybox.cpp.o"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/skybox.cpp.o -MF CMakeFiles/engine.dir/skybox.cpp.o.d -o CMakeFiles/engine.dir/skybox.cpp.o -c /home/gooby/Development/VkEngine/src/skybox.cpp
 
 src/CMakeFiles/engine.dir/skybox.cpp.i: cmake_force
@@ -361,7 +345,7 @@ src/CMakeFiles/engine.dir/resource_manager.cpp.o: ../src/resource_manager.cpp
 src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/engine.dir/resource_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/engine.dir/resource_manager.cpp.o"
 	cd /home/gooby/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/resource_manager.cpp.o -MF CMakeFiles/engine.dir/resource_manager.cpp.o.d -o CMakeFiles/engine.dir/resource_manager.cpp.o -c /home/gooby/Development/VkEngine/src/resource_manager.cpp
 
 src/CMakeFiles/engine.dir/resource_manager.cpp.i: cmake_force
@@ -389,7 +373,6 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/vk_scene.cpp.o" \
 "CMakeFiles/engine.dir/scene_node.cpp.o" \
 "CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o" \
-"CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o" \
 "CMakeFiles/engine.dir/skybox.cpp.o" \
 "CMakeFiles/engine.dir/resource_manager.cpp.o"
 
@@ -412,7 +395,6 @@ src/engine: src/CMakeFiles/engine.dir/vk_materials.cpp.o
 src/engine: src/CMakeFiles/engine.dir/vk_scene.cpp.o
 src/engine: src/CMakeFiles/engine.dir/scene_node.cpp.o
 src/engine: src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o
-src/engine: src/CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o
 src/engine: src/CMakeFiles/engine.dir/skybox.cpp.o
 src/engine: src/CMakeFiles/engine.dir/resource_manager.cpp.o
 src/engine: src/CMakeFiles/engine.dir/build.make
@@ -425,9 +407,8 @@ src/engine: third_party/fastgltf/libfastgltf.a
 src/engine: /home/gooby/vulkan/1.3.283.0/x86_64/lib/libvulkan.so
 src/engine: third_party/libvolk.a
 src/engine: third_party/SDL/libSDL2-2.0.so.0.2800.4
-src/engine: third_party/fastgltf/libfastgltf_simdjson.a
 src/engine: src/CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable engine"
 	cd /home/gooby/Development/VkEngine/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

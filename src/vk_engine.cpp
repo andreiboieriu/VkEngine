@@ -97,9 +97,17 @@ void VulkanEngine::init()
 
     mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", toneData);
 
+    std::vector<ComputeEffect::PushConstantData> bloomData = {
+        ComputeEffect::PushConstantData("filterRadius", 0.005f),
+        ComputeEffect::PushConstantData("strength", 0.04f),
+    };
+
+    mBloomEffect = std::make_unique<ComputeEffect>("bloom", bloomData);
+
     mMainDeletionQueue.push([&]() {
         mFxaaEffect = nullptr;
         mToneMappingEffect = nullptr;
+        mBloomEffect = nullptr;
     });
 
     mMaterialManager = std::make_unique<MaterialManager>();
@@ -654,6 +662,9 @@ void VulkanEngine::initDefaultData() {
 	sampl.minFilter = VK_FILTER_NEAREST;
     sampl.anisotropyEnable = VK_TRUE;
     sampl.maxAnisotropy = mMaxSamplerAnisotropy;
+    sampl.addressModeU = VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_BORDER;
+    sampl.addressModeV = VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_BORDER;
+    sampl.borderColor = VK_BORDER_COLOR_FLOAT_TRANSPARENT_BLACK;
 	vkCreateSampler(mDevice, &sampl, nullptr, &mDefaultSamplerNearest);
 
 	sampl.magFilter = VK_FILTER_LINEAR;
@@ -975,6 +986,7 @@ void VulkanEngine::draw() {
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
 
     // execute post processing effects
+    mBloomEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
     mToneMappingEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
     mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent, false);
 
@@ -1109,6 +1121,7 @@ void VulkanEngine::drawGui() {
         ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
         ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
 
+        mBloomEffect->drawGui();
         mToneMappingEffect->drawGui();
         mFxaaEffect->drawGui();
     }
@@ -1330,6 +1343,7 @@ AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkIma
 
     if (mipMapped) {
         imageInfo.mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(size.width, size.height)))) + 1;
+        newImage.mipLevels = imageInfo.mipLevels;
     }
 
     // allocate image on dedicated gpu memory
@@ -1439,7 +1453,7 @@ AllocatedImage VulkanEngine::createSkybox(void* data[6], VkExtent2D size, VkForm
 
 
 // hardcoded to rgba 8 bit
-AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {
+AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {    
     size_t dataSize = size.depth * size.width * size.height * 4;
     AllocatedBuffer uploadBuffer = createBuffer(dataSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
 

@@ -84,7 +84,7 @@ mat3 cotangentFrame(vec3 n, vec3 p, vec2 uv) {
 }
 
 vec3 perturbNormal(vec3 n, vec3 v) {
-	vec3 map = normalize(texture(normalTex, inUV).xyz * 2.0 - 1.0);
+	vec3 map = normalize((texture(normalTex, inUV).xyz * 2.0 - 1.0) * vec3(materialData.normalScale, materialData.normalScale, 1.0));
 
     mat3 TBN = cotangentFrame(n, -v, inUV);
 
@@ -101,8 +101,8 @@ void main()
 	vec3 v = normalize(sceneData.viewPosition.xyz - inFragWorldPos);
     vec3 h = normalize(v + l);
 
-    if (sceneData.data.x == 1.0)
-        n = perturbNormal(n, v);
+    // get normal from normal map
+    n = perturbNormal(n, v);
 
     float NdotV = abs(dot(n, v)) + 1e-5;
     float NdotL = clamp(dot(n, l), 0.0, 1.0);

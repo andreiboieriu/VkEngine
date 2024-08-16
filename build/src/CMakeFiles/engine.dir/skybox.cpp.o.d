@@ -415,8 +415,14 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
-  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/glm_element_traits.hpp \
-  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/tools.hpp \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/fstream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/istream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/istream.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/codecvt.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fstream.tcc \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/filesystem \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_fwd.h \
@@ -430,14 +436,11 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/codecvt.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/locale_conv.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iomanip \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/quoted_string.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/sstream \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/istream \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/istream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/sstream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/codecvt \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_dir.h \
@@ -446,31 +449,11 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/variant \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/version \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/memory_resource \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/fwd.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/packing.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_uint2.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float2.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float4.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_packing.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/geometric.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/matrix.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/vector_relational.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/integer.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_integer.inl \
-  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/parser.hpp \
   /home/gooby/Development/VkEngine/src/vk_descriptors.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
   /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.h \
@@ -489,6 +472,7 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
   /usr/include/inttypes.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/math.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \

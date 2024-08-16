@@ -70,7 +70,7 @@ void vkutil::copyImageToImage(VkCommandBuffer commandBuffer, VkImage src, VkImag
     vkCmdBlitImage2(commandBuffer, &blitInfo);
 }
 
-void vkutil::generateMipmaps(VkCommandBuffer commandBuffer, VkImage image, VkExtent2D imageExtent) {
+void vkutil::generateMipmaps(VkCommandBuffer commandBuffer, VkImage image, VkExtent2D imageExtent, VkImageLayout finalLayout) {
     int mipLevels = int(std::floor(std::log2(std::max(imageExtent.width, imageExtent.height)))) + 1;
 
     for (int mip = 0; mip < mipLevels; mip++) {

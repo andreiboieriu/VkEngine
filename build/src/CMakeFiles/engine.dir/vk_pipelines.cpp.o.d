@@ -573,8 +573,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /home/gooby/Development/VkEngine/src/vk_loader.h \
-  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/glm_element_traits.hpp \
-  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/tools.hpp \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/core.hpp \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/filesystem \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/fs_fwd.h \
@@ -601,29 +600,10 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_relops.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/variant \
   /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/version \
+  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/memory_resource \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/fwd.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/packing.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_uint2.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float2.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/vector_float4.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_packing.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/type_half.inl \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/geometric.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/matrix.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/vector_relational.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/integer.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_integer.inl \
-  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/parser.hpp \
   /home/gooby/Development/VkEngine/src/skybox.h \
   /home/gooby/Development/VkEngine/src/scene_node.h \
   /home/gooby/Development/VkEngine/src/ecs_components/components.h \

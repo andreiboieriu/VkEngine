@@ -1,0 +1,42 @@
+#version 460
+
+layout (local_size_x = 16, local_size_y = 16) in;
+
+layout(set = 0, binding = 0) uniform sampler2D bufferImageMip3;
+layout(rgba16f, set = 0, binding = 1) uniform image2D bufferImageMip2;
+
+layout( push_constant ) uniform constants
+{
+    ivec2 imageExtent;
+    vec2 bufferImageExtent;
+    float filterRadius;
+} PushConstants;
+
+
+
+void main() {
+    vec2 destCoord = vec2(gl_GlobalInvocationID.xy);
+
+    if(destCoord.x < PushConstants.imageExtent.x / 4 && destCoord.y < PushConstants.imageExtent.y / 4)
+    {
+        vec2 srcTexelSize = 1.0 / PushConstants.bufferImageExtent * 8.0;
+
+        vec2 texCoord = (destCoord / 2.0 + 0.25) * srcTexelSize;
+
+        vec4 a = texture(bufferImageMip3, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y + PushConstants.filterRadius));
+        vec4 b = texture(bufferImageMip3, vec2(texCoord.x               , texCoord.y + PushConstants.filterRadius));
+        vec4 c = texture(bufferImageMip3, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y + PushConstants.filterRadius));
+
+        vec4 d = texture(bufferImageMip3, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y));
+        vec4 e = texture(bufferImageMip3, vec2(texCoord.x               , texCoord.y));
+        vec4 f = texture(bufferImageMip3, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y));
+
+        vec4 g = texture(bufferImageMip3, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y - PushConstants.filterRadius));
+        vec4 h = texture(bufferImageMip3, vec2(texCoord.x               , texCoord.y - PushConstants.filterRadius));
+        vec4 i = texture(bufferImageMip3, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y - PushConstants.filterRadius));
+
+        vec4 upsample = (e * 4.0 + (b + d + f + h) * 2.0 + (a + c + g + i)) / 16.0;
+
+        imageStore(bufferImageMip2, ivec2(destCoord), upsample);
+    }
+}

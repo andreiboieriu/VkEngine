@@ -4,9 +4,9 @@
 #include <catch2/benchmark/catch_benchmark.hpp>
 #include <catch2/catch_test_macros.hpp>
 
-#include "simdjson.h"
+#include <simdjson.h>
 
-#include <fastgltf/parser.hpp>
+#include <fastgltf/core.hpp>
 #include <fastgltf/base64.hpp>
 #include "gltf_path.hpp"
 
@@ -32,8 +32,8 @@ bool tinygltf_FileExistsFunction([[maybe_unused]] const std::string& filename, [
     return true;
 }
 
-std::string tinygltf_ExpandFilePathFunction(const std::string& path, [[maybe_unused]] void* user) {
-    return path;
+std::string tinygltf_ExpandFilePathFunction(const std::string& filePath, [[maybe_unused]] void* user) {
+    return filePath;
 }
 
 bool tinygltf_ReadWholeFileFunction(std::vector<unsigned char>* data, std::string*, const std::string&, void*) {
@@ -76,13 +76,13 @@ void setTinyGLTFCallbacks(tinygltf::TinyGLTF& gltf) {
 #include <assimp/Base64.hpp>
 #endif
 
-std::vector<uint8_t> readFileAsBytes(std::filesystem::path path) {
-    std::ifstream file(path, std::ios::ate | std::ios::binary);
+fastgltf::StaticVector<std::uint8_t> readFileAsBytes(const std::filesystem::path& filePath) {
+    std::ifstream file(filePath, std::ios::ate | std::ios::binary);
     if (!file.is_open())
-        throw std::runtime_error(std::string { "Failed to open file: " } + path.string());
+        throw std::runtime_error(std::string { "Failed to open file: " } + filePath.string());
 
     auto fileSize = file.tellg();
-    std::vector<uint8_t> bytes(static_cast<size_t>(fileSize) + fastgltf::getGltfBufferPadding());
+    fastgltf::StaticVector<std::uint8_t> bytes(static_cast<std::size_t>(fileSize));
     file.seekg(0, std::ifstream::beg);
     file.read(reinterpret_cast<char*>(bytes.data()), fileSize);
     file.close();
@@ -103,11 +103,12 @@ TEST_CASE("Benchmark loading of NewSponza", "[gltf-benchmark]") {
 #endif
 
     auto bytes = readFileAsBytes(intelSponza / "NewSponza_Main_glTF_002.gltf");
-    auto jsonData = std::make_unique<fastgltf::GltfDataBuffer>();
-    REQUIRE(jsonData->fromByteView(bytes.data(), bytes.size() - fastgltf::getGltfBufferPadding(), bytes.size()));
+	auto jsonData = fastgltf::GltfDataBuffer::FromBytes(
+			reinterpret_cast<const std::byte*>(bytes.data()), bytes.size());
+	REQUIRE(jsonData.error() == fastgltf::Error::None);
 
     BENCHMARK("Parse NewSponza") {
-        return parser.loadGLTF(jsonData.get(), intelSponza, benchmarkOptions);
+        return parser.loadGltfJson(jsonData.get(), intelSponza, benchmarkOptions);
     };
 
 #ifdef HAS_TINYGLTF
@@ -129,16 +130,15 @@ TEST_CASE("Benchmark loading of NewSponza", "[gltf-benchmark]") {
 #endif
 
 #ifdef HAS_GLTFRS
-	auto padding = fastgltf::getGltfBufferPadding();
 	BENCHMARK("Parse NewSponza with gltf-rs") {
-		auto slice = rust::Slice<const std::uint8_t>(reinterpret_cast<std::uint8_t*>(bytes.data()), bytes.size() - padding);
+		auto slice = rust::Slice<const std::uint8_t>(reinterpret_cast<std::uint8_t*>(bytes.data()), bytes.size());
 		return rust::gltf::run(slice);
 	};
 #endif
 
 #ifdef HAS_ASSIMP
 	BENCHMARK("Parse NewSponza with assimp") {
-		return aiImportFileFromMemory(reinterpret_cast<const char*>(bytes.data()), jsonData->getBufferSize(), 0, nullptr);
+		return aiImportFileFromMemory(reinterpret_cast<const char*>(bytes.data()), bytes.size(), 0, nullptr);
 	};
 #endif
 }
@@ -153,11 +153,12 @@ TEST_CASE("Benchmark base64 decoding from glTF file", "[gltf-benchmark]") {
 
     auto cylinderEngine = sampleModels / "2.0" / "2CylinderEngine" / "glTF-Embedded";
     auto bytes = readFileAsBytes(cylinderEngine / "2CylinderEngine.gltf");
-    auto jsonData = std::make_unique<fastgltf::GltfDataBuffer>();
-    REQUIRE(jsonData->fromByteView(bytes.data(), bytes.size() - fastgltf::getGltfBufferPadding(), bytes.size()));
+	auto jsonData = fastgltf::GltfDataBuffer::FromBytes(
+			reinterpret_cast<const std::byte*>(bytes.data()), bytes.size());
+	REQUIRE(jsonData.error() == fastgltf::Error::None);
 
     BENCHMARK("Parse 2CylinderEngine and decode base64") {
-        return parser.loadGLTF(jsonData.get(), cylinderEngine, benchmarkOptions);
+        return parser.loadGltfJson(jsonData.get(), cylinderEngine, benchmarkOptions);
     };
 
 #ifdef HAS_TINYGLTF
@@ -181,16 +182,15 @@ TEST_CASE("Benchmark base64 decoding from glTF file", "[gltf-benchmark]") {
 #endif
 
 #ifdef HAS_GLTFRS
-	auto padding = fastgltf::getGltfBufferPadding();
 	BENCHMARK("2CylinderEngine with gltf-rs") {
-		auto slice = rust::Slice<const std::uint8_t>(reinterpret_cast<std::uint8_t*>(bytes.data()), bytes.size() - padding);
+		auto slice = rust::Slice<const std::uint8_t>(reinterpret_cast<std::uint8_t*>(bytes.data()), bytes.size());
 		return rust::gltf::run(slice);
 	};
 #endif
 
 #ifdef HAS_ASSIMP
 	BENCHMARK("2CylinderEngine with assimp") {
-		const auto* scene = aiImportFileFromMemory(reinterpret_cast<const char*>(bytes.data()), jsonData->getBufferSize(), 0, nullptr);
+		const auto* scene = aiImportFileFromMemory(reinterpret_cast<const char*>(bytes.data()), bytes.size(), 0, nullptr);
 		REQUIRE(scene != nullptr);
 		return scene;
 	};
@@ -207,11 +207,12 @@ TEST_CASE("Benchmark raw JSON parsing", "[gltf-benchmark]") {
 
     auto buggyPath = sampleModels / "2.0" / "Buggy" / "glTF";
     auto bytes = readFileAsBytes(buggyPath / "Buggy.gltf");
-    auto jsonData = std::make_unique<fastgltf::GltfDataBuffer>();
-    REQUIRE(jsonData->fromByteView(bytes.data(), bytes.size() - fastgltf::getGltfBufferPadding(), bytes.size()));
+	auto jsonData = fastgltf::GltfDataBuffer::FromBytes(
+			reinterpret_cast<const std::byte*>(bytes.data()), bytes.size());
+	REQUIRE(jsonData.error() == fastgltf::Error::None);
 
     BENCHMARK("Parse Buggy.gltf") {
-        return parser.loadGLTF(jsonData.get(), buggyPath, benchmarkOptions);
+        return parser.loadGltfJson(jsonData.get(), buggyPath, benchmarkOptions);
     };
 
 #ifdef HAS_TINYGLTF
@@ -234,16 +235,15 @@ TEST_CASE("Benchmark raw JSON parsing", "[gltf-benchmark]") {
 #endif
 
 #ifdef HAS_GLTFRS
-	auto padding = fastgltf::getGltfBufferPadding();
 	BENCHMARK("Parse Buggy.gltf with gltf-rs") {
-		auto slice = rust::Slice<const std::uint8_t>(reinterpret_cast<std::uint8_t*>(bytes.data()), bytes.size() - padding);
+		auto slice = rust::Slice<const std::uint8_t>(reinterpret_cast<std::uint8_t*>(bytes.data()), bytes.size());
 		return rust::gltf::run(slice);
 	};
 #endif
 
 #ifdef HAS_ASSIMP
 	BENCHMARK("Parse Buggy.gltf with assimp") {
-		return aiImportFileFromMemory(reinterpret_cast<const char*>(bytes.data()), jsonData->getBufferSize(), 0, nullptr);
+		return aiImportFileFromMemory(reinterpret_cast<const char*>(bytes.data()), bytes.size(), 0, nullptr);
 	};
 #endif
 }
@@ -262,11 +262,12 @@ TEST_CASE("Benchmark massive gltf file", "[gltf-benchmark]") {
 #endif
 
     auto bytes = readFileAsBytes(bistroPath / "bistro.gltf");
-    auto jsonData = std::make_unique<fastgltf::GltfDataBuffer>();
-    REQUIRE(jsonData->fromByteView(bytes.data(), bytes.size() - fastgltf::getGltfBufferPadding(), bytes.size()));
+	auto jsonData = fastgltf::GltfDataBuffer::FromBytes(
+			reinterpret_cast<const std::byte*>(bytes.data()), bytes.size());
+	REQUIRE(jsonData.error() == fastgltf::Error::None);
 
     BENCHMARK("Parse Bistro") {
-		return parser.loadGLTF(jsonData.get(), bistroPath, benchmarkOptions);
+		return parser.loadGltfJson(jsonData.get(), bistroPath, benchmarkOptions);
     };
 
 #ifdef HAS_TINYGLTF
@@ -289,16 +290,15 @@ TEST_CASE("Benchmark massive gltf file", "[gltf-benchmark]") {
 #endif
 
 #ifdef HAS_GLTFRS
-	auto padding = fastgltf::getGltfBufferPadding();
 	BENCHMARK("Parse Bistro with gltf-rs") {
-		auto slice = rust::Slice<const std::uint8_t>(reinterpret_cast<std::uint8_t*>(bytes.data()), bytes.size() - padding);
+		auto slice = rust::Slice<const std::uint8_t>(reinterpret_cast<std::uint8_t*>(bytes.data()), bytes.size());
 		return rust::gltf::run(slice);
 	};
 #endif
 
 #ifdef HAS_ASSIMP
 	BENCHMARK("Parse Bistro with assimp") {
-		return aiImportFileFromMemory(reinterpret_cast<const char*>(bytes.data()), jsonData->getBufferSize(), 0, nullptr);
+		return aiImportFileFromMemory(reinterpret_cast<const char*>(bytes.data()), bytes.size(), 0, nullptr);
 	};
 #endif
 }
@@ -306,8 +306,9 @@ TEST_CASE("Benchmark massive gltf file", "[gltf-benchmark]") {
 TEST_CASE("Compare parsing performance with minified documents", "[gltf-benchmark]") {
     auto buggyPath = sampleModels / "2.0" / "Buggy" / "glTF";
     auto bytes = readFileAsBytes(buggyPath / "Buggy.gltf");
-    auto jsonData = std::make_unique<fastgltf::GltfDataBuffer>();
-    REQUIRE(jsonData->fromByteView(bytes.data(), bytes.size() - fastgltf::getGltfBufferPadding(), bytes.size()));
+	auto jsonData = fastgltf::GltfDataBuffer::FromBytes(
+			reinterpret_cast<const std::byte*>(bytes.data()), bytes.size());
+	REQUIRE(jsonData.error() == fastgltf::Error::None);
 
     // Create a minified JSON string
     std::vector<uint8_t> minified(bytes.size());
@@ -325,30 +326,35 @@ TEST_CASE("Compare parsing performance with minified documents", "[gltf-benchmar
         return result;
     };
 
-    auto minifiedJsonData = std::make_unique<fastgltf::GltfDataBuffer>();
-    REQUIRE(minifiedJsonData->fromByteView(minified.data(), minified.size() - fastgltf::getGltfBufferPadding(), minified.size()));
+	auto minifiedJsonData = fastgltf::GltfDataBuffer::FromBytes(
+			reinterpret_cast<const std::byte*>(bytes.data()), bytes.size());
+	REQUIRE(minifiedJsonData.error() == fastgltf::Error::None);
 
     fastgltf::Parser parser;
     BENCHMARK("Parse Buggy.gltf with normal JSON") {
-        return parser.loadGLTF(jsonData.get(), buggyPath, benchmarkOptions);
+        return parser.loadGltfJson(jsonData.get(), buggyPath, benchmarkOptions);
     };
 
     BENCHMARK("Parse Buggy.gltf with minified JSON") {
-        return parser.loadGLTF(minifiedJsonData.get(), buggyPath, benchmarkOptions);
+        return parser.loadGltfJson(minifiedJsonData.get(), buggyPath, benchmarkOptions);
     };
 }
 
-#if defined(FASTGLTF_IS_X86)
 TEST_CASE("Small CRC32-C benchmark", "[gltf-benchmark]") {
     static constexpr std::string_view test = "abcdefghijklmnopqrstuvwxyz";
     BENCHMARK("Default 1-byte tabular algorithm") {
         return fastgltf::crc32c(reinterpret_cast<const std::uint8_t*>(test.data()), test.size());
     };
+#if defined(FASTGLTF_IS_X86)
     BENCHMARK("SSE4 hardware algorithm") {
-        return fastgltf::hwcrc32c(reinterpret_cast<const std::uint8_t*>(test.data()), test.size());
+        return fastgltf::sse_crc32c(reinterpret_cast<const std::uint8_t*>(test.data()), test.size());
     };
-}
+#elif defined(FASTGLTF_IS_A64)
+	BENCHMARK("ARMv8 hardware CRC32-C algorithm") {
+		return fastgltf::armv8_crc32c(reinterpret_cast<const std::uint8_t*>(test.data()), test.size());
+	};
 #endif
+}
 
 TEST_CASE("Compare base64 decoding performance", "[gltf-benchmark]") {
 	std::string base64Characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -357,7 +363,7 @@ TEST_CASE("Compare base64 decoding performance", "[gltf-benchmark]") {
 	// We'll generate a random base64 buffer
 	std::random_device device;
 	std::mt19937 gen(device());
-	std::uniform_int_distribution<> distribution(0, base64Characters.size() - 1);
+	std::uniform_int_distribution<std::size_t> distribution(0, base64Characters.size() - 1);
 	std::string generatedData;
 	generatedData.reserve(bufferSize);
 	for (std::size_t i = 0; i < bufferSize; ++i) {
@@ -414,7 +420,7 @@ TEST_CASE("Compare base64 decoding performance", "[gltf-benchmark]") {
 	}
 #elif defined(FASTGLTF_IS_A64)
 	const auto& impls = simdjson::get_available_implementations();
-	if (const auto* neon = impls["arm64"]; avx2 != nullptr && neon->supported_by_runtime_system()) {
+	if (const auto* neon = impls["arm64"]; neon != nullptr && neon->supported_by_runtime_system()) {
 		BENCHMARK("Run fastgltf's Neon base64 decoder") {
 			return fastgltf::base64::neon_decode(generatedData);
 		};

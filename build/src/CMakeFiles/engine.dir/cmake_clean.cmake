@@ -5,8 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/cmake_pch.hxx.pch.d"
   "CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o"
   "CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o.d"
-  "CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o"
-  "CMakeFiles/engine.dir/compute_effects/fxaa.cpp.o.d"
   "CMakeFiles/engine.dir/deletion_queue.cpp.o"
   "CMakeFiles/engine.dir/deletion_queue.cpp.o.d"
   "CMakeFiles/engine.dir/main.cpp.o"

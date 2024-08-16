@@ -267,6 +267,7 @@ private:
 
 	std::unique_ptr<ComputeEffect> mFxaaEffect;
 	std::unique_ptr<ComputeEffect> mToneMappingEffect;
+	std::unique_ptr<ComputeEffect> mBloomEffect;
 
 	float mMaxSamplerAnisotropy;
 

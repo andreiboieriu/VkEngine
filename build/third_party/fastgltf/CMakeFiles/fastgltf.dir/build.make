@@ -97,19 +97,51 @@ third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fastgltf.dir/src/base64.cpp.s"
 	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gooby/Development/VkEngine/third_party/fastgltf/src/base64.cpp -o CMakeFiles/fastgltf.dir/src/base64.cpp.s
 
+third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf.dir/flags.make
+third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.o: ../third_party/fastgltf/src/io.cpp
+third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.o -MF CMakeFiles/fastgltf.dir/src/io.cpp.o.d -o CMakeFiles/fastgltf.dir/src/io.cpp.o -c /home/gooby/Development/VkEngine/third_party/fastgltf/src/io.cpp
+
+third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fastgltf.dir/src/io.cpp.i"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gooby/Development/VkEngine/third_party/fastgltf/src/io.cpp > CMakeFiles/fastgltf.dir/src/io.cpp.i
+
+third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fastgltf.dir/src/io.cpp.s"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gooby/Development/VkEngine/third_party/fastgltf/src/io.cpp -o CMakeFiles/fastgltf.dir/src/io.cpp.s
+
+third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf.dir/flags.make
+third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o: ../third_party/fastgltf/deps/simdjson/simdjson.cpp
+third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o: third_party/fastgltf/CMakeFiles/fastgltf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o -MF CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o.d -o CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o -c /home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp
+
+third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.i"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp > CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.i
+
+third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.s"
+	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.cpp -o CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.s
+
 # Object files for target fastgltf
 fastgltf_OBJECTS = \
 "CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o" \
-"CMakeFiles/fastgltf.dir/src/base64.cpp.o"
+"CMakeFiles/fastgltf.dir/src/base64.cpp.o" \
+"CMakeFiles/fastgltf.dir/src/io.cpp.o" \
+"CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o"
 
 # External object files for target fastgltf
 fastgltf_EXTERNAL_OBJECTS =
 
 third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o
 third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/src/base64.cpp.o
+third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.o
+third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o
 third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make
 third_party/fastgltf/libfastgltf.a: third_party/fastgltf/CMakeFiles/fastgltf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libfastgltf.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libfastgltf.a"
 	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -P CMakeFiles/fastgltf.dir/cmake_clean_target.cmake
 	cd /home/gooby/Development/VkEngine/build/third_party/fastgltf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fastgltf.dir/link.txt --verbose=$(VERBOSE)
 

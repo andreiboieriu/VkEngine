@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o"
+  "CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o.d"
   "CMakeFiles/fastgltf.dir/src/base64.cpp.o"
   "CMakeFiles/fastgltf.dir/src/base64.cpp.o.d"
   "CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o"
   "CMakeFiles/fastgltf.dir/src/fastgltf.cpp.o.d"
+  "CMakeFiles/fastgltf.dir/src/io.cpp.o"
+  "CMakeFiles/fastgltf.dir/src/io.cpp.o.d"
   "libfastgltf.a"
   "libfastgltf.pdb"
 )

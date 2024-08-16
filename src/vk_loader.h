@@ -6,9 +6,7 @@
 #include <vk_types.h>
 #include <unordered_map>
 
-#include <fastgltf/glm_element_traits.hpp>
-#include <fastgltf/parser.hpp>
-#include <fastgltf/tools.hpp>
+#include <fastgltf/core.hpp>
 
 namespace vkutil {
 
@@ -48,14 +46,14 @@ private:
 
 class LoadedGLTF {
 public:
-    LoadedGLTF(std::string_view filePath);
+    LoadedGLTF(std::filesystem::path filePath);
     ~LoadedGLTF();
 
     void draw(const glm::mat4& transform, RenderContext& context);
     void freeResources();
 
 private:
-    void load(std::string_view filePath);
+    void load(std::filesystem::path filePath);
     AllocatedImage loadImage(fastgltf::Asset& asset, fastgltf::Image& image, VkFormat format, bool mipmapped);
 
     void initMaterialDataBuffer(size_t materialCount);

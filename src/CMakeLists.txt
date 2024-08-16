@@ -33,8 +33,6 @@ add_executable (engine
   ecs_systems/systems.h
   compute_effects/compute_effect.h
   compute_effects/compute_effect.cpp
-  compute_effects/fxaa.cpp
-  compute_effects/fxaa.h
   skybox.cpp
   skybox.h
   resource_manager.cpp

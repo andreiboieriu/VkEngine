@@ -267,8 +267,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengl_glext.h \
   /usr/include/GL/glx.h /usr/include/GL/gl.h /usr/include/GL/glxext.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11window.h \
-  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/egl.h \
-  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11framebuffer.h \
@@ -279,4 +278,4 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: \
   /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/SDL_x11opengles.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/video/x11/../SDL_egl_c.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_egl.h \
-  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/EGL/eglext.h
+  /usr/include/EGL/eglext.h

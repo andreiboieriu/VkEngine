@@ -124,10 +124,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o: \
   /home/gooby/Development/VkEngine/third_party/SDL/src/render/opengles2/../../video/./khronos/vulkan/vulkan_xlib.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_vulkan.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_opengles2.h \
-  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/GLES2/gl2platform.h \
-  /usr/include/KHR/khrplatform.h \
-  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/GLES2/gl2.h \
-  /home/gooby/Development/VkEngine/third_party/SDL/src/video/khronos/GLES2/gl2ext.h \
+  /usr/include/GLES2/gl2platform.h /usr/include/KHR/khrplatform.h \
+  /usr/include/GLES2/gl2.h /usr/include/GLES2/gl2ext.h \
   /home/gooby/Development/VkEngine/third_party/SDL/src/render/opengles2/../SDL_sysrender.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_render.h \
   /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \

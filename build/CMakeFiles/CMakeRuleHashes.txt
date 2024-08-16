@@ -1,4 +1,16 @@
 # Hashes of file build rules.
+4c2f4e43de04c45c8aca2f2431df737e ../shaders/bloom_pass0.comp.spv
+65e0cfa6d9bd198feff558b4cbf5fbc3 ../shaders/bloom_pass1.comp.spv
+23da59547db7d7269c50bce2d9c7b09c ../shaders/bloom_pass10.comp.spv
+3884d75a95bcddbb60ac903c84736f7d ../shaders/bloom_pass11.comp.spv
+41ed93a6038ec363b99ffb57fb932324 ../shaders/bloom_pass2.comp.spv
+ac62dd52497d4befba32f88a99e9691a ../shaders/bloom_pass3.comp.spv
+a9d9d519ef0e8acd75f9ab8ff83ba68e ../shaders/bloom_pass4.comp.spv
+c7b7546ba9f57b409596d5076f466507 ../shaders/bloom_pass5.comp.spv
+8e644c80e577d2e410f2e532a529ea1c ../shaders/bloom_pass6.comp.spv
+eb00847f9bf1aa7742bf129d9997549d ../shaders/bloom_pass7.comp.spv
+fef2ce41e2a91bcc51e818f492ac6d9b ../shaders/bloom_pass8.comp.spv
+d2515473c1dc42e33edb2c74f6833d90 ../shaders/bloom_pass9.comp.spv
 c91e62ee0c7ba9e60f2b6c4fe51deeed ../shaders/fxaa_pass0.comp.spv
 d69f18821583ff46e8fd5a36330b1e1d ../shaders/fxaa_pass1.comp.spv
 d528ce8014eea1d9b48e1725910b83d9 ../shaders/mesh.frag.spv

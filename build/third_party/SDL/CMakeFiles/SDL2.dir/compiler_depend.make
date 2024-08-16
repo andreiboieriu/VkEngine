@@ -14607,10 +14607,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o: .
   ../third_party/SDL/src/video/khronos/vulkan/vulkan_xlib.h \
   third_party/SDL/include/SDL2/SDL_vulkan.h \
   third_party/SDL/include/SDL2/SDL_opengles2.h \
-  ../third_party/SDL/src/video/khronos/GLES2/gl2platform.h \
+  /usr/include/GLES2/gl2platform.h \
   /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/khronos/GLES2/gl2.h \
-  ../third_party/SDL/src/video/khronos/GLES2/gl2ext.h \
+  /usr/include/GLES2/gl2.h \
+  /usr/include/GLES2/gl2ext.h \
   ../third_party/SDL/src/render/SDL_sysrender.h \
   third_party/SDL/include/SDL2/SDL_render.h \
   third_party/SDL/include/SDL2/SDL_events.h \
@@ -21445,10 +21445,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.o: ../third_party/SDL/sr
   third_party/SDL/include/SDL2/SDL_vulkan.h \
   ../third_party/SDL/src/video/SDL_egl_c.h \
   third_party/SDL/include/SDL2/SDL_egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglext.h \
+  /usr/include/EGL/eglext.h \
   third_party/SDL/include/SDL2/SDL_loadso.h \
   third_party/SDL/include/SDL2/SDL_hints.h \
   third_party/SDL/include/SDL2/SDL_opengl.h \
@@ -24242,10 +24242,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenopengles.c.
   third_party/SDL/include/SDL2/SDL_vulkan.h \
   ../third_party/SDL/src/video/SDL_egl_c.h \
   third_party/SDL/include/SDL2/SDL_egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglext.h \
+  /usr/include/EGL/eglext.h \
   ../third_party/SDL/src/video/offscreen/SDL_offscreenvideo.h \
   ../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h
 
@@ -24391,10 +24391,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenvideo.c.o: 
   ../third_party/SDL/src/video/offscreen/SDL_offscreenopengles.h \
   ../third_party/SDL/src/video/SDL_egl_c.h \
   third_party/SDL/include/SDL2/SDL_egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglext.h \
+  /usr/include/EGL/eglext.h \
   ../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o: ../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.c \
@@ -24535,10 +24535,10 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/offscreen/SDL_offscreenwindow.c.o:
   third_party/SDL/include/SDL2/SDL_vulkan.h \
   ../third_party/SDL/src/video/SDL_egl_c.h \
   third_party/SDL/include/SDL2/SDL_egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglext.h \
+  /usr/include/EGL/eglext.h \
   ../third_party/SDL/src/video/offscreen/SDL_offscreenwindow.h \
   ../third_party/SDL/src/video/offscreen/SDL_offscreenvideo.h
 
@@ -24762,8 +24762,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o: ../third
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   third_party/SDL/include/SDL2/SDL_timer.h
@@ -25157,8 +25157,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.o: ../third_pa
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11touch.h \
@@ -25397,8 +25397,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.o: ../thi
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11framebuffer.h
@@ -25608,8 +25608,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.o: ../third_
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/events/SDL_keyboard_c.h \
@@ -25943,8 +25943,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.o: ../thir
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11messagebox.h \
@@ -26186,8 +26186,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.o: ../third_par
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   third_party/SDL/include/SDL2/SDL_timer.h \
@@ -26397,8 +26397,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.o: ../third_par
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11xinput2.h \
@@ -26609,8 +26609,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o: ../third_pa
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   third_party/SDL/include/SDL2/SDL_hints.h \
@@ -26618,7 +26618,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o: ../third_pa
   ../third_party/SDL/src/video/x11/SDL_x11opengles.h \
   ../third_party/SDL/src/video/SDL_egl_c.h \
   third_party/SDL/include/SDL2/SDL_egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglext.h \
+  /usr/include/EGL/eglext.h \
   /usr/include/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/dl_find_object.h
@@ -26827,14 +26827,14 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.o: ../third_
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11opengles.h \
   ../third_party/SDL/src/video/SDL_egl_c.h \
   third_party/SDL/include/SDL2/SDL_egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglext.h
+  /usr/include/EGL/eglext.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o: ../third_party/SDL/src/video/x11/SDL_x11shape.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -27039,8 +27039,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o: ../third_par
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11shape.h \
@@ -27249,8 +27249,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.o: ../third_par
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11touch.h \
@@ -27563,8 +27563,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: ../third_par
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11framebuffer.h \
@@ -27575,7 +27575,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o: ../third_par
   ../third_party/SDL/src/video/x11/SDL_x11opengles.h \
   ../third_party/SDL/src/video/SDL_egl_c.h \
   third_party/SDL/include/SDL2/SDL_egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglext.h
+  /usr/include/EGL/eglext.h
 
 third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o: ../third_party/SDL/src/video/x11/SDL_x11vulkan.c \
   ../third_party/SDL/src/SDL_internal.h \
@@ -27780,8 +27780,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o: ../third_pa
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   third_party/SDL/include/SDL2/SDL_loadso.h
@@ -28097,8 +28097,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o: ../third_pa
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11shape.h \
@@ -28107,7 +28107,7 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o: ../third_pa
   ../third_party/SDL/src/video/x11/SDL_x11opengles.h \
   ../third_party/SDL/src/video/SDL_egl_c.h \
   third_party/SDL/include/SDL2/SDL_egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglext.h \
+  /usr/include/EGL/eglext.h \
   third_party/SDL/include/SDL2/SDL_timer.h \
   third_party/SDL/include/SDL2/SDL_syswm.h \
   third_party/SDL/include/SDL2/SDL_version.h
@@ -28315,8 +28315,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xfixes.c.o: ../third_pa
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11xfixes.h \
@@ -28534,8 +28534,8 @@ third_party/SDL/CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o: ../third_p
   /usr/include/GL/gl.h \
   /usr/include/GL/glxext.h \
   ../third_party/SDL/src/video/x11/SDL_x11window.h \
-  ../third_party/SDL/src/video/khronos/EGL/egl.h \
-  ../third_party/SDL/src/video/khronos/EGL/eglplatform.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/KHR/khrplatform.h \
   ../third_party/SDL/src/video/x11/SDL_x11vulkan.h \
   ../third_party/SDL/src/video/x11/SDL_x11xinput2.h \
@@ -28968,9 +28968,7 @@ third_party/SDL/include/SDL2/SDL_name.h:
 
 ../third_party/SDL/src/video/SDL_pixels.c:
 
-../third_party/SDL/src/video/khronos/EGL/eglext.h:
-
-../third_party/SDL/src/video/khronos/EGL/egl.h:
+/usr/include/EGL/eglext.h:
 
 third_party/SDL/include/SDL2/SDL_egl.h:
 
@@ -29056,17 +29054,21 @@ third_party/SDL/include/SDL2/SDL_egl.h:
 
 ../third_party/SDL/src/render/psp/SDL_render_psp.c:
 
-../third_party/SDL/src/render/opengles2/SDL_shaders_gles2.h:
-
 ../third_party/SDL/src/video/khronos/GLES2/gl2ext.h:
 
 ../third_party/SDL/src/render/software/SDL_drawpoint.c:
 
 ../third_party/SDL/src/video/khronos/GLES2/gl2.h:
 
-/usr/include/KHR/khrplatform.h:
-
 ../third_party/SDL/src/video/khronos/GLES2/gl2platform.h:
+
+../third_party/SDL/src/render/opengles2/SDL_shaders_gles2.h:
+
+/usr/include/GLES2/gl2ext.h:
+
+/usr/include/GLES2/gl2.h:
+
+/usr/include/KHR/khrplatform.h:
 
 third_party/SDL/include/SDL2/SDL_opengles2.h:
 
@@ -29107,6 +29109,8 @@ third_party/SDL/include/SDL2/SDL_opengles2.h:
 ../third_party/SDL/src/video/SDL_vulkan_internal.h:
 
 /usr/include/x86_64-linux-gnu/asm/unistd_64.h:
+
+/usr/include/GLES2/gl2platform.h:
 
 ../third_party/SDL/src/video/SDL_sysvideo.h:
 
@@ -29307,8 +29311,6 @@ third_party/SDL/include/SDL2/SDL_system.h:
 ../third_party/SDL/src/render/direct3d/SDL_render_d3d.c:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-../third_party/SDL/src/video/khronos/EGL/eglplatform.h:
 
 third_party/SDL/include/SDL2/SDL_joystick.h:
 
@@ -29515,6 +29517,8 @@ third_party/SDL/include/SDL2/SDL_sensor.h:
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
 ../third_party/SDL/src/dynapi/SDL_dynapi_overrides.h:
+
+/usr/include/EGL/eglplatform.h:
 
 ../third_party/SDL/src/events/SDL_scancode_tables.c:
 
@@ -29897,6 +29901,8 @@ third_party/SDL/include/SDL2/SDL_cpuinfo.h:
 /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/usr/include/EGL/egl.h:
 
 ../third_party/SDL/src/render/software/SDL_blendline.c:
 

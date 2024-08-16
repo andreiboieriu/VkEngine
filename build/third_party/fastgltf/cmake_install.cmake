@@ -43,40 +43,15 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/gooby/Development/VkEngine/third_party/fastgltf/deps/simdjson/simdjson.h")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/gooby/Development/VkEngine/build/third_party/fastgltf/libfastgltf_simdjson.a")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/fastgltf/fastgltf_simdjsonTargets.cmake")
-    file(DIFFERENT EXPORT_FILE_CHANGED FILES
-         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/fastgltf/fastgltf_simdjsonTargets.cmake"
-         "/home/gooby/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/Export/lib/cmake/fastgltf/fastgltf_simdjsonTargets.cmake")
-    if(EXPORT_FILE_CHANGED)
-      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/fastgltf/fastgltf_simdjsonTargets-*.cmake")
-      if(OLD_CONFIG_FILES)
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/fastgltf/fastgltf_simdjsonTargets.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
-        file(REMOVE ${OLD_CONFIG_FILES})
-      endif()
-    endif()
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/fastgltf" TYPE FILE FILES "/home/gooby/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/Export/lib/cmake/fastgltf/fastgltf_simdjsonTargets.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/fastgltf" TYPE FILE FILES "/home/gooby/Development/VkEngine/build/third_party/fastgltf/CMakeFiles/Export/lib/cmake/fastgltf/fastgltf_simdjsonTargets-noconfig.cmake")
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/fastgltf" TYPE FILE FILES
     "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/base64.hpp"
+    "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/core.hpp"
+    "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/dxmath_element_traits.hpp"
     "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/glm_element_traits.hpp"
-    "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/parser.hpp"
     "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/tools.hpp"
     "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp"
     "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp"
+    "/home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/math.hpp"
     )
 endif()
 

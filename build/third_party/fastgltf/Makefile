@@ -162,20 +162,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
-.PHONY : third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
-
-# Convenience name for target.
-fastgltf_simdjson: third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/rule
-.PHONY : fastgltf_simdjson
-
-# fast build rule for target.
-fastgltf_simdjson/fast:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build
-.PHONY : fastgltf_simdjson/fast
-
-# Convenience name for target.
 third_party/fastgltf/CMakeFiles/fastgltf.dir/rule:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/fastgltf/CMakeFiles/fastgltf.dir/rule
 .PHONY : third_party/fastgltf/CMakeFiles/fastgltf.dir/rule
@@ -194,7 +180,7 @@ deps/simdjson/simdjson.o: deps/simdjson/simdjson.cpp.o
 
 # target to build an object file
 deps/simdjson/simdjson.cpp.o:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.o
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.o
 .PHONY : deps/simdjson/simdjson.cpp.o
 
 deps/simdjson/simdjson.i: deps/simdjson/simdjson.cpp.i
@@ -202,7 +188,7 @@ deps/simdjson/simdjson.i: deps/simdjson/simdjson.cpp.i
 
 # target to preprocess a source file
 deps/simdjson/simdjson.cpp.i:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.i
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.i
 .PHONY : deps/simdjson/simdjson.cpp.i
 
 deps/simdjson/simdjson.s: deps/simdjson/simdjson.cpp.s
@@ -210,7 +196,7 @@ deps/simdjson/simdjson.s: deps/simdjson/simdjson.cpp.s
 
 # target to generate assembly for a file
 deps/simdjson/simdjson.cpp.s:
-	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf_simdjson.dir/deps/simdjson/simdjson.cpp.s
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/deps/simdjson/simdjson.cpp.s
 .PHONY : deps/simdjson/simdjson.cpp.s
 
 src/base64.o: src/base64.cpp.o
@@ -261,6 +247,30 @@ src/fastgltf.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/fastgltf.cpp.s
 .PHONY : src/fastgltf.cpp.s
 
+src/io.o: src/io.cpp.o
+.PHONY : src/io.o
+
+# target to build an object file
+src/io.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.o
+.PHONY : src/io.cpp.o
+
+src/io.i: src/io.cpp.i
+.PHONY : src/io.i
+
+# target to preprocess a source file
+src/io.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.i
+.PHONY : src/io.cpp.i
+
+src/io.s: src/io.cpp.s
+.PHONY : src/io.s
+
+# target to generate assembly for a file
+src/io.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f third_party/fastgltf/CMakeFiles/fastgltf.dir/build.make third_party/fastgltf/CMakeFiles/fastgltf.dir/src/io.cpp.s
+.PHONY : src/io.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -274,7 +284,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... fastgltf"
-	@echo "... fastgltf_simdjson"
 	@echo "... deps/simdjson/simdjson.o"
 	@echo "... deps/simdjson/simdjson.i"
 	@echo "... deps/simdjson/simdjson.s"
@@ -284,6 +293,9 @@ help:
 	@echo "... src/fastgltf.o"
 	@echo "... src/fastgltf.i"
 	@echo "... src/fastgltf.s"
+	@echo "... src/io.o"
+	@echo "... src/io.i"
+	@echo "... src/io.s"
 .PHONY : help
 
 
