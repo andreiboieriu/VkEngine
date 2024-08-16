@@ -2,7 +2,7 @@
 #define SDL_REVISION_NUMBER 0
 
 #ifdef SDL_VENDOR_INFO
-#define SDL_REVISION "SDL-2.28.4-ga9585cc (" SDL_VENDOR_INFO ")"
+#define SDL_REVISION "SDL-2.28.4-g0983e1a (" SDL_VENDOR_INFO ")"
 #else
-#define SDL_REVISION "SDL-2.28.4-ga9585cc"
+#define SDL_REVISION "SDL-2.28.4-g0983e1a"
 #endif

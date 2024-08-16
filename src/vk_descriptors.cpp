@@ -123,7 +123,7 @@ void DescriptorManager::createDescriptorBuffers() {
     // get descriptor binding offsets
     vkGetDescriptorSetLayoutBindingOffsetEXT(device, mGlobalLayout, 0u, &mGlobalLayoutOffset);
     
-    for (unsigned int i = 0; i < 5; i++)
+    for (unsigned int i = 0; i < 6; i++)
         vkGetDescriptorSetLayoutBindingOffsetEXT(device, mMaterialLayout, i, &mMaterialLayoutOffset[i]);
 
 
@@ -268,6 +268,24 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[4]
     );
 
+    // create occlusion texture descriptor
+    VkDescriptorImageInfo occlusionDescriptor{};
+
+    occlusionDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    occlusionDescriptor.imageView = resources.occlusionImage.imageView;
+    occlusionDescriptor.sampler = resources.occlusionSampler;
+
+    VkDescriptorGetInfoEXT occlusionDescriptorInfo{};
+    occlusionDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    occlusionDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    occlusionDescriptorInfo.data.pCombinedImageSampler = &occlusionDescriptor;
+
+    vkGetDescriptorEXT(
+        VulkanEngine::get().getDevice(),
+        &occlusionDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[5]
+    );
 
     VkDeviceSize retOffset = mCurrentOffset;
     mCurrentOffset += mMaterialLayoutSize;

@@ -90,6 +90,7 @@ struct alignas(16) MaterialConstants {
     glm::vec4 emissiveFactors;
     float emissiveStrength;
     float normalScale;
+    float occlusionStrength;
 };
 
 struct MaterialResources {
@@ -104,6 +105,9 @@ struct MaterialResources {
 
     AllocatedImage emissiveImage;
     VkSampler emissiveSampler;
+
+    AllocatedImage occlusionImage;
+    VkSampler occlusionSampler;
 
     VkBuffer dataBuffer;
     uint32_t dataBufferOffset;

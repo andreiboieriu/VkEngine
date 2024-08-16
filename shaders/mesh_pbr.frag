@@ -24,12 +24,14 @@ layout(set = 1, binding = 0) uniform GLTFMaterialData {
     vec4 emissiveFactors;
     float emissiveStrength;
     float normalScale;
+    float occlusionStrength;
 } materialData;
 
 layout(set = 1, binding = 1) uniform sampler2D colorTex;
 layout(set = 1, binding = 2) uniform sampler2D metalRoughTex;
 layout(set = 1, binding = 3) uniform sampler2D normalTex;
 layout(set = 1, binding = 4) uniform sampler2D emissiveTex;
+layout(set = 1, binding = 5) uniform sampler2D occlusionTex;
 
 layout (location = 0) in vec3 inNormal;
 layout (location = 1) in vec2 inUV;
@@ -119,6 +121,11 @@ void main()
     vec3 F = f0 + (1 - f0) * pow((1 - abs(VdotH)), 5);
     
     vec3 f_diffuse = (1 - F) * (1 / PI) * c_diff;
+    
+    float occlusion = 1.0 + materialData.occlusionStrength * (texture(occlusionTex, inUV).r - 1.0);
+
+    f_diffuse *= occlusion;
+
     vec3 f_specular = F * D_GGX(NdotH, roughness) * V_SmithGGXCorrelatedFast(NdotV, NdotL, roughness);
 
     vec3 emissive = materialData.emissiveFactors.xyz * texture(emissiveTex, inUV).xyz * materialData.emissiveStrength;

@@ -220,6 +220,8 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         materialResources.normalSampler = VulkanEngine::get().getDefaultLinearSampler();
         materialResources.emissiveImage = VulkanEngine::get().getBlackTexture();
         materialResources.emissiveSampler = VulkanEngine::get().getDefaultLinearSampler();
+        materialResources.occlusionImage = VulkanEngine::get().getWhiteTexture();
+        materialResources.occlusionSampler = VulkanEngine::get().getDefaultLinearSampler();
 
         // set uniform buffer for the material data
         materialResources.dataBuffer = mMaterialDataBuffer.buffer;
@@ -265,6 +267,16 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
             constants.emissiveFactors.z = material.emissiveFactor[2];
 
             constants.emissiveStrength = material.emissiveStrength;
+        }
+
+        if (material.occlusionTexture.has_value()) {
+            size_t image = asset.textures[material.occlusionTexture.value().textureIndex].imageIndex.value();
+            size_t sampler = asset.textures[material.occlusionTexture.value().textureIndex].samplerIndex.value();
+
+            materialResources.occlusionImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_UNORM, true);
+            materialResources.occlusionSampler = samplers[sampler];
+
+            constants.occlusionStrength = material.occlusionTexture.value().strength;
         }
 
 
