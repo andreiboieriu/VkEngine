@@ -27,8 +27,6 @@ private:
     void loadResources();
     void freeResources();
 
-    AllocatedImage loadSkyboxCubemap(std::string_view path);
-
     std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedGltfs;
     std::unordered_map<std::string, AllocatedImage> mSkyboxCubemaps;
 };

@@ -4539,6 +4539,21 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
   /usr/include/c++/12/span \
+  ../third_party/glm/glm/ext/matrix_clip_space.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/detail/func_trigonometric.inl \
+  ../third_party/glm/glm/ext/matrix_clip_space.inl \
+  ../third_party/glm/glm/ext/matrix_transform.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/gtc/constants.inl \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/matrix_transform.inl \
+  ../third_party/glm/glm/trigonometric.hpp \
   ../src/vk_descriptors.h \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
@@ -4705,6 +4720,7 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   /usr/include/c++/12/bits/unordered_set.h \
   ../src/resource_manager.h \
   /usr/include/memory.h \
+  ../src/vk_images.h \
   ../src/vk_pipelines.h \
   ../third_party/stb_image/stb_image.h \
   ../src/vk_initializers.h \

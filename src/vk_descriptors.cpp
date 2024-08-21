@@ -121,7 +121,8 @@ void DescriptorManager::createDescriptorBuffers() {
     mMaterialLayoutSize = alignedSize(mMaterialLayoutSize, mDescriptorBufferProperties.descriptorBufferOffsetAlignment);
 
     // get descriptor binding offsets
-    vkGetDescriptorSetLayoutBindingOffsetEXT(device, mGlobalLayout, 0u, &mGlobalLayoutOffset);
+    for (unsigned int i = 0; i < 4; i++)
+        vkGetDescriptorSetLayoutBindingOffsetEXT(device, mGlobalLayout, i, &mGlobalLayoutOffset[i]);
     
     for (unsigned int i = 0; i < 6; i++)
         vkGetDescriptorSetLayoutBindingOffsetEXT(device, mMaterialLayout, i, &mMaterialLayoutOffset[i]);
@@ -146,7 +147,7 @@ void DescriptorManager::bindDescriptorBuffers(VkCommandBuffer commandBuffer) {
     vkCmdBindDescriptorBuffersEXT(commandBuffer, 1, &bindingInfo);
 }
  
-VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size) {
+VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView) {
     // create scene data descriptor
     VkDescriptorAddressInfoEXT addressInfo{};
     addressInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_ADDRESS_INFO_EXT;
@@ -163,11 +164,73 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
         VulkanEngine::get().getDevice(),
         &descriptorInfo,
         mDescriptorBufferProperties.uniformBufferDescriptorSize,
-        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset[0]
+    );
+
+    // create irradiance map descriptor
+    VkDescriptorImageInfo imageDescriptor{};
+
+    imageDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    imageDescriptor.imageView = irradianceMapView;
+    imageDescriptor.sampler = VulkanEngine::get().getDefaultLinearSampler();
+
+    VkDescriptorGetInfoEXT imageDescriptorInfo{};
+    imageDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    imageDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    imageDescriptorInfo.data.pCombinedImageSampler = &imageDescriptor;
+
+    vkGetDescriptorEXT(
+        VulkanEngine::get().getDevice(),
+        &imageDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset[1]
+    );
+
+    // create prefiltered env map descriptor
+    VkDescriptorImageInfo prefilteredDescriptor{};
+
+    prefilteredDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    prefilteredDescriptor.imageView = prefilteredEnvMapView;
+    prefilteredDescriptor.sampler = VulkanEngine::get().getDefaultLinearSampler();
+
+    VkDescriptorGetInfoEXT prefilteredDescriptorInfo{};
+    prefilteredDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    prefilteredDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    prefilteredDescriptorInfo.data.pCombinedImageSampler = &prefilteredDescriptor;
+
+    vkGetDescriptorEXT(
+        VulkanEngine::get().getDevice(),
+        &prefilteredDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset[2]
+    );
+
+    // create brdf lut descriptor
+    VkDescriptorImageInfo brdflutDescriptor{};
+
+    brdflutDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    brdflutDescriptor.imageView = brdflutView;
+    brdflutDescriptor.sampler = VulkanEngine::get().getDefaultLinearSampler();
+
+    VkDescriptorGetInfoEXT brdflutDescriptorInfo{};
+    brdflutDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    brdflutDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    brdflutDescriptorInfo.data.pCombinedImageSampler = &brdflutDescriptor;
+
+    vkGetDescriptorEXT(
+        VulkanEngine::get().getDevice(),
+        &brdflutDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset[3]
     );
 
     VkDeviceSize retOffset = mCurrentOffset;
     mCurrentOffset += mGlobalLayoutSize;
+    fmt::println("created scene descriptor");
+
+    if (brdflutView == prefilteredEnvMapView || brdflutView == irradianceMapView) {
+        fmt::println("sug pula gratis");
+    }
 
     return retOffset;
 }

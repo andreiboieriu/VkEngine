@@ -159,14 +159,15 @@ public:
 		return mMaxSamplerAnisotropy;
 	}
 
-	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function);
+	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function, bool waitResult = false);
 
 	AllocatedBuffer createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage);
 	void destroyBuffer(const AllocatedBuffer& buffer);
 
 	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
 	AllocatedImage createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
-	AllocatedImage createSkybox(void* data[6], VkExtent2D size, VkFormat format, VkImageUsageFlags usage);
+	AllocatedImage createEmptyCubemap(VkExtent2D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
+
 	void destroyImage(const AllocatedImage& image);
 
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);

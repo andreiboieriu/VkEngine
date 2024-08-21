@@ -454,6 +454,21 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/memory_resource \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/shared_mutex \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/setup.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../geometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/../ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../gtc/constants.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../matrix.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_transform.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp \
   /home/gooby/Development/VkEngine/src/vk_descriptors.h \
   /home/gooby/Development/VkEngine/src/vk_engine.h \
   /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.h \
@@ -619,7 +634,7 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/unordered_set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unordered_set.h \
   /home/gooby/Development/VkEngine/src/resource_manager.h \
-  /usr/include/memory.h \
+  /usr/include/memory.h /home/gooby/Development/VkEngine/src/vk_images.h \
   /home/gooby/Development/VkEngine/src/vk_pipelines.h \
   /home/gooby/Development/VkEngine/third_party/stb_image/stb_image.h \
   /home/gooby/Development/VkEngine/src/vk_initializers.h \

@@ -19,6 +19,10 @@ df163ff85d487f84bbcc5a5dffdae79f ../shaders/mesh.vert.spv
 b6190c4dad7a2e44bc919c1ad876612f ../shaders/mesh_pbr.vert.spv
 7f5b3b1f83072f17dac2f51ca66bb6fb ../shaders/skybox.frag.spv
 91a13faf23aad584d6197c83b2964084 ../shaders/skybox.vert.spv
+994150da6d29b02bc0481df55bc98c02 ../shaders/skybox_brdf_lut_pass0.comp.spv
+63bf83a7567028ab6ab88032e706c4c6 ../shaders/skybox_env_to_irradiance.frag.spv
+81e849b8ff60d1ccc647b91e13b299be ../shaders/skybox_equi_to_cube.frag.spv
+879ee69bee8c62ff49d818cfa4d972ab ../shaders/skybox_prefilter_env.frag.spv
 01b25c13c1bbca8459c817e6f4254b6a ../shaders/sprite.frag.spv
 dbab7760d1b625c1d36bf2fa6a1ea4fb ../shaders/sprite.vert.spv
 523f782750862c462c03b25b550b3a4d ../shaders/tone_mapping_pass0.comp.spv

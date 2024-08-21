@@ -25,7 +25,7 @@ public:
     ~DescriptorManager();
 
     void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
-    VkDeviceSize createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size);
+    VkDeviceSize createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView);
     VkDeviceSize createMaterialDescriptor(const MaterialResources& resources);
 
     void freeResources();
@@ -44,7 +44,7 @@ private:
     VkDeviceSize mGlobalLayoutSize;
     VkDeviceSize mMaterialLayoutSize;
 
-    VkDeviceSize mGlobalLayoutOffset;
+    VkDeviceSize mGlobalLayoutOffset[4];
     VkDeviceSize mMaterialLayoutOffset[6];
 
     VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties;

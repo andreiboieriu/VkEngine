@@ -110,5 +110,5 @@ protected:
     std::unordered_map<std::string, PushConstantInfo> mPushInfoMap;
 
     std::string mName;
-    bool mEnabled;
+    bool mEnabled = true;
 };

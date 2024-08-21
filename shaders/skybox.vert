@@ -19,6 +19,8 @@ layout( push_constant ) uniform constants
 {
 	mat4 projectionView;
 	VertexBuffer vertexBuffer;
+	uint mipLevel;
+	uint totalMips;
 } PushConstants;
 
 layout(location = 0) out vec3 outPos;

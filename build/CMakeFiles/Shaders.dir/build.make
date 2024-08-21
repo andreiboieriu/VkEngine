@@ -86,6 +86,10 @@ CMakeFiles/Shaders: ../shaders/mesh_pbr.frag.spv
 CMakeFiles/Shaders: ../shaders/mesh_pbr.vert.spv
 CMakeFiles/Shaders: ../shaders/skybox.frag.spv
 CMakeFiles/Shaders: ../shaders/skybox.vert.spv
+CMakeFiles/Shaders: ../shaders/skybox_brdf_lut_pass0.comp.spv
+CMakeFiles/Shaders: ../shaders/skybox_env_to_irradiance.frag.spv
+CMakeFiles/Shaders: ../shaders/skybox_equi_to_cube.frag.spv
+CMakeFiles/Shaders: ../shaders/skybox_prefilter_env.frag.spv
 CMakeFiles/Shaders: ../shaders/sprite.frag.spv
 CMakeFiles/Shaders: ../shaders/sprite.vert.spv
 CMakeFiles/Shaders: ../shaders/tone_mapping_pass0.comp.spv
@@ -170,16 +174,32 @@ CMakeFiles/Shaders: ../shaders/tone_mapping_pass0.comp.spv
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating ../shaders/skybox.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox.vert -o /home/gooby/Development/VkEngine/shaders/skybox.vert.spv
 
+../shaders/skybox_brdf_lut_pass0.comp.spv: ../shaders/skybox_brdf_lut_pass0.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating ../shaders/skybox_brdf_lut_pass0.comp.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox_brdf_lut_pass0.comp -o /home/gooby/Development/VkEngine/shaders/skybox_brdf_lut_pass0.comp.spv
+
+../shaders/skybox_env_to_irradiance.frag.spv: ../shaders/skybox_env_to_irradiance.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating ../shaders/skybox_env_to_irradiance.frag.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox_env_to_irradiance.frag -o /home/gooby/Development/VkEngine/shaders/skybox_env_to_irradiance.frag.spv
+
+../shaders/skybox_equi_to_cube.frag.spv: ../shaders/skybox_equi_to_cube.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating ../shaders/skybox_equi_to_cube.frag.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox_equi_to_cube.frag -o /home/gooby/Development/VkEngine/shaders/skybox_equi_to_cube.frag.spv
+
+../shaders/skybox_prefilter_env.frag.spv: ../shaders/skybox_prefilter_env.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating ../shaders/skybox_prefilter_env.frag.spv"
+	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/skybox_prefilter_env.frag -o /home/gooby/Development/VkEngine/shaders/skybox_prefilter_env.frag.spv
+
 ../shaders/sprite.frag.spv: ../shaders/sprite.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating ../shaders/sprite.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating ../shaders/sprite.frag.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.frag -o /home/gooby/Development/VkEngine/shaders/sprite.frag.spv
 
 ../shaders/sprite.vert.spv: ../shaders/sprite.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating ../shaders/sprite.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating ../shaders/sprite.vert.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/sprite.vert -o /home/gooby/Development/VkEngine/shaders/sprite.vert.spv
 
 ../shaders/tone_mapping_pass0.comp.spv: ../shaders/tone_mapping_pass0.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating ../shaders/tone_mapping_pass0.comp.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gooby/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating ../shaders/tone_mapping_pass0.comp.spv"
 	/usr/bin/glslangValidator -V /home/gooby/Development/VkEngine/shaders/tone_mapping_pass0.comp -o /home/gooby/Development/VkEngine/shaders/tone_mapping_pass0.comp.spv
 
 Shaders: CMakeFiles/Shaders
@@ -203,6 +223,10 @@ Shaders: ../shaders/mesh_pbr.frag.spv
 Shaders: ../shaders/mesh_pbr.vert.spv
 Shaders: ../shaders/skybox.frag.spv
 Shaders: ../shaders/skybox.vert.spv
+Shaders: ../shaders/skybox_brdf_lut_pass0.comp.spv
+Shaders: ../shaders/skybox_env_to_irradiance.frag.spv
+Shaders: ../shaders/skybox_equi_to_cube.frag.spv
+Shaders: ../shaders/skybox_prefilter_env.frag.spv
 Shaders: ../shaders/sprite.frag.spv
 Shaders: ../shaders/sprite.vert.spv
 Shaders: ../shaders/tone_mapping_pass0.comp.spv

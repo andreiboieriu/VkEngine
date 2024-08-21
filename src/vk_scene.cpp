@@ -33,8 +33,20 @@ void Scene3D::init() {
         VulkanEngine::get().destroyBuffer(mSceneDataBuffer);
     });
 
+    mSkybox = std::make_unique<Skybox>();
+
+    mDeletionQueue.push([&]() {
+        mSkybox = nullptr;
+    });
+
     // create scene data descriptor
-    mGlobalDescriptorOffset = VulkanEngine::get().getDescriptorManager().createSceneDescriptor(mSceneDataBuffer.deviceAddress, sizeof(SceneData));
+    mGlobalDescriptorOffset = VulkanEngine::get().getDescriptorManager().createSceneDescriptor(
+        mSceneDataBuffer.deviceAddress,
+        sizeof(SceneData),
+        mSkybox->getIrradianceMap().imageView,
+        mSkybox->getPrefilteredEnvMap().imageView,
+        mSkybox->getBrdfLut().imageView
+    );
 }
 
 void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
@@ -55,6 +67,7 @@ void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput) {
 
     if (mSkybox != nullptr)
         mSkybox->update(mSceneData.projection * glm::mat4(glm::mat3(mSceneData.view)));
+        // mSkybox->update(mSceneData.projection * mSceneData.view);
 }
 
 void Scene3D::drawGui() {
@@ -89,14 +102,12 @@ void Scene3D::drawGui() {
             ImGui::TreePop();
         }
 
-
-        ImGui::Checkbox("enable normal mapping", &enableNormalMapping);
-
         ImGui::InputFloat("light color", &mSceneData.sunlightColor.x);
 
-        mSceneData.data.x = enableNormalMapping ? 1.0f : 0.0f;
         mSceneData.sunlightColor.y = mSceneData.sunlightColor.x;
         mSceneData.sunlightColor.z = mSceneData.sunlightColor.x;
+
+        ImGui::InputFloat4("enable cock", (float*)&mSceneData.data);
     }
 
     ImGui::End();
