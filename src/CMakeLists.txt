@@ -1,41 +1,15 @@
 # Add source to this project's executable.
-add_executable (engine 
-  main.cpp
-  vk_types.h
-  vk_initializers.cpp
-  vk_initializers.h
-  vk_images.h
-  vk_images.cpp 
-  vk_descriptors.h
-  vk_descriptors.cpp
-  vk_pipelines.h
-  vk_pipelines.cpp
-  vk_engine.h
-  vk_engine.cpp
-  vk_loader.h
-  vk_loader.cpp
-  vk_enum_string_helper.h
-  camera.cpp
-  camera.h
-  deletion_queue.h
-  deletion_queue.cpp
-  vk_materials.cpp
-  vk_materials.h
-  vk_scene.cpp
-  vk_scene.h
+file(GLOB_RECURSE CXX_SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+
+add_executable(engine 
+  ${CXX_SOURCE_FILES}
 )
 
-set_property(TARGET engine PROPERTY CXX_STANDARD 20)
-set( CMAKE_CXX_FLAGS "-g")
+# set( CMAKE_CXX_FLAGS "-g")
 
-target_compile_definitions(engine PUBLIC GLM_FORCE_DEPTH_ZERO_TO_ONE)
+target_compile_definitions(engine PUBLIC GLM_FORCE_DEPTH_ZERO_TO_ONE GLM_FORCE_RADIANS)
 target_include_directories(engine PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 
-target_link_libraries(engine PUBLIC vma glm Vulkan::Vulkan fmt::fmt stb_image SDL2::SDL2 vkbootstrap imgui fastgltf::fastgltf)
+target_link_libraries(engine spirv_reflect volk vma glm entt nlohmann fmt stb_image SDL2 vkbootstrap imgui fastgltf lua sol2)
 
-target_precompile_headers(engine PUBLIC <optional> <vector> <memory> <string> <vector> <unordered_map> <glm/mat4x4.hpp>  <glm/vec4.hpp> <vulkan/vulkan.h>)
-
-# add_custom_command(TARGET engine POST_BUILD
-#   COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_RUNTIME_DLLS:engine> $<TARGET_FILE_DIR:engine>
-#   COMMAND_EXPAND_LISTS
-#   )
+target_precompile_headers(engine PUBLIC <optional> <vector> <memory> <string> <vector> <unordered_map> <glm/mat4x4.hpp>  <glm/vec4.hpp>)

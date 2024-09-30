@@ -2,61 +2,52 @@
 
 #include <span>
 #include <deque>
-#include <vulkan/vulkan_core.h>
+#include "volk.h"
+#include "vk_types.h"
 
 class DescriptorLayoutBuilder {
 public:
 
-    DescriptorLayoutBuilder& addBinding(uint32_t binding, VkDescriptorType type);
+    DescriptorLayoutBuilder& addBinding(uint32_t binding, VkDescriptorType type, VkShaderStageFlags shaderStages);
     DescriptorLayoutBuilder& clear();
-    VkDescriptorSetLayout build(VkDevice device, VkShaderStageFlags shaderStages, void *pNext = nullptr, VkDescriptorSetLayoutCreateFlags flags = 0);
+    VkDescriptorSetLayout build(VkDevice device, void *pNext = nullptr, VkDescriptorSetLayoutCreateFlags flags = 0);
 
 private:
 
     std::vector<VkDescriptorSetLayoutBinding> mBindings;
 };
 
-class DescriptorAllocator {
+class DescriptorManager {
+
 public:
-    struct PoolSizeRatio {
-        VkDescriptorType type;
-        float ratio;
-    };
 
-    void initPool(VkDevice device, uint32_t maxSets, std::span<PoolSizeRatio> poolRatios);
-    void clearDescriptors(VkDevice device);
-    void destroyPool(VkDevice device);
+    DescriptorManager(VkDescriptorSetLayout sceneLayout, VkDescriptorSetLayout materialLayout);
+    ~DescriptorManager();
 
-    VkDescriptorSet allocate(VkDevice device, VkDescriptorSetLayout layout);
+    void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
+    VkDeviceSize createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView);
+    VkDeviceSize createMaterialDescriptor(const MaterialResources& resources);
+
+    void freeResources();
 
 private:
 
-    VkDescriptorPool mDescriptorPool;
-};
+    void init();
+    void createDescriptorBuffers();
 
-class DynamicDescriptorAllocator {
-public:
-    struct PoolSizeRatio {
-        VkDescriptorType type;
-        float ratio;
-    };
+    AllocatedBuffer mDescriptorBuffer;
+    VkDeviceSize mCurrentOffset = 0;
 
-    void init(VkDevice device, uint32_t initialSets, std::span<PoolSizeRatio> poolRatios);
-    void clearPools(VkDevice device);
-    void destroyPools(VkDevice device);
+    VkDescriptorSetLayout mGlobalLayout;
+    VkDescriptorSetLayout mMaterialLayout;
 
-    VkDescriptorSet allocate(VkDevice device, VkDescriptorSetLayout layout, void* pNext = nullptr);
+    VkDeviceSize mGlobalLayoutSize;
+    VkDeviceSize mMaterialLayoutSize;
 
-private:
+    VkDeviceSize mGlobalLayoutOffset[4];
+    VkDeviceSize mMaterialLayoutOffset[6];
 
-    VkDescriptorPool getPool(VkDevice device);
-    VkDescriptorPool createPool(VkDevice device, uint32_t setCount, std::span<PoolSizeRatio> poolRatios);
-
-    std::vector<PoolSizeRatio> mRatios;
-    std::vector<VkDescriptorPool> mFullPools;
-    std::vector<VkDescriptorPool> mAvailablePools;
-    uint32_t mSetsPerPool;
-    uint32_t mMaxSetsPerPool = 4092;
+    VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties;
 };
 
 class DescriptorWriter {
@@ -67,6 +58,10 @@ public:
 
     DescriptorWriter& clear();
     DescriptorWriter& updateSet(VkDevice device, VkDescriptorSet set);
+
+    std::vector<VkWriteDescriptorSet> getWrites() {
+        return mWrites;
+    }
 
 private:
 

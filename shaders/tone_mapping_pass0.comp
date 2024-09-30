@@ -1,0 +1,47 @@
+#version 460
+
+layout (local_size_x = 16, local_size_y = 16) in;
+
+layout(rgba16f,set = 0, binding = 0) uniform image2D image;
+
+layout( push_constant ) uniform constants
+{
+    ivec2 imageExtent;
+    float exposure;
+} PushConstants;
+
+vec3 sRGBToLinear(vec3 rgb)
+{
+  // See https://gamedev.stackexchange.com/questions/92015/optimized-linear-to-srgb-glsl
+  return mix(pow((rgb + 0.055) * (1.0 / 1.055), vec3(2.4)),
+             rgb * (1.0/12.92),
+             lessThanEqual(rgb, vec3(0.04045)));
+}
+
+vec3 linearToSRGB(vec3 rgb)
+{
+  // See https://gamedev.stackexchange.com/questions/92015/optimized-linear-to-srgb-glsl
+  return mix(1.055 * pow(rgb, vec3(1.0 / 2.4)) - 0.055,
+             rgb * 12.92,
+             lessThanEqual(rgb, vec3(0.0031308)));
+}
+
+void main() {
+    ivec2 texelCoord = ivec2(gl_GlobalInvocationID.xy);
+
+    if(texelCoord.x < PushConstants.imageExtent.x && texelCoord.y < PushConstants.imageExtent.y)
+    {
+        vec4 pixel = imageLoad(image, texelCoord);
+        
+        // reinhard tone mapping
+        // vec3 mapped = pixel.xyz / (pixel.xyz + vec3(1.0));
+        vec3 mapped = pixel.xyz;
+
+        mapped = vec3(1.0) - exp(-pixel.xyz * PushConstants.exposure);
+
+        // gamma correction
+        mapped = linearToSRGB(mapped);
+
+        imageStore(image, texelCoord, vec4(mapped, pixel.a));
+    }
+}

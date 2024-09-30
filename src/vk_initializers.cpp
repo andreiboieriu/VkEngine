@@ -1,4 +1,7 @@
 ﻿#include "vk_initializers.h"
+#include "vk_descriptors.h"
+#include "vk_types.h"
+#include "vk_engine.h"
 
 //> init_cmd
 VkCommandPoolCreateInfo vkinit::command_pool_create_info(uint32_t queueFamilyIndex,
@@ -58,6 +61,7 @@ VkSemaphoreCreateInfo vkinit::semaphore_create_info(VkSemaphoreCreateFlags flags
     info.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
     info.pNext = nullptr;
     info.flags = flags;
+
     return info;
 }
 //< init_sync
@@ -134,6 +138,7 @@ VkRenderingAttachmentInfo vkinit::attachment_info(
     colorAttachment.imageLayout = layout;
     colorAttachment.loadOp = clear ? VK_ATTACHMENT_LOAD_OP_CLEAR : VK_ATTACHMENT_LOAD_OP_LOAD;
     colorAttachment.storeOp = VK_ATTACHMENT_STORE_OP_STORE;
+    
     if (clear) {
         colorAttachment.clearValue = *clear;
     }
@@ -338,4 +343,17 @@ VmaAllocatorCreateInfo vkinit::vmaCreateInfo(VkPhysicalDevice physicalDevice, Vk
 
     return createInfo;
 }
+
+VkComputePipelineCreateInfo vkinit::computePipelineCreateInfo(VkShaderModule shaderModule, VkPipelineLayout pipelineLayout) {
+    VkPipelineShaderStageCreateInfo shaderStageInfo = vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_COMPUTE_BIT, shaderModule);
+
+    VkComputePipelineCreateInfo computePipelineInfo{};
+    computePipelineInfo.sType = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO;
+    computePipelineInfo.pNext = nullptr;
+    computePipelineInfo.layout = pipelineLayout;
+    computePipelineInfo.stage = shaderStageInfo;
+
+    return computePipelineInfo;
+}
+
 

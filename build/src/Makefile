@@ -85,51 +85,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/gooby/Development/VkEngine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gooby/Development/VkEngine/build/CMakeFiles /home/gooby/Development/VkEngine/build/src//CMakeFiles/progress.marks
@@ -214,6 +169,30 @@ cmake_pch.hxx.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
+compute_effects/compute_effect.o: compute_effects/compute_effect.cpp.o
+.PHONY : compute_effects/compute_effect.o
+
+# target to build an object file
+compute_effects/compute_effect.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o
+.PHONY : compute_effects/compute_effect.cpp.o
+
+compute_effects/compute_effect.i: compute_effects/compute_effect.cpp.i
+.PHONY : compute_effects/compute_effect.i
+
+# target to preprocess a source file
+compute_effects/compute_effect.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.i
+.PHONY : compute_effects/compute_effect.cpp.i
+
+compute_effects/compute_effect.s: compute_effects/compute_effect.cpp.s
+.PHONY : compute_effects/compute_effect.s
+
+# target to generate assembly for a file
+compute_effects/compute_effect.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.s
+.PHONY : compute_effects/compute_effect.cpp.s
+
 deletion_queue.o: deletion_queue.cpp.o
 .PHONY : deletion_queue.o
 
@@ -237,6 +216,54 @@ deletion_queue.s: deletion_queue.cpp.s
 deletion_queue.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/deletion_queue.cpp.s
 .PHONY : deletion_queue.cpp.s
+
+ecs_components/components.o: ecs_components/components.cpp.o
+.PHONY : ecs_components/components.o
+
+# target to build an object file
+ecs_components/components.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_components/components.cpp.o
+.PHONY : ecs_components/components.cpp.o
+
+ecs_components/components.i: ecs_components/components.cpp.i
+.PHONY : ecs_components/components.i
+
+# target to preprocess a source file
+ecs_components/components.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_components/components.cpp.i
+.PHONY : ecs_components/components.cpp.i
+
+ecs_components/components.s: ecs_components/components.cpp.s
+.PHONY : ecs_components/components.s
+
+# target to generate assembly for a file
+ecs_components/components.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/ecs_components/components.cpp.s
+.PHONY : ecs_components/components.cpp.s
+
+entity.o: entity.cpp.o
+.PHONY : entity.o
+
+# target to build an object file
+entity.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/entity.cpp.o
+.PHONY : entity.cpp.o
+
+entity.i: entity.cpp.i
+.PHONY : entity.i
+
+# target to preprocess a source file
+entity.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/entity.cpp.i
+.PHONY : entity.cpp.i
+
+entity.s: entity.cpp.s
+.PHONY : entity.s
+
+# target to generate assembly for a file
+entity.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/entity.cpp.s
+.PHONY : entity.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -262,6 +289,78 @@ main.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+resource_manager.o: resource_manager.cpp.o
+.PHONY : resource_manager.o
+
+# target to build an object file
+resource_manager.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/resource_manager.cpp.o
+.PHONY : resource_manager.cpp.o
+
+resource_manager.i: resource_manager.cpp.i
+.PHONY : resource_manager.i
+
+# target to preprocess a source file
+resource_manager.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/resource_manager.cpp.i
+.PHONY : resource_manager.cpp.i
+
+resource_manager.s: resource_manager.cpp.s
+.PHONY : resource_manager.s
+
+# target to generate assembly for a file
+resource_manager.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/resource_manager.cpp.s
+.PHONY : resource_manager.cpp.s
+
+script_manager.o: script_manager.cpp.o
+.PHONY : script_manager.o
+
+# target to build an object file
+script_manager.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/script_manager.cpp.o
+.PHONY : script_manager.cpp.o
+
+script_manager.i: script_manager.cpp.i
+.PHONY : script_manager.i
+
+# target to preprocess a source file
+script_manager.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/script_manager.cpp.i
+.PHONY : script_manager.cpp.i
+
+script_manager.s: script_manager.cpp.s
+.PHONY : script_manager.s
+
+# target to generate assembly for a file
+script_manager.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/script_manager.cpp.s
+.PHONY : script_manager.cpp.s
+
+skybox.o: skybox.cpp.o
+.PHONY : skybox.o
+
+# target to build an object file
+skybox.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/skybox.cpp.o
+.PHONY : skybox.cpp.o
+
+skybox.i: skybox.cpp.i
+.PHONY : skybox.i
+
+# target to preprocess a source file
+skybox.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/skybox.cpp.i
+.PHONY : skybox.cpp.i
+
+skybox.s: skybox.cpp.s
+.PHONY : skybox.s
+
+# target to generate assembly for a file
+skybox.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/skybox.cpp.s
+.PHONY : skybox.cpp.s
+
 vk_descriptors.o: vk_descriptors.cpp.o
 .PHONY : vk_descriptors.o
 
@@ -285,6 +384,30 @@ vk_descriptors.s: vk_descriptors.cpp.s
 vk_descriptors.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_descriptors.cpp.s
 .PHONY : vk_descriptors.cpp.s
+
+vk_device.o: vk_device.cpp.o
+.PHONY : vk_device.o
+
+# target to build an object file
+vk_device.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_device.cpp.o
+.PHONY : vk_device.cpp.o
+
+vk_device.i: vk_device.cpp.i
+.PHONY : vk_device.i
+
+# target to preprocess a source file
+vk_device.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_device.cpp.i
+.PHONY : vk_device.cpp.i
+
+vk_device.s: vk_device.cpp.s
+.PHONY : vk_device.s
+
+# target to generate assembly for a file
+vk_device.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_device.cpp.s
+.PHONY : vk_device.cpp.s
 
 vk_engine.o: vk_engine.cpp.o
 .PHONY : vk_engine.o
@@ -454,6 +577,54 @@ vk_scene.cpp.s:
 	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_scene.cpp.s
 .PHONY : vk_scene.cpp.s
 
+vk_swapchain.o: vk_swapchain.cpp.o
+.PHONY : vk_swapchain.o
+
+# target to build an object file
+vk_swapchain.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_swapchain.cpp.o
+.PHONY : vk_swapchain.cpp.o
+
+vk_swapchain.i: vk_swapchain.cpp.i
+.PHONY : vk_swapchain.i
+
+# target to preprocess a source file
+vk_swapchain.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_swapchain.cpp.i
+.PHONY : vk_swapchain.cpp.i
+
+vk_swapchain.s: vk_swapchain.cpp.s
+.PHONY : vk_swapchain.s
+
+# target to generate assembly for a file
+vk_swapchain.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_swapchain.cpp.s
+.PHONY : vk_swapchain.cpp.s
+
+vk_window.o: vk_window.cpp.o
+.PHONY : vk_window.o
+
+# target to build an object file
+vk_window.cpp.o:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_window.cpp.o
+.PHONY : vk_window.cpp.o
+
+vk_window.i: vk_window.cpp.i
+.PHONY : vk_window.i
+
+# target to preprocess a source file
+vk_window.cpp.i:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_window.cpp.i
+.PHONY : vk_window.cpp.i
+
+vk_window.s: vk_window.cpp.s
+.PHONY : vk_window.s
+
+# target to generate assembly for a file
+vk_window.cpp.s:
+	cd /home/gooby/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/vk_window.cpp.s
+.PHONY : vk_window.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -461,10 +632,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... engine"
 	@echo "... camera.o"
@@ -473,15 +640,36 @@ help:
 	@echo "... cmake_pch.hxx.pch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"
+	@echo "... compute_effects/compute_effect.o"
+	@echo "... compute_effects/compute_effect.i"
+	@echo "... compute_effects/compute_effect.s"
 	@echo "... deletion_queue.o"
 	@echo "... deletion_queue.i"
 	@echo "... deletion_queue.s"
+	@echo "... ecs_components/components.o"
+	@echo "... ecs_components/components.i"
+	@echo "... ecs_components/components.s"
+	@echo "... entity.o"
+	@echo "... entity.i"
+	@echo "... entity.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... resource_manager.o"
+	@echo "... resource_manager.i"
+	@echo "... resource_manager.s"
+	@echo "... script_manager.o"
+	@echo "... script_manager.i"
+	@echo "... script_manager.s"
+	@echo "... skybox.o"
+	@echo "... skybox.i"
+	@echo "... skybox.s"
 	@echo "... vk_descriptors.o"
 	@echo "... vk_descriptors.i"
 	@echo "... vk_descriptors.s"
+	@echo "... vk_device.o"
+	@echo "... vk_device.i"
+	@echo "... vk_device.s"
 	@echo "... vk_engine.o"
 	@echo "... vk_engine.i"
 	@echo "... vk_engine.s"
@@ -503,6 +691,12 @@ help:
 	@echo "... vk_scene.o"
 	@echo "... vk_scene.i"
 	@echo "... vk_scene.s"
+	@echo "... vk_swapchain.o"
+	@echo "... vk_swapchain.i"
+	@echo "... vk_swapchain.s"
+	@echo "... vk_window.o"
+	@echo "... vk_window.i"
+	@echo "... vk_window.s"
 .PHONY : help
 
 

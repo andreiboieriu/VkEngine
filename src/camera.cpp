@@ -9,66 +9,84 @@
 
 #include <glm/gtc/matrix_transform.hpp>
 
-glm::mat4 Camera::getViewMatrix() {
+#include <imgui.h>
+
+glm::mat4 EditorCamera::getViewMatrix() {
     glm::mat4 cameraTranslation = glm::translate(glm::mat4(1.f), mPosition);
     glm::mat4 cameraRotation = getRotationMatrix();
 
     return glm::inverse(cameraTranslation * cameraRotation);
 }
 
-glm::mat4 Camera::getRotationMatrix() {
-    glm::quat pitchRotation = glm::angleAxis(mPitch, glm::vec3(1.0f, 0.0f, 0.0f));
-    glm::quat yawRotation = glm::angleAxis(mYaw, glm::vec3(0.0f, -1.0f, 0.0f));
+glm::mat4 EditorCamera::getProjectionMatrix() {
+    // invert far and near
+    glm::mat4 projection = glm::perspective(glm::radians(mFov), mAspectRatio, mFar, mNear);
+
+    // projection[1][1] *= -1.0f;
+
+    return projection;
+}
+
+glm::mat4 EditorCamera::getRotationMatrix() {
+    glm::quat pitchRotation = glm::angleAxis(glm::radians(mPitch), glm::vec3(1.0f, 0.0f, 0.0f));
+    glm::quat yawRotation = glm::angleAxis(glm::radians(mYaw), glm::vec3(0.0f, -1.0f, 0.0f));
 
     return glm::toMat4(yawRotation) * glm::toMat4(pitchRotation);
 }
 
-// TODO: improve + pass deltaTime
-void Camera::processSDLEvent(SDL_Event& e) {
-    if (e.type == SDL_KEYDOWN) {
-        if (e.key.keysym.sym == SDLK_w) {
+void EditorCamera::update(float dt, float aspectRatio, const UserInput& userInput) {
+    if (!userInput.GuiMode) {
+        if (userInput.pressedKeys.contains(SDLK_w)) {
             mVelocity.z = -1;
         }
 
-        if (e.key.keysym.sym == SDLK_s) {
-            mVelocity.z = 1;
-        }
-
-        if (e.key.keysym.sym == SDLK_a) {
+        if (userInput.pressedKeys.contains(SDLK_a)) {
             mVelocity.x = -1;
         }
 
-        if (e.key.keysym.sym == SDLK_d) {
+        if (userInput.pressedKeys.contains(SDLK_s)) {
+            mVelocity.z = 1;
+        }
+
+        if (userInput.pressedKeys.contains(SDLK_d)) {
             mVelocity.x = 1;
         }
 
-    }
-
-    if (e.type == SDL_KEYUP) {
-        if (e.key.keysym.sym == SDLK_w) {
+        if (userInput.releasedKeys.contains(SDLK_w)) {
             mVelocity.z = 0;
         }
 
-        if (e.key.keysym.sym == SDLK_s) {
+        if (userInput.releasedKeys.contains(SDLK_a)) {
+            mVelocity.x = 0;
+        }
+
+        if (userInput.releasedKeys.contains(SDLK_s)) {
             mVelocity.z = 0;
         }
 
-        if (e.key.keysym.sym == SDLK_a) {
+        if (userInput.releasedKeys.contains(SDLK_d)) {
             mVelocity.x = 0;
         }
 
-        if (e.key.keysym.sym == SDLK_d) {
-            mVelocity.x = 0;
-        }
+        mYaw += userInput.mouseXRel * MOUSE_MOTION_SENSITIVITY;
+        mPitch -= userInput.mouseYRel * MOUSE_MOTION_SENSITIVITY;
+
+        mPitch = glm::clamp(mPitch, MIN_PITCH, MAX_PITCH);
+
+        mFov -= userInput.mouseWheel * MOUSE_WHEEL_SENSITIVITY;
+        mFov = glm::clamp(mFov, MIN_FOV, MAX_FOV);
     }
 
-    if (e.type == SDL_MOUSEMOTION) {
-        mYaw += (float)e.motion.xrel / 200.f;
-        mPitch -= (float)e.motion.yrel / 200.f;
-    }
+    glm::mat4 cameraRotation = getRotationMatrix();
+    mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * mSpeed * dt, 0.f));
+    mAspectRatio = aspectRatio;
 }
 
-void Camera::update() {
-    glm::mat4 cameraRotation = getRotationMatrix();
-    mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * 0.2f, 0.f));
+void EditorCamera::drawGui() {
+    if (ImGui::TreeNode("Camera")) {
+        ImGui::PushItemWidth(60);
+        ImGui::InputFloat("speed", &mSpeed);
+
+        ImGui::TreePop();
+    }
 }

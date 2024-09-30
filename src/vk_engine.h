@@ -1,24 +1,85 @@
-﻿// vulkan_guide.h : Include file for standard system include files,
-// or project specific include files.
+﻿#pragma once
 
-#pragma once
-
+#include "compute_effects/compute_effect.h"
 #include "vk_materials.h"
 #include "vk_scene.h"
 #include "vk_types.h"
-#include "vk_descriptors.h"
 #include "deletion_queue.h"
-#include "vk_loader.h"
+#include "vk_descriptors.h"
 #include <memory>
-#include <string>
-#include <unordered_map>
-#include <vulkan/vulkan_core.h>
-#include "camera.h"
+#include "resource_manager.h"
+
+#include "volk.h"
+#include "entt.hpp"
+
+#include "vk_window.h"
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
 
 class VulkanEngine {
 public:
+	struct Stats {
+		float frameTime;
+		int triangleCount;
+		int drawCallCount;
+		float updateTime;
+		float drawGeometryTime;
+		float drawTime;
+
+		float frameTimeBuffer;
+		float updateTimeBuffer;
+		float drawGeometryTimeBuffer;
+		float drawTimeBuffer;
+
+		float msElapsed;
+		int frameCount;
+
+		int fps;
+	};
+
+	struct FrameData {
+		VkCommandPool commandPool;
+		VkCommandBuffer mainCommandBuffer;
+
+		VkSemaphore swapchainSemaphore;
+		VkSemaphore renderSemaphore;
+		VkFence renderFence;
+
+		DeletionQueue deletionQueue;
+	};
+
+	struct LoadingScreenData {
+		GPUMeshBuffers meshBuffers;
+		uint32_t indexCount;
+
+		VkPipelineLayout pipelineLayout;
+		VkDescriptorSetLayout descriptorSetLayout;
+		VkPipeline pipeline;
+
+		AllocatedImage texture;
+		AllocatedBuffer uboBuffer;
+
+		struct Ubo {
+			glm::mat4 projectionMatrix;
+			glm::mat4 modelMatrix;
+			VkDeviceAddress vertexBufferAddress;
+			glm::vec2 padding0;
+			glm::vec4 padding1;
+			glm::vec4 padding2;
+			glm::vec4 padding3;
+			glm::mat4 padding4;
+		};
+
+		Ubo uboData;
+		float rotation = 0.f;
+	};
+
+	struct EngineConfig {
+		float renderScale = 1.0f;
+		bool enableFrustumCulling = true;
+		bool enableDrawSorting = true;
+	};
+
 	static VulkanEngine& get();
 
 	//initializes everything in the engine
@@ -34,8 +95,16 @@ public:
 		return mFrames[mFrameNumber % MAX_FRAMES_IN_FLIGHT];
 	}
 
-	VkDevice& getDevice() {
+	const VkDevice& getDevice() {
 		return mDevice;
+	}
+
+	const VkPhysicalDevice& getPhysicalDevice() {
+		return mPhysicalDevice;
+	}
+
+	const VkInstance& getInstance() {
+		return mInstance;
 	}
 
 	AllocatedImage& getErrorTexture() {
@@ -46,6 +115,14 @@ public:
 		return mWhiteImage;
 	}
 
+	AllocatedImage& getBlackTexture() {
+		return mBlackImage;
+	}
+
+	AllocatedImage& getDefaultNormalMap() {
+		return mDefaultNormalMap;
+	}
+
 	VkSampler& getDefaultLinearSampler() {
 		return mDefaultSamplerLinear;
 	}
@@ -54,52 +131,75 @@ public:
 		return mDefaultSamplerNearest;
 	}
 
-	GLTFMetallicRoughness& getGLTFMRCreator() {
-		return mMetalRoughMaterial;
+	MaterialManager& getMaterialManager() {
+		return *mMaterialManager;
 	}
 
-	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function);
+	DescriptorManager& getDescriptorManager() {
+		return *mDescriptorManager;
+	}
+
+	ResourceManager& getResourceManager() {
+		return *mResourceManager;
+	}
+
+	VkPhysicalDeviceDescriptorBufferPropertiesEXT getDescriptorBufferProperties() {
+		return mDescriptorBufferProperties;
+	}
+
+	VkFormat getDrawImageFormat() {
+		return mDrawImage.imageFormat;
+	}
+
+	VkFormat getDepthImageFormat() {
+		return mDepthImage.imageFormat;
+	}
+
+	float getMaxSamplerAnisotropy() {
+		return mMaxSamplerAnisotropy;
+	}
+
+	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function, bool waitResult = false);
 
 	AllocatedBuffer createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage);
 	void destroyBuffer(const AllocatedBuffer& buffer);
 
 	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
 	AllocatedImage createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
+	AllocatedImage createEmptyCubemap(VkExtent2D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
+
 	void destroyImage(const AllocatedImage& image);
 
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
 
-	void updateScene();
+	void updateScene(float dt, const UserInput& userInput);
 
 private:
 
 	void initVulkan();
+	void initVMA();
 	void initSwapchain();
 	void initCommands();
 	void initSyncStructs();
-	void initDescriptors();
-	void initPipelines();
-	void initBackgroundPipelines();
 	void initImGui();
 
-	// TODO: delete later
-	void initMeshPipeline();
+	void initECS();
 
 	void initDefaultData();
 
-
-	void createSwapchain(uint32_t width, uint32_t height);
-	void resizeSwapchain();
-	void destroySwapchain();
+	void loadLoadingScreenData();
 
 	//draw loop
 	void draw();
-	void drawBackground(VkCommandBuffer commandBuffer);
 	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
 	void drawGeometry(VkCommandBuffer commandBuffer);
 
+	void drawLoadingScreen();
+
+	void drawGui();
+
 	// Vulkan library handle
-	VkInstance mInstance;
+	VkInstance mInstance = VK_NULL_HANDLE;
 
 	// Vulkan debug output handle
 	VkDebugUtilsMessengerEXT mDebugMessenger;
@@ -110,22 +210,12 @@ private:
 	// Vulkan logical device
 	VkDevice mDevice;
 
-	// Vulkan window surface
-	VkSurfaceKHR mSurface;
-
-	// swapchain related
-	VkSwapchainKHR mSwapchain;
-	VkFormat mSwapchainImageFormat;
-
-	std::vector<VkImage> mSwapchainImages;
-	std::vector<VkImageView> mSwapchainImageViews;
-	VkExtent2D mSwapchainExtent;
+	std::unique_ptr<Window> mWindow;
 
 	VmaAllocator mAllocator;
 
 	// flags
 	bool mIsInitialized = false;
-	bool mStopRendering = false;
 	bool mUseValidationLayers = true;
 
 	int mFrameNumber = 0;
@@ -134,67 +224,53 @@ private:
 	VkQueue mGraphicsQueue;
 	uint32_t mGraphicsQueueFamily;
 
-	// window size basically
-	VkExtent2D mWindowExtent = {1280, 720};
+	VkQueue mImmediateCommandsQueue;
+	uint32_t mImmediateCommandsQueueFamily;
 
-	// sdl window handle
-	struct SDL_Window* mWindow = nullptr;
-
-	bool mResizeRequested = false;
+	EngineConfig mEngineConfig;
 
 	DeletionQueue mMainDeletionQueue;
 
 	// draw resources
 	AllocatedImage mDrawImage;
 	VkExtent2D mDrawExtent;
-	float mRenderScale = 1.0f;
-
 	AllocatedImage mDepthImage;
 
-	// descriptor resources
-	DynamicDescriptorAllocator mDescriptorAllocator;
-	VkDescriptorSet mDrawImageDescriptors;
-	VkDescriptorSetLayout mDrawImageDescriptorLayout;
-
-	VkDescriptorSetLayout mSingleImageDescriptorLayout;
-
-	// pipeline resources
-	VkPipeline mGradientPipeline;
-	VkPipelineLayout mGradientPipelineLayout;
-
-	VkPipelineLayout mMeshPipelineLayout;
-	VkPipeline mMeshPipeline;
-	std::vector<std::shared_ptr<MeshAsset>> mTestMeshes;
-
-	std::vector<ComputeEffect> backgroundEffects;
-	int currentBackgroundEffect = 0;
 	
 	// immediat submit structures
 	VkFence mImmFence;
 	VkCommandBuffer mImmCommandBuffer;
 	VkCommandPool mImmCommandPool;
 
-	// scene resources
-	GPUSceneData mSceneData;
-	VkDescriptorSetLayout mGpuSceneDataDescriptorLayout;
-
 	// texture test resources
 	AllocatedImage mWhiteImage;
 	AllocatedImage mBlackImage;
 	AllocatedImage mGreyImage;
 	AllocatedImage mErrorCheckerboardImage;
+	AllocatedImage mDefaultNormalMap;
 
 	VkSampler mDefaultSamplerLinear;
 	VkSampler mDefaultSamplerNearest;
 
-	MaterialInstance mDefaultMaterialInstance;
-	GLTFMetallicRoughness mMetalRoughMaterial;
+	std::unique_ptr<DescriptorManager> mDescriptorManager;
+	std::unique_ptr<MaterialManager> mMaterialManager;
+	std::unique_ptr<ResourceManager> mResourceManager;
 
 	RenderContext mMainRenderContext;
-	std::unordered_map<std::string, std::shared_ptr<Node>> mLoadedNodes;
 
-	// TODO: move somewhere else
-	Camera mCamera;
+	std::shared_ptr<Scene3D> mScene;
 
-	std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedScenes;
+	Stats mStats{};
+
+	VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties{};
+
+	bool mCursorLocked = true;
+
+	std::unique_ptr<ComputeEffect> mFxaaEffect;
+	std::unique_ptr<ComputeEffect> mToneMappingEffect;
+	std::unique_ptr<ComputeEffect> mBloomEffect;
+
+	float mMaxSamplerAnisotropy;
+
+	LoadingScreenData mLoadingScreenData;
 };

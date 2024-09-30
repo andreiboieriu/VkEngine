@@ -1,11 +1,13 @@
 ﻿#pragma once 
 #include "vk_types.h"
+#include <span>
 
 namespace vkutil {
 
 bool loadShaderModule(const char* filePath, VkDevice device, VkShaderModule* outShaderModule);
+VkPipelineLayout createPipelineLayout(std::span<VkDescriptorSetLayout> descriptorSetLayouts, std::span<VkPushConstantRange> pushConstantRanges);
 
-};
+}; // namespace vkutil
 
 class PipelineBuilder {
 public:
@@ -13,7 +15,7 @@ public:
         clear();
     }
 
-    void clear();
+    PipelineBuilder& clear();
 
     PipelineBuilder& setShaders(VkShaderModule vertexShader, VkShaderModule fragmentShader);
     PipelineBuilder& setInputTopology(VkPrimitiveTopology topology);
@@ -29,7 +31,7 @@ public:
     PipelineBuilder& enableDepthTesting(bool depthWriteEnable, VkCompareOp op);
 
     PipelineBuilder& setLayout(VkPipelineLayout layout);
-    VkPipeline buildPipeline(VkDevice device);
+    VkPipeline buildPipeline(VkDevice device, VkPipelineCreateFlags flags);
 
 private:
     std::vector<VkPipelineShaderStageCreateInfo> mShaderStages;

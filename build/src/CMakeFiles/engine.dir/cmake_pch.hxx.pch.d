@@ -387,16 +387,4 @@ src/CMakeFiles/engine.dir/cmake_pch.hxx.pch: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/../detail/type_vec1.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/matrix_double4x4_precision.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/matrix_float4x4.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h
+  /home/gooby/Development/VkEngine/third_party/glm/glm/./ext/matrix_float4x4_precision.hpp

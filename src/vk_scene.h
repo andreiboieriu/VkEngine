@@ -1,67 +1,89 @@
 #pragma once
 
+#include "uuid.h"
+#include "entity.h"
+
+#include "deletion_queue.h"
 #include "vk_types.h"
-#include <memory>
+#include "skybox.h"
+#include <nlohmann/json.hpp>
+#include "entt.hpp"
+#include "vk_window.h"
+#include "script_manager.h"
 
-class IRenderable {
-public:
-    virtual ~IRenderable() = 0;
-    virtual void draw(const glm::mat4& topMatrix, RenderContext& context) = 0;
-};
+class Entity;
+class UUID;
 
-class Node : public IRenderable {
-public:
+class Scene3D {
 
-    void refreshTransform(const glm::mat4& parentMatrix);
-    void draw(const glm::mat4& topMatrix, RenderContext& context);
-
-    void setLocalTransform(glm::mat4 transform) {
-        mLocalTransform = transform;
-    }
-
-    void setWorldTransform(glm::mat4 transform) {
-        mWorldTransform = transform;
-    }
-
-    glm::mat4& getLocalTransform() {
-        return mLocalTransform;
-    }
-
-    void addChild(std::shared_ptr<Node> child) {
-        mChildren.push_back(child);
-    }
-
-    void setParent(std::weak_ptr<Node> parent) {
-        mParent = parent;
-    }
-
-    bool hasParent() {
-        return mParent.lock() != nullptr;
-    }
-
-protected:
-
-    std::weak_ptr<Node> mParent;
-    std::vector<std::shared_ptr<Node>> mChildren;
-
-    glm::mat4 mLocalTransform;
-    glm::mat4 mWorldTransform;
-};
-
-class MeshNode : public Node {
 public:
 
-    void draw(const glm::mat4& topMatrix, RenderContext& context) override;
+    struct SceneData {
+        glm::mat4 view;
+        glm::mat4 projection;
+        glm::mat4 viewProjection;
+        glm::vec4 ambientColor;
+        glm::vec4 sunlightDirection;
+        glm::vec4 sunlightColor;
+        glm::vec4 viewPosition;
+        glm::vec4 data;
+    };
 
-    void setMesh(std::shared_ptr<MeshAsset> mesh) {
-        mMesh = mesh;
+    Scene3D(const std::string& name);
+    ~Scene3D();
+
+    void update(float dt, float aspectRatio, const UserInput& userInput, RenderContext& renderContext, bool isCursorLocked);
+    void drawGui();
+
+    void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
+
+    void drawSkybox(VkCommandBuffer commandBuffer) {
+        if (mSkybox != nullptr)
+            mSkybox->draw(commandBuffer);
     }
 
-    std::shared_ptr<MeshAsset> getMesh() {
-        return mMesh;
+    const glm::mat4 getViewProj();
+    void saveToFile();
+
+    void loadFromFile(std::filesystem::path filePath);
+    nlohmann::json toJson();
+
+    Entity& createEntity(const UUID& name = UUID());
+    Entity& getEntity(const UUID& name);
+    void destroyEntity(const UUID& name);
+
+    // systems
+    void propagateTransform();
+    void cleanupEntities();
+
+    const UserInput& getUserInput() {
+        return mUserInput;
     }
 
 private:
+    void init();
+    void freeResources();
 
-    std::shared_ptr<MeshAsset> mMesh;
+    DeletionQueue mDeletionQueue;
+
+    DescriptorData mSceneDataDescriptor;
+    AllocatedBuffer mSceneDataBuffer;
+    VkDeviceSize mGlobalDescriptorOffset;
+
+    SceneData mSceneData;
+
+    std::string mName;
+    std::unique_ptr<Skybox> mSkybox = nullptr;
+    std::unique_ptr<ScriptManager> mScriptManager = nullptr;
+
+    entt::registry mRegistry;
+
+    UserInput mUserInput;
+
+    std::vector<UUID> mRootEntityUUIDs; // has to be declared before entity map
+    std::unordered_map<UUID, std::unique_ptr<Entity>> mEntityMap;
+    UUID mMainCameraHolder = UUID::null();
+
+    friend class Entity;
+    friend class Script;
 };

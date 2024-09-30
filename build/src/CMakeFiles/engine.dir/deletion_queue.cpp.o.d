@@ -380,18 +380,6 @@ src/CMakeFiles/engine.dir/deletion_queue.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
   /home/gooby/Development/VkEngine/src/deletion_queue.cpp \
   /home/gooby/Development/VkEngine/src/deletion_queue.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \

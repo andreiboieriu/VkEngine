@@ -2,12 +2,12 @@
 // or project specific include files.
 #pragma once
 
+#include "volk.h"
+
 #include <memory>
 #include <string>
 #include <vector>
 
-#include <vulkan/vulkan.h>
-#include "vk_descriptors.h"
 #include <vk_mem_alloc.h>
 #include "deletion_queue.h"
 #include "vk_enum_string_helper.h"
@@ -16,19 +16,6 @@
 
 #include <glm/mat4x4.hpp>
 #include <glm/vec4.hpp>
-#include <vulkan/vulkan_core.h>
-
-struct FrameData {
-	VkCommandPool commandPool;
-	VkCommandBuffer mainCommandBuffer;
-
-	VkSemaphore swapchainSemaphore;
-	VkSemaphore renderSemaphore;
-	VkFence renderFence;
-
-	DeletionQueue deletionQueue;
-    DynamicDescriptorAllocator descriptorAllocator;
-};
 
 struct AllocatedImage {
     VkImage image;
@@ -36,6 +23,7 @@ struct AllocatedImage {
     VmaAllocation allocation;
     VkExtent3D imageExtent;
     VkFormat imageFormat;
+    uint32_t mipLevels;
 };
 
 struct ComputePushConstants {
@@ -45,27 +33,26 @@ struct ComputePushConstants {
     glm::vec4 data4;
 };
 
-struct ComputeEffect {
-    std::string name;
-
-    VkPipeline pipeline;
-    VkPipelineLayout pipelineLayout;
-
-    ComputePushConstants pushConstants;
-};
-
 struct AllocatedBuffer {
     VkBuffer buffer;
     VmaAllocation allocation;
     VmaAllocationInfo allocInfo;
+    VkDeviceAddress deviceAddress;
 };
 
-struct Vertex {
+
+struct DescriptorData {
+    VkDescriptorSetLayout layout;
+    AllocatedBuffer buffer;
+    VkDeviceSize size;
+    VkDeviceSize offset;
+};
+
+struct alignas(16) Vertex {
     glm::vec3 position;
     float uvX;
     glm::vec3 normal;
     float uvY;
-    glm::vec4 color;
 };
 
 struct GPUMeshBuffers {
@@ -79,18 +66,11 @@ struct GPUDrawPushConstants {
     VkDeviceAddress vertexBuffer;
 };
 
-struct GPUSceneData {
-    glm::mat4 view;
-    glm::mat4 projection;
-    glm::mat4 viewProjection;
-    glm::vec4 ambientColor;
-    glm::vec4 sunlightDirection;
-    glm::vec4 sunlightColor;
-};
-
 enum class MaterialPass : uint8_t {
     Opaque,
     Transparent,
+    OpaqueDoubleSided,
+    TransparentDoubleSided,
     Other
 };
 
@@ -101,8 +81,45 @@ struct MaterialPipeline {
 
 struct MaterialInstance {
     MaterialPipeline* pipeline;
-    VkDescriptorSet descriptorSet;
     MaterialPass passType;
+
+    VkDeviceSize descriptorOffset;
+};
+
+struct alignas(16) MaterialConstants {
+    glm::vec4 colorFactors;
+    glm::vec4 metalRoughFactors;
+    glm::vec4 emissiveFactors;
+    float emissiveStrength;
+    float normalScale;
+    float occlusionStrength;
+};
+
+struct MaterialResources {
+    AllocatedImage colorImage;
+    VkSampler colorSampler;
+
+    AllocatedImage metalRoughImage;
+    VkSampler metalRoughSampler;
+
+    AllocatedImage normalImage;
+    VkSampler normalSampler;
+
+    AllocatedImage emissiveImage;
+    VkSampler emissiveSampler;
+
+    AllocatedImage occlusionImage;
+    VkSampler occlusionSampler;
+
+    VkBuffer dataBuffer;
+    uint32_t dataBufferOffset;
+    VkDeviceAddress dataBufferAddress;
+};
+
+struct Bounds {
+    glm::vec3 origin;
+    float sphereRadius;
+    glm::vec3 extents;
 };
 
 struct RenderObject {
@@ -114,6 +131,8 @@ struct RenderObject {
 
     glm::mat4 transform;
     VkDeviceAddress vertexBufferAddress;
+
+    Bounds bounds;
 };
 
 struct RenderContext {
@@ -129,6 +148,8 @@ struct GeoSurface {
     uint32_t startIndex;
     uint32_t count;
     std::shared_ptr<GLTFMaterial> material;
+
+    Bounds bounds;
 };
 
 struct MeshAsset {
@@ -137,6 +158,11 @@ struct MeshAsset {
     std::vector<GeoSurface> surfaces;
     GPUMeshBuffers meshBuffers;
 };
+
+inline VkDeviceSize alignedSize(VkDeviceSize value, VkDeviceSize alignment)
+{
+	return (value + alignment - 1) & ~(alignment - 1);
+}
 
 #define VK_CHECK(x)                                                     \
     do {                                                                \

@@ -380,63 +380,56 @@ src/CMakeFiles/engine.dir/camera.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
   /home/gooby/Development/VkEngine/src/camera.cpp \
   /home/gooby/Development/VkEngine/src/camera.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_events.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_stdinc.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include-config-/SDL2/SDL_config.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_platform.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/begin_code.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/close_code.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/stdlib.h \
-  /usr/include/string.h /usr/include/strings.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_error.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_video.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_pixels.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_endian.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rect.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_rwops.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_surface.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_blendmode.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keyboard.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_keycode.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_scancode.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mouse.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_joystick.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_guid.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_mutex.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_sensor.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_quit.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_gesture.h \
-  /home/gooby/Development/VkEngine/build/third_party/SDL/include/SDL2/SDL_touch.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_events.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_stdinc.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_config.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_platform.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/begin_code.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/close_code.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_config_minimal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_error.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_video.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_pixels.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_endian.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_rect.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_rwops.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_surface.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_blendmode.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_keyboard.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_keycode.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_scancode.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_mouse.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_joystick.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_guid.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_mutex.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_gamecontroller.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_sensor.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_quit.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_gesture.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_touch.h \
   /home/gooby/Development/VkEngine/src/vk_types.h \
-  /home/gooby/Development/VkEngine/src/vk_descriptors.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/span \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
+  /home/gooby/Development/VkEngine/third_party/volk/volk.h \
+  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
+  /home/gooby/Development/VkEngine/src/deletion_queue.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/deque \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_deque.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/deque.tcc \
-  /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
-  /home/gooby/Development/VkEngine/src/deletion_queue.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/functional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/std_function.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/array \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/algorithmfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_heap.h \
@@ -444,8 +437,44 @@ src/CMakeFiles/engine.dir/camera.cpp.o: \
   /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h \
   /home/gooby/Development/VkEngine/third_party/fmt/include/fmt/core.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \
+  /usr/include/string.h /usr/include/strings.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
+  /home/gooby/Development/VkEngine/src/vk_window.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_main.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_assert.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_atomic.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_audio.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_thread.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_clipboard.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_filesystem.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_haptic.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_hidapi.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_hints.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_loadso.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_log.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_messagebox.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_metal.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_power.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_render.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_shape.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_system.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_timer.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_version.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_locale.h \
+  /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_misc.h \
+  /home/gooby/Development/VkEngine/src/vk_swapchain.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_set.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multiset.h \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../trigonometric.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/detail/func_trigonometric.inl \
@@ -464,6 +493,7 @@ src/CMakeFiles/engine.dir/camera.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../glm.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
   /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp \
@@ -555,4 +585,6 @@ src/CMakeFiles/engine.dir/camera.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/norm.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_float.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/matrix_transform.hpp
+  /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/matrix_transform.hpp \
+  /home/gooby/Development/VkEngine/third_party/imgui/imgui.h \
+  /home/gooby/Development/VkEngine/third_party/imgui/imconfig.h

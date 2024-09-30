@@ -2,40 +2,36 @@
 
 #include "vk_descriptors.h"
 #include "vk_types.h"
-#include <vulkan/vulkan_core.h>
+#include "volk.h"
 
-class GLTFMetallicRoughness {
+class MaterialManager {
 public:
 
-    struct MaterialConstants {
-        glm::vec4 colorFactors;
-        glm::vec4 metalRoughFactors;
+    MaterialManager();
+    ~MaterialManager();
 
-        // padding
-        glm::vec4 extra[14];
-    };
+    VkDescriptorSetLayout getSceneDescriptorSetLayout() {
+        return mSceneDescriptorLayout;
+    }
 
-    struct MaterialResources {
-        AllocatedImage colorImage;
-        VkSampler colorSampler;
-        AllocatedImage metalRoughImage;
-        VkSampler metalRoughSampler;
-        VkBuffer dataBuffer;
-        uint32_t dataBufferOffset;
-    };
+    VkDescriptorSetLayout getMaterialDescriptorSetLayout() {
+        return mMaterialDescriptorLayout;
+    }
 
-    void buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
-    void clearResources(VkDevice device);
-
-    MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources, DynamicDescriptorAllocator& descriptorAllocator);
+    MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources);
 
 private:
+    void buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
+    void freeResources();
+
 
     DescriptorWriter mDescriptorWriter;
+    MaterialPipeline mOpaquePipelineCulled;
     MaterialPipeline mOpaquePipeline;
+    MaterialPipeline mTransparentPipelineCulled;
     MaterialPipeline mTransparentPipeline;
 
-    VkDescriptorSetLayout mMaterialLayout;
-    VkDescriptorSetLayout mGpuSceneDataLayout;
+    VkDescriptorSetLayout mMaterialDescriptorLayout;
+    VkDescriptorSetLayout mSceneDescriptorLayout;
 
 };

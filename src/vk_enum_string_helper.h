@@ -13,7 +13,8 @@
 #ifdef __cplusplus
 #include <string>
 #endif
-#include <vulkan/vulkan.h>
+#define VK_NO_PROTOTYPES
+#include "volk.h"
 static inline const char* string_VkResult(VkResult input_value) {
     switch (input_value) {
         case VK_SUCCESS:
@@ -8222,7 +8223,6 @@ static inline const char* string_VkPipelineCreateFlagBits2KHR(uint64_t input_val
     if (input_value == VK_PIPELINE_CREATE_2_DISABLE_OPTIMIZATION_BIT_KHR) return "VK_PIPELINE_CREATE_2_DISABLE_OPTIMIZATION_BIT_KHR";
     if (input_value == VK_PIPELINE_CREATE_2_ALLOW_DERIVATIVES_BIT_KHR) return "VK_PIPELINE_CREATE_2_ALLOW_DERIVATIVES_BIT_KHR";
     if (input_value == VK_PIPELINE_CREATE_2_DERIVATIVE_BIT_KHR) return "VK_PIPELINE_CREATE_2_DERIVATIVE_BIT_KHR";
-    if (input_value == VK_PIPELINE_CREATE_2_ENABLE_LEGACY_DITHERING_BIT_EXT) return "VK_PIPELINE_CREATE_2_ENABLE_LEGACY_DITHERING_BIT_EXT";
     if (input_value == VK_PIPELINE_CREATE_2_VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHR) return "VK_PIPELINE_CREATE_2_VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHR";
     if (input_value == VK_PIPELINE_CREATE_2_DISPATCH_BASE_BIT_KHR) return "VK_PIPELINE_CREATE_2_DISPATCH_BASE_BIT_KHR";
     if (input_value == VK_PIPELINE_CREATE_2_DEFER_COMPILE_BIT_NV) return "VK_PIPELINE_CREATE_2_DEFER_COMPILE_BIT_NV";
