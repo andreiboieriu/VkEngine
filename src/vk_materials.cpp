@@ -1,5 +1,5 @@
 #include "vk_materials.h"
-#include "fmt/core.h"
+#include <fmt/core.h>
 #include "vk_descriptors.h"
 #include "vk_initializers.h"
 #include "vk_pipelines.h"
@@ -60,10 +60,12 @@ void MaterialManager::buildPipelines(VkDevice device, VkFormat colorFormat, VkFo
 
     mOpaquePipeline.layout = newLayout;
     mTransparentPipeline.layout = newLayout;
+    mOpaquePipelineCulled.layout = newLayout;
+    mTransparentPipelineCulled.layout = newLayout;
 
     PipelineBuilder pipelineBuilder;
 
-    mOpaquePipeline.pipeline = pipelineBuilder.clear().setShaders(vertShader, fragShader)
+    mOpaquePipelineCulled.pipeline = pipelineBuilder.clear().setShaders(vertShader, fragShader)
                                               .setInputTopology(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST)
                                               .setPolygonMode(VK_POLYGON_MODE_FILL)
                                               .setCullMode(VK_CULL_MODE_BACK_BIT, VK_FRONT_FACE_COUNTER_CLOCKWISE)
@@ -75,9 +77,15 @@ void MaterialManager::buildPipelines(VkDevice device, VkFormat colorFormat, VkFo
                                               .setLayout(mOpaquePipeline.layout)
                                               .buildPipeline(device,  VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
+    mOpaquePipeline.pipeline = pipelineBuilder.setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
+                                              .buildPipeline(device, VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
+
     mTransparentPipeline.pipeline = pipelineBuilder.enableBlendingAdditive()
                                                    .enableDepthTesting(false, VK_COMPARE_OP_GREATER)
                                                    .buildPipeline(device,  VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
+
+    mTransparentPipelineCulled.pipeline = pipelineBuilder.setCullMode(VK_CULL_MODE_BACK_BIT, VK_FRONT_FACE_COUNTER_CLOCKWISE)
+                                                         .buildPipeline(device, VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     vkDestroyShaderModule(device, vertShader, nullptr);
     vkDestroyShaderModule(device, fragShader, nullptr);
@@ -93,6 +101,8 @@ void MaterialManager::freeResources() {
 
     vkDestroyPipeline(device, mOpaquePipeline.pipeline, nullptr);
     vkDestroyPipeline(device, mTransparentPipeline.pipeline, nullptr);
+    vkDestroyPipeline(device, mOpaquePipelineCulled.pipeline, nullptr);
+    vkDestroyPipeline(device, mTransparentPipelineCulled.pipeline, nullptr);
 }
 
 MaterialInstance MaterialManager::writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources) {
@@ -101,8 +111,12 @@ MaterialInstance MaterialManager::writeMaterial(VkDevice device, MaterialPass pa
 
     if (pass == MaterialPass::Transparent) {
         materialInstance.pipeline = &mTransparentPipeline;
-    } else {
+    } else if (pass == MaterialPass::Opaque) {
         materialInstance.pipeline = &mOpaquePipeline;
+    } else if (pass == MaterialPass::TransparentDoubleSided) {
+        materialInstance.pipeline = &mTransparentPipelineCulled;
+    } else if (pass == MaterialPass::OpaqueDoubleSided) {
+        materialInstance.pipeline = &mOpaquePipelineCulled;
     }
 
     materialInstance.descriptorOffset = VulkanEngine::get().getDescriptorManager().createMaterialDescriptor(resources);

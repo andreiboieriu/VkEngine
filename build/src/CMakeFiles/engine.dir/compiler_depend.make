@@ -400,53 +400,47 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
   ../src/camera.cpp \
   ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
   ../src/vk_types.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
@@ -462,113 +456,40 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../src/vk_enum_string_helper.h \
   ../third_party/fmt/include/fmt/core.h \
   /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
   ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
   ../src/vk_swapchain.h \
   /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_tree.h \
@@ -592,6 +513,7 @@ src/CMakeFiles/engine.dir/camera.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../third_party/glm/glm/gtx/quaternion.hpp \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
   ../third_party/glm/glm/trigonometric.hpp \
   ../third_party/glm/glm/exponential.hpp \
   ../third_party/glm/glm/common.hpp \
@@ -1493,18 +1415,18 @@ src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o: src/CMakeFiles/e
   ../src/compute_effects/compute_effect.cpp \
   ../src/compute_effects/compute_effect.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -1526,8 +1448,8 @@ src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o: src/CMakeFiles/e
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
   /usr/include/c++/12/span \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -1560,163 +1482,11 @@ src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o: src/CMakeFiles/e
   ../src/vk_engine.h \
   ../src/vk_materials.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_set.h \
-  /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
   /usr/include/c++/12/utility \
   /usr/include/c++/12/bits/stl_relops.h \
-  /usr/include/c++/12/variant \
-  ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
-  ../third_party/fastgltf/include/fastgltf/math.hpp \
-  /usr/include/c++/12/memory_resource \
-  /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/bits/ranges_algo.h \
   /usr/include/c++/12/bits/ranges_util.h \
@@ -1725,17 +1495,119 @@ src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o: src/CMakeFiles/e
   /usr/include/c++/12/bits/stl_list.h \
   /usr/include/c++/12/bits/list.tcc \
   /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
   /usr/include/c++/12/bits/stl_map.h \
   /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
   /usr/include/c++/12/unordered_set \
   /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/variant \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  ../third_party/fastgltf/include/fastgltf/math.hpp \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h \
   ../src/vk_images.h \
   ../src/vk_pipelines.h \
   ../src/vk_initializers.h \
   ../third_party/imgui/imgui.h \
-  ../third_party/imgui/imconfig.h
+  ../third_party/imgui/imconfig.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h
 
 src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -2147,6 +2019,1343 @@ src/CMakeFiles/engine.dir/deletion_queue.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h
 
+src/CMakeFiles/engine.dir/ecs_components/components.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
+  src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
+  /usr/include/c++/12/optional \
+  /usr/include/c++/12/type_traits \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
+  /usr/include/c++/12/pstl/pstl_config.h \
+  /usr/include/c++/12/exception \
+  /usr/include/c++/12/bits/exception.h \
+  /usr/include/c++/12/bits/exception_ptr.h \
+  /usr/include/c++/12/bits/exception_defines.h \
+  /usr/include/c++/12/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/hash_bytes.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/bits/nested_exception.h \
+  /usr/include/c++/12/initializer_list \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/functional_hash.h \
+  /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/iterator_concepts.h \
+  /usr/include/c++/12/concepts \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/bits/ranges_cmp.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/utility.h \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_algobase.h \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
+  /usr/include/c++/12/ext/type_traits.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/refwrap.h \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/bits/range_access.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/ostream \
+  /usr/include/c++/12/ios \
+  /usr/include/c++/12/iosfwd \
+  /usr/include/c++/12/bits/stringfwd.h \
+  /usr/include/c++/12/bits/postypes.h \
+  /usr/include/c++/12/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/12/bits/char_traits.h \
+  /usr/include/c++/12/cstdint \
+  /usr/include/c++/12/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
+  /usr/include/c++/12/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/12/cctype \
+  /usr/include/ctype.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/c++/12/bits/ios_base.h \
+  /usr/include/c++/12/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/12/bits/locale_classes.h \
+  /usr/include/c++/12/string \
+  /usr/include/c++/12/bits/ostream_insert.h \
+  /usr/include/c++/12/bits/cxxabi_forced.h \
+  /usr/include/c++/12/bits/basic_string.h \
+  /usr/include/c++/12/string_view \
+  /usr/include/c++/12/bits/ranges_base.h \
+  /usr/include/c++/12/bits/max_size_type.h \
+  /usr/include/c++/12/numbers \
+  /usr/include/c++/12/bits/string_view.tcc \
+  /usr/include/c++/12/ext/string_conversions.h \
+  /usr/include/c++/12/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/12/bits/std_abs.h \
+  /usr/include/c++/12/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/c++/12/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/12/bits/charconv.h \
+  /usr/include/c++/12/bits/basic_string.tcc \
+  /usr/include/c++/12/bits/locale_classes.tcc \
+  /usr/include/c++/12/system_error \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h \
+  /usr/include/c++/12/stdexcept \
+  /usr/include/c++/12/streambuf \
+  /usr/include/c++/12/bits/streambuf.tcc \
+  /usr/include/c++/12/bits/basic_ios.h \
+  /usr/include/c++/12/bits/locale_facets.h \
+  /usr/include/c++/12/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h \
+  /usr/include/c++/12/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_inline.h \
+  /usr/include/c++/12/bits/locale_facets.tcc \
+  /usr/include/c++/12/bits/basic_ios.tcc \
+  /usr/include/c++/12/bits/ostream.tcc \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/bits/atomic_wait.h \
+  /usr/include/c++/12/climits \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/syscall.h \
+  /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
+  /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/backward/auto_ptr.h \
+  /usr/include/c++/12/bits/ranges_uninitialized.h \
+  /usr/include/c++/12/bits/ranges_algobase.h \
+  /usr/include/c++/12/bits/uses_allocator_args.h \
+  /usr/include/c++/12/pstl/glue_memory_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x4.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/12/cstddef \
+  ../third_party/glm/glm/simd/platform.h \
+  ../third_party/glm/glm/detail/type_vec4.inl \
+  ../third_party/glm/glm/detail/compute_vector_relational.hpp \
+  /usr/include/c++/12/limits \
+  ../third_party/glm/glm/detail/type_mat4x4.inl \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vec2.hpp \
+  ../third_party/glm/glm/ext/vector_bool2.hpp \
+  ../third_party/glm/glm/detail/type_vec2.hpp \
+  ../third_party/glm/glm/detail/type_vec2.inl \
+  ../third_party/glm/glm/ext/vector_bool2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double2.hpp \
+  ../third_party/glm/glm/ext/vector_double2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int2.hpp \
+  ../third_party/glm/glm/ext/vector_int2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_uint2_precision.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/ext/vector_bool3.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec3.inl \
+  ../third_party/glm/glm/ext/vector_bool3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float3.hpp \
+  ../third_party/glm/glm/ext/vector_float3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double3.hpp \
+  ../third_party/glm/glm/ext/vector_double3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int3.hpp \
+  ../third_party/glm/glm/ext/vector_int3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint3.hpp \
+  ../third_party/glm/glm/ext/vector_uint3_precision.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/ext/vector_bool4.hpp \
+  ../third_party/glm/glm/ext/vector_bool4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/ext/vector_float4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double4.hpp \
+  ../third_party/glm/glm/ext/vector_double4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int4.hpp \
+  ../third_party/glm/glm/ext/vector_int4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint4.hpp \
+  ../third_party/glm/glm/ext/vector_uint4_precision.hpp \
+  ../third_party/glm/glm/mat2x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x2.hpp \
+  ../third_party/glm/glm/detail/type_mat2x2.hpp \
+  ../third_party/glm/glm/detail/type_mat2x2.inl \
+  ../third_party/glm/glm/ext/matrix_double2x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x2_precision.hpp \
+  ../third_party/glm/glm/mat2x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x3.hpp \
+  ../third_party/glm/glm/detail/type_mat2x3.hpp \
+  ../third_party/glm/glm/detail/type_mat2x3.inl \
+  ../third_party/glm/glm/ext/matrix_double2x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x3_precision.hpp \
+  ../third_party/glm/glm/mat2x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x4.hpp \
+  ../third_party/glm/glm/detail/type_mat2x4.hpp \
+  ../third_party/glm/glm/detail/type_mat2x4.inl \
+  ../third_party/glm/glm/ext/matrix_double2x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x4_precision.hpp \
+  ../third_party/glm/glm/mat3x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x2.hpp \
+  ../third_party/glm/glm/detail/type_mat3x2.hpp \
+  ../third_party/glm/glm/detail/type_mat3x2.inl \
+  ../third_party/glm/glm/ext/matrix_double3x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x2_precision.hpp \
+  ../third_party/glm/glm/mat3x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.inl \
+  ../third_party/glm/glm/ext/matrix_double3x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x3_precision.hpp \
+  ../third_party/glm/glm/mat3x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x4.hpp \
+  ../third_party/glm/glm/detail/type_mat3x4.hpp \
+  ../third_party/glm/glm/detail/type_mat3x4.inl \
+  ../third_party/glm/glm/ext/matrix_double3x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x4_precision.hpp \
+  ../third_party/glm/glm/mat4x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x2.hpp \
+  ../third_party/glm/glm/detail/type_mat4x2.hpp \
+  ../third_party/glm/glm/detail/type_mat4x2.inl \
+  ../third_party/glm/glm/ext/matrix_double4x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x2_precision.hpp \
+  ../third_party/glm/glm/mat4x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x3.inl \
+  ../third_party/glm/glm/ext/matrix_double4x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x3_precision.hpp \
+  ../third_party/glm/glm/detail/func_matrix.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/detail/func_geometric.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/detail/type_vec1.hpp \
+  ../third_party/glm/glm/detail/type_vec1.inl \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/tr1/gamma.tcc \
+  /usr/include/c++/12/tr1/special_function_util.h \
+  /usr/include/c++/12/tr1/bessel_function.tcc \
+  /usr/include/c++/12/tr1/beta_function.tcc \
+  /usr/include/c++/12/tr1/ell_integral.tcc \
+  /usr/include/c++/12/tr1/exp_integral.tcc \
+  /usr/include/c++/12/tr1/hypergeometric.tcc \
+  /usr/include/c++/12/tr1/legendre_function.tcc \
+  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/12/tr1/poly_hermite.tcc \
+  /usr/include/c++/12/tr1/poly_laguerre.tcc \
+  /usr/include/c++/12/tr1/riemann_zeta.tcc \
+  ../third_party/glm/glm/detail/func_exponential.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/detail/func_vector_relational.inl \
+  ../third_party/glm/glm/detail/_vectorize.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/_fixes.hpp \
+  ../third_party/glm/glm/detail/func_common.inl \
+  ../third_party/glm/glm/detail/compute_common.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
+  ../src/ecs_components/components.cpp \
+  ../src/ecs_components/components.h \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/detail/type_quat.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/ext/vector_relational.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/type_float.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.inl \
+  ../third_party/glm/glm/gtc/constants.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/vec2.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/detail/func_trigonometric.inl \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.inl \
+  ../third_party/glm/glm/ext/matrix_clip_space.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/matrix_clip_space.inl \
+  ../third_party/glm/glm/ext/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/matrix_transform.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/detail/type_quat.inl \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/glm.hpp \
+  /usr/include/c++/12/cfloat \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
+  ../third_party/glm/glm/fwd.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/packing.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/detail/func_packing.inl \
+  ../third_party/glm/glm/detail/type_half.hpp \
+  ../third_party/glm/glm/detail/type_half.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/integer.hpp \
+  ../third_party/glm/glm/detail/func_integer.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/quaternion.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.inl \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/ext/quaternion_float_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_double.hpp \
+  ../third_party/glm/glm/ext/quaternion_double_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
+  ../third_party/glm/glm/ext/quaternion_transform.hpp \
+  ../third_party/glm/glm/ext/quaternion_transform.inl \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/gtc/quaternion.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/gtc/epsilon.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtc/epsilon.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.inl \
+  ../third_party/glm/glm/gtx/norm.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/gtx/component_wise.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtx/component_wise.inl \
+  ../third_party/glm/glm/gtx/norm.inl \
+  ../third_party/glm/glm/gtx/quaternion.inl \
+  ../src/vk_loader.h \
+  ../src/vk_types.h \
+  ../third_party/volk/volk.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  ../third_party/vma/vk_mem_alloc.h \
+  ../src/deletion_queue.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../src/vk_enum_string_helper.h \
+  ../third_party/fmt/include/fmt/core.h \
+  /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/variant \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  /usr/include/c++/12/version \
+  ../third_party/fastgltf/include/fastgltf/math.hpp \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex \
+  /usr/include/c++/12/span \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/include/c++/12/bitset \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/uuid.h \
+  ../third_party/glm/glm/gtx/matrix_decompose.hpp \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/gtx/matrix_decompose.inl \
+  ../third_party/glm/glm/gtc/epsilon.hpp
+
+src/CMakeFiles/engine.dir/entity.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
+  src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
+  /usr/include/c++/12/optional \
+  /usr/include/c++/12/type_traits \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
+  /usr/include/c++/12/pstl/pstl_config.h \
+  /usr/include/c++/12/exception \
+  /usr/include/c++/12/bits/exception.h \
+  /usr/include/c++/12/bits/exception_ptr.h \
+  /usr/include/c++/12/bits/exception_defines.h \
+  /usr/include/c++/12/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/hash_bytes.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/bits/nested_exception.h \
+  /usr/include/c++/12/initializer_list \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/functional_hash.h \
+  /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/iterator_concepts.h \
+  /usr/include/c++/12/concepts \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/bits/ranges_cmp.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/utility.h \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_algobase.h \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
+  /usr/include/c++/12/ext/type_traits.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/refwrap.h \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/bits/range_access.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/ostream \
+  /usr/include/c++/12/ios \
+  /usr/include/c++/12/iosfwd \
+  /usr/include/c++/12/bits/stringfwd.h \
+  /usr/include/c++/12/bits/postypes.h \
+  /usr/include/c++/12/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/12/bits/char_traits.h \
+  /usr/include/c++/12/cstdint \
+  /usr/include/c++/12/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
+  /usr/include/c++/12/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/12/cctype \
+  /usr/include/ctype.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/c++/12/bits/ios_base.h \
+  /usr/include/c++/12/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/12/bits/locale_classes.h \
+  /usr/include/c++/12/string \
+  /usr/include/c++/12/bits/ostream_insert.h \
+  /usr/include/c++/12/bits/cxxabi_forced.h \
+  /usr/include/c++/12/bits/basic_string.h \
+  /usr/include/c++/12/string_view \
+  /usr/include/c++/12/bits/ranges_base.h \
+  /usr/include/c++/12/bits/max_size_type.h \
+  /usr/include/c++/12/numbers \
+  /usr/include/c++/12/bits/string_view.tcc \
+  /usr/include/c++/12/ext/string_conversions.h \
+  /usr/include/c++/12/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/12/bits/std_abs.h \
+  /usr/include/c++/12/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/c++/12/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/12/bits/charconv.h \
+  /usr/include/c++/12/bits/basic_string.tcc \
+  /usr/include/c++/12/bits/locale_classes.tcc \
+  /usr/include/c++/12/system_error \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h \
+  /usr/include/c++/12/stdexcept \
+  /usr/include/c++/12/streambuf \
+  /usr/include/c++/12/bits/streambuf.tcc \
+  /usr/include/c++/12/bits/basic_ios.h \
+  /usr/include/c++/12/bits/locale_facets.h \
+  /usr/include/c++/12/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h \
+  /usr/include/c++/12/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_inline.h \
+  /usr/include/c++/12/bits/locale_facets.tcc \
+  /usr/include/c++/12/bits/basic_ios.tcc \
+  /usr/include/c++/12/bits/ostream.tcc \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/bits/atomic_wait.h \
+  /usr/include/c++/12/climits \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/syscall.h \
+  /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
+  /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/backward/auto_ptr.h \
+  /usr/include/c++/12/bits/ranges_uninitialized.h \
+  /usr/include/c++/12/bits/ranges_algobase.h \
+  /usr/include/c++/12/bits/uses_allocator_args.h \
+  /usr/include/c++/12/pstl/glue_memory_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x4.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/12/cstddef \
+  ../third_party/glm/glm/simd/platform.h \
+  ../third_party/glm/glm/detail/type_vec4.inl \
+  ../third_party/glm/glm/detail/compute_vector_relational.hpp \
+  /usr/include/c++/12/limits \
+  ../third_party/glm/glm/detail/type_mat4x4.inl \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vec2.hpp \
+  ../third_party/glm/glm/ext/vector_bool2.hpp \
+  ../third_party/glm/glm/detail/type_vec2.hpp \
+  ../third_party/glm/glm/detail/type_vec2.inl \
+  ../third_party/glm/glm/ext/vector_bool2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double2.hpp \
+  ../third_party/glm/glm/ext/vector_double2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int2.hpp \
+  ../third_party/glm/glm/ext/vector_int2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_uint2_precision.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/ext/vector_bool3.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec3.inl \
+  ../third_party/glm/glm/ext/vector_bool3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float3.hpp \
+  ../third_party/glm/glm/ext/vector_float3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double3.hpp \
+  ../third_party/glm/glm/ext/vector_double3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int3.hpp \
+  ../third_party/glm/glm/ext/vector_int3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint3.hpp \
+  ../third_party/glm/glm/ext/vector_uint3_precision.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/ext/vector_bool4.hpp \
+  ../third_party/glm/glm/ext/vector_bool4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/ext/vector_float4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double4.hpp \
+  ../third_party/glm/glm/ext/vector_double4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int4.hpp \
+  ../third_party/glm/glm/ext/vector_int4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint4.hpp \
+  ../third_party/glm/glm/ext/vector_uint4_precision.hpp \
+  ../third_party/glm/glm/mat2x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x2.hpp \
+  ../third_party/glm/glm/detail/type_mat2x2.hpp \
+  ../third_party/glm/glm/detail/type_mat2x2.inl \
+  ../third_party/glm/glm/ext/matrix_double2x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x2_precision.hpp \
+  ../third_party/glm/glm/mat2x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x3.hpp \
+  ../third_party/glm/glm/detail/type_mat2x3.hpp \
+  ../third_party/glm/glm/detail/type_mat2x3.inl \
+  ../third_party/glm/glm/ext/matrix_double2x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x3_precision.hpp \
+  ../third_party/glm/glm/mat2x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x4.hpp \
+  ../third_party/glm/glm/detail/type_mat2x4.hpp \
+  ../third_party/glm/glm/detail/type_mat2x4.inl \
+  ../third_party/glm/glm/ext/matrix_double2x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x4_precision.hpp \
+  ../third_party/glm/glm/mat3x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x2.hpp \
+  ../third_party/glm/glm/detail/type_mat3x2.hpp \
+  ../third_party/glm/glm/detail/type_mat3x2.inl \
+  ../third_party/glm/glm/ext/matrix_double3x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x2_precision.hpp \
+  ../third_party/glm/glm/mat3x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.inl \
+  ../third_party/glm/glm/ext/matrix_double3x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x3_precision.hpp \
+  ../third_party/glm/glm/mat3x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x4.hpp \
+  ../third_party/glm/glm/detail/type_mat3x4.hpp \
+  ../third_party/glm/glm/detail/type_mat3x4.inl \
+  ../third_party/glm/glm/ext/matrix_double3x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x4_precision.hpp \
+  ../third_party/glm/glm/mat4x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x2.hpp \
+  ../third_party/glm/glm/detail/type_mat4x2.hpp \
+  ../third_party/glm/glm/detail/type_mat4x2.inl \
+  ../third_party/glm/glm/ext/matrix_double4x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x2_precision.hpp \
+  ../third_party/glm/glm/mat4x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x3.inl \
+  ../third_party/glm/glm/ext/matrix_double4x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x3_precision.hpp \
+  ../third_party/glm/glm/detail/func_matrix.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/detail/func_geometric.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/detail/type_vec1.hpp \
+  ../third_party/glm/glm/detail/type_vec1.inl \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/tr1/gamma.tcc \
+  /usr/include/c++/12/tr1/special_function_util.h \
+  /usr/include/c++/12/tr1/bessel_function.tcc \
+  /usr/include/c++/12/tr1/beta_function.tcc \
+  /usr/include/c++/12/tr1/ell_integral.tcc \
+  /usr/include/c++/12/tr1/exp_integral.tcc \
+  /usr/include/c++/12/tr1/hypergeometric.tcc \
+  /usr/include/c++/12/tr1/legendre_function.tcc \
+  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/12/tr1/poly_hermite.tcc \
+  /usr/include/c++/12/tr1/poly_laguerre.tcc \
+  /usr/include/c++/12/tr1/riemann_zeta.tcc \
+  ../third_party/glm/glm/detail/func_exponential.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/detail/func_vector_relational.inl \
+  ../third_party/glm/glm/detail/_vectorize.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/_fixes.hpp \
+  ../third_party/glm/glm/detail/func_common.inl \
+  ../third_party/glm/glm/detail/compute_common.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
+  ../src/entity.cpp \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
+  /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/span \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/uuid.h \
+  ../src/ecs_components/components.h \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/detail/type_quat.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/ext/vector_relational.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/type_float.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.inl \
+  ../third_party/glm/glm/gtc/constants.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/vec2.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/detail/func_trigonometric.inl \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.inl \
+  ../third_party/glm/glm/ext/matrix_clip_space.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/matrix_clip_space.inl \
+  ../third_party/glm/glm/ext/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/matrix_transform.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/detail/type_quat.inl \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/glm.hpp \
+  /usr/include/c++/12/cfloat \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
+  ../third_party/glm/glm/fwd.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/packing.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/detail/func_packing.inl \
+  ../third_party/glm/glm/detail/type_half.hpp \
+  ../third_party/glm/glm/detail/type_half.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/integer.hpp \
+  ../third_party/glm/glm/detail/func_integer.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/quaternion.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.inl \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/ext/quaternion_float_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_double.hpp \
+  ../third_party/glm/glm/ext/quaternion_double_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
+  ../third_party/glm/glm/ext/quaternion_transform.hpp \
+  ../third_party/glm/glm/ext/quaternion_transform.inl \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/gtc/quaternion.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/gtc/epsilon.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtc/epsilon.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.inl \
+  ../third_party/glm/glm/gtx/norm.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/gtx/component_wise.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtx/component_wise.inl \
+  ../third_party/glm/glm/gtx/norm.inl \
+  ../third_party/glm/glm/gtx/quaternion.inl \
+  ../src/vk_loader.h \
+  ../src/vk_types.h \
+  ../third_party/volk/volk.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  ../third_party/vma/vk_mem_alloc.h \
+  ../src/deletion_queue.h \
+  ../src/vk_enum_string_helper.h \
+  ../third_party/fmt/include/fmt/core.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/variant \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  ../third_party/fastgltf/include/fastgltf/math.hpp \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/include/c++/12/bitset \
+  ../third_party/glm/glm/ext/matrix_transform.hpp \
+  ../third_party/imgui/imgui.h \
+  ../third_party/imgui/imconfig.h \
+  ../src/vk_engine.h \
+  ../src/compute_effects/compute_effect.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
+  ../src/vk_materials.h \
+  ../src/vk_descriptors.h \
+  ../src/vk_scene.h \
+  ../src/skybox.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../src/resource_manager.h \
+  /usr/include/memory.h
+
 src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
   /usr/include/c++/12/optional \
@@ -2548,18 +3757,18 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -2581,163 +3790,47 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
   /usr/include/c++/12/span \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_descriptors.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_set.h \
   /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -2750,39 +3843,104 @@ src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
   /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/variant \
   ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/ranges_algo.h \
-  /usr/include/c++/12/bits/ranges_util.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h
 
@@ -3188,18 +4346,18 @@ src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/cmak
   ../src/vk_loader.h \
   ../src/vk_types.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
@@ -3263,155 +4421,13 @@ src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/cmak
   /usr/include/c++/12/stdlib.h \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_descriptors.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_set.h \
-  /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
+  ../src/uuid.h \
+  ../src/entity.h \
   ../third_party/entt/entt.hpp \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/bits/ranges_algo.h \
@@ -3421,12 +4437,103 @@ src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/cmak
   /usr/include/c++/12/bits/stl_list.h \
   /usr/include/c++/12/bits/list.tcc \
   /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
   /usr/include/c++/12/bits/stl_map.h \
   /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
   /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset
 
-src/CMakeFiles/engine.dir/scene_node.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
+src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
   /usr/include/c++/12/optional \
   /usr/include/c++/12/type_traits \
@@ -3823,29 +4930,13 @@ src/CMakeFiles/engine.dir/scene_node.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.
   ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4.hpp \
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
-  ../src/scene_node.cpp \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../src/vk_loader.h \
-  ../src/vk_types.h \
-  ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  ../third_party/vma/vk_mem_alloc.h \
-  ../src/deletion_queue.h \
-  /usr/include/c++/12/deque \
-  /usr/include/c++/12/bits/stl_deque.h \
-  /usr/include/c++/12/bits/deque.tcc \
+  ../src/script_manager.cpp \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
   /usr/include/c++/12/array \
@@ -3853,219 +4944,225 @@ src/CMakeFiles/engine.dir/scene_node.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
-  ../src/vk_enum_string_helper.h \
-  ../third_party/fmt/include/fmt/core.h \
-  /usr/include/c++/12/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
+  /usr/include/c++/12/variant \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/iostream \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
-  /usr/include/c++/12/filesystem \
-  /usr/include/c++/12/bits/fs_fwd.h \
-  /usr/include/c++/12/bits/chrono.h \
-  /usr/include/c++/12/ratio \
-  /usr/include/c++/12/ctime \
-  /usr/include/c++/12/bits/parse_numbers.h \
-  /usr/include/c++/12/bits/fs_path.h \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/include/c++/12/cstring \
   /usr/include/c++/12/locale \
   /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/c++/12/ctime \
   /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
-  /usr/include/c++/12/iomanip \
-  /usr/include/c++/12/bits/quoted_string.h \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/bits/sstream.tcc \
-  /usr/include/c++/12/codecvt \
-  /usr/include/c++/12/bits/fs_dir.h \
-  /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
-  /usr/include/c++/12/variant \
-  ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
-  ../third_party/fastgltf/include/fastgltf/math.hpp \
-  /usr/include/c++/12/memory_resource \
-  /usr/include/c++/12/shared_mutex \
-  /usr/include/c++/12/span \
-  /usr/include/c++/12/set \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_set.h \
-  /usr/include/c++/12/bits/stl_multiset.h \
-  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/bitset \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/bits/ranges_algo.h \
   /usr/include/c++/12/bits/ranges_util.h \
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
   /usr/include/c++/12/list \
   /usr/include/c++/12/bits/stl_list.h \
   /usr/include/c++/12/bits/list.tcc \
   /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
   /usr/include/c++/12/bits/stl_map.h \
   /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
   /usr/include/c++/12/unordered_set \
   /usr/include/c++/12/bits/unordered_set.h \
-  ../src/vk_engine.h \
-  ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
-  ../src/vk_materials.h \
-  ../src/vk_descriptors.h \
-  ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
+  ../src/entity.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/span \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/uuid.h \
+  ../src/ecs_components/components.h \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/detail/type_quat.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/ext/vector_relational.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/type_float.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.inl \
+  ../third_party/glm/glm/gtc/constants.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/vec2.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/detail/func_trigonometric.inl \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/matrix_projection.inl \
+  ../third_party/glm/glm/ext/matrix_clip_space.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/matrix_clip_space.inl \
+  ../third_party/glm/glm/ext/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/matrix_transform.inl \
+  ../third_party/glm/glm/gtc/matrix_transform.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/detail/type_quat.inl \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/glm.hpp \
+  /usr/include/c++/12/cfloat \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  ../src/skybox.h \
-  ../src/resource_manager.h \
-  /usr/include/memory.h \
-  ../third_party/imgui/imgui.h \
-  ../third_party/imgui/imconfig.h
+  ../third_party/glm/glm/fwd.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/packing.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/detail/func_packing.inl \
+  ../third_party/glm/glm/detail/type_half.hpp \
+  ../third_party/glm/glm/detail/type_half.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/integer.hpp \
+  ../third_party/glm/glm/detail/func_integer.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/quaternion.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.inl \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/ext/quaternion_float_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_double.hpp \
+  ../third_party/glm/glm/ext/quaternion_double_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
+  ../third_party/glm/glm/ext/quaternion_transform.hpp \
+  ../third_party/glm/glm/ext/quaternion_transform.inl \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/gtc/quaternion.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/gtc/epsilon.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtc/epsilon.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.inl \
+  ../third_party/glm/glm/gtx/norm.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/gtx/component_wise.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtx/component_wise.inl \
+  ../third_party/glm/glm/gtx/norm.inl \
+  ../third_party/glm/glm/gtx/quaternion.inl \
+  ../src/vk_loader.h \
+  ../src/vk_types.h \
+  ../third_party/volk/volk.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  ../third_party/vma/vk_mem_alloc.h \
+  ../src/deletion_queue.h \
+  ../src/vk_enum_string_helper.h \
+  ../third_party/fmt/include/fmt/core.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  ../third_party/fastgltf/include/fastgltf/math.hpp \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex
 
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -4468,18 +5565,18 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../src/skybox.h \
   ../src/vk_types.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
@@ -4557,154 +5654,12 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../src/vk_descriptors.h \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_set.h \
-  /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
+  ../src/uuid.h \
+  ../src/entity.h \
   ../third_party/entt/entt.hpp \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/bits/ranges_algo.h \
@@ -4714,10 +5669,101 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   /usr/include/c++/12/bits/stl_list.h \
   /usr/include/c++/12/bits/list.tcc \
   /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
   /usr/include/c++/12/bits/stl_map.h \
   /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
   /usr/include/c++/12/unordered_set \
   /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h \
   ../src/vk_images.h \
@@ -4725,7 +5771,8 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../third_party/stb_image/stb_image.h \
   ../src/vk_initializers.h \
   ../third_party/imgui/imgui.h \
-  ../third_party/imgui/imconfig.h
+  ../third_party/imgui/imconfig.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h
 
 src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -5132,18 +6179,18 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -5162,162 +6209,46 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/c++/12/bits/stream_iterator.h \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_set.h \
   /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -5330,41 +6261,505 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
   /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/variant \
   ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/ranges_algo.h \
-  /usr/include/c++/12/bits/ranges_util.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h
+
+src/CMakeFiles/engine.dir/vk_device.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
+  src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
+  /usr/include/c++/12/optional \
+  /usr/include/c++/12/type_traits \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
+  /usr/include/c++/12/pstl/pstl_config.h \
+  /usr/include/c++/12/exception \
+  /usr/include/c++/12/bits/exception.h \
+  /usr/include/c++/12/bits/exception_ptr.h \
+  /usr/include/c++/12/bits/exception_defines.h \
+  /usr/include/c++/12/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/hash_bytes.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/bits/nested_exception.h \
+  /usr/include/c++/12/initializer_list \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/functional_hash.h \
+  /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/iterator_concepts.h \
+  /usr/include/c++/12/concepts \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/bits/ranges_cmp.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/utility.h \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_algobase.h \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
+  /usr/include/c++/12/ext/type_traits.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/refwrap.h \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/bits/range_access.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/ostream \
+  /usr/include/c++/12/ios \
+  /usr/include/c++/12/iosfwd \
+  /usr/include/c++/12/bits/stringfwd.h \
+  /usr/include/c++/12/bits/postypes.h \
+  /usr/include/c++/12/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/12/bits/char_traits.h \
+  /usr/include/c++/12/cstdint \
+  /usr/include/c++/12/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
+  /usr/include/c++/12/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/12/cctype \
+  /usr/include/ctype.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/c++/12/bits/ios_base.h \
+  /usr/include/c++/12/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/12/bits/locale_classes.h \
+  /usr/include/c++/12/string \
+  /usr/include/c++/12/bits/ostream_insert.h \
+  /usr/include/c++/12/bits/cxxabi_forced.h \
+  /usr/include/c++/12/bits/basic_string.h \
+  /usr/include/c++/12/string_view \
+  /usr/include/c++/12/bits/ranges_base.h \
+  /usr/include/c++/12/bits/max_size_type.h \
+  /usr/include/c++/12/numbers \
+  /usr/include/c++/12/bits/string_view.tcc \
+  /usr/include/c++/12/ext/string_conversions.h \
+  /usr/include/c++/12/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/12/bits/std_abs.h \
+  /usr/include/c++/12/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/c++/12/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/12/bits/charconv.h \
+  /usr/include/c++/12/bits/basic_string.tcc \
+  /usr/include/c++/12/bits/locale_classes.tcc \
+  /usr/include/c++/12/system_error \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h \
+  /usr/include/c++/12/stdexcept \
+  /usr/include/c++/12/streambuf \
+  /usr/include/c++/12/bits/streambuf.tcc \
+  /usr/include/c++/12/bits/basic_ios.h \
+  /usr/include/c++/12/bits/locale_facets.h \
+  /usr/include/c++/12/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h \
+  /usr/include/c++/12/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_inline.h \
+  /usr/include/c++/12/bits/locale_facets.tcc \
+  /usr/include/c++/12/bits/basic_ios.tcc \
+  /usr/include/c++/12/bits/ostream.tcc \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/bits/atomic_wait.h \
+  /usr/include/c++/12/climits \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/syscall.h \
+  /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
+  /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/backward/auto_ptr.h \
+  /usr/include/c++/12/bits/ranges_uninitialized.h \
+  /usr/include/c++/12/bits/ranges_algobase.h \
+  /usr/include/c++/12/bits/uses_allocator_args.h \
+  /usr/include/c++/12/pstl/glue_memory_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  ../third_party/glm/glm/mat4x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x4.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/12/cstddef \
+  ../third_party/glm/glm/simd/platform.h \
+  ../third_party/glm/glm/detail/type_vec4.inl \
+  ../third_party/glm/glm/detail/compute_vector_relational.hpp \
+  /usr/include/c++/12/limits \
+  ../third_party/glm/glm/detail/type_mat4x4.inl \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vec2.hpp \
+  ../third_party/glm/glm/ext/vector_bool2.hpp \
+  ../third_party/glm/glm/detail/type_vec2.hpp \
+  ../third_party/glm/glm/detail/type_vec2.inl \
+  ../third_party/glm/glm/ext/vector_bool2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double2.hpp \
+  ../third_party/glm/glm/ext/vector_double2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int2.hpp \
+  ../third_party/glm/glm/ext/vector_int2_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_uint2_precision.hpp \
+  ../third_party/glm/glm/vec3.hpp \
+  ../third_party/glm/glm/ext/vector_bool3.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec3.inl \
+  ../third_party/glm/glm/ext/vector_bool3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float3.hpp \
+  ../third_party/glm/glm/ext/vector_float3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double3.hpp \
+  ../third_party/glm/glm/ext/vector_double3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int3.hpp \
+  ../third_party/glm/glm/ext/vector_int3_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint3.hpp \
+  ../third_party/glm/glm/ext/vector_uint3_precision.hpp \
+  ../third_party/glm/glm/vec4.hpp \
+  ../third_party/glm/glm/ext/vector_bool4.hpp \
+  ../third_party/glm/glm/ext/vector_bool4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/ext/vector_float4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_double4.hpp \
+  ../third_party/glm/glm/ext/vector_double4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_int4.hpp \
+  ../third_party/glm/glm/ext/vector_int4_precision.hpp \
+  ../third_party/glm/glm/ext/vector_uint4.hpp \
+  ../third_party/glm/glm/ext/vector_uint4_precision.hpp \
+  ../third_party/glm/glm/mat2x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x2.hpp \
+  ../third_party/glm/glm/detail/type_mat2x2.hpp \
+  ../third_party/glm/glm/detail/type_mat2x2.inl \
+  ../third_party/glm/glm/ext/matrix_double2x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x2_precision.hpp \
+  ../third_party/glm/glm/mat2x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x3.hpp \
+  ../third_party/glm/glm/detail/type_mat2x3.hpp \
+  ../third_party/glm/glm/detail/type_mat2x3.inl \
+  ../third_party/glm/glm/ext/matrix_double2x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x3_precision.hpp \
+  ../third_party/glm/glm/mat2x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double2x4.hpp \
+  ../third_party/glm/glm/detail/type_mat2x4.hpp \
+  ../third_party/glm/glm/detail/type_mat2x4.inl \
+  ../third_party/glm/glm/ext/matrix_double2x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float2x4_precision.hpp \
+  ../third_party/glm/glm/mat3x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x2.hpp \
+  ../third_party/glm/glm/detail/type_mat3x2.hpp \
+  ../third_party/glm/glm/detail/type_mat3x2.inl \
+  ../third_party/glm/glm/ext/matrix_double3x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x2_precision.hpp \
+  ../third_party/glm/glm/mat3x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.inl \
+  ../third_party/glm/glm/ext/matrix_double3x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x3_precision.hpp \
+  ../third_party/glm/glm/mat3x4.hpp \
+  ../third_party/glm/glm/ext/matrix_double3x4.hpp \
+  ../third_party/glm/glm/detail/type_mat3x4.hpp \
+  ../third_party/glm/glm/detail/type_mat3x4.inl \
+  ../third_party/glm/glm/ext/matrix_double3x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float3x4_precision.hpp \
+  ../third_party/glm/glm/mat4x2.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x2.hpp \
+  ../third_party/glm/glm/detail/type_mat4x2.hpp \
+  ../third_party/glm/glm/detail/type_mat4x2.inl \
+  ../third_party/glm/glm/ext/matrix_double4x2_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x2.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x2_precision.hpp \
+  ../third_party/glm/glm/mat4x3.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x3.inl \
+  ../third_party/glm/glm/ext/matrix_double4x3_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x3.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x3_precision.hpp \
+  ../third_party/glm/glm/detail/func_matrix.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/detail/func_geometric.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/detail/type_vec1.hpp \
+  ../third_party/glm/glm/detail/type_vec1.inl \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/tr1/gamma.tcc \
+  /usr/include/c++/12/tr1/special_function_util.h \
+  /usr/include/c++/12/tr1/bessel_function.tcc \
+  /usr/include/c++/12/tr1/beta_function.tcc \
+  /usr/include/c++/12/tr1/ell_integral.tcc \
+  /usr/include/c++/12/tr1/exp_integral.tcc \
+  /usr/include/c++/12/tr1/hypergeometric.tcc \
+  /usr/include/c++/12/tr1/legendre_function.tcc \
+  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/12/tr1/poly_hermite.tcc \
+  /usr/include/c++/12/tr1/poly_laguerre.tcc \
+  /usr/include/c++/12/tr1/riemann_zeta.tcc \
+  ../third_party/glm/glm/detail/func_exponential.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/detail/func_vector_relational.inl \
+  ../third_party/glm/glm/detail/_vectorize.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/_fixes.hpp \
+  ../third_party/glm/glm/detail/func_common.inl \
+  ../third_party/glm/glm/detail/compute_common.hpp \
+  ../third_party/glm/glm/ext/matrix_double4x4_precision.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x4.hpp \
+  ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
+  ../src/vk_device.cpp
 
 src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -5767,18 +7162,18 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -5800,163 +7195,47 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
   /usr/include/c++/12/span \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_descriptors.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_set.h \
   /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -5969,39 +7248,104 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
   /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/variant \
   ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/ranges_algo.h \
-  /usr/include/c++/12/bits/ranges_util.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h \
   ../third_party/glm/glm/ext/matrix_clip_space.hpp \
@@ -6020,6 +7364,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/glm/glm/ext/matrix_transform.inl \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
   ../third_party/glm/glm/fwd.hpp \
   ../third_party/glm/glm/trigonometric.hpp \
   ../third_party/glm/glm/exponential.hpp \
@@ -6043,7 +7388,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/mutex \
   /usr/include/c++/12/bits/unique_lock.h \
   /usr/include/c++/12/atomic \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
+  ../third_party/SDL/include/SDL_vulkan.h \
   ../src/vk_initializers.h \
   ../src/vk_images.h \
   ../src/vk_pipelines.h \
@@ -6066,6 +7411,22 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   ../src/ecs_systems/systems.h \
+  ../src/ecs_components/components.h \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/detail/type_quat.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/ext/vector_relational.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/type_float.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
   ../third_party/glm/glm/gtc/matrix_transform.hpp \
   ../third_party/glm/glm/mat4x4.hpp \
   ../third_party/glm/glm/vec2.hpp \
@@ -6078,7 +7439,58 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/glm/glm/gtc/matrix_transform.inl \
   ../third_party/glm/glm/geometric.hpp \
   ../third_party/glm/glm/trigonometric.hpp \
-  ../third_party/glm/glm/matrix.hpp
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/detail/type_quat.inl \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/glm.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/quaternion.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.inl \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/ext/quaternion_float_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_double.hpp \
+  ../third_party/glm/glm/ext/quaternion_double_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
+  ../third_party/glm/glm/ext/quaternion_transform.hpp \
+  ../third_party/glm/glm/ext/quaternion_transform.inl \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/gtc/quaternion.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/gtc/epsilon.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtc/epsilon.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.inl \
+  ../third_party/glm/glm/gtx/norm.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/gtx/component_wise.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtx/component_wise.inl \
+  ../third_party/glm/glm/gtx/norm.inl \
+  ../third_party/glm/glm/gtx/quaternion.inl
 
 src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -6480,18 +7892,18 @@ src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../src/vk_images.cpp \
   ../src/vk_images.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_initializers.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
@@ -6922,18 +8334,18 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   ../src/vk_initializers.h \
   ../src/vk_types.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
@@ -6957,162 +8369,46 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   /usr/include/c++/12/span \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_set.h \
   /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -7125,39 +8421,104 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake
   /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
   /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/variant \
   ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/ranges_algo.h \
-  /usr/include/c++/12/bits/ranges_util.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h
 
@@ -7562,18 +8923,18 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../src/vk_loader.h \
   ../src/vk_types.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
@@ -7635,156 +8996,13 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/fastgltf/include/fastgltf/tools.hpp \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_descriptors.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_set.h \
-  /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
+  ../src/uuid.h \
+  ../src/entity.h \
   ../third_party/entt/entt.hpp \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/bits/ranges_algo.h \
@@ -7794,15 +9012,108 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/stl_list.h \
   /usr/include/c++/12/bits/list.tcc \
   /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
   /usr/include/c++/12/bits/stl_map.h \
   /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
   /usr/include/c++/12/unordered_set \
   /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h \
   ../third_party/glm/glm/gtx/quaternion.hpp \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
   ../third_party/glm/glm/fwd.hpp \
   ../third_party/glm/glm/trigonometric.hpp \
   ../third_party/glm/glm/detail/func_trigonometric.inl \
@@ -8315,18 +9626,18 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_types.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
@@ -8347,161 +9658,45 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   ../src/vk_pipelines.h \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_set.h \
   /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -8514,39 +9709,104 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
   /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/variant \
   ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/ranges_algo.h \
-  /usr/include/c++/12/bits/ranges_util.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h
 
@@ -8951,18 +10211,18 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   ../src/vk_pipelines.h \
   ../src/vk_types.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   /usr/include/c++/12/deque \
@@ -8993,156 +10253,47 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   ../src/vk_initializers.h \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_descriptors.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_set.h \
   /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -9164,30 +10315,88 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/variant \
   ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/ranges_algo.h \
-  /usr/include/c++/12/bits/ranges_util.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h
 
@@ -9590,10 +10799,9 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
   ../src/vk_scene.cpp \
   ../src/vk_scene.h \
-  ../src/deletion_queue.h \
-  /usr/include/c++/12/deque \
-  /usr/include/c++/12/bits/stl_deque.h \
-  /usr/include/c++/12/bits/deque.tcc \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
   /usr/include/c++/12/array \
@@ -9601,180 +10809,47 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
-  ../src/vk_types.h \
-  ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  ../third_party/vma/vk_mem_alloc.h \
-  ../src/vk_enum_string_helper.h \
-  ../third_party/fmt/include/fmt/core.h \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  ../src/vk_swapchain.h \
-  /usr/include/c++/12/set \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_set.h \
-  /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -9787,69 +10862,143 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
   /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/span \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/deletion_queue.h \
+  ../src/vk_types.h \
+  ../third_party/volk/volk.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  ../third_party/vma/vk_mem_alloc.h \
+  ../src/vk_enum_string_helper.h \
+  ../third_party/fmt/include/fmt/core.h \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/variant \
   ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
-  /usr/include/c++/12/span \
-  ../src/skybox.h \
-  ../src/scene_node.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/vk_swapchain.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/ranges_algo.h \
-  /usr/include/c++/12/bits/ranges_util.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h \
-  ../src/vk_descriptors.h \
-  ../src/vk_engine.h \
-  ../src/compute_effects/compute_effect.h \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
-  ../src/vk_materials.h \
-  ../src/resource_manager.h \
-  /usr/include/memory.h \
-  ../third_party/glm/glm/gtx/transform.hpp \
-  ../third_party/glm/glm/glm.hpp \
-  /usr/include/c++/12/cfloat \
-  ../third_party/glm/glm/fwd.hpp \
-  ../third_party/glm/glm/trigonometric.hpp \
-  ../third_party/glm/glm/detail/func_trigonometric.inl \
-  ../third_party/glm/glm/exponential.hpp \
-  ../third_party/glm/glm/common.hpp \
-  ../third_party/glm/glm/packing.hpp \
-  ../third_party/glm/glm/ext/vector_uint2.hpp \
-  ../third_party/glm/glm/ext/vector_float2.hpp \
-  ../third_party/glm/glm/ext/vector_float4.hpp \
-  ../third_party/glm/glm/detail/func_packing.inl \
-  ../third_party/glm/glm/detail/type_half.hpp \
-  ../third_party/glm/glm/detail/setup.hpp \
-  ../third_party/glm/glm/detail/type_half.inl \
-  ../third_party/glm/glm/geometric.hpp \
-  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/detail/type_quat.hpp \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/ext/vector_relational.inl \
   ../third_party/glm/glm/vector_relational.hpp \
-  ../third_party/glm/glm/integer.hpp \
-  ../third_party/glm/glm/detail/func_integer.inl \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/detail/type_float.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.inl \
+  ../third_party/glm/glm/gtc/constants.inl \
   ../third_party/glm/glm/gtc/matrix_transform.hpp \
   ../third_party/glm/glm/mat4x4.hpp \
   ../third_party/glm/glm/vec2.hpp \
@@ -9857,11 +11006,9 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   ../third_party/glm/glm/vec4.hpp \
   ../third_party/glm/glm/ext/matrix_projection.hpp \
   ../third_party/glm/glm/gtc/constants.hpp \
-  ../third_party/glm/glm/ext/scalar_constants.hpp \
-  ../third_party/glm/glm/ext/scalar_constants.inl \
-  ../third_party/glm/glm/gtc/constants.inl \
   ../third_party/glm/glm/geometric.hpp \
   ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/detail/func_trigonometric.inl \
   ../third_party/glm/glm/matrix.hpp \
   ../third_party/glm/glm/ext/matrix_projection.inl \
   ../third_party/glm/glm/ext/matrix_clip_space.hpp \
@@ -9873,7 +11020,84 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   ../third_party/glm/glm/geometric.hpp \
   ../third_party/glm/glm/trigonometric.hpp \
   ../third_party/glm/glm/matrix.hpp \
-  ../third_party/glm/glm/gtx/transform.inl \
+  ../third_party/glm/glm/detail/type_quat.inl \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/glm.hpp \
+  /usr/include/c++/12/cfloat \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
+  ../third_party/glm/glm/fwd.hpp \
+  ../third_party/glm/glm/trigonometric.hpp \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/packing.hpp \
+  ../third_party/glm/glm/ext/vector_uint2.hpp \
+  ../third_party/glm/glm/ext/vector_float2.hpp \
+  ../third_party/glm/glm/ext/vector_float4.hpp \
+  ../third_party/glm/glm/detail/func_packing.inl \
+  ../third_party/glm/glm/detail/type_half.hpp \
+  ../third_party/glm/glm/detail/type_half.inl \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/matrix.hpp \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/integer.hpp \
+  ../third_party/glm/glm/detail/func_integer.inl \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/quaternion.hpp \
+  ../third_party/glm/glm/gtc/constants.hpp \
+  ../third_party/glm/glm/gtc/matrix_transform.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_common.inl \
+  ../third_party/glm/glm/ext/quaternion_float.hpp \
+  ../third_party/glm/glm/ext/quaternion_float_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_double.hpp \
+  ../third_party/glm/glm/ext/quaternion_double_precision.hpp \
+  ../third_party/glm/glm/ext/quaternion_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
+  ../third_party/glm/glm/ext/quaternion_transform.hpp \
+  ../third_party/glm/glm/ext/quaternion_transform.inl \
+  ../third_party/glm/glm/detail/type_mat3x3.hpp \
+  ../third_party/glm/glm/detail/type_mat4x4.hpp \
+  ../third_party/glm/glm/detail/type_vec3.hpp \
+  ../third_party/glm/glm/detail/type_vec4.hpp \
+  ../third_party/glm/glm/gtc/quaternion.inl \
+  ../third_party/glm/glm/exponential.hpp \
+  ../third_party/glm/glm/gtc/epsilon.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtc/epsilon.inl \
+  ../third_party/glm/glm/vector_relational.hpp \
+  ../third_party/glm/glm/common.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.hpp \
+  ../third_party/glm/glm/ext/quaternion_exponential.inl \
+  ../third_party/glm/glm/gtx/norm.hpp \
+  ../third_party/glm/glm/geometric.hpp \
+  ../third_party/glm/glm/gtx/quaternion.hpp \
+  ../third_party/glm/glm/gtx/component_wise.hpp \
+  ../third_party/glm/glm/detail/setup.hpp \
+  ../third_party/glm/glm/detail/qualifier.hpp \
+  ../third_party/glm/glm/gtx/component_wise.inl \
+  ../third_party/glm/glm/gtx/norm.inl \
+  ../third_party/glm/glm/gtx/quaternion.inl \
+  ../src/ecs_systems/systems.h \
+  ../src/vk_descriptors.h \
+  ../src/vk_engine.h \
+  ../src/compute_effects/compute_effect.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
+  ../src/vk_materials.h \
+  ../src/resource_manager.h \
+  /usr/include/memory.h \
   ../third_party/imgui/imgui.h \
   ../third_party/imgui/imconfig.h
 
@@ -10277,18 +11501,18 @@ src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   ../src/vk_swapchain.cpp \
   ../src/vk_swapchain.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vkbootstrap/VkBootstrap.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
@@ -10314,162 +11538,47 @@ src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
   /usr/include/c++/12/span \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_descriptors.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
-  /usr/include/c++/12/set \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_set.h \
   /usr/include/c++/12/bits/stl_multiset.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/unordered_set \
+  /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
   /usr/include/c++/12/filesystem \
   /usr/include/c++/12/bits/fs_fwd.h \
   /usr/include/c++/12/bits/chrono.h \
@@ -10482,39 +11591,103 @@ src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
   /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
   /usr/include/c++/12/variant \
   ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
   /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/ranges_algo.h \
-  /usr/include/c++/12/bits/ranges_util.h \
-  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/unordered_set \
-  /usr/include/c++/12/bits/unordered_set.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h \
   ../src/vk_initializers.h
@@ -10918,165 +12091,87 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   ../third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
   ../src/vk_window.cpp \
   ../src/vk_window.h \
-  third_party/SDL/include/SDL2/SDL.h \
-  third_party/SDL/include/SDL2/SDL_main.h \
-  third_party/SDL/include/SDL2/SDL_stdinc.h \
-  third_party/SDL/include-config-/SDL2/SDL_config.h \
-  third_party/SDL/include/SDL2/SDL_platform.h \
-  third_party/SDL/include/SDL2/begin_code.h \
-  third_party/SDL/include/SDL2/close_code.h \
-  /usr/include/c++/12/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/12/math.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
-  third_party/SDL/include/SDL2/SDL_assert.h \
-  third_party/SDL/include/SDL2/SDL_atomic.h \
-  third_party/SDL/include/SDL2/SDL_audio.h \
-  third_party/SDL/include/SDL2/SDL_error.h \
-  third_party/SDL/include/SDL2/SDL_endian.h \
-  third_party/SDL/include/SDL2/SDL_mutex.h \
-  third_party/SDL/include/SDL2/SDL_thread.h \
-  third_party/SDL/include/SDL2/SDL_rwops.h \
-  third_party/SDL/include/SDL2/SDL_clipboard.h \
-  third_party/SDL/include/SDL2/SDL_cpuinfo.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/include/c++/12/stdlib.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h \
-  third_party/SDL/include/SDL2/SDL_events.h \
-  third_party/SDL/include/SDL2/SDL_video.h \
-  third_party/SDL/include/SDL2/SDL_pixels.h \
-  third_party/SDL/include/SDL2/SDL_rect.h \
-  third_party/SDL/include/SDL2/SDL_surface.h \
-  third_party/SDL/include/SDL2/SDL_blendmode.h \
-  third_party/SDL/include/SDL2/SDL_keyboard.h \
-  third_party/SDL/include/SDL2/SDL_keycode.h \
-  third_party/SDL/include/SDL2/SDL_scancode.h \
-  third_party/SDL/include/SDL2/SDL_mouse.h \
-  third_party/SDL/include/SDL2/SDL_joystick.h \
-  third_party/SDL/include/SDL2/SDL_guid.h \
-  third_party/SDL/include/SDL2/SDL_gamecontroller.h \
-  third_party/SDL/include/SDL2/SDL_sensor.h \
-  third_party/SDL/include/SDL2/SDL_quit.h \
-  third_party/SDL/include/SDL2/SDL_gesture.h \
-  third_party/SDL/include/SDL2/SDL_touch.h \
-  third_party/SDL/include/SDL2/SDL_filesystem.h \
-  third_party/SDL/include/SDL2/SDL_haptic.h \
-  third_party/SDL/include/SDL2/SDL_hidapi.h \
-  third_party/SDL/include/SDL2/SDL_hints.h \
-  third_party/SDL/include/SDL2/SDL_loadso.h \
-  third_party/SDL/include/SDL2/SDL_log.h \
-  third_party/SDL/include/SDL2/SDL_messagebox.h \
-  third_party/SDL/include/SDL2/SDL_metal.h \
-  third_party/SDL/include/SDL2/SDL_power.h \
-  third_party/SDL/include/SDL2/SDL_render.h \
-  third_party/SDL/include/SDL2/SDL_shape.h \
-  third_party/SDL/include/SDL2/SDL_system.h \
-  third_party/SDL/include/SDL2/SDL_timer.h \
-  third_party/SDL/include/SDL2/SDL_version.h \
-  third_party/SDL/include/SDL2/SDL_locale.h \
-  third_party/SDL/include/SDL2/SDL_misc.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
   ../third_party/volk/volk.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h \
-  /home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../src/vk_swapchain.h \
   /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_tree.h \
   /usr/include/c++/12/bits/stl_set.h \
   /usr/include/c++/12/bits/stl_multiset.h \
-  third_party/SDL/include/SDL2/SDL_vulkan.h \
+  ../third_party/SDL/include/SDL_vulkan.h \
   ../third_party/imgui/imgui_impl_sdl2.h \
   ../third_party/imgui/imgui.h \
   ../third_party/imgui/imconfig.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   ../src/vk_engine.h \
   ../src/compute_effects/compute_effect.h \
   ../src/vk_types.h \
@@ -11098,55 +12193,16 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
   /usr/include/c++/12/span \
-  ../third_party/spirv_reflect/spirv_reflect.h \
-  ../third_party/spirv_reflect/include/spirv/unified1/spirv.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
   ../src/vk_materials.h \
   ../src/vk_descriptors.h \
   ../src/vk_scene.h \
-  ../src/camera.h \
-  ../src/vk_loader.h \
-  ../third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  ../third_party/fastgltf/include/fastgltf/types.hpp \
-  /usr/include/c++/12/filesystem \
-  /usr/include/c++/12/bits/fs_fwd.h \
-  /usr/include/c++/12/bits/chrono.h \
-  /usr/include/c++/12/ratio \
-  /usr/include/c++/12/ctime \
-  /usr/include/c++/12/bits/parse_numbers.h \
-  /usr/include/c++/12/bits/fs_path.h \
-  /usr/include/c++/12/locale \
-  /usr/include/c++/12/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/12/bits/locale_conv.h \
-  /usr/include/c++/12/iomanip \
-  /usr/include/c++/12/bits/quoted_string.h \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/bits/sstream.tcc \
-  /usr/include/c++/12/codecvt \
-  /usr/include/c++/12/bits/fs_dir.h \
-  /usr/include/c++/12/bits/fs_ops.h \
+  ../src/uuid.h \
+  ../src/entity.h \
+  ../third_party/entt/entt.hpp \
   /usr/include/c++/12/utility \
   /usr/include/c++/12/bits/stl_relops.h \
-  /usr/include/c++/12/variant \
-  ../third_party/fastgltf/include/fastgltf/util.hpp \
-  /usr/include/c++/12/version \
-  ../third_party/fastgltf/include/fastgltf/math.hpp \
-  /usr/include/c++/12/memory_resource \
-  /usr/include/c++/12/shared_mutex \
-  ../src/skybox.h \
-  ../src/scene_node.h \
-  ../src/ecs_components/components.h \
-  ../third_party/entt/entt.hpp \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/bits/ranges_algo.h \
   /usr/include/c++/12/bits/ranges_util.h \
@@ -11159,6 +12215,73 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/stl_multimap.h \
   /usr/include/c++/12/unordered_set \
   /usr/include/c++/12/bits/unordered_set.h \
+  ../third_party/nlohmann/include/nlohmann/json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  ../src/skybox.h \
+  ../src/vk_loader.h \
+  ../third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  ../third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/include/c++/12/variant \
+  ../third_party/fastgltf/include/fastgltf/util.hpp \
+  ../third_party/fastgltf/include/fastgltf/math.hpp \
+  /usr/include/c++/12/memory_resource \
+  /usr/include/c++/12/shared_mutex \
+  ../src/script_manager.h \
+  ../third_party/sol2/include/sol/sol.hpp \
+  ../third_party/sol2/include/sol/config.hpp \
+  ../third_party/lua/include/lua.hpp \
+  /usr/include/c++/12/iostream \
+  ../third_party/lua/include/lua.h \
+  ../third_party/lua/include/luaconf.h \
+  ../third_party/lua/include/lualib.h \
+  ../third_party/lua/include/lauxlib.h \
+  /usr/include/c++/12/bitset \
   ../src/resource_manager.h \
   /usr/include/memory.h
 
@@ -11167,15 +12290,17 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
 
 ../src/vk_swapchain.cpp:
 
+../src/vk_materials.cpp:
+
+/usr/include/c++/12/math.h:
+
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
 /usr/include/c++/12/bits/this_thread_sleep.h:
 
 /usr/include/c++/12/bits/std_thread.h:
 
-/usr/include/c++/12/stop_token:
-
-../third_party/imgui/imgui_impl_vulkan.h:
+/usr/include/c++/12/chrono:
 
 ../third_party/imgui/imgui_impl_sdl2.h:
 
@@ -11195,47 +12320,103 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
 
 ../src/vk_descriptors.cpp:
 
-../src/scene_node.cpp:
+../src/script_manager.cpp:
 
-../src/vk_pipelines.h:
+../src/resource_manager.cpp:
 
-/usr/include/c++/12/bits/unordered_set.h:
+../src/entity.cpp:
 
-/usr/include/c++/12/bits/stl_multimap.h:
+../third_party/glm/glm/gtx/matrix_decompose.inl:
 
-/usr/include/c++/12/map:
-
-/usr/include/c++/12/bits/list.tcc:
-
-/usr/include/c++/12/bits/stl_list.h:
-
-/usr/include/c++/12/pstl/glue_algorithm_defs.h:
-
-/usr/include/c++/12/bits/ranges_util.h:
-
-/usr/include/c++/12/algorithm:
-
-../third_party/entt/entt.hpp:
+../third_party/glm/glm/gtx/matrix_decompose.hpp:
 
 ../src/ecs_components/components.h:
 
-../src/scene_node.h:
+../src/vk_pipelines.h:
+
+/usr/include/memory.h:
+
+/usr/include/c++/12/bitset:
+
+/usr/include/c++/12/iostream:
+
+../third_party/lua/include/lua.hpp:
+
+../third_party/sol2/include/sol/config.hpp:
+
+/usr/include/c++/12/memory_resource:
+
+../third_party/fastgltf/include/fastgltf/math.hpp:
+
+../third_party/fastgltf/include/fastgltf/util.hpp:
+
+../src/vk_loader.h:
+
+../src/script_manager.h:
 
 ../src/skybox.h:
 
-/usr/include/c++/12/memory_resource:
+/usr/include/c++/12/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/12/bits/stl_numeric.h:
+
+/usr/include/c++/12/numeric:
+
+/usr/include/c++/12/ranges:
 
 /usr/include/c++/12/bits/semaphore_base.h:
 
 /usr/include/c++/12/version:
 
-../third_party/fastgltf/include/fastgltf/util.hpp:
+/usr/include/c++/12/bits/gslice_array.h:
+
+/usr/include/c++/12/bits/slice_array.h:
+
+/usr/include/c++/12/bits/valarray_before.h:
+
+/usr/include/c++/12/bits/valarray_array.tcc:
+
+/usr/include/c++/12/bits/valarray_array.h:
+
+/usr/include/c++/12/valarray:
+
+/usr/include/c++/12/any:
+
+/usr/include/c++/12/bits/forward_list.tcc:
+
+/usr/include/c++/12/bits/forward_list.h:
+
+/usr/include/c++/12/forward_list:
+
+/usr/include/c++/12/bits/stl_multimap.h:
+
+/usr/include/c++/12/map:
+
+../third_party/sol2/include/sol/sol.hpp:
+
+/usr/include/c++/12/bits/list.tcc:
+
+/usr/include/c++/12/bits/stl_list.h:
+
+/usr/include/c++/12/list:
+
+/usr/include/c++/12/pstl/glue_algorithm_defs.h:
+
+/usr/include/c++/12/bits/ranges_util.h:
+
+/usr/include/c++/12/bits/ranges_algo.h:
+
+/usr/include/c++/12/algorithm:
 
 /usr/include/c++/12/bits/stl_relops.h:
 
-../src/vk_loader.h:
+../third_party/entt/entt.hpp:
 
 ../src/vk_scene.h:
+
+../src/vk_materials.h:
+
+/usr/include/c++/12/bits/mask_array.h:
 
 /usr/include/c++/12/bits/fstream.tcc:
 
@@ -11243,7 +12424,7 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h:
 
-/usr/include/c++/12/bits/sstream.tcc:
+/usr/include/c++/12/bits/fs_dir.h:
 
 /usr/include/c++/12/istream:
 
@@ -11253,19 +12434,23 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
 
 /usr/include/c++/12/iomanip:
 
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
 /usr/include/c++/12/bits/codecvt.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h:
 
-/usr/include/c++/12/bits/locale_facets_nonio.h:
+/usr/include/c++/12/bits/fs_path.h:
 
 /usr/include/c++/12/bits/parse_numbers.h:
 
+/usr/include/c++/12/ctime:
+
 /usr/include/c++/12/ratio:
 
-../third_party/spirv_reflect/spirv_reflect.h:
+../third_party/spirv_reflect/include/spirv_reflect.h:
 
 /usr/include/c++/12/span:
 
@@ -11281,113 +12466,9 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
 
 ../third_party/glm/glm/gtx/norm.inl:
 
+../third_party/glm/glm/gtx/component_wise.hpp:
+
 ../third_party/glm/glm/ext/quaternion_exponential.hpp:
-
-../third_party/glm/glm/gtc/epsilon.hpp:
-
-../third_party/glm/glm/ext/quaternion_transform.inl:
-
-../third_party/glm/glm/ext/quaternion_double_precision.hpp:
-
-../third_party/glm/glm/ext/quaternion_double.hpp:
-
-../third_party/glm/glm/ext/quaternion_float_precision.hpp:
-
-../third_party/glm/glm/detail/type_quat.inl:
-
-../third_party/glm/glm/ext/quaternion_relational.inl:
-
-../third_party/glm/glm/ext/quaternion_relational.hpp:
-
-../third_party/glm/glm/ext/quaternion_geometric.inl:
-
-../third_party/glm/glm/ext/quaternion_geometric.hpp:
-
-../third_party/glm/glm/ext/quaternion_common.hpp:
-
-../third_party/glm/glm/ext/matrix_transform.inl:
-
-../third_party/glm/glm/ext/matrix_transform.hpp:
-
-../src/vk_images.h:
-
-../third_party/glm/glm/ext/matrix_clip_space.hpp:
-
-../third_party/glm/glm/ext/matrix_projection.inl:
-
-../third_party/glm/glm/ext/matrix_projection.hpp:
-
-../third_party/glm/glm/gtc/quaternion.hpp:
-
-../third_party/glm/glm/gtc/constants.inl:
-
-../third_party/glm/glm/gtc/constants.hpp:
-
-../third_party/glm/glm/detail/type_half.inl:
-
-/usr/include/c++/12/codecvt:
-
-/usr/include/c++/12/cfloat:
-
-../third_party/glm/glm/glm.hpp:
-
-../third_party/glm/glm/detail/type_float.hpp:
-
-/usr/include/c++/12/shared_mutex:
-
-../third_party/glm/glm/ext/vector_relational.inl:
-
-../third_party/glm/glm/ext/vector_relational.hpp:
-
-../third_party/glm/glm/ext/scalar_constants.hpp:
-
-../third_party/glm/glm/detail/func_trigonometric.inl:
-
-../third_party/glm/glm/trigonometric.hpp:
-
-../third_party/glm/glm/ext/quaternion_trigonometric.hpp:
-
-/usr/include/c++/12/set:
-
-../src/vk_swapchain.h:
-
-third_party/SDL/include/SDL2/SDL_locale.h:
-
-third_party/SDL/include/SDL2/SDL_version.h:
-
-third_party/SDL/include/SDL2/SDL_shape.h:
-
-third_party/SDL/include/SDL2/SDL_power.h:
-
-third_party/SDL/include/SDL2/SDL_metal.h:
-
-third_party/SDL/include/SDL2/SDL_messagebox.h:
-
-../src/resource_manager.cpp:
-
-third_party/SDL/include/SDL2/SDL_log.h:
-
-third_party/SDL/include/SDL2/SDL_hints.h:
-
-third_party/SDL/include/SDL2/SDL_hidapi.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/tsxldtrkintrin.h:
-
-../third_party/glm/glm/ext/quaternion_float.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/serializeintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/enqcmdintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvp2intersectintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/amxintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/keylockerintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/invpcidintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/pconfigintrin.h:
 
 ../third_party/glm/glm/detail/setup.hpp:
 
@@ -11395,13 +12476,13 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 
 /usr/include/assert.h:
 
+../third_party/glm/glm/ext/matrix_transform.inl:
+
 /usr/include/c++/12/unordered_set:
 
 /usr/include/c++/12/bits/erase_if.h:
 
-/usr/include/c++/12/bits/stl_set.h:
-
-/usr/include/c++/12/bits/unordered_map.h:
+../third_party/glm/glm/ext/vector_double3.hpp:
 
 /usr/include/c++/12/bits/std_mutex.h:
 
@@ -11419,8 +12500,6 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
-../third_party/glm/glm/gtx/transform.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/c++/12/bits/shared_ptr_atomic.h:
@@ -11431,11 +12510,7 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 
 /usr/include/c++/12/tr1/riemann_zeta.tcc:
 
-../src/resource_manager.h:
-
-../third_party/glm/glm/integer.hpp:
-
-/usr/include/c++/12/pstl/execution_defs.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h:
 
 /usr/include/c++/12/bits/stl_iterator.h:
 
@@ -11445,6 +12520,8 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 
 ../third_party/glm/glm/ext/vector_uint3.hpp:
 
+/usr/include/time.h:
+
 /usr/include/c++/12/streambuf:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
@@ -11453,31 +12530,31 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 
 /usr/include/c++/12/bits/basic_string.tcc:
 
+/usr/include/c++/12/bits/uses_allocator_args.h:
+
+/usr/include/vulkan/vulkan.h:
+
 ../third_party/glm/glm/common.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/asm-generic/errno-base.h:
 
+../third_party/SDL/include/SDL_version.h:
+
 /usr/include/syscall.h:
 
 ../third_party/glm/glm/ext/matrix_double3x2.hpp:
+
+../third_party/SDL/include/SDL_rwops.h:
 
 /usr/include/asm-generic/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
+../third_party/glm/glm/glm.hpp:
+
 /usr/include/wctype.h:
-
-../third_party/glm/glm/detail/type_half.hpp:
-
-/usr/include/c++/12/bits/new_allocator.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-../third_party/glm/glm/fwd.hpp:
-
-/usr/include/errno.h:
 
 ../third_party/glm/glm/detail/func_vector_relational.inl:
 
@@ -11489,8 +12566,6 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/12/ext/type_traits.h:
@@ -11498,6 +12573,8 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/12/deque:
+
+/usr/include/c++/12/bits/hashtable.h:
 
 /usr/include/endian.h:
 
@@ -11509,6 +12586,12 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
+../src/vk_scene.cpp:
+
+../third_party/lua/include/lauxlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/c++/12/cstdlib:
@@ -11516,12 +12599,6 @@ third_party/SDL/include/SDL2/SDL_hidapi.h:
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/c++/12/bits/alloc_traits.h:
-
-/usr/include/c++/12/ext/string_conversions.h:
-
-../third_party/glm/glm/detail/type_mat4x3.inl:
-
-third_party/SDL/include/SDL2/SDL_clipboard.h:
 
 /usr/include/c++/12/ext/aligned_buffer.h:
 
@@ -11535,13 +12612,9 @@ third_party/SDL/include/SDL2/SDL_clipboard.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
-/usr/include/c++/12/bits/ranges_base.h:
-
 /usr/include/c++/12/bits/cxxabi_forced.h:
 
 /usr/include/c++/12/bits/locale_classes.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/crc32intrin.h:
 
 ../third_party/fastgltf/include/fastgltf/tools.hpp:
 
@@ -11561,8 +12634,6 @@ third_party/SDL/include/SDL2/SDL_clipboard.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-third_party/SDL/include/SDL2/SDL_render.h:
-
 ../third_party/glm/glm/ext/vector_double2_precision.hpp:
 
 /usr/include/c++/12/cmath:
@@ -11579,11 +12650,7 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-../third_party/glm/glm/detail/func_matrix.inl:
-
-/usr/include/c++/12/bits/fs_dir.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vldqintrin.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -11595,11 +12662,19 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 /usr/include/c++/12/utility:
 
+../third_party/SDL/include/SDL_config.h:
+
 /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_inline.h:
 
 ../third_party/glm/glm/mat2x4.hpp:
+
+/usr/include/c++/12/ext/string_conversions.h:
+
+../third_party/SDL/include/SDL_assert.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 ../third_party/glm/glm/ext/matrix_double2x2.hpp:
 
@@ -11607,13 +12682,11 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 ../third_party/glm/glm/ext/matrix_float2x3_precision.hpp:
 
+../third_party/glm/glm/detail/type_half.inl:
+
 /usr/include/c++/12/bits/fs_ops.h:
 
 /usr/include/c++/12/debug/debug.h:
-
-../third_party/fastgltf/include/fastgltf/math.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmiintrin.h:
 
 /usr/include/c++/12/bits/stl_raw_storage_iter.h:
 
@@ -11621,13 +12694,17 @@ third_party/SDL/include/SDL2/SDL_render.h:
 
 /usr/include/ctype.h:
 
+/usr/include/vk_video/vulkan_video_codec_h265std_encode.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/c++/12/bits/charconv.h:
+
+/usr/include/c++/12/cstring:
+
 /usr/include/c++/12/bits/streambuf_iterator.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codecs_common.h:
-
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-third_party/SDL/include/SDL2/SDL_haptic.h:
 
 /usr/include/c++/12/cassert:
 
@@ -11641,6 +12718,8 @@ third_party/SDL/include/SDL2/SDL_haptic.h:
 
 /usr/include/c++/12/iosfwd:
 
+../third_party/SDL/include/SDL_messagebox.h:
+
 /usr/include/c++/12/bits/utility.h:
 
 /usr/include/c++/12/bits/invoke.h:
@@ -11649,7 +12728,7 @@ third_party/SDL/include/SDL2/SDL_haptic.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/hresetintrin.h:
+../third_party/SDL/include/SDL_metal.h:
 
 /usr/include/c++/12/initializer_list:
 
@@ -11657,19 +12736,11 @@ third_party/SDL/include/SDL2/SDL_haptic.h:
 
 /usr/include/c++/12/bits/hashtable_policy.h:
 
-../third_party/glm/glm/ext/matrix_double3x4_precision.hpp:
-
 /usr/include/c++/12/numbers:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/fmaintrin.h:
+../third_party/SDL/include/SDL_stdinc.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/c++/12/bits/locale_facets_nonio.tcc:
-
-third_party/SDL/include/SDL2/begin_code.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/movdirintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
@@ -11687,13 +12758,17 @@ third_party/SDL/include/SDL2/begin_code.h:
 
 /usr/include/c++/12/pstl/glue_memory_defs.h:
 
+../src/entity.h:
+
+../third_party/SDL/include/SDL_guid.h:
+
 /usr/include/c++/12/bits/stl_construct.h:
+
+../third_party/glm/glm/ext/matrix_float3x4_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/syscall.h:
 
 ../third_party/glm/glm/matrix.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/popcntintrin.h:
 
 /usr/include/c++/12/bits/refwrap.h:
 
@@ -11709,19 +12784,17 @@ third_party/SDL/include/SDL2/begin_code.h:
 
 /usr/include/c++/12/tuple:
 
+../third_party/glm/glm/ext/quaternion_relational.inl:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/12/stop_token:
+
+../third_party/SDL/include/SDL_events.h:
 
 ../third_party/glm/glm/ext/matrix_float4x4.hpp:
 
 /usr/include/c++/12/bits/enable_special_members.h:
-
-../src/vk_engine.h:
-
-../third_party/glm/glm/packing.hpp:
-
-/usr/include/c++/12/concepts:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -11730,8 +12803,6 @@ third_party/SDL/include/SDL2/begin_code.h:
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/c++/12/bit:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/ptwriteintrin.h:
 
 /usr/include/c++/12/ext/atomicity.h:
 
@@ -11743,19 +12814,7 @@ third_party/SDL/include/SDL2/begin_code.h:
 
 /usr/include/c++/12/exception:
 
-third_party/SDL/include/SDL2/SDL_vulkan.h:
-
 ../src/vk_types.h:
-
-../third_party/glm/glm/ext/quaternion_transform.hpp:
-
-third_party/SDL/include/SDL2/SDL.h:
-
-../src/vk_materials.cpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvbmi2intrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/adxintrin.h:
 
 /usr/include/c++/12/typeinfo:
 
@@ -11765,9 +12824,11 @@ third_party/SDL/include/SDL2/SDL.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h:
 
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
 /usr/include/c++/12/bits/allocator.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512cdintrin.h:
+../third_party/glm/glm/detail/type_float.hpp:
 
 /usr/include/c++/12/optional:
 
@@ -11779,15 +12840,23 @@ third_party/SDL/include/SDL2/SDL.h:
 
 ../third_party/glm/glm/detail/type_vec4.inl:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveoptintrin.h:
+../third_party/glm/glm/gtx/component_wise.inl:
+
+/usr/include/c++/12/bits/concept_check.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h:
 
 ../third_party/glm/glm/detail/_vectorize.hpp:
 
+/usr/include/c++/12/bits/sstream.tcc:
+
+../third_party/SDL/include/begin_code.h:
+
 /usr/include/c++/12/bits/cpp_type_traits.h:
 
 ../third_party/glm/glm/detail/compute_common.hpp:
+
+../third_party/glm/glm/detail/func_trigonometric.inl:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -11801,6 +12870,8 @@ third_party/SDL/include/SDL2/SDL.h:
 
 src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx:
 
+../third_party/SDL/include/SDL_surface.h:
+
 src/CMakeFiles/engine.dir/cmake_pch.hxx:
 
 /usr/include/c++/12/bits/iterator_concepts.h:
@@ -11811,15 +12882,13 @@ src/CMakeFiles/engine.dir/cmake_pch.hxx:
 
 ../third_party/glm/glm/ext/vector_bool4.hpp:
 
-third_party/SDL/include/SDL2/SDL_audio.h:
+/usr/include/features-time64.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmaintrin.h:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/c++/12/bits/ostream_insert.h:
 
-../third_party/glm/glm/detail/type_quat.hpp:
-
-/usr/include/c++/12/ext/numeric_traits.h:
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/c++/12/bits/stl_vector.h:
 
@@ -11833,6 +12902,8 @@ third_party/SDL/include/SDL2/SDL_audio.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:
 
+/usr/include/c++/12/bits/indirect_array.h:
+
 /usr/include/alloca.h:
 
 /usr/include/c++/12/bits/exception_defines.h:
@@ -11843,19 +12914,29 @@ third_party/SDL/include/SDL2/SDL_audio.h:
 
 /usr/include/c++/12/semaphore:
 
+../third_party/SDL/include/SDL_log.h:
+
 /usr/include/x86_64-linux-gnu/asm/unistd_64.h:
+
+/usr/include/c++/12/bits/new_allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+../third_party/glm/glm/detail/type_half.hpp:
 
 /usr/include/c++/12/bits/locale_classes.tcc:
 
-/usr/include/c++/12/bits/exception.h:
+../third_party/glm/glm/ext/quaternion_trigonometric.hpp:
 
 /usr/include/c++/12/bits/memoryfwd.h:
 
 /usr/include/c++/12/bits/cxxabi_init_exception.h:
 
-/usr/include/c++/12/backward/binders.h:
-
 ../third_party/glm/glm/detail/qualifier.hpp:
+
+/usr/include/vk_video/vulkan_video_codec_h265std.h:
+
+../third_party/glm/glm/trigonometric.hpp:
 
 /usr/include/c++/12/bits/stringfwd.h:
 
@@ -11873,11 +12954,15 @@ third_party/SDL/include/SDL2/SDL_audio.h:
 
 ../third_party/fastgltf/include/fastgltf/types.hpp:
 
+../third_party/nlohmann/include/nlohmann/json.hpp:
+
 ../third_party/glm/glm/gtx/quaternion.inl:
 
 /usr/include/c++/12/bits/move.h:
 
-third_party/SDL/include/SDL2/SDL_scancode.h:
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 ../third_party/glm/glm/ext/matrix_double4x4.hpp:
 
@@ -11887,13 +12972,13 @@ third_party/SDL/include/SDL2/SDL_scancode.h:
 
 ../third_party/glm/glm/ext/matrix_float4x3.hpp:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/sgxintrin.h:
-
-third_party/SDL/include/SDL2/SDL_sensor.h:
-
 /usr/include/c++/12/bits/stl_function.h:
 
 /usr/include/c++/12/bits/functexcept.h:
+
+/usr/include/c++/12/bits/unordered_map.h:
+
+/usr/include/c++/12/bits/stl_set.h:
 
 /usr/include/linux/close_range.h:
 
@@ -11909,6 +12994,8 @@ third_party/SDL/include/SDL2/SDL_sensor.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
+../third_party/glm/glm/gtc/constants.inl:
+
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
@@ -11917,7 +13004,13 @@ third_party/SDL/include/SDL2/SDL_sensor.h:
 
 /usr/include/c++/12/clocale:
 
+../third_party/glm/glm/ext/matrix_float3x3_precision.hpp:
+
+../third_party/glm/glm/ext/matrix_float4x2_precision.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+../third_party/lua/include/lualib.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -11927,37 +13020,21 @@ third_party/SDL/include/SDL2/SDL_sensor.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/usr/include/c++/12/bits/stl_multiset.h:
-
-/usr/include/sched.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_pclmul.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/vaesintrin.h:
-
 /usr/include/c++/12/bits/uses_allocator.h:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-/usr/include/c++/12/cwctype:
 
 /usr/include/dlfcn.h:
 
 ../third_party/fmt/include/fmt/core.h:
 
-../src/vk_scene.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-third_party/SDL/include/SDL2/SDL_cpuinfo.h:
-
 /usr/include/c++/12/bits/unique_ptr.h:
 
-third_party/SDL/include/SDL2/SDL_filesystem.h:
+../third_party/SDL/include/SDL_loadso.h:
 
 ../third_party/glm/glm/detail/type_vec2.hpp:
 
 ../third_party/glm/glm/ext/vector_double4_precision.hpp:
+
+/usr/include/vulkan/vulkan_core.h:
 
 ../third_party/glm/glm/ext/quaternion_common.inl:
 
@@ -11971,17 +13048,7 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/12/string_view:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlvnniintrin.h:
-
 /usr/include/c++/12/ostream:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsaveintrin.h:
-
-/usr/include/c++/12/chrono:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavesintrin.h:
 
 /usr/include/c++/12/ios:
 
@@ -11989,7 +13056,11 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/12/bits/ios_base.h:
 
+/usr/include/c++/12/set:
+
 /usr/include/c++/12/cwchar:
+
+../third_party/SDL/include/SDL_vulkan.h:
 
 ../third_party/glm/glm/detail/func_exponential.inl:
 
@@ -11999,23 +13070,15 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/12/tr1/bessel_function.tcc:
 
-../third_party/glm/glm/gtc/matrix_transform.inl:
+../third_party/imgui/imconfig.h:
 
-/usr/include/c++/12/bits/std_abs.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/c++/12/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
+../third_party/SDL/include/SDL_audio.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
 
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/include/c++/12/bits/atomic_wait.h:
-
 ../third_party/glm/glm/mat4x3.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmi2intrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
@@ -12023,19 +13086,17 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/12/bits/algorithmfwd.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-../third_party/glm/glm/ext/vector_double3.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avxvnniintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/vpclmulqdqintrin.h:
-
 /usr/include/c++/12/cstdint:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
+../third_party/SDL/include/SDL_render.h:
+
 /usr/include/x86_64-linux-gnu/bits/timex.h:
+
+../third_party/glm/glm/ext/matrix_float4x4_precision.hpp:
+
+../third_party/glm/glm/gtx/quaternion.hpp:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/float.h:
 
@@ -12043,9 +13104,11 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-/usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h:
+/usr/include/c++/12/bits/exception.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512fintrin.h:
+../third_party/SDL/include/SDL_mouse.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h:
 
 /usr/include/c++/12/stdexcept:
 
@@ -12053,15 +13116,7 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 ../third_party/glm/glm/vec2.hpp:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbf16intrin.h:
-
 /usr/include/c++/12/cctype:
-
-../third_party/glm/glm/gtc/quaternion.inl:
-
-../third_party/glm/glm/ext/scalar_constants.inl:
-
-/usr/include/c++/12/bits/localefwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
@@ -12075,11 +13130,15 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/12/bits/locale_facets.tcc:
 
+../third_party/glm/glm/gtc/matrix_transform.hpp:
+
 ../third_party/glm/glm/ext/matrix_double2x2_precision.hpp:
 
 /usr/include/c++/12/bits/ranges_cmp.h:
 
 ../third_party/glm/glm/ext/vector_int2_precision.hpp:
+
+../src/ecs_components/components.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
@@ -12087,9 +13146,7 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/12/bits/postypes.h:
 
-../third_party/glm/glm/ext/matrix_float3x4_precision.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/lzcntintrin.h:
+../third_party/glm/glm/ext/quaternion_common.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -12101,13 +13158,9 @@ third_party/SDL/include/SDL2/SDL_filesystem.h:
 
 ../src/vk_initializers.cpp:
 
+../third_party/SDL/include/SDL_config_minimal.h:
+
 ../third_party/glm/glm/vec4.hpp:
-
-../third_party/glm/glm/gtx/quaternion.hpp:
-
-../third_party/glm/glm/ext/matrix_float4x4_precision.hpp:
-
-third_party/SDL/include/SDL2/SDL_blendmode.h:
 
 ../third_party/volk/volk.h:
 
@@ -12119,17 +13172,25 @@ third_party/SDL/include/SDL2/SDL_blendmode.h:
 
 ../third_party/glm/glm/exponential.hpp:
 
+../src/vk_images.h:
+
+../third_party/glm/glm/ext/matrix_clip_space.hpp:
+
 ../src/skybox.cpp:
 
 ../third_party/glm/glm/detail/func_packing.inl:
 
 ../third_party/glm/glm/detail/type_mat4x4.inl:
 
-third_party/SDL/include/SDL2/SDL_platform.h:
-
 /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h:
 
 ../third_party/glm/glm/ext/vector_bool2.hpp:
+
+/usr/include/c++/12/bits/basic_ios.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+../third_party/glm/glm/detail/type_mat3x2.inl:
 
 ../third_party/glm/glm/detail/type_vec2.inl:
 
@@ -12139,21 +13200,15 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 
 ../third_party/glm/glm/ext/vector_double2.hpp:
 
-../third_party/glm/glm/gtx/transform.inl:
+/usr/include/c++/12/compare:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_decode.h:
+../third_party/glm/glm/ext/vector_uint2.hpp:
 
 /usr/include/c++/12/bits/ranges_algobase.h:
 
 /usr/include/c++/12/bits/specfun.h:
 
 ../third_party/glm/glm/ext/vector_uint2_precision.hpp:
-
-/usr/include/c++/12/math.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xsavecintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/waitpkgintrin.h:
 
 ../third_party/glm/glm/detail/func_integer.inl:
 
@@ -12164,6 +13219,8 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 ../third_party/stb_image/stb_image.h:
 
 ../third_party/glm/glm/ext/vector_bool3_precision.hpp:
+
+../third_party/SDL/include/SDL_video.h:
 
 ../third_party/glm/glm/ext/vector_float3.hpp:
 
@@ -12179,17 +13236,13 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 
 ../third_party/glm/glm/ext/matrix_float2x2.hpp:
 
-/usr/include/c++/12/bits/basic_ios.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-../third_party/glm/glm/detail/type_mat3x2.inl:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqintrin.h:
-
 ../third_party/glm/glm/ext/vector_int3.hpp:
 
+../third_party/glm/glm/ext/quaternion_transform.hpp:
+
 ../src/main.cpp:
+
+../third_party/SDL/include/SDL_keycode.h:
 
 ../third_party/glm/glm/ext/vector_bool4_precision.hpp:
 
@@ -12199,21 +13252,23 @@ third_party/SDL/include/SDL2/SDL_platform.h:
 
 ../third_party/glm/glm/ext/vector_int4.hpp:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h265std_encode.h:
-
 ../src/vk_enum_string_helper.h:
 
 ../third_party/glm/glm/ext/vector_int4_precision.hpp:
 
 ../third_party/glm/glm/ext/vector_uint4.hpp:
 
+../third_party/SDL/include/SDL_endian.h:
+
 ../third_party/glm/glm/ext/vector_uint4_precision.hpp:
+
+/usr/include/c++/12/bits/gslice.h:
 
 ../third_party/glm/glm/mat4x2.hpp:
 
-third_party/SDL/include/SDL2/SDL_loadso.h:
-
 ../third_party/glm/glm/ext/matrix_float2x2_precision.hpp:
+
+../third_party/glm/glm/ext/matrix_double2x3.hpp:
 
 ../third_party/glm/glm/detail/type_mat2x3.hpp:
 
@@ -12227,17 +13282,13 @@ third_party/SDL/include/SDL2/SDL_loadso.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
-/usr/include/c++/12/bits/basic_ios.tcc:
-
-../third_party/glm/glm/detail/_fixes.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/pmmintrin.h:
-
 ../third_party/glm/glm/ext/vector_float2_precision.hpp:
 
 ../third_party/glm/glm/ext/matrix_double2x4.hpp:
 
 ../third_party/glm/glm/detail/type_mat2x4.inl:
+
+../third_party/glm/glm/gtc/constants.hpp:
 
 /usr/include/c++/12/variant:
 
@@ -12245,11 +13296,17 @@ third_party/SDL/include/SDL2/SDL_loadso.h:
 
 ../third_party/glm/glm/ext/matrix_double2x4_precision.hpp:
 
+/usr/include/c++/12/tr1/legendre_function.tcc:
+
 ../third_party/glm/glm/detail/type_mat2x4.hpp:
 
 ../third_party/glm/glm/ext/matrix_float2x4.hpp:
 
 ../third_party/glm/glm/ext/matrix_float2x4_precision.hpp:
+
+../third_party/glm/glm/ext/vector_relational.hpp:
+
+../third_party/SDL/include/SDL_touch.h:
 
 ../third_party/glm/glm/mat3x2.hpp:
 
@@ -12259,15 +13316,17 @@ third_party/SDL/include/SDL2/SDL_loadso.h:
 
 ../third_party/glm/glm/detail/type_mat3x2.hpp:
 
+/usr/include/c++/12/bits/locale_facets_nonio.h:
+
+/usr/include/vk_video/vulkan_video_codec_av1std_decode.h:
+
 ../third_party/glm/glm/ext/matrix_double3x2_precision.hpp:
 
 ../third_party/glm/glm/ext/matrix_float3x2.hpp:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbitalgintrin.h:
-
 ../third_party/glm/glm/ext/matrix_float3x2_precision.hpp:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlcdintrin.h:
+../third_party/glm/glm/ext/quaternion_double.hpp:
 
 /usr/include/c++/12/bits/allocated_ptr.h:
 
@@ -12275,31 +13334,33 @@ third_party/SDL/include/SDL2/SDL_loadso.h:
 
 ../third_party/glm/glm/mat3x3.hpp:
 
+../third_party/glm/glm/ext/matrix_double3x4_precision.hpp:
+
+../third_party/SDL/include/SDL_pixels.h:
+
 ../third_party/glm/glm/detail/type_mat3x3.inl:
 
 /usr/include/c++/12/bits/fs_fwd.h:
 
 ../third_party/glm/glm/mat3x4.hpp:
 
-../third_party/spirv_reflect/include/spirv/unified1/spirv.h:
-
-/usr/include/c++/12/bits/stl_tree.h:
-
-third_party/SDL/include/SDL2/SDL_endian.h:
-
 ../third_party/glm/glm/ext/matrix_double3x3_precision.hpp:
+
+../third_party/glm/glm/ext/matrix_float3x3.hpp:
 
 /usr/include/c++/12/bits/stl_pair.h:
 
 ../third_party/glm/glm/ext/matrix_double3x4.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vp2intersectintrin.h:
 
 /usr/include/c++/12/bits/stl_algo.h:
 
 ../third_party/glm/glm/ext/matrix_double3x3.hpp:
 
 ../third_party/glm/glm/ext/matrix_float3x4.hpp:
+
+../third_party/glm/glm/ext/matrix_double4x2.hpp:
+
+../third_party/lua/include/luaconf.h:
 
 ../third_party/glm/glm/detail/type_mat4x2.hpp:
 
@@ -12309,19 +13370,7 @@ third_party/SDL/include/SDL2/SDL_endian.h:
 
 ../third_party/glm/glm/detail/type_mat4x2.inl:
 
-/usr/include/c++/12/compare:
-
-../third_party/glm/glm/ext/vector_uint2.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vnniintrin.h:
-
 ../third_party/glm/glm/ext/matrix_double4x2_precision.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bitalgintrin.h:
-
-third_party/SDL/include/SDL2/SDL_misc.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/cldemoteintrin.h:
 
 ../third_party/glm/glm/ext/matrix_float4x2.hpp:
 
@@ -12333,11 +13382,7 @@ third_party/SDL/include/SDL2/SDL_misc.h:
 
 ../third_party/glm/glm/detail/type_vec1.inl:
 
-third_party/SDL/include/SDL2/SDL_keyboard.h:
-
-/usr/include/c++/12/bits/uses_allocator_args.h:
-
-third_party/SDL/include/SDL2/SDL_stdinc.h:
+/usr/include/c++/12/bits/valarray_after.h:
 
 /usr/include/c++/12/climits:
 
@@ -12349,6 +13394,10 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 ../third_party/glm/glm/detail/type_vec1.hpp:
 
+../third_party/SDL/include/SDL_misc.h:
+
+../third_party/glm/glm/ext/matrix_projection.hpp:
+
 /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
@@ -12357,9 +13406,9 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/fxsrintrin.h:
-
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/vulkan/vk_platform.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
@@ -12367,25 +13416,27 @@ third_party/SDL/include/SDL2/SDL_stdinc.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512erintrin.h:
-
 /usr/include/c++/12/bits/locale_conv.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-../third_party/glm/glm/ext/matrix_double2x3.hpp:
-
-third_party/SDL/include/SDL2/SDL_keycode.h:
+../third_party/SDL/include/SDL.h:
 
 /usr/include/c++/12/tr1/gamma.tcc:
-
-../src/vk_materials.h:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vk_platform.h:
 
 /usr/include/c++/12/ext/alloc_traits.h:
 
 /usr/include/c++/12/tr1/special_function_util.h:
+
+../third_party/glm/glm/ext/quaternion_geometric.inl:
+
+/usr/include/c++/12/tr1/beta_function.tcc:
+
+/usr/include/c++/12/bits/vector.tcc:
+
+/usr/include/c++/12/tr1/hypergeometric.tcc:
+
+../third_party/SDL/include/SDL_scancode.h:
 
 ../third_party/glm/glm/ext/matrix_double4x3_precision.hpp:
 
@@ -12397,6 +13448,8 @@ third_party/SDL/include/SDL2/SDL_keycode.h:
 
 /usr/include/c++/12/tr1/exp_integral.tcc:
 
+../third_party/SDL/include/SDL_platform.h:
+
 /usr/include/c++/12/bits/atomic_timed_wait.h:
 
 ../third_party/glm/glm/ext/matrix_float4x3_precision.hpp:
@@ -12407,35 +13460,89 @@ third_party/SDL/include/SDL2/SDL_keycode.h:
 
 ../third_party/glm/glm/vector_relational.hpp:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_decode.h:
-
 /usr/include/c++/12/memory:
 
 /usr/include/c++/12/type_traits:
 
 ../third_party/glm/glm/detail/func_common.inl:
 
-third_party/SDL/include/SDL2/SDL_events.h:
+../third_party/glm/glm/ext/matrix_double4x4_precision.hpp:
 
-third_party/SDL/include-config-/SDL2/SDL_config.h:
+../third_party/SDL/include/close_code.h:
 
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
+../third_party/SDL/include/SDL_error.h:
 
-third_party/SDL/include/SDL2/close_code.h:
+../third_party/SDL/include/SDL_rect.h:
 
-/usr/include/c++/12/stdlib.h:
+../third_party/SDL/include/SDL_joystick.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan_core.h:
+../third_party/lua/include/lua.h:
+
+../third_party/SDL/include/SDL_mutex.h:
+
+../src/vk_device.cpp:
+
+../third_party/glm/glm/ext/scalar_constants.hpp:
+
+../third_party/SDL/include/SDL_sensor.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+../third_party/SDL/include/SDL_blendmode.h:
+
+/usr/include/c++/12/bits/atomic_wait.h:
+
+../third_party/SDL/include/SDL_gesture.h:
+
+/usr/include/c++/12/bits/unordered_set.h:
+
+/usr/include/vk_video/vulkan_video_codec_h264std.h:
+
+../src/uuid.h:
+
+../third_party/glm/glm/detail/func_matrix.inl:
+
+/usr/include/vk_video/vulkan_video_codecs_common.h:
+
+/usr/include/c++/12/bits/ranges_base.h:
+
+/usr/include/vk_video/vulkan_video_codec_h264std_encode.h:
+
+/usr/include/vk_video/vulkan_video_codec_h264std_decode.h:
+
+/usr/include/vk_video/vulkan_video_codec_h265std_decode.h:
+
+../src/camera.cpp:
+
+../third_party/vma/vk_mem_alloc.h:
+
+../src/deletion_queue.h:
+
+../third_party/SDL/include/SDL_clipboard.h:
+
+/usr/include/c++/12/functional:
+
+../third_party/SDL/include/SDL_gamecontroller.h:
+
+/usr/include/c++/12/bits/deque.tcc:
+
+/usr/include/c++/12/bits/std_function.h:
+
+/usr/include/c++/12/array:
+
+/usr/include/vk_video/vulkan_video_codec_av1std.h:
+
+/usr/include/c++/12/bits/stl_heap.h:
+
+../third_party/glm/glm/gtc/quaternion.hpp:
 
 /usr/include/string.h:
 
-../third_party/glm/glm/gtx/component_wise.hpp:
+/usr/include/c++/12/backward/binders.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/x86gprintrin.h:
+../third_party/SDL/include/SDL_timer.h:
 
 ../third_party/glm/glm/gtx/norm.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512ifmavlintrin.h:
 
 /usr/include/strings.h:
 
@@ -12445,204 +13552,132 @@ third_party/SDL/include/SDL2/close_code.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h:
 
-../third_party/glm/glm/gtx/component_wise.inl:
+../src/vk_window.h:
 
-/usr/include/c++/12/bits/concept_check.h:
+/usr/include/c++/12/bits/basic_ios.tcc:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/inttypes.h:
+../third_party/glm/glm/detail/_fixes.hpp:
 
-third_party/SDL/include/SDL2/SDL_joystick.h:
+../third_party/SDL/include/SDL_main.h:
 
-/usr/include/inttypes.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/clflushoptintrin.h:
+../third_party/SDL/include/SDL_atomic.h:
 
-third_party/SDL/include/SDL2/SDL_error.h:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
 
-/usr/include/time.h:
+../third_party/SDL/include/SDL_thread.h:
 
-third_party/SDL/include/SDL2/SDL_video.h:
+../third_party/imgui/imgui_impl_vulkan.h:
 
-third_party/SDL/include/SDL2/SDL_pixels.h:
+../third_party/SDL/include/SDL_quit.h:
 
-third_party/SDL/include/SDL2/SDL_rect.h:
+../third_party/SDL/include/SDL_cpuinfo.h:
 
-../third_party/glm/glm/gtc/matrix_transform.hpp:
+/usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h:
 
-third_party/SDL/include/SDL2/SDL_rwops.h:
+/usr/include/c++/12/stdlib.h:
 
-third_party/SDL/include/SDL2/SDL_surface.h:
+../third_party/glm/glm/detail/type_mat4x3.inl:
 
-/usr/include/c++/12/tr1/legendre_function.tcc:
+../third_party/SDL/include/SDL_filesystem.h:
 
-third_party/SDL/include/SDL2/SDL_mouse.h:
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
-/usr/include/c++/12/ctime:
+../third_party/SDL/include/SDL_haptic.h:
 
-third_party/SDL/include/SDL2/SDL_guid.h:
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
-../third_party/glm/glm/ext/matrix_double4x4_precision.hpp:
+/usr/include/c++/12/cwctype:
 
-third_party/SDL/include/SDL2/SDL_mutex.h:
+../third_party/SDL/include/SDL_hints.h:
+
+../third_party/SDL/include/SDL_hidapi.h:
+
+../third_party/SDL/include/SDL_shape.h:
+
+../third_party/SDL/include/SDL_system.h:
+
+../third_party/SDL/include/SDL_locale.h:
+
+../src/vk_swapchain.h:
+
+/usr/include/c++/12/bits/stl_tree.h:
+
+/usr/include/sched.h:
+
+/usr/include/c++/12/bits/stl_multiset.h:
+
+/usr/include/c++/12/shared_mutex:
+
+../third_party/glm/glm/ext/vector_relational.inl:
+
+../third_party/glm/glm/ext/quaternion_trigonometric.inl:
+
+/usr/include/errno.h:
+
+../third_party/glm/glm/fwd.hpp:
+
+/usr/include/c++/12/codecvt:
+
+/usr/include/c++/12/cfloat:
+
+../src/vk_engine.h:
+
+/usr/include/c++/12/concepts:
+
+../third_party/glm/glm/packing.hpp:
+
+../src/resource_manager.h:
+
+/usr/include/c++/12/pstl/execution_defs.h:
+
+../third_party/glm/glm/integer.hpp:
+
+../third_party/spirv_reflect/include/spirv.h:
+
+../third_party/glm/glm/ext/matrix_projection.inl:
 
 /usr/include/c++/12/bits/stl_map.h:
 
 ../third_party/glm/glm/ext/matrix_clip_space.inl:
 
-third_party/SDL/include/SDL2/SDL_gamecontroller.h:
+../third_party/glm/glm/ext/matrix_transform.hpp:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h:
+/usr/include/c++/12/bits/std_abs.h:
 
-third_party/SDL/include/SDL2/SDL_quit.h:
+/usr/include/c++/12/bits/char_traits.h:
 
-third_party/SDL/include/SDL2/SDL_gesture.h:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/usr/include/memory.h:
+../third_party/glm/glm/gtc/matrix_transform.inl:
 
-third_party/SDL/include/SDL2/SDL_system.h:
+../third_party/glm/glm/ext/quaternion_geometric.hpp:
 
-third_party/SDL/include/SDL2/SDL_touch.h:
+../third_party/glm/glm/ext/quaternion_float.hpp:
 
-third_party/SDL/include/SDL2/SDL_thread.h:
+/usr/include/c++/12/ext/numeric_traits.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vulkan/vulkan.h:
+../third_party/glm/glm/detail/type_quat.hpp:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/gfniintrin.h:
+../third_party/glm/glm/ext/quaternion_relational.hpp:
 
-../third_party/glm/glm/ext/matrix_float3x3_precision.hpp:
+../third_party/glm/glm/detail/type_quat.inl:
 
-../third_party/glm/glm/ext/matrix_float4x2_precision.hpp:
+../third_party/SDL/include/SDL_keyboard.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std.h:
+../third_party/glm/glm/ext/quaternion_float_precision.hpp:
 
-/usr/include/c++/12/bits/ranges_algo.h:
+../third_party/glm/glm/ext/quaternion_double_precision.hpp:
 
-/usr/lib/llvm-14/lib/clang/14.0.0/include/wmmintrin.h:
+../third_party/glm/glm/ext/quaternion_transform.inl:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_h264std_encode.h:
+../third_party/SDL/include/SDL_power.h:
 
-third_party/SDL/include/SDL2/SDL_main.h:
+/usr/include/c++/12/bits/localefwd.h:
 
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std.h:
+../third_party/glm/glm/ext/scalar_constants.inl:
 
-/usr/include/c++/12/bits/vector.tcc:
+../third_party/glm/glm/gtc/quaternion.inl:
 
-/usr/include/c++/12/tr1/hypergeometric.tcc:
-
-/home/gooby/vulkan/1.3.283.0/x86_64/include/vk_video/vulkan_video_codec_av1std_decode.h:
-
-../third_party/imgui/imconfig.h:
-
-third_party/SDL/include/SDL2/SDL_timer.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/immintrin.h:
-
-../src/camera.cpp:
-
-../third_party/vma/vk_mem_alloc.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/bmi2intrin.h:
-
-../src/deletion_queue.h:
-
-/usr/include/c++/12/functional:
-
-/usr/include/c++/12/bits/deque.tcc:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/uintrintrin.h:
-
-/usr/include/c++/12/bits/std_function.h:
-
-/usr/include/c++/12/array:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bwintrin.h:
-
-/usr/include/c++/12/bits/stl_heap.h:
-
-../src/vk_window.h:
-
-third_party/SDL/include/SDL2/SDL_assert.h:
-
-third_party/SDL/include/SDL2/SDL_atomic.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avxintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h:
-
-/usr/include/c++/12/bits/hashtable.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/tmmintrin.h:
-
-../third_party/glm/glm/ext/quaternion_trigonometric.inl:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/smmintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/__wmmintrin_aes.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/clwbintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/bmiintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx2intrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/f16cintrin.h:
-
-/usr/include/math.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlintrin.h:
-
-/usr/include/c++/12/list:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vpopcntdqvlintrin.h:
-
-/usr/include/c++/12/bits/fs_path.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512dqintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vlbwintrin.h:
-
-../third_party/glm/glm/ext/matrix_double4x2.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512vbmivlintrin.h:
-
-/usr/include/c++/12/tr1/beta_function.tcc:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512pfintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/avx512bf16intrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/include/c++/12/bits/charconv.h:
-
-/usr/include/c++/12/cstring:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/pkuintrin.h:
-
-../third_party/glm/glm/ext/matrix_float3x3.hpp:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/rtmintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/xtestintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/shaintrin.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/cetintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/rdseedintrin.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/wbnoinvdintrin.h:
+../third_party/glm/glm/gtc/epsilon.hpp:

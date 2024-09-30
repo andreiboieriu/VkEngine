@@ -9,15 +9,16 @@
 #include "vk_pipelines.h"
 #include "stb_image.h"
 #include "vk_initializers.h"
-#include "imgui.h"
+#include <imgui.h>
 
 Skybox::Skybox() {
     createPipelineLayout();
     createPipeline();
     createCubeMesh();
 
-    // load("assets/skybox/blue_nebula.hdr");
+    // load("assets/skybox/sunset_sky.hdr");
     load("assets/skybox/jupiter.hdr");
+    // load("assets/skybox/nebula-1.hdr");
 }
 
 Skybox::~Skybox() {
@@ -139,6 +140,15 @@ void Skybox::freeResources() {
     vkDestroyDescriptorSetLayout(VulkanEngine::get().getDevice(), mDescriptorSetLayout, nullptr);
     vkDestroyPipelineLayout(VulkanEngine::get().getDevice(), mPipelineLayout, nullptr);
     vkDestroyPipeline(VulkanEngine::get().getDevice(), mPipeline, nullptr);
+    vkDestroyPipeline(VulkanEngine::get().getDevice(), mEquiToCubePipeline, nullptr);
+    vkDestroyPipeline(VulkanEngine::get().getDevice(), mEnvToIrrPipeline, nullptr);
+    vkDestroyPipeline(VulkanEngine::get().getDevice(), mPrefilterEnvPipeline, nullptr);
+
+    VulkanEngine::get().destroyImage(mHDRImage);
+    VulkanEngine::get().destroyImage(mEnvMap);
+    VulkanEngine::get().destroyImage(mIrrMap);
+    VulkanEngine::get().destroyImage(mPrefilteredEnvMap);
+    VulkanEngine::get().destroyImage(mBrdfLut);
 }
 
 void Skybox::draw(VkCommandBuffer commandBuffer) {
@@ -148,7 +158,7 @@ void Skybox::draw(VkCommandBuffer commandBuffer) {
 
     // bind pipeline
     vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mPipeline);
-    
+
     // bind index buffer
     vkCmdBindIndexBuffer(commandBuffer, mCubeMesh.meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
 
@@ -230,7 +240,7 @@ void Skybox::renderToCubemap(AllocatedImage& src, AllocatedImage& dest, VkPipeli
 
     for (uint32_t i = 0; i < 6; i++) {
         captureConstants.projectionView = captureProjection * glm::mat4(glm::mat3(captureViews[i]));
-        
+
         // create cubemap face view
         VkImageView cubeFaceView;
 

@@ -1,72 +1,80 @@
-find_package(Vulkan REQUIRED)
+# import header only libs
 
-add_library(vkbootstrap STATIC)
-add_library(volk STATIC)
-add_library(spirv_reflect STATIC)
-add_library(glm INTERFACE)
-add_library(vma INTERFACE)
-add_library(entt INTERFACE)
+# stb image
 add_library(stb_image INTERFACE)
+target_include_directories(stb_image INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/stb_image")
 
-add_subdirectory(fastgltf)
-add_subdirectory(fmt EXCLUDE_FROM_ALL)
-add_subdirectory(SDL EXCLUDE_FROM_ALL)
+# vma
+add_library(vma INTERFACE)
+target_compile_options(vma INTERFACE "-w")
+target_include_directories(vma INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/vma")
 
-target_sources(vkbootstrap PRIVATE 
-  vkbootstrap/VkBootstrap.h
-  vkbootstrap/VkBootstrap.cpp
-  )
+# nlohmann
+add_library(nlohmann INTERFACE)
+target_include_directories(nlohmann INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/nlohmann/include")
 
-target_include_directories(vkbootstrap PUBLIC vkbootstrap)
-target_link_libraries(vkbootstrap PUBLIC Vulkan::Vulkan $<$<BOOL:UNIX>:${CMAKE_DL_LIBS}>)
-set_property(TARGET vkbootstrap PROPERTY CXX_STANDARD 20)
+# glm
+add_library(glm INTERFACE)
+target_include_directories(glm INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/glm")
 
-target_sources(volk PRIVATE
-  volk/volk.h
-  volk/volk.c
-  )
+# entt
+add_library(entt INTERFACE)
+target_include_directories(entt INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/entt")
 
-target_include_directories(volk PUBLIC volk)
-# target_link_libraries(volk PUBLIC volk)
-set_property(TARGET volk PROPERTY CXX_STANDARD 20)
+# sol2
+add_library(sol2 INTERFACE)
+target_include_directories(sol2 INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/sol2/include")
 
-target_sources(spirv_reflect PRIVATE
-  spirv_reflect/spirv_reflect.h
-  spirv_reflect/spirv_reflect.c
-)
+# import pre-built libs
 
-target_include_directories(spirv_reflect PUBLIC spirv_reflect)
+# volk
+add_library(volk STATIC IMPORTED GLOBAL)
+set_target_properties(volk PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/volk/libvolk.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/volk")
 
-#both vma and glm and header only libs so we only need the include path
-target_include_directories(vma INTERFACE vma)
+# vkbootstrap
+add_library(vkbootstrap STATIC IMPORTED GLOBAL)
+set_target_properties(vkbootstrap PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/vkbootstrap/libvkbootstrap.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/vkbootstrap")
+# target_link_libraries(vkbootstrap PUBLIC Vulkan::Vulkan $<$<BOOL:UNIX>:${CMAKE_DL_LIBS}>)
+target_link_libraries(vkbootstrap INTERFACE volk)
 
-target_include_directories(glm INTERFACE glm)
-target_include_directories(entt INTERFACE entt)
+# fmt
+add_library(fmt STATIC IMPORTED GLOBAL)
+set_target_properties(fmt PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/fmt/libfmt.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/fmt/include")
 
+# sdl
+add_library(SDL2 STATIC IMPORTED GLOBAL)
+set_target_properties(SDL2 PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/SDL/libSDL2.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/SDL/include")
 
-#add_library(sdl2 INTERFACE)
+# imgui
+add_library(imgui STATIC IMPORTED GLOBAL)
+set_target_properties(imgui PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/imgui/libimgui.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/imgui")
 
-#target_include_directories(sdl2 INTERFACE $ENV{VULKAN_SDK}/Include/SDL2 )
-#target_link_directories(sdl2 INTERFACE $ENV{VULKAN_SDK}/Lib )
+target_link_libraries(imgui INTERFACE volk SDL2)
 
-#target_link_libraries(sdl2 INTERFACE SDL2 SDL2main)
+# fastgltf
+add_library(fastgltf STATIC IMPORTED GLOBAL)
+set_target_properties(fastgltf PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/fastgltf/libfastgltf.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/fastgltf/include")
 
-add_library(imgui STATIC)
+# spirv_reflect
+add_library(spirv_reflect STATIC IMPORTED GLOBAL)
+set_target_properties(spirv_reflect PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/spirv_reflect/libspirv_reflect.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/spirv_reflect/include")
 
-target_include_directories(imgui PUBLIC imgui)
-
-target_sources(imgui PRIVATE 
-  imgui/imgui.h
-  imgui/imgui.cpp
-
-  imgui/imgui_demo.cpp
-  imgui/imgui_draw.cpp
-  imgui/imgui_widgets.cpp
-  imgui/imgui_tables.cpp
-  imgui/imgui_impl_vulkan.cpp
-  imgui/imgui_impl_sdl2.cpp
-  )
-
-target_link_libraries(imgui PUBLIC volk SDL2::SDL2)
-
-target_include_directories(stb_image INTERFACE stb_image)
+# lua
+add_library(lua STATIC IMPORTED GLOBAL)
+set_target_properties(lua PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/lua/liblua.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/lua/include")

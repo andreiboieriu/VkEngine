@@ -1,11 +1,18 @@
 #pragma once
 
+#include "uuid.h"
+#include "entity.h"
+
 #include "deletion_queue.h"
 #include "vk_types.h"
-#include "camera.h"
-#include "vk_loader.h"
 #include "skybox.h"
-#include "scene_node.h"
+#include <nlohmann/json.hpp>
+#include "entt.hpp"
+#include "vk_window.h"
+#include "script_manager.h"
+
+class Entity;
+class UUID;
 
 class Scene3D {
 
@@ -21,11 +28,11 @@ public:
         glm::vec4 viewPosition;
         glm::vec4 data;
     };
-    
+
     Scene3D(const std::string& name);
     ~Scene3D();
 
-    void update(float dt, float aspectRatio, const UserInput& userInput);
+    void update(float dt, float aspectRatio, const UserInput& userInput, RenderContext& renderContext, bool isCursorLocked);
     void drawGui();
 
     void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
@@ -35,10 +42,24 @@ public:
             mSkybox->draw(commandBuffer);
     }
 
-    const glm::mat4 getViewProj() {
-        return mCamera.getProjectionMatrix() * mCamera.getViewMatrix();
+    const glm::mat4 getViewProj();
+    void saveToFile();
+
+    void loadFromFile(std::filesystem::path filePath);
+    nlohmann::json toJson();
+
+    Entity& createEntity(const UUID& name = UUID());
+    Entity& getEntity(const UUID& name);
+    void destroyEntity(const UUID& name);
+
+    // systems
+    void propagateTransform();
+    void cleanupEntities();
+
+    const UserInput& getUserInput() {
+        return mUserInput;
     }
-    
+
 private:
     void init();
     void freeResources();
@@ -50,15 +71,19 @@ private:
     VkDeviceSize mGlobalDescriptorOffset;
 
     SceneData mSceneData;
-    
-	Camera mCamera;
 
     std::string mName;
     std::unique_ptr<Skybox> mSkybox = nullptr;
+    std::unique_ptr<ScriptManager> mScriptManager = nullptr;
 
-    std::vector<std::shared_ptr<SceneNode>> mTopNodes;
+    entt::registry mRegistry;
 
-    int mCurrNodeId = 0;
+    UserInput mUserInput;
 
-    bool enableNormalMapping = false;
+    std::vector<UUID> mRootEntityUUIDs; // has to be declared before entity map
+    std::unordered_map<UUID, std::unique_ptr<Entity>> mEntityMap;
+    UUID mMainCameraHolder = UUID::null();
+
+    friend class Entity;
+    friend class Script;
 };

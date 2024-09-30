@@ -2,7 +2,7 @@
 #include "vk_types.h"
 #include "vk_window.h"
 
-class Camera {
+class EditorCamera {
 public:
 
     glm::mat4 getViewMatrix();

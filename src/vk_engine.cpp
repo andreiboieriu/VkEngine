@@ -23,7 +23,7 @@
 #include <memory>
 #include <SDL_vulkan.h>
 #include "SDL_video.h"
-#include "fmt/core.h"
+#include <fmt/core.h>
 #include "vk_descriptors.h"
 #include "vk_initializers.h"
 #include "vk_materials.h"
@@ -33,9 +33,9 @@
 
 #include "VkBootstrap.h"
 
-#include "imgui.h"
-#include "imgui_impl_sdl2.h"
-#include "imgui_impl_vulkan.h"
+#include <imgui.h>
+#include <imgui_impl_sdl2.h>
+#include <imgui_impl_vulkan.h>
 
 #include "stb_image.h"
 #include <chrono>
@@ -46,8 +46,6 @@
 #include "compute_effects/compute_effect.h"
 
 VulkanEngine* gLoadedEngine = nullptr;
-
-entt::registry gRegistry;
 
 VulkanEngine& VulkanEngine::get() { 
     return *gLoadedEngine;
@@ -1121,19 +1119,8 @@ void VulkanEngine::drawGui() {
     ImGui_ImplSDL2_NewFrame();
     ImGui::NewFrame();
 
-    ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
 
-    if (ImGui::Begin("Engine Config", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
-        ImGui::Checkbox("Enable frustum culling", &mEngineConfig.enableFrustumCulling);
-        ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
-        ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
 
-        mBloomEffect->drawGui();
-        mToneMappingEffect->drawGui();
-        mFxaaEffect->drawGui();
-    }
-
-    ImGui::End();
 
     ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
 
@@ -1145,11 +1132,25 @@ void VulkanEngine::drawGui() {
         ImGui::Text("draw geometry time %f ms", mStats.drawGeometryTime);
         ImGui::Text("triangles %i", mStats.triangleCount);
         ImGui::Text("draws %i", mStats.drawCallCount);
+        ImGui::End();
     }
 
-    ImGui::End();
 
-    mScene->drawGui();
+    if (!mWindow->isCursorLocked()) {
+        ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
+
+        if (ImGui::Begin("Engine Config", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+            ImGui::Checkbox("Enable frustum culling", &mEngineConfig.enableFrustumCulling);
+            ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
+            ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
+
+            mBloomEffect->drawGui();
+            mToneMappingEffect->drawGui();
+            mFxaaEffect->drawGui();
+            ImGui::End();
+        }
+        mScene->drawGui();
+    }
 
     // render ImGui
     ImGui::Render();
@@ -1477,11 +1478,7 @@ void VulkanEngine::updateScene(float dt, const UserInput& userInput) {
     mMainRenderContext.opaqueObjects.clear();
     mMainRenderContext.transparentObjects.clear();
 
-    mScene->update(dt, mWindow->getAspectRatio(), userInput);
-    // mScene->draw(mMainRenderContext);
-
-    velocitySystem(dt);
-    renderSystem(mMainRenderContext);
+    mScene->update(dt, mWindow->getAspectRatio(), userInput, mMainRenderContext, mWindow->isCursorLocked());
 
     // get end time
     auto end = std::chrono::system_clock::now();

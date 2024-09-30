@@ -9,16 +9,16 @@
 
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "imgui.h"
+#include <imgui.h>
 
-glm::mat4 Camera::getViewMatrix() {
+glm::mat4 EditorCamera::getViewMatrix() {
     glm::mat4 cameraTranslation = glm::translate(glm::mat4(1.f), mPosition);
     glm::mat4 cameraRotation = getRotationMatrix();
 
     return glm::inverse(cameraTranslation * cameraRotation);
 }
 
-glm::mat4 Camera::getProjectionMatrix() {
+glm::mat4 EditorCamera::getProjectionMatrix() {
     // invert far and near
     glm::mat4 projection = glm::perspective(glm::radians(mFov), mAspectRatio, mFar, mNear);
 
@@ -27,14 +27,14 @@ glm::mat4 Camera::getProjectionMatrix() {
     return projection;
 }
 
-glm::mat4 Camera::getRotationMatrix() {
+glm::mat4 EditorCamera::getRotationMatrix() {
     glm::quat pitchRotation = glm::angleAxis(glm::radians(mPitch), glm::vec3(1.0f, 0.0f, 0.0f));
     glm::quat yawRotation = glm::angleAxis(glm::radians(mYaw), glm::vec3(0.0f, -1.0f, 0.0f));
 
     return glm::toMat4(yawRotation) * glm::toMat4(pitchRotation);
 }
 
-void Camera::update(float dt, float aspectRatio, const UserInput& userInput) {
+void EditorCamera::update(float dt, float aspectRatio, const UserInput& userInput) {
     if (!userInput.GuiMode) {
         if (userInput.pressedKeys.contains(SDLK_w)) {
             mVelocity.z = -1;
@@ -82,7 +82,7 @@ void Camera::update(float dt, float aspectRatio, const UserInput& userInput) {
     mAspectRatio = aspectRatio;
 }
 
-void Camera::drawGui() {
+void EditorCamera::drawGui() {
     if (ImGui::TreeNode("Camera")) {
         ImGui::PushItemWidth(60);
         ImGui::InputFloat("speed", &mSpeed);

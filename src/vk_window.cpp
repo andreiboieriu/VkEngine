@@ -1,7 +1,7 @@
 #include "vk_window.h"
 
 #include <SDL_vulkan.h>
-#include "imgui_impl_sdl2.h"
+#include <imgui_impl_sdl2.h>
 #include "vk_engine.h"
 
 Window::Window(std::string_view name, VkExtent2D extent, SDL_WindowFlags windowFlags) : mName(name), mExtent(extent) {
@@ -105,6 +105,9 @@ UserInput Window::processSDLEvents() {
         // send SDL event to imgui
         ImGui_ImplSDL2_ProcessEvent(&e);
     }
+
+
+    memcpy(userInput.keyboardState, SDL_GetKeyboardState(nullptr), 512 * sizeof(Uint8));
 
     // toggle locked cursor
     if (userInput.pressedKeys.contains(SDLK_ESCAPE)) {

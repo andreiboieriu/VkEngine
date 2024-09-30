@@ -8,7 +8,7 @@
 #include "vk_images.h"
 #include "vk_pipelines.h"
 #include "vk_initializers.h"
-#include "imgui.h"
+#include <imgui.h>
 
 struct SpirvFile {
     std::vector<uint32_t> code;

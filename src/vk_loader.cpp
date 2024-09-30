@@ -8,7 +8,7 @@
 
 #include "volk.h"
 #include "stb_image.h"
-#include "fmt/core.h"
+#include <fmt/core.h>
 #include <filesystem>
 #include <memory>
 #include <string_view>
@@ -209,12 +209,21 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
             passType = MaterialPass::Transparent;
         }
 
+        if (material.doubleSided) {
+            fmt::println("Double sided");
+            if (passType == MaterialPass::Opaque) {
+                passType = MaterialPass::OpaqueDoubleSided;
+            } else {
+                passType = MaterialPass::TransparentDoubleSided;
+            }
+        }
+
         MaterialResources materialResources;
 
         // default material textures
         materialResources.colorImage = VulkanEngine::get().getWhiteTexture();
         materialResources.colorSampler = VulkanEngine::get().getDefaultLinearSampler();
-        materialResources.metalRoughImage = VulkanEngine::get().getWhiteTexture();
+        materialResources.metalRoughImage = VulkanEngine::get().getBlackTexture();
         materialResources.metalRoughSampler = VulkanEngine::get().getDefaultLinearSampler();
         materialResources.normalImage = VulkanEngine::get().getDefaultNormalMap();
         materialResources.normalSampler = VulkanEngine::get().getDefaultLinearSampler();

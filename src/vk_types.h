@@ -69,6 +69,8 @@ struct GPUDrawPushConstants {
 enum class MaterialPass : uint8_t {
     Opaque,
     Transparent,
+    OpaqueDoubleSided,
+    TransparentDoubleSided,
     Other
 };
 

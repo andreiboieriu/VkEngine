@@ -6,7 +6,7 @@
 
 class MaterialManager {
 public:
-    
+
     MaterialManager();
     ~MaterialManager();
 
@@ -26,7 +26,9 @@ private:
 
 
     DescriptorWriter mDescriptorWriter;
+    MaterialPipeline mOpaquePipelineCulled;
     MaterialPipeline mOpaquePipeline;
+    MaterialPipeline mTransparentPipelineCulled;
     MaterialPipeline mTransparentPipeline;
 
     VkDescriptorSetLayout mMaterialDescriptorLayout;

@@ -3,6 +3,7 @@
 #include "volk.h"
 #include "vk_types.h"
 #include <span>
+#include <string>
 
 #include "spirv_reflect.h"
 

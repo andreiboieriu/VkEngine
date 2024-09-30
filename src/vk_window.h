@@ -11,6 +11,7 @@
 struct UserInput {
     std::set<SDL_Keycode> pressedKeys;
     std::set<SDL_Keycode> releasedKeys;
+    Uint8 keyboardState[SDL_NUM_SCANCODES];
     float mouseXRel;
     float mouseYRel;
     float mouseWheel;
@@ -67,6 +68,10 @@ public:
 
     struct SDL_Window* getHandle() {
         return mHandle;
+    }
+
+    bool isCursorLocked() {
+        return mLockedCursor;
     }
 
 private:
