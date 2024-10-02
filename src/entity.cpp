@@ -108,13 +108,7 @@ void Entity::propagateTransform(const glm::mat4& parentMatrix) {
     if (hasComponent<Transform>()) {
         Transform& transform = getComponent<Transform>();
 
-        // transform.localMatrix = glm::mat4(1.f);
-        transform.localMatrix = glm::translate(glm::mat4(1.f), transform.position) *
-                                transform.getRotationMatrix() *
-                                glm::scale(glm::mat4(1.f), transform.scale);
-
-        // apply parent matrix
-        transform.globalMatrix = parentMatrix * transform.localMatrix;
+        transform.update(parentMatrix);
         globalMatrix = transform.globalMatrix;
     }
 

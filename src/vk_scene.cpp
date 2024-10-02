@@ -33,7 +33,7 @@ Scene3D::Scene3D(const std::string& name) : mName(name) {
 
     asteroid.getComponent<Transform>().position = glm::vec3(0.f, 0.f, -2.0f);
 
-    asteroid.bindGLTF("asteroid");
+    asteroid.bindGLTF("fighter_spaceship");
 
     mScriptManager->loadScript("scripts/script.lua");
     mScriptManager->bindScript("scripts/script.lua", asteroid);
@@ -114,25 +114,33 @@ void Scene3D::propagateTransform() {
     }
 }
 
-void Scene3D::update(float dt, float aspectRatio, const UserInput& userInput, RenderContext& renderContext, bool isCursorLocked) {
-    mUserInput = userInput;
+void Scene3D::render(RenderContext& renderContext) {
+    auto view = mRegistry.view<Transform, GLTF>();
 
+    for (auto [entity, transform, gltf] : view.each()) {
+        if (gltf.gltf == nullptr) {
+            continue;
+        }
+
+        gltf.gltf->draw(transform.globalMatrix, renderContext);
+    }
+}
+
+void Scene3D::update() {
     // systems
+    mScriptManager->update();
+
+    // mScriptManager->onDestroy();
     cleanupEntities();
 
-    if (isCursorLocked) {
-        // scriptSystemUpdate(dt, mRegistry);
-        // scriptSystemLateUpdate(dt, mRegistry);
-        mScriptManager->onUpdate(dt);
-    }
+    mScriptManager->onUpdate();
 
     propagateTransform();
-    renderSystem(renderContext, mRegistry);
 
     Camera& camera = mEntityMap[mMainCameraHolder]->getComponent<Camera>();
     Transform& cameraTransform = mEntityMap[mMainCameraHolder]->getComponent<Transform>();
 
-    camera.aspectRatio = aspectRatio;
+    camera.aspectRatio = VulkanEngine::get().getWindowAspectRatio();
     camera.updateMatrices(cameraTransform);
 
     mSceneData.view = camera.viewMatrix;

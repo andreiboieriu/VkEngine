@@ -508,6 +508,10 @@ src/CMakeFiles/engine.dir/entity.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../exponential.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../ext/vector_relational.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.inl \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp \
+  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/../glm.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cfloat \
@@ -543,9 +547,6 @@ src/CMakeFiles/engine.dir/entity.cpp.o: \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../gtc/../ext/quaternion_relational.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../gtc/../ext/quaternion_geometric.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../gtc/../ext/quaternion_trigonometric.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp \
-  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../gtc/../ext/quaternion_transform.hpp \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.inl \
   /home/gooby/Development/VkEngine/third_party/glm/glm/ext/../detail/../gtc/../detail/type_mat3x3.hpp \

@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <entt.hpp>
 #include "entity.h"
+#include "vk_window.h"
 
 class ScriptManager {
 
@@ -16,7 +17,12 @@ public:
     void loadScript(const std::string& filePath);
     void bindScript(const std::string& scriptName, Entity& entity);
 
-    void onUpdate(float dt);
+    void update();
+
+    void onStart();
+    void onUpdate();
+    void onLateUpdate();
+    void onDestroy();
 
 private:
 
@@ -32,6 +38,7 @@ private:
     inline static bool mIsInitialized = false;
 
     entt::registry& mRegistry;
+    const Input& mInput;
 
     std::unordered_map<std::string, ScriptData> mLoadedScripts;
 };

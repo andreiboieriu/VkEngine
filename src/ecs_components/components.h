@@ -1,6 +1,7 @@
 #pragma once
 
 #include "glm/ext/quaternion_float.hpp"
+#include "glm/ext/quaternion_trigonometric.hpp"
 #include "glm/ext/vector_float3.hpp"
 #include "glm/gtx/quaternion.hpp"
 #include "vk_loader.h"
@@ -22,16 +23,30 @@ struct Transform {
     glm::mat4 localMatrix{1.f};
     glm::mat4 globalMatrix{1.f};
 
+    glm::vec3 forward;
+    glm::vec3 right;
+
     glm::mat4 getRotationMatrix() {
         return glm::toMat4(glm::normalize(rotation));
     }
 
-    glm::vec3 getForward() {
-        return glm::normalize(glm::rotate(glm::normalize(rotation), glm::vec3(0.f, 0.f, 1.f)));
+    void update(glm::mat4 parentMatrix) {
+        localMatrix = glm::translate(glm::mat4(1.f), position) *
+                      getRotationMatrix() *
+                      glm::scale(glm::mat4(1.f), scale);
+
+        globalMatrix = parentMatrix * localMatrix;
+
+        forward = glm::normalize(glm::rotate(glm::normalize(rotation), glm::vec3(0.f, 0.f, 1.f)));
+        right = glm::normalize(glm::rotate(glm::normalize(rotation), glm::vec3(1.f, 0.f, 0.f)));
     }
 
-    glm::vec3 getRight() {
-        return glm::normalize(glm::rotate(glm::normalize(rotation), glm::vec3(1.f, 0.f, 0.f)));
+    void translate(glm::vec3 direction, float distance) {
+        position += direction * distance;
+    }
+
+    void rotate(glm::vec3 axis, float degrees) {
+        rotation *= glm::angleAxis(glm::radians(degrees), axis);
     }
 
     Transform() {}

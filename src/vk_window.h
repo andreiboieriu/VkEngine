@@ -3,19 +3,26 @@
 #include <string_view>
 
 #include <SDL.h>
+#include "glm/ext/vector_int2.hpp"
 #include "volk.h"
 
 #include "vk_swapchain.h"
 #include <set>
 
-struct UserInput {
+struct MouseInput {
+    glm::ivec2 motion;
+    glm::ivec2 position;
+    float deltaWheel;
+    std::set<Uint8> pressedButtons;
+    std::set<Uint8> releasedButtons;
+    Uint32 state;
+};
+
+struct Input {
     std::set<SDL_Keycode> pressedKeys;
     std::set<SDL_Keycode> releasedKeys;
     Uint8 keyboardState[SDL_NUM_SCANCODES];
-    float mouseXRel;
-    float mouseYRel;
-    float mouseWheel;
-    bool GuiMode;
+    MouseInput mouse;
 };
 
 class Window {
@@ -60,7 +67,7 @@ public:
 
     void presentSwapchainImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore);
 
-    UserInput processSDLEvents();
+    void processSDLEvents();
 
     void toggleLockedCursor();
 
@@ -72,6 +79,10 @@ public:
 
     bool isCursorLocked() {
         return mLockedCursor;
+    }
+
+    const Input& getInput() {
+        return mInput;
     }
 
 private:
@@ -89,6 +100,7 @@ private:
     VkSurfaceKHR mSurface = VK_NULL_HANDLE;
 
 	std::unique_ptr<Swapchain> mSwapchain = nullptr;
+	Input mInput;
 
     bool mShouldResize = false;
     bool mShouldClose = false;

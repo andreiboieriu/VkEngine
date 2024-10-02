@@ -14,8 +14,8 @@ ResourceManager::~ResourceManager() {
 void ResourceManager::loadResources() {
     // mLoadedGltfs["hull_spaceship"] = std::make_shared<LoadedGLTF>("assets/hull_spaceship.glb");
     // mLoadedGltfs["sci_fi_hangar"] = std::make_shared<LoadedGLTF>("assets/sci_fi_hangar.glb");
-    // mLoadedGltfs["fighter_spaceship"] = std::make_shared<LoadedGLTF>("assets/fighter_spaceship.glb");
-    mLoadedGltfs["asteroid"] = std::make_shared<LoadedGLTF>("assets/asteroid2.glb");
+    mLoadedGltfs["fighter_spaceship"] = std::make_shared<LoadedGLTF>("assets/fighter_spaceship.glb");
+    // mLoadedGltfs["asteroid"] = std::make_shared<LoadedGLTF>("assets/asteroid2.glb");
 }
 
 void ResourceManager::freeResources() {

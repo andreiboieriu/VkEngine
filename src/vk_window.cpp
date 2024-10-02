@@ -1,7 +1,11 @@
 #include "vk_window.h"
 
+#include <SDL_events.h>
+#include <SDL_keycode.h>
+#include <SDL_mouse.h>
 #include <SDL_vulkan.h>
 #include <imgui_impl_sdl2.h>
+#include <vulkan/vulkan_core.h>
 #include "vk_engine.h"
 
 Window::Window(std::string_view name, VkExtent2D extent, SDL_WindowFlags windowFlags) : mName(name), mExtent(extent) {
@@ -22,7 +26,7 @@ void Window::init(SDL_WindowFlags windowFlags) {
     SDL_Init(SDL_INIT_VIDEO);
 
     int displays = SDL_GetNumVideoDisplays();
-    
+
     if (displays == 1) {
         mHandle = SDL_CreateWindow(
         mName.c_str(),
@@ -53,7 +57,8 @@ void Window::init(SDL_WindowFlags windowFlags) {
 }
 
 void Window::createSwapchain() {
-    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_FIFO_KHR, mSurface);
+    // mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_FIFO_KHR, mSurface);
+    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_MAILBOX_KHR, mSurface);
 }
 
 VkSurfaceKHR Window::getSurface() {
@@ -64,10 +69,11 @@ VkSurfaceKHR Window::getSurface() {
     return mSurface;
 }
 
-UserInput Window::processSDLEvents() {
+void Window::processSDLEvents() {
     SDL_Event e;
 
-    UserInput userInput{};
+    // clear previous input
+    mInput = Input{};
 
     // Handle events on queue
     while (SDL_PollEvent(&e) != 0) {
@@ -75,27 +81,35 @@ UserInput Window::processSDLEvents() {
         // close the window when user alt-f4s or clicks the X button
         case SDL_QUIT:
             mShouldClose = true;
-            return userInput;
+            return;
 
         case SDL_WINDOWEVENT:
             handleWindowEvent((SDL_WindowEventID)e.window.event);
             break;
 
         case SDL_KEYDOWN:
-            userInput.pressedKeys.insert(e.key.keysym.sym);
+            mInput.pressedKeys.insert(e.key.keysym.sym);
             break;
 
         case SDL_KEYUP:
-            userInput.releasedKeys.insert(e.key.keysym.sym);
+            mInput.releasedKeys.insert(e.key.keysym.sym);
             break;
 
         case SDL_MOUSEMOTION:
-            userInput.mouseXRel = e.motion.xrel;
-            userInput.mouseYRel = e.motion.yrel;
+            mInput.mouse.motion.x = e.motion.xrel;
+            mInput.mouse.motion.y = e.motion.yrel;
+            break;
+
+        case SDL_MOUSEBUTTONUP:
+            mInput.mouse.releasedButtons.insert(e.button.button);
+            break;
+
+        case SDL_MOUSEBUTTONDOWN:
+            mInput.mouse.pressedButtons.insert(e.button.button);
             break;
 
         case SDL_MOUSEWHEEL:
-            userInput.mouseWheel = e.wheel.preciseY;
+            mInput.mouse.deltaWheel = e.wheel.preciseY;
             break;
 
         default:
@@ -106,17 +120,11 @@ UserInput Window::processSDLEvents() {
         ImGui_ImplSDL2_ProcessEvent(&e);
     }
 
+    // copy keyboard state
+    memcpy(mInput.keyboardState, SDL_GetKeyboardState(nullptr), 512 * sizeof(Uint8));
 
-    memcpy(userInput.keyboardState, SDL_GetKeyboardState(nullptr), 512 * sizeof(Uint8));
-
-    // toggle locked cursor
-    if (userInput.pressedKeys.contains(SDLK_ESCAPE)) {
-        toggleLockedCursor();
-    }
-
-    userInput.GuiMode = !mLockedCursor;
-
-    return userInput;
+    // get mouse state
+    mInput.mouse.state = SDL_GetMouseState(&mInput.mouse.position.x, &mInput.mouse.position.y);
 }
 
 void Window::handleWindowEvent(SDL_WindowEventID event) {

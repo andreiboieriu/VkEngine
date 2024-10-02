@@ -13,7 +13,7 @@ public:
         return mPosition;
     }
 
-    void update(float dt, float aspectRatio, const UserInput& userInput);
+    void update(float dt, float aspectRatio);
 
     void drawGui();
 

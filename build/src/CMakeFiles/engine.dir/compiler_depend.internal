@@ -2469,6 +2469,10 @@ src/CMakeFiles/engine.dir/ecs_components/components.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.inl
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp
  /usr/include/c++/12/cfloat
@@ -2504,9 +2508,6 @@ src/CMakeFiles/engine.dir/ecs_components/components.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_relational.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_mat3x3.hpp
@@ -3187,6 +3188,10 @@ src/CMakeFiles/engine.dir/entity.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.inl
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp
  /usr/include/c++/12/cfloat
@@ -3222,9 +3227,6 @@ src/CMakeFiles/engine.dir/entity.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_relational.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_mat3x3.hpp
@@ -5033,6 +5035,76 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o
  /usr/include/c++/12/pstl/glue_numeric_defs.h
  /usr/include/c++/12/any
  /home/gooby/Development/VkEngine/src/uuid.h
+ /home/gooby/Development/VkEngine/src/vk_window.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_main.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_stdinc.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_config.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_platform.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/begin_code.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/close_code.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_config_minimal.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_assert.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_atomic.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_audio.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_error.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_endian.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_mutex.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_thread.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_rwops.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_clipboard.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_cpuinfo.h
+ /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h
+ /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h
+ /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h
+ /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_events.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_video.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_pixels.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_rect.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_surface.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_blendmode.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_keyboard.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_keycode.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_scancode.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_mouse.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_joystick.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_guid.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_gamecontroller.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_sensor.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_quit.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_gesture.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_touch.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_filesystem.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_haptic.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_hidapi.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_hints.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_loadso.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_log.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_messagebox.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_metal.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_power.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_render.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_shape.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_system.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_timer.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_version.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_locale.h
+ /home/gooby/Development/VkEngine/third_party/SDL/include/SDL_misc.h
+ /home/gooby/Development/VkEngine/third_party/volk/volk.h
+ /usr/include/vulkan/vulkan.h
+ /usr/include/vulkan/vk_platform.h
+ /usr/include/vulkan/vulkan_core.h
+ /usr/include/vk_video/vulkan_video_codec_h264std.h
+ /usr/include/vk_video/vulkan_video_codecs_common.h
+ /usr/include/vk_video/vulkan_video_codec_h264std_encode.h
+ /usr/include/vk_video/vulkan_video_codec_h265std.h
+ /usr/include/vk_video/vulkan_video_codec_h265std_encode.h
+ /usr/include/vk_video/vulkan_video_codec_h264std_decode.h
+ /usr/include/vk_video/vulkan_video_codec_h265std_decode.h
+ /usr/include/vk_video/vulkan_video_codec_av1std.h
+ /usr/include/vk_video/vulkan_video_codec_av1std_decode.h
+ /home/gooby/Development/VkEngine/src/vk_swapchain.h
  /home/gooby/Development/VkEngine/src/ecs_components/components.h
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_float.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_quat.hpp
@@ -5080,6 +5152,10 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.inl
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp
  /usr/include/c++/12/cfloat
@@ -5115,9 +5191,6 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_relational.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_mat3x3.hpp
@@ -5145,19 +5218,6 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.inl
  /home/gooby/Development/VkEngine/src/vk_loader.h
  /home/gooby/Development/VkEngine/src/vk_types.h
- /home/gooby/Development/VkEngine/third_party/volk/volk.h
- /usr/include/vulkan/vulkan.h
- /usr/include/vulkan/vk_platform.h
- /usr/include/vulkan/vulkan_core.h
- /usr/include/vk_video/vulkan_video_codec_h264std.h
- /usr/include/vk_video/vulkan_video_codecs_common.h
- /usr/include/vk_video/vulkan_video_codec_h264std_encode.h
- /usr/include/vk_video/vulkan_video_codec_h265std.h
- /usr/include/vk_video/vulkan_video_codec_h265std_encode.h
- /usr/include/vk_video/vulkan_video_codec_h264std_decode.h
- /usr/include/vk_video/vulkan_video_codec_h265std_decode.h
- /usr/include/vk_video/vulkan_video_codec_av1std.h
- /usr/include/vk_video/vulkan_video_codec_av1std_decode.h
  /home/gooby/Development/VkEngine/third_party/vma/vk_mem_alloc.h
  /home/gooby/Development/VkEngine/src/deletion_queue.h
  /home/gooby/Development/VkEngine/src/vk_enum_string_helper.h
@@ -5172,6 +5232,16 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o
  /home/gooby/Development/VkEngine/third_party/fastgltf/include/fastgltf/math.hpp
  /usr/include/c++/12/memory_resource
  /usr/include/c++/12/shared_mutex
+ /home/gooby/Development/VkEngine/src/vk_engine.h
+ /home/gooby/Development/VkEngine/src/compute_effects/compute_effect.h
+ /home/gooby/Development/VkEngine/third_party/spirv_reflect/include/spirv_reflect.h
+ /home/gooby/Development/VkEngine/third_party/spirv_reflect/include/spirv.h
+ /home/gooby/Development/VkEngine/src/vk_materials.h
+ /home/gooby/Development/VkEngine/src/vk_descriptors.h
+ /home/gooby/Development/VkEngine/src/vk_scene.h
+ /home/gooby/Development/VkEngine/src/skybox.h
+ /home/gooby/Development/VkEngine/src/resource_manager.h
+ /usr/include/memory.h
 
 src/CMakeFiles/engine.dir/skybox.cpp.o
  /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
@@ -7423,87 +7493,6 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o
  /usr/include/x86_64-linux-gnu/sys/time.h
  /usr/include/semaphore.h
  /usr/include/x86_64-linux-gnu/bits/semaphore.h
- /home/gooby/Development/VkEngine/src/ecs_systems/systems.h
- /home/gooby/Development/VkEngine/src/ecs_components/components.h
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_float.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_quat.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_mat3x3.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_mat4x4.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_vec3.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_vec4.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/qualifier.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_float.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_relational.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/constants.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/matrix_transform.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/mat4x4.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/vec2.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/vec3.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/vec4.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_projection.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_projection.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_clip_space.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/matrix_transform.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/matrix_transform.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/geometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/matrix.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_quat.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/trigonometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/constants.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/quaternion.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/constants.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/matrix_transform.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_common.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_common.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_float.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_float_precision.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_double.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_double_precision.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_mat3x3.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_mat4x4.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_vec3.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_vec4.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/quaternion.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/epsilon.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/setup.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/qualifier.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtc/epsilon.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/common.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_exponential.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_exponential.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/norm.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/geometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/component_wise.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/setup.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/detail/qualifier.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/component_wise.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/norm.inl
- /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.inl
 
 src/CMakeFiles/engine.dir/vk_images.cpp.o
  /home/gooby/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
@@ -11045,6 +11034,10 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/exponential.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.inl
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
+ /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/gtx/quaternion.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/glm.hpp
  /usr/include/c++/12/cfloat
@@ -11080,9 +11073,6 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_relational.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_geometric.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/scalar_constants.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/vector_relational.hpp
- /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_trigonometric.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.hpp
  /home/gooby/Development/VkEngine/third_party/glm/glm/ext/quaternion_transform.inl
  /home/gooby/Development/VkEngine/third_party/glm/glm/detail/type_mat3x3.hpp

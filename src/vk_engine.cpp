@@ -41,13 +41,11 @@
 #include <chrono>
 #include <thread>
 
-#include "ecs_systems/systems.h"
-
 #include "compute_effects/compute_effect.h"
 
 VulkanEngine* gLoadedEngine = nullptr;
 
-VulkanEngine& VulkanEngine::get() { 
+VulkanEngine& VulkanEngine::get() {
     return *gLoadedEngine;
 }
 
@@ -173,7 +171,7 @@ void VulkanEngine::loadLoadingScreenData() {
         setLayouts,
         pushConstantRanges
     );
-    
+
     // create pipeline
     VkShaderModule vertShader;
     VkShaderModule fragShader;
@@ -239,7 +237,7 @@ AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags 
     bufferInfo.pNext = nullptr;
     bufferInfo.size = allocSize;
     bufferInfo.usage = usage;
-    
+
     VmaAllocationCreateInfo allocInfo{};
     allocInfo.usage = memUsage;
     allocInfo.flags = VMA_ALLOCATION_CREATE_MAPPED_BIT;
@@ -499,7 +497,7 @@ void VulkanEngine::initVMA() {
     vulkanFunctions.vkBindImageMemory2KHR = vkBindImageMemory2KHR;
     vulkanFunctions.vkGetPhysicalDeviceMemoryProperties2KHR = vkGetPhysicalDeviceMemoryProperties2KHR;
 
-    vmaCreateInfo.pVulkanFunctions = &vulkanFunctions; 
+    vmaCreateInfo.pVulkanFunctions = &vulkanFunctions;
 
     vmaCreateAllocator(&vmaCreateInfo, &mAllocator);
 
@@ -750,7 +748,7 @@ void VulkanEngine::initImGui() {
 }
 
 void VulkanEngine::initECS() {
-    
+
 }
 
 void VulkanEngine::cleanup() {
@@ -789,7 +787,7 @@ void VulkanEngine::drawLoadingScreen() {
 
     while (!mIsInitialized) {
         // process SDL events
-        UserInput userInput = mWindow->processSDLEvents();
+        mWindow->processSDLEvents();
 
         // end loop if window is closed
         if (mWindow->shouldClose()) {
@@ -815,7 +813,7 @@ void VulkanEngine::drawLoadingScreen() {
             vkDestroySemaphore(mDevice, getCurrentFrame().swapchainSemaphore, nullptr);
             VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
             VK_CHECK(vkCreateSemaphore(mDevice, &semaphoreCreateInfo, nullptr, &getCurrentFrame().swapchainSemaphore));
-        
+
             return;
         }
 
@@ -824,7 +822,7 @@ void VulkanEngine::drawLoadingScreen() {
         // set draw extent
         mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mEngineConfig.renderScale;
         mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mEngineConfig.renderScale;
-        
+
         // get command buffer from current frame
         VkCommandBuffer commandBuffer = getCurrentFrame().mainCommandBuffer;
 
@@ -881,7 +879,7 @@ void VulkanEngine::drawLoadingScreen() {
         mLoadingScreenData.uboData.modelMatrix = glm::translate(glm::mat4(1.f), glm::vec3(mDrawExtent.width / 2.f, mDrawExtent.height / 2.f, 1.f)) * glm::rotate(glm::mat4(1.f), glm::radians(mLoadingScreenData.rotation), glm::vec3(0.0f, 0.0f, 1.0f)) * glm::scale(glm::mat4(1.f), glm::vec3(150.f, 150.f, 1.0f));
 
         mLoadingScreenData.uboData.projectionMatrix = glm::ortho(0.0f, (float)mDrawExtent.width, 0.0f, (float)mDrawExtent.height, -100.f, 100.f);
-      
+
         *(LoadingScreenData::Ubo*)mLoadingScreenData.uboBuffer.allocInfo.pMappedData = mLoadingScreenData.uboData;
 
         // bind pipeline
@@ -961,7 +959,7 @@ void VulkanEngine::draw() {
         vkDestroySemaphore(mDevice, getCurrentFrame().swapchainSemaphore, nullptr);
         VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
         VK_CHECK(vkCreateSemaphore(mDevice, &semaphoreCreateInfo, nullptr, &getCurrentFrame().swapchainSemaphore));
-    
+
         return;
     }
 
@@ -970,7 +968,7 @@ void VulkanEngine::draw() {
     // set draw extent
     mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mEngineConfig.renderScale;
     mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mEngineConfig.renderScale;
-    
+
 
     // get command buffer from current frame
     VkCommandBuffer commandBuffer = getCurrentFrame().mainCommandBuffer;
@@ -991,9 +989,18 @@ void VulkanEngine::draw() {
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
 
     // execute post processing effects
-    mBloomEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
-    mToneMappingEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
-    mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent, false);
+    {
+        // get start time
+        auto start = std::chrono::system_clock::now();
+
+        mBloomEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
+        mToneMappingEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
+        mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent, false);
+
+        auto end = std::chrono::system_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        mStats.postEffectsTimeBuffer += elapsed.count() / 1000.f;
+    }
 
     // transition draw and swapchain image into transfer layouts
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
@@ -1058,7 +1065,7 @@ void VulkanEngine::run() {
         auto start = std::chrono::system_clock::now();
 
         // process SDL events
-        UserInput userInput = mWindow->processSDLEvents();
+        mWindow->processSDLEvents();
 
         // end loop if window is closed
         if (mWindow->shouldClose()) {
@@ -1075,10 +1082,10 @@ void VulkanEngine::run() {
 
         // get delta time
         auto newTime = std::chrono::system_clock::now();
-        float dt = std::chrono::duration_cast<std::chrono::microseconds>(newTime - currentTime).count() / 1000000.f;
+        mDeltaTime = std::chrono::duration_cast<std::chrono::microseconds>(newTime - currentTime).count() / 1000000.f;
         currentTime = newTime;
 
-        updateScene(dt, userInput);
+        update();
 
         draw();
 
@@ -1099,11 +1106,13 @@ void VulkanEngine::run() {
             mStats.updateTime = mStats.updateTimeBuffer / mStats.frameCount;
             mStats.drawGeometryTime = mStats.drawGeometryTimeBuffer / mStats.frameCount;
             mStats.drawTime = mStats.drawTimeBuffer / mStats.frameCount;
+            mStats.postEffectsTime = mStats.postEffectsTimeBuffer / mStats.frameCount;
 
             mStats.frameTimeBuffer = 0;
             mStats.updateTimeBuffer = 0;
             mStats.drawGeometryTimeBuffer = 0;
             mStats.drawTimeBuffer = 0;
+            mStats.postEffectsTimeBuffer = 0;
 
             mStats.fps = mStats.frameCount;
 
@@ -1130,6 +1139,7 @@ void VulkanEngine::drawGui() {
         ImGui::Text("update time %f ms", mStats.updateTime);
         ImGui::Text("draw time %f ms", mStats.drawTime);
         ImGui::Text("draw geometry time %f ms", mStats.drawGeometryTime);
+        ImGui::Text("post effects time %f ms", mStats.postEffectsTime);
         ImGui::Text("triangles %i", mStats.triangleCount);
         ImGui::Text("draws %i", mStats.drawCallCount);
         ImGui::End();
@@ -1203,17 +1213,17 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     auto start = std::chrono::system_clock::now();
 
     std::vector<uint32_t> opaqueObjectIndices;
-    opaqueObjectIndices.reserve(mMainRenderContext.opaqueObjects.size());
+    opaqueObjectIndices.reserve(mRenderContext.opaqueObjects.size());
 
-    for (uint32_t i = 0; i < mMainRenderContext.opaqueObjects.size(); i++) {
+    for (uint32_t i = 0; i < mRenderContext.opaqueObjects.size(); i++) {
         opaqueObjectIndices.push_back(i);
     }
 
     // sort opaque objects by material and mesh
     if (mEngineConfig.enableDrawSorting) {
         std::sort(opaqueObjectIndices.begin(), opaqueObjectIndices.end(), [&](const auto& iA, const auto& iB) {
-            const RenderObject& A = mMainRenderContext.opaqueObjects[iA];
-            const RenderObject& B = mMainRenderContext.opaqueObjects[iB];
+            const RenderObject& A = mRenderContext.opaqueObjects[iA];
+            const RenderObject& B = mRenderContext.opaqueObjects[iB];
 
             if (A.material == B.material) {
                 return A.indexBuffer < B.indexBuffer;
@@ -1224,17 +1234,17 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     }
 
     std::vector<uint32_t> transparentObjectIndices;
-    transparentObjectIndices.reserve(mMainRenderContext.transparentObjects.size());
+    transparentObjectIndices.reserve(mRenderContext.transparentObjects.size());
 
-    for (uint32_t i = 0; i < mMainRenderContext.transparentObjects.size(); i++) {
+    for (uint32_t i = 0; i < mRenderContext.transparentObjects.size(); i++) {
         transparentObjectIndices.push_back(i);
     }
 
     // sort transparent objects by material and mesh
     if (mEngineConfig.enableDrawSorting) {
         std::sort(transparentObjectIndices.begin(), transparentObjectIndices.end(), [&](const auto& iA, const auto& iB) {
-            const RenderObject& A = mMainRenderContext.transparentObjects[iA];
-            const RenderObject& B = mMainRenderContext.transparentObjects[iB];
+            const RenderObject& A = mRenderContext.transparentObjects[iA];
+            const RenderObject& B = mRenderContext.transparentObjects[iB];
 
             if (A.material == B.material) {
                 return A.indexBuffer < B.indexBuffer;
@@ -1310,25 +1320,25 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         vkCmdPushConstants(commandBuffer, object.material->pipeline->layout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(GPUDrawPushConstants), &pushConstants);
 
         vkCmdDrawIndexed(commandBuffer, object.indexCount, 1, object.firstIndex, 0, 0);
-    
+
         // update stats
         mStats.drawCallCount++;
         mStats.triangleCount += object.indexCount / 3;
     };
 
     for (auto& index : opaqueObjectIndices) {
-        if (mEngineConfig.enableFrustumCulling && !isVisible(mMainRenderContext.opaqueObjects[index], mScene->getViewProj()))
+        if (mEngineConfig.enableFrustumCulling && !isVisible(mRenderContext.opaqueObjects[index], mScene->getViewProj()))
             continue;
 
-        draw(mMainRenderContext.opaqueObjects[index]);
+        draw(mRenderContext.opaqueObjects[index]);
     }
 
     // draw transparent objects after opaque ones
     for (auto& index : transparentObjectIndices) {
-        if (mEngineConfig.enableFrustumCulling && !isVisible(mMainRenderContext.transparentObjects[index], mScene->getViewProj()))
+        if (mEngineConfig.enableFrustumCulling && !isVisible(mRenderContext.transparentObjects[index], mScene->getViewProj()))
             continue;
 
-        draw(mMainRenderContext.transparentObjects[index]);
+        draw(mRenderContext.transparentObjects[index]);
     }
 
     mScene->drawSkybox(commandBuffer);
@@ -1429,7 +1439,7 @@ AllocatedImage VulkanEngine::createEmptyCubemap(VkExtent2D size, VkFormat format
 }
 
 // hardcoded to rgba 8 bit
-AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {    
+AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {
     size_t dataSize = size.depth * size.width * size.height * (format == VK_FORMAT_R32G32B32A32_SFLOAT ? 16 : 4);
     AllocatedBuffer uploadBuffer = createBuffer(dataSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
 
@@ -1471,14 +1481,15 @@ void VulkanEngine::destroyImage(const AllocatedImage& image) {
     vmaDestroyImage(mAllocator, image.image, image.allocation);
 }
 
-void VulkanEngine::updateScene(float dt, const UserInput& userInput) {
+void VulkanEngine::update() {
     // get start time
     auto start = std::chrono::system_clock::now();
 
-    mMainRenderContext.opaqueObjects.clear();
-    mMainRenderContext.transparentObjects.clear();
+    mRenderContext.opaqueObjects.clear();
+    mRenderContext.transparentObjects.clear();
 
-    mScene->update(dt, mWindow->getAspectRatio(), userInput, mMainRenderContext, mWindow->isCursorLocked());
+    mScene->update();
+    mScene->render(mRenderContext);
 
     // get end time
     auto end = std::chrono::system_clock::now();

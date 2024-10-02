@@ -2464,6 +2464,10 @@ src/CMakeFiles/engine.dir/ecs_components/components.cpp.o: src/CMakeFiles/engine
   ../third_party/glm/glm/exponential.hpp \
   ../third_party/glm/glm/ext/vector_relational.hpp \
   ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
   ../third_party/glm/glm/gtx/quaternion.hpp \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
@@ -2499,9 +2503,6 @@ src/CMakeFiles/engine.dir/ecs_components/components.cpp.o: src/CMakeFiles/engine
   ../third_party/glm/glm/ext/quaternion_relational.hpp \
   ../third_party/glm/glm/ext/quaternion_geometric.hpp \
   ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
-  ../third_party/glm/glm/ext/scalar_constants.hpp \
-  ../third_party/glm/glm/ext/vector_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
   ../third_party/glm/glm/ext/quaternion_transform.hpp \
   ../third_party/glm/glm/ext/quaternion_transform.inl \
   ../third_party/glm/glm/detail/type_mat3x3.hpp \
@@ -3181,6 +3182,10 @@ src/CMakeFiles/engine.dir/entity.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../third_party/glm/glm/exponential.hpp \
   ../third_party/glm/glm/ext/vector_relational.hpp \
   ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
   ../third_party/glm/glm/gtx/quaternion.hpp \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
@@ -3216,9 +3221,6 @@ src/CMakeFiles/engine.dir/entity.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx 
   ../third_party/glm/glm/ext/quaternion_relational.hpp \
   ../third_party/glm/glm/ext/quaternion_geometric.hpp \
   ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
-  ../third_party/glm/glm/ext/scalar_constants.hpp \
-  ../third_party/glm/glm/ext/vector_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
   ../third_party/glm/glm/ext/quaternion_transform.hpp \
   ../third_party/glm/glm/ext/quaternion_transform.inl \
   ../third_party/glm/glm/detail/type_mat3x3.hpp \
@@ -5024,6 +5026,76 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_
   /usr/include/c++/12/pstl/glue_numeric_defs.h \
   /usr/include/c++/12/any \
   ../src/uuid.h \
+  ../src/vk_window.h \
+  ../third_party/SDL/include/SDL.h \
+  ../third_party/SDL/include/SDL_main.h \
+  ../third_party/SDL/include/SDL_stdinc.h \
+  ../third_party/SDL/include/SDL_config.h \
+  ../third_party/SDL/include/SDL_platform.h \
+  ../third_party/SDL/include/begin_code.h \
+  ../third_party/SDL/include/close_code.h \
+  ../third_party/SDL/include/SDL_config_minimal.h \
+  ../third_party/SDL/include/SDL_assert.h \
+  ../third_party/SDL/include/SDL_atomic.h \
+  ../third_party/SDL/include/SDL_audio.h \
+  ../third_party/SDL/include/SDL_error.h \
+  ../third_party/SDL/include/SDL_endian.h \
+  ../third_party/SDL/include/SDL_mutex.h \
+  ../third_party/SDL/include/SDL_thread.h \
+  ../third_party/SDL/include/SDL_rwops.h \
+  ../third_party/SDL/include/SDL_clipboard.h \
+  ../third_party/SDL/include/SDL_cpuinfo.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/mm_malloc.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/emmintrin.h \
+  ../third_party/SDL/include/SDL_events.h \
+  ../third_party/SDL/include/SDL_video.h \
+  ../third_party/SDL/include/SDL_pixels.h \
+  ../third_party/SDL/include/SDL_rect.h \
+  ../third_party/SDL/include/SDL_surface.h \
+  ../third_party/SDL/include/SDL_blendmode.h \
+  ../third_party/SDL/include/SDL_keyboard.h \
+  ../third_party/SDL/include/SDL_keycode.h \
+  ../third_party/SDL/include/SDL_scancode.h \
+  ../third_party/SDL/include/SDL_mouse.h \
+  ../third_party/SDL/include/SDL_joystick.h \
+  ../third_party/SDL/include/SDL_guid.h \
+  ../third_party/SDL/include/SDL_gamecontroller.h \
+  ../third_party/SDL/include/SDL_sensor.h \
+  ../third_party/SDL/include/SDL_quit.h \
+  ../third_party/SDL/include/SDL_gesture.h \
+  ../third_party/SDL/include/SDL_touch.h \
+  ../third_party/SDL/include/SDL_filesystem.h \
+  ../third_party/SDL/include/SDL_haptic.h \
+  ../third_party/SDL/include/SDL_hidapi.h \
+  ../third_party/SDL/include/SDL_hints.h \
+  ../third_party/SDL/include/SDL_loadso.h \
+  ../third_party/SDL/include/SDL_log.h \
+  ../third_party/SDL/include/SDL_messagebox.h \
+  ../third_party/SDL/include/SDL_metal.h \
+  ../third_party/SDL/include/SDL_power.h \
+  ../third_party/SDL/include/SDL_render.h \
+  ../third_party/SDL/include/SDL_shape.h \
+  ../third_party/SDL/include/SDL_system.h \
+  ../third_party/SDL/include/SDL_timer.h \
+  ../third_party/SDL/include/SDL_version.h \
+  ../third_party/SDL/include/SDL_locale.h \
+  ../third_party/SDL/include/SDL_misc.h \
+  ../third_party/volk/volk.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  ../src/vk_swapchain.h \
   ../src/ecs_components/components.h \
   ../third_party/glm/glm/ext/quaternion_float.hpp \
   ../third_party/glm/glm/detail/type_quat.hpp \
@@ -5071,6 +5143,10 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_
   ../third_party/glm/glm/exponential.hpp \
   ../third_party/glm/glm/ext/vector_relational.hpp \
   ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
   ../third_party/glm/glm/gtx/quaternion.hpp \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
@@ -5106,9 +5182,6 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_
   ../third_party/glm/glm/ext/quaternion_relational.hpp \
   ../third_party/glm/glm/ext/quaternion_geometric.hpp \
   ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
-  ../third_party/glm/glm/ext/scalar_constants.hpp \
-  ../third_party/glm/glm/ext/vector_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
   ../third_party/glm/glm/ext/quaternion_transform.hpp \
   ../third_party/glm/glm/ext/quaternion_transform.inl \
   ../third_party/glm/glm/detail/type_mat3x3.hpp \
@@ -5136,19 +5209,6 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_
   ../third_party/glm/glm/gtx/quaternion.inl \
   ../src/vk_loader.h \
   ../src/vk_types.h \
-  ../third_party/volk/volk.h \
-  /usr/include/vulkan/vulkan.h \
-  /usr/include/vulkan/vk_platform.h \
-  /usr/include/vulkan/vulkan_core.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std.h \
-  /usr/include/vk_video/vulkan_video_codecs_common.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
   ../third_party/vma/vk_mem_alloc.h \
   ../src/deletion_queue.h \
   ../src/vk_enum_string_helper.h \
@@ -5162,7 +5222,17 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_
   ../third_party/fastgltf/include/fastgltf/util.hpp \
   ../third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/include/c++/12/memory_resource \
-  /usr/include/c++/12/shared_mutex
+  /usr/include/c++/12/shared_mutex \
+  ../src/vk_engine.h \
+  ../src/compute_effects/compute_effect.h \
+  ../third_party/spirv_reflect/include/spirv_reflect.h \
+  ../third_party/spirv_reflect/include/spirv.h \
+  ../src/vk_materials.h \
+  ../src/vk_descriptors.h \
+  ../src/vk_scene.h \
+  ../src/skybox.h \
+  ../src/resource_manager.h \
+  /usr/include/memory.h
 
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -7409,88 +7479,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/include/c++/12/bits/this_thread_sleep.h \
   /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/semaphore.h \
-  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  ../src/ecs_systems/systems.h \
-  ../src/ecs_components/components.h \
-  ../third_party/glm/glm/ext/quaternion_float.hpp \
-  ../third_party/glm/glm/detail/type_quat.hpp \
-  ../third_party/glm/glm/detail/type_mat3x3.hpp \
-  ../third_party/glm/glm/detail/type_mat4x4.hpp \
-  ../third_party/glm/glm/detail/type_vec3.hpp \
-  ../third_party/glm/glm/detail/type_vec4.hpp \
-  ../third_party/glm/glm/ext/vector_relational.hpp \
-  ../third_party/glm/glm/detail/qualifier.hpp \
-  ../third_party/glm/glm/ext/vector_relational.inl \
-  ../third_party/glm/glm/vector_relational.hpp \
-  ../third_party/glm/glm/common.hpp \
-  ../third_party/glm/glm/detail/type_float.hpp \
-  ../third_party/glm/glm/ext/quaternion_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_relational.inl \
-  ../third_party/glm/glm/gtc/constants.hpp \
-  ../third_party/glm/glm/gtc/matrix_transform.hpp \
-  ../third_party/glm/glm/mat4x4.hpp \
-  ../third_party/glm/glm/vec2.hpp \
-  ../third_party/glm/glm/vec3.hpp \
-  ../third_party/glm/glm/vec4.hpp \
-  ../third_party/glm/glm/ext/matrix_projection.hpp \
-  ../third_party/glm/glm/ext/matrix_projection.inl \
-  ../third_party/glm/glm/ext/matrix_clip_space.hpp \
-  ../third_party/glm/glm/ext/matrix_transform.hpp \
-  ../third_party/glm/glm/gtc/matrix_transform.inl \
-  ../third_party/glm/glm/geometric.hpp \
-  ../third_party/glm/glm/trigonometric.hpp \
-  ../third_party/glm/glm/matrix.hpp \
-  ../third_party/glm/glm/detail/type_quat.inl \
-  ../third_party/glm/glm/trigonometric.hpp \
-  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
-  ../third_party/glm/glm/exponential.hpp \
-  ../third_party/glm/glm/ext/vector_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_geometric.inl \
-  ../third_party/glm/glm/gtx/quaternion.hpp \
-  ../third_party/glm/glm/glm.hpp \
-  ../third_party/glm/glm/gtc/constants.hpp \
-  ../third_party/glm/glm/gtc/quaternion.hpp \
-  ../third_party/glm/glm/gtc/constants.hpp \
-  ../third_party/glm/glm/gtc/matrix_transform.hpp \
-  ../third_party/glm/glm/ext/vector_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_common.hpp \
-  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
-  ../third_party/glm/glm/ext/quaternion_common.inl \
-  ../third_party/glm/glm/ext/quaternion_float.hpp \
-  ../third_party/glm/glm/ext/quaternion_float_precision.hpp \
-  ../third_party/glm/glm/ext/quaternion_double.hpp \
-  ../third_party/glm/glm/ext/quaternion_double_precision.hpp \
-  ../third_party/glm/glm/ext/quaternion_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_geometric.hpp \
-  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
-  ../third_party/glm/glm/ext/scalar_constants.hpp \
-  ../third_party/glm/glm/ext/vector_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
-  ../third_party/glm/glm/ext/quaternion_transform.hpp \
-  ../third_party/glm/glm/ext/quaternion_transform.inl \
-  ../third_party/glm/glm/detail/type_mat3x3.hpp \
-  ../third_party/glm/glm/detail/type_mat4x4.hpp \
-  ../third_party/glm/glm/detail/type_vec3.hpp \
-  ../third_party/glm/glm/detail/type_vec4.hpp \
-  ../third_party/glm/glm/gtc/quaternion.inl \
-  ../third_party/glm/glm/exponential.hpp \
-  ../third_party/glm/glm/gtc/epsilon.hpp \
-  ../third_party/glm/glm/detail/setup.hpp \
-  ../third_party/glm/glm/detail/qualifier.hpp \
-  ../third_party/glm/glm/gtc/epsilon.inl \
-  ../third_party/glm/glm/vector_relational.hpp \
-  ../third_party/glm/glm/common.hpp \
-  ../third_party/glm/glm/ext/quaternion_exponential.hpp \
-  ../third_party/glm/glm/ext/quaternion_exponential.inl \
-  ../third_party/glm/glm/gtx/norm.hpp \
-  ../third_party/glm/glm/geometric.hpp \
-  ../third_party/glm/glm/gtx/quaternion.hpp \
-  ../third_party/glm/glm/gtx/component_wise.hpp \
-  ../third_party/glm/glm/detail/setup.hpp \
-  ../third_party/glm/glm/detail/qualifier.hpp \
-  ../third_party/glm/glm/gtx/component_wise.inl \
-  ../third_party/glm/glm/gtx/norm.inl \
-  ../third_party/glm/glm/gtx/quaternion.inl
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h
 
 src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
@@ -11026,6 +11015,10 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   ../third_party/glm/glm/exponential.hpp \
   ../third_party/glm/glm/ext/vector_relational.hpp \
   ../third_party/glm/glm/ext/quaternion_geometric.inl \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
+  ../third_party/glm/glm/ext/scalar_constants.hpp \
+  ../third_party/glm/glm/ext/vector_relational.hpp \
+  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
   ../third_party/glm/glm/gtx/quaternion.hpp \
   ../third_party/glm/glm/glm.hpp \
   /usr/include/c++/12/cfloat \
@@ -11061,9 +11054,6 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   ../third_party/glm/glm/ext/quaternion_relational.hpp \
   ../third_party/glm/glm/ext/quaternion_geometric.hpp \
   ../third_party/glm/glm/ext/quaternion_trigonometric.hpp \
-  ../third_party/glm/glm/ext/scalar_constants.hpp \
-  ../third_party/glm/glm/ext/vector_relational.hpp \
-  ../third_party/glm/glm/ext/quaternion_trigonometric.inl \
   ../third_party/glm/glm/ext/quaternion_transform.hpp \
   ../third_party/glm/glm/ext/quaternion_transform.inl \
   ../third_party/glm/glm/detail/type_mat3x3.hpp \
@@ -12616,9 +12606,9 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
 
 /usr/include/c++/12/bits/locale_classes.h:
 
-../third_party/fastgltf/include/fastgltf/tools.hpp:
-
 ../src/ecs_systems/systems.h:
+
+../third_party/fastgltf/include/fastgltf/tools.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 

@@ -2,6 +2,9 @@
 #include "ecs_components/components.h"
 #include "entity.h"
 #include "sol/sol.hpp"
+#include "vk_engine.h"
+#include <SDL_keycode.h>
+#include <SDL_scancode.h>
 #include <fmt/core.h>
 
 // extracts global vars names from bytecode
@@ -62,16 +65,48 @@ void ScriptManager::initializeLuaState() {
         sol::meta_function::addition, [](const glm::vec3& a, const glm::vec3& b) { return a + b; }
     );
 
+    mLua.new_usertype<glm::ivec2>(
+        "IVec2", sol::constructors<glm::ivec2(), glm::ivec2(int, int)>(),
+        "x", &glm::ivec2::x,
+        "y", &glm::ivec2::y,
+        sol::meta_function::addition, [](const glm::ivec2& a, const glm::ivec2& b) { return a + b; }
+    );
+
     mLua.new_usertype<Transform>(
         "Transform", sol::constructors<Transform()>(),
-        "position", &Transform::position
+        "position", &Transform::position,
+        "forward", &Transform::forward,
+        "right", &Transform::right,
+        "Translate", &Transform::translate,
+        "Rotate", &Transform::rotate
+    );
+
+    // add tables
+    mLua["KeyCode"] = mLua.create_table_with(
+        "W", SDL_SCANCODE_W,
+        "A", SDL_SCANCODE_A,
+        "S", SDL_SCANCODE_S,
+        "D", SDL_SCANCODE_D,
+        "Q", SDL_SCANCODE_Q,
+        "E", SDL_SCANCODE_E,
+        "Z", SDL_SCANCODE_Z,
+        "C", SDL_SCANCODE_C,
+        "Space", SDL_SCANCODE_SPACE
+    );
+
+    mLua["Input"] = mLua.create_table_with(
+        "GetKey", [&](SDL_Scancode scancode) -> bool { return (mInput.keyboardState[scancode]); }
+    );
+
+    mLua["Time"] = mLua.create_table_with(
+        "deltaTime", VulkanEngine::get().getDeltaTime()
     );
 
     mIsInitialized = true;
     fmt::println("Initialized lua state");
 }
 
-ScriptManager::ScriptManager(entt::registry& registry) : mRegistry(registry) {
+ScriptManager::ScriptManager(entt::registry& registry) : mRegistry(registry), mInput(VulkanEngine::get().getInput()) {
     initializeLuaState();
 }
 
@@ -122,10 +157,15 @@ void ScriptManager::bindScript(const std::string& scriptName, Entity& entity) {
         fmt::println("failed to bind script {}: {}", scriptName, err.what());
     }
 
+    // set entity specific functions
     env.set_function("getTransform", &Entity::getComponent<Transform>, &entity);
 }
 
-void ScriptManager::onUpdate(float dt) {
+void ScriptManager::update() {
+    mLua["Time"]["deltaTime"] = VulkanEngine::get().getDeltaTime();
+}
+
+void ScriptManager::onUpdate() {
     auto view = mRegistry.view<Script>();
 
     for (auto [entity, script] : view.each()) {
@@ -133,7 +173,13 @@ void ScriptManager::onUpdate(float dt) {
             continue;
         }
 
-        script.env["update"](dt);
-        script.env["cock"]();
+        // script.env["update"]();
+
+        sol::protected_function_result result = script.env["update"]();
+
+        if (!result.valid()) {
+            sol::error err = result;
+            fmt::println("function failed: {}", err.what());
+        }
     }
 }

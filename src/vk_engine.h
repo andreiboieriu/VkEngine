@@ -24,11 +24,13 @@ public:
 		int drawCallCount;
 		float updateTime;
 		float drawGeometryTime;
+		float postEffectsTime;
 		float drawTime;
 
 		float frameTimeBuffer;
 		float updateTimeBuffer;
 		float drawGeometryTimeBuffer;
+		float postEffectsTimeBuffer;
 		float drawTimeBuffer;
 
 		float msElapsed;
@@ -172,7 +174,24 @@ public:
 
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
 
-	void updateScene(float dt, const UserInput& userInput);
+	void update();
+
+	float getDeltaTime() {
+	   return mDeltaTime;
+	}
+
+	const float& getDeltaTimeRef() {
+	   return mDeltaTime;
+	}
+
+	const Input& getInput() {
+	   return mWindow->getInput();
+	}
+
+	// TODO: see about this later
+	float getWindowAspectRatio() {
+	   return mWindow->getAspectRatio();
+	}
 
 private:
 
@@ -219,6 +238,7 @@ private:
 	bool mUseValidationLayers = true;
 
 	int mFrameNumber = 0;
+	float mDeltaTime = 0.f;
 
 	FrameData mFrames[MAX_FRAMES_IN_FLIGHT];
 	VkQueue mGraphicsQueue;
@@ -236,7 +256,7 @@ private:
 	VkExtent2D mDrawExtent;
 	AllocatedImage mDepthImage;
 
-	
+
 	// immediat submit structures
 	VkFence mImmFence;
 	VkCommandBuffer mImmCommandBuffer;
@@ -256,15 +276,13 @@ private:
 	std::unique_ptr<MaterialManager> mMaterialManager;
 	std::unique_ptr<ResourceManager> mResourceManager;
 
-	RenderContext mMainRenderContext;
+	RenderContext mRenderContext;
 
 	std::shared_ptr<Scene3D> mScene;
 
 	Stats mStats{};
 
 	VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties{};
-
-	bool mCursorLocked = true;
 
 	std::unique_ptr<ComputeEffect> mFxaaEffect;
 	std::unique_ptr<ComputeEffect> mToneMappingEffect;

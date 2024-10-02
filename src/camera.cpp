@@ -34,52 +34,52 @@ glm::mat4 EditorCamera::getRotationMatrix() {
     return glm::toMat4(yawRotation) * glm::toMat4(pitchRotation);
 }
 
-void EditorCamera::update(float dt, float aspectRatio, const UserInput& userInput) {
-    if (!userInput.GuiMode) {
-        if (userInput.pressedKeys.contains(SDLK_w)) {
-            mVelocity.z = -1;
-        }
+void EditorCamera::update(float dt, float aspectRatio) {
+    // if (!userInput.GuiMode) {
+    //     if (userInput.pressedKeys.contains(SDLK_w)) {
+    //         mVelocity.z = -1;
+    //     }
 
-        if (userInput.pressedKeys.contains(SDLK_a)) {
-            mVelocity.x = -1;
-        }
+    //     if (userInput.pressedKeys.contains(SDLK_a)) {
+    //         mVelocity.x = -1;
+    //     }
 
-        if (userInput.pressedKeys.contains(SDLK_s)) {
-            mVelocity.z = 1;
-        }
+    //     if (userInput.pressedKeys.contains(SDLK_s)) {
+    //         mVelocity.z = 1;
+    //     }
 
-        if (userInput.pressedKeys.contains(SDLK_d)) {
-            mVelocity.x = 1;
-        }
+    //     if (userInput.pressedKeys.contains(SDLK_d)) {
+    //         mVelocity.x = 1;
+    //     }
 
-        if (userInput.releasedKeys.contains(SDLK_w)) {
-            mVelocity.z = 0;
-        }
+    //     if (userInput.releasedKeys.contains(SDLK_w)) {
+    //         mVelocity.z = 0;
+    //     }
 
-        if (userInput.releasedKeys.contains(SDLK_a)) {
-            mVelocity.x = 0;
-        }
+    //     if (userInput.releasedKeys.contains(SDLK_a)) {
+    //         mVelocity.x = 0;
+    //     }
 
-        if (userInput.releasedKeys.contains(SDLK_s)) {
-            mVelocity.z = 0;
-        }
+    //     if (userInput.releasedKeys.contains(SDLK_s)) {
+    //         mVelocity.z = 0;
+    //     }
 
-        if (userInput.releasedKeys.contains(SDLK_d)) {
-            mVelocity.x = 0;
-        }
+    //     if (userInput.releasedKeys.contains(SDLK_d)) {
+    //         mVelocity.x = 0;
+    //     }
 
-        mYaw += userInput.mouseXRel * MOUSE_MOTION_SENSITIVITY;
-        mPitch -= userInput.mouseYRel * MOUSE_MOTION_SENSITIVITY;
+    //     mYaw += userInput.mouseXRel * MOUSE_MOTION_SENSITIVITY;
+    //     mPitch -= userInput.mouseYRel * MOUSE_MOTION_SENSITIVITY;
 
-        mPitch = glm::clamp(mPitch, MIN_PITCH, MAX_PITCH);
+    //     mPitch = glm::clamp(mPitch, MIN_PITCH, MAX_PITCH);
 
-        mFov -= userInput.mouseWheel * MOUSE_WHEEL_SENSITIVITY;
-        mFov = glm::clamp(mFov, MIN_FOV, MAX_FOV);
-    }
+    //     mFov -= userInput.mouseWheel * MOUSE_WHEEL_SENSITIVITY;
+    //     mFov = glm::clamp(mFov, MIN_FOV, MAX_FOV);
+    // }
 
-    glm::mat4 cameraRotation = getRotationMatrix();
-    mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * mSpeed * dt, 0.f));
-    mAspectRatio = aspectRatio;
+    // glm::mat4 cameraRotation = getRotationMatrix();
+    // mPosition += glm::vec3(cameraRotation * glm::vec4(mVelocity * mSpeed * dt, 0.f));
+    // mAspectRatio = aspectRatio;
 }
 
 void EditorCamera::drawGui() {

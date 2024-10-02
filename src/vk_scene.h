@@ -32,7 +32,8 @@ public:
     Scene3D(const std::string& name);
     ~Scene3D();
 
-    void update(float dt, float aspectRatio, const UserInput& userInput, RenderContext& renderContext, bool isCursorLocked);
+    void update();
+    void render(RenderContext& renderContext);
     void drawGui();
 
     void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
@@ -56,10 +57,6 @@ public:
     void propagateTransform();
     void cleanupEntities();
 
-    const UserInput& getUserInput() {
-        return mUserInput;
-    }
-
 private:
     void init();
     void freeResources();
@@ -77,8 +74,6 @@ private:
     std::unique_ptr<ScriptManager> mScriptManager = nullptr;
 
     entt::registry mRegistry;
-
-    UserInput mUserInput;
 
     std::vector<UUID> mRootEntityUUIDs; // has to be declared before entity map
     std::unordered_map<UUID, std::unique_ptr<Entity>> mEntityMap;
