@@ -1,0 +1,72 @@
+{
+    "Entities": [
+        {
+            "ChildrenUUIDs": [],
+            "Components": [
+                {
+                    "Transform": {
+                        "Position": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "Rotation": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "Scale": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    }
+                },
+                {
+                    "Undefined": {
+                        "Name": ""
+                    }
+                }
+            ],
+            "ParentUUID": "",
+            "UUID": "main_camera"
+        },
+        {
+            "ChildrenUUIDs": [],
+            "Components": [
+                {
+                    "GLTF": {
+                        "Name": "fighter_spaceship"
+                    }
+                },
+                {
+                    "Transform": {
+                        "Position": [
+                            0.0,
+                            0.0,
+                            -2.0
+                        ],
+                        "Rotation": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "Scale": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    }
+                },
+                {
+                    "Undefined": {
+                        "Name": "scripts/script.lua"
+                    }
+                }
+            ],
+            "ParentUUID": "",
+            "UUID": "fighter_spaceship"
+        }
+    ],
+    "Name": "testScene"
+}

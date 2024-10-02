@@ -1,0 +1,4 @@
+- sol environments for each script/instance
+- generalize skybox class
+- add skyboxes in resource manager
+- redo scene hierarchy in a more efficient way
