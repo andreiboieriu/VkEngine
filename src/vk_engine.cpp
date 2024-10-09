@@ -1,8 +1,8 @@
 //> includes
+#define IMGUI_IMPL_VULKAN_USE_VOLK
 #include "vk_engine.h"
 #include "glm/ext/matrix_clip_space.hpp"
 #include "glm/ext/matrix_transform.hpp"
-#include "vk_enum_string_helper.h"
 
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE
 #define GLM_FORCE_RADIANS
@@ -21,8 +21,6 @@
 #include <cstddef>
 #include <cstring>
 #include <memory>
-#include <SDL_vulkan.h>
-#include "SDL_video.h"
 #include <fmt/core.h>
 #include "vk_descriptors.h"
 #include "vk_initializers.h"
@@ -34,7 +32,7 @@
 #include "VkBootstrap.h"
 
 #include <imgui.h>
-#include <imgui_impl_sdl2.h>
+#include <imgui_impl_glfw.h>
 #include <imgui_impl_vulkan.h>
 
 #include "stb_image.h"
@@ -56,7 +54,7 @@ void VulkanEngine::init()
     gLoadedEngine = this;
 
     // create window
-    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900}, (SDL_WindowFlags)(SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE));
+    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900});
 
     mMainDeletionQueue.push([&]() {
         mWindow = nullptr;
@@ -73,6 +71,32 @@ void VulkanEngine::init()
     initECS();
 
     loadLoadingScreenData();
+
+    // // test info
+    // {
+    //     uint32_t propertyCount = 0;
+    //     VkResult result = vkGetPhysicalDeviceDisplayPlanePropertiesKHR(mPhysicalDevice, &propertyCount, nullptr);
+
+    //     if (result != VK_SUCCESS) {
+    //         fmt::println("cock");
+    //     }
+
+    //     std::vector<VkDisplayPlanePropertiesKHR> displayPlaneProperties(propertyCount);
+    //     vkGetPhysicalDeviceDisplayPlanePropertiesKHR(mPhysicalDevice, &propertyCount, displayPlaneProperties.data());
+
+    //     for (auto& property : displayPlaneProperties) {
+    //         vkGetDisplayModePropertiesKHR(mPhysicalDevice, property.currentDisplay, &propertyCount, nullptr);
+
+    //         std::vector<VkDisplayModePropertiesKHR> displayModeProperties(propertyCount);
+
+    //         vkGetDisplayModePropertiesKHR(mPhysicalDevice, property.currentDisplay, &propertyCount, displayModeProperties.data());
+
+    //         for (auto& property2 : displayModeProperties) {
+    //             fmt::println("refresh rate: {}", property2.parameters.refreshRate);
+    //         }
+    //     }
+
+    // }
 
     // render loading screen
     std::thread t{&VulkanEngine::drawLoadingScreen, this};
@@ -360,18 +384,13 @@ void VulkanEngine::initVulkan() {
     // build vulkan instance using vkbootstrap
     vkb::InstanceBuilder builder{};
 
-    unsigned int sdlExtCount;
-    SDL_Vulkan_GetInstanceExtensions(mWindow->getHandle(), &sdlExtCount, NULL);
-
-    std::vector<const char *> sdlExtensions(sdlExtCount);
-    SDL_Vulkan_GetInstanceExtensions(mWindow->getHandle(), &sdlExtCount, sdlExtensions.data());
-
     vkb::Instance vkbInstance = builder.set_app_name("VkEngine")
         .request_validation_layers(mUseValidationLayers)
         .use_default_debug_messenger()
         .require_api_version(1, 3, 0)
         .enable_extension(VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME)
-        .enable_extensions(sdlExtensions)
+        .enable_extension(VK_KHR_DISPLAY_EXTENSION_NAME) // enable display info
+        .enable_extensions(mWindow->getGLFWInstanceExtensions())
         .build()
         .value();
 
@@ -714,7 +733,7 @@ void VulkanEngine::initImGui() {
 
     // initialize imgui library
     ImGui::CreateContext();
-    ImGui_ImplSDL2_InitForVulkan(mWindow->getHandle());
+    mWindow->initImGuiGLFW();
 
     ImGui_ImplVulkan_InitInfo initInfo{};
     initInfo.Instance = mInstance;
@@ -737,12 +756,13 @@ void VulkanEngine::initImGui() {
     initInfo.MSAASamples = VK_SAMPLE_COUNT_1_BIT;
 
     ImGui_ImplVulkan_Init(&initInfo);
-
     ImGui_ImplVulkan_CreateFontsTexture();
 
     // add imgui resources to deletion queue
     mMainDeletionQueue.push([=, this]() {
         ImGui_ImplVulkan_Shutdown();
+        ImGui_ImplGlfw_Shutdown();
+        ImGui::DestroyContext();
         vkDestroyDescriptorPool(mDevice, imguiDescPool, nullptr);
     });
 }
@@ -787,7 +807,7 @@ void VulkanEngine::drawLoadingScreen() {
 
     while (!mIsInitialized) {
         // process SDL events
-        mWindow->processSDLEvents();
+        mWindow->pollEvents();
 
         // end loop if window is closed
         if (mWindow->shouldClose()) {
@@ -809,6 +829,7 @@ void VulkanEngine::drawLoadingScreen() {
 
         VkImage swapchainImage = mWindow->getNextSwapchainImage(getCurrentFrame().swapchainSemaphore);
 
+        // maybe useless?
         if (swapchainImage == VK_NULL_HANDLE) {
             vkDestroySemaphore(mDevice, getCurrentFrame().swapchainSemaphore, nullptr);
             VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
@@ -1055,8 +1076,6 @@ void VulkanEngine::drawImGui(VkCommandBuffer commandBuffer, VkImageView targetIm
 }
 
 void VulkanEngine::run() {
-    SDL_Event e;
-
     auto currentTime = std::chrono::system_clock::now();
 
     // main loop
@@ -1064,8 +1083,8 @@ void VulkanEngine::run() {
         // get start time
         auto start = std::chrono::system_clock::now();
 
-        // process SDL events
-        mWindow->processSDLEvents();
+        // poll GLFW events
+        mWindow->pollEvents();
 
         // end loop if window is closed
         if (mWindow->shouldClose()) {
@@ -1125,11 +1144,8 @@ void VulkanEngine::run() {
 void VulkanEngine::drawGui() {
     // imgui new frame
     ImGui_ImplVulkan_NewFrame();
-    ImGui_ImplSDL2_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
-
-
-
 
     ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
 

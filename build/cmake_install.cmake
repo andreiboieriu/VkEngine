@@ -1,4 +1,4 @@
-# Install script for directory: /home/gooby/Development/VkEngine
+# Install script for directory: /home/andreiboieriu/Development/VkEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gooby/Development/VkEngine/build/third_party/cmake_install.cmake")
-  include("/home/gooby/Development/VkEngine/build/src/cmake_install.cmake")
+  include("/home/andreiboieriu/Development/VkEngine/build/third_party/cmake_install.cmake")
+  include("/home/andreiboieriu/Development/VkEngine/build/src/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gooby/Development/VkEngine/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/andreiboieriu/Development/VkEngine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

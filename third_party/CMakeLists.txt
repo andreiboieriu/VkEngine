@@ -47,19 +47,34 @@ set_target_properties(fmt PROPERTIES
                       IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/fmt/libfmt.a"
                       INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/fmt/include")
 
-# sdl
-add_library(SDL2 STATIC IMPORTED GLOBAL)
-set_target_properties(SDL2 PROPERTIES
-                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/SDL/libSDL2.a"
-                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/SDL/include")
+# glfw
+add_library(glfw STATIC IMPORTED GLOBAL)
+set_target_properties(glfw PROPERTIES
+                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/GLFW/libglfw3.a"
+                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/GLFW/include")
 
 # imgui
-add_library(imgui STATIC IMPORTED GLOBAL)
-set_target_properties(imgui PROPERTIES
-                      IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/imgui/libimgui.a"
-                      INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/imgui")
+# add_library(imgui STATIC IMPORTED GLOBAL)
+# set_target_properties(imgui PROPERTIES
+#                       IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/imgui/libimgui.a"
+#                       INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/imgui")
+add_library(imgui STATIC)
 
-target_link_libraries(imgui INTERFACE volk SDL2)
+target_include_directories(imgui PUBLIC imgui)
+
+target_sources(imgui PRIVATE
+    imgui/imgui.h
+    imgui/imgui.cpp
+
+    imgui/imgui_demo.cpp
+    imgui/imgui_draw.cpp
+    imgui/imgui_widgets.cpp
+    imgui/imgui_tables.cpp
+    imgui/imgui_impl_vulkan.cpp
+    imgui/imgui_impl_glfw.cpp
+)
+
+target_link_libraries(imgui PUBLIC volk glfw)
 
 # fastgltf
 add_library(fastgltf STATIC IMPORTED GLOBAL)

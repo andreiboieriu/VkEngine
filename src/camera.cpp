@@ -1,6 +1,4 @@
 #include "camera.h"
-#include "SDL_events.h"
-#include "SDL_keycode.h"
 #include "glm/ext/quaternion_trigonometric.hpp"
 #include "glm/fwd.hpp"
 #include "glm/gtx/quaternion.hpp"

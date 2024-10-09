@@ -3,8 +3,7 @@
 #include "entity.h"
 #include "sol/sol.hpp"
 #include "vk_engine.h"
-#include <SDL_keycode.h>
-#include <SDL_scancode.h>
+#include <GLFW/glfw3.h>
 #include <fmt/core.h>
 
 // extracts global vars names from bytecode
@@ -83,19 +82,22 @@ void ScriptManager::initializeLuaState() {
 
     // add tables
     mLua["KeyCode"] = mLua.create_table_with(
-        "W", SDL_SCANCODE_W,
-        "A", SDL_SCANCODE_A,
-        "S", SDL_SCANCODE_S,
-        "D", SDL_SCANCODE_D,
-        "Q", SDL_SCANCODE_Q,
-        "E", SDL_SCANCODE_E,
-        "Z", SDL_SCANCODE_Z,
-        "C", SDL_SCANCODE_C,
-        "Space", SDL_SCANCODE_SPACE
+        "W", glfwGetKeyScancode(GLFW_KEY_W),
+        "A", glfwGetKeyScancode(GLFW_KEY_A),
+        "S", glfwGetKeyScancode(GLFW_KEY_S),
+        "D", glfwGetKeyScancode(GLFW_KEY_D),
+        "Q", glfwGetKeyScancode(GLFW_KEY_Q),
+        "E", glfwGetKeyScancode(GLFW_KEY_E),
+        "Z", glfwGetKeyScancode(GLFW_KEY_Z),
+        "C", glfwGetKeyScancode(GLFW_KEY_C),
+        "Space", glfwGetKeyScancode(GLFW_KEY_SPACE)
     );
 
     mLua["Input"] = mLua.create_table_with(
-        "GetKey", [&](SDL_Scancode scancode) -> bool { return (mInput.keyboardState[scancode]); }
+        "GetKey", [&](int scancode) -> bool {
+            InputState state = mInput.keyStates.at(scancode);
+            return (state == InputState::HELD || state == InputState::PRESSED);
+        }
     );
 
     mLua["Time"] = mLua.create_table_with(
