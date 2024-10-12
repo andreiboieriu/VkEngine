@@ -4,7 +4,9 @@
 #include <cstdlib>
 #include <fmt/core.h>
 #include <vector>
+#include "compute_effects/compute_effect.h"
 #include "vk_engine.h"
+#include "vk_enum_string_helper.h"
 #include "vk_types.h"
 #include <imgui_impl_glfw.h>
 
@@ -43,10 +45,10 @@ void Window::setWindowHints() {
 
     // set video mode hints
 
-    glfwWindowHint(GLFW_RED_BITS, mVideoMode->redBits);
-    glfwWindowHint(GLFW_GREEN_BITS, mVideoMode->greenBits);
-    glfwWindowHint(GLFW_BLUE_BITS, mVideoMode->blueBits);
-    glfwWindowHint(GLFW_REFRESH_RATE, mVideoMode->refreshRate);
+    // glfwWindowHint(GLFW_RED_BITS, mVideoMode->redBits);
+    // glfwWindowHint(GLFW_GREEN_BITS, mVideoMode->greenBits);
+    // glfwWindowHint(GLFW_BLUE_BITS, mVideoMode->blueBits);
+    // glfwWindowHint(GLFW_REFRESH_RATE, mVideoMode->refreshRate);
 }
 
 void Window::selectMonitor() {
@@ -93,19 +95,53 @@ void Window::init() {
     }
 }
 
-void Window::createSwapchain() {
-    // mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_FIFO_KHR, mSurface);
-    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_FIFO_RELAXED_KHR, mSurface);
+void Window::createSwapchain(VkPresentModeKHR presentMode) {
+    // get available present modes
+    if (mAvailablePresentModes.empty()) {
+        uint32_t presentModeCount = 0;
+        vkGetPhysicalDeviceSurfacePresentModesKHR(
+        VulkanEngine::get().getPhysicalDevice(),
+        mSurface,
+        &presentModeCount,
+        nullptr);
+
+        mAvailablePresentModes.resize(presentModeCount);
+
+        VK_CHECK(vkGetPhysicalDeviceSurfacePresentModesKHR(
+            VulkanEngine::get().getPhysicalDevice(),
+            mSurface,
+            &presentModeCount,
+            mAvailablePresentModes.data()
+        ));
+
+        fmt::println("Available present modes:");
+
+        for (auto& presentMode : mAvailablePresentModes) {
+            fmt::println("{}", string_VkPresentModeKHR(presentMode));
+        }
+    }
+
+    if (std::find(mAvailablePresentModes.begin(), mAvailablePresentModes.end(), presentMode) == mAvailablePresentModes.end()) {
+        fmt::println("Unsupported present mode, defaulting to fifo");
+        presentMode = VK_PRESENT_MODE_FIFO_KHR;
+    }
+
+    mSwapchain = std::make_unique<Swapchain>(mExtent, presentMode, mSurface);
+}
+
+void Window::createSurface() {
+    // create surface
+    VK_CHECK(glfwCreateWindowSurface(
+        VulkanEngine::get().getInstance(),
+        mHandle,
+        nullptr,
+        &mSurface
+    ));
 }
 
 VkSurfaceKHR Window::getSurface() {
     if (mSurface == VK_NULL_HANDLE) {
-        VK_CHECK(glfwCreateWindowSurface(
-            VulkanEngine::get().getInstance(),
-            mHandle,
-            nullptr,
-            &mSurface
-        ));
+        createSurface();
     }
 
     return mSurface;

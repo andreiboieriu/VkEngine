@@ -381,6 +381,8 @@ void VulkanEngine::initVulkan() {
     // init volk
     VK_CHECK(volkInitialize());
 
+    fmt::println("init vulkan start");
+
     // build vulkan instance using vkbootstrap
     vkb::InstanceBuilder builder{};
 
@@ -390,6 +392,7 @@ void VulkanEngine::initVulkan() {
         .require_api_version(1, 3, 0)
         .enable_extension(VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME)
         .enable_extension(VK_KHR_DISPLAY_EXTENSION_NAME) // enable display info
+        .enable_extension(VK_KHR_SURFACE_EXTENSION_NAME)
         .enable_extensions(mWindow->getGLFWInstanceExtensions())
         .build()
         .value();
@@ -530,7 +533,7 @@ void VulkanEngine::initSwapchain() {
 
     // set draw image size to window size
     VkExtent3D drawImageExtent = {
-        2560* 2,
+        2560 * 2,
         1440 * 2,
         1
     };

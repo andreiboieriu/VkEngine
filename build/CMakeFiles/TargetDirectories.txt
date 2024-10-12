@@ -1,9 +1,0 @@
-/home/andreiboieriu/Development/VkEngine/build/CMakeFiles/Shaders.dir
-/home/andreiboieriu/Development/VkEngine/build/CMakeFiles/edit_cache.dir
-/home/andreiboieriu/Development/VkEngine/build/CMakeFiles/rebuild_cache.dir
-/home/andreiboieriu/Development/VkEngine/build/third_party/CMakeFiles/imgui.dir
-/home/andreiboieriu/Development/VkEngine/build/third_party/CMakeFiles/edit_cache.dir
-/home/andreiboieriu/Development/VkEngine/build/third_party/CMakeFiles/rebuild_cache.dir
-/home/andreiboieriu/Development/VkEngine/build/src/CMakeFiles/engine.dir
-/home/andreiboieriu/Development/VkEngine/build/src/CMakeFiles/edit_cache.dir
-/home/andreiboieriu/Development/VkEngine/build/src/CMakeFiles/rebuild_cache.dir

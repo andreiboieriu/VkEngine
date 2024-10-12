@@ -54,7 +54,7 @@ public:
         return (float)mExtent.width / (float)mExtent.height;
     }
 
-    void createSwapchain();
+    void createSwapchain(VkPresentModeKHR presentMode = VK_PRESENT_MODE_FIFO_KHR);
 
     VkSwapchainKHR getSwapchainHandle() {
         return mSwapchain->getHandle();
@@ -104,6 +104,7 @@ private:
     void initGLFW();
     void setWindowHints();
     void selectMonitor();
+    void createSurface();
 
     void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
     void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
@@ -124,6 +125,7 @@ private:
     GLFWmonitor *mMonitor = nullptr;
     const GLFWvidmode* mVideoMode = nullptr;
     VkSurfaceKHR mSurface = VK_NULL_HANDLE;
+    std::vector<VkPresentModeKHR> mAvailablePresentModes;
 
 	std::unique_ptr<Swapchain> mSwapchain = nullptr;
 
