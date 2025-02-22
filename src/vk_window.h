@@ -8,6 +8,7 @@
 #include <GLFW/glfw3.h>
 
 #include "vk_swapchain.h"
+#include <set>
 
 enum class InputState : uint8_t {
     IDLE,
@@ -76,6 +77,8 @@ public:
 
     void pollEvents();
 
+    void drawGui();
+
     // void toggleLockedCursor();
 
     bool isCursorLocked() {
@@ -126,6 +129,7 @@ private:
     const GLFWvidmode* mVideoMode = nullptr;
     VkSurfaceKHR mSurface = VK_NULL_HANDLE;
     std::vector<VkPresentModeKHR> mAvailablePresentModes;
+    int mSelectedPresentMode = 0;
 
 	std::unique_ptr<Swapchain> mSwapchain = nullptr;
 

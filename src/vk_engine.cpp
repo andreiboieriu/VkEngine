@@ -381,8 +381,6 @@ void VulkanEngine::initVulkan() {
     // init volk
     VK_CHECK(volkInitialize());
 
-    fmt::println("init vulkan start");
-
     // build vulkan instance using vkbootstrap
     vkb::InstanceBuilder builder{};
 
@@ -427,6 +425,7 @@ void VulkanEngine::initVulkan() {
     physicalDeviceFeatures.samplerAnisotropy = VK_TRUE;
 
     vkb::PhysicalDeviceSelector vkbSelector{vkbInstance};
+
     vkb::PhysicalDevice vkbPhysicalDevice = vkbSelector
         .set_minimum_version(1, 3)
         .set_required_features_13(features13)
@@ -437,8 +436,16 @@ void VulkanEngine::initVulkan() {
         .add_required_extension(VK_EXT_DESCRIPTOR_BUFFER_EXTENSION_NAME)
         .add_required_extension_features(descriptorBufferFeatures)
         .set_required_features(physicalDeviceFeatures)
-        .select()
-        .value();
+        .select_devices(vkb::DeviceSelectionMode::only_fully_suitable)
+        .value()[1]; // workaround for avoiding integrated gpu selection
+
+    for (auto dev : vkbSelector.select_device_names().value()) {
+        fmt::println("found device: {}", dev);
+    }
+
+    // vkbSelector.select_devices().value()[0]
+
+    fmt::println("Physical Device name: {}", vkbPhysicalDevice.name);
 
     // create logical device using vkbootstrap
     std::vector<vkb::CustomQueueDescription> queueDescriptions;
@@ -529,7 +536,7 @@ void VulkanEngine::initVMA() {
 }
 
 void VulkanEngine::initSwapchain() {
-    mWindow->createSwapchain();
+    mWindow->createSwapchain(VK_PRESENT_MODE_IMMEDIATE_KHR);
 
     // set draw image size to window size
     VkExtent3D drawImageExtent = {
@@ -1179,6 +1186,7 @@ void VulkanEngine::drawGui() {
             ImGui::End();
         }
         mScene->drawGui();
+        mWindow->drawGui();
     }
 
     // render ImGui

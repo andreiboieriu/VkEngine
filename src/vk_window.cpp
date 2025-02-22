@@ -121,9 +121,18 @@ void Window::createSwapchain(VkPresentModeKHR presentMode) {
         }
     }
 
-    if (std::find(mAvailablePresentModes.begin(), mAvailablePresentModes.end(), presentMode) == mAvailablePresentModes.end()) {
+    auto it = std::find(mAvailablePresentModes.begin(), mAvailablePresentModes.end(), presentMode);
+
+    if (it == mAvailablePresentModes.end()) {
         fmt::println("Unsupported present mode, defaulting to fifo");
         presentMode = VK_PRESENT_MODE_FIFO_KHR;
+        mSelectedPresentMode = std::find(
+            mAvailablePresentModes.begin(),
+            mAvailablePresentModes.end(),
+            presentMode
+        ) - mAvailablePresentModes.begin();
+    } else {
+        mSelectedPresentMode = it - mAvailablePresentModes.begin();
     }
 
     mSwapchain = std::make_unique<Swapchain>(mExtent, presentMode, mSurface);
@@ -313,7 +322,7 @@ void Window::resize(uint32_t width, uint32_t height) {
 
     // recreate swapchain
     mSwapchain = nullptr;
-    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_FIFO_KHR, mSurface);
+    mSwapchain = std::make_unique<Swapchain>(mExtent, mAvailablePresentModes[mSelectedPresentMode], mSurface);
 }
 
 VkImage Window::getNextSwapchainImage(VkSemaphore& semaphore) {
@@ -329,6 +338,21 @@ VkImage Window::getNextSwapchainImage(VkSemaphore& semaphore) {
 void Window::presentSwapchainImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore) {
     if (!mSwapchain->presentImage(graphicsQueue, waitSemaphore)) {
         // resize();
+    }
+}
+
+void Window::drawGui() {
+    if (ImGui::Begin("Window Config", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+        if (ImGui::SliderInt(
+            "Present Mode",
+            &mSelectedPresentMode,
+            0,
+            mAvailablePresentModes.size() - 1,
+            string_VkPresentModeKHR(mAvailablePresentModes[mSelectedPresentMode]))) {
+            resize(mExtent.width, mExtent.height);
+        }
+
+        ImGui::End();
     }
 }
 
