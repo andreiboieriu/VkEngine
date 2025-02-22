@@ -1,4 +1,3 @@
-#include "SDL_events.h"
 #include "vk_types.h"
 #include "vk_window.h"
 

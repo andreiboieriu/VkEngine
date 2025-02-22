@@ -1,43 +1,50 @@
 #pragma once
 
+#include <list>
 #include <string_view>
-
-#include <SDL.h>
-#include "glm/ext/vector_int2.hpp"
 #include "volk.h"
 
+#define GLFW_INCLUDE_NONE
+#include <GLFW/glfw3.h>
+
 #include "vk_swapchain.h"
-#include <set>
+
+enum class InputState : uint8_t {
+    IDLE,
+    PRESSED,
+    HELD,
+    RELEASED
+};
 
 struct MouseInput {
-    glm::ivec2 motion;
-    glm::ivec2 position;
-    float deltaWheel;
-    std::set<Uint8> pressedButtons;
-    std::set<Uint8> releasedButtons;
-    Uint32 state;
+    glm::vec<2, double> deltaPosition; // amount mouse moved in the last frame
+    glm::vec<2, double> position; // current mouse position
+    double deltaWheel; // amount mouse wheel moved in the last frame
+    std::unordered_map<int, InputState> buttonStates;
 };
 
 struct Input {
-    std::set<SDL_Keycode> pressedKeys;
-    std::set<SDL_Keycode> releasedKeys;
-    Uint8 keyboardState[SDL_NUM_SCANCODES];
+    std::unordered_map<int, InputState> keyStates;
     MouseInput mouse;
 };
 
 class Window {
 
 public:
-    Window(std::string_view name, VkExtent2D extent, SDL_WindowFlags windowFlags);
+    Window(std::string_view name, VkExtent2D extent);
     ~Window();
 
     bool shouldClose() {
-        return mShouldClose;
+        return glfwWindowShouldClose(mHandle);
     }
 
+    // TODO: this
     bool isMinimized() {
-        return mIsMinimized;
+        return false;
     }
+
+    std::vector<const char*> getGLFWInstanceExtensions();
+    void initImGuiGLFW();
 
     VkExtent2D getExtent() {
         return mExtent;
@@ -47,7 +54,7 @@ public:
         return (float)mExtent.width / (float)mExtent.height;
     }
 
-    void createSwapchain();
+    void createSwapchain(VkPresentModeKHR presentMode = VK_PRESENT_MODE_FIFO_KHR);
 
     VkSwapchainKHR getSwapchainHandle() {
         return mSwapchain->getHandle();
@@ -67,15 +74,9 @@ public:
 
     void presentSwapchainImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore);
 
-    void processSDLEvents();
+    void pollEvents();
 
-    void toggleLockedCursor();
-
-    void update();
-
-    struct SDL_Window* getHandle() {
-        return mHandle;
-    }
+    // void toggleLockedCursor();
 
     bool isCursorLocked() {
         return mLockedCursor;
@@ -85,22 +86,51 @@ public:
         return mInput;
     }
 
+    void resize(uint32_t width, uint32_t height);
+
 private:
-    void init(SDL_WindowFlags windowFlags);
-    void handleWindowEvent(SDL_WindowEventID event);
+
+    // caches newly pressed/released keys to update their state in the next frame
+    // without iterating through the states unordered_map
+    struct InputCache {
+        std::list<int> pressedKeys;
+        std::list<int> releasedKeys;
+        std::list<int> pressedMouseButtons;
+        std::list<int> releasedMouseButtons;
+    };
+
+    void init();
+    void initInput();
+    void initGLFW();
+    void setWindowHints();
+    void selectMonitor();
+    void createSurface();
+
+    void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+    void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
+    void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+    void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
+    void framebufferSizeCallback(GLFWwindow* window, int width, int height);
+    void setCallbacks();
+
+    void updateInput();
 
     void updateExtent();
-    void resize();
 
     const std::string mName;
     VkExtent2D mExtent;
 
-	// sdl window handle
-	struct SDL_Window* mHandle = nullptr;
+	// glfw window handle
+	GLFWwindow *mHandle = nullptr;
+    GLFWmonitor *mMonitor = nullptr;
+    const GLFWvidmode* mVideoMode = nullptr;
     VkSurfaceKHR mSurface = VK_NULL_HANDLE;
+    std::vector<VkPresentModeKHR> mAvailablePresentModes;
 
 	std::unique_ptr<Swapchain> mSwapchain = nullptr;
-	Input mInput;
+
+	Input mInput{};
+    InputCache mInputCache;
 
     bool mShouldResize = false;
     bool mShouldClose = false;

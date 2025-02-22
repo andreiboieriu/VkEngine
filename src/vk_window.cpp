@@ -1,168 +1,315 @@
 #include "vk_window.h"
 
-#include <SDL_events.h>
-#include <SDL_keycode.h>
-#include <SDL_mouse.h>
-#include <SDL_vulkan.h>
-#include <imgui_impl_sdl2.h>
-#include <vulkan/vulkan_core.h>
+#include <GLFW/glfw3.h>
+#include <cstdlib>
+#include <fmt/core.h>
+#include <vector>
+#include "compute_effects/compute_effect.h"
 #include "vk_engine.h"
+#include "vk_enum_string_helper.h"
+#include "vk_types.h"
+#include <imgui_impl_glfw.h>
 
-Window::Window(std::string_view name, VkExtent2D extent, SDL_WindowFlags windowFlags) : mName(name), mExtent(extent) {
-    init(windowFlags);
+Window::Window(std::string_view name, VkExtent2D extent) : mName(name), mExtent(extent) {
+    init();
 };
 
 Window::~Window() {
     mSwapchain = nullptr;
 
-    SDL_DestroyWindow(mHandle);
-
     if (mSurface != VK_NULL_HANDLE) {
         vkDestroySurfaceKHR(VulkanEngine::get().getInstance(), mSurface, nullptr);
     }
+
+    glfwDestroyWindow(mHandle);
+    glfwTerminate();
 }
 
-void Window::init(SDL_WindowFlags windowFlags) {
-    SDL_Init(SDL_INIT_VIDEO);
-
-    int displays = SDL_GetNumVideoDisplays();
-
-    if (displays == 1) {
-        mHandle = SDL_CreateWindow(
-        mName.c_str(),
-        SDL_WINDOWPOS_CENTERED,
-        SDL_WINDOWPOS_CENTERED,
-        mExtent.width,
-        mExtent.height,
-        windowFlags
-        );
-
-        return;
+void Window::initGLFW() {
+    if (!glfwInit()) {
+        fmt::println("Failed to initialize GLFW");
+        exit(EXIT_FAILURE);
     }
 
-    std::vector<SDL_Rect> displayBounds;
-    for (int i = 0; i < displays; i++) {
-        displayBounds.push_back(SDL_Rect());
-        SDL_GetDisplayBounds(i, &displayBounds.back());
+    if (!glfwVulkanSupported()) {
+        fmt::println("GLFW didn't find any vulkan support");
+        exit(EXIT_FAILURE);
+    }
+}
+
+void Window::setWindowHints() {
+    // disable opengl context creation
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+    glfwWindowHint(GLFW_MAXIMIZED, GLFW_FALSE);
+
+    // set video mode hints
+
+    // glfwWindowHint(GLFW_RED_BITS, mVideoMode->redBits);
+    // glfwWindowHint(GLFW_GREEN_BITS, mVideoMode->greenBits);
+    // glfwWindowHint(GLFW_BLUE_BITS, mVideoMode->blueBits);
+    // glfwWindowHint(GLFW_REFRESH_RATE, mVideoMode->refreshRate);
+}
+
+void Window::selectMonitor() {
+    mMonitor = glfwGetPrimaryMonitor();
+
+    mVideoMode = glfwGetVideoMode(mMonitor);
+
+    fmt::println("width: {}, height: {}, refresh: {}", mVideoMode->width, mVideoMode->height, mVideoMode->refreshRate);
+}
+
+void Window::initInput() {
+    for (int16_t i = GLFW_KEY_UNKNOWN; i <= GLFW_KEY_LAST; i++) {
+        mInput.keyStates[i] = InputState::IDLE;
     }
 
-    mHandle = SDL_CreateWindow(
-        mName.c_str(),
-        SDL_WINDOWPOS_CENTERED_DISPLAY(1),
-        SDL_WINDOWPOS_CENTERED_DISPLAY(1),
+    for (uint8_t i = GLFW_MOUSE_BUTTON_1; i <= GLFW_MOUSE_BUTTON_LAST; i++) {
+        mInput.mouse.buttonStates[i] = InputState::IDLE;
+    }
+}
+
+void Window::init() {
+    initGLFW();
+    initInput();
+    selectMonitor();
+    setWindowHints();
+
+    // create window
+    mHandle = glfwCreateWindow(
         mExtent.width,
         mExtent.height,
-        windowFlags
+        mName.c_str(),
+        nullptr,
+        nullptr
     );
+
+    // set window user pointer to allow non-static member functions to be set as callbacks
+    glfwSetWindowUserPointer(mHandle, this);
+
+    setCallbacks();
+
+    // enable raw mouse motion when cursor is locked for better input accuracy
+    if (glfwRawMouseMotionSupported()) {
+        glfwSetInputMode(mHandle, GLFW_RAW_MOUSE_MOTION, GLFW_TRUE);
+    }
 }
 
-void Window::createSwapchain() {
-    // mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_FIFO_KHR, mSurface);
-    mSwapchain = std::make_unique<Swapchain>(mExtent, VK_PRESENT_MODE_MAILBOX_KHR, mSurface);
+void Window::createSwapchain(VkPresentModeKHR presentMode) {
+    // get available present modes
+    if (mAvailablePresentModes.empty()) {
+        uint32_t presentModeCount = 0;
+        vkGetPhysicalDeviceSurfacePresentModesKHR(
+        VulkanEngine::get().getPhysicalDevice(),
+        mSurface,
+        &presentModeCount,
+        nullptr);
+
+        mAvailablePresentModes.resize(presentModeCount);
+
+        VK_CHECK(vkGetPhysicalDeviceSurfacePresentModesKHR(
+            VulkanEngine::get().getPhysicalDevice(),
+            mSurface,
+            &presentModeCount,
+            mAvailablePresentModes.data()
+        ));
+
+        fmt::println("Available present modes:");
+
+        for (auto& presentMode : mAvailablePresentModes) {
+            fmt::println("{}", string_VkPresentModeKHR(presentMode));
+        }
+    }
+
+    if (std::find(mAvailablePresentModes.begin(), mAvailablePresentModes.end(), presentMode) == mAvailablePresentModes.end()) {
+        fmt::println("Unsupported present mode, defaulting to fifo");
+        presentMode = VK_PRESENT_MODE_FIFO_KHR;
+    }
+
+    mSwapchain = std::make_unique<Swapchain>(mExtent, presentMode, mSurface);
+}
+
+void Window::createSurface() {
+    // create surface
+    VK_CHECK(glfwCreateWindowSurface(
+        VulkanEngine::get().getInstance(),
+        mHandle,
+        nullptr,
+        &mSurface
+    ));
 }
 
 VkSurfaceKHR Window::getSurface() {
     if (mSurface == VK_NULL_HANDLE) {
-        SDL_Vulkan_CreateSurface(mHandle, VulkanEngine::get().getInstance(), &mSurface);
+        createSurface();
     }
 
     return mSurface;
 }
 
-void Window::processSDLEvents() {
-    SDL_Event e;
+std::vector<const char*> Window::getGLFWInstanceExtensions() {
+    uint32_t count;
+    const char** ppExtensions = glfwGetRequiredInstanceExtensions(&count);
 
-    // clear previous input
-    mInput = Input{};
+    std::vector<const char*> extensions(count);
 
-    // Handle events on queue
-    while (SDL_PollEvent(&e) != 0) {
-        switch (e.type) {
-        // close the window when user alt-f4s or clicks the X button
-        case SDL_QUIT:
-            mShouldClose = true;
-            return;
+    for (uint32_t i = 0; i < count; i++) {
+        extensions[i] = ppExtensions[i];
+    }
 
-        case SDL_WINDOWEVENT:
-            handleWindowEvent((SDL_WindowEventID)e.window.event);
+    return extensions;
+}
+
+void Window::initImGuiGLFW() {
+    ImGui_ImplGlfw_InitForVulkan(mHandle, true);
+}
+
+void Window::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    switch (action) {
+        case GLFW_PRESS:
+            mInput.keyStates[scancode] = InputState::PRESSED;
+            mInputCache.pressedKeys.push_front(scancode);
             break;
 
-        case SDL_KEYDOWN:
-            mInput.pressedKeys.insert(e.key.keysym.sym);
+        case GLFW_RELEASE:
+            mInput.keyStates[scancode] = InputState::RELEASED;
+            mInputCache.releasedKeys.push_front(scancode);
+            break;
+    }
+}
+
+void Window::cursorPosCallback(GLFWwindow* window, double xpos, double ypos)
+{
+    mInput.mouse.deltaPosition = {xpos - mInput.mouse.position.x, ypos - mInput.mouse.position.y};
+    mInput.mouse.position = {xpos, ypos};
+}
+
+void Window::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
+{
+    switch (action) {
+        case GLFW_PRESS:
+            mInput.mouse.buttonStates[button] = InputState::PRESSED;
+            mInputCache.pressedMouseButtons.push_front(button);
             break;
 
-        case SDL_KEYUP:
-            mInput.releasedKeys.insert(e.key.keysym.sym);
+        case GLFW_RELEASE:
+            mInput.mouse.buttonStates[button] = InputState::RELEASED;
+            mInputCache.releasedMouseButtons.push_front(button);
             break;
+    }
+}
 
-        case SDL_MOUSEMOTION:
-            mInput.mouse.motion.x = e.motion.xrel;
-            mInput.mouse.motion.y = e.motion.yrel;
-            break;
+void Window::scrollCallback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    mInput.mouse.deltaWheel = yoffset;
+}
 
-        case SDL_MOUSEBUTTONUP:
-            mInput.mouse.releasedButtons.insert(e.button.button);
-            break;
+void Window::framebufferSizeCallback(GLFWwindow* window, int width, int height)
+{
+    resize(width, height);
+}
 
-        case SDL_MOUSEBUTTONDOWN:
-            mInput.mouse.pressedButtons.insert(e.button.button);
-            break;
-
-        case SDL_MOUSEWHEEL:
-            mInput.mouse.deltaWheel = e.wheel.preciseY;
-            break;
-
-        default:
-            break;
+void Window::setCallbacks() {
+    glfwSetKeyCallback(
+        mHandle,
+        [](GLFWwindow* window, int key, int scancode, int action, int mods) {
+            static_cast<Window*>(glfwGetWindowUserPointer(window))->keyCallback(
+                window,
+                key,
+                scancode,
+                action,
+                mods
+            );
         }
+    );
 
-        // send SDL event to imgui
-        ImGui_ImplSDL2_ProcessEvent(&e);
+    glfwSetCursorPosCallback(
+        mHandle,
+        [](GLFWwindow* window, double xpos, double ypos) {
+            static_cast<Window*>(glfwGetWindowUserPointer(window))->cursorPosCallback(
+                window,
+                xpos,
+                ypos
+            );
+        }
+    );
+
+    glfwSetMouseButtonCallback(
+        mHandle,
+        [](GLFWwindow* window, int button, int action, int mods) {
+            static_cast<Window*>(glfwGetWindowUserPointer(window))->mouseButtonCallback(
+                window,
+                button,
+                action,
+                mods
+            );
+        }
+    );
+
+    glfwSetScrollCallback(
+        mHandle,
+        [](GLFWwindow* window, double xoffset, double yoffset) {
+            static_cast<Window*>(glfwGetWindowUserPointer(window))->scrollCallback(
+                window,
+                xoffset,
+                yoffset
+            );
+        }
+    );
+
+    glfwSetFramebufferSizeCallback(
+        mHandle,
+        [](GLFWwindow* window, int width, int height) {
+            static_cast<Window*>(glfwGetWindowUserPointer(window))->framebufferSizeCallback(
+                window,
+                width,
+                height
+            );
+        }
+    );
+}
+
+void Window::updateInput() {
+    // update the newly pressed keys's state to HELD
+    for (const int key : mInputCache.pressedKeys) {
+        mInput.keyStates[key] = InputState::HELD;
     }
 
-    // copy keyboard state
-    memcpy(mInput.keyboardState, SDL_GetKeyboardState(nullptr), 512 * sizeof(Uint8));
-
-    // get mouse state
-    mInput.mouse.state = SDL_GetMouseState(&mInput.mouse.position.x, &mInput.mouse.position.y);
-}
-
-void Window::handleWindowEvent(SDL_WindowEventID event) {
-    switch (event) {
-    case SDL_WINDOWEVENT_MINIMIZED:
-        mIsMinimized = true;
-        break;
-
-    case SDL_WINDOWEVENT_RESTORED:
-        mIsMinimized = false;
-        break;
-
-    case SDL_WINDOWEVENT_RESIZED:
-        mShouldResize = true;
-        break;
-
-    default:
-        break;
+    // update the newly released keys's state to IDLE
+    for (const int key : mInputCache.releasedKeys) {
+        mInput.keyStates[key] = InputState::IDLE;
     }
+
+    // update the newly pressed mouse buttons's state to HELD
+    for (const int button : mInputCache.pressedKeys) {
+        mInput.mouse.buttonStates[button] = InputState::HELD;
+    }
+
+    // update the newly pressed mouse buttons's state to IDLE
+    for (const int button : mInputCache.releasedKeys) {
+        mInput.mouse.buttonStates[button] = InputState::IDLE;
+    }
+
+    // reset input cache
+    mInputCache = {};
+
+    // reset mouse deltas
+    mInput.mouse.deltaPosition = {0, 0};
+    mInput.mouse.deltaWheel = 0.f;
 }
 
-void Window::updateExtent() {
-    int w, h;
-    SDL_GetWindowSize(mHandle, &w, &h);
-
-    // get surface capabilities to correct window size (SDL bug)
-    VkSurfaceCapabilitiesKHR surfaceCapabilities{};
-    VK_CHECK(vkGetPhysicalDeviceSurfaceCapabilitiesKHR(VulkanEngine::get().getPhysicalDevice(), mSurface, &surfaceCapabilities));
-
-    mExtent.width = SDL_clamp(w, surfaceCapabilities.minImageExtent.width, surfaceCapabilities.maxImageExtent.width);
-    mExtent.height = SDL_clamp(h, surfaceCapabilities.minImageExtent.height, surfaceCapabilities.maxImageExtent.height);
+void Window::pollEvents() {
+    updateInput();
+    glfwPollEvents();
 }
 
-void Window::resize() {
+void Window::resize(uint32_t width, uint32_t height) {
     // wait for gpu to finish tasks
     vkDeviceWaitIdle(VulkanEngine::get().getDevice());
 
-    updateExtent();
+    // update extent
+    mExtent = {width, height};
 
     // recreate swapchain
     mSwapchain = nullptr;
@@ -172,27 +319,27 @@ void Window::resize() {
 VkImage Window::getNextSwapchainImage(VkSemaphore& semaphore) {
     VkImage image = mSwapchain->getNextImage(semaphore);
 
-    if (image == VK_NULL_HANDLE) {
-        resize();
-    }
+    // if (image == VK_NULL_HANDLE) {
+    //     resize();
+    // }
 
     return image;
 }
 
 void Window::presentSwapchainImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore) {
     if (!mSwapchain->presentImage(graphicsQueue, waitSemaphore)) {
-        resize();
+        // resize();
     }
 }
 
-void Window::toggleLockedCursor() {
-    mLockedCursor = !mLockedCursor;
+// void Window::toggleLockedCursor() {
+//     mLockedCursor = !mLockedCursor;
 
-    if (mLockedCursor) {
-        SDL_SetRelativeMouseMode(SDL_TRUE);
-        SDL_ShowCursor(SDL_DISABLE);
-    } else {
-        SDL_SetRelativeMouseMode(SDL_FALSE);
-        SDL_ShowCursor(SDL_ENABLE);
-    }
-}
+//     if (mLockedCursor) {
+//         SDL_SetRelativeMouseMode(SDL_TRUE);
+//         SDL_ShowCursor(SDL_DISABLE);
+//     } else {
+//         SDL_SetRelativeMouseMode(SDL_FALSE);
+//         SDL_ShowCursor(SDL_ENABLE);
+//     }
+// }

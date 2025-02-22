@@ -63,11 +63,14 @@ VkImage Swapchain::getNextImage(VkSemaphore& semaphore) {
     );
 
     if (e == VK_ERROR_OUT_OF_DATE_KHR || e == VK_SUBOPTIMAL_KHR) {
-        vkDestroySemaphore(VulkanEngine::get().getDevice(), semaphore, nullptr);
-        VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
-        VK_CHECK(vkCreateSemaphore(VulkanEngine::get().getDevice(), &semaphoreCreateInfo, nullptr, &semaphore));
+        // vkDestroySemaphore(VulkanEngine::get().getDevice(), semaphore, nullptr);
+        // VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
+        // VK_CHECK(vkCreateSemaphore(VulkanEngine::get().getDevice(), &semaphoreCreateInfo, nullptr, &semaphore));
     
         return VK_NULL_HANDLE;
+    } else if (e != VK_SUCCESS) {
+        fmt::println("Failed to acquire swapchain image\n");
+        exit(EXIT_FAILURE);
     }
 
     return mImages[mCurrentImageIndex];
@@ -81,6 +84,9 @@ bool Swapchain::presentImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore) {
 
     if (e == VK_ERROR_OUT_OF_DATE_KHR || e == VK_SUBOPTIMAL_KHR) {
         return false;
+    } else if (e != VK_SUCCESS)  {
+        fmt::println("Failed to present swapchain image\n");
+        exit(EXIT_FAILURE);
     }
 
     return true;

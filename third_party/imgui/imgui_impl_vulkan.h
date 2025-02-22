@@ -55,9 +55,9 @@
 
 // Vulkan includes
 #ifdef IMGUI_IMPL_VULKAN_USE_VOLK
-#include <Volk/volk.h>
+#include <volk.h>
 #else
-#include "volk.h"
+#include <volk.h>
 #endif
 #if defined(VK_VERSION_1_3) || defined(VK_KHR_dynamic_rendering)
 #define IMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
@@ -98,7 +98,7 @@ struct ImGui_ImplVulkan_InitInfo
     VkDeviceSize                    MinAllocationSize;      // Minimum allocation size. Set to 1024*1024 to satisfy zealous best practices validation layer and waste a little memory.
 };
 
-// Called by user code
+// Follow "Getting Started" link and check examples/ folder to learn about using backends!
 IMGUI_IMPL_API bool         ImGui_ImplVulkan_Init(ImGui_ImplVulkan_InitInfo* info);
 IMGUI_IMPL_API void         ImGui_ImplVulkan_Shutdown();
 IMGUI_IMPL_API void         ImGui_ImplVulkan_NewFrame();
