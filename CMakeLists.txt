@@ -1,4 +1,4 @@
-﻿cmake_minimum_required (VERSION 3.11)
+cmake_minimum_required (VERSION 3.11)
 
 project ("vulkan_engine")
 
@@ -32,6 +32,6 @@ foreach(GLSL ${GLSL_SOURCE_FILES})
 endforeach(GLSL)
 
 add_custom_target(
-    Shaders 
+    Shaders
     DEPENDS ${SPIRV_BINARY_FILES}
     )

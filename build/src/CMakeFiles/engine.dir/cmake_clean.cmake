@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/camera.cpp.o"
   "CMakeFiles/engine.dir/camera.cpp.o.d"
-  "CMakeFiles/engine.dir/cmake_pch.hxx.gch"
-  "CMakeFiles/engine.dir/cmake_pch.hxx.gch.d"
+  "CMakeFiles/engine.dir/cmake_pch.hxx.pch"
+  "CMakeFiles/engine.dir/cmake_pch.hxx.pch.d"
   "CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o"
   "CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o.d"
   "CMakeFiles/engine.dir/deletion_queue.cpp.o"

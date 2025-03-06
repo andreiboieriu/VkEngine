@@ -20,8 +20,8 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // This file was generated with a script.
-// Generated 2024-10-06 21:57:35.833408 UTC
-// This header was generated with sol v3.3.1 (revision 2b0d2fe8)
+// Generated 2025-03-06 15:57:10.946138 UTC
+// This header was generated with sol v3.3.1 (revision 620c9ae5)
 // https://github.com/ThePhD/sol2
 
 #ifndef SOL_SINGLE_INCLUDE_SOL_FORWARD_HPP
@@ -37,9 +37,9 @@
 #include <sol/config.hpp>
 
 #define SOL_VERSION_MAJOR 3
-#define SOL_VERSION_MINOR 2
-#define SOL_VERSION_PATCH 3
-#define SOL_VERSION_STRING "3.2.3"
+#define SOL_VERSION_MINOR 5
+#define SOL_VERSION_PATCH 0
+#define SOL_VERSION_STRING "3.5.0"
 #define SOL_VERSION ((SOL_VERSION_MAJOR * 100000) + (SOL_VERSION_MINOR * 100) + (SOL_VERSION_PATCH))
 
 #define SOL_TOKEN_TO_STRING_POST_EXPANSION_I_(_TOKEN) #_TOKEN
@@ -48,6 +48,7 @@
 #define SOL_CONCAT_TOKENS_POST_EXPANSION_I_(_LEFT, _RIGHT) _LEFT##_RIGHT
 #define SOL_CONCAT_TOKENS_I_(_LEFT, _RIGHT) SOL_CONCAT_TOKENS_POST_EXPANSION_I_(_LEFT, _RIGHT)
 
+#define SOL_RAW_USE(SYMBOL) SYMBOL
 #define SOL_RAW_IS_ON(OP_SYMBOL) ((3 OP_SYMBOL 3) != 0)
 #define SOL_RAW_IS_OFF(OP_SYMBOL) ((3 OP_SYMBOL 3) == 0)
 #define SOL_RAW_IS_DEFAULT_ON(OP_SYMBOL) ((3 OP_SYMBOL 3) > 3)
@@ -57,6 +58,7 @@
 #define SOL_IS_OFF(OP_SYMBOL) SOL_RAW_IS_OFF(OP_SYMBOL ## _I_)
 #define SOL_IS_DEFAULT_ON(OP_SYMBOL) SOL_RAW_IS_DEFAULT_ON(OP_SYMBOL ## _I_)
 #define SOL_IS_DEFAULT_OFF(OP_SYMBOL) SOL_RAW_IS_DEFAULT_OFF(OP_SYMBOL ## _I_)
+#define SOL_USE(SYMBOL) SOL_RAW_USE(SYMBOL ## _I_)
 
 #define SOL_ON          |
 #define SOL_OFF         ^

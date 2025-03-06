@@ -20,11 +20,15 @@ Scene3D::Scene3D(const std::string& name) : mName(name) {
 
     // station.bindGLTF("sci_fi_hangar");
 
-    // Entity& spaceship = createEntity(UUID("fighter_spaceship"));
-    // spaceship.addComponent<Transform>();
-    // spaceship.addComponent<GLTF>();
-    // spaceship.addComponent<Script>();
-    // spaceship.addComponent<SphereCollider>();
+    Entity& spaceship = createEntity(UUID("fighter_spaceship2"));
+    spaceship.addComponent<Transform>();
+    spaceship.addComponent<GLTF>();
+    spaceship.addComponent<Script>();
+    spaceship.addComponent<SphereCollider>();
+
+    spaceship.bindGLTF("fighter_spaceship");
+
+    spaceship.getComponent<Transform>().position = glm::vec3(2.f, 0.f, -2.0f);
 
     Entity& asteroid = createEntity(UUID("fighter_spaceship"));
     asteroid.addComponent<Transform>();
@@ -37,6 +41,7 @@ Scene3D::Scene3D(const std::string& name) : mName(name) {
 
     mScriptManager->loadScript("scripts/script.lua");
     mScriptManager->bindScript("scripts/script.lua", asteroid);
+    mScriptManager->bindScript("scripts/script.lua", spaceship);
 
     Entity& mainCamera = createEntity(UUID("main_camera"));
     mainCamera.addComponent<Transform>();
@@ -49,7 +54,7 @@ Scene3D::Scene3D(const std::string& name) : mName(name) {
     // asteroidSpawner.bindScript("AsteroidSpawnerScript");
 
     mRootEntityUUIDs.push_back(asteroid.getUUID());
-    // mRootEntityUUIDs.push_back(spaceship.mUUID);
+    mRootEntityUUIDs.push_back(spaceship.getUUID());
     mRootEntityUUIDs.push_back(mainCamera.getUUID());
 
     mMainCameraHolder = mainCamera.getUUID();

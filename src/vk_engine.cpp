@@ -437,7 +437,7 @@ void VulkanEngine::initVulkan() {
         .add_required_extension_features(descriptorBufferFeatures)
         .set_required_features(physicalDeviceFeatures)
         .select_devices(vkb::DeviceSelectionMode::only_fully_suitable)
-        .value()[1]; // workaround for avoiding integrated gpu selection
+        .value()[0]; // workaround for avoiding integrated gpu selection
 
     for (auto dev : vkbSelector.select_device_names().value()) {
         fmt::println("found device: {}", dev);

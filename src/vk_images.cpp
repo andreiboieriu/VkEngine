@@ -10,6 +10,7 @@ void vkutil::transitionImage(VkCommandBuffer commandBuffer, VkImage image, VkIma
     imageBarrier.sType = VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER_2;
     imageBarrier.pNext = nullptr;
 
+    // TODO: determine optimal stages and access masks
     imageBarrier.srcStageMask = VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT;
     imageBarrier.srcAccessMask = VK_ACCESS_2_MEMORY_WRITE_BIT;
     imageBarrier.dstStageMask = VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT;
@@ -147,4 +148,3 @@ void vkutil::generateMipmaps(VkCommandBuffer commandBuffer, VkImage image, VkExt
     // transition all mip levels into the final read_only layout
     transitionImage(commandBuffer, image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 }
-

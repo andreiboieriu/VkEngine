@@ -66,6 +66,47 @@
             ],
             "ParentUUID": "",
             "UUID": "fighter_spaceship"
+        },
+        {
+            "ChildrenUUIDs": [],
+            "Components": [
+                {
+                    "GLTF": {
+                        "Name": "fighter_spaceship"
+                    }
+                },
+                {
+                    "Transform": {
+                        "Position": [
+                            2.0,
+                            0.0,
+                            -2.0
+                        ],
+                        "Rotation": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "Scale": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    }
+                },
+                {
+                    "Undefined": {
+                        "Name": "scripts/script.lua"
+                    }
+                },
+                {
+                    "Undefined": {
+                        "radius": 0.0
+                    }
+                }
+            ],
+            "ParentUUID": "",
+            "UUID": "fighter_spaceship2"
         }
     ],
     "Name": "testScene"
