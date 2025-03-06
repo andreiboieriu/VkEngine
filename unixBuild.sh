@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-# CC=$(which clang)
-# CXX=$(which clang++)
+# fixes "Authorization required, but no authorization protocol specified" error
+# echo "xhost si:localuser:root" >> ~/.bashrc
 
 mkdir -p build
 cd build
-# cmake -D CMAKE_C_COMPILER=clang -D CMAKE_CXX_COMPILER=clang++ -D CMAKE_EXPORT_COMPILE_COMMANDS=1 ..
 cmake -D CMAKE_C_COMPILER=clang -D CMAKE_CXX_COMPILER=clang++ -D CMAKE_EXPORT_COMPILE_COMMANDS=1 ..
 cp compile_commands.json ..
 
