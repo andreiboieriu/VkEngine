@@ -13,4 +13,6 @@ cd ..
 
 mkdir -p bin
 cp ./build/src/engine ./bin/
+
+# running with sudo might make VK_PRESENT_MODE_IMMEDIATE_KHR available
 sudo XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR ./bin/engine

@@ -78,7 +78,7 @@ void Scene3D::init() {
         sizeof(SceneData),
         VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
         VMA_MEMORY_USAGE_CPU_TO_GPU
-        );
+    );
 
     // add scene data buffer to deletion queue
     mDeletionQueue.push([&]() {
