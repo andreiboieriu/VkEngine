@@ -3,10 +3,13 @@
 #include <volk.h>
 #include <vector>
 
+// forward reference
+class VulkanEngine;
+
 class Swapchain {
 
 public:
-    Swapchain(VkExtent2D extent, VkPresentModeKHR presentMode, VkSurfaceKHR surface);
+    Swapchain(VkExtent2D extent, VkPresentModeKHR presentMode, VkSurfaceKHR surface, VulkanEngine& vkEngine);
     ~Swapchain();
 
     VkSwapchainKHR getHandle() {
@@ -26,6 +29,8 @@ public:
 
 private:
     void init(VkPresentModeKHR presentMode, VkSurfaceKHR surface);
+
+    VulkanEngine& mVkEngine;
 
     VkExtent2D mExtent;
     VkFormat mImageFormat;

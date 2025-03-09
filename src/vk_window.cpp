@@ -10,7 +10,11 @@
 #include "vk_types.h"
 #include <imgui_impl_glfw.h>
 
-Window::Window(std::string_view name, VkExtent2D extent) : mName(name), mExtent(extent) {
+Window::Window(
+    std::string_view name,
+    VkExtent2D extent,
+    VulkanEngine& vkEngine
+) : mName(name), mExtent(extent), mVkEngine(vkEngine) {
     init();
 };
 
@@ -18,7 +22,7 @@ Window::~Window() {
     mSwapchain = nullptr;
 
     if (mSurface != VK_NULL_HANDLE) {
-        vkDestroySurfaceKHR(VulkanEngine::get().getInstance(), mSurface, nullptr);
+        vkDestroySurfaceKHR(mVkEngine.getInstance(), mSurface, nullptr);
     }
 
     glfwDestroyWindow(mHandle);
@@ -100,7 +104,7 @@ void Window::createSwapchain(VkPresentModeKHR presentMode) {
     if (mAvailablePresentModes.empty()) {
         uint32_t presentModeCount = 0;
         vkGetPhysicalDeviceSurfacePresentModesKHR(
-        VulkanEngine::get().getPhysicalDevice(),
+        mVkEngine.getPhysicalDevice(),
         mSurface,
         &presentModeCount,
         nullptr);
@@ -108,7 +112,7 @@ void Window::createSwapchain(VkPresentModeKHR presentMode) {
         mAvailablePresentModes.resize(presentModeCount);
 
         VK_CHECK(vkGetPhysicalDeviceSurfacePresentModesKHR(
-            VulkanEngine::get().getPhysicalDevice(),
+            mVkEngine.getPhysicalDevice(),
             mSurface,
             &presentModeCount,
             mAvailablePresentModes.data()
@@ -135,13 +139,13 @@ void Window::createSwapchain(VkPresentModeKHR presentMode) {
         mSelectedPresentMode = it - mAvailablePresentModes.begin();
     }
 
-    mSwapchain = std::make_unique<Swapchain>(mExtent, presentMode, mSurface);
+    mSwapchain = std::make_unique<Swapchain>(mExtent, presentMode, mSurface, mVkEngine);
 }
 
 void Window::createSurface() {
     // create surface
     VK_CHECK(glfwCreateWindowSurface(
-        VulkanEngine::get().getInstance(),
+        mVkEngine.getInstance(),
         mHandle,
         nullptr,
         &mSurface
@@ -315,14 +319,14 @@ void Window::pollEvents() {
 
 void Window::resize(uint32_t width, uint32_t height) {
     // wait for gpu to finish tasks
-    vkDeviceWaitIdle(VulkanEngine::get().getDevice());
+    vkDeviceWaitIdle(mVkEngine.getDevice());
 
     // update extent
     mExtent = {width, height};
 
     // recreate swapchain
     mSwapchain = nullptr;
-    mSwapchain = std::make_unique<Swapchain>(mExtent, mAvailablePresentModes[mSelectedPresentMode], mSurface);
+    mSwapchain = std::make_unique<Swapchain>(mExtent, mAvailablePresentModes[mSelectedPresentMode], mSurface, mVkEngine);
 }
 
 VkImage Window::getNextSwapchainImage(VkSemaphore& semaphore) {

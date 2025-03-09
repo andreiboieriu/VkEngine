@@ -101,14 +101,17 @@ void ScriptManager::initializeLuaState() {
     );
 
     mLua["Time"] = mLua.create_table_with(
-        "deltaTime", VulkanEngine::get().getDeltaTime()
+        "deltaTime", mVkEngine.getDeltaTime()
     );
 
     mIsInitialized = true;
     fmt::println("Initialized lua state");
 }
 
-ScriptManager::ScriptManager(entt::registry& registry) : mRegistry(registry), mInput(VulkanEngine::get().getInput()) {
+ScriptManager::ScriptManager(
+    entt::registry& registry,
+    VulkanEngine& vkEngine
+) : mVkEngine(vkEngine), mRegistry(registry), mInput(mVkEngine.getInput()) {
     initializeLuaState();
 }
 
@@ -164,7 +167,7 @@ void ScriptManager::bindScript(const std::string& scriptName, Entity& entity) {
 }
 
 void ScriptManager::update() {
-    mLua["Time"]["deltaTime"] = VulkanEngine::get().getDeltaTime();
+    mLua["Time"]["deltaTime"] = mVkEngine.getDeltaTime();
 }
 
 void ScriptManager::onUpdate() {

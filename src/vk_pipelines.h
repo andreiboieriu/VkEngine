@@ -1,19 +1,18 @@
-﻿#pragma once 
+#pragma once
+
 #include "vk_types.h"
 #include <span>
 
 namespace vkutil {
 
 bool loadShaderModule(const char* filePath, VkDevice device, VkShaderModule* outShaderModule);
-VkPipelineLayout createPipelineLayout(std::span<VkDescriptorSetLayout> descriptorSetLayouts, std::span<VkPushConstantRange> pushConstantRanges);
+VkPipelineLayout createPipelineLayout(std::span<VkDescriptorSetLayout> descriptorSetLayouts, std::span<VkPushConstantRange> pushConstantRanges, VkDevice device);
 
 }; // namespace vkutil
 
 class PipelineBuilder {
 public:
-    PipelineBuilder() {
-        clear();
-    }
+    PipelineBuilder();
 
     PipelineBuilder& clear();
 
@@ -44,6 +43,4 @@ private:
     VkPipelineDepthStencilStateCreateInfo mDepthStencil;
     VkPipelineRenderingCreateInfo mRenderInfo;
     VkFormat mColorAttachmentformat;
-
-
 };

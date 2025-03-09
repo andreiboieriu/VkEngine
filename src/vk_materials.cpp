@@ -1,14 +1,13 @@
 #include "vk_materials.h"
 #include <fmt/core.h>
 #include "vk_descriptors.h"
-#include "vk_initializers.h"
 #include "vk_pipelines.h"
 #include "vk_types.h"
 #include "volk.h"
 #include "vk_engine.h"
 
-MaterialManager::MaterialManager() {
-    buildPipelines(VulkanEngine::get().getDevice(), VulkanEngine::get().getDrawImageFormat(), VulkanEngine::get().getDepthImageFormat());
+MaterialManager::MaterialManager(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
+    buildPipelines(mVkEngine.getDevice(), mVkEngine.getDrawImageFormat(), mVkEngine.getDepthImageFormat());
 }
 
 MaterialManager::~MaterialManager() {
@@ -56,7 +55,7 @@ void MaterialManager::buildPipelines(VkDevice device, VkFormat colorFormat, VkFo
         mMaterialDescriptorLayout
     };
 
-    VkPipelineLayout newLayout = vkutil::createPipelineLayout(layouts, pushConstants);
+    VkPipelineLayout newLayout = vkutil::createPipelineLayout(layouts, pushConstants, mVkEngine.getDevice());
 
     mOpaquePipeline.layout = newLayout;
     mTransparentPipeline.layout = newLayout;
@@ -92,7 +91,7 @@ void MaterialManager::buildPipelines(VkDevice device, VkFormat colorFormat, VkFo
 }
 
 void MaterialManager::freeResources() {
-    VkDevice device = VulkanEngine::get().getDevice();
+    VkDevice device = mVkEngine.getDevice();
 
     vkDestroyDescriptorSetLayout(device, mSceneDescriptorLayout, nullptr);
     vkDestroyDescriptorSetLayout(device, mMaterialDescriptorLayout, nullptr);
@@ -119,8 +118,7 @@ MaterialInstance MaterialManager::writeMaterial(VkDevice device, MaterialPass pa
         materialInstance.pipeline = &mOpaquePipelineCulled;
     }
 
-    materialInstance.descriptorOffset = VulkanEngine::get().getDescriptorManager().createMaterialDescriptor(resources);
-
+    materialInstance.descriptorOffset = mVkEngine.getDescriptorManager().createMaterialDescriptor(resources);
 
     return materialInstance;
 }

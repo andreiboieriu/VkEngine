@@ -10,6 +10,9 @@
 #include "vk_swapchain.h"
 #include <set>
 
+// forward reference
+class VulkanEngine;
+
 enum class InputState : uint8_t {
     IDLE,
     PRESSED,
@@ -32,7 +35,7 @@ struct Input {
 class Window {
 
 public:
-    Window(std::string_view name, VkExtent2D extent);
+    Window(std::string_view name, VkExtent2D extent, VulkanEngine& vkEngine);
     ~Window();
 
     bool shouldClose() {
@@ -119,6 +122,8 @@ private:
     void updateInput();
 
     void updateExtent();
+
+    VulkanEngine& mVkEngine;
 
     const std::string mName;
     VkExtent2D mExtent;

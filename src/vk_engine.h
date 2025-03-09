@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include "compute_effects/compute_effect.h"
 #include "vk_materials.h"
@@ -82,15 +82,13 @@ public:
 		bool enableDrawSorting = true;
 	};
 
-	static VulkanEngine& get();
-
-	//initializes everything in the engine
+	// initializes everything in the engine
 	void init();
 
-	//shuts down the engine
+	// shuts down the engine
 	void cleanup();
 
-	//run main loop
+	// run main loop
 	void run();
 
 	FrameData& getCurrentFrame() {

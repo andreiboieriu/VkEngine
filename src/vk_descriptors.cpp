@@ -95,7 +95,11 @@ DescriptorWriter& DescriptorWriter::updateSet(VkDevice device, VkDescriptorSet s
 
 // ------------ DESCRIPTOR MANAGER -------------------
 
-DescriptorManager::DescriptorManager(VkDescriptorSetLayout globalLayout, VkDescriptorSetLayout materialLayout) : mGlobalLayout(globalLayout), mMaterialLayout(materialLayout) {
+DescriptorManager::DescriptorManager(
+    VkDescriptorSetLayout globalLayout,
+    VkDescriptorSetLayout materialLayout,
+    VulkanEngine& vkEngine
+) : mGlobalLayout(globalLayout), mMaterialLayout(materialLayout), mVkEngine(vkEngine) {
     createDescriptorBuffers();
 }
 
@@ -108,14 +112,14 @@ void DescriptorManager::init() {
 }
 
 void DescriptorManager::createDescriptorBuffers() {
-    VkDevice device = VulkanEngine::get().getDevice();
+    VkDevice device = mVkEngine.getDevice();
 
     // get set layout descriptor sizes
     vkGetDescriptorSetLayoutSizeEXT(device, mGlobalLayout, &mGlobalLayoutSize);
     vkGetDescriptorSetLayoutSizeEXT(device, mMaterialLayout, &mMaterialLayoutSize);
 
     // adjust set layout size to satisfy alignment requirements
-    mDescriptorBufferProperties = VulkanEngine::get().getDescriptorBufferProperties();
+    mDescriptorBufferProperties = mVkEngine.getDescriptorBufferProperties();
 
     mGlobalLayoutSize = alignedSize(mGlobalLayoutSize, mDescriptorBufferProperties.descriptorBufferOffsetAlignment);
     mMaterialLayoutSize = alignedSize(mMaterialLayoutSize, mDescriptorBufferProperties.descriptorBufferOffsetAlignment);
@@ -123,13 +127,13 @@ void DescriptorManager::createDescriptorBuffers() {
     // get descriptor binding offsets
     for (unsigned int i = 0; i < 4; i++)
         vkGetDescriptorSetLayoutBindingOffsetEXT(device, mGlobalLayout, i, &mGlobalLayoutOffset[i]);
-    
+
     for (unsigned int i = 0; i < 6; i++)
         vkGetDescriptorSetLayoutBindingOffsetEXT(device, mMaterialLayout, i, &mMaterialLayoutOffset[i]);
 
 
     // create descriptor buffer
-    mDescriptorBuffer = VulkanEngine::get().createBuffer(
+    mDescriptorBuffer = mVkEngine.createBuffer(
         mMaterialLayoutSize * 10000,
         VK_BUFFER_USAGE_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT | VK_BUFFER_USAGE_SAMPLER_DESCRIPTOR_BUFFER_BIT_EXT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
         VMA_MEMORY_USAGE_CPU_TO_GPU
@@ -146,7 +150,7 @@ void DescriptorManager::bindDescriptorBuffers(VkCommandBuffer commandBuffer) {
 
     vkCmdBindDescriptorBuffersEXT(commandBuffer, 1, &bindingInfo);
 }
- 
+
 VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView) {
     // create scene data descriptor
     VkDescriptorAddressInfoEXT addressInfo{};
@@ -161,7 +165,7 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
     descriptorInfo.data.pUniformBuffer = &addressInfo;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &descriptorInfo,
         mDescriptorBufferProperties.uniformBufferDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset[0]
@@ -172,7 +176,7 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
 
     imageDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
     imageDescriptor.imageView = irradianceMapView;
-    imageDescriptor.sampler = VulkanEngine::get().getDefaultLinearSampler();
+    imageDescriptor.sampler = mVkEngine.getDefaultLinearSampler();
 
     VkDescriptorGetInfoEXT imageDescriptorInfo{};
     imageDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
@@ -180,7 +184,7 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
     imageDescriptorInfo.data.pCombinedImageSampler = &imageDescriptor;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &imageDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset[1]
@@ -191,7 +195,7 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
 
     prefilteredDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
     prefilteredDescriptor.imageView = prefilteredEnvMapView;
-    prefilteredDescriptor.sampler = VulkanEngine::get().getDefaultLinearSampler();
+    prefilteredDescriptor.sampler = mVkEngine.getDefaultLinearSampler();
 
     VkDescriptorGetInfoEXT prefilteredDescriptorInfo{};
     prefilteredDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
@@ -199,7 +203,7 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
     prefilteredDescriptorInfo.data.pCombinedImageSampler = &prefilteredDescriptor;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &prefilteredDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset[2]
@@ -210,7 +214,7 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
 
     brdflutDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
     brdflutDescriptor.imageView = brdflutView;
-    brdflutDescriptor.sampler = VulkanEngine::get().getDefaultLinearSampler();
+    brdflutDescriptor.sampler = mVkEngine.getDefaultLinearSampler();
 
     VkDescriptorGetInfoEXT brdflutDescriptorInfo{};
     brdflutDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
@@ -218,7 +222,7 @@ VkDeviceSize DescriptorManager::createSceneDescriptor(VkDeviceAddress bufferAddr
     brdflutDescriptorInfo.data.pCombinedImageSampler = &brdflutDescriptor;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &brdflutDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mGlobalLayoutOffset[3]
@@ -249,7 +253,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
     descriptorInfo.data.pUniformBuffer = &addressInfo;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &descriptorInfo,
         mDescriptorBufferProperties.uniformBufferDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[0]
@@ -268,7 +272,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
     imageDescriptorInfo.data.pCombinedImageSampler = &imageDescriptor;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &imageDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[1]
@@ -287,7 +291,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
     metalDescriptorInfo.data.pCombinedImageSampler = &metalDescriptor;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &metalDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[2]
@@ -306,7 +310,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
     normalDescriptorInfo.data.pCombinedImageSampler = &normalDescriptor;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &normalDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[3]
@@ -325,7 +329,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
     emissiveDescriptorInfo.data.pCombinedImageSampler = &emissiveDescriptor;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &emissiveDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[4]
@@ -344,7 +348,7 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
     occlusionDescriptorInfo.data.pCombinedImageSampler = &occlusionDescriptor;
 
     vkGetDescriptorEXT(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         &occlusionDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + mMaterialLayoutOffset[5]
@@ -357,7 +361,5 @@ VkDeviceSize DescriptorManager::createMaterialDescriptor(const MaterialResources
 }
 
 void DescriptorManager::freeResources() {
-    VulkanEngine::get().destroyBuffer(mDescriptorBuffer);
+    mVkEngine.destroyBuffer(mDescriptorBuffer);
 }
-
-

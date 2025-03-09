@@ -5,6 +5,9 @@
 #include "volk.h"
 #include "vk_types.h"
 
+// forward reference
+class VulkanEngine;
+
 class DescriptorLayoutBuilder {
 public:
 
@@ -21,7 +24,7 @@ class DescriptorManager {
 
 public:
 
-    DescriptorManager(VkDescriptorSetLayout sceneLayout, VkDescriptorSetLayout materialLayout);
+    DescriptorManager(VkDescriptorSetLayout sceneLayout, VkDescriptorSetLayout materialLayout, VulkanEngine& vkEngine);
     ~DescriptorManager();
 
     void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
@@ -34,6 +37,8 @@ private:
 
     void init();
     void createDescriptorBuffers();
+
+    VulkanEngine& mVkEngine;
 
     AllocatedBuffer mDescriptorBuffer;
     VkDeviceSize mCurrentOffset = 0;

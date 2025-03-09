@@ -14,7 +14,7 @@ public:
         uint32_t totalMips;
     };
 
-    Skybox();
+    Skybox(VulkanEngine& vkEngine);
     ~Skybox();
 
     void load(std::filesystem::path filePath);
@@ -45,6 +45,8 @@ private:
 
     void renderToCubemap(AllocatedImage& src, AllocatedImage& dest, VkPipeline pipeline, VkExtent2D destSize, uint32_t mipLevel = 0, bool flipViewport = false);
     void renderBrdfLut();
+
+    VulkanEngine& mVkEngine;
 
     AllocatedImage mHDRImage;
     AllocatedImage mEnvMap;

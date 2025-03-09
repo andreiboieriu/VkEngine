@@ -1,4 +1,3 @@
-//> includes
 #define IMGUI_IMPL_VULKAN_USE_VOLK
 #include "vk_engine.h"
 #include "glm/ext/matrix_clip_space.hpp"
@@ -41,20 +40,10 @@
 
 #include "compute_effects/compute_effect.h"
 
-VulkanEngine* gLoadedEngine = nullptr;
-
-VulkanEngine& VulkanEngine::get() {
-    return *gLoadedEngine;
-}
-
 void VulkanEngine::init()
 {
-    // only one engine initialization is allowed with the application.
-    assert(gLoadedEngine == nullptr);
-    gLoadedEngine = this;
-
     // create window
-    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900});
+    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900}, *this);
 
     mMainDeletionQueue.push([&]() {
         mWindow = nullptr;
@@ -109,20 +98,20 @@ void VulkanEngine::init()
     };
 
     // load all other resources
-    mFxaaEffect = std::make_unique<ComputeEffect>("fxaa", fxaaData);
+    mFxaaEffect = std::make_unique<ComputeEffect>("fxaa", fxaaData, *this);
 
     std::vector<ComputeEffect::PushConstantData> toneData = {
         ComputeEffect::PushConstantData("exposure", 1.0f),
     };
 
-    mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", toneData);
+    mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", toneData, *this);
 
     std::vector<ComputeEffect::PushConstantData> bloomData = {
         ComputeEffect::PushConstantData("filterRadius", 0.005f),
         ComputeEffect::PushConstantData("strength", 0.04f),
     };
 
-    mBloomEffect = std::make_unique<ComputeEffect>("bloom", bloomData);
+    mBloomEffect = std::make_unique<ComputeEffect>("bloom", bloomData, *this);
 
     mMainDeletionQueue.push([&]() {
         mFxaaEffect = nullptr;
@@ -130,23 +119,23 @@ void VulkanEngine::init()
         mBloomEffect = nullptr;
     });
 
-    mMaterialManager = std::make_unique<MaterialManager>();
+    mMaterialManager = std::make_unique<MaterialManager>(*this);
 
     mMainDeletionQueue.push([&]() {
         mMaterialManager = nullptr;
     });
 
-    mDescriptorManager = std::make_unique<DescriptorManager>(mMaterialManager->getSceneDescriptorSetLayout(), mMaterialManager->getMaterialDescriptorSetLayout());
+    mDescriptorManager = std::make_unique<DescriptorManager>(mMaterialManager->getSceneDescriptorSetLayout(), mMaterialManager->getMaterialDescriptorSetLayout(), *this);
     mMainDeletionQueue.push([&]() {
         mDescriptorManager = nullptr;
     });
 
-    mResourceManager = std::make_unique<ResourceManager>();
+    mResourceManager = std::make_unique<ResourceManager>(*this);
     mMainDeletionQueue.push([&]() {
         mResourceManager = nullptr;
     });
 
-    mScene = std::make_shared<Scene3D>("testScene");
+    mScene = std::make_shared<Scene3D>("testScene", *this);
 
     mMainDeletionQueue.push([&]() {
         mScene = nullptr;
@@ -193,7 +182,8 @@ void VulkanEngine::loadLoadingScreenData() {
     // create pipeline layout
     mLoadingScreenData.pipelineLayout = vkutil::createPipelineLayout(
         setLayouts,
-        pushConstantRanges
+        pushConstantRanges,
+        mDevice
     );
 
     // create pipeline
@@ -296,7 +286,7 @@ GPUMeshBuffers VulkanEngine::uploadMesh(std::span<uint32_t> indices, std::span<V
         vertexBufferSize,
         VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
         VMA_MEMORY_USAGE_GPU_ONLY
-        );
+    );
 
     // get vertex buffer addess
     VkBufferDeviceAddressInfo deviceAddressInfo{};
@@ -310,7 +300,7 @@ GPUMeshBuffers VulkanEngine::uploadMesh(std::span<uint32_t> indices, std::span<V
         indexBufferSize,
         VK_BUFFER_USAGE_INDEX_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_DST_BIT,
         VMA_MEMORY_USAGE_GPU_ONLY
-        );
+    );
 
     // copy data to gpu using a staging buffer
     AllocatedBuffer staging = createBuffer(vertexBufferSize + indexBufferSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
@@ -807,9 +797,6 @@ void VulkanEngine::cleanup() {
 
     vkb::destroy_debug_utils_messenger(mInstance, mDebugMessenger);
     vkDestroyInstance(mInstance, nullptr);
-
-    // clear engine pointer
-    gLoadedEngine = nullptr;
 }
 
 void VulkanEngine::drawLoadingScreen() {

@@ -8,7 +8,7 @@ class ResourceManager {
 
 public:
 
-    ResourceManager();
+    ResourceManager(VulkanEngine& vkEngine);
     ~ResourceManager();
 
     std::shared_ptr<LoadedGLTF> getGltf(std::string name) {
@@ -26,6 +26,8 @@ public:
 private:
     void loadResources();
     void freeResources();
+
+    VulkanEngine& mVkEngine;
 
     std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedGltfs;
     std::unordered_map<std::string, AllocatedImage> mSkyboxCubemaps;

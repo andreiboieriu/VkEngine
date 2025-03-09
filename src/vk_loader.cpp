@@ -1,4 +1,4 @@
-﻿#include "vk_loader.h"
+#include "vk_loader.h"
 
 #include "fastgltf/tools.hpp"
 #include "vk_engine.h"
@@ -46,7 +46,7 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
     if (mImages.contains(image.name.c_str())) {
         return mImages[image.name.c_str()];
     }
-    
+
     AllocatedImage newImage{};
 
     int width, height, nrChannels;
@@ -68,7 +68,7 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
                     imageSize.height = height;
                     imageSize.depth = 1;
 
-                    newImage = VulkanEngine::get().createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
+                    newImage = mVkEngine.createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
 
                     stbi_image_free(data);
                 }
@@ -82,7 +82,7 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
                     imageSize.height = height;
                     imageSize.depth = 1;
 
-                    newImage = VulkanEngine::get().createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
+                    newImage = mVkEngine.createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
 
                     stbi_image_free(data);
                 }
@@ -102,7 +102,7 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
                             imageSize.height = height;
                             imageSize.depth = 1;
 
-                            newImage = VulkanEngine::get().createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
+                            newImage = mVkEngine.createImage(data, imageSize, format, VK_IMAGE_USAGE_SAMPLED_BIT, mipmapped);
 
                             stbi_image_free(data);
                         }
@@ -114,7 +114,7 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
         image.data);
 
     if (newImage.image == VK_NULL_HANDLE) {
-        return VulkanEngine::get().getErrorTexture();
+        return mVkEngine.getErrorTexture();
     } else {
         mImages[image.name.c_str()] = newImage;
 
@@ -130,8 +130,8 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
 
     // define gltf loading options
     constexpr auto gltfOptions = fastgltf::Options::DontRequireValidAssetMember |
-                                                fastgltf::Options::AllowDouble |
-                                                fastgltf::Options::LoadExternalBuffers;
+                                 fastgltf::Options::AllowDouble |
+                                 fastgltf::Options::LoadExternalBuffers;
 
     // create parser
     fastgltf::Parser parser(fastgltf::Extensions::KHR_materials_emissive_strength);
@@ -168,7 +168,7 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         samplerInfo.minLod = 0;
 
         samplerInfo.anisotropyEnable = VK_TRUE;
-        samplerInfo.maxAnisotropy = VulkanEngine::get().getMaxSamplerAnisotropy();
+        samplerInfo.maxAnisotropy = mVkEngine.getMaxSamplerAnisotropy();
 
         samplerInfo.magFilter = extractFilter(sampler.magFilter.value_or(fastgltf::Filter::Nearest));
         samplerInfo.minFilter = extractFilter(sampler.minFilter.value_or(fastgltf::Filter::Nearest));
@@ -176,7 +176,7 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         samplerInfo.mipmapMode = extractMipmapMode(sampler.minFilter.value_or(fastgltf::Filter::Nearest));
 
         VkSampler newSampler;
-        vkCreateSampler(VulkanEngine::get().getDevice(), &samplerInfo, nullptr, &newSampler);
+        vkCreateSampler(mVkEngine.getDevice(), &samplerInfo, nullptr, &newSampler);
 
         samplers.push_back(newSampler);
     }
@@ -221,16 +221,16 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         MaterialResources materialResources;
 
         // default material textures
-        materialResources.colorImage = VulkanEngine::get().getWhiteTexture();
-        materialResources.colorSampler = VulkanEngine::get().getDefaultLinearSampler();
-        materialResources.metalRoughImage = VulkanEngine::get().getBlackTexture();
-        materialResources.metalRoughSampler = VulkanEngine::get().getDefaultLinearSampler();
-        materialResources.normalImage = VulkanEngine::get().getDefaultNormalMap();
-        materialResources.normalSampler = VulkanEngine::get().getDefaultLinearSampler();
-        materialResources.emissiveImage = VulkanEngine::get().getBlackTexture();
-        materialResources.emissiveSampler = VulkanEngine::get().getDefaultLinearSampler();
-        materialResources.occlusionImage = VulkanEngine::get().getWhiteTexture();
-        materialResources.occlusionSampler = VulkanEngine::get().getDefaultLinearSampler();
+        materialResources.colorImage = mVkEngine.getWhiteTexture();
+        materialResources.colorSampler = mVkEngine.getDefaultLinearSampler();
+        materialResources.metalRoughImage = mVkEngine.getBlackTexture();
+        materialResources.metalRoughSampler = mVkEngine.getDefaultLinearSampler();
+        materialResources.normalImage = mVkEngine.getDefaultNormalMap();
+        materialResources.normalSampler = mVkEngine.getDefaultLinearSampler();
+        materialResources.emissiveImage = mVkEngine.getBlackTexture();
+        materialResources.emissiveSampler = mVkEngine.getDefaultLinearSampler();
+        materialResources.occlusionImage = mVkEngine.getWhiteTexture();
+        materialResources.occlusionSampler = mVkEngine.getDefaultLinearSampler();
 
         // set uniform buffer for the material data
         materialResources.dataBuffer = mMaterialDataBuffer.buffer;
@@ -292,7 +292,7 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         // add material constants to buffer
         ((MaterialConstants*)mMaterialDataBuffer.allocInfo.pMappedData)[dataIndex] = constants;
 
-        newMaterial->materialInstance = VulkanEngine::get().getMaterialManager().writeMaterial(VulkanEngine::get().getDevice(), passType, materialResources);
+        newMaterial->materialInstance = mVkEngine.getMaterialManager().writeMaterial(mVkEngine.getDevice(), passType, materialResources);
 
         dataIndex++;
     }
@@ -328,7 +328,7 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
                 fastgltf::Accessor& indexAccessor = asset.accessors[p.indicesAccessor.value()];
                 indices.reserve(indices.size() + indexAccessor.count);
 
-                fastgltf::iterateAccessor<std::uint32_t>(asset, indexAccessor, 
+                fastgltf::iterateAccessor<std::uint32_t>(asset, indexAccessor,
                     [&](std::uint32_t index) {
                         indices.push_back(index + initialVtx);
                     });
@@ -390,7 +390,7 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
             newMesh->surfaces.push_back(newSurface);
         }
 
-        newMesh->meshBuffers = VulkanEngine::get().uploadMesh(indices, vertices);
+        newMesh->meshBuffers = mVkEngine.uploadMesh(indices, vertices);
     }
 
     // load all nodes and their meshes
@@ -431,7 +431,7 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
     }
 }
 
-LoadedGLTF::LoadedGLTF(std::filesystem::path filePath) {
+LoadedGLTF::LoadedGLTF(std::filesystem::path filePath, VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
     load(filePath);
 }
 
@@ -446,7 +446,7 @@ void LoadedGLTF::draw(const glm::mat4& transform, RenderContext& context) {
 }
 
 void LoadedGLTF::initMaterialDataBuffer(size_t materialCount) {
-    mMaterialDataBuffer = VulkanEngine::get().createBuffer(
+    mMaterialDataBuffer = mVkEngine.createBuffer(
         sizeof(MaterialConstants) * materialCount,
         VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
         VMA_MEMORY_USAGE_CPU_TO_GPU
@@ -454,21 +454,21 @@ void LoadedGLTF::initMaterialDataBuffer(size_t materialCount) {
 }
 
 void LoadedGLTF::freeResources() {
-    VkDevice device = VulkanEngine::get().getDevice();
+    VkDevice device = mVkEngine.getDevice();
 
-    VulkanEngine::get().destroyBuffer(mMaterialDataBuffer);
+    mVkEngine.destroyBuffer(mMaterialDataBuffer);
 
     for (auto& [k, v] : mMeshes) {
-        VulkanEngine::get().destroyBuffer(v->meshBuffers.indexBuffer);
-        VulkanEngine::get().destroyBuffer(v->meshBuffers.vertexBuffer);
+        mVkEngine.destroyBuffer(v->meshBuffers.indexBuffer);
+        mVkEngine.destroyBuffer(v->meshBuffers.vertexBuffer);
     }
 
     for (auto& [k, v] : mImages) {
-        if (v.image == VulkanEngine::get().getErrorTexture().image) {
+        if (v.image == mVkEngine.getErrorTexture().image) {
             continue;
         }
 
-        VulkanEngine::get().destroyImage(v);
+        mVkEngine.destroyImage(v);
     }
 
     for (auto& sampler : mSamplers) {

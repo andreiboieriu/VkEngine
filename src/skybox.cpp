@@ -11,7 +11,7 @@
 #include "vk_initializers.h"
 #include <imgui.h>
 
-Skybox::Skybox() {
+Skybox::Skybox(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
     createPipelineLayout();
     createPipeline();
     createCubeMesh();
@@ -28,7 +28,7 @@ Skybox::~Skybox() {
 void Skybox::createPipelineLayout() {
     DescriptorLayoutBuilder builder;
     mDescriptorSetLayout = builder.addBinding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
-                                      .build(VulkanEngine::get().getDevice(), nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
+                                      .build(mVkEngine.getDevice(), nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
 
     std::vector<VkDescriptorSetLayout> setLayouts = {
         mDescriptorSetLayout
@@ -43,19 +43,19 @@ void Skybox::createPipelineLayout() {
         pushConstantRange
     };
 
-    mPipelineLayout = vkutil::createPipelineLayout(setLayouts, pushRanges);
+    mPipelineLayout = vkutil::createPipelineLayout(setLayouts, pushRanges, mVkEngine.getDevice());
 }
 
 void Skybox::createPipeline() {
     VkShaderModule vertShader;
 
-    if (!vkutil::loadShaderModule("shaders/skybox.vert.spv", VulkanEngine::get().getDevice(), &vertShader)) {
+    if (!vkutil::loadShaderModule("shaders/skybox.vert.spv", mVkEngine.getDevice(), &vertShader)) {
         fmt::println("Error when building shader: shaders/skybox.vert.spv");
     }
 
     VkShaderModule fragShader;
 
-    if (!vkutil::loadShaderModule("shaders/skybox.frag.spv", VulkanEngine::get().getDevice(), &fragShader)) {
+    if (!vkutil::loadShaderModule("shaders/skybox.frag.spv", mVkEngine.getDevice(), &fragShader)) {
         fmt::println("Error when building shader: shaders/skybox.frag.spv");
     }
 
@@ -68,40 +68,40 @@ void Skybox::createPipeline() {
                         .setMultisampling()
                         .disableBlending()
                         .enableDepthTesting(true, VK_COMPARE_OP_GREATER_OR_EQUAL)
-                        .setColorAttachmentFormat(VulkanEngine::get().getDrawImageFormat())
-                        .setDepthFormat(VulkanEngine::get().getDepthImageFormat())
+                        .setColorAttachmentFormat(mVkEngine.getDrawImageFormat())
+                        .setDepthFormat(mVkEngine.getDepthImageFormat())
                         .setLayout(mPipelineLayout)
-                        .buildPipeline(VulkanEngine::get().getDevice(), 0);
+                        .buildPipeline(mVkEngine.getDevice(), 0);
 
-    vkDestroyShaderModule(VulkanEngine::get().getDevice(), fragShader, nullptr);
+    vkDestroyShaderModule(mVkEngine.getDevice(), fragShader, nullptr);
 
-    if (!vkutil::loadShaderModule("shaders/skybox_equi_to_cube.frag.spv", VulkanEngine::get().getDevice(), &fragShader)) {
+    if (!vkutil::loadShaderModule("shaders/skybox_equi_to_cube.frag.spv", mVkEngine.getDevice(), &fragShader)) {
         fmt::println("Error when building shader: shaders/skybox.frag.spv");
     }
 
     builder.setShaders(vertShader, fragShader);
-    mEquiToCubePipeline = builder.buildPipeline(VulkanEngine::get().getDevice(), 0);
+    mEquiToCubePipeline = builder.buildPipeline(mVkEngine.getDevice(), 0);
 
-    vkDestroyShaderModule(VulkanEngine::get().getDevice(), fragShader, nullptr);
+    vkDestroyShaderModule(mVkEngine.getDevice(), fragShader, nullptr);
 
-    if (!vkutil::loadShaderModule("shaders/skybox_env_to_irradiance.frag.spv", VulkanEngine::get().getDevice(), &fragShader)) {
+    if (!vkutil::loadShaderModule("shaders/skybox_env_to_irradiance.frag.spv", mVkEngine.getDevice(), &fragShader)) {
         fmt::println("Error when building shader: shaders/skybox.frag.spv");
     }
 
     builder.setShaders(vertShader, fragShader);
-    mEnvToIrrPipeline = builder.buildPipeline(VulkanEngine::get().getDevice(), 0);
+    mEnvToIrrPipeline = builder.buildPipeline(mVkEngine.getDevice(), 0);
 
-    vkDestroyShaderModule(VulkanEngine::get().getDevice(), fragShader, nullptr);
+    vkDestroyShaderModule(mVkEngine.getDevice(), fragShader, nullptr);
 
-    if (!vkutil::loadShaderModule("shaders/skybox_prefilter_env.frag.spv", VulkanEngine::get().getDevice(), &fragShader)) {
+    if (!vkutil::loadShaderModule("shaders/skybox_prefilter_env.frag.spv", mVkEngine.getDevice(), &fragShader)) {
         fmt::println("Error when building shader: shaders/skybox.frag.spv");
     }
 
     builder.setShaders(vertShader, fragShader);
-    mPrefilterEnvPipeline = builder.buildPipeline(VulkanEngine::get().getDevice(), 0);
+    mPrefilterEnvPipeline = builder.buildPipeline(mVkEngine.getDevice(), 0);
 
-    vkDestroyShaderModule(VulkanEngine::get().getDevice(), vertShader, nullptr);
-    vkDestroyShaderModule(VulkanEngine::get().getDevice(), fragShader, nullptr);
+    vkDestroyShaderModule(mVkEngine.getDevice(), vertShader, nullptr);
+    vkDestroyShaderModule(mVkEngine.getDevice(), fragShader, nullptr);
 }
 
 void Skybox::createCubeMesh() {
@@ -129,26 +129,26 @@ void Skybox::createCubeMesh() {
 
     mCubeMesh.surfaces.push_back(GeoSurface{.startIndex = 0, .count = static_cast<uint32_t>(cubeIndices.size())});
 
-    mCubeMesh.meshBuffers = VulkanEngine::get().uploadMesh(cubeIndices, cubeVertices);
+    mCubeMesh.meshBuffers = mVkEngine.uploadMesh(cubeIndices, cubeVertices);
     mPushConstants.vertexBuffer = mCubeMesh.meshBuffers.vertexBufferAddress;
 }
 
 void Skybox::freeResources() {
-    VulkanEngine::get().destroyBuffer(mCubeMesh.meshBuffers.indexBuffer);
-    VulkanEngine::get().destroyBuffer(mCubeMesh.meshBuffers.vertexBuffer);
+    mVkEngine.destroyBuffer(mCubeMesh.meshBuffers.indexBuffer);
+    mVkEngine.destroyBuffer(mCubeMesh.meshBuffers.vertexBuffer);
 
-    vkDestroyDescriptorSetLayout(VulkanEngine::get().getDevice(), mDescriptorSetLayout, nullptr);
-    vkDestroyPipelineLayout(VulkanEngine::get().getDevice(), mPipelineLayout, nullptr);
-    vkDestroyPipeline(VulkanEngine::get().getDevice(), mPipeline, nullptr);
-    vkDestroyPipeline(VulkanEngine::get().getDevice(), mEquiToCubePipeline, nullptr);
-    vkDestroyPipeline(VulkanEngine::get().getDevice(), mEnvToIrrPipeline, nullptr);
-    vkDestroyPipeline(VulkanEngine::get().getDevice(), mPrefilterEnvPipeline, nullptr);
+    vkDestroyDescriptorSetLayout(mVkEngine.getDevice(), mDescriptorSetLayout, nullptr);
+    vkDestroyPipelineLayout(mVkEngine.getDevice(), mPipelineLayout, nullptr);
+    vkDestroyPipeline(mVkEngine.getDevice(), mPipeline, nullptr);
+    vkDestroyPipeline(mVkEngine.getDevice(), mEquiToCubePipeline, nullptr);
+    vkDestroyPipeline(mVkEngine.getDevice(), mEnvToIrrPipeline, nullptr);
+    vkDestroyPipeline(mVkEngine.getDevice(), mPrefilterEnvPipeline, nullptr);
 
-    VulkanEngine::get().destroyImage(mHDRImage);
-    VulkanEngine::get().destroyImage(mEnvMap);
-    VulkanEngine::get().destroyImage(mIrrMap);
-    VulkanEngine::get().destroyImage(mPrefilteredEnvMap);
-    VulkanEngine::get().destroyImage(mBrdfLut);
+    mVkEngine.destroyImage(mHDRImage);
+    mVkEngine.destroyImage(mEnvMap);
+    mVkEngine.destroyImage(mIrrMap);
+    mVkEngine.destroyImage(mPrefilteredEnvMap);
+    mVkEngine.destroyImage(mBrdfLut);
 }
 
 void Skybox::draw(VkCommandBuffer commandBuffer) {
@@ -164,7 +164,7 @@ void Skybox::draw(VkCommandBuffer commandBuffer) {
 
     // push descriptor set
     DescriptorWriter writer;
-    std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mEnvMap.imageView, VulkanEngine::get().getDefaultLinearSampler(), VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+    std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mEnvMap.imageView, mVkEngine.getDefaultLinearSampler(), VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
                                                                .getWrites();
 
     vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mPipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
@@ -181,12 +181,12 @@ void Skybox::drawGui() {
         // if (ImGui::BeginPopupContextItem("select skybox popup")) {
         //     if (ImGui::Selectable("nebula")) {
         //         mChosenSkybox = "nebula";
-        //         mHDRImage = VulkanEngine::get().getResourceManager().getSkyboxCubemap("nebula");
+        //         mHDRImage = mVkEngine.getResourceManager().getSkyboxCubemap("nebula");
         //     }
 
         //     if (ImGui::Selectable("anime")) {
         //         mChosenSkybox = "anime";
-        //         mHDRImage = VulkanEngine::get().getResourceManager().getSkyboxCubemap("anime");
+        //         mHDRImage = mVkEngine.getResourceManager().getSkyboxCubemap("anime");
         //     }
 
         //     ImGui::EndPopup();
@@ -234,7 +234,7 @@ void Skybox::renderToCubemap(AllocatedImage& src, AllocatedImage& dest, VkPipeli
     captureConstants.totalMips = dest.mipLevels;
 
     // transition cubemap to color attachment layout
-    VulkanEngine::get().immediateSubmit([&](VkCommandBuffer commandBuffer) {
+    mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
         vkutil::transitionImage(commandBuffer, dest.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
     });
 
@@ -249,10 +249,10 @@ void Skybox::renderToCubemap(AllocatedImage& src, AllocatedImage& dest, VkPipeli
         viewInfo.subresourceRange.baseMipLevel = mipLevel;
         viewInfo.subresourceRange.levelCount = 1;
 
-        VK_CHECK(vkCreateImageView(VulkanEngine::get().getDevice(), &viewInfo, nullptr, &cubeFaceView));
+        VK_CHECK(vkCreateImageView(mVkEngine.getDevice(), &viewInfo, nullptr, &cubeFaceView));
 
         // render to cube face
-        VulkanEngine::get().immediateSubmit([&](VkCommandBuffer commandBuffer) {
+        mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
             VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(cubeFaceView, VK_NULL_HANDLE, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
 
             VkRenderingInfo renderInfo = vkinit::rendering_info(destSize, &colorAttachment, nullptr);
@@ -285,7 +285,7 @@ void Skybox::renderToCubemap(AllocatedImage& src, AllocatedImage& dest, VkPipeli
 
             // push descriptor set
             DescriptorWriter writer;
-            std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, src.imageView, VulkanEngine::get().getDefaultLinearSampler(), VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+            std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, src.imageView, mVkEngine.getDefaultLinearSampler(), VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
                                                                         .getWrites();
 
             vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mPipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
@@ -300,19 +300,19 @@ void Skybox::renderToCubemap(AllocatedImage& src, AllocatedImage& dest, VkPipeli
         }, true);
 
         // destroy cubemap face view
-        vkDestroyImageView(VulkanEngine::get().getDevice(), cubeFaceView, nullptr);
+        vkDestroyImageView(mVkEngine.getDevice(), cubeFaceView, nullptr);
     }
 
     // transition cubemap to shader read layout
-    VulkanEngine::get().immediateSubmit([&](VkCommandBuffer commandBuffer) {
+    mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
         vkutil::transitionImage(commandBuffer, dest.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
     });
 }
 
 void Skybox::renderBrdfLut() {
-    ComputeEffect computeEffect("skybox_brdf_lut");
+    ComputeEffect computeEffect("skybox_brdf_lut", mVkEngine);
 
-    VulkanEngine::get().immediateSubmit([&](VkCommandBuffer commandBuffer) {
+    mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
         vkutil::transitionImage(commandBuffer, mBrdfLut.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
         computeEffect.execute(commandBuffer, mBrdfLut, BRDF_LUT_SIZE, true);
         vkutil::transitionImage(commandBuffer, mBrdfLut.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
@@ -340,7 +340,7 @@ void Skybox::load(std::filesystem::path filePath) {
     }
 
     // create hdr image
-    mHDRImage = VulkanEngine::get().createImage(
+    mHDRImage = mVkEngine.createImage(
         data,
         VkExtent3D{static_cast<uint32_t>(width), static_cast<uint32_t>(height), 1},
         VK_FORMAT_R32G32B32A32_SFLOAT,
@@ -349,7 +349,7 @@ void Skybox::load(std::filesystem::path filePath) {
     );
 
     // create environment map
-    mEnvMap = VulkanEngine::get().createEmptyCubemap(
+    mEnvMap = mVkEngine.createEmptyCubemap(
         ENV_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
         VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT
@@ -358,7 +358,7 @@ void Skybox::load(std::filesystem::path filePath) {
     renderToCubemap(mHDRImage, mEnvMap, mEquiToCubePipeline, ENV_MAP_SIZE, 0, true);
 
     // create irradiance cube map
-    mIrrMap = VulkanEngine::get().createEmptyCubemap(
+    mIrrMap = mVkEngine.createEmptyCubemap(
         IRR_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
         VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT
@@ -367,7 +367,7 @@ void Skybox::load(std::filesystem::path filePath) {
     renderToCubemap(mEnvMap, mIrrMap, mEnvToIrrPipeline, IRR_MAP_SIZE);
 
     // create prefiltered environment map
-    mPrefilteredEnvMap = VulkanEngine::get().createEmptyCubemap(
+    mPrefilteredEnvMap = mVkEngine.createEmptyCubemap(
         PREFILTERED_ENV_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
         VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT,
@@ -379,7 +379,7 @@ void Skybox::load(std::filesystem::path filePath) {
     }
 
     // create brdf lut image
-    mBrdfLut = VulkanEngine::get().createImage(
+    mBrdfLut = mVkEngine.createImage(
         VkExtent3D{BRDF_LUT_SIZE.width, BRDF_LUT_SIZE.height, 1},
         VK_FORMAT_R16G16B16A16_SFLOAT,
         VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT,

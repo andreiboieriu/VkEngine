@@ -500,7 +500,6 @@ src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/stl_numeric.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/pstl/glue_numeric_defs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/any \
-  /home/unclegoga/Development/VkEngine/src/skybox.h \
   /home/unclegoga/Development/VkEngine/src/vk_loader.h \
   /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/core.hpp \
   /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
@@ -509,6 +508,7 @@ src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o: \
   /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/math.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/memory_resource \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/shared_mutex \
+  /home/unclegoga/Development/VkEngine/src/skybox.h \
   /home/unclegoga/Development/VkEngine/src/vk_window.h \
   /home/unclegoga/Development/VkEngine/third_party/GLFW/include/GLFW/glfw3.h \
   /home/unclegoga/Development/VkEngine/src/vk_swapchain.h \

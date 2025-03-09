@@ -3,7 +3,6 @@
 #include "vk_types.h"
 #include "vk_engine.h"
 
-//> init_cmd
 VkCommandPoolCreateInfo vkinit::command_pool_create_info(uint32_t queueFamilyIndex,
     VkCommandPoolCreateFlags flags /*= 0*/)
 {
@@ -28,9 +27,7 @@ VkCommandBufferAllocateInfo vkinit::command_buffer_allocate_info(
     info.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
     return info;
 }
-//< init_cmd
-// 
-//> init_cmd_draw
+
 VkCommandBufferBeginInfo vkinit::command_buffer_begin_info(VkCommandBufferUsageFlags flags /*= 0*/)
 {
     VkCommandBufferBeginInfo info = {};
@@ -41,9 +38,7 @@ VkCommandBufferBeginInfo vkinit::command_buffer_begin_info(VkCommandBufferUsageF
     info.flags = flags;
     return info;
 }
-//< init_cmd_draw
 
-//> init_sync
 VkFenceCreateInfo vkinit::fence_create_info(VkFenceCreateFlags flags /*= 0*/)
 {
     VkFenceCreateInfo info = {};
@@ -64,9 +59,7 @@ VkSemaphoreCreateInfo vkinit::semaphore_create_info(VkSemaphoreCreateFlags flags
 
     return info;
 }
-//< init_sync
 
-//> init_submit
 VkSemaphoreSubmitInfo vkinit::semaphore_submit_info(VkPipelineStageFlags2 stageMask, VkSemaphore semaphore)
 {
 	VkSemaphoreSubmitInfo submitInfo{};
@@ -109,7 +102,6 @@ VkSubmitInfo2 vkinit::submit_info(VkCommandBufferSubmitInfo* cmd, VkSemaphoreSub
 
     return info;
 }
-//< init_submit
 
 VkPresentInfoKHR vkinit::present_info(VkSwapchainKHR *swapchain, VkSemaphore *waitSemaphore, uint32_t *swapchainImageIndex)
 {
@@ -126,7 +118,6 @@ VkPresentInfoKHR vkinit::present_info(VkSwapchainKHR *swapchain, VkSemaphore *wa
     return info;
 }
 
-//> color_info
 VkRenderingAttachmentInfo vkinit::attachment_info(
     VkImageView view, VkClearValue* clear ,VkImageLayout layout /*= VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL*/)
 {
@@ -138,7 +129,7 @@ VkRenderingAttachmentInfo vkinit::attachment_info(
     colorAttachment.imageLayout = layout;
     colorAttachment.loadOp = clear ? VK_ATTACHMENT_LOAD_OP_CLEAR : VK_ATTACHMENT_LOAD_OP_LOAD;
     colorAttachment.storeOp = VK_ATTACHMENT_STORE_OP_STORE;
-    
+
     if (clear) {
         colorAttachment.clearValue = *clear;
     }
@@ -301,7 +292,7 @@ VkImageViewCreateInfo vkinit::imageview_create_info(VkFormat format, VkImage ima
 
     return info;
 }
-//< image_set
+
 VkPipelineLayoutCreateInfo vkinit::pipeline_layout_create_info()
 {
     VkPipelineLayoutCreateInfo info {};
@@ -355,5 +346,3 @@ VkComputePipelineCreateInfo vkinit::computePipelineCreateInfo(VkShaderModule sha
 
     return computePipelineInfo;
 }
-
-

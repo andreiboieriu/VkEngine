@@ -11,7 +11,7 @@
 class ScriptManager {
 
 public:
-    ScriptManager(entt::registry& registry);
+    ScriptManager(entt::registry& registry, VulkanEngine& vkEngine);
     ~ScriptManager();
 
     void loadScript(const std::string& filePath);
@@ -33,6 +33,8 @@ private:
 
     void initializeLuaState();
     std::unordered_map<std::string, sol::type> getSymbols(const sol::bytecode& bytecode);
+
+    VulkanEngine& mVkEngine;
 
     inline static sol::state mLua;
     inline static bool mIsInitialized = false;

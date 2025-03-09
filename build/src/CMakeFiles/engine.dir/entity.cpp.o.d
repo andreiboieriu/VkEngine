@@ -471,6 +471,36 @@ src/CMakeFiles/engine.dir/entity.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/pstl/glue_numeric_defs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/any \
   /home/unclegoga/Development/VkEngine/src/uuid.h \
+  /home/unclegoga/Development/VkEngine/src/vk_loader.h \
+  /home/unclegoga/Development/VkEngine/src/vk_types.h \
+  /home/unclegoga/Development/VkEngine/third_party/volk/volk.h \
+  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
+  /home/unclegoga/Development/VkEngine/src/deletion_queue.h \
+  /home/unclegoga/Development/VkEngine/src/vk_enum_string_helper.h \
+  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h \
+  /home/unclegoga/Development/VkEngine/third_party/glm/glm/vec4.hpp \
+  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/core.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/fstream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/x86_64-linux-gnu/c++/14/bits/basic_file.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/x86_64-linux-gnu/c++/14/bits/c++io.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/fstream.tcc \
+  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/variant \
+  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
+  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/math.hpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/memory_resource \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/shared_mutex \
   /home/unclegoga/Development/VkEngine/src/ecs_components/components.h \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/quaternion_float.hpp \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/../detail/type_quat.hpp \
@@ -621,36 +651,6 @@ src/CMakeFiles/engine.dir/entity.cpp.o: \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/gtx/../gtx/norm.inl \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/gtx/../gtx/../detail/qualifier.hpp \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/gtx/quaternion.inl \
-  /home/unclegoga/Development/VkEngine/src/vk_loader.h \
-  /home/unclegoga/Development/VkEngine/src/vk_types.h \
-  /home/unclegoga/Development/VkEngine/third_party/volk/volk.h \
-  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
-  /usr/include/vulkan/vulkan_core.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std.h \
-  /usr/include/vk_video/vulkan_video_codecs_common.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
-  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std.h \
-  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
-  /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
-  /home/unclegoga/Development/VkEngine/src/deletion_queue.h \
-  /home/unclegoga/Development/VkEngine/src/vk_enum_string_helper.h \
-  /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h \
-  /home/unclegoga/Development/VkEngine/third_party/glm/glm/vec4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/core.hpp \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/fstream \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/x86_64-linux-gnu/c++/14/bits/basic_file.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/x86_64-linux-gnu/c++/14/bits/c++io.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/fstream.tcc \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/variant \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/math.hpp \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/memory_resource \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/shared_mutex \
   /home/unclegoga/Development/VkEngine/third_party/sol2/include/sol/sol.hpp \
   /home/unclegoga/Development/VkEngine/third_party/sol2/include/sol/config.hpp \
   /home/unclegoga/Development/VkEngine/third_party/lua/include/lua.hpp \

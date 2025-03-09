@@ -11,6 +11,8 @@
 #include "vk_window.h"
 #include "script_manager.h"
 
+// forward reference
+class VulkanEngine;
 class Entity;
 class UUID;
 
@@ -29,7 +31,7 @@ public:
         glm::vec4 data;
     };
 
-    Scene3D(const std::string& name);
+    Scene3D(const std::string& name, VulkanEngine& VkEngine);
     ~Scene3D();
 
     void update();
@@ -60,6 +62,8 @@ public:
 private:
     void init();
     void freeResources();
+
+    VulkanEngine& mVkEngine;
 
     DeletionQueue mDeletionQueue;
 

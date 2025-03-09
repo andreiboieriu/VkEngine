@@ -9077,7 +9077,6 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /home/unclegoga/Development/VkEngine/src/vk_descriptors.h \
   /home/unclegoga/Development/VkEngine/src/vk_engine.h \
   /home/unclegoga/Development/VkEngine/src/vk_enum_string_helper.h \
-  /home/unclegoga/Development/VkEngine/src/vk_initializers.h \
   /home/unclegoga/Development/VkEngine/src/vk_loader.h \
   /home/unclegoga/Development/VkEngine/src/vk_materials.cpp \
   /home/unclegoga/Development/VkEngine/src/vk_materials.h \
@@ -9619,31 +9618,12 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
 
 src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx \
   src/CMakeFiles/engine.dir/cmake_pch.hxx.cxx \
-  /home/unclegoga/Development/VkEngine/src/compute_effects/compute_effect.h \
   /home/unclegoga/Development/VkEngine/src/deletion_queue.h \
-  /home/unclegoga/Development/VkEngine/src/entity.h \
-  /home/unclegoga/Development/VkEngine/src/resource_manager.h \
-  /home/unclegoga/Development/VkEngine/src/script_manager.h \
-  /home/unclegoga/Development/VkEngine/src/skybox.h \
-  /home/unclegoga/Development/VkEngine/src/uuid.h \
-  /home/unclegoga/Development/VkEngine/src/vk_descriptors.h \
-  /home/unclegoga/Development/VkEngine/src/vk_engine.h \
   /home/unclegoga/Development/VkEngine/src/vk_enum_string_helper.h \
   /home/unclegoga/Development/VkEngine/src/vk_initializers.h \
-  /home/unclegoga/Development/VkEngine/src/vk_loader.h \
-  /home/unclegoga/Development/VkEngine/src/vk_materials.h \
   /home/unclegoga/Development/VkEngine/src/vk_pipelines.cpp \
   /home/unclegoga/Development/VkEngine/src/vk_pipelines.h \
-  /home/unclegoga/Development/VkEngine/src/vk_scene.h \
-  /home/unclegoga/Development/VkEngine/src/vk_swapchain.h \
   /home/unclegoga/Development/VkEngine/src/vk_types.h \
-  /home/unclegoga/Development/VkEngine/src/vk_window.h \
-  /home/unclegoga/Development/VkEngine/third_party/GLFW/include/GLFW/glfw3.h \
-  /home/unclegoga/Development/VkEngine/third_party/entt/entt.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/core.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/math.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/types.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/fastgltf/include/fastgltf/util.hpp \
   /home/unclegoga/Development/VkEngine/third_party/fmt/include/fmt/core.h \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/common.hpp \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/detail/func_vector_relational.inl \
@@ -9767,25 +9747,12 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/mat4x4.hpp \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/vec4.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/lua/include/lauxlib.h \
-  /home/unclegoga/Development/VkEngine/third_party/lua/include/lua.h \
-  /home/unclegoga/Development/VkEngine/third_party/lua/include/lua.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/lua/include/luaconf.h \
-  /home/unclegoga/Development/VkEngine/third_party/lua/include/lualib.h \
-  /home/unclegoga/Development/VkEngine/third_party/nlohmann/include/nlohmann/json.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/sol2/include/sol/config.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/sol2/include/sol/sol.hpp \
-  /home/unclegoga/Development/VkEngine/third_party/spirv_reflect/include/spirv.h \
-  /home/unclegoga/Development/VkEngine/third_party/spirv_reflect/include/spirv_reflect.h \
   /home/unclegoga/Development/VkEngine/third_party/vma/vk_mem_alloc.h \
   /home/unclegoga/Development/VkEngine/third_party/volk/volk.h \
-  /usr/include/c++/14/algorithm \
-  /usr/include/c++/14/any \
   /usr/include/c++/14/array \
   /usr/include/c++/14/backward/auto_ptr.h \
   /usr/include/c++/14/backward/binders.h \
   /usr/include/c++/14/bit \
-  /usr/include/c++/14/bits/algorithmfwd.h \
   /usr/include/c++/14/bits/align.h \
   /usr/include/c++/14/bits/alloc_traits.h \
   /usr/include/c++/14/bits/allocated_ptr.h \
@@ -9799,7 +9766,6 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
-  /usr/include/c++/14/bits/chrono.h \
   /usr/include/c++/14/bits/codecvt.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
@@ -9811,35 +9777,21 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
   /usr/include/c++/14/bits/exception_ptr.h \
-  /usr/include/c++/14/bits/forward_list.h \
-  /usr/include/c++/14/bits/forward_list.tcc \
-  /usr/include/c++/14/bits/fs_dir.h \
-  /usr/include/c++/14/bits/fs_fwd.h \
-  /usr/include/c++/14/bits/fs_ops.h \
-  /usr/include/c++/14/bits/fs_path.h \
   /usr/include/c++/14/bits/fstream.tcc \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
-  /usr/include/c++/14/bits/gslice.h \
-  /usr/include/c++/14/bits/gslice_array.h \
   /usr/include/c++/14/bits/hash_bytes.h \
   /usr/include/c++/14/bits/hashtable.h \
   /usr/include/c++/14/bits/hashtable_policy.h \
-  /usr/include/c++/14/bits/indirect_array.h \
   /usr/include/c++/14/bits/invoke.h \
   /usr/include/c++/14/bits/ios_base.h \
   /usr/include/c++/14/bits/istream.tcc \
   /usr/include/c++/14/bits/iterator_concepts.h \
-  /usr/include/c++/14/bits/list.tcc \
   /usr/include/c++/14/bits/locale_classes.h \
   /usr/include/c++/14/bits/locale_classes.tcc \
-  /usr/include/c++/14/bits/locale_conv.h \
   /usr/include/c++/14/bits/locale_facets.h \
   /usr/include/c++/14/bits/locale_facets.tcc \
-  /usr/include/c++/14/bits/locale_facets_nonio.h \
-  /usr/include/c++/14/bits/locale_facets_nonio.tcc \
   /usr/include/c++/14/bits/localefwd.h \
-  /usr/include/c++/14/bits/mask_array.h \
   /usr/include/c++/14/bits/max_size_type.h \
   /usr/include/c++/14/bits/memory_resource.h \
   /usr/include/c++/14/bits/memoryfwd.h \
@@ -9849,13 +9801,10 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/14/bits/node_handle.h \
   /usr/include/c++/14/bits/ostream.tcc \
   /usr/include/c++/14/bits/ostream_insert.h \
-  /usr/include/c++/14/bits/parse_numbers.h \
   /usr/include/c++/14/bits/postypes.h \
   /usr/include/c++/14/bits/predefined_ops.h \
   /usr/include/c++/14/bits/ptr_traits.h \
-  /usr/include/c++/14/bits/quoted_string.h \
   /usr/include/c++/14/bits/range_access.h \
-  /usr/include/c++/14/bits/ranges_algo.h \
   /usr/include/c++/14/bits/ranges_algobase.h \
   /usr/include/c++/14/bits/ranges_base.h \
   /usr/include/c++/14/bits/ranges_cmp.h \
@@ -9866,33 +9815,21 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/14/bits/shared_ptr.h \
   /usr/include/c++/14/bits/shared_ptr_atomic.h \
   /usr/include/c++/14/bits/shared_ptr_base.h \
-  /usr/include/c++/14/bits/slice_array.h \
   /usr/include/c++/14/bits/specfun.h \
-  /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/std_function.h \
   /usr/include/c++/14/bits/std_mutex.h \
-  /usr/include/c++/14/bits/stl_algo.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_bvector.h \
   /usr/include/c++/14/bits/stl_construct.h \
   /usr/include/c++/14/bits/stl_deque.h \
   /usr/include/c++/14/bits/stl_function.h \
-  /usr/include/c++/14/bits/stl_heap.h \
   /usr/include/c++/14/bits/stl_iterator.h \
   /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/14/bits/stl_iterator_base_types.h \
-  /usr/include/c++/14/bits/stl_list.h \
-  /usr/include/c++/14/bits/stl_map.h \
-  /usr/include/c++/14/bits/stl_multimap.h \
-  /usr/include/c++/14/bits/stl_multiset.h \
-  /usr/include/c++/14/bits/stl_numeric.h \
   /usr/include/c++/14/bits/stl_pair.h \
   /usr/include/c++/14/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/14/bits/stl_relops.h \
-  /usr/include/c++/14/bits/stl_set.h \
   /usr/include/c++/14/bits/stl_tempbuf.h \
-  /usr/include/c++/14/bits/stl_tree.h \
   /usr/include/c++/14/bits/stl_uninitialized.h \
   /usr/include/c++/14/bits/stl_vector.h \
   /usr/include/c++/14/bits/stream_iterator.h \
@@ -9900,27 +9837,19 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
-  /usr/include/c++/14/bits/uniform_int_dist.h \
   /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/unordered_map.h \
-  /usr/include/c++/14/bits/unordered_set.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
-  /usr/include/c++/14/bits/valarray_after.h \
-  /usr/include/c++/14/bits/valarray_array.h \
-  /usr/include/c++/14/bits/valarray_array.tcc \
-  /usr/include/c++/14/bits/valarray_before.h \
   /usr/include/c++/14/bits/vector.tcc \
   /usr/include/c++/14/bits/version.h \
-  /usr/include/c++/14/bitset \
   /usr/include/c++/14/cassert \
   /usr/include/c++/14/cctype \
   /usr/include/c++/14/cerrno \
   /usr/include/c++/14/climits \
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/cmath \
-  /usr/include/c++/14/codecvt \
   /usr/include/c++/14/compare \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
@@ -9928,7 +9857,6 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cstring \
-  /usr/include/c++/14/ctime \
   /usr/include/c++/14/cwchar \
   /usr/include/c++/14/cwctype \
   /usr/include/c++/14/debug/assertions.h \
@@ -9942,41 +9870,24 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/14/ext/numeric_traits.h \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
-  /usr/include/c++/14/filesystem \
-  /usr/include/c++/14/forward_list \
   /usr/include/c++/14/fstream \
   /usr/include/c++/14/functional \
   /usr/include/c++/14/initializer_list \
-  /usr/include/c++/14/iomanip \
   /usr/include/c++/14/ios \
   /usr/include/c++/14/iosfwd \
-  /usr/include/c++/14/iostream \
   /usr/include/c++/14/istream \
   /usr/include/c++/14/iterator \
   /usr/include/c++/14/limits \
-  /usr/include/c++/14/list \
-  /usr/include/c++/14/locale \
-  /usr/include/c++/14/map \
   /usr/include/c++/14/memory \
-  /usr/include/c++/14/memory_resource \
   /usr/include/c++/14/new \
   /usr/include/c++/14/numbers \
-  /usr/include/c++/14/numeric \
   /usr/include/c++/14/optional \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/execution_defs.h \
-  /usr/include/c++/14/pstl/glue_algorithm_defs.h \
   /usr/include/c++/14/pstl/glue_memory_defs.h \
-  /usr/include/c++/14/pstl/glue_numeric_defs.h \
   /usr/include/c++/14/pstl/pstl_config.h \
-  /usr/include/c++/14/ranges \
-  /usr/include/c++/14/ratio \
-  /usr/include/c++/14/set \
-  /usr/include/c++/14/shared_mutex \
   /usr/include/c++/14/span \
-  /usr/include/c++/14/sstream \
   /usr/include/c++/14/stdexcept \
-  /usr/include/c++/14/stdlib.h \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
   /usr/include/c++/14/string_view \
@@ -9997,12 +9908,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/c++/14/type_traits \
   /usr/include/c++/14/typeinfo \
   /usr/include/c++/14/unordered_map \
-  /usr/include/c++/14/unordered_set \
-  /usr/include/c++/14/utility \
-  /usr/include/c++/14/valarray \
-  /usr/include/c++/14/variant \
   /usr/include/c++/14/vector \
-  /usr/include/c++/14/version \
   /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
@@ -10015,9 +9921,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/messages_members.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -10027,14 +9931,12 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
-  /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
-  /usr/include/memory.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -10153,10 +10055,6 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pc
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stdarg___gnuc_va_list.h \
-  /usr/lib/llvm-18/lib/clang/18/include/__stdarg___va_copy.h \
-  /usr/lib/llvm-18/lib/clang/18/include/__stdarg_va_arg.h \
-  /usr/lib/llvm-18/lib/clang/18/include/__stdarg_va_copy.h \
-  /usr/lib/llvm-18/lib/clang/18/include/__stdarg_va_list.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_max_align_t.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_null.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_nullptr_t.h \
@@ -10174,7 +10072,6 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hx
   /home/unclegoga/Development/VkEngine/src/compute_effects/compute_effect.h \
   /home/unclegoga/Development/VkEngine/src/deletion_queue.h \
   /home/unclegoga/Development/VkEngine/src/ecs_components/components.h \
-  /home/unclegoga/Development/VkEngine/src/ecs_systems/systems.h \
   /home/unclegoga/Development/VkEngine/src/entity.h \
   /home/unclegoga/Development/VkEngine/src/resource_manager.h \
   /home/unclegoga/Development/VkEngine/src/script_manager.h \
@@ -11979,8 +11876,6 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.h
   /usr/lib/llvm-18/lib/clang/18/include/stddef.h \
   /usr/lib/llvm-18/lib/clang/18/include/stdint.h
 
-
-/home/unclegoga/Development/VkEngine/src/ecs_systems/systems.h:
 
 /home/unclegoga/Development/VkEngine/src/vk_pipelines.cpp:
 

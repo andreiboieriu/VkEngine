@@ -1,22 +1,13 @@
-﻿#pragma once
+#pragma once
 
-#include <memory>
-#include <string>
-#include <string_view>
 #include <vk_types.h>
-#include <unordered_map>
-
 #include <fastgltf/core.hpp>
 
-namespace vkutil {
-
-// Skybox loadSkybox(std::string_view path);
-
-} //namespace vkutil
+// forward reference
+class VulkanEngine;
 
 class GLTFNode {
 public:
-
     GLTFNode(std::shared_ptr<MeshAsset> mesh = nullptr);
 
     void draw(const glm::mat4& transform, RenderContext& context);
@@ -46,7 +37,7 @@ private:
 
 class LoadedGLTF {
 public:
-    LoadedGLTF(std::filesystem::path filePath);
+    LoadedGLTF(std::filesystem::path filePath, VulkanEngine& vkEngine);
     ~LoadedGLTF();
 
     void draw(const glm::mat4& transform, RenderContext& context);
@@ -57,6 +48,8 @@ private:
     AllocatedImage loadImage(fastgltf::Asset& asset, fastgltf::Image& image, VkFormat format, bool mipmapped);
 
     void initMaterialDataBuffer(size_t materialCount);
+
+    VulkanEngine& mVkEngine;
 
     std::unordered_map<std::string, std::shared_ptr<MeshAsset>> mMeshes;
     std::unordered_map<std::string, std::shared_ptr<GLTFNode>> mNodes;

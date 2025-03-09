@@ -47,11 +47,11 @@ SpirvFile loadSpirvFile(std::string path) {
     return newSpirvFile;
 }
 
-ComputeEffect::ComputeEffect(std::string name) : mName(name) {
+ComputeEffect::ComputeEffect(std::string name, VulkanEngine& vkEngine) : mName(name), mVkEngine(vkEngine) {
     load(name);
 }
 
-ComputeEffect::ComputeEffect(std::string name, std::span<PushConstantData> defaultPushConstants) : ComputeEffect(name) {
+ComputeEffect::ComputeEffect(std::string name, std::span<PushConstantData> defaultPushConstants, VulkanEngine& vkEngine) : ComputeEffect(name, vkEngine) {
     setDefaultPushConstants(defaultPushConstants);
 }
 
@@ -82,9 +82,9 @@ void ComputeEffect::load(std::string name) {
 
     // create buffer image
     if (mUseBufferImage) {
-        mBufferImage = VulkanEngine::get().createImage(VkExtent3D{2560 * 2, 1440 * 2, 1}, VK_FORMAT_R16G16B16A16_SFLOAT, VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, true);
+        mBufferImage = mVkEngine.createImage(VkExtent3D{2560 * 2, 1440 * 2, 1}, VK_FORMAT_R16G16B16A16_SFLOAT, VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, true);
 
-        VulkanEngine::get().immediateSubmit([&](VkCommandBuffer commandBuffer) {
+        mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
             vkutil::transitionImage(commandBuffer, mBufferImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
         });
 
@@ -95,7 +95,7 @@ void ComputeEffect::load(std::string name) {
             viewInfo.subresourceRange.levelCount = 1;
             viewInfo.subresourceRange.baseMipLevel = i;
 
-            VK_CHECK(vkCreateImageView(VulkanEngine::get().getDevice(), &viewInfo, nullptr, &mBufferImageMipViews[i]));
+            VK_CHECK(vkCreateImageView(mVkEngine.getDevice(), &viewInfo, nullptr, &mBufferImageMipViews[i]));
         }
     }
 }
@@ -124,7 +124,7 @@ void ComputeEffect::addSubpass(std::string path) {
     assert(result == SPV_REFLECT_RESULT_SUCCESS && "spv reflect failed to get descriptor sets");
 
     DescriptorSetLayoutData setLayout{};
-    
+
     const SpvReflectDescriptorSet& reflSet = *(sets[0]);
     newSubpass.bindings.resize(reflSet.binding_count);
 
@@ -143,7 +143,7 @@ void ComputeEffect::addSubpass(std::string path) {
         layoutBuilder.addBinding(reflBinding.binding, static_cast<VkDescriptorType>(reflBinding.descriptor_type), module.shader_stage);
     }
 
-    newSubpass.descriptorSetLayout = layoutBuilder.build(VulkanEngine::get().getDevice(), nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
+    newSubpass.descriptorSetLayout = layoutBuilder.build(mVkEngine.getDevice(), nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
 
     // get push constant data
     result = spvReflectEnumeratePushConstantBlocks(&module, &count, nullptr);
@@ -177,21 +177,21 @@ void ComputeEffect::addSubpass(std::string path) {
 
     // create pipeline layout
     newSubpass.pipelineLayout = vkutil::createPipelineLayout(std::vector<VkDescriptorSetLayout>() = {newSubpass.descriptorSetLayout},
-                                         std::vector<VkPushConstantRange>() = {pushConstantRange});
-    
+                                         std::vector<VkPushConstantRange>() = {pushConstantRange}, mVkEngine.getDevice());
+
     // create pipeline
     VkShaderModule shaderModule;
 
-    if (!vkutil::loadShaderModule(path.c_str(), VulkanEngine::get().getDevice(), &shaderModule)) {
+    if (!vkutil::loadShaderModule(path.c_str(), mVkEngine.getDevice(), &shaderModule)) {
         fmt::println("Error when building shader: {}", path);
     }
 
     VkComputePipelineCreateInfo createInfo = vkinit::computePipelineCreateInfo(shaderModule, newSubpass.pipelineLayout);
 
-    VK_CHECK(vkCreateComputePipelines(VulkanEngine::get().getDevice(), VK_NULL_HANDLE, 1, &createInfo, nullptr, &newSubpass.pipeline));
+    VK_CHECK(vkCreateComputePipelines(mVkEngine.getDevice(), VK_NULL_HANDLE, 1, &createInfo, nullptr, &newSubpass.pipeline));
 
     // free resources
-    vkDestroyShaderModule(VulkanEngine::get().getDevice(), shaderModule, nullptr);
+    vkDestroyShaderModule(mVkEngine.getDevice(), shaderModule, nullptr);
     spvReflectDestroyShaderModule(&module);
 
     mSubpasses.push_back(newSubpass);
@@ -209,7 +209,7 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
         vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mSubpasses[i].pipeline);
 
         DescriptorWriter writer;
-        
+
         for (uint32_t j = 0; j < mSubpasses[i].bindings.size(); j++) {
             BindingData& binding = mSubpasses[i].bindings[j];
 
@@ -217,7 +217,7 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
                 writer.writeImage(
                     j,
                     image.imageView,
-                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? VulkanEngine::get().getDefaultLinearSampler() : VK_NULL_HANDLE,
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? mVkEngine.getDefaultLinearSampler() : VK_NULL_HANDLE,
                     VK_IMAGE_LAYOUT_GENERAL,
                     binding.descriptorType);
             } else if (binding.name.find("bufferImageMip") != std::string::npos) {
@@ -226,7 +226,7 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
                 writer.writeImage(
                     j,
                     mBufferImageMipViews[mipLevel],
-                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? VulkanEngine::get().getDefaultLinearSampler() : VK_NULL_HANDLE,
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? mVkEngine.getDefaultLinearSampler() : VK_NULL_HANDLE,
                     VK_IMAGE_LAYOUT_GENERAL,
                     binding.descriptorType);
             } else {
@@ -271,7 +271,7 @@ void ComputeEffect::synchronizeWithCompute(VkCommandBuffer commandBuffer) {
 }
 
 void ComputeEffect::freeResources() {
-    VkDevice device = VulkanEngine::get().getDevice();
+    VkDevice device = mVkEngine.getDevice();
 
     for (auto& subpass : mSubpasses) {
         vkDestroyDescriptorSetLayout(device, subpass.descriptorSetLayout, nullptr);
@@ -280,7 +280,7 @@ void ComputeEffect::freeResources() {
     }
 
     if (mUseBufferImage) {
-        VulkanEngine::get().destroyImage(mBufferImage);
+        mVkEngine.destroyImage(mBufferImage);
 
         for (uint32_t i = 0; i < mBufferImageMipViews.size(); i++) {
             vkDestroyImageView(device, mBufferImageMipViews[i], nullptr);

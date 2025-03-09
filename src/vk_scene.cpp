@@ -1,13 +1,12 @@
 #include "vk_scene.h"
 #include "ecs_components/components.h"
-#include "ecs_systems/systems.h"
 #include "vk_descriptors.h"
 #include "vk_engine.h"
 #include <imgui.h>
 
 #include <memory>
 
-Scene3D::Scene3D(const std::string& name) : mName(name) {
+Scene3D::Scene3D(const std::string& name, VulkanEngine& vkEngine) : mName(name), mVkEngine(vkEngine) {
     init();
 
     mSceneData.sunlightColor = glm::vec4(1.0f);
@@ -26,7 +25,7 @@ Scene3D::Scene3D(const std::string& name) : mName(name) {
     spaceship.addComponent<Script>();
     spaceship.addComponent<SphereCollider>();
 
-    spaceship.bindGLTF("fighter_spaceship");
+    spaceship.bindGLTF("fighter_spaceship", mVkEngine.getResourceManager().getGltf("fighter_spaceship"));
 
     spaceship.getComponent<Transform>().position = glm::vec3(2.f, 0.f, -2.0f);
 
@@ -37,7 +36,7 @@ Scene3D::Scene3D(const std::string& name) : mName(name) {
 
     asteroid.getComponent<Transform>().position = glm::vec3(0.f, 0.f, -2.0f);
 
-    asteroid.bindGLTF("fighter_spaceship");
+    asteroid.bindGLTF("fighter_spaceship", mVkEngine.getResourceManager().getGltf("fighter_spaceship"));
 
     mScriptManager->loadScript("scripts/script.lua");
     mScriptManager->bindScript("scripts/script.lua", asteroid);
@@ -74,7 +73,7 @@ void Scene3D::freeResources() {
 
 void Scene3D::init() {
     // create scene data buffer
-    mSceneDataBuffer = VulkanEngine::get().createBuffer(
+    mSceneDataBuffer = mVkEngine.createBuffer(
         sizeof(SceneData),
         VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
         VMA_MEMORY_USAGE_CPU_TO_GPU
@@ -82,11 +81,11 @@ void Scene3D::init() {
 
     // add scene data buffer to deletion queue
     mDeletionQueue.push([&]() {
-        VulkanEngine::get().destroyBuffer(mSceneDataBuffer);
+        mVkEngine.destroyBuffer(mSceneDataBuffer);
     });
 
-    mSkybox = std::make_unique<Skybox>();
-    mScriptManager = std::make_unique<ScriptManager>(mRegistry);
+    mSkybox = std::make_unique<Skybox>(mVkEngine);
+    mScriptManager = std::make_unique<ScriptManager>(mRegistry, mVkEngine);
 
     mDeletionQueue.push([&]() {
         mSkybox = nullptr;
@@ -94,7 +93,7 @@ void Scene3D::init() {
     });
 
     // create scene data descriptor
-    mGlobalDescriptorOffset = VulkanEngine::get().getDescriptorManager().createSceneDescriptor(
+    mGlobalDescriptorOffset = mVkEngine.getDescriptorManager().createSceneDescriptor(
         mSceneDataBuffer.deviceAddress,
         sizeof(SceneData),
         mSkybox->getIrradianceMap().imageView,
@@ -145,7 +144,7 @@ void Scene3D::update() {
     Camera& camera = mEntityMap[mMainCameraHolder]->getComponent<Camera>();
     Transform& cameraTransform = mEntityMap[mMainCameraHolder]->getComponent<Transform>();
 
-    camera.aspectRatio = VulkanEngine::get().getWindowAspectRatio();
+    camera.aspectRatio = mVkEngine.getWindowAspectRatio();
     camera.updateMatrices(cameraTransform);
 
     mSceneData.view = camera.viewMatrix;

@@ -4,12 +4,17 @@
 #include "vk_engine.h"
 #include "vk_initializers.h"
 
-Swapchain::Swapchain(VkExtent2D extent, VkPresentModeKHR presentMode, VkSurfaceKHR surface) : mExtent(extent) {
+Swapchain::Swapchain(
+    VkExtent2D extent,
+    VkPresentModeKHR presentMode,
+    VkSurfaceKHR surface,
+    VulkanEngine& vkEngine
+) : mExtent(extent), mVkEngine(vkEngine) {
     init(presentMode, surface);
 }
 
 Swapchain::~Swapchain() {
-    VkDevice device = VulkanEngine::get().getDevice();
+    VkDevice device = mVkEngine.getDevice();
 
     // destroy swapchain resources
     for (auto& imageView : mImageViews) {
@@ -25,8 +30,8 @@ void Swapchain::init(VkPresentModeKHR presentMode, VkSurfaceKHR surface) {
 
     // build swapchain using vkb
     vkb::SwapchainBuilder vkbSwapchainBuilder{
-        VulkanEngine::get().getPhysicalDevice(),
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getPhysicalDevice(),
+        mVkEngine.getDevice(),
         surface
     };
 
@@ -54,7 +59,7 @@ void Swapchain::init(VkPresentModeKHR presentMode, VkSurfaceKHR surface) {
 VkImage Swapchain::getNextImage(VkSemaphore& semaphore) {
      // request image from swapchain
     VkResult e = vkAcquireNextImageKHR(
-        VulkanEngine::get().getDevice(),
+        mVkEngine.getDevice(),
         mHandle,
         UINT64_MAX,
         semaphore,
@@ -63,10 +68,10 @@ VkImage Swapchain::getNextImage(VkSemaphore& semaphore) {
     );
 
     if (e == VK_ERROR_OUT_OF_DATE_KHR || e == VK_SUBOPTIMAL_KHR) {
-        // vkDestroySemaphore(VulkanEngine::get().getDevice(), semaphore, nullptr);
+        // vkDestroySemaphore(mVkEngine.getDevice(), semaphore, nullptr);
         // VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
-        // VK_CHECK(vkCreateSemaphore(VulkanEngine::get().getDevice(), &semaphoreCreateInfo, nullptr, &semaphore));
-    
+        // VK_CHECK(vkCreateSemaphore(mVkEngine.getDevice(), &semaphoreCreateInfo, nullptr, &semaphore));
+
         return VK_NULL_HANDLE;
     } else if (e != VK_SUCCESS) {
         fmt::println("Failed to acquire swapchain image\n");

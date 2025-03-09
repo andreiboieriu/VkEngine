@@ -7,6 +7,9 @@
 
 #include "spirv_reflect.h"
 
+// forward reference
+class VulkanEngine;
+
 constexpr int MAX_PUSH_CONSTANTS_SIZE = 128;
 
 class ComputeEffect {
@@ -49,17 +52,15 @@ public:
         VkPipeline pipeline;
         VkPipelineLayout pipelineLayout;
         VkDescriptorSetLayout descriptorSetLayout;
-        
+
         uint32_t pushConstantsSize;
         char pushConstants[MAX_PUSH_CONSTANTS_SIZE];
 
         std::vector<BindingData> bindings;
     };
 
-
-
-    ComputeEffect(std::string name);
-    ComputeEffect(std::string name, std::span<PushConstantData> defaultPushConstants);
+    ComputeEffect(std::string name, VulkanEngine& vkEngine);
+    ComputeEffect(std::string name, std::span<PushConstantData> defaultPushConstants, VulkanEngine& vkEngine);
 
     ~ComputeEffect();
 
@@ -91,7 +92,7 @@ protected:
             *(T*)getAddr(location) = value;
         }
     }
-    
+
     void writePushConstant(const std::string& name, void* addr, size_t size);
 
     void freeResources();
@@ -99,6 +100,8 @@ protected:
     void* getAddr(PushConstantLocation pushLocation) {
         return mSubpasses[pushLocation.subpass].pushConstants + pushLocation.offset;
     }
+
+    VulkanEngine& mVkEngine;
 
     std::vector<Subpass> mSubpasses;
 

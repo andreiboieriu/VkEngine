@@ -46,13 +46,13 @@ Entity::~Entity() {
 //     getComponent<Scriptable>().name = name;
 // }
 
-void Entity::bindGLTF(const std::string& name) {
+void Entity::bindGLTF(const std::string& name, std::shared_ptr<LoadedGLTF> gltf) {
     if (!hasComponent<GLTF>()) {
         fmt::println("Bind GLTF error in entity named {}: No GLTF component found", mUUID.toString());
         return;
     }
 
-    getComponent<GLTF>().gltf = VulkanEngine::get().getResourceManager().getGltf(name);
+    getComponent<GLTF>().gltf = gltf;
     getComponent<GLTF>().name = name;
 }
 

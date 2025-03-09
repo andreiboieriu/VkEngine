@@ -4,10 +4,13 @@
 #include "vk_types.h"
 #include "volk.h"
 
+// forward reference
+class VulkanEngine;
+
 class MaterialManager {
 public:
 
-    MaterialManager();
+    MaterialManager(VulkanEngine& vkEngine);
     ~MaterialManager();
 
     VkDescriptorSetLayout getSceneDescriptorSetLayout() {
@@ -24,6 +27,7 @@ private:
     void buildPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
     void freeResources();
 
+    VulkanEngine& mVkEngine;
 
     DescriptorWriter mDescriptorWriter;
     MaterialPipeline mOpaquePipelineCulled;
@@ -33,5 +37,4 @@ private:
 
     VkDescriptorSetLayout mMaterialDescriptorLayout;
     VkDescriptorSetLayout mSceneDescriptorLayout;
-
 };

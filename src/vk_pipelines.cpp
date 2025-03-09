@@ -1,9 +1,8 @@
-﻿#include "vk_pipelines.h"
+#include "vk_pipelines.h"
 
 #include <fstream>
 #include "volk.h"
 #include "vk_initializers.h"
-#include "vk_engine.h"
 
 bool vkutil::loadShaderModule(const char* filePath, VkDevice device, VkShaderModule* outShaderModule) {
     // open shader file
@@ -43,7 +42,11 @@ bool vkutil::loadShaderModule(const char* filePath, VkDevice device, VkShaderMod
     return true;
 }
 
-VkPipelineLayout vkutil::createPipelineLayout(std::span<VkDescriptorSetLayout> descriptorSetLayouts, std::span<VkPushConstantRange> pushConstantRanges) {
+VkPipelineLayout vkutil::createPipelineLayout(
+    std::span<VkDescriptorSetLayout> descriptorSetLayouts,
+    std::span<VkPushConstantRange> pushConstantRanges,
+    VkDevice device
+) {
     VkPipelineLayoutCreateInfo layoutInfo = vkinit::pipeline_layout_create_info();
 
     if (!descriptorSetLayouts.empty()) {
@@ -57,11 +60,14 @@ VkPipelineLayout vkutil::createPipelineLayout(std::span<VkDescriptorSetLayout> d
     }
 
     VkPipelineLayout layout{};
-    VK_CHECK(vkCreatePipelineLayout(VulkanEngine::get().getDevice(), &layoutInfo, nullptr, &layout));
+    VK_CHECK(vkCreatePipelineLayout(device, &layoutInfo, nullptr, &layout));
 
     return layout;
 }
 
+PipelineBuilder::PipelineBuilder() {
+    clear();
+}
 
 PipelineBuilder& PipelineBuilder::clear() {
     mInputAssembly = {};
@@ -271,4 +277,3 @@ VkPipeline PipelineBuilder::buildPipeline(VkDevice device, VkPipelineCreateFlags
         return newPipeline;
     }
 }
-

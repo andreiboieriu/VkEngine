@@ -3,6 +3,7 @@
 #include "entt.hpp"
 #include <nlohmann/json.hpp>
 #include "uuid.h"
+#include "vk_loader.h"
 
 class Entity {
 
@@ -31,7 +32,7 @@ public:
     }
 
     // void bindScript(const std::string& name);
-    void bindGLTF(const std::string& name);
+    void bindGLTF(const std::string& name, std::shared_ptr<LoadedGLTF> gltf);
 
     void setParent(const UUID& parentUUID, bool removeFromFormerParent = true);
     void deferredDestroy();
