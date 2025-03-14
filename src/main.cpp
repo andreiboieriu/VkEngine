@@ -1,8 +1,8 @@
-#include "vk_engine.h"
+#include "game_app.h"
 
 int main(int argc, char* argv[])
 {
-	VulkanEngine engine;
+	GameApp engine;
 
 	engine.init();
 	engine.run();

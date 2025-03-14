@@ -20,6 +20,8 @@ CXX_FLAGS = -g -std=gnu++20 -w
 
 # PCH options: src/CMakeFiles/engine.dir/entity.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 
+# PCH options: src/CMakeFiles/engine.dir/game_app.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
+
 # PCH options: src/CMakeFiles/engine.dir/main.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx
 
 # PCH options: src/CMakeFiles/engine.dir/resource_manager.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx

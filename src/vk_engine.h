@@ -172,8 +172,6 @@ public:
 
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
 
-	void update();
-
 	float getDeltaTime() {
 	   return mDeltaTime;
 	}
@@ -191,29 +189,27 @@ public:
 	   return mWindow->getAspectRatio();
 	}
 
-private:
-
+protected:
 	void initVulkan();
 	void initVMA();
 	void initSwapchain();
 	void initCommands();
 	void initSyncStructs();
 	void initImGui();
-
 	void initECS();
-
 	void initDefaultData();
 
 	void loadLoadingScreenData();
 
-	//draw loop
-	void draw();
+	// draw loop
+	virtual void draw() = 0;
 	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
 	void drawGeometry(VkCommandBuffer commandBuffer);
 
 	void drawLoadingScreen();
 
-	void drawGui();
+	virtual void drawGui() = 0;
+	virtual void update() = 0;
 
 	// Vulkan library handle
 	VkInstance mInstance = VK_NULL_HANDLE;
@@ -253,7 +249,6 @@ private:
 	AllocatedImage mDrawImage;
 	VkExtent2D mDrawExtent;
 	AllocatedImage mDepthImage;
-
 
 	// immediat submit structures
 	VkFence mImmFence;

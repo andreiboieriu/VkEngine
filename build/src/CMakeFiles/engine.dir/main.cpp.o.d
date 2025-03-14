@@ -392,6 +392,7 @@ src/CMakeFiles/engine.dir/main.cpp.o: \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4.hpp \
   /home/unclegoga/Development/VkEngine/third_party/glm/glm/ext/matrix_float4x4_precision.hpp \
   /home/unclegoga/Development/VkEngine/src/main.cpp \
+  /home/unclegoga/Development/VkEngine/src/game_app.h \
   /home/unclegoga/Development/VkEngine/src/vk_engine.h \
   /home/unclegoga/Development/VkEngine/src/compute_effects/compute_effect.h \
   /home/unclegoga/Development/VkEngine/third_party/volk/volk.h \

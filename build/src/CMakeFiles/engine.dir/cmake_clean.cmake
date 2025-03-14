@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/ecs_components/components.cpp.o.d"
   "CMakeFiles/engine.dir/entity.cpp.o"
   "CMakeFiles/engine.dir/entity.cpp.o.d"
+  "CMakeFiles/engine.dir/game_app.cpp.o"
+  "CMakeFiles/engine.dir/game_app.cpp.o.d"
   "CMakeFiles/engine.dir/main.cpp.o"
   "CMakeFiles/engine.dir/main.cpp.o.d"
   "CMakeFiles/engine.dir/resource_manager.cpp.o"

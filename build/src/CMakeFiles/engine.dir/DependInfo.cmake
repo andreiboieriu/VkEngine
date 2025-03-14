@@ -20,6 +20,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/ecs_components/components.cpp.o" "gcc" "src/CMakeFiles/engine.dir/ecs_components/components.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/src/entity.cpp" "src/CMakeFiles/engine.dir/entity.cpp.o" "gcc" "src/CMakeFiles/engine.dir/entity.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/entity.cpp.o" "gcc" "src/CMakeFiles/engine.dir/entity.cpp.o.d"
+  "/home/unclegoga/Development/VkEngine/src/game_app.cpp" "src/CMakeFiles/engine.dir/game_app.cpp.o" "gcc" "src/CMakeFiles/engine.dir/game_app.cpp.o.d"
+  "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/game_app.cpp.o" "gcc" "src/CMakeFiles/engine.dir/game_app.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/src/main.cpp" "src/CMakeFiles/engine.dir/main.cpp.o" "gcc" "src/CMakeFiles/engine.dir/main.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx" "src/CMakeFiles/engine.dir/main.cpp.o" "gcc" "src/CMakeFiles/engine.dir/main.cpp.o.d"
   "/home/unclegoga/Development/VkEngine/src/resource_manager.cpp" "src/CMakeFiles/engine.dir/resource_manager.cpp.o" "gcc" "src/CMakeFiles/engine.dir/resource_manager.cpp.o.d"

@@ -265,6 +265,30 @@ entity.cpp.s:
 	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/entity.cpp.s
 .PHONY : entity.cpp.s
 
+game_app.o: game_app.cpp.o
+.PHONY : game_app.o
+
+# target to build an object file
+game_app.cpp.o:
+	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_app.cpp.o
+.PHONY : game_app.cpp.o
+
+game_app.i: game_app.cpp.i
+.PHONY : game_app.i
+
+# target to preprocess a source file
+game_app.cpp.i:
+	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_app.cpp.i
+.PHONY : game_app.cpp.i
+
+game_app.s: game_app.cpp.s
+.PHONY : game_app.s
+
+# target to generate assembly for a file
+game_app.cpp.s:
+	cd /home/unclegoga/Development/VkEngine/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/game_app.cpp.s
+.PHONY : game_app.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -652,6 +676,9 @@ help:
 	@echo "... entity.o"
 	@echo "... entity.i"
 	@echo "... entity.s"
+	@echo "... game_app.o"
+	@echo "... game_app.i"
+	@echo "... game_app.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

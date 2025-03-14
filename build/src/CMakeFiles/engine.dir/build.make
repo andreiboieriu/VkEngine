@@ -164,12 +164,28 @@ src/CMakeFiles/engine.dir/entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/entity.cpp.s"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -S /home/unclegoga/Development/VkEngine/src/entity.cpp -o CMakeFiles/engine.dir/entity.cpp.s
 
+src/CMakeFiles/engine.dir/game_app.cpp.o: src/CMakeFiles/engine.dir/flags.make
+src/CMakeFiles/engine.dir/game_app.cpp.o: /home/unclegoga/Development/VkEngine/src/game_app.cpp
+src/CMakeFiles/engine.dir/game_app.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
+src/CMakeFiles/engine.dir/game_app.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
+src/CMakeFiles/engine.dir/game_app.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/engine.dir/game_app.cpp.o"
+	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/game_app.cpp.o -MF CMakeFiles/engine.dir/game_app.cpp.o.d -o CMakeFiles/engine.dir/game_app.cpp.o -c /home/unclegoga/Development/VkEngine/src/game_app.cpp
+
+src/CMakeFiles/engine.dir/game_app.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/game_app.cpp.i"
+	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -E /home/unclegoga/Development/VkEngine/src/game_app.cpp > CMakeFiles/engine.dir/game_app.cpp.i
+
+src/CMakeFiles/engine.dir/game_app.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/game_app.cpp.s"
+	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -S /home/unclegoga/Development/VkEngine/src/game_app.cpp -o CMakeFiles/engine.dir/game_app.cpp.s
+
 src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/flags.make
 src/CMakeFiles/engine.dir/main.cpp.o: /home/unclegoga/Development/VkEngine/src/main.cpp
 src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/main.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/engine.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/engine.dir/main.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/main.cpp.o -MF CMakeFiles/engine.dir/main.cpp.o.d -o CMakeFiles/engine.dir/main.cpp.o -c /home/unclegoga/Development/VkEngine/src/main.cpp
 
 src/CMakeFiles/engine.dir/main.cpp.i: cmake_force
@@ -185,7 +201,7 @@ src/CMakeFiles/engine.dir/resource_manager.cpp.o: /home/unclegoga/Development/Vk
 src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/resource_manager.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/engine.dir/resource_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/engine.dir/resource_manager.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/resource_manager.cpp.o -MF CMakeFiles/engine.dir/resource_manager.cpp.o.d -o CMakeFiles/engine.dir/resource_manager.cpp.o -c /home/unclegoga/Development/VkEngine/src/resource_manager.cpp
 
 src/CMakeFiles/engine.dir/resource_manager.cpp.i: cmake_force
@@ -201,7 +217,7 @@ src/CMakeFiles/engine.dir/script_manager.cpp.o: /home/unclegoga/Development/VkEn
 src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/script_manager.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/engine.dir/script_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/engine.dir/script_manager.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/script_manager.cpp.o -MF CMakeFiles/engine.dir/script_manager.cpp.o.d -o CMakeFiles/engine.dir/script_manager.cpp.o -c /home/unclegoga/Development/VkEngine/src/script_manager.cpp
 
 src/CMakeFiles/engine.dir/script_manager.cpp.i: cmake_force
@@ -217,7 +233,7 @@ src/CMakeFiles/engine.dir/skybox.cpp.o: /home/unclegoga/Development/VkEngine/src
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/skybox.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/engine.dir/skybox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/engine.dir/skybox.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/skybox.cpp.o -MF CMakeFiles/engine.dir/skybox.cpp.o.d -o CMakeFiles/engine.dir/skybox.cpp.o -c /home/unclegoga/Development/VkEngine/src/skybox.cpp
 
 src/CMakeFiles/engine.dir/skybox.cpp.i: cmake_force
@@ -233,7 +249,7 @@ src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: /home/unclegoga/Development/VkEn
 src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_descriptors.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/engine.dir/vk_descriptors.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/engine.dir/vk_descriptors.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_descriptors.cpp.o -MF CMakeFiles/engine.dir/vk_descriptors.cpp.o.d -o CMakeFiles/engine.dir/vk_descriptors.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_descriptors.cpp
 
 src/CMakeFiles/engine.dir/vk_descriptors.cpp.i: cmake_force
@@ -249,7 +265,7 @@ src/CMakeFiles/engine.dir/vk_device.cpp.o: /home/unclegoga/Development/VkEngine/
 src/CMakeFiles/engine.dir/vk_device.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_device.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_device.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/engine.dir/vk_device.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/engine.dir/vk_device.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_device.cpp.o -MF CMakeFiles/engine.dir/vk_device.cpp.o.d -o CMakeFiles/engine.dir/vk_device.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_device.cpp
 
 src/CMakeFiles/engine.dir/vk_device.cpp.i: cmake_force
@@ -265,7 +281,7 @@ src/CMakeFiles/engine.dir/vk_engine.cpp.o: /home/unclegoga/Development/VkEngine/
 src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_engine.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/engine.dir/vk_engine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/engine.dir/vk_engine.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_engine.cpp.o -MF CMakeFiles/engine.dir/vk_engine.cpp.o.d -o CMakeFiles/engine.dir/vk_engine.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_engine.cpp
 
 src/CMakeFiles/engine.dir/vk_engine.cpp.i: cmake_force
@@ -281,7 +297,7 @@ src/CMakeFiles/engine.dir/vk_images.cpp.o: /home/unclegoga/Development/VkEngine/
 src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_images.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/engine.dir/vk_images.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/engine.dir/vk_images.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_images.cpp.o -MF CMakeFiles/engine.dir/vk_images.cpp.o.d -o CMakeFiles/engine.dir/vk_images.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_images.cpp
 
 src/CMakeFiles/engine.dir/vk_images.cpp.i: cmake_force
@@ -297,7 +313,7 @@ src/CMakeFiles/engine.dir/vk_initializers.cpp.o: /home/unclegoga/Development/VkE
 src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_initializers.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/engine.dir/vk_initializers.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/engine.dir/vk_initializers.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_initializers.cpp.o -MF CMakeFiles/engine.dir/vk_initializers.cpp.o.d -o CMakeFiles/engine.dir/vk_initializers.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_initializers.cpp
 
 src/CMakeFiles/engine.dir/vk_initializers.cpp.i: cmake_force
@@ -313,7 +329,7 @@ src/CMakeFiles/engine.dir/vk_loader.cpp.o: /home/unclegoga/Development/VkEngine/
 src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_loader.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/engine.dir/vk_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/engine.dir/vk_loader.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_loader.cpp.o -MF CMakeFiles/engine.dir/vk_loader.cpp.o.d -o CMakeFiles/engine.dir/vk_loader.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_loader.cpp
 
 src/CMakeFiles/engine.dir/vk_loader.cpp.i: cmake_force
@@ -329,7 +345,7 @@ src/CMakeFiles/engine.dir/vk_materials.cpp.o: /home/unclegoga/Development/VkEngi
 src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_materials.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/engine.dir/vk_materials.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/engine.dir/vk_materials.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_materials.cpp.o -MF CMakeFiles/engine.dir/vk_materials.cpp.o.d -o CMakeFiles/engine.dir/vk_materials.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_materials.cpp
 
 src/CMakeFiles/engine.dir/vk_materials.cpp.i: cmake_force
@@ -345,7 +361,7 @@ src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: /home/unclegoga/Development/VkEngi
 src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_pipelines.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/engine.dir/vk_pipelines.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/engine.dir/vk_pipelines.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_pipelines.cpp.o -MF CMakeFiles/engine.dir/vk_pipelines.cpp.o.d -o CMakeFiles/engine.dir/vk_pipelines.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_pipelines.cpp
 
 src/CMakeFiles/engine.dir/vk_pipelines.cpp.i: cmake_force
@@ -361,7 +377,7 @@ src/CMakeFiles/engine.dir/vk_scene.cpp.o: /home/unclegoga/Development/VkEngine/s
 src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_scene.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/engine.dir/vk_scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/engine.dir/vk_scene.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_scene.cpp.o -MF CMakeFiles/engine.dir/vk_scene.cpp.o.d -o CMakeFiles/engine.dir/vk_scene.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_scene.cpp
 
 src/CMakeFiles/engine.dir/vk_scene.cpp.i: cmake_force
@@ -377,7 +393,7 @@ src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: /home/unclegoga/Development/VkEngi
 src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_swapchain.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/engine.dir/vk_swapchain.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/engine.dir/vk_swapchain.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_swapchain.cpp.o -MF CMakeFiles/engine.dir/vk_swapchain.cpp.o.d -o CMakeFiles/engine.dir/vk_swapchain.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_swapchain.cpp
 
 src/CMakeFiles/engine.dir/vk_swapchain.cpp.i: cmake_force
@@ -393,7 +409,7 @@ src/CMakeFiles/engine.dir/vk_window.cpp.o: /home/unclegoga/Development/VkEngine/
 src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx
 src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/cmake_pch.hxx.pch
 src/CMakeFiles/engine.dir/vk_window.cpp.o: src/CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/engine.dir/vk_window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/engine.dir/vk_window.cpp.o"
 	cd /home/unclegoga/Development/VkEngine/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -Xclang -include-pch -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir/cmake_pch.hxx -MD -MT src/CMakeFiles/engine.dir/vk_window.cpp.o -MF CMakeFiles/engine.dir/vk_window.cpp.o.d -o CMakeFiles/engine.dir/vk_window.cpp.o -c /home/unclegoga/Development/VkEngine/src/vk_window.cpp
 
 src/CMakeFiles/engine.dir/vk_window.cpp.i: cmake_force
@@ -411,6 +427,7 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/deletion_queue.cpp.o" \
 "CMakeFiles/engine.dir/ecs_components/components.cpp.o" \
 "CMakeFiles/engine.dir/entity.cpp.o" \
+"CMakeFiles/engine.dir/game_app.cpp.o" \
 "CMakeFiles/engine.dir/main.cpp.o" \
 "CMakeFiles/engine.dir/resource_manager.cpp.o" \
 "CMakeFiles/engine.dir/script_manager.cpp.o" \
@@ -436,6 +453,7 @@ src/engine: src/CMakeFiles/engine.dir/compute_effects/compute_effect.cpp.o
 src/engine: src/CMakeFiles/engine.dir/deletion_queue.cpp.o
 src/engine: src/CMakeFiles/engine.dir/ecs_components/components.cpp.o
 src/engine: src/CMakeFiles/engine.dir/entity.cpp.o
+src/engine: src/CMakeFiles/engine.dir/game_app.cpp.o
 src/engine: src/CMakeFiles/engine.dir/main.cpp.o
 src/engine: src/CMakeFiles/engine.dir/resource_manager.cpp.o
 src/engine: src/CMakeFiles/engine.dir/script_manager.cpp.o
@@ -463,7 +481,7 @@ src/engine: /home/unclegoga/Development/VkEngine/third_party/lua/liblua.a
 src/engine: /home/unclegoga/Development/VkEngine/third_party/volk/libvolk.a
 src/engine: /home/unclegoga/Development/VkEngine/third_party/GLFW/libglfw3.a
 src/engine: src/CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable engine"
 	cd /home/unclegoga/Development/VkEngine/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

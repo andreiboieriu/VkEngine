@@ -141,7 +141,7 @@ CMakeFiles/Shaders.dir/clean:
 third_party/CMakeFiles/imgui.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=50,51,52,53,54,55,56,57 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=51,52,53,54,55,56,57,58 "Built target imgui"
 .PHONY : third_party/CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
@@ -167,12 +167,12 @@ third_party/CMakeFiles/imgui.dir/clean:
 src/CMakeFiles/engine.dir/all: third_party/CMakeFiles/imgui.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Built target engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50 "Built target engine"
 .PHONY : src/CMakeFiles/engine.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 31
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/engine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/engine.dir/rule
