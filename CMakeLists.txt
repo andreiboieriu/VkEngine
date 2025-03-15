@@ -1,5 +1,4 @@
 cmake_minimum_required (VERSION 3.11)
-
 project ("vulkan_engine")
 
 set(CMAKE_CXX_STANDARD 20)
@@ -17,7 +16,7 @@ file(GLOB_RECURSE GLSL_SOURCE_FILES
     "${PROJECT_SOURCE_DIR}/shaders/*.frag"
     "${PROJECT_SOURCE_DIR}/shaders/*.vert"
     "${PROJECT_SOURCE_DIR}/shaders/*.comp"
-    )
+)
 
 foreach(GLSL ${GLSL_SOURCE_FILES})
   message(STATUS "BUILDING SHADER")
@@ -34,4 +33,4 @@ endforeach(GLSL)
 add_custom_target(
     Shaders
     DEPENDS ${SPIRV_BINARY_FILES}
-    )
+)

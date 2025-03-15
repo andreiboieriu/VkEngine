@@ -12,6 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
   "/home/unclegoga/Development/VkEngine/src/CMakeLists.txt"
+  "/home/unclegoga/Development/VkEngine/src/core/CMakeLists.txt"
+  "/home/unclegoga/Development/VkEngine/src/game/CMakeLists.txt"
   "/home/unclegoga/Development/VkEngine/third_party/CMakeLists.txt"
   "/usr/share/cmake-3.28/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
@@ -47,11 +49,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "third_party/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/core/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/game/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Shaders.dir/DependInfo.cmake"
   "third_party/CMakeFiles/imgui.dir/DependInfo.cmake"
-  "src/CMakeFiles/engine.dir/DependInfo.cmake"
+  "src/core/CMakeFiles/core.dir/DependInfo.cmake"
+  "src/game/CMakeFiles/game.dir/DependInfo.cmake"
   )

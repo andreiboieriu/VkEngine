@@ -143,17 +143,30 @@ imgui/fast:
 .PHONY : imgui/fast
 
 #=============================================================================
-# Target rules for targets named engine
+# Target rules for targets named core
 
 # Build rule for target.
-engine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine
-.PHONY : engine
+core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 core
+.PHONY : core
 
 # fast build rule for target.
-engine/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/build
-.PHONY : engine/fast
+core/fast:
+	$(MAKE) $(MAKESILENT) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/build
+.PHONY : core/fast
+
+#=============================================================================
+# Target rules for targets named game
+
+# Build rule for target.
+game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
+.PHONY : game
+
+# fast build rule for target.
+game/fast:
+	$(MAKE) $(MAKESILENT) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/build
+.PHONY : game/fast
 
 # Help Target
 help:
@@ -164,7 +177,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Shaders"
-	@echo "... engine"
+	@echo "... core"
+	@echo "... game"
 	@echo "... imgui"
 .PHONY : help
 

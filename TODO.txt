@@ -1,3 +1,8 @@
+- move related methods from VulkanEngine to VkDevice class
+- make VulkanEngine a better interface
+- remove wrappers to method calls from objects managed by the VulkanEngine class
+(ex: getWindowAspect ratio), instead pass references of these objects to those that require them
+
 Start developing the editor:
 - split the project using the core/app architecture
 - have a game and an editor app
@@ -9,5 +14,4 @@ Start developing the editor:
 - add skyboxes in resource manager
 - redo scene hierarchy in a more efficient way
 
-- window resizing
 - maybe find a better solution that stopping the app when minimized?
