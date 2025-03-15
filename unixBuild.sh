@@ -12,7 +12,7 @@ make -j $(nproc) && make Shaders
 cd ..
 
 mkdir -p bin
-cp ./build/src/engine ./bin/
+cp ./build/src/game/game ./bin/
 
 # running with sudo might make VK_PRESENT_MODE_IMMEDIATE_KHR available
-sudo XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR ./bin/engine
+sudo XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR ./bin/game

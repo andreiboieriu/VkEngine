@@ -4,6 +4,11 @@
 /home/unclegoga/Development/VkEngine/build/third_party/CMakeFiles/imgui.dir
 /home/unclegoga/Development/VkEngine/build/third_party/CMakeFiles/edit_cache.dir
 /home/unclegoga/Development/VkEngine/build/third_party/CMakeFiles/rebuild_cache.dir
-/home/unclegoga/Development/VkEngine/build/src/CMakeFiles/engine.dir
 /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/edit_cache.dir
 /home/unclegoga/Development/VkEngine/build/src/CMakeFiles/rebuild_cache.dir
+/home/unclegoga/Development/VkEngine/build/src/core/CMakeFiles/core.dir
+/home/unclegoga/Development/VkEngine/build/src/core/CMakeFiles/edit_cache.dir
+/home/unclegoga/Development/VkEngine/build/src/core/CMakeFiles/rebuild_cache.dir
+/home/unclegoga/Development/VkEngine/build/src/game/CMakeFiles/game.dir
+/home/unclegoga/Development/VkEngine/build/src/game/CMakeFiles/edit_cache.dir
+/home/unclegoga/Development/VkEngine/build/src/game/CMakeFiles/rebuild_cache.dir

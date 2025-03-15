@@ -42,3 +42,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/unclegoga/Development/VkEngine/build/src/core/cmake_install.cmake")
+  include("/home/unclegoga/Development/VkEngine/build/src/game/cmake_install.cmake")
+
+endif()
+
