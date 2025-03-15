@@ -2,11 +2,11 @@
 
 int main(int argc, char* argv[])
 {
-	GameApp engine;
+	GameApp app;
 
-	engine.init();
-	engine.run();
-	engine.cleanup();
+	app.init();
+	app.run();
+	app.cleanup();
 
 	return 0;
 }

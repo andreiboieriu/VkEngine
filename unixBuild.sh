@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # fixes "Authorization required, but no authorization protocol specified" error
 # echo "xhost si:localuser:root" >> ~/.bashrc
@@ -13,6 +14,6 @@ cd ..
 
 mkdir -p bin
 cp ./build/src/game/game ./bin/
+cp ./build/src/editor/editor ./bin/
 
-# running with sudo might make VK_PRESENT_MODE_IMMEDIATE_KHR available
-sudo XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR ./bin/game
+echo "Build finished!"

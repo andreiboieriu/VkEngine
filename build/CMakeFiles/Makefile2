@@ -84,16 +84,19 @@ clean: src/clean
 # Recursive "all" directory target.
 src/all: src/core/all
 src/all: src/game/all
+src/all: src/editor/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
 src/preinstall: src/core/preinstall
 src/preinstall: src/game/preinstall
+src/preinstall: src/editor/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
 src/clean: src/core/clean
 src/clean: src/game/clean
+src/clean: src/editor/clean
 .PHONY : src/clean
 
 #=============================================================================
@@ -110,6 +113,21 @@ src/core/preinstall:
 # Recursive "clean" directory target.
 src/core/clean: src/core/CMakeFiles/core.dir/clean
 .PHONY : src/core/clean
+
+#=============================================================================
+# Directory level rules for directory src/editor
+
+# Recursive "all" directory target.
+src/editor/all: src/editor/CMakeFiles/editor.dir/all
+.PHONY : src/editor/all
+
+# Recursive "preinstall" directory target.
+src/editor/preinstall:
+.PHONY : src/editor/preinstall
+
+# Recursive "clean" directory target.
+src/editor/clean: src/editor/CMakeFiles/editor.dir/clean
+.PHONY : src/editor/clean
 
 #=============================================================================
 # Directory level rules for directory src/game
@@ -174,7 +192,7 @@ CMakeFiles/Shaders.dir/clean:
 third_party/CMakeFiles/imgui.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=53,54,55,56,57,58,59,60 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=57,58,59,60,61,62,63,64 "Built target imgui"
 .PHONY : third_party/CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
@@ -227,7 +245,7 @@ src/game/CMakeFiles/game.dir/all: third_party/CMakeFiles/imgui.dir/all
 src/game/CMakeFiles/game.dir/all: src/core/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=49,50,51,52 "Built target game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=53,54,55,56 "Built target game"
 .PHONY : src/game/CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
@@ -245,6 +263,33 @@ game: src/game/CMakeFiles/game.dir/rule
 src/game/CMakeFiles/game.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/clean
 .PHONY : src/game/CMakeFiles/game.dir/clean
+
+#=============================================================================
+# Target rules for target src/editor/CMakeFiles/editor.dir
+
+# All Build rule for target.
+src/editor/CMakeFiles/editor.dir/all: third_party/CMakeFiles/imgui.dir/all
+src/editor/CMakeFiles/editor.dir/all: src/core/CMakeFiles/core.dir/all
+	$(MAKE) $(MAKESILENT) -f src/editor/CMakeFiles/editor.dir/build.make src/editor/CMakeFiles/editor.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/editor/CMakeFiles/editor.dir/build.make src/editor/CMakeFiles/editor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=49,50,51,52 "Built target editor"
+.PHONY : src/editor/CMakeFiles/editor.dir/all
+
+# Build rule for subdir invocation for target.
+src/editor/CMakeFiles/editor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 33
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/editor/CMakeFiles/editor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
+.PHONY : src/editor/CMakeFiles/editor.dir/rule
+
+# Convenience name for target.
+editor: src/editor/CMakeFiles/editor.dir/rule
+.PHONY : editor
+
+# clean rule for target.
+src/editor/CMakeFiles/editor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/editor/CMakeFiles/editor.dir/build.make src/editor/CMakeFiles/editor.dir/clean
+.PHONY : src/editor/CMakeFiles/editor.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

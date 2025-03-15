@@ -12,3 +12,6 @@
 /home/unclegoga/Development/VkEngine/build/src/game/CMakeFiles/game.dir
 /home/unclegoga/Development/VkEngine/build/src/game/CMakeFiles/edit_cache.dir
 /home/unclegoga/Development/VkEngine/build/src/game/CMakeFiles/rebuild_cache.dir
+/home/unclegoga/Development/VkEngine/build/src/editor/CMakeFiles/editor.dir
+/home/unclegoga/Development/VkEngine/build/src/editor/CMakeFiles/edit_cache.dir
+/home/unclegoga/Development/VkEngine/build/src/editor/CMakeFiles/rebuild_cache.dir

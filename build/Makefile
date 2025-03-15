@@ -168,6 +168,19 @@ game/fast:
 	$(MAKE) $(MAKESILENT) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+#=============================================================================
+# Target rules for targets named editor
+
+# Build rule for target.
+editor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 editor
+.PHONY : editor
+
+# fast build rule for target.
+editor/fast:
+	$(MAKE) $(MAKESILENT) -f src/editor/CMakeFiles/editor.dir/build.make src/editor/CMakeFiles/editor.dir/build
+.PHONY : editor/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -178,6 +191,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Shaders"
 	@echo "... core"
+	@echo "... editor"
 	@echo "... game"
 	@echo "... imgui"
 .PHONY : help
