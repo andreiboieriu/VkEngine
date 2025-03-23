@@ -2,26 +2,44 @@
 
 layout(local_size_x = 16, local_size_y = 16) in;
 
-layout(rgba16f, set = 0, binding = 0) uniform readonly image2D image;
-layout(rgba16f, set = 0, binding = 1) uniform writeonly image2D bufferImageMip0;
+layout(set = 0, binding = 0) uniform sampler2D image;
+layout(rgba16f, set = 0, binding = 1) uniform writeonly image2D bufferImageMip1;
 
 layout(push_constant) uniform constants
 {
-    ivec2 imageExtent;
+    vec4 values[4];
+    vec2 imageExtent;
+    vec2 bufferImageExtent;
 } PushConstants;
 
-float getLuma(vec3 color) {
-    return dot(color, vec3(0.2126729f, 0.7151522f, 0.0721750f));
-}
-
 void main() {
-    ivec2 texelCoord = ivec2(gl_GlobalInvocationID.xy);
+    vec2 destCoord = vec2(gl_GlobalInvocationID.xy);
 
-    // copy image to bloom buffer
-    if (texelCoord.x < PushConstants.imageExtent.x && texelCoord.y < PushConstants.imageExtent.y)
-    {
-        vec4 pixel = imageLoad(image, texelCoord);
+    if (destCoord.x < PushConstants.imageExtent.x / 2 && destCoord.y < PushConstants.imageExtent.y / 2) {
+        vec2 srcTexelSize = 1.0 / PushConstants.bufferImageExtent;
 
-        imageStore(bufferImageMip0, texelCoord, pixel);
+        vec2 texCoord = destCoord * 2.0 * srcTexelSize;
+
+        vec4 a = texture(image, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y + 2 * srcTexelSize.y));
+        vec4 b = texture(image, vec2(texCoord.x, texCoord.y + 2 * srcTexelSize.y));
+        vec4 c = texture(image, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y + 2 * srcTexelSize.y));
+
+        vec4 d = texture(image, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y));
+        vec4 e = texture(image, vec2(texCoord.x, texCoord.y));
+        vec4 f = texture(image, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y));
+
+        vec4 g = texture(image, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y - 2 * srcTexelSize.y));
+        vec4 h = texture(image, vec2(texCoord.x, texCoord.y - 2 * srcTexelSize.y));
+        vec4 i = texture(image, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y - 2 * srcTexelSize.y));
+
+        vec4 j = texture(image, vec2(texCoord.x - srcTexelSize.x, texCoord.y + srcTexelSize.y));
+        vec4 k = texture(image, vec2(texCoord.x + srcTexelSize.x, texCoord.y + srcTexelSize.y));
+        vec4 l = texture(image, vec2(texCoord.x - srcTexelSize.x, texCoord.y - srcTexelSize.y));
+        vec4 m = texture(image, vec2(texCoord.x + srcTexelSize.x, texCoord.y - srcTexelSize.y));
+
+        vec4 downsample = (a + c + g + i) * 0.03125 + (b + d + f + h) * 0.0625 + (e + j + k + l + m) * 0.125;
+        downsample = max(downsample, 0.0001);
+
+        imageStore(bufferImageMip1, ivec2(destCoord), texture(image, texCoord));
     }
 }

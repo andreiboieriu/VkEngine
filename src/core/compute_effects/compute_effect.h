@@ -10,8 +10,6 @@
 // forward reference
 class VulkanEngine;
 
-constexpr int MAX_PUSH_CONSTANTS_SIZE = 128;
-
 class ComputeEffect {
 
 public:
@@ -20,32 +18,22 @@ public:
         uint32_t offset;
     };
 
-    struct PushConstantInfo {
-        // uint32_t offset;
-        uint32_t size;
-        std::vector<PushConstantLocation> locations;
-        SpvReflectTypeFlags type;
-    };
-
-    struct PushConstantData {
-        std::string name;
-        uint32_t size;
-        char value[16];
-
-        PushConstantData(std::string name, float value) : name{name} {
-            *(float*)this->value = value;
-            size = sizeof(float);
-        }
-
-        PushConstantData(std::string name, int value) : name{name} {
-            *(int*)this->value = value;
-            size = sizeof(int);
-        }
-    };
-
     struct BindingData {
         std::string name;
         VkDescriptorType descriptorType;
+    };
+
+
+    struct DispatchSize {
+        bool useScreenSize = true;
+        float screenSizeMultiplier = 1.0f; // defaults to full screen
+
+        glm::vec2 customSize; // used size if useScreenSize = false
+    };
+
+    struct EditableSubpassInfo {
+        std::array<glm::vec4, 8> pushConstants;
+        DispatchSize dispatchSize;
     };
 
     struct Subpass {
@@ -53,14 +41,15 @@ public:
         VkPipelineLayout pipelineLayout;
         VkDescriptorSetLayout descriptorSetLayout;
 
-        uint32_t pushConstantsSize;
-        char pushConstants[MAX_PUSH_CONSTANTS_SIZE];
+        static constexpr size_t pushConstantsSize = 80;
 
         std::vector<BindingData> bindings;
+        EditableSubpassInfo editableInfo;
+        glm::vec3 localSize;
     };
 
     ComputeEffect(std::string name, VulkanEngine& vkEngine);
-    ComputeEffect(std::string name, std::span<PushConstantData> defaultPushConstants, VulkanEngine& vkEngine);
+    ComputeEffect(std::string name, const std::vector<ComputeEffect::EditableSubpassInfo>& info, VulkanEngine& vkEngine);
 
     ~ComputeEffect();
 
@@ -72,34 +61,10 @@ protected:
     void synchronizeWithCompute(VkCommandBuffer commandBuffer);
 
     void load(std::string name);
-    void setDefaultPushConstants(std::span<PushConstantData> defaultPushConstants);
+    void setSubpassInfo(const std::vector<ComputeEffect::EditableSubpassInfo>& info);
     void addSubpass(std::string path);
 
-    template<typename T>
-    void writePushConstant(const std::string& name, T value) {
-        if (!mPushInfoMap.contains(name)) {
-            return;
-        }
-
-        PushConstantInfo& pushInfo = mPushInfoMap[name];
-
-        if (sizeof(T) != pushInfo.size) {
-            fmt::println("write push constant failed: size mismatch");
-            return;
-        }
-
-        for (auto& location : pushInfo.locations) {
-            *(T*)getAddr(location) = value;
-        }
-    }
-
-    void writePushConstant(const std::string& name, void* addr, size_t size);
-
     void freeResources();
-
-    void* getAddr(PushConstantLocation pushLocation) {
-        return mSubpasses[pushLocation.subpass].pushConstants + pushLocation.offset;
-    }
 
     VulkanEngine& mVkEngine;
 
@@ -110,8 +75,6 @@ protected:
     AllocatedImage mBufferImage;
 
     std::vector<VkImageView> mBufferImageMipViews;
-
-    std::unordered_map<std::string, PushConstantInfo> mPushInfoMap;
 
     std::string mName;
     bool mEnabled = true;

@@ -76,28 +76,52 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
     // render loading screen
     std::thread t{&VulkanEngine::drawLoadingScreen, this};
 
-    std::vector<ComputeEffect::PushConstantData> fxaaData = {
-        ComputeEffect::PushConstantData("fixedThreshold", 0.0312f),
-        ComputeEffect::PushConstantData("relativeThreshold", 0.063f),
-        ComputeEffect::PushConstantData("pixelBlendStrength", 0.75f),
-        ComputeEffect::PushConstantData("quality", 2)
-    };
-
     // load all other resources
-    mFxaaEffect = std::make_unique<ComputeEffect>("fxaa", fxaaData, *this);
+    {
+        ComputeEffect::EditableSubpassInfo info;
+        info.pushConstants[0].x = 0.0312f; // fixedThreshold
+        info.pushConstants[0].y = 0.063f; // relativeThreshold
+        info.pushConstants[0].z = 0.75f; // pixelBlendStrength
+        info.pushConstants[0].w = 2; // quality
 
-    std::vector<ComputeEffect::PushConstantData> toneData = {
-        ComputeEffect::PushConstantData("exposure", 1.0f),
-    };
+        info.dispatchSize.useScreenSize = true;
+        info.dispatchSize.screenSizeMultiplier = 1.0f;
 
-    mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", toneData, *this);
+        mFxaaEffect = std::make_unique<ComputeEffect>("fxaa", std::vector<ComputeEffect::EditableSubpassInfo>{info, info}, *this);
+    }
 
-    std::vector<ComputeEffect::PushConstantData> bloomData = {
-        ComputeEffect::PushConstantData("filterRadius", 0.005f),
-        ComputeEffect::PushConstantData("strength", 0.04f),
-    };
+    {
+        ComputeEffect::EditableSubpassInfo info;
+        info.pushConstants[0].x = 1.0f; // exposure
 
-    mBloomEffect = std::make_unique<ComputeEffect>("bloom", bloomData, *this);
+        info.dispatchSize.useScreenSize = true;
+        info.dispatchSize.screenSizeMultiplier = 1.0f;
+
+        mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", std::vector<ComputeEffect::EditableSubpassInfo>{info}, *this);
+    }
+
+    {
+        ComputeEffect::EditableSubpassInfo info;
+        info.pushConstants[0].x = 0.005f; // filterRadius
+        info.pushConstants[0].y = 0.04f; // strength
+
+        info.dispatchSize.useScreenSize = true;
+        info.dispatchSize.screenSizeMultiplier = 1.f;
+
+        std::vector<ComputeEffect::EditableSubpassInfo> infoVec;
+
+        for (int i = 1; i < 6; i++) {
+            info.dispatchSize.screenSizeMultiplier = 1.f / (1 << i);
+            infoVec.push_back(info);
+        }
+
+        for (int i = 4; i >= 0; i--) {
+            info.dispatchSize.screenSizeMultiplier = 1.f / (1 << i);
+            infoVec.push_back(info);
+        }
+
+        mBloomEffect = std::make_unique<ComputeEffect>("bloom", infoVec, *this);
+    }
 
     mMainDeletionQueue.push([&]() {
         mFxaaEffect = nullptr;
@@ -547,7 +571,8 @@ void VulkanEngine::initSwapchain() {
     drawImageUsages |= VK_IMAGE_USAGE_TRANSFER_SRC_BIT |
                        VK_IMAGE_USAGE_TRANSFER_DST_BIT |
                        VK_IMAGE_USAGE_STORAGE_BIT |
-                       VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
+                       VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT |
+                       VK_IMAGE_USAGE_SAMPLED_BIT;
 
     VkImageCreateInfo imageCreateInfo = vkinit::image_create_info(mDrawImage.imageFormat, drawImageUsages, drawImageExtent);
 

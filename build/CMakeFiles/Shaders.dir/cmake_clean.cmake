@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "/home/unclegoga/Development/VkEngine/shaders/bloom_pass0.comp.spv"
   "/home/unclegoga/Development/VkEngine/shaders/bloom_pass1.comp.spv"
-  "/home/unclegoga/Development/VkEngine/shaders/bloom_pass10.comp.spv"
-  "/home/unclegoga/Development/VkEngine/shaders/bloom_pass11.comp.spv"
   "/home/unclegoga/Development/VkEngine/shaders/bloom_pass2.comp.spv"
   "/home/unclegoga/Development/VkEngine/shaders/bloom_pass3.comp.spv"
   "/home/unclegoga/Development/VkEngine/shaders/bloom_pass4.comp.spv"

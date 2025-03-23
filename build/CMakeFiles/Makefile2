@@ -166,12 +166,12 @@ third_party/clean: third_party/CMakeFiles/imgui.dir/clean
 CMakeFiles/Shaders.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target Shaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target Shaders"
 .PHONY : CMakeFiles/Shaders.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Shaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Shaders.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unclegoga/Development/VkEngine/build/CMakeFiles 0
 .PHONY : CMakeFiles/Shaders.dir/rule
@@ -192,7 +192,7 @@ CMakeFiles/Shaders.dir/clean:
 third_party/CMakeFiles/imgui.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=56,57,58,59,60,61,62,63 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=54,55,56,57,58,59,60,61 "Built target imgui"
 .PHONY : third_party/CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
@@ -218,7 +218,7 @@ third_party/CMakeFiles/imgui.dir/clean:
 src/core/CMakeFiles/core.dir/all: third_party/CMakeFiles/imgui.dir/all
 	$(MAKE) $(MAKESILENT) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/core/CMakeFiles/core.dir/build.make src/core/CMakeFiles/core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47 "Built target core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45 "Built target core"
 .PHONY : src/core/CMakeFiles/core.dir/all
 
 # Build rule for subdir invocation for target.
@@ -245,7 +245,7 @@ src/game/CMakeFiles/game.dir/all: third_party/CMakeFiles/imgui.dir/all
 src/game/CMakeFiles/game.dir/all: src/core/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=52,53,54,55 "Built target game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=50,51,52,53 "Built target game"
 .PHONY : src/game/CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
@@ -272,7 +272,7 @@ src/editor/CMakeFiles/editor.dir/all: third_party/CMakeFiles/imgui.dir/all
 src/editor/CMakeFiles/editor.dir/all: src/core/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f src/editor/CMakeFiles/editor.dir/build.make src/editor/CMakeFiles/editor.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/editor/CMakeFiles/editor.dir/build.make src/editor/CMakeFiles/editor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=48,49,50,51 "Built target editor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=46,47,48,49 "Built target editor"
 .PHONY : src/editor/CMakeFiles/editor.dir/all
 
 # Build rule for subdir invocation for target.

@@ -51,17 +51,17 @@ ComputeEffect::ComputeEffect(std::string name, VulkanEngine& vkEngine) : mName(n
     load(name);
 }
 
-ComputeEffect::ComputeEffect(std::string name, std::span<PushConstantData> defaultPushConstants, VulkanEngine& vkEngine) : ComputeEffect(name, vkEngine) {
-    setDefaultPushConstants(defaultPushConstants);
+ComputeEffect::ComputeEffect(std::string name, const std::vector<ComputeEffect::EditableSubpassInfo>& info, VulkanEngine& vkEngine) : ComputeEffect(name, vkEngine) {
+    setSubpassInfo(info);
 }
 
 ComputeEffect::~ComputeEffect() {
     freeResources();
 }
 
-void ComputeEffect::setDefaultPushConstants(std::span<PushConstantData> defaultPushConstants) {
-    for (auto& pushData : defaultPushConstants) {
-        writePushConstant(pushData.name, pushData.value, pushData.size);
+void ComputeEffect::setSubpassInfo(const std::vector<ComputeEffect::EditableSubpassInfo>& info) {
+    for (int i = 0; i < mSubpasses.size(); i++) {
+        mSubpasses[i].editableInfo = info[i];
     }
 }
 
@@ -145,34 +145,16 @@ void ComputeEffect::addSubpass(std::string path) {
 
     newSubpass.descriptorSetLayout = layoutBuilder.build(mVkEngine.getDevice(), nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
 
-    // get push constant data
-    result = spvReflectEnumeratePushConstantBlocks(&module, &count, nullptr);
-    assert(result == SPV_REFLECT_RESULT_SUCCESS && "spv reflect failed to get push constant block count");
+    // get local workgroup size
+    auto entryPoint = module.entry_points[0];
+    auto localSize = entryPoint.local_size;
 
-    std::vector<SpvReflectBlockVariable*> pushConstants(count);
-    result = spvReflectEnumeratePushConstantBlocks(&module, &count, pushConstants.data());
-    assert(result == SPV_REFLECT_RESULT_SUCCESS && "spv reflect failed to get push constant blocks");
-
-    newSubpass.pushConstantsSize = pushConstants[0]->size;
-
-    for (uint32_t i = 0; i < pushConstants[0]->member_count; i++) {
-        if (mPushInfoMap.contains(pushConstants[0]->members[i].name)) {
-            mPushInfoMap[pushConstants[0]->members[i].name].locations.push_back({static_cast<uint32_t>(mSubpasses.size()) ,pushConstants[0]->members[i].offset});
-        } else {
-            PushConstantInfo pushInfo{};
-
-            pushInfo.locations.push_back({static_cast<uint32_t>(mSubpasses.size()) ,pushConstants[0]->members[i].offset});
-            pushInfo.size = pushConstants[0]->members[i].size;
-            pushInfo.type = pushConstants[0]->members[i].type_description->type_flags;
-
-            mPushInfoMap[pushConstants[0]->members[i].name] = pushInfo;
-        }
-    }
+    newSubpass.localSize = glm::vec3(localSize.x, localSize.y, localSize.z);
 
     // create push constant range
     VkPushConstantRange pushConstantRange{};
     pushConstantRange.offset = 0;
-    pushConstantRange.size = newSubpass.pushConstantsSize;
+    pushConstantRange.size = Subpass::pushConstantsSize;
     pushConstantRange.stageFlags = module.shader_stage;
 
     // create pipeline layout
@@ -201,9 +183,6 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
     if (!mEnabled) {
         return;
     }
-
-    writePushConstant("imageExtent", extent);
-    writePushConstant("bufferImageExtent", glm::vec2(2560 * 2, 1440 * 2));
 
     for (unsigned int i = 0; i < mSubpasses.size(); i++) {
         vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mSubpasses[i].pipeline);
@@ -238,9 +217,29 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
 
         vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mSubpasses[i].pipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
 
-        vkCmdPushConstants(commandBuffer, mSubpasses[i].pipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, mSubpasses[i].pushConstantsSize, &mSubpasses[i].pushConstants);
+        // write push constants (image and buffer extent)
+        mSubpasses[i].editableInfo.pushConstants[4].x = extent.width;
+        mSubpasses[i].editableInfo.pushConstants[4].y = extent.height;
+        mSubpasses[i].editableInfo.pushConstants[4].z = 2560 * 2;
+        mSubpasses[i].editableInfo.pushConstants[4].w = 1440 * 2;
 
-        vkCmdDispatch(commandBuffer, std::ceil(extent.width / 16.0), std::ceil(extent.height / 16.0), 1);
+        vkCmdPushConstants(commandBuffer, mSubpasses[i].pipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, mSubpasses[i].pushConstantsSize, mSubpasses[i].editableInfo.pushConstants.data());
+
+        glm::vec2 dispatchSize;
+
+        if (mSubpasses[i].editableInfo.dispatchSize.useScreenSize) {
+            dispatchSize = glm::vec2(extent.width, extent.height);
+            dispatchSize *= mSubpasses[i].editableInfo.dispatchSize.screenSizeMultiplier;
+        } else {
+            dispatchSize = mSubpasses[i].editableInfo.dispatchSize.customSize;
+        }
+
+        vkCmdDispatch(
+            commandBuffer,
+            std::ceil(dispatchSize.x / mSubpasses[i].localSize.x),
+            std::ceil(dispatchSize.y / mSubpasses[i].localSize.y),
+            mSubpasses[i].localSize.z
+        );
 
         if (i < mSubpasses.size() - 1) {
             synchronizeWithCompute(commandBuffer);
@@ -292,66 +291,20 @@ void ComputeEffect::drawGui() {
     if (ImGui::TreeNode(mName.c_str())) {
         ImGui::Checkbox("enable", &mEnabled);
 
-        for (auto& [name, pushInfo] : mPushInfoMap) {
-            if (name == "imageExtent" || name == "bufferImageExtent") {
-                continue;
-            }
-
-            bool isVector = pushInfo.type & SPV_REFLECT_TYPE_FLAG_VECTOR;
-            uint32_t count = isVector ? pushInfo.size / 4 : 1;
-
-            bool changeValues = false;
-
-            if (pushInfo.type & SPV_REFLECT_TYPE_FLAG_INT) {
-                if (count == 1) {
-                    changeValues = ImGui::InputInt(name.c_str(), (int*)(getAddr(pushInfo.locations[0])));
-                } else if (count == 2) {
-                    changeValues = ImGui::InputInt2(name.c_str(), (int*)(getAddr(pushInfo.locations[0])));
-                } else if (count == 3) {
-                    changeValues = ImGui::InputInt3(name.c_str(), (int*)(getAddr(pushInfo.locations[0])));
-                } else if (count == 4) {
-                    changeValues = ImGui::InputInt4(name.c_str(), (int*)(getAddr(pushInfo.locations[0])));
+        for (int i = 0; i < mSubpasses.size(); i++) {
+            if (ImGui::TreeNode(("subpass_" + std::to_string(i)).c_str())) {
+                for (int j = 0; j < 5; j++) {
+                    ImGui::InputFloat4(("values_" + std::to_string(j)).c_str(), (float*)&mSubpasses[i].editableInfo.pushConstants[j]);
                 }
-            } else if (pushInfo.type & SPV_REFLECT_TYPE_FLAG_FLOAT) {
-                if (count == 1) {
-                    changeValues = ImGui::InputFloat(name.c_str(), (float*)(getAddr(pushInfo.locations[0])));
-                } else if (count == 2) {
-                    changeValues = ImGui::InputFloat2(name.c_str(), (float*)(getAddr(pushInfo.locations[0])));
-                } else if (count == 3) {
-                    changeValues = ImGui::InputFloat3(name.c_str(), (float*)(getAddr(pushInfo.locations[0])));
-                } else if (count == 4) {
-                    changeValues = ImGui::InputFloat4(name.c_str(), (float*)(getAddr(pushInfo.locations[0])));
-                }
-            } else if (pushInfo.type & SPV_REFLECT_TYPE_FLAG_BOOL) {
-                changeValues = ImGui::Checkbox(name.c_str(), (bool *)(getAddr(pushInfo.locations[0])));
-            }
 
-            if (changeValues) {
-                for (uint32_t i = 1; i < pushInfo.locations.size(); i++) {
-                    memcpy(getAddr(pushInfo.locations[i]), getAddr(pushInfo.locations[0]), pushInfo.size);
-                }
+                ImGui::Checkbox("use screen size", &mSubpasses[i].editableInfo.dispatchSize.useScreenSize);
+                ImGui::InputFloat("screen size multiplier", &mSubpasses[i].editableInfo.dispatchSize.screenSizeMultiplier);
+                ImGui::InputFloat2("custom size", (float *)&mSubpasses[i].editableInfo.dispatchSize.customSize);
+
+                ImGui::TreePop();
             }
         }
 
         ImGui::TreePop();
-    }
-}
-
-void ComputeEffect::writePushConstant(const std::string& name, void* addr, size_t size) {
-    if (!mPushInfoMap.contains(name)) {
-        return;
-    }
-
-    fmt::println("writing push constant: {}", name);
-
-    PushConstantInfo& pushInfo = mPushInfoMap[name];
-
-    if (size != pushInfo.size) {
-        fmt::println("write push constant failed: size mismatch");
-        return;
-    }
-
-    for (auto& location : pushInfo.locations) {
-        memcpy(getAddr(location), addr, size);
     }
 }

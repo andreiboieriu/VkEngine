@@ -2,39 +2,43 @@
 
 layout(local_size_x = 16, local_size_y = 16) in;
 
-layout(set = 0, binding = 0) uniform sampler2D bufferImageMip2;
-layout(rgba16f, set = 0, binding = 1) uniform writeonly image2D bufferImageMip1;
+layout(set = 0, binding = 0) uniform sampler2D bufferImageMip1;
+layout(rgba16f, set = 0, binding = 1) uniform image2D image;
 
 layout(push_constant) uniform constants
 {
-    ivec2 imageExtent;
+    vec4 values[4];
+    vec2 imageExtent;
     vec2 bufferImageExtent;
-    float filterRadius;
 } PushConstants;
+
+float filterRadius = PushConstants.values[0].x;
+float strength = PushConstants.values[0].y;
 
 void main() {
     vec2 destCoord = vec2(gl_GlobalInvocationID.xy);
 
-    if (destCoord.x < PushConstants.imageExtent.x / 2 && destCoord.y < PushConstants.imageExtent.y / 2)
+    if (destCoord.x < PushConstants.imageExtent.x && destCoord.y < PushConstants.imageExtent.y)
     {
-        vec2 srcTexelSize = 1.0 / PushConstants.bufferImageExtent * 4.0;
+        vec2 srcTexelSize = 1.0 / PushConstants.bufferImageExtent * 2.0;
 
-        vec2 texCoord = (destCoord / 2.0 + 0.25) * srcTexelSize;
+        vec2 texCoord = destCoord / 2.0 * srcTexelSize;
 
-        vec4 a = texture(bufferImageMip2, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y + PushConstants.filterRadius));
-        vec4 b = texture(bufferImageMip2, vec2(texCoord.x, texCoord.y + PushConstants.filterRadius));
-        vec4 c = texture(bufferImageMip2, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y + PushConstants.filterRadius));
+        vec4 a = texture(bufferImageMip1, vec2(texCoord.x - filterRadius, texCoord.y + filterRadius));
+        vec4 b = texture(bufferImageMip1, vec2(texCoord.x, texCoord.y + filterRadius));
+        vec4 c = texture(bufferImageMip1, vec2(texCoord.x + filterRadius, texCoord.y + filterRadius));
 
-        vec4 d = texture(bufferImageMip2, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y));
-        vec4 e = texture(bufferImageMip2, vec2(texCoord.x, texCoord.y));
-        vec4 f = texture(bufferImageMip2, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y));
+        vec4 d = texture(bufferImageMip1, vec2(texCoord.x - filterRadius, texCoord.y));
+        vec4 e = texture(bufferImageMip1, vec2(texCoord.x, texCoord.y));
+        vec4 f = texture(bufferImageMip1, vec2(texCoord.x + filterRadius, texCoord.y));
 
-        vec4 g = texture(bufferImageMip2, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y - PushConstants.filterRadius));
-        vec4 h = texture(bufferImageMip2, vec2(texCoord.x, texCoord.y - PushConstants.filterRadius));
-        vec4 i = texture(bufferImageMip2, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y - PushConstants.filterRadius));
+        vec4 g = texture(bufferImageMip1, vec2(texCoord.x - filterRadius, texCoord.y - filterRadius));
+        vec4 h = texture(bufferImageMip1, vec2(texCoord.x, texCoord.y - filterRadius));
+        vec4 i = texture(bufferImageMip1, vec2(texCoord.x + filterRadius, texCoord.y - filterRadius));
 
         vec4 upsample = (e * 4.0 + (b + d + f + h) * 2.0 + (a + c + g + i)) / 16.0;
+        vec4 original = imageLoad(image, ivec2(destCoord));
 
-        imageStore(bufferImageMip1, ivec2(destCoord), upsample);
+        imageStore(image, ivec2(destCoord), mix(original, upsample, strength));
     }
 }

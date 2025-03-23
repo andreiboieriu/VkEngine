@@ -1,17 +1,20 @@
 #version 460
 
-layout (local_size_x = 16, local_size_y = 16) in;
+layout(local_size_x = 16, local_size_y = 16) in;
 
-layout(rgba16f,set = 0, binding = 0) uniform image2D image;
+layout(rgba16f, set = 0, binding = 0) uniform image2D image;
 
-layout( push_constant ) uniform constants
+layout(push_constant) uniform constants
 {
-    ivec2 imageExtent;
-    float fixedThreshold;
-    float relativeThreshold;
-    float pixelBlendStrength;
-    int quality;
+    vec4 values[4];
+    vec2 imageExtent;
+    vec2 bufferImageExtent;
 } PushConstants;
+
+float fixedThreshold = PushConstants.values[0].x;
+float relativeThreshold = PushConstants.values[0].y;
+float pixelBlendStrength = PushConstants.values[0].z;
+int quality = int(PushConstants.values[0].w);
 
 struct LumaNeighbourhood {
     float m, n, e, s, w, ne, se, sw, nw;
@@ -34,28 +37,61 @@ struct QualityPreset {
 };
 
 const QualityPreset lowQuality = {
-    3,
-    {1.0, 2.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
-    8.0
-};
+        3,
+        {
+            1.0,
+            2.0,
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        },
+        8.0
+    };
 
 const QualityPreset mediumQuality = {
-    8,
-    {1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 0.0, 0.0},
-    8.0
-};
+        8,
+        {
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            0.0,
+            0.0
+        },
+        8.0
+    };
 
 const QualityPreset highQuality = {
-    10,
-    {1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 4.0},
-    8.0
-};
+        10,
+        {
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            4.0
+        },
+        8.0
+    };
 
 const QualityPreset[3] qualityPresets = {
-    lowQuality,
-    mediumQuality,
-    highQuality
-};
+        lowQuality,
+        mediumQuality,
+        highQuality
+    };
 
 float getLuma(ivec2 uv) {
     return imageLoad(image, uv).w;
@@ -88,21 +124,21 @@ float getPixelBlendFactor(LumaNeighbourhood luma) {
     factor = abs(factor - luma.m);
     factor = clamp(factor / luma.range, 0.0, 1.0);
     factor = smoothstep(0, 1, factor);
-    return factor * factor * PushConstants.pixelBlendStrength;
+    return factor * factor * pixelBlendStrength;
 }
 
 bool canSkipFxaa(LumaNeighbourhood luma) {
-    return luma.range < max(PushConstants.fixedThreshold, PushConstants.relativeThreshold * luma.highest);
+    return luma.range < max(fixedThreshold, relativeThreshold * luma.highest);
 }
 
 bool isHorizontalEdge(LumaNeighbourhood luma) {
-    float horizontal = 2.0 * abs(luma.n + luma.s - 2.0 * luma.m) + 
-                       abs(luma.ne + luma.se - 2.0 * luma.e) + 
-                       abs(luma.nw + luma.sw - 2.0 * luma.w);
+    float horizontal = 2.0 * abs(luma.n + luma.s - 2.0 * luma.m) +
+            abs(luma.ne + luma.se - 2.0 * luma.e) +
+            abs(luma.nw + luma.sw - 2.0 * luma.w);
 
     float vertical = 2.0 * abs(luma.e + luma.w - 2.0 * luma.m) +
-                     abs(luma.ne + luma.nw - 2.0 * luma.n) + 
-                     abs(luma.se + luma.sw - 2.0 * luma.s);
+            abs(luma.ne + luma.nw - 2.0 * luma.n) +
+            abs(luma.se + luma.sw - 2.0 * luma.s);
 
     return horizontal >= vertical;
 }
@@ -151,7 +187,7 @@ float getLuma(vec2 uv) {
 }
 
 float getEdgeBlendFactor(LumaNeighbourhood luma, FxaaEdge edge, ivec2 uv) {
-    QualityPreset qualityPreset = qualityPresets[PushConstants.quality];
+    QualityPreset qualityPreset = qualityPresets[quality];
 
     vec2 edgeUV = vec2(uv);
     vec2 uvStep = vec2(0.0);
@@ -229,9 +265,9 @@ void main() {
 
     // ignore outer pixels
     if (texelCoord.x < PushConstants.imageExtent.x - 1 &&
-        texelCoord.x > 0 &&
-        texelCoord.y < PushConstants.imageExtent.y - 1 &&
-        texelCoord.y > 0) {
+            texelCoord.x > 0 &&
+            texelCoord.y < PushConstants.imageExtent.y - 1 &&
+            texelCoord.y > 0) {
         LumaNeighbourhood luma = getLumaNeighbourhood(texelCoord);
 
         if (canSkipFxaa(luma)) {
