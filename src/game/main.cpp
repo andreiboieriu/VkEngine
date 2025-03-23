@@ -2,9 +2,11 @@
 
 int main(int argc, char* argv[])
 {
+    std::vector<std::string> cliArgs(argv + 1, argv + argc);
+
 	GameApp app;
 
-	app.init();
+	app.init(cliArgs);
 	app.run();
 	app.cleanup();
 

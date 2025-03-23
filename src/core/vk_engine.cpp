@@ -40,8 +40,20 @@
 
 #include "compute_effects/compute_effect.h"
 
-void VulkanEngine::init()
+void VulkanEngine::parseCliArgs(const std::vector<std::string>& cliArgs) {
+    for (auto& arg : cliArgs) {
+        if (arg == "--debug") {
+            mUseValidationLayers = true;
+            fmt::println("Enabled validation layers");
+        }
+    }
+}
+
+void VulkanEngine::init(const std::vector<std::string>& cliArgs)
 {
+    // parse cli args
+    parseCliArgs(cliArgs);
+
     // create window
     mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900}, *this);
 
@@ -60,32 +72,6 @@ void VulkanEngine::init()
     initECS();
 
     loadLoadingScreenData();
-
-    // // test info
-    // {
-    //     uint32_t propertyCount = 0;
-    //     VkResult result = vkGetPhysicalDeviceDisplayPlanePropertiesKHR(mPhysicalDevice, &propertyCount, nullptr);
-
-    //     if (result != VK_SUCCESS) {
-    //         fmt::println("cock");
-    //     }
-
-    //     std::vector<VkDisplayPlanePropertiesKHR> displayPlaneProperties(propertyCount);
-    //     vkGetPhysicalDeviceDisplayPlanePropertiesKHR(mPhysicalDevice, &propertyCount, displayPlaneProperties.data());
-
-    //     for (auto& property : displayPlaneProperties) {
-    //         vkGetDisplayModePropertiesKHR(mPhysicalDevice, property.currentDisplay, &propertyCount, nullptr);
-
-    //         std::vector<VkDisplayModePropertiesKHR> displayModeProperties(propertyCount);
-
-    //         vkGetDisplayModePropertiesKHR(mPhysicalDevice, property.currentDisplay, &propertyCount, displayModeProperties.data());
-
-    //         for (auto& property2 : displayModeProperties) {
-    //             fmt::println("refresh rate: {}", property2.parameters.refreshRate);
-    //         }
-    //     }
-
-    // }
 
     // render loading screen
     std::thread t{&VulkanEngine::drawLoadingScreen, this};
@@ -335,7 +321,6 @@ GPUMeshBuffers VulkanEngine::uploadMesh(std::span<uint32_t> indices, std::span<V
     return newMesh;
 }
 
-// could be improved by running it on another queue
 void VulkanEngine::immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function, bool waitResult) {
     // reset imd cmd fence and command buffer
     VK_CHECK(vkResetFences(mDevice, 1, &mImmFence));
@@ -375,7 +360,8 @@ void VulkanEngine::initVulkan() {
     vkb::InstanceBuilder builder{};
 
     vkb::Instance vkbInstance = builder.set_app_name("VkEngine")
-        .request_validation_layers(mUseValidationLayers)
+        // .request_validation_layers(mUseValidationLayers)
+        .enable_validation_layers(true)
         .use_default_debug_messenger()
         .require_api_version(1, 3, 0)
         .enable_extension(VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME)
@@ -443,11 +429,12 @@ void VulkanEngine::initVulkan() {
 
     for (uint32_t i = 0; i < queueFamilies.size(); i++) {
         if (queueFamilies[i].queueFlags & VK_QUEUE_GRAPHICS_BIT) {
+            std::cout << "Graphics queue count: " << queueFamilies[i].queueCount << "\n";
             queueDescriptions.push_back(vkb::CustomQueueDescription{
                 i,
                 std::vector<float> {
                     1.0f,
-                    0.0f
+                    0.8f
                 }
             });
 
@@ -457,6 +444,22 @@ void VulkanEngine::initVulkan() {
             break;
         }
     }
+
+    // for (uint32_t i = 1; i < queueFamilies.size(); i++) {
+    //     if (queueFamilies[i].queueFlags & VK_QUEUE_TRANSFER_BIT) {
+    //         std::cout << "Transfer queue count: " << queueFamilies[i].queueCount << "\n";
+    //         queueDescriptions.push_back(vkb::CustomQueueDescription{
+    //             i,
+    //             std::vector<float> {
+    //                 1.0f
+    //             }
+    //         });
+
+    //         mImmediateCommandsQueueFamily = i;
+
+    //         break;
+    //     }
+    // }
 
     vkb::DeviceBuilder vkbDeviceBuilder{vkbPhysicalDevice};
     vkb::Device vkbDevice = vkbDeviceBuilder.custom_queue_setup(queueDescriptions).build().value();
@@ -739,7 +742,7 @@ void VulkanEngine::initImGui() {
     initInfo.Instance = mInstance;
     initInfo.PhysicalDevice = mPhysicalDevice;
     initInfo.Device = mDevice;
-    initInfo.Queue = mImmediateCommandsQueue;
+    initInfo.Queue = mGraphicsQueue;
     initInfo.DescriptorPool = imguiDescPool;
     initInfo.MinImageCount = 3;
     initInfo.ImageCount = 3;

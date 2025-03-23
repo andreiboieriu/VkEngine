@@ -46,7 +46,7 @@ Entity::~Entity() {
 //     getComponent<Scriptable>().name = name;
 // }
 
-void Entity::bindGLTF(const std::string& name, std::shared_ptr<LoadedGLTF> gltf) {
+void Entity::bindGLTF(const std::string& name, LoadedGLTF *gltf) {
     if (!hasComponent<GLTF>()) {
         fmt::println("Bind GLTF error in entity named {}: No GLTF component found", mUUID.toString());
         return;

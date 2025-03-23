@@ -32,7 +32,7 @@ public:
     }
 
     // void bindScript(const std::string& name);
-    void bindGLTF(const std::string& name, std::shared_ptr<LoadedGLTF> gltf);
+    void bindGLTF(const std::string& name, LoadedGLTF *gltf);
 
     void setParent(const UUID& parentUUID, bool removeFromFormerParent = true);
     void deferredDestroy();

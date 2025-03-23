@@ -1,38 +1,36 @@
 #version 460
 
-layout (local_size_x = 16, local_size_y = 16) in;
+layout(local_size_x = 16, local_size_y = 16) in;
 
 layout(set = 0, binding = 0) uniform sampler2D bufferImageMip4;
-layout(rgba16f, set = 0, binding = 1) uniform image2D bufferImageMip3;
+layout(rgba16f, set = 0, binding = 1) uniform writeonly image2D bufferImageMip3;
 
-layout( push_constant ) uniform constants
+layout(push_constant) uniform constants
 {
     ivec2 imageExtent;
     vec2 bufferImageExtent;
     float filterRadius;
 } PushConstants;
 
-
-
 void main() {
     vec2 destCoord = vec2(gl_GlobalInvocationID.xy);
 
-    if(destCoord.x < PushConstants.imageExtent.x / 8 && destCoord.y < PushConstants.imageExtent.y / 8)
+    if (destCoord.x < PushConstants.imageExtent.x / 8 && destCoord.y < PushConstants.imageExtent.y / 8)
     {
         vec2 srcTexelSize = 1.0 / PushConstants.bufferImageExtent * 16.0;
 
         vec2 texCoord = (destCoord / 2.0 + 0.25) * srcTexelSize;
 
         vec4 a = texture(bufferImageMip4, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y + PushConstants.filterRadius));
-        vec4 b = texture(bufferImageMip4, vec2(texCoord.x               , texCoord.y + PushConstants.filterRadius));
+        vec4 b = texture(bufferImageMip4, vec2(texCoord.x, texCoord.y + PushConstants.filterRadius));
         vec4 c = texture(bufferImageMip4, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y + PushConstants.filterRadius));
 
         vec4 d = texture(bufferImageMip4, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y));
-        vec4 e = texture(bufferImageMip4, vec2(texCoord.x               , texCoord.y));
+        vec4 e = texture(bufferImageMip4, vec2(texCoord.x, texCoord.y));
         vec4 f = texture(bufferImageMip4, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y));
 
         vec4 g = texture(bufferImageMip4, vec2(texCoord.x - PushConstants.filterRadius, texCoord.y - PushConstants.filterRadius));
-        vec4 h = texture(bufferImageMip4, vec2(texCoord.x               , texCoord.y - PushConstants.filterRadius));
+        vec4 h = texture(bufferImageMip4, vec2(texCoord.x, texCoord.y - PushConstants.filterRadius));
         vec4 i = texture(bufferImageMip4, vec2(texCoord.x + PushConstants.filterRadius, texCoord.y - PushConstants.filterRadius));
 
         vec4 upsample = (e * 4.0 + (b + d + f + h) * 2.0 + (a + c + g + i)) / 16.0;

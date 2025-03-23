@@ -11,8 +11,12 @@
 #include "uuid.h"
 
 struct GLTF {
-    std::shared_ptr<LoadedGLTF> gltf = nullptr;
+    LoadedGLTF *gltf = nullptr;
     std::string name = "empty";
+};
+
+struct Sprite {
+
 };
 
 struct Transform {

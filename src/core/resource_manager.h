@@ -11,16 +11,19 @@ public:
     ResourceManager(VulkanEngine& vkEngine);
     ~ResourceManager();
 
-    std::shared_ptr<LoadedGLTF> getGltf(std::string name) {
+    void loadGltf(std::filesystem::path filePath);
+    void loadImage(std::filesystem::path filePath);
+
+    LoadedGLTF *getGltf(std::string name) {
         if (!mLoadedGltfs.contains(name)) {
             return nullptr;
         }
 
-        return mLoadedGltfs[name];
+        return mLoadedGltfs[name].get();
     }
 
-    const AllocatedImage& getSkyboxCubemap(std::string name) {
-        return mSkyboxCubemaps[name];
+    const AllocatedImage& getImage(std::string name) {
+        return mImages[name];
     }
 
 private:
@@ -29,6 +32,6 @@ private:
 
     VulkanEngine& mVkEngine;
 
-    std::unordered_map<std::string, std::shared_ptr<LoadedGLTF>> mLoadedGltfs;
-    std::unordered_map<std::string, AllocatedImage> mSkyboxCubemaps;
+    std::unordered_map<std::string, std::unique_ptr<LoadedGLTF>> mLoadedGltfs;
+    std::unordered_map<std::string, AllocatedImage> mImages;
 };

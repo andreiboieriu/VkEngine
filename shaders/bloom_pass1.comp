@@ -1,36 +1,34 @@
 #version 460
 
-layout (local_size_x = 16, local_size_y = 16) in;
+layout(local_size_x = 16, local_size_y = 16) in;
 
 layout(set = 0, binding = 0) uniform sampler2D bufferImageMip0;
-layout(rgba16f, set = 0, binding = 1) uniform image2D bufferImageMip1;
+layout(rgba16f, set = 0, binding = 1) uniform writeonly image2D bufferImageMip1;
 
-layout( push_constant ) uniform constants
+layout(push_constant) uniform constants
 {
     ivec2 imageExtent;
     vec2 bufferImageExtent;
 } PushConstants;
 
-
-
 void main() {
     vec2 destCoord = vec2(gl_GlobalInvocationID.xy);
 
-    if(destCoord.x < PushConstants.imageExtent.x / 2 && destCoord.y < PushConstants.imageExtent.y / 2) {
+    if (destCoord.x < PushConstants.imageExtent.x / 2 && destCoord.y < PushConstants.imageExtent.y / 2) {
         vec2 srcTexelSize = 1.0 / PushConstants.bufferImageExtent;
 
         vec2 texCoord = (destCoord * 2.0 + 1.0) * srcTexelSize;
 
         vec4 a = texture(bufferImageMip0, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y + 2 * srcTexelSize.y));
-        vec4 b = texture(bufferImageMip0, vec2(texCoord.x                     , texCoord.y + 2 * srcTexelSize.y));
+        vec4 b = texture(bufferImageMip0, vec2(texCoord.x, texCoord.y + 2 * srcTexelSize.y));
         vec4 c = texture(bufferImageMip0, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y + 2 * srcTexelSize.y));
 
         vec4 d = texture(bufferImageMip0, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y));
-        vec4 e = texture(bufferImageMip0, vec2(texCoord.x                     , texCoord.y));
+        vec4 e = texture(bufferImageMip0, vec2(texCoord.x, texCoord.y));
         vec4 f = texture(bufferImageMip0, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y));
 
         vec4 g = texture(bufferImageMip0, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y - 2 * srcTexelSize.y));
-        vec4 h = texture(bufferImageMip0, vec2(texCoord.x                     , texCoord.y - 2 * srcTexelSize.y));
+        vec4 h = texture(bufferImageMip0, vec2(texCoord.x, texCoord.y - 2 * srcTexelSize.y));
         vec4 i = texture(bufferImageMip0, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y - 2 * srcTexelSize.y));
 
         vec4 j = texture(bufferImageMip0, vec2(texCoord.x - srcTexelSize.x, texCoord.y + srcTexelSize.y));

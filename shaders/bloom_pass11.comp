@@ -1,11 +1,11 @@
 #version 460
 
-layout (local_size_x = 16, local_size_y = 16) in;
+layout(local_size_x = 16, local_size_y = 16) in;
 
 layout(rgba16f, set = 0, binding = 0) uniform image2D image;
-layout(rgba16f, set = 0, binding = 1) uniform image2D bufferImageMip0;
+layout(rgba16f, set = 0, binding = 1) uniform readonly image2D bufferImageMip0;
 
-layout( push_constant ) uniform constants
+layout(push_constant) uniform constants
 {
     ivec2 imageExtent;
     float strength;
@@ -13,14 +13,14 @@ layout( push_constant ) uniform constants
 
 float getLuma(vec3 color) {
     // luma with gamma = 2
-    return dot(color, vec3(0.2126729f,  0.7151522f, 0.0721750f));
+    return dot(color, vec3(0.2126729f, 0.7151522f, 0.0721750f));
 }
 
 void main() {
     ivec2 texelCoord = ivec2(gl_GlobalInvocationID.xy);
 
     // copy image to bloom buffer
-    if(texelCoord.x < PushConstants.imageExtent.x && texelCoord.y < PushConstants.imageExtent.y)
+    if (texelCoord.x < PushConstants.imageExtent.x && texelCoord.y < PushConstants.imageExtent.y)
     {
         vec4 bloomPixel = imageLoad(bufferImageMip0, texelCoord);
         vec4 imagePixel = imageLoad(image, texelCoord);

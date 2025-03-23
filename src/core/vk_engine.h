@@ -83,7 +83,7 @@ public:
 	};
 
 	// initializes everything in the engine
-	void init();
+	void init(const std::vector<std::string>& cliArgs);
 
 	// shuts down the engine
 	void cleanup();
@@ -190,6 +190,7 @@ public:
 	}
 
 protected:
+    void parseCliArgs(const std::vector<std::string>& cliArgs);
 	void initVulkan();
 	void initVMA();
 	void initSwapchain();
@@ -229,7 +230,7 @@ protected:
 
 	// flags
 	bool mIsInitialized = false;
-	bool mUseValidationLayers = true;
+	bool mUseValidationLayers = false;
 
 	int mFrameNumber = 0;
 	float mDeltaTime = 0.f;

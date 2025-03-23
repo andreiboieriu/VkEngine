@@ -123,11 +123,6 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
 }
 
 void LoadedGLTF::load(std::filesystem::path filePath) {
-    fmt::println("Loading GLTF: {}", filePath.string());
-
-    // check if file exists
-    assert(std::filesystem::exists(filePath) && ("Failed to find gltf file: " + filePath.string()).c_str());
-
     // define gltf loading options
     constexpr auto gltfOptions = fastgltf::Options::DontRequireValidAssetMember |
                                  fastgltf::Options::AllowDouble |
@@ -210,7 +205,6 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         }
 
         if (material.doubleSided) {
-            fmt::println("Double sided");
             if (passType == MaterialPass::Opaque) {
                 passType = MaterialPass::OpaqueDoubleSided;
             } else {

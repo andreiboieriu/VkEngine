@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 
+EDITOR_PATH="/bin/editor"
+GAME_PATH="/bin/game"
+
+ENV_VARS="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR"
+ARGS=""
+
 while [[ "$#" -gt 0 ]]; do
     case $1 in
-        --target) TARGET="$2"; shift ;;   # Store value and skip to next argument
-        # --debug) DEBUG=true ;;         # Set a flag (no value needed)
+        --target) TARGET="$2"; shift;; # Choose between game and editor apps
+        --debug) ARGS="$ARGS --debug";; # Enables validation layers
         *) echo "Unknown argument: $1"; exit 1 ;;
     esac
     shift
 done
-
-EDITOR_PATH="/bin/editor"
-GAME_PATH="/bin/game"
-
-ARGS="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR"
 
 case $TARGET in
     editor) RUN_PATH=$EDITOR_PATH;;
@@ -22,4 +23,4 @@ esac
 
 # running with sudo might make VK_PRESENT_MODE_IMMEDIATE_KHR available
 echo "Running $TARGET app"
-sudo $ARGS .$RUN_PATH
+sudo $ENV_VARS .$RUN_PATH $ARGS

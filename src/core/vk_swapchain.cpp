@@ -61,7 +61,7 @@ VkImage Swapchain::getNextImage(VkSemaphore& semaphore) {
     VkResult e = vkAcquireNextImageKHR(
         mVkEngine.getDevice(),
         mHandle,
-        UINT64_MAX,
+        1e9,
         semaphore,
         VK_NULL_HANDLE,
         &mCurrentImageIndex

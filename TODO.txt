@@ -1,15 +1,23 @@
+High Priority:
+- continue developing the editor
+    - project selection screen
+    - simple editor ui containing scene hierarchy and component view
+    - ability to add objects to the scene
+
+- move skybox and image loading to ResourceManager
+- make a sprite component
+- render the loadings screen using a standard Scene3D object
+- add ability to buffer scenes
+- add ability to switch scenes
+
+Medium Priority:
+- Multithreaded resource loading?
 - move related methods from VulkanEngine to VkDevice class
 - make VulkanEngine a better interface
 - remove wrappers to method calls from objects managed by the VulkanEngine class
 (ex: getWindowAspect ratio), instead pass references of these objects to those that require them
 
-Start developing the editor:
-- split the project using the core/app architecture
-- have a game and an editor app
-- transform the VulkanEngine class into an interface
-- have a separate class implementing it for each app
-- update the cmake project for multiple targets
-
+Low priority:
 - generalize skybox class
 - add skyboxes in resource manager
 - redo scene hierarchy in a more efficient way
