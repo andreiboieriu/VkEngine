@@ -1,66 +1,18 @@
 #include "vk_scene.h"
-#include "ecs_components/components.h"
+#include "components/components.h"
 #include "vk_descriptors.h"
 #include "vk_engine.h"
 #include <imgui.h>
 
 #include <memory>
 
-Scene3D::Scene3D(const std::string& name, VulkanEngine& vkEngine) : mName(name), mVkEngine(vkEngine) {
+Scene3D::Scene3D(const std::filesystem::path& path, VulkanEngine& vkEngine) : mVkEngine(vkEngine), mAssetManager(mVkEngine.getAssetManager()) {
     init();
+    loadFromFile(path);
 
     mSceneData.sunlightColor = glm::vec4(1.0f);
 
-    // Entity& station = createEntity(UUID("station"));
-    // station.addComponent<Transform>();
-    // station.addComponent<GLTF>();
-
-    // station.getComponent<Transform>().rotation = glm::radians(glm::vec3(0.f, 230.f, 0.f));
-
-    // station.bindGLTF("sci_fi_hangar");
-
-    Entity& spaceship = createEntity(UUID("fighter_spaceship2"));
-    spaceship.addComponent<Transform>();
-    spaceship.addComponent<GLTF>();
-    spaceship.addComponent<Script>();
-    spaceship.addComponent<SphereCollider>();
-
-    spaceship.bindGLTF("fighter_spaceship", mVkEngine.getResourceManager().getGltf("fighter_spaceship"));
-
-    spaceship.getComponent<Transform>().position = glm::vec3(2.f, 0.f, -2.0f);
-
-    Entity& asteroid = createEntity(UUID("fighter_spaceship"));
-    asteroid.addComponent<Transform>();
-    asteroid.addComponent<GLTF>();
-    asteroid.addComponent<Script>();
-
-    asteroid.getComponent<Transform>().position = glm::vec3(0.f, 0.f, -2.0f);
-
-    asteroid.bindGLTF("fighter_spaceship", mVkEngine.getResourceManager().getGltf("fighter_spaceship"));
-
-    mScriptManager->loadScript("scripts/script.lua");
-    mScriptManager->bindScript("scripts/script.lua", asteroid);
-    mScriptManager->bindScript("scripts/script.lua", spaceship);
-
-    Entity& mainCamera = createEntity(UUID("main_camera"));
-    mainCamera.addComponent<Transform>();
-    mainCamera.addComponent<Camera>();
-    mainCamera.addComponent<Script>();
-
-    // mainCamera.bindScript("CameraScript");
-
-
-    // asteroidSpawner.bindScript("AsteroidSpawnerScript");
-
-    mRootEntityUUIDs.push_back(asteroid.getUUID());
-    mRootEntityUUIDs.push_back(spaceship.getUUID());
-    mRootEntityUUIDs.push_back(mainCamera.getUUID());
-
-    mMainCameraHolder = mainCamera.getUUID();
-
     saveToFile();
-
-    // scriptSystemStart(mRegistry);
 }
 
 Scene3D::~Scene3D() {
@@ -84,71 +36,193 @@ void Scene3D::init() {
         mVkEngine.destroyBuffer(mSceneDataBuffer);
     });
 
-    mSkybox = std::make_unique<Skybox>(mVkEngine);
-    mScriptManager = std::make_unique<ScriptManager>(mRegistry, mVkEngine);
+    mScriptManager = std::make_unique<ScriptManager>();
 
     mDeletionQueue.push([&]() {
-        mSkybox = nullptr;
+        mEntities.clear();
+
         mScriptManager = nullptr;
     });
+}
+
+void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
+    mName = filePath.stem();
+
+    // get json from file
+    std::ifstream file(filePath);
+    nlohmann::json sceneJson = nlohmann::json::parse(file);
+
+    // load skybox
+    if (sceneJson.contains("Skybox")) {
+        mAssetManager.loadSkybox(sceneJson["Skybox"]);
+        mSkybox = mAssetManager.getSkybox(sceneJson["Skybox"]);
+    }
 
     // create scene data descriptor
-    mGlobalDescriptorOffset = mVkEngine.getDescriptorManager().createSceneDescriptor(
+    mGlobalDescriptorOffset = mVkEngine.getPipelineResourceManager().createSceneDescriptor(
         mSceneDataBuffer.deviceAddress,
         sizeof(SceneData),
-        mSkybox->getIrradianceMap().imageView,
-        mSkybox->getPrefilteredEnvMap().imageView,
-        mSkybox->getBrdfLut().imageView
+        mSkybox ? mSkybox->irrMap.imageView : nullptr,
+        mSkybox ? mSkybox->prefilteredEnvMap.imageView : nullptr,
+        mSkybox ? mSkybox->brdfLut.imageView : nullptr
     );
+
+    // load entities
+    for (auto& entityJson : sceneJson["Entities"]) {
+        auto componentJsons = entityJson["Components"];
+        auto newEntity = createEntity(componentJsons["Metadata"]);
+
+        // create components
+        SerializableComponents::forEach([&](auto type) {
+            using T = typename decltype(type)::type;
+            auto typeName = getTypeName<T>();
+
+            if (!componentJsons.contains(typeName) || typeName == "Metadata") {
+                return;
+            }
+
+            fmt::println("Adding {} component to {}", std::string(typeName), std::string(componentJsons["Metadata"]["UUID"]));
+
+            newEntity->addComponent<T>(componentFromJson<T>(entityJson["Components"][typeName]));
+        });
+    }
+
+    // load and bind assets to entities
+    {
+        auto view = mRegistry.view<Sprite>();
+
+        for (auto [entity, sprite] : view.each()) {
+            fmt::println("creating sprite");
+            mAssetManager.loadImage(sprite.name);
+            sprite.image = mAssetManager.getImage(sprite.name);
+        }
+    }
+
+    {
+        auto view = mRegistry.view<GLTF>();
+
+        for (auto [entity, gltf] : view.each()) {
+            mAssetManager.loadGltf(gltf.name);
+            gltf.gltf = mAssetManager.getGltf(gltf.name);
+        }
+    }
+
+    {
+        auto view = mRegistry.view<Script, Metadata>();
+
+        for (auto [entity, script, metadata] : view.each()) {
+            mScriptManager->loadScript(script.name);
+            mScriptManager->bindScript(script.name, *getEntity(metadata.uuid));
+        }
+    }
+
+    // assign main camera
+    {
+        auto view = mRegistry.view<Transform, Camera, Metadata>();
+
+        for (auto [entity, transform, camera, metadata] : view.each()) {
+            if (camera.enabled) {
+                mMainCameraHolder = metadata.uuid;
+                break;
+            }
+        }
+    }
+
+    // create hierarchy
+    for (auto& entityJson : sceneJson["Entities"]) {
+        std::string uuid = entityJson["Components"]["Metadata"]["UUID"];
+        Entity* entity = getEntity(uuid);
+        std::string parentUUID = entityJson["ParentUUID"];
+        std::vector<std::string> childrenUUIDs = entityJson["ChildrenUUIDs"];
+
+        if (parentUUID != "") {
+            entity->setParent(getEntity(parentUUID));
+        } else {
+            mRootEntities.push_back(getEntity(uuid));
+        }
+
+        for (auto& child : childrenUUIDs) {
+            entity->addChild(getEntity(child));
+        }
+    }
+
+    fmt::println("Finished loading scene!");
 }
 
 void Scene3D::cleanupEntities() {
-    auto view = mRegistry.view<Destroy>();
+    // auto view = mRegistry.view<Destroy>();
 
-    for (auto [entity] : view.each()) {
-        UUID& uuid = mRegistry.get<UUIDComponent>(entity).uuid;
+    // std::vector<entt::entity> entities;
 
-        mEntityMap.erase(uuid);
-    }
+    // for (auto [entity] : view.each()) {
+    //     std::string& uuid = mRegistry.get<UUIDComponent>(entity).uuid;
+
+    //     mEntities.erase(uuid);
+    // }
 }
 
 void Scene3D::propagateTransform() {
-    for (auto& entityUUID : mRootEntityUUIDs) {
-        mEntityMap[entityUUID]->propagateTransform(glm::mat4(1.f));
+    for (auto& entity : mRootEntities) {
+        entity->propagateTransform(glm::mat4(1.f));
     }
 }
 
 void Scene3D::render(RenderContext& renderContext) {
-    auto view = mRegistry.view<Transform, GLTF>();
+    renderContext = RenderContext{};
 
-    for (auto [entity, transform, gltf] : view.each()) {
-        if (gltf.gltf == nullptr) {
-            continue;
+    {
+        auto view = mRegistry.view<Transform, GLTF>();
+
+        for (auto [entity, transform, gltf] : view.each()) {
+            if (gltf.gltf == nullptr) {
+                continue;
+            }
+
+            gltf.gltf->draw(transform.globalMatrix, renderContext);
         }
-
-        gltf.gltf->draw(transform.globalMatrix, renderContext);
     }
+
+    {
+        auto view = mRegistry.view<Transform, Sprite>();
+
+        for (auto [entity, transform, sprite] : view.each()) {
+            if (sprite.image == nullptr) {
+                continue;
+            }
+
+            renderContext.sprites.push_back(SpriteRenderObject{.image = sprite.image, .transform = transform.globalMatrix});
+        }
+    }
+
+    renderContext.sceneData = mSceneData;
+    renderContext.skybox = mSkybox;
 }
 
-void Scene3D::update() {
+void Scene3D::update(float deltaTime, const Input& input) {
     // systems
-    mScriptManager->update();
+    mScriptManager->update(deltaTime, input);
 
     // mScriptManager->onDestroy();
     cleanupEntities();
 
-    mScriptManager->onUpdate();
+    mScriptManager->onUpdate(mRegistry);
 
     propagateTransform();
 
-    Camera& camera = mEntityMap[mMainCameraHolder]->getComponent<Camera>();
-    Transform& cameraTransform = mEntityMap[mMainCameraHolder]->getComponent<Transform>();
+    mSceneData.view = glm::mat4(1.f);
+    mSceneData.projection = glm::mat4(1.f);
 
-    camera.aspectRatio = mVkEngine.getWindowAspectRatio();
-    camera.updateMatrices(cameraTransform);
+    if (mEntities.contains(mMainCameraHolder)) {
+        Camera& camera = mEntities[mMainCameraHolder]->getComponent<Camera>();
+        Transform& cameraTransform = mEntities[mMainCameraHolder]->getComponent<Transform>();
 
-    mSceneData.view = camera.viewMatrix;
-    mSceneData.projection = camera.projectionMatrix;
+        camera.aspectRatio = mVkEngine.getWindowAspectRatio();
+        camera.updateMatrices(cameraTransform);
+
+        mSceneData.viewPosition = glm::vec4(camera.globalPosition, 0.0f);
+        mSceneData.view = camera.viewMatrix;
+        mSceneData.projection = camera.projectionMatrix;
+    }
 
     mSceneData.viewProjection = mSceneData.projection * mSceneData.view;
 
@@ -156,27 +230,37 @@ void Scene3D::update() {
     // mSceneData.sunlightColor = glm::vec4(1.f, 1.f, 1.f, 1.0f);
     mSceneData.sunlightDirection = glm::vec4(.2f, 1.0f, .5f, 1.f);
 
-    mSceneData.viewPosition = glm::vec4(camera.globalPosition, 0.0f);
 
     *(SceneData*)mSceneDataBuffer.allocInfo.pMappedData = mSceneData;
-
-    if (mSkybox != nullptr)
-        mSkybox->update(mSceneData.projection * glm::mat4(glm::mat3(mSceneData.view)));
-        // mSkybox->update(mSceneData.projection * mSceneData.view);
 }
 
-Entity& Scene3D::createEntity(const UUID& name) {
-    mEntityMap[name] = std::make_unique<Entity>(name, mRegistry);
-
-    return *mEntityMap[name];
+Entity* Scene3D::createEntity(const nlohmann::json& metaJson) {
+    return createEntity(componentFromJson<Metadata>(metaJson));
 }
 
-Entity& Scene3D::getEntity(const UUID& name) {
-    return *mEntityMap[name];
+Entity* Scene3D::createEntity(Metadata meta) {
+    mEntities[meta.uuid] = std::make_unique<Entity>(meta, mRegistry);
+
+    return mEntities[meta.uuid].get();
 }
 
-void Scene3D::destroyEntity(const UUID& name) {
-    mEntityMap.erase(name);
+Entity* Scene3D::createEntity() {
+    Metadata meta;
+    meta.uuid = "Entity_" + std::to_string(mNextEntityID++);
+
+    return createEntity(meta);
+}
+
+Entity* Scene3D::getEntity(const std::string& name) {
+    if (!mEntities.contains(name)) {
+        return nullptr;
+    }
+
+    return mEntities[name].get();
+}
+
+void Scene3D::destroyEntity(const std::string& name) {
+    mEntities.erase(name);
 }
 
 void Scene3D::drawGui() {
@@ -186,23 +270,20 @@ void Scene3D::drawGui() {
         // camera
         // mCamera.drawGui();
         if (ImGui::TreeNode("Camera")) {
-            ImGui::InputFloat3("position", (float*)&mEntityMap[mMainCameraHolder]->getComponent<Transform>().position);
-            ImGui::InputFloat3("rotation", (float*)&mEntityMap[mMainCameraHolder]->getComponent<Transform>().rotation);
+            ImGui::InputFloat3("position", (float*)&mEntities[mMainCameraHolder]->getComponent<Transform>().position);
+            ImGui::InputFloat3("rotation", (float*)&mEntities[mMainCameraHolder]->getComponent<Transform>().rotation);
 
             ImGui::TreePop();
         }
 
-        // skybox
-        mSkybox->drawGui();
-
         if (ImGui::TreeNode("Hierarchy")) {
-            for (auto& entityUUID : mRootEntityUUIDs) {
-                mEntityMap[entityUUID]->drawGUI();
+            for (auto& entity : mRootEntities) {
+                entity->drawGUI();
             }
 
             if (ImGui::Button("Add new entity")) {
-                Entity& newEntity = createEntity();
-                mRootEntityUUIDs.push_back(newEntity.getUUID());
+                Entity* newEntity = createEntity();
+                mRootEntities.push_back(newEntity);
             }
 
             ImGui::TreePop();
@@ -236,41 +317,27 @@ void Scene3D::setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelin
 nlohmann::json Scene3D::toJson() {
     nlohmann::json sceneJson;
 
-    sceneJson["Name"] = mName;
-
     std::vector<nlohmann::json> entityJsons;
 
-    for (auto& [UUID, entity] : mEntityMap) {
+    for (auto& [UUID, entity] : mEntities) {
         entityJsons.push_back(entity->toJson());
     }
 
     sceneJson["Entities"] = entityJsons;
 
+    if (mSkybox) {
+        sceneJson["Skybox"] = mSkybox->name;
+    }
+
     return sceneJson;
 }
 
 void Scene3D::saveToFile() {
-    std::filesystem::path filePath = "assets/scenes/" + mName + ".json";
+    std::filesystem::path filePath = "assets/scenes/1" + mName + ".json";
 
     std::ofstream outFile(filePath);
 
-    outFile << toJson().dump(4);
+    outFile << toJson().dump(2);
 
     outFile.close();
-}
-
-void Scene3D::loadFromFile(std::filesystem::path filePath) {
-    std::ifstream file(filePath);
-
-    nlohmann::json sceneJson = nlohmann::json::parse(file);
-
-    mName = sceneJson["Name"];
-
-    // for (auto& entityJson : sceneJson["Entities"]) {
-    //     mTopNodes.push_back(std::make_shared<SceneNode>(nodeJson, entt::null));
-    // }
-}
-
-const glm::mat4 Scene3D::getViewProj() {
-    return mSceneData.viewProjection;
 }

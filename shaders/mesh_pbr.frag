@@ -5,15 +5,14 @@
 
 // layout(set = 0, binding = 0) uniform sampler2D skybox;
 
-layout(set = 0, binding = 0) uniform SceneData {   
-
-	mat4 view;
-	mat4 proj;
-	mat4 viewproj;
-	vec4 ambientColor;
-	vec4 sunlightDirection;
-	vec4 sunlightColor;
-	vec4 viewPosition;
+layout(set = 0, binding = 0) uniform SceneData {
+    mat4 view;
+    mat4 proj;
+    mat4 viewproj;
+    vec4 ambientColor;
+    vec4 sunlightDirection;
+    vec4 sunlightColor;
+    vec4 viewPosition;
     vec4 data;
 } sceneData;
 
@@ -21,8 +20,7 @@ layout(set = 0, binding = 1) uniform samplerCube irradianceMap;
 layout(set = 0, binding = 2) uniform samplerCube prefilteredEnvMap;
 layout(set = 0, binding = 3) uniform sampler2D brdfLut;
 
-layout(set = 1, binding = 0) uniform GLTFMaterialData {   
-
+layout(set = 1, binding = 0) uniform GLTFMaterialData {
     vec4 colorFactors;
     vec4 metalRoughFactors;
     vec4 emissiveFactors;
@@ -37,11 +35,11 @@ layout(set = 1, binding = 3) uniform sampler2D normalTex;
 layout(set = 1, binding = 4) uniform sampler2D emissiveTex;
 layout(set = 1, binding = 5) uniform sampler2D occlusionTex;
 
-layout (location = 0) in vec3 inNormal;
-layout (location = 1) in vec2 inUV;
-layout (location = 2) in vec3 inFragWorldPos;
+layout(location = 0) in vec3 inNormal;
+layout(location = 1) in vec2 inUV;
+layout(location = 2) in vec3 inFragWorldPos;
 
-layout (location = 0) out vec4 outFragColor;
+layout(location = 0) out vec4 outFragColor;
 
 const float PI = 3.1415926535897932384626433832795;
 
@@ -59,20 +57,20 @@ float D_GGX(vec3 N, vec3 H, float a) {
     return nom / denom;
 }
 
-// approximated specular V term
-float V_SmithGGXCorrelatedFast(float NoV, float NoL, float roughness) {
-    float a = roughness;
-    float GGXV = NoL * (NoV * (1.0 - a) + a);
-    float GGXL = NoV * (NoL * (1.0 - a) + a);
+// // approximated specular V term
+// float V_SmithGGXCorrelatedFast(float NoV, float NoL, float roughness) {
+//     float a = roughness;
+//     float GGXV = NoL * (NoV * (1.0 - a) + a);
+//     float GGXL = NoV * (NoL * (1.0 - a) + a);
 
-    return 0.5 / (GGXV + GGXL);
-}
+//     return 0.5 / (GGXV + GGXL);
+// }
 
 float GeometrySchlickGGX(float NdotV, float roughness) {
     float r = (roughness + 1.0);
-    float k = (r*r) / 8.0;
+    float k = (r * r) / 8.0;
 
-    float nom   = NdotV;
+    float nom = NdotV;
     float denom = NdotV * (1.0 - k) + k;
 
     return nom / denom;
@@ -97,48 +95,58 @@ vec3 fresnelSchlick(vec3 H, vec3 V, vec3 F0)
 vec3 fresnelSchlickRoughness(float NdotV, vec3 F0, float roughness)
 {
     return F0 + (max(vec3(1.0 - roughness), F0) - F0) * pow(clamp(1.0 - NdotV, 0.0, 1.0), 5.0);
-}   
+}
 
 mat3 cotangentFrame(vec3 n, vec3 p, vec2 uv) {
-	// get edge vectors of the pixel triangle
-	vec3 dp1 = dFdx( p );
-	vec3 dp2 = dFdy( p );
-	vec2 duv1 = dFdx( uv );
-	vec2 duv2 = dFdy( uv );
+    // get edge vectors of the pixel triangle
+    vec3 dp1 = dFdx(p);
+    vec3 dp2 = dFdy(p);
+    vec2 duv1 = dFdx(uv);
+    vec2 duv2 = dFdy(uv);
 
-	// solve the linear system
-	vec3 dp2perp = cross( dp2, n );
-	vec3 dp1perp = cross( n, dp1 );
-	vec3 T = dp2perp * duv1.x + dp1perp * duv2.x;
-	vec3 B = dp2perp * duv1.y + dp1perp * duv2.y;
-	
-	// construct a scale-invariant frame
-	float invmax = inversesqrt( max( dot(T,T), dot(B,B) ) );
-	
-	return mat3( T * invmax, B * invmax, n );
+    // solve the linear system
+    vec3 dp2perp = cross(dp2, n);
+    vec3 dp1perp = cross(n, dp1);
+    vec3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+    vec3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+
+    // construct a scale-invariant frame
+    float invmax = inversesqrt(max(dot(T, T), dot(B, B)));
+
+    return mat3(T * invmax, B * invmax, n);
 }
 
 vec3 perturbNormal(vec3 n, vec3 v) {
-	vec3 map = normalize((texture(normalTex, inUV).xyz * 2.0 - 1.0) * vec3(materialData.normalScale, materialData.normalScale, 1.0));
+    vec3 tangentNormal = normalize((texture(normalTex, inUV).xyz * 2.0 - 1.0));
 
-    mat3 TBN = cotangentFrame(n, -v, inUV);
+    // mat3 TBN = cotangentFrame(n, inFragWorldPos, inUV);
 
-    return normalize(TBN * map);
+    vec3 Q1 = dFdx(inFragWorldPos);
+    vec3 Q2 = dFdy(inFragWorldPos);
+    vec2 st1 = dFdx(inUV);
+    vec2 st2 = dFdy(inUV);
+
+    vec3 N = normalize(n);
+    vec3 T = normalize(Q1 * st2.t - Q2 * st1.t);
+    vec3 B = -normalize(cross(N, T));
+    mat3 TBN = mat3(T, B, N);
+
+    return normalize(TBN * tangentNormal);
 }
 
-void main() 
+void main()
 {
-	// get texture color
-	vec4 baseColor = materialData.colorFactors * texture(colorTex, inUV);
+    // get texture color
+    vec4 baseColor = materialData.colorFactors * texture(colorTex, inUV);
 
-	vec3 N = normalize(inNormal);
-	vec3 L = normalize(sceneData.sunlightDirection.xyz);
-	vec3 V = normalize(sceneData.viewPosition.xyz - inFragWorldPos);
+    vec3 N = normalize(inNormal);
+    vec3 L = normalize(sceneData.sunlightDirection.xyz);
+    vec3 V = normalize(sceneData.viewPosition.xyz - inFragWorldPos);
     vec3 H = normalize(V + L);
 
     // get normal from normal map
     if (sceneData.data.w > 0.9f)
-    N = perturbNormal(N, V);
+        N = perturbNormal(N, V);
 
     vec3 R = reflect(-V, N);
 
@@ -171,7 +179,7 @@ void main()
     vec3 ambientDiffuse = (1 - F) * texture(irradianceMap, N).xyz * c_diff;
 
     // calculate indirect specular lighting
-    const float MAX_REFLECTION_LOD = 8.0;
+    const float MAX_REFLECTION_LOD = 5.0;
     vec3 prefilteredColor = textureLod(prefilteredEnvMap, R, roughness * MAX_REFLECTION_LOD).rgb;
     vec2 envBRDF = texture(brdfLut, vec2(NdotV, roughness)).rg;
     vec3 ambientSpecular = prefilteredColor * (F * envBRDF.x + envBRDF.y);

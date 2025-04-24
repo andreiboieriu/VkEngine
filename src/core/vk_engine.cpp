@@ -23,10 +23,9 @@
 #include <fmt/core.h>
 #include "vk_descriptors.h"
 #include "vk_initializers.h"
-#include "vk_materials.h"
+#include "pipeline_resource_manager.h"
 #include "vk_types.h"
 #include "vk_images.h"
-#include "vk_pipelines.h"
 
 #include "VkBootstrap.h"
 
@@ -41,6 +40,8 @@
 #include "compute_effects/compute_effect.h"
 
 void VulkanEngine::parseCliArgs(const std::vector<std::string>& cliArgs) {
+    mUseValidationLayers = false;
+
     for (auto& arg : cliArgs) {
         if (arg == "--debug") {
             mUseValidationLayers = true;
@@ -71,187 +72,82 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
     initImGui();
     initECS();
 
-    loadLoadingScreenData();
-
-    // render loading screen
-    std::thread t{&VulkanEngine::drawLoadingScreen, this};
-
-    // load all other resources
-    {
-        ComputeEffect::EditableSubpassInfo info;
-        info.pushConstants[0].x = 0.0312f; // fixedThreshold
-        info.pushConstants[0].y = 0.063f; // relativeThreshold
-        info.pushConstants[0].z = 0.75f; // pixelBlendStrength
-        info.pushConstants[0].w = 2; // quality
-
-        info.dispatchSize.useScreenSize = true;
-        info.dispatchSize.screenSizeMultiplier = 1.0f;
-
-        mFxaaEffect = std::make_unique<ComputeEffect>("fxaa", std::vector<ComputeEffect::EditableSubpassInfo>{info, info}, *this);
-    }
-
-    {
-        ComputeEffect::EditableSubpassInfo info;
-        info.pushConstants[0].x = 1.0f; // exposure
-
-        info.dispatchSize.useScreenSize = true;
-        info.dispatchSize.screenSizeMultiplier = 1.0f;
-
-        mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", std::vector<ComputeEffect::EditableSubpassInfo>{info}, *this);
-    }
-
-    {
-        ComputeEffect::EditableSubpassInfo info;
-        info.pushConstants[0].x = 0.005f; // filterRadius
-        info.pushConstants[0].y = 0.04f; // strength
-
-        info.dispatchSize.useScreenSize = true;
-        info.dispatchSize.screenSizeMultiplier = 1.f;
-
-        std::vector<ComputeEffect::EditableSubpassInfo> infoVec;
-
-        for (int i = 1; i < 6; i++) {
-            info.dispatchSize.screenSizeMultiplier = 1.f / (1 << i);
-            infoVec.push_back(info);
-        }
-
-        for (int i = 4; i >= 0; i--) {
-            info.dispatchSize.screenSizeMultiplier = 1.f / (1 << i);
-            infoVec.push_back(info);
-        }
-
-        mBloomEffect = std::make_unique<ComputeEffect>("bloom", infoVec, *this);
-    }
+    mAssetManager = std::make_unique<AssetManager>(*this);
+    mPipelineResourceManager = std::make_unique<PipelineResourceManager>(*this);
 
     mMainDeletionQueue.push([&]() {
-        mFxaaEffect = nullptr;
-        mToneMappingEffect = nullptr;
-        mBloomEffect = nullptr;
+        mPipelineResourceManager = nullptr;
+        mAssetManager = nullptr;
     });
 
-    mMaterialManager = std::make_unique<MaterialManager>(*this);
-
-    mMainDeletionQueue.push([&]() {
-        mMaterialManager = nullptr;
-    });
-
-    mDescriptorManager = std::make_unique<DescriptorManager>(mMaterialManager->getSceneDescriptorSetLayout(), mMaterialManager->getMaterialDescriptorSetLayout(), *this);
-    mMainDeletionQueue.push([&]() {
-        mDescriptorManager = nullptr;
-    });
-
-    mResourceManager = std::make_unique<ResourceManager>(*this);
-    mMainDeletionQueue.push([&]() {
-        mResourceManager = nullptr;
-    });
-
-    mScene = std::make_shared<Scene3D>("testScene", *this);
-
+    mScene = std::make_shared<Scene3D>("assets/scenes/loadingScene.json", *this);
     mMainDeletionQueue.push([&]() {
         mScene = nullptr;
     });
 
-    // everything went fine
-    mIsInitialized = true;
+    // render loading screen
+    std::thread([&](){
+        // load all other resources
+        {
+            ComputeEffect::EditableSubpassInfo info;
+            info.pushConstants[0].x = 0.0312f; // fixedThreshold
+            info.pushConstants[0].y = 0.063f; // relativeThreshold
+            info.pushConstants[0].z = 0.75f; // pixelBlendStrength
+            info.pushConstants[0].w = 2; // quality
 
-    // stop loading screen
-    t.join();
-}
+            info.dispatchSize.useScreenSize = true;
+            info.dispatchSize.screenSizeMultiplier = 1.0f;
 
-void VulkanEngine::loadLoadingScreenData() {
-    // load quad mesh
-    std::vector<Vertex> vertices = {
-        Vertex{.position = glm::vec3(-0.5f, 0.5f, 0.0f), .uvX = 0.f, .uvY = 1.f},
-        Vertex{.position = glm::vec3(-0.5f, -0.5f, 0.0f), .uvX = 0.f, .uvY = 0.f},
-        Vertex{.position = glm::vec3(0.5f, -0.5f, 0.0f), .uvX = 1.f, .uvY = 0.f},
-        Vertex{.position = glm::vec3(0.5f, 0.5f, 0.0f), .uvX = 1.f, .uvY = 1.f},
-    };
+            mFxaaEffect = std::make_unique<ComputeEffect>("fxaa", std::vector<ComputeEffect::EditableSubpassInfo>{info, info}, *this);
+        }
 
-    std::vector<uint32_t> indices = {
-        0, 1, 2,
-        2, 3, 0
-    };
+        {
+            ComputeEffect::EditableSubpassInfo info;
+            info.pushConstants[0].x = 1.0f; // exposure
 
-    mLoadingScreenData.meshBuffers = uploadMesh(indices, vertices);
-    mLoadingScreenData.indexCount = indices.size();
+            info.dispatchSize.useScreenSize = true;
+            info.dispatchSize.screenSizeMultiplier = 1.0f;
 
-    mMainDeletionQueue.push([&]() {
-        destroyBuffer(mLoadingScreenData.meshBuffers.indexBuffer);
-        destroyBuffer(mLoadingScreenData.meshBuffers.vertexBuffer);
-    });
+            mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", std::vector<ComputeEffect::EditableSubpassInfo>{info}, *this);
+        }
 
-    // create descriptor set layout
-    DescriptorLayoutBuilder builder;
-    mLoadingScreenData.descriptorSetLayout = builder.addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT)
-                                                    .addBinding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
-                                                    .build(mDevice, 0, VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR);
+        {
+            ComputeEffect::EditableSubpassInfo info;
+            info.pushConstants[0].x = 0.005f; // filterRadius
+            info.pushConstants[0].y = 0.04f; // strength
 
-    std::vector<VkDescriptorSetLayout> setLayouts = {mLoadingScreenData.descriptorSetLayout};
-    std::vector<VkPushConstantRange> pushConstantRanges;
+            info.dispatchSize.useScreenSize = true;
+            info.dispatchSize.screenSizeMultiplier = 1.f;
 
-    // create pipeline layout
-    mLoadingScreenData.pipelineLayout = vkutil::createPipelineLayout(
-        setLayouts,
-        pushConstantRanges,
-        mDevice
-    );
+            std::vector<ComputeEffect::EditableSubpassInfo> infoVec;
 
-    // create pipeline
-    VkShaderModule vertShader;
-    VkShaderModule fragShader;
+            for (int i = 1; i < 6; i++) {
+                info.dispatchSize.screenSizeMultiplier = 1.f / (1 << i);
+                infoVec.push_back(info);
+            }
 
-    if (!vkutil::loadShaderModule("shaders/sprite.vert.spv", mDevice, &vertShader)) {
-        fmt::println("failed to load sprite vertex shader");
-    }
+            for (int i = 4; i >= 0; i--) {
+                info.dispatchSize.screenSizeMultiplier = 1.f / (1 << i);
+                infoVec.push_back(info);
+            }
 
-    if (!vkutil::loadShaderModule("shaders/sprite.frag.spv", mDevice, &fragShader)) {
-        fmt::println("failed to load sprite frag shader");
-    }
+            mBloomEffect = std::make_unique<ComputeEffect>("bloom", infoVec, *this);
+        }
 
-    PipelineBuilder pipelineBuilder;
-    mLoadingScreenData.pipeline = pipelineBuilder.clear().setShaders(vertShader, fragShader)
-                                              .setInputTopology(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST)
-                                              .setPolygonMode(VK_POLYGON_MODE_FILL)
-                                              .setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
-                                              .setMultisampling()
-                                            //   .enableBlendingAdditive()
-                                              .enableBlendingAlphaBlend()
-                                              .disableDepthTesting()
-                                            //   .enableDepthTesting(false, VK_COMPARE_OP_GREATER)
-                                              .setColorAttachmentFormat(mDrawImage.imageFormat)
-                                              .setDepthFormat(mDepthImage.imageFormat)
-                                              .setLayout(mLoadingScreenData.pipelineLayout)
-                                              .buildPipeline(mDevice,  0);
+        mMainDeletionQueue.push([&]() {
+            mFxaaEffect = nullptr;
+            mToneMappingEffect = nullptr;
+            mBloomEffect = nullptr;
+        });
 
-    vkDestroyShaderModule(mDevice, vertShader, nullptr);
-    vkDestroyShaderModule(mDevice, fragShader, nullptr);
+        mLoadingScene = std::make_shared<Scene3D>("assets/scenes/testScene.json", *this);
+        mScene = mLoadingScene;
+        mLoadingScene = nullptr;
 
-    mMainDeletionQueue.push([&]() {
-        vkDestroyDescriptorSetLayout(mDevice, mLoadingScreenData.descriptorSetLayout, nullptr);
-        vkDestroyPipelineLayout(mDevice, mLoadingScreenData.pipelineLayout, nullptr);
-        vkDestroyPipeline(mDevice, mLoadingScreenData.pipeline, nullptr);
-    });
-
-    // load texture
-    int width, height, channels;
-    unsigned char* data = stbi_load("assets/loading.png", &width, &height , &channels, 4);
-    fmt::println("channels: {}", channels);
-
-    mLoadingScreenData.texture = createImage(data, VkExtent3D{(uint32_t)width, (uint32_t)height, 1}, VK_FORMAT_R8G8B8A8_UNORM,VK_IMAGE_USAGE_SAMPLED_BIT, false);
-
-    stbi_image_free(data);
-
-    mMainDeletionQueue.push([&]() {
-        destroyImage(mLoadingScreenData.texture);
-    });
-
-    // create ubo buffer
-    mLoadingScreenData.uboBuffer = createBuffer(sizeof(LoadingScreenData::Ubo), VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
-
-    mMainDeletionQueue.push([&]() {
-        destroyBuffer(mLoadingScreenData.uboBuffer);
-    });
-
+        mMainDeletionQueue.push([&]() {
+            mScene = nullptr;
+        });
+    }).detach();
 }
 
 AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memUsage) {
@@ -426,7 +322,7 @@ void VulkanEngine::initVulkan() {
 
     vkb::PhysicalDeviceSelector vkbSelector{vkbInstance};
 
-    vkb::PhysicalDevice vkbPhysicalDevice = vkbSelector
+    vkbSelector
         .set_minimum_version(1, 3)
         .set_required_features_13(features13)
         .set_required_features_12(features12)
@@ -435,15 +331,18 @@ void VulkanEngine::initVulkan() {
         .add_required_extension(VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME)
         .add_required_extension(VK_EXT_DESCRIPTOR_BUFFER_EXTENSION_NAME)
         .add_required_extension_features(descriptorBufferFeatures)
-        .set_required_features(physicalDeviceFeatures)
-        .select_devices(vkb::DeviceSelectionMode::only_fully_suitable)
-        .value()[0]; // workaround for avoiding integrated gpu selection
+        .set_required_features(physicalDeviceFeatures);
 
-    for (auto dev : vkbSelector.select_device_names().value()) {
-        fmt::println("found device: {}", dev);
+    auto devices = vkbSelector.select_devices(vkb::DeviceSelectionMode::only_fully_suitable).value();
+    vkb::PhysicalDevice vkbPhysicalDevice;
+
+    for (auto dev : devices) {
+        fmt::println("found device: {}", dev.name);
+
+        if (dev.name.starts_with("NVIDIA")) {
+            vkbPhysicalDevice = dev;
+        }
     }
-
-    // vkbSelector.select_devices().value()[0]
 
     fmt::println("Physical Device name: {}", vkbPhysicalDevice.name);
 
@@ -918,30 +817,42 @@ void VulkanEngine::drawLoadingScreen() {
 
         float dt = elapsed.count() / 1000000.f;
 
-        mLoadingScreenData.rotation -= 90 * dt;
+        auto quadMesh = mAssetManager->getMesh("quad");
 
-        mLoadingScreenData.uboData.vertexBufferAddress = mLoadingScreenData.meshBuffers.vertexBufferAddress;
+        // mLoadingScreenData.rotation -= 90 * dt;
 
-        mLoadingScreenData.uboData.modelMatrix = glm::translate(glm::mat4(1.f), glm::vec3(mDrawExtent.width / 2.f, mDrawExtent.height / 2.f, 1.f)) * glm::rotate(glm::mat4(1.f), glm::radians(mLoadingScreenData.rotation), glm::vec3(0.0f, 0.0f, 1.0f)) * glm::scale(glm::mat4(1.f), glm::vec3(150.f, 150.f, 1.0f));
+        // mLoadingScreenData.uboData.vertexBufferAddress = quadMesh->meshBuffers.vertexBufferAddress;
 
-        mLoadingScreenData.uboData.projectionMatrix = glm::ortho(0.0f, (float)mDrawExtent.width, 0.0f, (float)mDrawExtent.height, -100.f, 100.f);
+        // mLoadingScreenData.uboData.modelMatrix = glm::translate(glm::mat4(1.f), glm::vec3(mDrawExtent.width / 2.f, mDrawExtent.height / 2.f, 1.f)) * glm::rotate(glm::mat4(1.f), glm::radians(mLoadingScreenData.rotation), glm::vec3(0.0f, 0.0f, 1.0f)) * glm::scale(glm::mat4(1.f), glm::vec3(150.f, 150.f, 1.0f));
 
-        *(LoadingScreenData::Ubo*)mLoadingScreenData.uboBuffer.allocInfo.pMappedData = mLoadingScreenData.uboData;
+        // mLoadingScreenData.uboData.projectionMatrix = glm::ortho(0.0f, (float)mDrawExtent.width, 0.0f, (float)mDrawExtent.height, -100.f, 100.f);
+
+        // *(LoadingScreenData::Ubo*)mLoadingScreenData.uboBuffer.allocInfo.pMappedData = mLoadingScreenData.uboData;
+
+        auto spritePipeline = mPipelineResourceManager->getPipeline(PipelineResourceManager::PipelineType::SPRITE);
 
         // bind pipeline
-        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mLoadingScreenData.pipeline);
+        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, spritePipeline->pipeline);
 
         // // push descriptors
         DescriptorWriter writer;
-        std::vector<VkWriteDescriptorSet> writes = writer.writeBuffer(0, mLoadingScreenData.uboBuffer.buffer, sizeof(LoadingScreenData::Ubo), 0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER)
-                                                         .writeImage(1, mLoadingScreenData.texture.imageView, mDefaultSamplerLinear, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+        std::vector<VkWriteDescriptorSet> writes = writer.writeImage(0, mAssetManager->getImage("loading.png")->imageView, mDefaultSamplerLinear, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
                                                          .getWrites();
 
-        vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mLoadingScreenData.pipelineLayout, 0, (uint32_t)writes.size(), writes.data());
+        vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, spritePipeline->layout, 0, (uint32_t)writes.size(), writes.data());
 
-        vkCmdBindIndexBuffer(commandBuffer, mLoadingScreenData.meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
+        static float spriteRotation;
+        spriteRotation -= 90 * dt;
 
-        vkCmdDrawIndexed(commandBuffer, mLoadingScreenData.indexCount, 1, 0, 0, 0);
+        SpritePushConstants pushConstants;
+        pushConstants.vertexBuffer = quadMesh->meshBuffers.vertexBufferAddress;
+        pushConstants.worldMatrix = glm::ortho(0.0f, (float)mDrawExtent.width, 0.0f, (float)mDrawExtent.height, -100.f, 100.f) * glm::translate(glm::mat4(1.f), glm::vec3(mDrawExtent.width / 2.f, mDrawExtent.height / 2.f, 1.f)) * glm::rotate(glm::mat4(1.f), glm::radians(spriteRotation), glm::vec3(0.0f, 0.0f, 1.0f)) * glm::scale(glm::mat4(1.f), glm::vec3(150.f, 150.f, 1.0f));
+
+        vkCmdPushConstants(commandBuffer, spritePipeline->layout, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(SpritePushConstants), &pushConstants);
+
+        vkCmdBindIndexBuffer(commandBuffer, quadMesh->meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
+
+        vkCmdDrawIndexed(commandBuffer, quadMesh->surfaces[0].count, 1, quadMesh->surfaces[0].startIndex, 0, 0);
 
         vkCmdEndRendering(commandBuffer);
 
@@ -1063,9 +974,11 @@ void VulkanEngine::run() {
             mStats.frameCount = 0;
         }
     }
+
+    vkDeviceWaitIdle(mDevice);
 }
 
-bool isVisible(const RenderObject& obj, const glm::mat4& viewProj) {
+bool isVisible(const GLTFRenderObject& obj, const glm::mat4& viewProj) {
     std::array<glm::vec3, 8> corners {
         glm::vec3 { 1, 1, 1 },
         glm::vec3 { 1, 1, -1 },
@@ -1121,8 +1034,8 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     // sort opaque objects by material and mesh
     if (mEngineConfig.enableDrawSorting) {
         std::sort(opaqueObjectIndices.begin(), opaqueObjectIndices.end(), [&](const auto& iA, const auto& iB) {
-            const RenderObject& A = mRenderContext.opaqueObjects[iA];
-            const RenderObject& B = mRenderContext.opaqueObjects[iB];
+            const GLTFRenderObject& A = mRenderContext.opaqueObjects[iA];
+            const GLTFRenderObject& B = mRenderContext.opaqueObjects[iB];
 
             if (A.material == B.material) {
                 return A.indexBuffer < B.indexBuffer;
@@ -1142,8 +1055,8 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     // sort transparent objects by material and mesh
     if (mEngineConfig.enableDrawSorting) {
         std::sort(transparentObjectIndices.begin(), transparentObjectIndices.end(), [&](const auto& iA, const auto& iB) {
-            const RenderObject& A = mRenderContext.transparentObjects[iA];
-            const RenderObject& B = mRenderContext.transparentObjects[iB];
+            const GLTFRenderObject& A = mRenderContext.transparentObjects[iA];
+            const GLTFRenderObject& B = mRenderContext.transparentObjects[iB];
 
             if (A.material == B.material) {
                 return A.indexBuffer < B.indexBuffer;
@@ -1180,17 +1093,17 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
 
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
-    mDescriptorManager->bindDescriptorBuffers(commandBuffer);
+    mPipelineResourceManager->bindDescriptorBuffers(commandBuffer);
 
     // track state
-    MaterialPipeline* lastPipeline = nullptr;
+    Pipeline* lastPipeline = nullptr;
     MaterialInstance* lastMaterialInstance = nullptr;
     VkBuffer lastIndexBuffer = VK_NULL_HANDLE;
 
     uint32_t bufferIndex = 0;
     VkDeviceSize bufferOffset = 0;
 
-    auto draw = [&](const RenderObject& object) {
+    auto draw = [&](const GLTFRenderObject& object) {
         if (object.material != lastMaterialInstance) {
             lastMaterialInstance = object.material;
 
@@ -1211,11 +1124,11 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
             vkCmdBindIndexBuffer(commandBuffer, object.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
         }
 
-        GPUDrawPushConstants pushConstants;
+        PBRPushConstants pushConstants;
         pushConstants.vertexBuffer = object.vertexBufferAddress;
         pushConstants.worldMatrix = object.transform;
 
-        vkCmdPushConstants(commandBuffer, object.material->pipeline->layout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(GPUDrawPushConstants), &pushConstants);
+        vkCmdPushConstants(commandBuffer, object.material->pipeline->layout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(PBRPushConstants), &pushConstants);
 
         vkCmdDrawIndexed(commandBuffer, object.indexCount, 1, object.firstIndex, 0, 0);
 
@@ -1225,7 +1138,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     };
 
     for (auto& index : opaqueObjectIndices) {
-        if (mEngineConfig.enableFrustumCulling && !isVisible(mRenderContext.opaqueObjects[index], mScene->getViewProj()))
+        if (mEngineConfig.enableFrustumCulling && !isVisible(mRenderContext.opaqueObjects[index], mRenderContext.sceneData.viewProjection))
             continue;
 
         draw(mRenderContext.opaqueObjects[index]);
@@ -1233,13 +1146,60 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
 
     // draw transparent objects after opaque ones
     for (auto& index : transparentObjectIndices) {
-        if (mEngineConfig.enableFrustumCulling && !isVisible(mRenderContext.transparentObjects[index], mScene->getViewProj()))
+        if (mEngineConfig.enableFrustumCulling && !isVisible(mRenderContext.transparentObjects[index], mRenderContext.sceneData.viewProjection))
             continue;
 
         draw(mRenderContext.transparentObjects[index]);
     }
 
-    mScene->drawSkybox(commandBuffer);
+    if (mRenderContext.skybox != nullptr) {
+        auto pipeline = mPipelineResourceManager->getPipeline(PipelineResourceManager::PipelineType::SKYBOX);
+        auto cubeMesh = mAssetManager->getMesh("cube");
+        SkyboxPushConstants pushConstants{};
+        pushConstants.projViewMatrix = mRenderContext.sceneData.projection * glm::mat4(glm::mat3(mRenderContext.sceneData.view));
+        pushConstants.vertexBuffer = cubeMesh->meshBuffers.vertexBufferAddress;
+
+        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline->pipeline);
+        vkCmdBindIndexBuffer(commandBuffer, cubeMesh->meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
+
+        DescriptorWriter writer;
+        std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mRenderContext.skybox->envMap.imageView, mDefaultSamplerLinear, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+                                                                   .getWrites();
+
+        vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline->layout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
+
+        vkCmdPushConstants(commandBuffer, pipeline->layout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(SkyboxPushConstants), &pushConstants);
+        vkCmdDrawIndexed(commandBuffer, cubeMesh->surfaces[0].count, 1, cubeMesh->surfaces[0].startIndex, 0, 0);
+    }
+
+    auto spritePipeline = mPipelineResourceManager->getPipeline(PipelineResourceManager::PipelineType::SPRITE);
+    auto quadMesh = mAssetManager->getMesh("quad");
+    vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, spritePipeline->pipeline);
+    vkCmdBindIndexBuffer(commandBuffer, quadMesh->meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
+    glm::mat4 orthoProjection = glm::ortho(0.0f, (float)mDrawExtent.width, 0.0f, (float)mDrawExtent.height, -100.f, 100.f);
+
+    for (auto sprite : mRenderContext.sprites) {
+        // push constants
+        SpritePushConstants pushConstants;
+        pushConstants.vertexBuffer = quadMesh->meshBuffers.vertexBufferAddress;
+        pushConstants.worldMatrix = orthoProjection * sprite.transform;
+
+        vkCmdPushConstants(commandBuffer, spritePipeline->layout, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(SpritePushConstants), &pushConstants);
+
+        // push descriptors
+        DescriptorWriter writer;
+        std::vector<VkWriteDescriptorSet> writes = writer.writeImage(0, sprite.image->imageView, mDefaultSamplerLinear, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+                                                         .getWrites();
+
+        vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, spritePipeline->layout, 0, (uint32_t)writes.size(), writes.data());
+
+        // draw quad
+        vkCmdDrawIndexed(commandBuffer, quadMesh->surfaces[0].count, 1, quadMesh->surfaces[0].startIndex, 0, 0);
+
+        // update stats
+        mStats.drawCallCount++;
+        mStats.triangleCount += quadMesh->surfaces[0].count / 3;
+    }
 
     vkCmdEndRendering(commandBuffer);
 

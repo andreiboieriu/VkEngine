@@ -16,6 +16,7 @@ void GameApp::draw() {
     VK_CHECK(vkWaitForFences(mDevice, 1, &getCurrentFrame().renderFence, VK_TRUE, UINT64_MAX));
     VK_CHECK(vkResetFences(mDevice, 1, &getCurrentFrame().renderFence));
 
+
     // flush deletion queue of current frame
     getCurrentFrame().deletionQueue.flush();
 
@@ -59,9 +60,14 @@ void GameApp::draw() {
         // get start time
         auto start = std::chrono::system_clock::now();
 
-        mBloomEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
-        mToneMappingEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
-        mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent, false);
+        // if (mBloomEffect)
+        //     mBloomEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
+
+        // if (mToneMappingEffect)
+        //     mToneMappingEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
+
+        // if (mFxaaEffect)
+        //     mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent, false);
 
         auto end = std::chrono::system_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
@@ -113,10 +119,7 @@ void GameApp::update() {
     // get start time
     auto start = std::chrono::system_clock::now();
 
-    mRenderContext.opaqueObjects.clear();
-    mRenderContext.transparentObjects.clear();
-
-    mScene->update();
+    mScene->update(mDeltaTime, mWindow->getInput());
     mScene->render(mRenderContext);
 
     // get end time
@@ -155,9 +158,9 @@ void GameApp::drawGui() {
             ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
             ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
 
-            mBloomEffect->drawGui();
-            mToneMappingEffect->drawGui();
-            mFxaaEffect->drawGui();
+            // mBloomEffect->drawGui();
+            // mToneMappingEffect->drawGui();
+            // mFxaaEffect->drawGui();
             ImGui::End();
         }
         mScene->drawGui();

@@ -2,18 +2,22 @@
 
 #include "entt.hpp"
 #include <nlohmann/json.hpp>
-#include "uuid.h"
-#include "vk_loader.h"
+#include "components/components.h"
 
 class Entity {
 
 public:
-    Entity(const UUID& uuid, entt::registry& registry);
+    Entity(const Metadata& meta, entt::registry& registry);
     ~Entity();
 
     template<typename T, typename... Args>
     void addComponent(Args&... args) {
         mRegistry.emplace<T>(mHandle, args...);
+    }
+
+    template<typename T>
+    void addComponent(const T& component) {
+        mRegistry.emplace<T>(mHandle, component);
     }
 
     template<typename T>
@@ -31,17 +35,24 @@ public:
         return mRegistry.all_of<T>(mHandle);
     }
 
-    // void bindScript(const std::string& name);
-    void bindGLTF(const std::string& name, LoadedGLTF *gltf);
+    void setParent(Entity* parent) {
+        mParent = parent;
+    }
 
-    void setParent(const UUID& parentUUID, bool removeFromFormerParent = true);
+    void addChild(Entity* child);
+    void removeChild(Entity* child);
+
     void deferredDestroy();
 
     void drawGUI();
     void propagateTransform(const glm::mat4& parentMatrix);
 
-    const UUID& getUUID() {
-        return mUUID;
+    const std::string& getUUID() {
+        return mRegistry.get<Metadata>(mHandle).uuid;
+    }
+
+    entt::entity getHandle() {
+        return mHandle;
     }
 
     nlohmann::json toJson();
@@ -50,17 +61,9 @@ public:
 
 private:
 
-    void addChild(const UUID& childUUID);
-    void removeChild(const UUID& childUUID);
-
-    void restoreHierarchy();
-
-
     entt::entity mHandle;
-    UUID mUUID;
     entt::registry& mRegistry;
 
-    UUID mParentUUID = UUID::null();
-    std::vector<UUID> mChildrenUUIDs;
-
+    Entity* mParent = nullptr;
+    std::vector<Entity*> mChildren;
 };

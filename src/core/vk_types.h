@@ -38,7 +38,6 @@ struct AllocatedBuffer {
     VkDeviceAddress deviceAddress;
 };
 
-
 struct DescriptorData {
     VkDescriptorSetLayout layout;
     AllocatedBuffer buffer;
@@ -59,9 +58,26 @@ struct GPUMeshBuffers {
     VkDeviceAddress vertexBufferAddress;
 };
 
-struct GPUDrawPushConstants {
+struct PBRPushConstants {
     glm::mat4 worldMatrix;
     VkDeviceAddress vertexBuffer;
+};
+
+struct SpritePushConstants {
+    glm::mat4 worldMatrix;
+    VkDeviceAddress vertexBuffer;
+};
+
+struct SkyboxPushConstants {
+    glm::mat4 projViewMatrix;
+    VkDeviceAddress vertexBuffer;
+};
+
+struct SkyboxLoadPushConstants {
+    glm::mat4 projViewMatrix;
+    VkDeviceAddress vertexBuffer;
+    uint32_t mipLevel;
+    uint32_t totalMips;
 };
 
 enum class MaterialPass : uint8_t {
@@ -72,13 +88,13 @@ enum class MaterialPass : uint8_t {
     Other
 };
 
-struct MaterialPipeline {
+struct Pipeline {
     VkPipeline pipeline;
     VkPipelineLayout layout;
 };
 
 struct MaterialInstance {
-    MaterialPipeline* pipeline;
+    Pipeline* pipeline;
     MaterialPass passType;
 
     VkDeviceSize descriptorOffset;
@@ -120,7 +136,7 @@ struct Bounds {
     glm::vec3 extents;
 };
 
-struct RenderObject {
+struct GLTFRenderObject {
     uint32_t indexCount;
     uint32_t firstIndex;
     VkBuffer indexBuffer;
@@ -133,9 +149,44 @@ struct RenderObject {
     Bounds bounds;
 };
 
+struct SpriteRenderObject {
+    AllocatedImage* image;
+    glm::mat4 transform;
+};
+
+struct SkyboxAsset {
+    std::string name;
+
+    AllocatedImage hdrImage;
+    AllocatedImage envMap;
+    AllocatedImage irrMap;
+    AllocatedImage prefilteredEnvMap;
+    AllocatedImage brdfLut;
+
+    static constexpr VkExtent2D ENV_MAP_SIZE = {1024, 1024};
+    static constexpr VkExtent2D IRR_MAP_SIZE = {32, 32};
+    static constexpr VkExtent2D PREFILTERED_ENV_MAP_SIZE = {256, 256};
+    static constexpr VkExtent2D BRDF_LUT_SIZE = {512, 512};
+};
+
+struct SceneData {
+    glm::mat4 view;
+    glm::mat4 projection;
+    glm::mat4 viewProjection;
+    glm::vec4 ambientColor;
+    glm::vec4 sunlightDirection;
+    glm::vec4 sunlightColor;
+    glm::vec4 viewPosition;
+    glm::vec4 data;
+};
+
 struct RenderContext {
-    std::vector<RenderObject> opaqueObjects;
-    std::vector<RenderObject> transparentObjects;
+    std::vector<GLTFRenderObject> opaqueObjects;
+    std::vector<GLTFRenderObject> transparentObjects;
+    std::vector<SpriteRenderObject> sprites;
+
+    SceneData sceneData;
+    SkyboxAsset *skybox = nullptr;
 };
 
 struct GLTFMaterial {
@@ -156,6 +207,8 @@ struct MeshAsset {
     std::vector<GeoSurface> surfaces;
     GPUMeshBuffers meshBuffers;
 };
+
+
 
 inline VkDeviceSize alignedSize(VkDeviceSize value, VkDeviceSize alignment)
 {

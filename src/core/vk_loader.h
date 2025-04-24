@@ -40,6 +40,8 @@ public:
     LoadedGLTF(std::filesystem::path filePath, VulkanEngine& vkEngine);
     ~LoadedGLTF();
 
+    LoadedGLTF(const LoadedGLTF&) = default;
+
     void draw(const glm::mat4& transform, RenderContext& context);
     void freeResources();
 

@@ -4,4 +4,5 @@ add_executable(game ${GAME_SOURCE_FILES})
 
 target_link_libraries(game core)
 target_include_directories(game PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_options(game PRIVATE -g -O3)
 # target_precompile_headers(game PUBLIC <optional> <vector> <memory> <string> <vector> <unordered_map> <glm/mat4x4.hpp>  <glm/vec4.hpp>)

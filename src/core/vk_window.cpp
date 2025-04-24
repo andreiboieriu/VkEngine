@@ -332,16 +332,16 @@ void Window::resize(uint32_t width, uint32_t height) {
 VkImage Window::getNextSwapchainImage(VkSemaphore& semaphore) {
     VkImage image = mSwapchain->getNextImage(semaphore);
 
-    // if (image == VK_NULL_HANDLE) {
-    //     resize();
-    // }
+    if (image == VK_NULL_HANDLE) {
+        resize(mExtent.width, mExtent.height);
+    }
 
     return image;
 }
 
 void Window::presentSwapchainImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore) {
     if (!mSwapchain->presentImage(graphicsQueue, waitSemaphore)) {
-        // resize();
+        resize(mExtent.width, mExtent.height);
     }
 }
 

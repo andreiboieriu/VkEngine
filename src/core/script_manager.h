@@ -8,19 +8,21 @@
 #include "entity.h"
 #include "vk_window.h"
 
+#include <components/components.h>
+
 class ScriptManager {
 
 public:
-    ScriptManager(entt::registry& registry, VulkanEngine& vkEngine);
+    ScriptManager();
     ~ScriptManager();
 
     void loadScript(const std::string& filePath);
     void bindScript(const std::string& scriptName, Entity& entity);
 
-    void update();
+    void update(float deltaTime, const Input& input);
 
     void onStart();
-    void onUpdate();
+    void onUpdate(entt::registry& registry);
     void onLateUpdate();
     void onDestroy();
 
@@ -34,13 +36,10 @@ private:
     void initializeLuaState();
     std::unordered_map<std::string, sol::type> getSymbols(const sol::bytecode& bytecode);
 
-    VulkanEngine& mVkEngine;
+    sol::state mLua;
+    // inline static bool mIsInitialized = false;
 
-    inline static sol::state mLua;
-    inline static bool mIsInitialized = false;
-
-    entt::registry& mRegistry;
-    const Input& mInput;
+    Input mInput;
 
     std::unordered_map<std::string, ScriptData> mLoadedScripts;
 };

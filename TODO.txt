@@ -4,11 +4,13 @@ High Priority:
     - simple editor ui containing scene hierarchy and component view
     - ability to add objects to the scene
 
-- move skybox and image loading to ResourceManager
-- make a sprite component
-- render the loadings screen using a standard Scene3D object
+- see segfault with loading thread
+- do something about compute shaders, maybe attach them to the scene?
+- compute manager and scene manager should be added
+- script manager should be global
 - add ability to buffer scenes
 - add ability to switch scenes
+- investigate PBR shaders
 
 Medium Priority:
 - Multithreaded resource loading?
@@ -18,8 +20,4 @@ Medium Priority:
 (ex: getWindowAspect ratio), instead pass references of these objects to those that require them
 
 Low priority:
-- generalize skybox class
-- add skyboxes in resource manager
-- redo scene hierarchy in a more efficient way
-
 - maybe find a better solution that stopping the app when minimized?

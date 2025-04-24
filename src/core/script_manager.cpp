@@ -1,8 +1,7 @@
 #include "script_manager.h"
-#include "ecs_components/components.h"
+#include "components/components.h"
 #include "entity.h"
 #include "sol/sol.hpp"
-#include "vk_engine.h"
 #include <GLFW/glfw3.h>
 #include <fmt/core.h>
 
@@ -43,9 +42,9 @@ std::unordered_map<std::string, sol::type> ScriptManager::getSymbols(const sol::
 }
 
 void ScriptManager::initializeLuaState() {
-    if (mIsInitialized) {
-        return;
-    }
+    // if (mIsInitialized) {
+    //     return;
+    // }
 
     // open lua libraries
     mLua.open_libraries(
@@ -101,17 +100,14 @@ void ScriptManager::initializeLuaState() {
     );
 
     mLua["Time"] = mLua.create_table_with(
-        "deltaTime", mVkEngine.getDeltaTime()
+        "deltaTime", 0.f
     );
 
-    mIsInitialized = true;
+    // mIsInitialized = true;
     fmt::println("Initialized lua state");
 }
 
-ScriptManager::ScriptManager(
-    entt::registry& registry,
-    VulkanEngine& vkEngine
-) : mVkEngine(vkEngine), mRegistry(registry), mInput(mVkEngine.getInput()) {
+ScriptManager::ScriptManager() {
     initializeLuaState();
 }
 
@@ -120,6 +116,10 @@ ScriptManager::~ScriptManager() {
 }
 
 void ScriptManager::loadScript(const std::string& filePath) {
+    if (mLoadedScripts.contains(filePath)) {
+        return;
+    }
+
     // load script from file without executing it
     sol::load_result loadResult = mLua.load_file(filePath);
 
@@ -147,11 +147,13 @@ void ScriptManager::bindScript(const std::string& scriptName, Entity& entity) {
     ScriptData& scriptData = mLoadedScripts[scriptName];
 
     // set script path and global vars symbols
-    entity.getComponent<Script>().path = scriptName;
-    entity.getComponent<Script>().symbols = scriptData.symbols;
+    Script& scriptComponent = entity.getComponent<Script>();
+
+    scriptComponent.name = scriptName;
+    scriptComponent.symbols = scriptData.symbols;
 
     // create a new environment
-    sol::environment& env = entity.getComponent<Script>().env;
+    sol::environment& env = scriptComponent.env;
     env = sol::environment(mLua, sol::create, mLua.globals());
 
     // load bytecode into the new environment
@@ -166,19 +168,18 @@ void ScriptManager::bindScript(const std::string& scriptName, Entity& entity) {
     env.set_function("getTransform", &Entity::getComponent<Transform>, &entity);
 }
 
-void ScriptManager::update() {
-    mLua["Time"]["deltaTime"] = mVkEngine.getDeltaTime();
+void ScriptManager::update(float deltaTime, const Input& input) {
+    mLua["Time"]["deltaTime"] = deltaTime;
+    mInput = input;
 }
 
-void ScriptManager::onUpdate() {
-    auto view = mRegistry.view<Script>();
+void ScriptManager::onUpdate(entt::registry& registry) {
+    auto view = registry.view<Script>();
 
     for (auto [entity, script] : view.each()) {
-        if (script.path == "") {
+        if (script.name == "") {
             continue;
         }
-
-        // script.env["update"]();
 
         sol::protected_function_result result = script.env["update"]();
 

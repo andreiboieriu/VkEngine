@@ -1,0 +1,36 @@
+{
+  "Entities": [
+    {
+      "ChildrenUUIDs": [],
+      "Components": {
+        "Metadata": {
+          "UUID": "awala"
+        },
+        "Script": {
+          "Name": "scripts/loading.lua"
+        },
+        "Sprite": {
+          "Name": "loading.png"
+        },
+        "Transform": {
+          "Position": [
+            800.0,
+            430.0,
+            1.0
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            150.0,
+            150.0,
+            1.0
+          ]
+        }
+      },
+      "ParentUUID": ""
+    }
+  ]
+}

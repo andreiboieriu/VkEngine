@@ -113,10 +113,7 @@ void EditorApp::update() {
     // get start time
     auto start = std::chrono::system_clock::now();
 
-    mRenderContext.opaqueObjects.clear();
-    mRenderContext.transparentObjects.clear();
-
-    mScene->update();
+    mScene->update(mDeltaTime, mWindow->getInput());
     mScene->render(mRenderContext);
 
     // get end time

@@ -1,113 +1,68 @@
 {
-    "Entities": [
-        {
-            "ChildrenUUIDs": [],
-            "Components": [
-                {
-                    "Transform": {
-                        "Position": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "Rotation": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "Scale": [
-                            1.0,
-                            1.0,
-                            1.0
-                        ]
-                    }
-                },
-                {
-                    "Undefined": {
-                        "Name": ""
-                    }
-                }
-            ],
-            "ParentUUID": "",
-            "UUID": "main_camera"
+  "Skybox": "jupiter.hdr",
+  "Entities": [
+    {
+      "ChildrenUUIDs": [],
+      "Components": {
+        "Transform": {
+          "Position": [0.0, 0.0, 0.0],
+          "Rotation": [0.0, 0.0, 0.0],
+          "Scale": [1.0, 1.0, 1.0]
         },
-        {
-            "ChildrenUUIDs": [],
-            "Components": [
-                {
-                    "GLTF": {
-                        "Name": "fighter_spaceship"
-                    }
-                },
-                {
-                    "Transform": {
-                        "Position": [
-                            0.0,
-                            0.0,
-                            -2.0
-                        ],
-                        "Rotation": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "Scale": [
-                            1.0,
-                            1.0,
-                            1.0
-                        ]
-                    }
-                },
-                {
-                    "Undefined": {
-                        "Name": "scripts/script.lua"
-                    }
-                }
-            ],
-            "ParentUUID": "",
-            "UUID": "fighter_spaceship"
+        "Camera": {
+          "Fov": 70.0,
+          "Near": 0.1,
+          "Far": 1000.0,
+          "Enabled": true
         },
-        {
-            "ChildrenUUIDs": [],
-            "Components": [
-                {
-                    "GLTF": {
-                        "Name": "fighter_spaceship"
-                    }
-                },
-                {
-                    "Transform": {
-                        "Position": [
-                            2.0,
-                            0.0,
-                            -2.0
-                        ],
-                        "Rotation": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "Scale": [
-                            1.0,
-                            1.0,
-                            1.0
-                        ]
-                    }
-                },
-                {
-                    "Undefined": {
-                        "Name": "scripts/script.lua"
-                    }
-                },
-                {
-                    "Undefined": {
-                        "radius": 0.0
-                    }
-                }
-            ],
-            "ParentUUID": "",
-            "UUID": "fighter_spaceship2"
+        "Metadata": {
+          "UUID": "main_camera"
         }
-    ],
-    "Name": "testScene"
+      },
+      "ParentUUID": ""
+    },
+    {
+      "ChildrenUUIDs": [],
+      "Components": {
+        "GLTF": {
+          "Name": "fighter_spaceship.glb"
+        },
+        "Transform": {
+          "Position": [0.0, 0.0, 0.0],
+          "Rotation": [0.0, 0.0, 0.0],
+          "Scale": [1.0, 1.0, 1.0]
+        },
+        "Script": {
+          "Name": "scripts/script.lua"
+        },
+        "Metadata": {
+          "UUID": "fighter_spaceship"
+        }
+      },
+      "ParentUUID": ""
+    },
+    {
+      "ChildrenUUIDs": [],
+      "Components": {
+        "GLTF": {
+          "Name": "fighter_spaceship.glb"
+        },
+        "Transform": {
+          "Position": [2.0, 0.0, -2.0],
+          "Rotation": [0.0, 0.0, 0.0],
+          "Scale": [1.0, 1.0, 1.0]
+        },
+        "Script": {
+          "Name": "scripts/script.lua"
+        },
+        "SphereCollider": {
+          "Radius": 0.0
+        },
+        "Metadata": {
+          "UUID": "fighter_spaceship2"
+        }
+      },
+      "ParentUUID": ""
+    }
+  ]
 }

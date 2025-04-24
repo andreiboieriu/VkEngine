@@ -1,59 +1,43 @@
 #pragma once
 
-#include "uuid.h"
 #include "entity.h"
 
 #include "deletion_queue.h"
 #include "vk_types.h"
-#include "skybox.h"
 #include <nlohmann/json.hpp>
 #include "entt.hpp"
 #include "vk_window.h"
 #include "script_manager.h"
+#include "asset_manager.h"
 
 // forward reference
 class VulkanEngine;
 class Entity;
-class UUID;
 
 class Scene3D {
 
 public:
-
-    struct SceneData {
-        glm::mat4 view;
-        glm::mat4 projection;
-        glm::mat4 viewProjection;
-        glm::vec4 ambientColor;
-        glm::vec4 sunlightDirection;
-        glm::vec4 sunlightColor;
-        glm::vec4 viewPosition;
-        glm::vec4 data;
-    };
-
-    Scene3D(const std::string& name, VulkanEngine& VkEngine);
+    Scene3D(const std::filesystem::path& path, VulkanEngine& VkEngine);
     ~Scene3D();
 
-    void update();
+    void update(float deltaTime, const Input& input);
     void render(RenderContext& renderContext);
     void drawGui();
 
     void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
 
-    void drawSkybox(VkCommandBuffer commandBuffer) {
-        if (mSkybox != nullptr)
-            mSkybox->draw(commandBuffer);
-    }
-
     const glm::mat4 getViewProj();
     void saveToFile();
 
-    void loadFromFile(std::filesystem::path filePath);
+    void loadFromFile(const std::filesystem::path& filePath);
     nlohmann::json toJson();
 
-    Entity& createEntity(const UUID& name = UUID());
-    Entity& getEntity(const UUID& name);
-    void destroyEntity(const UUID& name);
+    Entity* createEntity(Metadata meta);
+    Entity* createEntity(const nlohmann::json& metaJson);
+    Entity* createEntity();
+
+    Entity* getEntity(const std::string& name);
+    void destroyEntity(const std::string& name);
 
     // systems
     void propagateTransform();
@@ -64,6 +48,7 @@ private:
     void freeResources();
 
     VulkanEngine& mVkEngine;
+    AssetManager& mAssetManager;
 
     DeletionQueue mDeletionQueue;
 
@@ -74,14 +59,16 @@ private:
     SceneData mSceneData;
 
     std::string mName;
-    std::unique_ptr<Skybox> mSkybox = nullptr;
+    SkyboxAsset *mSkybox = nullptr;
     std::unique_ptr<ScriptManager> mScriptManager = nullptr;
 
     entt::registry mRegistry;
 
-    std::vector<UUID> mRootEntityUUIDs; // has to be declared before entity map
-    std::unordered_map<UUID, std::unique_ptr<Entity>> mEntityMap;
-    UUID mMainCameraHolder = UUID::null();
+    std::vector<Entity*> mRootEntities; // has to be declared before entity map
+    std::unordered_map<std::string, std::unique_ptr<Entity>> mEntities;
+    std::string mMainCameraHolder = "";
+
+    uint64_t mNextEntityID = 1;
 
     friend class Entity;
     friend class Script;

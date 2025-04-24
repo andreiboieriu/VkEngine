@@ -20,41 +20,6 @@ private:
     std::vector<VkDescriptorSetLayoutBinding> mBindings;
 };
 
-class DescriptorManager {
-
-public:
-
-    DescriptorManager(VkDescriptorSetLayout sceneLayout, VkDescriptorSetLayout materialLayout, VulkanEngine& vkEngine);
-    ~DescriptorManager();
-
-    void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
-    VkDeviceSize createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView);
-    VkDeviceSize createMaterialDescriptor(const MaterialResources& resources);
-
-    void freeResources();
-
-private:
-
-    void init();
-    void createDescriptorBuffers();
-
-    VulkanEngine& mVkEngine;
-
-    AllocatedBuffer mDescriptorBuffer;
-    VkDeviceSize mCurrentOffset = 0;
-
-    VkDescriptorSetLayout mGlobalLayout;
-    VkDescriptorSetLayout mMaterialLayout;
-
-    VkDeviceSize mGlobalLayoutSize;
-    VkDeviceSize mMaterialLayoutSize;
-
-    VkDeviceSize mGlobalLayoutOffset[4];
-    VkDeviceSize mMaterialLayoutOffset[6];
-
-    VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties;
-};
-
 class DescriptorWriter {
 public:
 

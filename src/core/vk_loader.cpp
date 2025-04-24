@@ -2,7 +2,7 @@
 
 #include "fastgltf/tools.hpp"
 #include "vk_engine.h"
-#include "vk_materials.h"
+#include "pipeline_resource_manager.h"
 #include "vk_types.h"
 #include <glm/gtx/quaternion.hpp>
 
@@ -286,7 +286,7 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         // add material constants to buffer
         ((MaterialConstants*)mMaterialDataBuffer.allocInfo.pMappedData)[dataIndex] = constants;
 
-        newMaterial->materialInstance = mVkEngine.getMaterialManager().writeMaterial(mVkEngine.getDevice(), passType, materialResources);
+        newMaterial->materialInstance = mVkEngine.getPipelineResourceManager().writeMaterial(mVkEngine.getDevice(), passType, materialResources);
 
         dataIndex++;
     }
@@ -479,7 +479,7 @@ void GLTFNode::draw(const glm::mat4& transform, RenderContext& context) {
         glm::mat4 nodeTransform = transform * mGlobalTransform;
 
         for (auto& surface : mMesh->surfaces) {
-            RenderObject object;
+            GLTFRenderObject object;
             object.indexCount = surface.count;
             object.firstIndex = surface.startIndex;
             object.indexBuffer = mMesh->meshBuffers.indexBuffer.buffer;
