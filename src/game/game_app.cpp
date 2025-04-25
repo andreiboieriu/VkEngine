@@ -60,14 +60,7 @@ void GameApp::draw() {
         // get start time
         auto start = std::chrono::system_clock::now();
 
-        // if (mBloomEffect)
-        //     mBloomEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
-
-        // if (mToneMappingEffect)
-        //     mToneMappingEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
-
-        // if (mFxaaEffect)
-        //     mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent, false);
+        mComputeEffectsManager->executeEffects(commandBuffer, mDrawImage, mDrawExtent);
 
         auto end = std::chrono::system_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);

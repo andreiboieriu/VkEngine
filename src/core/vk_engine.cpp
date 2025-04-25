@@ -37,8 +37,6 @@
 #include <chrono>
 #include <thread>
 
-#include "compute_effects/compute_effect.h"
-
 void VulkanEngine::parseCliArgs(const std::vector<std::string>& cliArgs) {
     mUseValidationLayers = false;
 
@@ -74,10 +72,12 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
 
     mAssetManager = std::make_unique<AssetManager>(*this);
     mPipelineResourceManager = std::make_unique<PipelineResourceManager>(*this);
+    mComputeEffectsManager = std::make_unique<ComputeEffectsManager>(*this);
 
     mMainDeletionQueue.push([&]() {
         mPipelineResourceManager = nullptr;
         mAssetManager = nullptr;
+        mComputeEffectsManager = nullptr;
     });
 
     mScene = std::make_shared<Scene3D>("assets/scenes/loadingScene.json", *this);
@@ -87,59 +87,6 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
 
     // render loading screen
     std::thread([&](){
-        // load all other resources
-        {
-            ComputeEffect::EditableSubpassInfo info;
-            info.pushConstants[0].x = 0.0312f; // fixedThreshold
-            info.pushConstants[0].y = 0.063f; // relativeThreshold
-            info.pushConstants[0].z = 0.75f; // pixelBlendStrength
-            info.pushConstants[0].w = 2; // quality
-
-            info.dispatchSize.useScreenSize = true;
-            info.dispatchSize.screenSizeMultiplier = 1.0f;
-
-            mFxaaEffect = std::make_unique<ComputeEffect>("fxaa", std::vector<ComputeEffect::EditableSubpassInfo>{info, info}, *this);
-        }
-
-        {
-            ComputeEffect::EditableSubpassInfo info;
-            info.pushConstants[0].x = 1.0f; // exposure
-
-            info.dispatchSize.useScreenSize = true;
-            info.dispatchSize.screenSizeMultiplier = 1.0f;
-
-            mToneMappingEffect = std::make_unique<ComputeEffect>("tone_mapping", std::vector<ComputeEffect::EditableSubpassInfo>{info}, *this);
-        }
-
-        {
-            ComputeEffect::EditableSubpassInfo info;
-            info.pushConstants[0].x = 0.005f; // filterRadius
-            info.pushConstants[0].y = 0.04f; // strength
-
-            info.dispatchSize.useScreenSize = true;
-            info.dispatchSize.screenSizeMultiplier = 1.f;
-
-            std::vector<ComputeEffect::EditableSubpassInfo> infoVec;
-
-            for (int i = 1; i < 6; i++) {
-                info.dispatchSize.screenSizeMultiplier = 1.f / (1 << i);
-                infoVec.push_back(info);
-            }
-
-            for (int i = 4; i >= 0; i--) {
-                info.dispatchSize.screenSizeMultiplier = 1.f / (1 << i);
-                infoVec.push_back(info);
-            }
-
-            mBloomEffect = std::make_unique<ComputeEffect>("bloom", infoVec, *this);
-        }
-
-        mMainDeletionQueue.push([&]() {
-            mFxaaEffect = nullptr;
-            mToneMappingEffect = nullptr;
-            mBloomEffect = nullptr;
-        });
-
         mLoadingScene = std::make_shared<Scene3D>("assets/scenes/testScene.json", *this);
         mScene = mLoadingScene;
         mLoadingScene = nullptr;
@@ -724,179 +671,6 @@ void VulkanEngine::cleanup() {
 
     vkb::destroy_debug_utils_messenger(mInstance, mDebugMessenger);
     vkDestroyInstance(mInstance, nullptr);
-}
-
-void VulkanEngine::drawLoadingScreen() {
-    auto start = std::chrono::system_clock::now();
-
-    while (!mIsInitialized) {
-        // process SDL events
-        mWindow->pollEvents();
-
-        // end loop if window is closed
-        if (mWindow->shouldClose()) {
-            break;
-        }
-
-        // throttle speed if window is minimized
-        if (mWindow->isMinimized()) {
-            std::this_thread::sleep_for(std::chrono::microseconds(100));
-            continue;
-        }
-
-        // wait until gpu finishes rendering last frame
-        VK_CHECK(vkWaitForFences(mDevice, 1, &getCurrentFrame().renderFence, VK_TRUE, UINT64_MAX));
-        VK_CHECK(vkResetFences(mDevice, 1, &getCurrentFrame().renderFence));
-
-        // flush deletion queue of current frame
-        getCurrentFrame().deletionQueue.flush();
-
-        VkImage swapchainImage = mWindow->getNextSwapchainImage(getCurrentFrame().swapchainSemaphore);
-
-        // maybe useless?
-        if (swapchainImage == VK_NULL_HANDLE) {
-            vkDestroySemaphore(mDevice, getCurrentFrame().swapchainSemaphore, nullptr);
-            VkSemaphoreCreateInfo semaphoreCreateInfo = vkinit::semaphore_create_info();
-            VK_CHECK(vkCreateSemaphore(mDevice, &semaphoreCreateInfo, nullptr, &getCurrentFrame().swapchainSemaphore));
-
-            return;
-        }
-
-        VkExtent2D windowExtent = mWindow->getExtent();
-
-        // set draw extent
-        mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mEngineConfig.renderScale;
-        mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mEngineConfig.renderScale;
-
-        // get command buffer from current frame
-        VkCommandBuffer commandBuffer = getCurrentFrame().mainCommandBuffer;
-
-        // reset command buffer
-        VK_CHECK(vkResetCommandBuffer(commandBuffer, 0));
-
-        // begin recording command buffer
-        VkCommandBufferBeginInfo commandBufferBeginInfo = vkinit::command_buffer_begin_info(VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT);
-        VK_CHECK(vkBeginCommandBuffer(commandBuffer, &commandBufferBeginInfo));
-
-        vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
-        vkutil::transitionImage(commandBuffer, mDepthImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
-
-        // drawGeometry(commandBuffer);
-
-        VkClearValue clearValue{};
-        clearValue.color = {1.0, 1.0, 0.0, 1.0};
-        VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, &clearValue, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
-        VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
-
-        VkRenderingInfo renderInfo = vkinit::rendering_info(mDrawExtent, &colorAttachment, &depthAttachment);
-        vkCmdBeginRendering(commandBuffer, &renderInfo);
-
-        // set dynamic viewport and scissor
-        VkViewport viewport{};
-        viewport.x = 0;
-        viewport.y = mDrawExtent.height;
-        viewport.width = mDrawExtent.width;
-        viewport.height = -(float)(mDrawExtent.height);
-        viewport.minDepth = 0.0f;
-        viewport.maxDepth = 1.0f;
-
-        vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
-
-        VkRect2D scissor{};
-        scissor.offset.x = 0;
-        scissor.offset.y = 0;
-        scissor.extent.width = mDrawExtent.width;
-        scissor.extent.height = mDrawExtent.height;
-
-        vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
-
-        auto end = std::chrono::system_clock::now();
-        auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-
-        start = end;
-
-        float dt = elapsed.count() / 1000000.f;
-
-        auto quadMesh = mAssetManager->getMesh("quad");
-
-        // mLoadingScreenData.rotation -= 90 * dt;
-
-        // mLoadingScreenData.uboData.vertexBufferAddress = quadMesh->meshBuffers.vertexBufferAddress;
-
-        // mLoadingScreenData.uboData.modelMatrix = glm::translate(glm::mat4(1.f), glm::vec3(mDrawExtent.width / 2.f, mDrawExtent.height / 2.f, 1.f)) * glm::rotate(glm::mat4(1.f), glm::radians(mLoadingScreenData.rotation), glm::vec3(0.0f, 0.0f, 1.0f)) * glm::scale(glm::mat4(1.f), glm::vec3(150.f, 150.f, 1.0f));
-
-        // mLoadingScreenData.uboData.projectionMatrix = glm::ortho(0.0f, (float)mDrawExtent.width, 0.0f, (float)mDrawExtent.height, -100.f, 100.f);
-
-        // *(LoadingScreenData::Ubo*)mLoadingScreenData.uboBuffer.allocInfo.pMappedData = mLoadingScreenData.uboData;
-
-        auto spritePipeline = mPipelineResourceManager->getPipeline(PipelineResourceManager::PipelineType::SPRITE);
-
-        // bind pipeline
-        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, spritePipeline->pipeline);
-
-        // // push descriptors
-        DescriptorWriter writer;
-        std::vector<VkWriteDescriptorSet> writes = writer.writeImage(0, mAssetManager->getImage("loading.png")->imageView, mDefaultSamplerLinear, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
-                                                         .getWrites();
-
-        vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, spritePipeline->layout, 0, (uint32_t)writes.size(), writes.data());
-
-        static float spriteRotation;
-        spriteRotation -= 90 * dt;
-
-        SpritePushConstants pushConstants;
-        pushConstants.vertexBuffer = quadMesh->meshBuffers.vertexBufferAddress;
-        pushConstants.worldMatrix = glm::ortho(0.0f, (float)mDrawExtent.width, 0.0f, (float)mDrawExtent.height, -100.f, 100.f) * glm::translate(glm::mat4(1.f), glm::vec3(mDrawExtent.width / 2.f, mDrawExtent.height / 2.f, 1.f)) * glm::rotate(glm::mat4(1.f), glm::radians(spriteRotation), glm::vec3(0.0f, 0.0f, 1.0f)) * glm::scale(glm::mat4(1.f), glm::vec3(150.f, 150.f, 1.0f));
-
-        vkCmdPushConstants(commandBuffer, spritePipeline->layout, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(SpritePushConstants), &pushConstants);
-
-        vkCmdBindIndexBuffer(commandBuffer, quadMesh->meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
-
-        vkCmdDrawIndexed(commandBuffer, quadMesh->surfaces[0].count, 1, quadMesh->surfaces[0].startIndex, 0, 0);
-
-        vkCmdEndRendering(commandBuffer);
-
-        // transition draw image to general layout for adding post-processing
-        // vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
-
-        // fxaa(commandBuffer);
-        // mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent);
-
-        // transition draw and swapchain image into transfer layouts
-        vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
-        vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
-
-        // copy draw image to swapchain image
-        vkutil::copyImageToImage(commandBuffer, mDrawImage.image, swapchainImage, mDrawExtent, windowExtent);
-
-        // transition swapchain image to Attachment Optimal so we can draw directly to it
-        // vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
-
-        // draw ImGui into the swapchain image
-        // drawImGui(commandBuffer, mWindow->getCurrentSwapchainImageView());
-
-        // transition swapchain image into a presentable layout
-        vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_PRESENT_SRC_KHR);
-
-        // finalize command buffer
-        VK_CHECK(vkEndCommandBuffer(commandBuffer));
-
-        // prepare to submit command buffer to queue
-        VkCommandBufferSubmitInfo commandBufferSubmitInfo = vkinit::command_buffer_submit_info(commandBuffer);
-
-        VkSemaphoreSubmitInfo waitInfo = vkinit::semaphore_submit_info(VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT_KHR, getCurrentFrame().swapchainSemaphore);
-        VkSemaphoreSubmitInfo signalInfo = vkinit::semaphore_submit_info(VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT, getCurrentFrame().renderSemaphore);
-
-        VkSubmitInfo2 submitInfo = vkinit::submit_info(&commandBufferSubmitInfo, &signalInfo, &waitInfo);
-
-        // submit command buffer to queue
-        VK_CHECK(vkQueueSubmit2(mGraphicsQueue, 1, &submitInfo, getCurrentFrame().renderFence));
-
-        mWindow->presentSwapchainImage(mGraphicsQueue, getCurrentFrame().renderSemaphore);
-
-        // increment frame number
-        mFrameNumber++;
-    }
 }
 
 void VulkanEngine::drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView) {

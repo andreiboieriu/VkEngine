@@ -1,6 +1,6 @@
 #pragma once
 
-#include "compute_effects/compute_effect.h"
+#include "compute_effects_manager.h"
 #include "pipeline_resource_manager.h"
 #include "vk_scene.h"
 #include "vk_types.h"
@@ -238,6 +238,7 @@ protected:
 
 	std::unique_ptr<PipelineResourceManager> mPipelineResourceManager;
 	std::unique_ptr<AssetManager> mAssetManager;
+	std::unique_ptr<ComputeEffectsManager> mComputeEffectsManager;
 
 	RenderContext mRenderContext;
 
@@ -247,10 +248,5 @@ protected:
 	Stats mStats{};
 
 	VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties{};
-
-	std::unique_ptr<ComputeEffect> mFxaaEffect;
-	std::unique_ptr<ComputeEffect> mToneMappingEffect;
-	std::unique_ptr<ComputeEffect> mBloomEffect;
-
 	float mMaxSamplerAnisotropy;
 };

@@ -6,6 +6,8 @@
 namespace vkutil {
 
 bool loadShaderModule(const char* filePath, VkDevice device, VkShaderModule* outShaderModule);
+// bool loadShaderModule(const char* filePath, VkDevice device, VkShaderModule* outShaderModule);
+
 VkPipelineLayout createPipelineLayout(std::span<VkDescriptorSetLayout> descriptorSetLayouts, std::span<VkPushConstantRange> pushConstantRanges, VkDevice device);
 
 }; // namespace vkutil

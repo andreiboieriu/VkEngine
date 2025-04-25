@@ -59,9 +59,7 @@ void EditorApp::draw() {
         // get start time
         auto start = std::chrono::system_clock::now();
 
-        mBloomEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
-        mToneMappingEffect->execute(commandBuffer, mDrawImage, mDrawExtent, true);
-        mFxaaEffect->execute(commandBuffer, mDrawImage, mDrawExtent, false);
+        mComputeEffectsManager->executeEffects(commandBuffer, mDrawImage, mDrawExtent);
 
         auto end = std::chrono::system_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
@@ -152,11 +150,9 @@ void EditorApp::drawGui() {
             ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
             ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
 
-            mBloomEffect->drawGui();
-            mToneMappingEffect->drawGui();
-            mFxaaEffect->drawGui();
             ImGui::End();
         }
+
         mScene->drawGui();
         mWindow->drawGui();
     }

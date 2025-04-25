@@ -4,20 +4,22 @@ High Priority:
     - simple editor ui containing scene hierarchy and component view
     - ability to add objects to the scene
 
+- embed default shaders into the binary using xxd (think about structuring them)
+- add jsons for naming compute effect push constants + default values + ui visiblity
+- load all compute shaders when the program starts, then activate them per scene
+
 - see segfault with loading thread
-- do something about compute shaders, maybe attach them to the scene?
-- compute manager and scene manager should be added
+- scene manager should be added
 - script manager should be global
 - add ability to buffer scenes
 - add ability to switch scenes
 - investigate PBR shaders
 
 Medium Priority:
-- Multithreaded resource loading?
-- move related methods from VulkanEngine to VkDevice class
-- make VulkanEngine a better interface
-- remove wrappers to method calls from objects managed by the VulkanEngine class
-(ex: getWindowAspect ratio), instead pass references of these objects to those that require them
+- Multithreaded resource loading? (almost done)
 
 Low priority:
 - maybe find a better solution that stopping the app when minimized?
+
+-- changelog
+- added compute manager

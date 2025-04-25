@@ -1,0 +1,45 @@
+#version 460
+
+layout(local_size_x = 16, local_size_y = 16) in;
+
+layout(set = 0, binding = 0) uniform sampler2D bufferImageMip3;
+layout(rgba16f, set = 0, binding = 1) uniform writeonly image2D bufferImageMip4;
+
+layout(push_constant) uniform constants
+{
+    vec4 values[4];
+    vec2 imageExtent;
+    vec2 bufferImageExtent;
+} PushConstants;
+
+void main() {
+    vec2 destCoord = vec2(gl_GlobalInvocationID.xy);
+
+    if (destCoord.x < PushConstants.imageExtent.x / 16 && destCoord.y < PushConstants.imageExtent.y / 16) {
+        vec2 srcTexelSize = 1.0 / PushConstants.bufferImageExtent * 8.0;
+
+        vec2 texCoord = (destCoord * 2.0 + 1.0) * srcTexelSize;
+
+        vec4 a = texture(bufferImageMip3, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y + 2 * srcTexelSize.y));
+        vec4 b = texture(bufferImageMip3, vec2(texCoord.x, texCoord.y + 2 * srcTexelSize.y));
+        vec4 c = texture(bufferImageMip3, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y + 2 * srcTexelSize.y));
+
+        vec4 d = texture(bufferImageMip3, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y));
+        vec4 e = texture(bufferImageMip3, vec2(texCoord.x, texCoord.y));
+        vec4 f = texture(bufferImageMip3, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y));
+
+        vec4 g = texture(bufferImageMip3, vec2(texCoord.x - 2 * srcTexelSize.x, texCoord.y - 2 * srcTexelSize.y));
+        vec4 h = texture(bufferImageMip3, vec2(texCoord.x, texCoord.y - 2 * srcTexelSize.y));
+        vec4 i = texture(bufferImageMip3, vec2(texCoord.x + 2 * srcTexelSize.x, texCoord.y - 2 * srcTexelSize.y));
+
+        vec4 j = texture(bufferImageMip3, vec2(texCoord.x - srcTexelSize.x, texCoord.y + srcTexelSize.y));
+        vec4 k = texture(bufferImageMip3, vec2(texCoord.x + srcTexelSize.x, texCoord.y + srcTexelSize.y));
+        vec4 l = texture(bufferImageMip3, vec2(texCoord.x - srcTexelSize.x, texCoord.y - srcTexelSize.y));
+        vec4 m = texture(bufferImageMip3, vec2(texCoord.x + srcTexelSize.x, texCoord.y - srcTexelSize.y));
+
+        vec4 downsample = (a + c + g + i) * 0.03125 + (b + d + f + h) * 0.0625 + (e + j + k + l + m) * 0.125;
+        downsample = max(downsample, 0.0001);
+
+        imageStore(bufferImageMip4, ivec2(destCoord), downsample);
+    }
+}

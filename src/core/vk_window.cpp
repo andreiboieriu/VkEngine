@@ -4,7 +4,6 @@
 #include <cstdlib>
 #include <fmt/core.h>
 #include <vector>
-#include "compute_effects/compute_effect.h"
 #include "vk_engine.h"
 #include "vk_enum_string_helper.h"
 #include "vk_types.h"

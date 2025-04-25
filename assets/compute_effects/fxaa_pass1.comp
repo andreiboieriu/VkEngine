@@ -1,0 +1,292 @@
+#version 460
+
+layout(local_size_x = 16, local_size_y = 16) in;
+
+layout(rgba16f, set = 0, binding = 0) uniform image2D image;
+
+layout(push_constant) uniform constants
+{
+    vec4 values[4];
+    vec2 imageExtent;
+    vec2 bufferImageExtent;
+} PushConstants;
+
+float fixedThreshold = PushConstants.values[0].x;
+float relativeThreshold = PushConstants.values[0].y;
+float pixelBlendStrength = PushConstants.values[0].z;
+int quality = int(PushConstants.values[0].w);
+
+struct LumaNeighbourhood {
+    float m, n, e, s, w, ne, se, sw, nw;
+    float highest;
+    float lowest;
+    float range;
+};
+
+struct FxaaEdge {
+    bool isHorizontal;
+    int blendDirection;
+    float lumaGradient;
+    float otherLuma;
+};
+
+struct QualityPreset {
+    int extraEdgeSteps;
+    float edgeStepSizes[10];
+    float lastEdgeStepGuess;
+};
+
+const QualityPreset lowQuality = {
+        3,
+        {
+            1.0,
+            2.0,
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        },
+        8.0
+    };
+
+const QualityPreset mediumQuality = {
+        8,
+        {
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            0.0,
+            0.0
+        },
+        8.0
+    };
+
+const QualityPreset highQuality = {
+        10,
+        {
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            4.0
+        },
+        8.0
+    };
+
+const QualityPreset[3] qualityPresets = {
+        lowQuality,
+        mediumQuality,
+        highQuality
+    };
+
+float getLuma(ivec2 uv) {
+    return imageLoad(image, uv).w;
+}
+
+LumaNeighbourhood getLumaNeighbourhood(ivec2 uv) {
+    LumaNeighbourhood luma;
+    luma.m = getLuma(uv);
+    luma.n = getLuma(ivec2(uv.x, uv.y + 1));
+    luma.e = getLuma(ivec2(uv.x + 1, uv.y));
+    luma.s = getLuma(ivec2(uv.x, uv.y - 1));
+    luma.w = getLuma(ivec2(uv.x - 1, uv.y));
+    luma.ne = getLuma(ivec2(uv.x + 1, uv.y + 1));
+    luma.se = getLuma(ivec2(uv.x + 1, uv.y - 1));
+    luma.nw = getLuma(ivec2(uv.x - 1, uv.y + 1));
+    luma.sw = getLuma(ivec2(uv.x - 1, uv.y - 1));
+
+    luma.highest = max(max(max(max(luma.m, luma.n), luma.e), luma.s), luma.w);
+    luma.lowest = min(min(min(min(luma.m, luma.n), luma.e), luma.s), luma.w);
+
+    luma.range = luma.highest - luma.lowest;
+
+    return luma;
+}
+
+float getPixelBlendFactor(LumaNeighbourhood luma) {
+    float factor = 2.0 * (luma.n + luma.e + luma.s + luma.w);
+    factor += luma.ne + luma.nw + luma.se + luma.sw;
+    factor /= 12.0;
+    factor = abs(factor - luma.m);
+    factor = clamp(factor / luma.range, 0.0, 1.0);
+    factor = smoothstep(0, 1, factor);
+    return factor * factor * pixelBlendStrength;
+}
+
+bool canSkipFxaa(LumaNeighbourhood luma) {
+    return luma.range < max(fixedThreshold, relativeThreshold * luma.highest);
+}
+
+bool isHorizontalEdge(LumaNeighbourhood luma) {
+    float horizontal = 2.0 * abs(luma.n + luma.s - 2.0 * luma.m) +
+            abs(luma.ne + luma.se - 2.0 * luma.e) +
+            abs(luma.nw + luma.sw - 2.0 * luma.w);
+
+    float vertical = 2.0 * abs(luma.e + luma.w - 2.0 * luma.m) +
+            abs(luma.ne + luma.nw - 2.0 * luma.n) +
+            abs(luma.se + luma.sw - 2.0 * luma.s);
+
+    return horizontal >= vertical;
+}
+
+FxaaEdge getEdge(LumaNeighbourhood luma) {
+    FxaaEdge edge;
+    edge.isHorizontal = isHorizontalEdge(luma);
+
+    float lumaP, lumaN;
+
+    if (edge.isHorizontal) {
+        lumaP = luma.n;
+        lumaN = luma.s;
+    } else {
+        lumaP = luma.e;
+        lumaN = luma.w;
+    }
+
+    float gradientP = abs(lumaP - luma.m);
+    float gradientN = abs(lumaN - luma.m);
+
+    if (gradientP < gradientN) {
+        edge.blendDirection = -1;
+        edge.lumaGradient = gradientN;
+        edge.otherLuma = lumaN;
+    } else {
+        edge.blendDirection = 1;
+        edge.lumaGradient = gradientP;
+        edge.otherLuma = lumaP;
+    }
+
+    return edge;
+}
+
+float getLuma(vec2 uv) {
+    vec2 blendFactor = fract(uv);
+    ivec2 iuv = ivec2(uv);
+
+    if (blendFactor.x > 0.0) {
+        return mix(getLuma(iuv), getLuma(ivec2(iuv.x + 1, iuv.y)), blendFactor.x);
+    } else if (blendFactor.y > 0.0) {
+        return mix(getLuma(iuv), getLuma(ivec2(iuv.x, iuv.y + 1)), blendFactor.y);
+    } else {
+        return getLuma(iuv);
+    }
+}
+
+float getEdgeBlendFactor(LumaNeighbourhood luma, FxaaEdge edge, ivec2 uv) {
+    QualityPreset qualityPreset = qualityPresets[quality];
+
+    vec2 edgeUV = vec2(uv);
+    vec2 uvStep = vec2(0.0);
+
+    if (edge.isHorizontal) {
+        edgeUV.y += 0.5 * edge.blendDirection;
+        uvStep.x = 1.0;
+    } else {
+        edgeUV.x += 0.5 * edge.blendDirection;
+        uvStep.y = 1.0;
+    }
+
+    float edgeLuma = 0.5 * (luma.m + edge.otherLuma);
+    float gradientThreshold = 0.25 * edge.lumaGradient;
+
+    vec2 uvP = edgeUV + uvStep;
+    float lumaDeltaP = getLuma(uvP) - edgeLuma;
+    bool atEndP = abs(lumaDeltaP) >= gradientThreshold;
+
+    for (int i = 0; i < qualityPreset.extraEdgeSteps && !atEndP; i++) {
+        uvP += uvStep * qualityPreset.edgeStepSizes[i];
+        lumaDeltaP = getLuma(uvP) - edgeLuma;
+        atEndP = abs(lumaDeltaP) >= gradientThreshold;
+    }
+
+    if (!atEndP) {
+        uvP += uvStep * qualityPreset.lastEdgeStepGuess;
+    }
+
+    vec2 uvN = edgeUV - uvStep;
+    float lumaDeltaN = getLuma(uvN) - edgeLuma;
+    bool atEndN = abs(lumaDeltaN) >= gradientThreshold;
+
+    for (int i = 0; i < qualityPreset.extraEdgeSteps && !atEndN; i++) {
+        uvN -= uvStep;
+        lumaDeltaN = getLuma(uvN) - edgeLuma;
+        atEndN = abs(lumaDeltaN) >= gradientThreshold;
+    }
+
+    if (!atEndN) {
+        uvN -= uvStep * qualityPreset.lastEdgeStepGuess;
+    }
+
+    float distanceToEndP, distanceToEndN;
+
+    if (edge.isHorizontal) {
+        distanceToEndP = uvP.x - float(uv.x);
+        distanceToEndN = float(uv.x) - uvN.x;
+    } else {
+        distanceToEndP = uvP.y - float(uv.y);
+        distanceToEndN = float(uv.y) - uvN.y;
+    }
+
+    float distanceToNearestEnd;
+    bool deltaSign;
+
+    if (distanceToEndP <= distanceToEndN) {
+        distanceToNearestEnd = distanceToEndP;
+        deltaSign = lumaDeltaP >= 0;
+    } else {
+        distanceToNearestEnd = distanceToEndN;
+        deltaSign = lumaDeltaN >= 0;
+    }
+
+    if (deltaSign == (luma.m - edgeLuma >= 0)) {
+        return 0.0;
+    } else {
+        return 0.5 - distanceToNearestEnd / (distanceToEndP + distanceToEndN);
+    }
+}
+
+void main() {
+    ivec2 texelCoord = ivec2(gl_GlobalInvocationID.xy);
+    ivec2 localID = ivec2(gl_LocalInvocationID.xy);
+
+    // ignore outer pixels
+    if (texelCoord.x < PushConstants.imageExtent.x - 1 &&
+            texelCoord.x > 0 &&
+            texelCoord.y < PushConstants.imageExtent.y - 1 &&
+            texelCoord.y > 0) {
+        LumaNeighbourhood luma = getLumaNeighbourhood(texelCoord);
+
+        if (canSkipFxaa(luma)) {
+            return;
+        }
+
+        FxaaEdge edge = getEdge(luma);
+        float blendFactor = max(getPixelBlendFactor(luma), getEdgeBlendFactor(luma, edge, texelCoord));
+
+        vec4 retVal = imageLoad(image, texelCoord);
+
+        if (edge.isHorizontal) {
+            vec3 neighbour = imageLoad(image, ivec2(texelCoord.x, texelCoord.y + edge.blendDirection)).xyz;
+            retVal.xyz = mix(retVal.xyz, neighbour, blendFactor);
+        } else {
+            vec3 neighbour = imageLoad(image, ivec2(texelCoord.x + edge.blendDirection, texelCoord.y)).xyz;
+            retVal.xyz = mix(retVal.xyz, neighbour, blendFactor);
+        }
+
+        imageStore(image, texelCoord, retVal);
+    }
+}
