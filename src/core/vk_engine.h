@@ -83,30 +83,6 @@ public:
 		return mInstance;
 	}
 
-	AllocatedImage& getErrorTexture() {
-		return mErrorCheckerboardImage;
-	}
-
-	AllocatedImage& getWhiteTexture() {
-		return mWhiteImage;
-	}
-
-	AllocatedImage& getBlackTexture() {
-		return mBlackImage;
-	}
-
-	AllocatedImage& getDefaultNormalMap() {
-		return mDefaultNormalMap;
-	}
-
-	VkSampler& getDefaultLinearSampler() {
-		return mDefaultSamplerLinear;
-	}
-
-	VkSampler& getDefaultNearestSampler() {
-		return mDefaultSamplerNearest;
-	}
-
 	PipelineResourceManager& getPipelineResourceManager() {
 		return *mPipelineResourceManager;
 	}
@@ -138,9 +114,10 @@ public:
 
 	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
 	AllocatedImage createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
-	AllocatedImage createEmptyCubemap(VkExtent2D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
+	AllocatedImage createCubemap(VkExtent2D size, VkFormat format, VkImageUsageFlags usage, std::optional<glm::vec3> color = std::nullopt, bool mipMapped = false);
 
 	void destroyImage(const AllocatedImage& image);
+	void destroySampler(VkSampler sampler);
 
 	GPUMeshBuffers uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices);
 
@@ -170,7 +147,6 @@ protected:
 	void initSyncStructs();
 	void initImGui();
 	void initECS();
-	void initDefaultData();
 
 	// draw loop
 	virtual void draw() = 0;
@@ -225,16 +201,6 @@ protected:
 	VkFence mImmFence;
 	VkCommandBuffer mImmCommandBuffer;
 	VkCommandPool mImmCommandPool;
-
-	// texture test resources
-	AllocatedImage mWhiteImage;
-	AllocatedImage mBlackImage;
-	AllocatedImage mGreyImage;
-	AllocatedImage mErrorCheckerboardImage;
-	AllocatedImage mDefaultNormalMap;
-
-	VkSampler mDefaultSamplerLinear;
-	VkSampler mDefaultSamplerNearest;
 
 	std::unique_ptr<PipelineResourceManager> mPipelineResourceManager;
 	std::unique_ptr<AssetManager> mAssetManager;

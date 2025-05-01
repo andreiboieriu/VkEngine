@@ -347,7 +347,14 @@ MaterialInstance PipelineResourceManager::writeMaterial(VkDevice device, Materia
     return materialInstance;
 }
 
-VkDeviceSize PipelineResourceManager::createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView) {
+VkDeviceSize PipelineResourceManager::createSceneDescriptor(
+    VkDeviceAddress bufferAddress,
+    VkDeviceSize size,
+    VkImageView irradianceMapView,
+    VkImageView prefilteredEnvMapView,
+    VkImageView brdflutView,
+    VkSampler sampler
+) {
     auto descriptorSetInfo = mDescriptorSetLayouts[DescriptorSetLayoutType::PBR_SCENE_DATA];
 
     // create scene data buffer descriptor
@@ -374,7 +381,7 @@ VkDeviceSize PipelineResourceManager::createSceneDescriptor(VkDeviceAddress buff
 
     imageDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
     imageDescriptor.imageView = irradianceMapView;
-    imageDescriptor.sampler = mVkEngine.getDefaultLinearSampler();
+    imageDescriptor.sampler = sampler;
 
     VkDescriptorGetInfoEXT imageDescriptorInfo{};
     imageDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
@@ -393,7 +400,7 @@ VkDeviceSize PipelineResourceManager::createSceneDescriptor(VkDeviceAddress buff
 
     prefilteredDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
     prefilteredDescriptor.imageView = prefilteredEnvMapView;
-    prefilteredDescriptor.sampler = mVkEngine.getDefaultLinearSampler();
+    prefilteredDescriptor.sampler = sampler;
 
     VkDescriptorGetInfoEXT prefilteredDescriptorInfo{};
     prefilteredDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
@@ -412,7 +419,7 @@ VkDeviceSize PipelineResourceManager::createSceneDescriptor(VkDeviceAddress buff
 
     brdflutDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
     brdflutDescriptor.imageView = brdflutView;
-    brdflutDescriptor.sampler = mVkEngine.getDefaultLinearSampler();
+    brdflutDescriptor.sampler = sampler;
 
     VkDescriptorGetInfoEXT brdflutDescriptorInfo{};
     brdflutDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;

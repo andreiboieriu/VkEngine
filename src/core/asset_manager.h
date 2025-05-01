@@ -46,8 +46,26 @@ public:
         return &mSkyboxes[name];
     }
 
+    VkSampler *getSampler(const std::string& name) {
+        if (!mDefaultSamplers.contains(name)) {
+            return nullptr;
+        }
+
+        return &mDefaultSamplers[name];
+    }
+
+    AllocatedImage *getDefaultImage(const std::string& name) {
+        if (!mDefaultImages.contains(name)) {
+            return nullptr;
+        }
+
+        return &mDefaultImages[name];
+    }
+
 private:
     void loadDefaultMeshes();
+    void loadDefaultImages();
+    void loadDefaultSamplers();
     void renderToCubemap(AllocatedImage& src, AllocatedImage& dest, Pipeline *pipeline, VkExtent2D destSize, uint32_t mipLevel = 0, bool flipViewport = false);
     void freeResources();
 
@@ -57,10 +75,13 @@ private:
     const std::string SPRITES_PATH = "assets/sprites/";
     const std::string SKYBOXES_PATH = "assets/skyboxes/";
 
+    // user loaded data
     std::unordered_map<std::string, std::unique_ptr<LoadedGLTF>> mLoadedGltfs;
     std::unordered_map<std::string, AllocatedImage> mImages;
     std::unordered_map<std::string, SkyboxAsset> mSkyboxes;
 
-    // used for storing non textured default meshes, not gltf sub-meshes
+    // default data
     std::unordered_map<std::string, MeshAsset> mMeshes;
+    std::unordered_map<std::string, AllocatedImage> mDefaultImages;
+    std::unordered_map<std::string, VkSampler> mDefaultSamplers;
 };

@@ -62,9 +62,10 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
     mGlobalDescriptorOffset = mVkEngine.getPipelineResourceManager().createSceneDescriptor(
         mSceneDataBuffer.deviceAddress,
         sizeof(SceneData),
-        mSkybox ? mSkybox->irrMap.imageView : nullptr,
-        mSkybox ? mSkybox->prefilteredEnvMap.imageView : nullptr,
-        mSkybox ? mSkybox->brdfLut.imageView : nullptr
+        mSkybox ? mSkybox->irrMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
+        mSkybox ? mSkybox->prefilteredEnvMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
+        mSkybox ? mSkybox->brdfLut.imageView : mAssetManager.getDefaultImage("brdflut")->imageView,
+        *mAssetManager.getSampler("linear")
     );
 
     // load entities

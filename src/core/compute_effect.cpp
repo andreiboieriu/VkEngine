@@ -181,7 +181,7 @@ void ComputeEffect::addSubpass(const std::filesystem::path& path) {
     mSubpasses.push_back(newSubpass);
 }
 
-void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize) {
+void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize, VkSampler sampler) {
     if (!mEnabled) {
         return;
     }
@@ -198,7 +198,7 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
                 writer.writeImage(
                     j,
                     image.imageView,
-                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? mVkEngine.getDefaultLinearSampler() : VK_NULL_HANDLE,
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? sampler : VK_NULL_HANDLE,
                     VK_IMAGE_LAYOUT_GENERAL,
                     binding.descriptorType);
             } else if (binding.name.find("bufferImageMip") != std::string::npos) {
@@ -207,7 +207,7 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
                 writer.writeImage(
                     j,
                     mBufferImageMipViews[mipLevel],
-                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? mVkEngine.getDefaultLinearSampler() : VK_NULL_HANDLE,
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? sampler : VK_NULL_HANDLE,
                     VK_IMAGE_LAYOUT_GENERAL,
                     binding.descriptorType);
             } else {

@@ -6,7 +6,7 @@ class ComputeEffectsManager {
 public:
     ComputeEffectsManager(VulkanEngine& vkEngine);
     void loadEffect(const std::string& name);
-    void executeEffects(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent);
+    void executeEffects(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, VkSampler sampler);
 
 private:
     void loadDefaultEffects();

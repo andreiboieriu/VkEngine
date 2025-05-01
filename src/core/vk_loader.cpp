@@ -114,7 +114,7 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
         image.data);
 
     if (newImage.image == VK_NULL_HANDLE) {
-        return mVkEngine.getErrorTexture();
+        return *mVkEngine.getAssetManager().getDefaultImage("error");
     } else {
         mImages[image.name.c_str()] = newImage;
 
@@ -215,16 +215,16 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         MaterialResources materialResources;
 
         // default material textures
-        materialResources.colorImage = mVkEngine.getWhiteTexture();
-        materialResources.colorSampler = mVkEngine.getDefaultLinearSampler();
-        materialResources.metalRoughImage = mVkEngine.getBlackTexture();
-        materialResources.metalRoughSampler = mVkEngine.getDefaultLinearSampler();
-        materialResources.normalImage = mVkEngine.getDefaultNormalMap();
-        materialResources.normalSampler = mVkEngine.getDefaultLinearSampler();
-        materialResources.emissiveImage = mVkEngine.getBlackTexture();
-        materialResources.emissiveSampler = mVkEngine.getDefaultLinearSampler();
-        materialResources.occlusionImage = mVkEngine.getWhiteTexture();
-        materialResources.occlusionSampler = mVkEngine.getDefaultLinearSampler();
+        materialResources.colorImage = *mVkEngine.getAssetManager().getDefaultImage("white");
+        materialResources.colorSampler = *mVkEngine.getAssetManager().getSampler("linear");
+        materialResources.metalRoughImage = *mVkEngine.getAssetManager().getDefaultImage("black");
+        materialResources.metalRoughSampler = *mVkEngine.getAssetManager().getSampler("linear");
+        materialResources.normalImage = *mVkEngine.getAssetManager().getDefaultImage("normal");
+        materialResources.normalSampler = *mVkEngine.getAssetManager().getSampler("linear");
+        materialResources.emissiveImage = *mVkEngine.getAssetManager().getDefaultImage("black");
+        materialResources.emissiveSampler = *mVkEngine.getAssetManager().getSampler("linear");
+        materialResources.occlusionImage = *mVkEngine.getAssetManager().getDefaultImage("white");
+        materialResources.occlusionSampler = *mVkEngine.getAssetManager().getSampler("linear");
 
         // set uniform buffer for the material data
         materialResources.dataBuffer = mMaterialDataBuffer.buffer;
@@ -458,7 +458,7 @@ void LoadedGLTF::freeResources() {
     }
 
     for (auto& [k, v] : mImages) {
-        if (v.image == mVkEngine.getErrorTexture().image) {
+        if (v.image == mVkEngine.getAssetManager().getDefaultImage("error")->image) {
             continue;
         }
 

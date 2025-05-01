@@ -53,7 +53,7 @@ public:
 
     ~ComputeEffect();
 
-    virtual void execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize);
+    virtual void execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize, VkSampler sampler);
     virtual void drawGui();
 
 protected:

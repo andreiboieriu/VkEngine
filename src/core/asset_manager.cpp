@@ -10,7 +10,9 @@
 #include "glm/trigonometric.hpp"
 
 AssetManager::AssetManager(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
+    loadDefaultSamplers();
     loadDefaultMeshes();
+    loadDefaultImages();
 }
 
 AssetManager::~AssetManager() {
@@ -161,7 +163,7 @@ void AssetManager::renderToCubemap(
 
             // push descriptor set
             DescriptorWriter writer;
-            std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, src.imageView, mVkEngine.getDefaultLinearSampler(), VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+            std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, src.imageView, mDefaultSamplers["linear"], VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
                                                                         .getWrites();
 
             vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline->layout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
@@ -223,7 +225,7 @@ void AssetManager::loadSkybox(const std::string& name) {
     );
 
     // create environment map
-    skybox.envMap = mVkEngine.createEmptyCubemap(
+    skybox.envMap = mVkEngine.createCubemap(
         SkyboxAsset::ENV_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
         VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT
@@ -239,7 +241,7 @@ void AssetManager::loadSkybox(const std::string& name) {
     );
 
     // create irradiance cube map
-    skybox.irrMap = mVkEngine.createEmptyCubemap(
+    skybox.irrMap = mVkEngine.createCubemap(
         SkyboxAsset::IRR_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
         VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT
@@ -253,10 +255,11 @@ void AssetManager::loadSkybox(const std::string& name) {
     );
 
     // create prefiltered environment map
-    skybox.prefilteredEnvMap = mVkEngine.createEmptyCubemap(
+    skybox.prefilteredEnvMap = mVkEngine.createCubemap(
         SkyboxAsset::PREFILTERED_ENV_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
         VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT,
+        std::nullopt,
         true
     );
 
@@ -270,21 +273,8 @@ void AssetManager::loadSkybox(const std::string& name) {
         );
     }
 
-    // create brdf lut image
-    skybox.brdfLut = mVkEngine.createImage(
-        VkExtent3D{SkyboxAsset::BRDF_LUT_SIZE.width, SkyboxAsset::BRDF_LUT_SIZE.height, 1},
-        VK_FORMAT_R16G16B16A16_SFLOAT,
-        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT,
-        false
-    );
-
-    ComputeEffect computeEffect("skybox_brdf_lut", mVkEngine);
-
-    mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
-        vkutil::transitionImage(commandBuffer, skybox.brdfLut.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
-        computeEffect.execute(commandBuffer, skybox.brdfLut, SkyboxAsset::BRDF_LUT_SIZE, true);
-        vkutil::transitionImage(commandBuffer, skybox.brdfLut.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
-    });
+    // set brdf lut image
+    skybox.brdfLut = mDefaultImages["brdflut"];
 
     mSkyboxes[name] = skybox;
 }
@@ -344,10 +334,131 @@ void AssetManager::loadDefaultMeshes() {
     mMeshes["cube"] = createCubeMesh(mVkEngine);
 }
 
-void AssetManager::freeResources() {
-    for (auto& [k, v] : mLoadedGltfs) {
-        v = nullptr;
+AllocatedImage createBrdfLut(VulkanEngine& vkEngine, VkSampler linear) {
+    AllocatedImage brdfLut{};
+
+    brdfLut = vkEngine.createImage(
+        VkExtent3D{SkyboxAsset::BRDF_LUT_SIZE.width, SkyboxAsset::BRDF_LUT_SIZE.height, 1},
+        VK_FORMAT_R16G16B16A16_SFLOAT,
+        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT,
+        false
+    );
+
+    ComputeEffect computeEffect("skybox_brdf_lut", vkEngine);
+
+    vkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
+        vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
+        computeEffect.execute(commandBuffer, brdfLut, SkyboxAsset::BRDF_LUT_SIZE, true, linear);
+        vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+    });
+
+    return brdfLut;
+}
+
+void AssetManager::loadDefaultImages() {
+    mDefaultImages["brdflut"] = createBrdfLut(mVkEngine, mDefaultSamplers["linear"]);
+
+    uint32_t white = glm::packUnorm4x8(glm::vec4(1, 1, 1, 1));
+	mDefaultImages["white"] = mVkEngine.createImage(
+	    (void*)&white,
+		VkExtent3D{ 1, 1, 1 },
+		VK_FORMAT_R8G8B8A8_UNORM,
+		VK_IMAGE_USAGE_SAMPLED_BIT
+	);
+
+	uint32_t grey = glm::packUnorm4x8(glm::vec4(0.66f, 0.66f, 0.66f, 1));
+	mDefaultImages["grey"] = mVkEngine.createImage(
+	    (void*)&grey,
+		VkExtent3D{ 1, 1, 1 },
+		VK_FORMAT_R8G8B8A8_UNORM,
+		VK_IMAGE_USAGE_SAMPLED_BIT
+	);
+
+	uint32_t black = glm::packUnorm4x8(glm::vec4(0, 0, 0, 0));
+	mDefaultImages["black"] = mVkEngine.createImage(
+	    (void*)&black,
+		VkExtent3D{ 1, 1, 1 },
+		VK_FORMAT_R8G8B8A8_UNORM,
+		VK_IMAGE_USAGE_SAMPLED_BIT
+	);
+
+    uint32_t normal = glm::packUnorm4x8(glm::vec4(0.5f, 0.5f, 1.0f, 0.0f));
+    mDefaultImages["normal"] = mVkEngine.createImage(
+        (void*)&normal,
+        VkExtent3D{ 1, 1, 1 },
+        VK_FORMAT_R8G8B8A8_UNORM,
+		VK_IMAGE_USAGE_SAMPLED_BIT
+    );
+
+	// checkerboard image
+	uint32_t magenta = glm::packUnorm4x8(glm::vec4(1, 0, 1, 1));
+	std::array<uint32_t, 16 *16 > pixels; // for 16x16 checkerboard texture
+	for (int x = 0; x < 16; x++) {
+		for (int y = 0; y < 16; y++) {
+			pixels[y*16 + x] = ((x % 2) ^ (y % 2)) ? magenta : black;
+		}
+	}
+
+	mDefaultImages["error"] = mVkEngine.createImage(
+	    pixels.data(),
+		VkExtent3D{16, 16, 1},
+		VK_FORMAT_R8G8B8A8_UNORM,
+		VK_IMAGE_USAGE_SAMPLED_BIT
+	);
+
+	// default cubemaps
+	AllocatedImage cubeMap = mVkEngine.createCubemap(
+	    {1, 1},
+		VK_FORMAT_R8G8B8A8_UNORM,
+		VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT,
+		glm::vec3(1.f, 0.f, 0.f)
+	);
+
+	mDefaultImages["red_cube"] = cubeMap;
+
+	cubeMap = mVkEngine.createCubemap(
+	    {1, 1},
+		VK_FORMAT_R16G16B16A16_SFLOAT,
+		VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT,
+		glm::vec3(0.f, 0.f, 0.f)
+	);
+
+	mDefaultImages["black_cube"] = cubeMap;
+}
+
+void AssetManager::loadDefaultSamplers() {
+    VkSamplerCreateInfo sampl = {.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO};
+
+	sampl.magFilter = VK_FILTER_NEAREST;
+	sampl.minFilter = VK_FILTER_NEAREST;
+    sampl.anisotropyEnable = VK_TRUE;
+    sampl.maxAnisotropy = mVkEngine.getMaxSamplerAnisotropy();
+    sampl.addressModeU = VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_BORDER;
+    sampl.addressModeV = VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_BORDER;
+    sampl.borderColor = VK_BORDER_COLOR_FLOAT_TRANSPARENT_BLACK;
+    sampl.mipmapMode = VK_SAMPLER_MIPMAP_MODE_NEAREST;
+
+    {
+        VkSampler nearest;
+        vkCreateSampler(mVkEngine.getDevice(), &sampl, nullptr, &nearest);
+        mDefaultSamplers["nearest"] = nearest;
     }
+
+	sampl.magFilter = VK_FILTER_LINEAR;
+	sampl.minFilter = VK_FILTER_LINEAR;
+    sampl.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
+
+    {
+        VkSampler linear;
+        vkCreateSampler(mVkEngine.getDevice(), &sampl, nullptr, &linear);
+        mDefaultSamplers["linear"] = linear;
+    }
+}
+
+void AssetManager::freeResources() {
+    // for (auto& [k, v] : mLoadedGltfs) {
+    //     v = nullptr;
+    // }
 
     for (auto& [k, v] : mImages) {
         mVkEngine.destroyImage(v);
@@ -363,6 +474,13 @@ void AssetManager::freeResources() {
         mVkEngine.destroyImage(v.envMap);
         mVkEngine.destroyImage(v.irrMap);
         mVkEngine.destroyImage(v.prefilteredEnvMap);
-        mVkEngine.destroyImage(v.brdfLut);
+    }
+
+    for (auto& [k, v] : mDefaultImages) {
+        mVkEngine.destroyImage(v);
+    }
+
+    for (auto& [k, v] : mDefaultSamplers) {
+        mVkEngine.destroySampler(v);
     }
 }

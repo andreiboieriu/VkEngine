@@ -43,7 +43,7 @@ public:
 
     void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
     VkDeviceSize createMaterialDescriptor(const MaterialResources& resources);
-    VkDeviceSize createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView);
+    VkDeviceSize createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView, VkSampler sampler);
     MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources);
 
 private:

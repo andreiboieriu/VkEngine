@@ -62,8 +62,8 @@ void ComputeEffectsManager::loadEffect(const std::string& name) {
     mEffects[name] = std::make_unique<ComputeEffect>(name, mVkEngine);
 }
 
-void ComputeEffectsManager::executeEffects(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent) {
-    mEffects["bloom"]->execute(commandBuffer, image, extent, true);
-    mEffects["tone_mapping"]->execute(commandBuffer, image, extent, true);
-    mEffects["fxaa"]->execute(commandBuffer, image, extent, false);
+void ComputeEffectsManager::executeEffects(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, VkSampler sampler) {
+    mEffects["bloom"]->execute(commandBuffer, image, extent, true, sampler);
+    mEffects["tone_mapping"]->execute(commandBuffer, image, extent, true, sampler);
+    mEffects["fxaa"]->execute(commandBuffer, image, extent, false, sampler);
 }

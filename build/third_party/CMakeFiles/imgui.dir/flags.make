@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/unclegoga/Development/VkEngine/third_party/imgui -isystem /home/unclegoga/Development/VkEngine/third_party/volk -isystem /home/unclegoga/Development/VkEngine/third_party/GLFW/include
 
-CXX_FLAGS = -std=gnu++20
+CXX_FLAGS = -O3 -std=gnu++20
 

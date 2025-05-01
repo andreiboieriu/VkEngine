@@ -66,7 +66,6 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
     initSwapchain();
     initCommands();
     initSyncStructs();
-    initDefaultData();
     initImGui();
     initECS();
 
@@ -122,6 +121,10 @@ AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags 
     }
 
     return newBuffer;
+}
+
+void VulkanEngine::destroySampler(VkSampler sampler) {
+    vkDestroySampler(mDevice, sampler, nullptr);
 }
 
 void VulkanEngine::destroyBuffer(const AllocatedBuffer& buffer) {
@@ -299,7 +302,6 @@ void VulkanEngine::initVulkan() {
 
     for (uint32_t i = 0; i < queueFamilies.size(); i++) {
         if (queueFamilies[i].queueFlags & VK_QUEUE_GRAPHICS_BIT) {
-            std::cout << "Graphics queue count: " << queueFamilies[i].queueCount << "\n";
             queueDescriptions.push_back(vkb::CustomQueueDescription{
                 i,
                 std::vector<float> {
@@ -520,63 +522,6 @@ void VulkanEngine::initSyncStructs() {
     mMainDeletionQueue.push([=, this]() {
         vkDestroyFence(mDevice, mImmFence, nullptr);
     });
-}
-
-void VulkanEngine::initDefaultData() {
-    uint32_t white = glm::packUnorm4x8(glm::vec4(1, 1, 1, 1));
-	mWhiteImage = createImage((void*)&white, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
-		VK_IMAGE_USAGE_SAMPLED_BIT);
-
-	uint32_t grey = glm::packUnorm4x8(glm::vec4(0.66f, 0.66f, 0.66f, 1));
-	mGreyImage = createImage((void*)&grey, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
-		VK_IMAGE_USAGE_SAMPLED_BIT);
-
-	uint32_t black = glm::packUnorm4x8(glm::vec4(0, 0, 0, 0));
-	mBlackImage = createImage((void*)&black, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
-		VK_IMAGE_USAGE_SAMPLED_BIT);
-
-    uint32_t normal = glm::packUnorm4x8(glm::vec4(0.5f, 0.5f, 1.0f, 0.0f));
-    mDefaultNormalMap = createImage((void*)&normal, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
-		                     VK_IMAGE_USAGE_SAMPLED_BIT);
-
-	//checkerboard image
-	uint32_t magenta = glm::packUnorm4x8(glm::vec4(1, 0, 1, 1));
-	std::array<uint32_t, 16 *16 > pixels; //for 16x16 checkerboard texture
-	for (int x = 0; x < 16; x++) {
-		for (int y = 0; y < 16; y++) {
-			pixels[y*16 + x] = ((x % 2) ^ (y % 2)) ? magenta : black;
-		}
-	}
-	mErrorCheckerboardImage = createImage(pixels.data(), VkExtent3D{16, 16, 1}, VK_FORMAT_R8G8B8A8_UNORM,
-		VK_IMAGE_USAGE_SAMPLED_BIT);
-
-	VkSamplerCreateInfo sampl = {.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO};
-
-	sampl.magFilter = VK_FILTER_NEAREST;
-	sampl.minFilter = VK_FILTER_NEAREST;
-    sampl.anisotropyEnable = VK_TRUE;
-    sampl.maxAnisotropy = mMaxSamplerAnisotropy;
-    sampl.addressModeU = VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_BORDER;
-    sampl.addressModeV = VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_BORDER;
-    sampl.borderColor = VK_BORDER_COLOR_FLOAT_TRANSPARENT_BLACK;
-    sampl.mipmapMode = VK_SAMPLER_MIPMAP_MODE_NEAREST;
-	vkCreateSampler(mDevice, &sampl, nullptr, &mDefaultSamplerNearest);
-
-	sampl.magFilter = VK_FILTER_LINEAR;
-	sampl.minFilter = VK_FILTER_LINEAR;
-    sampl.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
-	vkCreateSampler(mDevice, &sampl, nullptr, &mDefaultSamplerLinear);
-
-	mMainDeletionQueue.push([=, this](){
-		vkDestroySampler(mDevice,mDefaultSamplerNearest,nullptr);
-		vkDestroySampler(mDevice,mDefaultSamplerLinear,nullptr);
-
-		destroyImage(mWhiteImage);
-		destroyImage(mGreyImage);
-		destroyImage(mBlackImage);
-		destroyImage(mErrorCheckerboardImage);
-        destroyImage(mDefaultNormalMap);
-	});
 }
 
 void VulkanEngine::initImGui() {
@@ -926,6 +871,8 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         draw(mRenderContext.transparentObjects[index]);
     }
 
+    auto linearSampler = *mAssetManager->getSampler("linear");
+
     if (mRenderContext.skybox != nullptr) {
         auto pipeline = mPipelineResourceManager->getPipeline(PipelineResourceManager::PipelineType::SKYBOX);
         auto cubeMesh = mAssetManager->getMesh("cube");
@@ -937,7 +884,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         vkCmdBindIndexBuffer(commandBuffer, cubeMesh->meshBuffers.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
 
         DescriptorWriter writer;
-        std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mRenderContext.skybox->envMap.imageView, mDefaultSamplerLinear, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+        std::vector<VkWriteDescriptorSet> descriptorWrites = writer.writeImage(0, mRenderContext.skybox->envMap.imageView, linearSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
                                                                    .getWrites();
 
         vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline->layout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
@@ -962,7 +909,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
 
         // push descriptors
         DescriptorWriter writer;
-        std::vector<VkWriteDescriptorSet> writes = writer.writeImage(0, sprite.image->imageView, mDefaultSamplerLinear, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
+        std::vector<VkWriteDescriptorSet> writes = writer.writeImage(0, sprite.image->imageView, linearSampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER)
                                                          .getWrites();
 
         vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, spritePipeline->layout, 0, (uint32_t)writes.size(), writes.data());
@@ -1021,7 +968,73 @@ AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkIma
     return newImage;
 }
 
-AllocatedImage VulkanEngine::createEmptyCubemap(VkExtent2D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {
+uint32_t getPixelSize(VkFormat format) {
+    switch (format) {
+        // 8-bit formats
+        case VK_FORMAT_R8_UNORM:
+        case VK_FORMAT_R8_SNORM:
+        case VK_FORMAT_R8_UINT:
+        case VK_FORMAT_R8_SINT:
+            return 1;
+
+        // 16-bit formats
+        case VK_FORMAT_R8G8_UNORM:
+        case VK_FORMAT_R8G8_SNORM:
+        case VK_FORMAT_R8G8_UINT:
+        case VK_FORMAT_R8G8_SINT:
+        case VK_FORMAT_R16_UNORM:
+        case VK_FORMAT_R16_SNORM:
+        case VK_FORMAT_R16_UINT:
+        case VK_FORMAT_R16_SINT:
+        case VK_FORMAT_R16_SFLOAT:
+            return 2;
+
+        // 24/32-bit formats
+        case VK_FORMAT_R8G8B8_UNORM:
+        case VK_FORMAT_R8G8B8_SNORM:
+        case VK_FORMAT_R8G8B8_UINT:
+        case VK_FORMAT_R8G8B8_SINT:
+            return 3;
+
+        case VK_FORMAT_R32_UINT:
+        case VK_FORMAT_R32_SINT:
+        case VK_FORMAT_R32_SFLOAT:
+        case VK_FORMAT_B8G8R8A8_UNORM:
+        case VK_FORMAT_R8G8B8A8_UNORM:
+        case VK_FORMAT_R8G8B8A8_SRGB:
+        case VK_FORMAT_R16G16_UNORM:
+        case VK_FORMAT_R16G16_SFLOAT:
+            return 4;
+
+        // 8-byte formats
+        case VK_FORMAT_R16G16B16A16_UNORM:
+        case VK_FORMAT_R16G16B16A16_SFLOAT:
+        case VK_FORMAT_R32G32_UINT:
+        case VK_FORMAT_R32G32_SFLOAT:
+            return 8;
+
+        // 12-byte formats
+        case VK_FORMAT_R32G32B32_SFLOAT:
+        case VK_FORMAT_R32G32B32_UINT:
+            return 12;
+
+        // 16-byte formats
+        case VK_FORMAT_R32G32B32A32_SFLOAT:
+        case VK_FORMAT_R32G32B32A32_UINT:
+            return 16;
+
+        default:
+            return 0;
+    }
+}
+
+AllocatedImage VulkanEngine::createCubemap(
+    VkExtent2D size,
+    VkFormat format,
+    VkImageUsageFlags usage,
+    std::optional<glm::vec3> color,
+    bool mipMapped
+) {
     // create image
     AllocatedImage cubemap{};
     cubemap.imageFormat = format;
@@ -1067,12 +1080,62 @@ AllocatedImage VulkanEngine::createEmptyCubemap(VkExtent2D size, VkFormat format
 
     VK_CHECK(vkCreateImageView(mDevice, &imageViewInfo, nullptr, &cubemap.imageView));
 
+    if (color == std::nullopt) {
+        return cubemap;
+    }
+
+    // upload color data to cubemap
+    uint32_t pixelSize = getPixelSize(format);
+
+    if (!pixelSize) {
+        fmt::println("Error: attempting to create image with unsupported format {}", string_VkFormat(format));
+    }
+
+    size_t dataSize = 6 * size.width * size.height * pixelSize;
+    AllocatedBuffer uploadBuffer = createBuffer(dataSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
+    uint32_t colorInt = glm::packUnorm4x8(glm::vec4(color.value(), 1.f));
+    std::vector<uint32_t> colorData(dataSize / sizeof(uint32_t), colorInt);
+
+    // copy data to staging buffer
+    memcpy(uploadBuffer.allocInfo.pMappedData, colorData.data(), dataSize);
+
+    immediateSubmit([&](VkCommandBuffer commandBuffer) {
+        vkutil::transitionImage(commandBuffer, cubemap.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
+
+        VkBufferImageCopy copyRegion{};
+        copyRegion.bufferOffset = 0;
+        copyRegion.bufferRowLength = 0;
+        copyRegion.bufferImageHeight = 0;
+
+        copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+        copyRegion.imageSubresource.mipLevel = 0;
+        copyRegion.imageSubresource.baseArrayLayer = 0;
+        copyRegion.imageSubresource.layerCount = 6;
+        copyRegion.imageExtent = {size.width, size.height, 1};
+
+        vkCmdCopyBufferToImage(commandBuffer, uploadBuffer.buffer, cubemap.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, 1, &copyRegion);
+
+        if (mipMapped) {
+            vkutil::generateMipmaps(commandBuffer, cubemap.image, VkExtent2D{cubemap.imageExtent.width, cubemap.imageExtent.height});
+        } else {
+            vkutil::transitionImage(commandBuffer, cubemap.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }
+    });
+
+    destroyBuffer(uploadBuffer);
+
     return cubemap;
 }
 
-// hardcoded to rgba 8 bit
+// only for color images
 AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {
-    size_t dataSize = size.depth * size.width * size.height * (format == VK_FORMAT_R32G32B32A32_SFLOAT ? 16 : 4);
+    uint32_t pixelSize = getPixelSize(format);
+
+    if (!pixelSize) {
+        fmt::println("Error: attempting to create image with unsupported format {}", string_VkFormat(format));
+    }
+
+    size_t dataSize = size.depth * size.width * size.height * pixelSize;
     AllocatedBuffer uploadBuffer = createBuffer(dataSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
 
     // copy data to staging buffer

@@ -43,6 +43,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/stdlib.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/cstdlib \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/x86_64-linux-gnu/c++/14/bits/c++config.h \
@@ -74,6 +75,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/std_abs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/math.h \
