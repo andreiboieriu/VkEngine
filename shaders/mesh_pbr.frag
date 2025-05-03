@@ -145,8 +145,7 @@ void main()
     vec3 H = normalize(V + L);
 
     // get normal from normal map
-    if (sceneData.data.w > 0.9f)
-        N = perturbNormal(N, V);
+    N = perturbNormal(N, V);
 
     vec3 R = reflect(-V, N);
 
@@ -176,10 +175,11 @@ void main()
     F = fresnelSchlickRoughness(NdotV, F0, roughness);
 
     // calculate indirect diffuse lighting
-    vec3 ambientDiffuse = (1 - F) * texture(irradianceMap, N).xyz * c_diff;
+    vec3 irr = texture(irradianceMap, N).xyz;
+    vec3 ambientDiffuse = (1 - F) * irr * c_diff;
 
     // calculate indirect specular lighting
-    const float MAX_REFLECTION_LOD = 5.0;
+    const float MAX_REFLECTION_LOD = 4.0;
     vec3 prefilteredColor = textureLod(prefilteredEnvMap, R, roughness * MAX_REFLECTION_LOD).rgb;
     vec2 envBRDF = texture(brdfLut, vec2(NdotV, roughness)).rg;
     vec3 ambientSpecular = prefilteredColor * (F * envBRDF.x + envBRDF.y);

@@ -1,3 +1,6 @@
+!!!!! MAJOR BUG !!!!!
+Save skybox maps to files, and investigate them + pbr shaders
+
 High Priority:
 - continue developing the editor
     - project selection screen
@@ -20,6 +23,3 @@ Medium Priority:
 
 Low priority:
 - maybe find a better solution that stopping the app when minimized?
-
--- changelog
-- added compute manager

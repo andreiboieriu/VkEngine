@@ -68,15 +68,28 @@ vec3 ImportanceSampleGGX(vec2 Xi, vec3 N, float roughness)
     return normalize(sampleVec);
 }
 
+float D_GGX(vec3 N, vec3 H, float a) {
+    float a2 = a * a;
+
+    float nom = a2;
+
+    float NdotH = max(dot(N, H), 0.0);
+
+    float denom = (NdotH * NdotH * (a2 - 1.0) + 1.0);
+    denom = PI * denom * denom;
+
+    return nom / denom;
+}
+
 void main()
 {
     vec3 N = normalize(inPos);
     vec3 R = N;
     vec3 V = R;
 
-    float roughness = float(PushConstants.mipLevel) / (float(PushConstants.totalMips) - 1.0);
+    float roughness = float(PushConstants.mipLevel) / 4.0;
 
-    const uint SAMPLE_COUNT = 1024u;
+    const uint SAMPLE_COUNT = 32u;
     float totalWeight = 0.0;
     vec3 prefilteredColor = vec3(0.0);
     for (uint i = 0u; i < SAMPLE_COUNT; ++i)
@@ -88,7 +101,20 @@ void main()
         float NdotL = max(dot(N, L), 0.0);
         if (NdotL > 0.0)
         {
-            prefilteredColor += texture(environmentMap, L).rgb * NdotL;
+            float NdotH = max(dot(N, H), 0.0);
+            float HdotV = max(dot(H, V), 0.0);
+
+            float D = D_GGX(N, H, roughness);
+            float pdf = (D * NdotH / (4.0 * HdotV)) + 0.0001;
+
+            float resolution = 1024.0; // resolution of source cubemap (per face)
+            float saTexel = 4.0 * PI / (6.0 * resolution * resolution);
+            float saSample = 1.0 / (float(SAMPLE_COUNT) * pdf + 0.0001);
+
+            float mipBias = 1.0f;
+            float mipLevel = roughness == 0.0 ? 0.0 : max(0.5 * log2(saSample / saTexel) + mipBias, 0.0f);
+
+            prefilteredColor += textureLod(environmentMap, L, mipLevel).rgb * NdotL;
             totalWeight += NdotL;
         }
     }

@@ -165,7 +165,7 @@ struct SkyboxAsset {
 
     static constexpr VkExtent2D ENV_MAP_SIZE = {1024, 1024};
     static constexpr VkExtent2D IRR_MAP_SIZE = {32, 32};
-    static constexpr VkExtent2D PREFILTERED_ENV_MAP_SIZE = {256, 256};
+    static constexpr VkExtent2D PREFILTERED_ENV_MAP_SIZE = {512, 512};
     static constexpr VkExtent2D BRDF_LUT_SIZE = {512, 512};
 };
 

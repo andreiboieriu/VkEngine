@@ -7,7 +7,7 @@
         "Transform": {
           "Position": [0.0, 0.0, 0.0],
           "Rotation": [0.0, 0.0, 0.0],
-          "Scale": [1.0, 1.0, 1.0]
+          "Scale": [10.0, 10.0, 10.0]
         },
         "Camera": {
           "Fov": 70.0,
@@ -30,10 +30,10 @@
         "Transform": {
           "Position": [0.0, 0.0, 0.0],
           "Rotation": [0.0, 0.0, 0.0],
-          "Scale": [1.0, 1.0, 1.0]
+          "Scale": [10.0, 10.0, 10.0]
         },
         "Script": {
-          "Name": "scripts/script.lua"
+          "Name": "scripts/spaceship.lua"
         },
         "Metadata": {
           "UUID": "fighter_spaceship"
@@ -45,21 +45,44 @@
       "ChildrenUUIDs": [],
       "Components": {
         "GLTF": {
-          "Name": "fighter_spaceship.glb"
+          "Name": "CompareRoughness.glb"
         },
         "Transform": {
-          "Position": [2.0, 0.0, -2.0],
+          "Position": [20.0, 0.0, -20.0],
           "Rotation": [0.0, 0.0, 0.0],
-          "Scale": [1.0, 1.0, 1.0]
+          "Scale": [10.0, 10.0, 10.0]
         },
         "Script": {
-          "Name": "scripts/script.lua"
+          "Name": "scripts/rotate.lua"
         },
         "SphereCollider": {
           "Radius": 0.0
         },
         "Metadata": {
-          "UUID": "fighter_spaceship2"
+          "UUID": "asteroid0"
+        }
+      },
+      "ParentUUID": ""
+    },
+    {
+      "ChildrenUUIDs": [],
+      "Components": {
+        "GLTF": {
+          "Name": "CompareMetallic.glb"
+        },
+        "Transform": {
+          "Position": [6.0, 0.0, -2.0],
+          "Rotation": [0.0, 0.0, 0.0],
+          "Scale": [10.0, 10.0, 10.0]
+        },
+        "Script": {
+          "Name": "scripts/rotate.lua"
+        },
+        "SphereCollider": {
+          "Radius": 0.0
+        },
+        "Metadata": {
+          "UUID": "asteroid1"
         }
       },
       "ParentUUID": ""

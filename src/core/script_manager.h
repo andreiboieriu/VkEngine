@@ -19,9 +19,9 @@ public:
     void loadScript(const std::string& filePath);
     void bindScript(const std::string& scriptName, Entity& entity);
 
-    void update(float deltaTime, const Input& input);
+    void update(float deltaTime, const Input& input, Entity *camera);
 
-    void onStart();
+    void onInit(entt::registry& registry);
     void onUpdate(entt::registry& registry);
     void onLateUpdate();
     void onDestroy();
@@ -40,6 +40,7 @@ private:
     // inline static bool mIsInitialized = false;
 
     Input mInput;
+    Entity *mCamera = nullptr;
 
     std::unordered_map<std::string, ScriptData> mLoadedScripts;
 };

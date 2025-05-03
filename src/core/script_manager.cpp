@@ -60,7 +60,9 @@ void ScriptManager::initializeLuaState() {
         "x", &glm::vec3::x,
         "y", &glm::vec3::y,
         "z", &glm::vec3::z,
-        sol::meta_function::addition, [](const glm::vec3& a, const glm::vec3& b) { return a + b; }
+        sol::meta_function::addition, [](const glm::vec3& a, const glm::vec3& b) { return a + b; },
+        sol::meta_function::subtraction, [](const glm::vec3& a, const glm::vec3& b) { return a - b; },
+        sol::meta_function::multiplication, [](const glm::vec3& a, const float& b) { return a * b; }
     );
 
     mLua.new_usertype<glm::ivec2>(
@@ -70,13 +72,43 @@ void ScriptManager::initializeLuaState() {
         sol::meta_function::addition, [](const glm::ivec2& a, const glm::ivec2& b) { return a + b; }
     );
 
+    mLua.new_usertype<glm::quat>(
+        "Quat",
+        sol::constructors<
+            glm::quat()
+        >(),
+        "w", &glm::quat::w,        // Quaternion scalar (w)
+        "x", &glm::quat::x,        // Quaternion x component
+        "y", &glm::quat::y,        // Quaternion y component
+        "z", &glm::quat::z,         // Quaternion z component
+        "ToEulerAngles", [](const glm::quat& q) -> glm::vec3 {
+            // Convert quaternion to Euler angles (in radians)
+            return glm::eulerAngles(q);  // Returns a glm::vec3 representing pitch, yaw, roll
+        },
+        "FromEulerAngles", [](glm::quat& q, const glm::vec3& euler) -> void {
+            // Convert Euler angles (in radians) to quaternion
+            q = glm::quat(euler);
+        }
+    );
+
     mLua.new_usertype<Transform>(
-        "Transform", sol::constructors<Transform()>(),
+        "Transform", sol::constructors<Transform(), Transform(const Transform&)>(),
         "position", &Transform::position,
+        "rotation", &Transform::rotation,
         "forward", &Transform::forward,
         "right", &Transform::right,
         "Translate", &Transform::translate,
-        "Rotate", &Transform::rotate
+        "Rotate", &Transform::rotate,
+        "SetPosition", [](Transform& self, glm::vec3 position) -> void {
+            self.position = position;
+        },
+        "SetRotation", [](Transform& self, glm::quat rotation) -> void {
+            self.rotation = rotation;
+        },
+        "LookAt", [](Transform& self, glm::vec3 target) -> void {
+            glm::vec3 direction = glm::normalize(target - self.position);
+            self.rotation = glm::rotation(glm::vec3(0.f, 0.f, -1.f), direction);
+        }
     );
 
     // add tables
@@ -96,6 +128,12 @@ void ScriptManager::initializeLuaState() {
         "GetKey", [&](int scancode) -> bool {
             InputState state = mInput.keyStates.at(scancode);
             return (state == InputState::HELD || state == InputState::PRESSED);
+        }
+    );
+
+    mLua["Camera"] = mLua.create_table_with(
+        "GetTransform", [&]() -> Transform& {
+           return mCamera->getComponent<Transform>();
         }
     );
 
@@ -151,6 +189,7 @@ void ScriptManager::bindScript(const std::string& scriptName, Entity& entity) {
 
     scriptComponent.name = scriptName;
     scriptComponent.symbols = scriptData.symbols;
+    scriptComponent.initialized = false;
 
     // create a new environment
     sol::environment& env = scriptComponent.env;
@@ -168,15 +207,16 @@ void ScriptManager::bindScript(const std::string& scriptName, Entity& entity) {
     env.set_function("getTransform", &Entity::getComponent<Transform>, &entity);
 }
 
-void ScriptManager::update(float deltaTime, const Input& input) {
+void ScriptManager::update(float deltaTime, const Input& input, Entity *camera) {
     mLua["Time"]["deltaTime"] = deltaTime;
     mInput = input;
+    mCamera = camera;
 }
 
 void ScriptManager::onUpdate(entt::registry& registry) {
-    auto view = registry.view<Script>();
+    auto view = registry.view<Script, Metadata>();
 
-    for (auto [entity, script] : view.each()) {
+    for (auto [entity, script, metadata] : view.each()) {
         if (script.name == "") {
             continue;
         }
@@ -185,7 +225,30 @@ void ScriptManager::onUpdate(entt::registry& registry) {
 
         if (!result.valid()) {
             sol::error err = result;
-            fmt::println("function failed: {}", err.what());
+            fmt::println("onUpdate function failed {}: {}", metadata.uuid, err.what());
         }
+    }
+}
+
+void ScriptManager::onInit(entt::registry& registry) {
+    auto view = registry.view<Script, Metadata>();
+
+    for (auto [entity, script, metadata] : view.each()) {
+        if (script.name == "") {
+            continue;
+        }
+
+        if (script.initialized) {
+            continue;
+        }
+
+        sol::protected_function_result result = script.env["init"]();
+
+        if (!result.valid()) {
+            sol::error err = result;
+            fmt::println("onInit function failed {}: {}", metadata.uuid, err.what());
+        }
+
+        script.initialized = true;
     }
 }

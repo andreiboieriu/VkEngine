@@ -4,20 +4,20 @@
       "ChildrenUUIDs": [],
       "Components": {
         "GLTF": {
-          "Name": "fighter_spaceship.glb"
+          "Name": "CompareMetallic.glb"
         },
         "Metadata": {
-          "UUID": "fighter_spaceship2"
+          "UUID": "asteroid1"
         },
         "Script": {
-          "Name": "scripts/script.lua"
+          "Name": "scripts/rotate.lua"
         },
         "SphereCollider": {
           "Radius": 0.0
         },
         "Transform": {
           "Position": [
-            2.0,
+            6.0,
             0.0,
             -2.0
           ],
@@ -27,9 +27,44 @@
             0.0
           ],
           "Scale": [
-            1.0,
-            1.0,
-            1.0
+            10.0,
+            10.0,
+            10.0
+          ]
+        }
+      },
+      "ParentUUID": ""
+    },
+    {
+      "ChildrenUUIDs": [],
+      "Components": {
+        "GLTF": {
+          "Name": "CompareRoughness.glb"
+        },
+        "Metadata": {
+          "UUID": "asteroid0"
+        },
+        "Script": {
+          "Name": "scripts/rotate.lua"
+        },
+        "SphereCollider": {
+          "Radius": 0.0
+        },
+        "Transform": {
+          "Position": [
+            20.0,
+            0.0,
+            -20.0
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            10.0,
+            10.0,
+            10.0
           ]
         }
       },
@@ -45,7 +80,7 @@
           "UUID": "fighter_spaceship"
         },
         "Script": {
-          "Name": "scripts/script.lua"
+          "Name": "scripts/spaceship.lua"
         },
         "Transform": {
           "Position": [
@@ -59,9 +94,9 @@
             0.0
           ],
           "Scale": [
-            1.0,
-            1.0,
-            1.0
+            10.0,
+            10.0,
+            10.0
           ]
         }
       },
@@ -91,9 +126,9 @@
             0.0
           ],
           "Scale": [
-            1.0,
-            1.0,
-            1.0
+            10.0,
+            10.0,
+            10.0
           ]
         }
       },

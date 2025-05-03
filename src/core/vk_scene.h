@@ -66,7 +66,7 @@ private:
 
     std::vector<Entity*> mRootEntities; // has to be declared before entity map
     std::unordered_map<std::string, std::unique_ptr<Entity>> mEntities;
-    std::string mMainCameraHolder = "";
+    Entity *mCameraEntity = nullptr;
 
     uint64_t mNextEntityID = 1;
 

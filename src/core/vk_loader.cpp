@@ -43,8 +43,10 @@ VkSamplerMipmapMode extractMipmapMode(fastgltf::Filter filter) {
 }
 
 AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& image, VkFormat format, bool mipmapped) {
-    if (mImages.contains(image.name.c_str())) {
-        return mImages[image.name.c_str()];
+    std::string imageKey = std::to_string(&image - asset.images.data());
+
+    if (mImages.contains(imageKey)) {
+        return mImages[imageKey];
     }
 
     AllocatedImage newImage{};
@@ -116,7 +118,7 @@ AllocatedImage LoadedGLTF::loadImage(fastgltf::Asset& asset, fastgltf::Image& im
     if (newImage.image == VK_NULL_HANDLE) {
         return *mVkEngine.getAssetManager().getDefaultImage("error");
     } else {
-        mImages[image.name.c_str()] = newImage;
+        mImages[imageKey] = newImage;
 
         return newImage;
     }
@@ -217,7 +219,7 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         // default material textures
         materialResources.colorImage = *mVkEngine.getAssetManager().getDefaultImage("white");
         materialResources.colorSampler = *mVkEngine.getAssetManager().getSampler("linear");
-        materialResources.metalRoughImage = *mVkEngine.getAssetManager().getDefaultImage("black");
+        materialResources.metalRoughImage = *mVkEngine.getAssetManager().getDefaultImage("white");
         materialResources.metalRoughSampler = *mVkEngine.getAssetManager().getSampler("linear");
         materialResources.normalImage = *mVkEngine.getAssetManager().getDefaultImage("normal");
         materialResources.normalSampler = *mVkEngine.getAssetManager().getSampler("linear");
@@ -234,36 +236,51 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         // get textures from gltf file
         if (material.pbrData.baseColorTexture.has_value()) {
             size_t image = asset.textures[material.pbrData.baseColorTexture.value().textureIndex].imageIndex.value();
-            size_t sampler = asset.textures[material.pbrData.baseColorTexture.value().textureIndex].samplerIndex.value();
+            fmt::println("Base color index {}", image);
+
+            auto sampler = asset.textures[material.pbrData.baseColorTexture.value().textureIndex].samplerIndex;
+
+            if (sampler.has_value()) {
+                materialResources.colorSampler = samplers[sampler.value()];
+            }
 
             materialResources.colorImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_SRGB, true);
-            materialResources.colorSampler = samplers[sampler];
         }
 
         if (material.pbrData.metallicRoughnessTexture.has_value()) {
             size_t image = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].imageIndex.value();
-            size_t sampler = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].samplerIndex.value();
+            auto sampler = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].samplerIndex;
+            fmt::println("Metal Rough index {}", image);
+
+            if (sampler.has_value()) {
+                materialResources.metalRoughSampler = samplers[sampler.value()];
+            }
 
             materialResources.metalRoughImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_UNORM, true);
-            materialResources.metalRoughSampler = samplers[sampler];
         }
 
         if (material.normalTexture.has_value()) {
             size_t image = asset.textures[material.normalTexture.value().textureIndex].imageIndex.value();
-            size_t sampler = asset.textures[material.normalTexture.value().textureIndex].samplerIndex.value();
+            auto sampler = asset.textures[material.normalTexture.value().textureIndex].samplerIndex;
+
+            if (sampler.has_value()) {
+                materialResources.normalSampler = samplers[sampler.value()];
+            }
 
             materialResources.normalImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_UNORM, true);
-            materialResources.normalSampler = samplers[sampler];
 
             constants.normalScale = material.normalTexture.value().scale;
         }
 
         if (material.emissiveTexture.has_value()) {
             size_t image = asset.textures[material.emissiveTexture.value().textureIndex].imageIndex.value();
-            size_t sampler = asset.textures[material.emissiveTexture.value().textureIndex].samplerIndex.value();
+            auto sampler = asset.textures[material.emissiveTexture.value().textureIndex].samplerIndex;
+
+            if (sampler.has_value()) {
+                materialResources.emissiveSampler = samplers[sampler.value()];
+            }
 
             materialResources.emissiveImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_SRGB, true);
-            materialResources.emissiveSampler = samplers[sampler];
 
             constants.emissiveFactors.x = material.emissiveFactor[0];
             constants.emissiveFactors.y = material.emissiveFactor[1];
@@ -274,11 +291,13 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
 
         if (material.occlusionTexture.has_value()) {
             size_t image = asset.textures[material.occlusionTexture.value().textureIndex].imageIndex.value();
-            size_t sampler = asset.textures[material.occlusionTexture.value().textureIndex].samplerIndex.value();
+            auto sampler = asset.textures[material.occlusionTexture.value().textureIndex].samplerIndex;
+
+            if (sampler.has_value()) {
+                materialResources.occlusionSampler = samplers[sampler.value()];
+            }
 
             materialResources.occlusionImage = loadImage(asset, asset.images[image], VK_FORMAT_R8G8B8A8_UNORM, true);
-            materialResources.occlusionSampler = samplers[sampler];
-
             constants.occlusionStrength = material.occlusionTexture.value().strength;
         }
 

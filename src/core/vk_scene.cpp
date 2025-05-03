@@ -123,7 +123,12 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
 
         for (auto [entity, transform, camera, metadata] : view.each()) {
             if (camera.enabled) {
-                mMainCameraHolder = metadata.uuid;
+                fmt::println("Found camera: {}", metadata.uuid);
+                mCameraEntity = getEntity(metadata.uuid);
+
+                if (!mCameraEntity) {
+                    fmt::println("Camera is somehow null");
+                }
                 break;
             }
         }
@@ -201,11 +206,12 @@ void Scene3D::render(RenderContext& renderContext) {
 
 void Scene3D::update(float deltaTime, const Input& input) {
     // systems
-    mScriptManager->update(deltaTime, input);
+    mScriptManager->update(deltaTime, input, mCameraEntity);
 
     // mScriptManager->onDestroy();
     cleanupEntities();
 
+    mScriptManager->onInit(mRegistry);
     mScriptManager->onUpdate(mRegistry);
 
     propagateTransform();
@@ -213,9 +219,9 @@ void Scene3D::update(float deltaTime, const Input& input) {
     mSceneData.view = glm::mat4(1.f);
     mSceneData.projection = glm::mat4(1.f);
 
-    if (mEntities.contains(mMainCameraHolder)) {
-        Camera& camera = mEntities[mMainCameraHolder]->getComponent<Camera>();
-        Transform& cameraTransform = mEntities[mMainCameraHolder]->getComponent<Transform>();
+    if (mCameraEntity) {
+        Camera& camera = mCameraEntity->getComponent<Camera>();
+        Transform& cameraTransform = mCameraEntity->getComponent<Transform>();
 
         camera.aspectRatio = mVkEngine.getWindowAspectRatio();
         camera.updateMatrices(cameraTransform);
@@ -271,8 +277,8 @@ void Scene3D::drawGui() {
         // camera
         // mCamera.drawGui();
         if (ImGui::TreeNode("Camera")) {
-            ImGui::InputFloat3("position", (float*)&mEntities[mMainCameraHolder]->getComponent<Transform>().position);
-            ImGui::InputFloat3("rotation", (float*)&mEntities[mMainCameraHolder]->getComponent<Transform>().rotation);
+            ImGui::InputFloat3("position", (float*)&mCameraEntity->getComponent<Transform>().position);
+            ImGui::InputFloat3("rotation", (float*)&mCameraEntity->getComponent<Transform>().rotation);
 
             ImGui::TreePop();
         }

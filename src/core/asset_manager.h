@@ -4,6 +4,8 @@
 #include <vk_loader.h>
 #include <memory.h>
 
+class VulkanEngine;
+
 class AssetManager {
 
 public:
@@ -69,6 +71,7 @@ private:
     void renderToCubemap(AllocatedImage& src, AllocatedImage& dest, Pipeline *pipeline, VkExtent2D destSize, uint32_t mipLevel = 0, bool flipViewport = false);
     void freeResources();
 
+    void saveSkyboxToFile(const SkyboxAsset& skybox);
     VulkanEngine& mVkEngine;
 
     const std::string GLTFS_PATH = "assets/gltfs/";

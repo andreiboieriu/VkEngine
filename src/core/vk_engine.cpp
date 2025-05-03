@@ -131,6 +131,10 @@ void VulkanEngine::destroyBuffer(const AllocatedBuffer& buffer) {
     vmaDestroyBuffer(mAllocator, buffer.buffer, buffer.allocation);
 }
 
+void *VulkanEngine::getDataFromBuffer(const AllocatedBuffer& buffer) {
+    return buffer.allocation->GetMappedData();
+}
+
 GPUMeshBuffers VulkanEngine::uploadMesh(std::span<uint32_t> indices, std::span<Vertex> vertices) {
     const size_t vertexBufferSize = vertices.size() * sizeof(Vertex);
     const size_t indexBufferSize = indices.size() * sizeof(uint32_t);
@@ -968,66 +972,6 @@ AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkIma
     return newImage;
 }
 
-uint32_t getPixelSize(VkFormat format) {
-    switch (format) {
-        // 8-bit formats
-        case VK_FORMAT_R8_UNORM:
-        case VK_FORMAT_R8_SNORM:
-        case VK_FORMAT_R8_UINT:
-        case VK_FORMAT_R8_SINT:
-            return 1;
-
-        // 16-bit formats
-        case VK_FORMAT_R8G8_UNORM:
-        case VK_FORMAT_R8G8_SNORM:
-        case VK_FORMAT_R8G8_UINT:
-        case VK_FORMAT_R8G8_SINT:
-        case VK_FORMAT_R16_UNORM:
-        case VK_FORMAT_R16_SNORM:
-        case VK_FORMAT_R16_UINT:
-        case VK_FORMAT_R16_SINT:
-        case VK_FORMAT_R16_SFLOAT:
-            return 2;
-
-        // 24/32-bit formats
-        case VK_FORMAT_R8G8B8_UNORM:
-        case VK_FORMAT_R8G8B8_SNORM:
-        case VK_FORMAT_R8G8B8_UINT:
-        case VK_FORMAT_R8G8B8_SINT:
-            return 3;
-
-        case VK_FORMAT_R32_UINT:
-        case VK_FORMAT_R32_SINT:
-        case VK_FORMAT_R32_SFLOAT:
-        case VK_FORMAT_B8G8R8A8_UNORM:
-        case VK_FORMAT_R8G8B8A8_UNORM:
-        case VK_FORMAT_R8G8B8A8_SRGB:
-        case VK_FORMAT_R16G16_UNORM:
-        case VK_FORMAT_R16G16_SFLOAT:
-            return 4;
-
-        // 8-byte formats
-        case VK_FORMAT_R16G16B16A16_UNORM:
-        case VK_FORMAT_R16G16B16A16_SFLOAT:
-        case VK_FORMAT_R32G32_UINT:
-        case VK_FORMAT_R32G32_SFLOAT:
-            return 8;
-
-        // 12-byte formats
-        case VK_FORMAT_R32G32B32_SFLOAT:
-        case VK_FORMAT_R32G32B32_UINT:
-            return 12;
-
-        // 16-byte formats
-        case VK_FORMAT_R32G32B32A32_SFLOAT:
-        case VK_FORMAT_R32G32B32A32_UINT:
-            return 16;
-
-        default:
-            return 0;
-    }
-}
-
 AllocatedImage VulkanEngine::createCubemap(
     VkExtent2D size,
     VkFormat format,
@@ -1085,7 +1029,7 @@ AllocatedImage VulkanEngine::createCubemap(
     }
 
     // upload color data to cubemap
-    uint32_t pixelSize = getPixelSize(format);
+    uint32_t pixelSize = vkutil::getPixelSize(format);
 
     if (!pixelSize) {
         fmt::println("Error: attempting to create image with unsupported format {}", string_VkFormat(format));
@@ -1129,7 +1073,7 @@ AllocatedImage VulkanEngine::createCubemap(
 
 // only for color images
 AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {
-    uint32_t pixelSize = getPixelSize(format);
+    uint32_t pixelSize = vkutil::getPixelSize(format);
 
     if (!pixelSize) {
         fmt::println("Error: attempting to create image with unsupported format {}", string_VkFormat(format));

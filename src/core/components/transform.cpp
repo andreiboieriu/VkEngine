@@ -12,8 +12,8 @@ void Transform::update(glm::mat4 parentMatrix) {
 
     globalMatrix = parentMatrix * localMatrix;
 
-    forward = glm::normalize(glm::rotate(glm::normalize(rotation), glm::vec3(0.f, 0.f, 1.f)));
-    right = glm::normalize(glm::rotate(glm::normalize(rotation), glm::vec3(1.f, 0.f, 0.f)));
+    forward = glm::normalize(glm::rotate(rotation, glm::vec3(0.f, 0.f, 1.f)));
+    right = glm::normalize(glm::rotate(rotation, glm::vec3(1.f, 0.f, 0.f)));
 }
 
 void Transform::translate(glm::vec3 direction, float distance) {
@@ -22,6 +22,14 @@ void Transform::translate(glm::vec3 direction, float distance) {
 
 void Transform::rotate(glm::vec3 axis, float degrees) {
     rotation *= glm::angleAxis(glm::radians(degrees), axis);
+    rotation = glm::normalize(rotation);
+
+    forward = glm::normalize(glm::rotate(rotation, glm::vec3(0.f, 0.f, 1.f)));
+    right = glm::normalize(glm::rotate(rotation, glm::vec3(1.f, 0.f, 0.f)));
+
+    // Recalculate the up vector based on forward and right vectors
+    glm::vec3 up = glm::normalize(glm::cross(right, forward));  // Ensure 'up' is perpendicular to both
+    right = glm::normalize(glm::cross(up, forward));  // Recalculate right to stay orthogonal
 }
 
 Transform::Transform() {}

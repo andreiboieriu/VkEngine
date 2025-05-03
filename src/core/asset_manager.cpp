@@ -1,5 +1,8 @@
 #include "asset_manager.h"
 #include "stb_image.h"
+
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "stb_image_write.h"
 #include "vk_engine.h"
 #include "vk_loader.h"
 #include "vk_images.h"
@@ -8,6 +11,7 @@
 #include "glm/ext/matrix_clip_space.hpp"
 #include "glm/ext/matrix_transform.hpp"
 #include "glm/trigonometric.hpp"
+#include <glm/gtc/packing.hpp>
 
 AssetManager::AssetManager(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
     loadDefaultSamplers();
@@ -124,6 +128,7 @@ void AssetManager::renderToCubemap(
 
         VkImageViewCreateInfo viewInfo = vkinit::imageview_create_info(VK_FORMAT_R16G16B16A16_SFLOAT, dest.image, VK_IMAGE_ASPECT_COLOR_BIT);
         viewInfo.subresourceRange.baseArrayLayer = i;
+        viewInfo.subresourceRange.layerCount = 1;
         viewInfo.subresourceRange.baseMipLevel = mipLevel;
         viewInfo.subresourceRange.levelCount = 1;
 
@@ -187,6 +192,220 @@ void AssetManager::renderToCubemap(
     });
 }
 
+void saveImageToFile() {
+
+}
+
+void AssetManager::saveSkyboxToFile(const SkyboxAsset& skybox) {
+    {
+        auto& image = skybox.brdfLut;
+
+        uint32_t size = vkutil::getPixelSize(image.imageFormat) * image.imageExtent.width * image.imageExtent.height;
+        AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+        }, true);
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            VkBufferImageCopy copyRegion = {};
+            copyRegion.bufferOffset = 0;
+            copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+            copyRegion.imageSubresource.mipLevel = 0;
+            copyRegion.imageSubresource.baseArrayLayer = 0;
+            copyRegion.imageSubresource.layerCount = 1;
+            copyRegion.imageExtent.width = image.imageExtent.width;
+            copyRegion.imageExtent.height = image.imageExtent.height;
+            copyRegion.imageExtent.depth = 1;
+            vkCmdCopyImageToBuffer(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+        }, true);
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }, true);
+
+        void* data = mVkEngine.getDataFromBuffer(staging);
+
+        uint32_t byteCount = image.imageExtent.width * image.imageExtent.height * 4;
+        std::vector<uint8_t> dataVec(byteCount, 0);
+
+        for (uint32_t i = 0; i < byteCount; i ++) {
+            dataVec[i] = glm::clamp(glm::unpackHalf1x16(((uint16_t*)data)[i]), 0.f, 1.f) * 255;
+        }
+
+        stbi_write_png(
+            "test_files/brdflut.png",
+            image.imageExtent.width,
+            image.imageExtent.height,
+            4,
+            dataVec.data(),
+            image.imageExtent.width * 4
+        );
+
+        mVkEngine.destroyBuffer(staging);
+    }
+
+    {
+        auto& image = skybox.irrMap;
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+        }, true);
+
+        for (int i = 0; i < 6; i++) {
+            uint32_t size = vkutil::getPixelSize(image.imageFormat) * image.imageExtent.width * image.imageExtent.height;
+            AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+            mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+                VkBufferImageCopy copyRegion = {};
+                copyRegion.bufferOffset = 0;
+                copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+                copyRegion.imageSubresource.mipLevel = 0;
+                copyRegion.imageSubresource.baseArrayLayer = i;
+                copyRegion.imageSubresource.layerCount = 1;
+                copyRegion.imageExtent.width = image.imageExtent.width;
+                copyRegion.imageExtent.height = image.imageExtent.height;
+                copyRegion.imageExtent.depth = 1;
+                vkCmdCopyImageToBuffer(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+            }, true);
+
+            void* data = mVkEngine.getDataFromBuffer(staging);
+
+            uint32_t byteCount = image.imageExtent.width * image.imageExtent.height * 4;
+            std::vector<uint8_t> dataVec(byteCount, 0);
+
+            for (uint32_t i = 0; i < byteCount; i ++) {
+                dataVec[i] = glm::clamp(glm::unpackHalf1x16(((uint16_t*)data)[i]), 0.f, 1.f) * 255;
+            }
+
+            stbi_write_png(
+                ("test_files/irr_" + std::to_string(i) + ".png").c_str(),
+                image.imageExtent.width,
+                image.imageExtent.height,
+                4,
+                dataVec.data(),
+                image.imageExtent.width * 4
+            );
+
+            mVkEngine.destroyBuffer(staging);
+        }
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }, true);
+    }
+
+    {
+        auto& image = skybox.prefilteredEnvMap;
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+        }, true);
+
+        for (uint32_t mip = 0; mip < 5; mip++) {
+            for (int i = 0; i < 6; i++) {
+                uint32_t width = image.imageExtent.width >> mip;
+                uint32_t height = image.imageExtent.height >> mip;
+
+                uint32_t size = vkutil::getPixelSize(image.imageFormat) * width * height;
+                AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+                mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+                    VkBufferImageCopy copyRegion = {};
+                    copyRegion.bufferOffset = 0;
+                    copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+                    copyRegion.imageSubresource.mipLevel = mip;
+                    copyRegion.imageSubresource.baseArrayLayer = i;
+                    copyRegion.imageSubresource.layerCount = 1;
+                    copyRegion.imageExtent.width = width;
+                    copyRegion.imageExtent.height = height;
+                    copyRegion.imageExtent.depth = 1;
+                    vkCmdCopyImageToBuffer(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+                }, true);
+
+                void* data = mVkEngine.getDataFromBuffer(staging);
+
+                uint32_t byteCount = width * height * 4;
+                std::vector<uint8_t> dataVec(byteCount, 0);
+
+                for (uint32_t i = 0; i < byteCount; i ++) {
+                    dataVec[i] = glm::clamp(glm::unpackHalf1x16(((uint16_t*)data)[i]), 0.f, 1.f) * 255;
+                }
+
+                stbi_write_png(
+                    ("test_files/prefiltered_" + std::to_string(i) + "mip_" + std::to_string(mip) + ".png").c_str(),
+                    width,
+                    height,
+                    4,
+                    dataVec.data(),
+                    width * 4
+                );
+
+                mVkEngine.destroyBuffer(staging);
+            }
+        }
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }, true);
+    }
+
+    {
+        auto& image = skybox.envMap;
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+        }, true);
+
+        for (uint32_t mip = 0; mip < skybox.envMap.mipLevels; mip++) {
+            for (int i = 0; i < 6; i++) {
+                uint32_t width = image.imageExtent.width >> mip;
+                uint32_t height = image.imageExtent.height >> mip;
+
+                uint32_t size = vkutil::getPixelSize(image.imageFormat) * width * height;
+                AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+                mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+                    VkBufferImageCopy copyRegion = {};
+                    copyRegion.bufferOffset = 0;
+                    copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+                    copyRegion.imageSubresource.mipLevel = mip;
+                    copyRegion.imageSubresource.baseArrayLayer = i;
+                    copyRegion.imageSubresource.layerCount = 1;
+                    copyRegion.imageExtent.width = width;
+                    copyRegion.imageExtent.height = height;
+                    copyRegion.imageExtent.depth = 1;
+                    vkCmdCopyImageToBuffer(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+                }, true);
+
+                void* data = mVkEngine.getDataFromBuffer(staging);
+
+                uint32_t byteCount = width * height * 4;
+                std::vector<uint8_t> dataVec(byteCount, 0);
+
+                for (uint32_t i = 0; i < byteCount; i ++) {
+                    dataVec[i] = glm::clamp(glm::unpackHalf1x16(((uint16_t*)data)[i]), 0.f, 1.f) * 255;
+                }
+
+                stbi_write_png(
+                    ("test_files/environment_" + std::to_string(i) + "mip_" + std::to_string(mip) + ".png").c_str(),
+                    width,
+                    height,
+                    4,
+                    dataVec.data(),
+                    width * 4
+                );
+
+                mVkEngine.destroyBuffer(staging);
+            }
+        }
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }, true);
+    }
+}
+
 void AssetManager::loadSkybox(const std::string& name) {
     if (mSkyboxes.contains(name)) {
         return;
@@ -228,23 +447,27 @@ void AssetManager::loadSkybox(const std::string& name) {
     skybox.envMap = mVkEngine.createCubemap(
         SkyboxAsset::ENV_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
-        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT
-    );
-
-    renderToCubemap(
-        skybox.hdrImage,
-        skybox.envMap,
-        mVkEngine.getPipelineResourceManager().getPipeline(PipelineResourceManager::PipelineType::EQUI_TO_CUBE),
-        SkyboxAsset::ENV_MAP_SIZE,
-        0,
+        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT,
+        std::nullopt,
         true
     );
+
+    for (int i = 0; i < skybox.envMap.mipLevels; i++) {
+        renderToCubemap(
+            skybox.hdrImage,
+            skybox.envMap,
+            mVkEngine.getPipelineResourceManager().getPipeline(PipelineResourceManager::PipelineType::EQUI_TO_CUBE),
+            SkyboxAsset::ENV_MAP_SIZE,
+            i,
+            true
+        );
+    }
 
     // create irradiance cube map
     skybox.irrMap = mVkEngine.createCubemap(
         SkyboxAsset::IRR_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
-        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT
+        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT
     );
 
     renderToCubemap(
@@ -258,12 +481,12 @@ void AssetManager::loadSkybox(const std::string& name) {
     skybox.prefilteredEnvMap = mVkEngine.createCubemap(
         SkyboxAsset::PREFILTERED_ENV_MAP_SIZE,
         VK_FORMAT_R16G16B16A16_SFLOAT,
-        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT,
+        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT,
         std::nullopt,
         true
     );
 
-    for (uint32_t mip = 0; mip < skybox.prefilteredEnvMap.mipLevels; mip++) {
+    for (uint32_t mip = 0; mip < 5; mip++) {
         renderToCubemap(
             skybox.envMap,
             skybox.prefilteredEnvMap,
@@ -277,6 +500,8 @@ void AssetManager::loadSkybox(const std::string& name) {
     skybox.brdfLut = mDefaultImages["brdflut"];
 
     mSkyboxes[name] = skybox;
+
+    saveSkyboxToFile(skybox);
 }
 
 MeshAsset createQuadMesh(VulkanEngine& engine) {
@@ -340,7 +565,7 @@ AllocatedImage createBrdfLut(VulkanEngine& vkEngine, VkSampler linear) {
     brdfLut = vkEngine.createImage(
         VkExtent3D{SkyboxAsset::BRDF_LUT_SIZE.width, SkyboxAsset::BRDF_LUT_SIZE.height, 1},
         VK_FORMAT_R16G16B16A16_SFLOAT,
-        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT,
+        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT,
         false
     );
 
@@ -433,10 +658,17 @@ void AssetManager::loadDefaultSamplers() {
 	sampl.minFilter = VK_FILTER_NEAREST;
     sampl.anisotropyEnable = VK_TRUE;
     sampl.maxAnisotropy = mVkEngine.getMaxSamplerAnisotropy();
-    sampl.addressModeU = VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_BORDER;
-    sampl.addressModeV = VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_BORDER;
+    sampl.addressModeU = VK_SAMPLER_ADDRESS_MODE_REPEAT;
+    sampl.addressModeV = VK_SAMPLER_ADDRESS_MODE_REPEAT;
+    sampl.addressModeW = VK_SAMPLER_ADDRESS_MODE_REPEAT;
     sampl.borderColor = VK_BORDER_COLOR_FLOAT_TRANSPARENT_BLACK;
-    sampl.mipmapMode = VK_SAMPLER_MIPMAP_MODE_NEAREST;
+    sampl.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
+    sampl.unnormalizedCoordinates = VK_FALSE;
+
+    sampl.minLod = 0.0f;
+    sampl.maxLod = VK_LOD_CLAMP_NONE;
+    sampl.mipLodBias = 0.0f;
+
 
     {
         VkSampler nearest;

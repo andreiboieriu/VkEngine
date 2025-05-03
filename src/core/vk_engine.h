@@ -111,6 +111,7 @@ public:
 
 	AllocatedBuffer createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage);
 	void destroyBuffer(const AllocatedBuffer& buffer);
+	void *getDataFromBuffer(const AllocatedBuffer& buffer);
 
 	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
 	AllocatedImage createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);

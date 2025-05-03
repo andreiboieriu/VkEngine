@@ -118,9 +118,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui.cpp.o: /home/unclegoga/Development/
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
@@ -380,9 +378,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.o: /home/unclegoga/Develop
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
@@ -534,9 +530,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o: /home/unclegoga/Develop
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
@@ -775,7 +769,6 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_vulkan.cpp.o: /home/unclegoga/
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -908,9 +901,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o: /home/unclegoga/Devel
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
@@ -1159,9 +1150,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
@@ -1382,7 +1371,11 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 
 /usr/lib/llvm-18/lib/clang/18/include/sm3intrin.h:
 
-/usr/lib/llvm-18/lib/clang/18/include/shaintrin.h:
+/home/unclegoga/Development/VkEngine/third_party/imgui/imgui_draw.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -1390,23 +1383,15 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/c++/14/bits/requires_hosted.h:
+/usr/include/signal.h:
 
-/usr/include/string.h:
+/usr/include/strings.h:
+
+/usr/include/c++/14/bits/requires_hosted.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/strings.h:
-
-/usr/include/signal.h:
-
-/home/unclegoga/Development/VkEngine/third_party/imgui/imgui_draw.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
@@ -1470,8 +1455,6 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 
 /usr/include/c++/14/bits/concept_check.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/c++/14/bits/cpp_type_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
@@ -1506,6 +1489,8 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 
 /usr/lib/llvm-18/lib/clang/18/include/avx512vlvp2intersectintrin.h:
 
+/usr/include/string.h:
+
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/linux/limits.h:
@@ -1519,6 +1504,12 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 /usr/lib/llvm-18/lib/clang/18/include/avx512vp2intersectintrin.h:
 
 /usr/lib/llvm-18/lib/clang/18/include/float.h:
+
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/c++/14/bits/ptr_traits.h:
 
 /usr/include/linux/close_range.h:
 
@@ -1678,12 +1669,6 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 
 /usr/include/c++/14/tr1/hypergeometric.tcc:
 
-/usr/include/c++/14/bits/ptr_traits.h:
-
-/usr/include/math.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
 /usr/lib/llvm-18/lib/clang/18/include/smmintrin.h:
 
 /usr/include/alloca.h:
@@ -1750,8 +1735,6 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/unistd.h:
@@ -1792,10 +1775,6 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/usr/lib/llvm-18/lib/clang/18/include/sha512intrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
@@ -1811,6 +1790,8 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 /usr/lib/llvm-18/lib/clang/18/include/__stdarg___va_copy.h:
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/lib/llvm-18/lib/clang/18/include/shaintrin.h:
 
 /usr/lib/llvm-18/lib/clang/18/include/__stdarg___gnuc_va_list.h:
 
@@ -1939,3 +1920,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o: /home/unclegoga/Deve
 /usr/lib/llvm-18/lib/clang/18/include/serializeintrin.h:
 
 /usr/lib/llvm-18/lib/clang/18/include/sgxintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/lib/llvm-18/lib/clang/18/include/sha512intrin.h:
