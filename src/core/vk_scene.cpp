@@ -28,15 +28,19 @@ void Scene3D::freeResources() {
 
 void Scene3D::init() {
     // create scene data buffer
-    mSceneDataBuffer = mVkEngine.createBuffer(
-        sizeof(SceneData),
-        VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
-        VMA_MEMORY_USAGE_CPU_TO_GPU
-    );
+    for (unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        mSceneDataUBOs[i].buffer = mVkEngine.createBuffer(
+            sizeof(SceneData),
+            VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT,
+            VMA_MEMORY_USAGE_CPU_TO_GPU
+        );
+    }
 
     // add scene data buffer to deletion queue
     mDeletionQueue.push([&]() {
-        mVkEngine.destroyBuffer(mSceneDataBuffer);
+        for (unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+            mVkEngine.destroyBuffer(mSceneDataUBOs[i].buffer);
+        }
     });
 
     mScriptManager = std::make_unique<ScriptManager>();
@@ -62,14 +66,16 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
     }
 
     // create scene data descriptor
-    mGlobalDescriptorOffset = mVkEngine.getPipelineResourceManager().createSceneDescriptor(
-        mSceneDataBuffer.deviceAddress,
-        sizeof(SceneData),
-        mSkybox ? mSkybox->irrMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
-        mSkybox ? mSkybox->prefilteredEnvMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
-        mSkybox ? mSkybox->brdfLut.imageView : mAssetManager.getDefaultImage("brdflut")->imageView,
-        *mAssetManager.getSampler("linear")
-    );
+    for (unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        mSceneDataUBOs[i].globalDescriptorOffset = mVkEngine.getPipelineResourceManager().createSceneDescriptor(
+            mSceneDataUBOs[i].buffer.deviceAddress,
+            sizeof(SceneData),
+            mSkybox ? mSkybox->irrMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
+            mSkybox ? mSkybox->prefilteredEnvMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
+            mSkybox ? mSkybox->brdfLut.imageView : mAssetManager.getDefaultImage("brdflut")->imageView,
+            *mAssetManager.getSampler("linear")
+        );
+    }
 
     // load entities
     for (auto& entityJson : sceneJson["Entities"]) {
@@ -207,7 +213,7 @@ void Scene3D::render(RenderContext& renderContext) {
     renderContext.skybox = mSkybox;
 }
 
-void Scene3D::update(float deltaTime, const Input& input) {
+void Scene3D::update(float deltaTime, const Input& input, int frameNumber) {
     // systems
     mScriptManager->update(deltaTime, input, mCameraEntity);
 
@@ -242,7 +248,7 @@ void Scene3D::update(float deltaTime, const Input& input) {
     mSceneData.sunlightDirection = glm::vec4(.2f, 1.0f, .5f, 1.f);
 
 
-    *(SceneData*)mSceneDataBuffer.allocInfo.pMappedData = mSceneData;
+    *(SceneData*)mSceneDataUBOs[frameNumber].buffer.allocInfo.pMappedData = mSceneData;
 }
 
 Entity* Scene3D::createEntity(const nlohmann::json& metaJson) {
@@ -319,10 +325,10 @@ void Scene3D::drawGui() {
     ImGui::End();
 }
 
-void Scene3D::setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout) {
+void Scene3D::setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout, int frameNumber) {
     uint32_t bufferIndexUbo = 0;
 
-    vkCmdSetDescriptorBufferOffsetsEXT(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1, &bufferIndexUbo, &mGlobalDescriptorOffset);
+    vkCmdSetDescriptorBufferOffsetsEXT(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1, &bufferIndexUbo, &mSceneDataUBOs[frameNumber].globalDescriptorOffset);
 }
 
 nlohmann::json Scene3D::toJson() {

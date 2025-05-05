@@ -9,6 +9,7 @@
 #include "vk_window.h"
 #include "script_manager.h"
 #include "asset_manager.h"
+#include "vk_engine.h"
 
 // forward reference
 class VulkanEngine;
@@ -20,11 +21,11 @@ public:
     Scene3D(const std::filesystem::path& path, VulkanEngine& VkEngine);
     ~Scene3D();
 
-    void update(float deltaTime, const Input& input);
+    void update(float deltaTime, const Input& input, int frameNumber);
     void render(RenderContext& renderContext);
     void drawGui();
 
-    void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
+    void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout, int frameNumber);
 
     const glm::mat4 getViewProj();
     void saveToFile();
@@ -52,9 +53,12 @@ private:
 
     DeletionQueue mDeletionQueue;
 
-    DescriptorData mSceneDataDescriptor;
-    AllocatedBuffer mSceneDataBuffer;
-    VkDeviceSize mGlobalDescriptorOffset;
+    struct SceneDataUBO {
+        AllocatedBuffer buffer;
+        VkDeviceSize globalDescriptorOffset;
+    };
+
+    std::array<SceneDataUBO, MAX_FRAMES_IN_FLIGHT> mSceneDataUBOs;
 
     SceneData mSceneData;
 

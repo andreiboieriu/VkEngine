@@ -3,6 +3,7 @@
 #include "vk_initializers.h"
 #include "vk_types.h"
 #include "vk_images.h"
+#include "vk_scene.h"
 
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
@@ -101,6 +102,7 @@ void GameApp::draw() {
 
     // increment frame number
     mFrameNumber++;
+    mFrameNumber %= MAX_FRAMES_IN_FLIGHT;
 
     // get end time
     auto end = std::chrono::system_clock::now();
@@ -112,7 +114,7 @@ void GameApp::update() {
     // get start time
     auto start = std::chrono::system_clock::now();
 
-    mScene->update(mDeltaTime, mWindow->getInput());
+    mScene->update(mDeltaTime, mWindow->getInput(), mFrameNumber);
     mScene->render(mRenderContext);
 
     // get end time

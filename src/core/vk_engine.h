@@ -2,7 +2,6 @@
 
 #include "compute_effects_manager.h"
 #include "pipeline_resource_manager.h"
-#include "vk_scene.h"
 #include "vk_types.h"
 #include "deletion_queue.h"
 #include "vk_descriptors.h"
@@ -17,6 +16,8 @@
 #include <thread>
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
+
+class Scene3D;
 
 class VulkanEngine {
 public:

@@ -36,6 +36,7 @@
 #include "stb_image.h"
 #include <chrono>
 #include <thread>
+#include "vk_scene.h"
 
 void VulkanEngine::parseCliArgs(const std::vector<std::string>& cliArgs) {
     mUseValidationLayers = false;
@@ -835,7 +836,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
 
                 vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->pipeline);
 
-                mScene->setGlobalDescriptorOffset(commandBuffer, object.material->pipeline->layout);
+                mScene->setGlobalDescriptorOffset(commandBuffer, object.material->pipeline->layout, mFrameNumber);
             }
 
             vkCmdSetDescriptorBufferOffsetsEXT(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, 1, &bufferIndex, &object.material->descriptorOffset);
