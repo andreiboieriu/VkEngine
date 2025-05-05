@@ -501,7 +501,7 @@ void AssetManager::loadSkybox(const std::string& name) {
 
     mSkyboxes[name] = skybox;
 
-    saveSkyboxToFile(skybox);
+    // saveSkyboxToFile(skybox);
 }
 
 MeshAsset createQuadMesh(VulkanEngine& engine) {

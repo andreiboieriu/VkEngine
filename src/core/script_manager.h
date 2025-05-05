@@ -23,7 +23,7 @@ public:
 
     void onInit(entt::registry& registry);
     void onUpdate(entt::registry& registry);
-    void onLateUpdate();
+    void onLateUpdate(entt::registry& registry);
     void onDestroy();
 
 private:

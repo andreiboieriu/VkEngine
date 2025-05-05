@@ -1,5 +1,5 @@
 {
-  "Skybox": "jupiter.hdr",
+  "Skybox": "sky.hdr",
   "Entities": [
     {
       "ChildrenUUIDs": [],
@@ -45,10 +45,10 @@
       "ChildrenUUIDs": [],
       "Components": {
         "GLTF": {
-          "Name": "CompareRoughness.glb"
+          "Name": "asteroid1.glb"
         },
         "Transform": {
-          "Position": [20.0, 0.0, -20.0],
+          "Position": [15.0, 0.0, -20.0],
           "Rotation": [0.0, 0.0, 0.0],
           "Scale": [10.0, 10.0, 10.0]
         },
@@ -68,7 +68,7 @@
       "ChildrenUUIDs": [],
       "Components": {
         "GLTF": {
-          "Name": "CompareMetallic.glb"
+          "Name": "asteroid2.glb"
         },
         "Transform": {
           "Position": [6.0, 0.0, -2.0],

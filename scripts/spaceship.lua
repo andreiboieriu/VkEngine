@@ -10,7 +10,8 @@ end
 ---@return nil
 function update()
     transform = getTransform()
-    cameraTransform = Camera.GetTransform()
+
+    transform:Translate(transform.right, Speed * Time.deltaTime)
 
     if (Input.GetKey(KeyCode.W)) then
         transform:Translate(transform.forward, Speed * Time.deltaTime)
@@ -29,7 +30,19 @@ function update()
     elseif (Input.GetKey(KeyCode.C)) then
         transform:Rotate(Vec3.new(0, 1, 0), RotationSpeed * -Time.deltaTime)
     end
+    -- print("Position in update: ", transform.position.x, transform.position.y, transform.position.z)
+end
 
-    cameraTransform:SetPosition(transform.position - transform.forward * 10.0 + Vec3.new(0, 4, 0))
-    cameraTransform:LookAt(transform.position)
+---@return nil
+function late_update()
+    transform = getTransform()
+    -- print("Position in late update: ", transform.position.x, transform.position.y, transform.position.z)
+
+    cameraTransform = Camera.GetTransform()
+
+    cameraTransform:SetPosition(transform.position)
+    -- cameraTransform:LookAt(transform.position)
+
+    -- print("Camera position in late update: ", cameraTransform.position.x, cameraTransform.position.y,
+    -- cameraTransform.position.z)
 end

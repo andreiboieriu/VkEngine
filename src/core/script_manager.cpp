@@ -217,7 +217,7 @@ void ScriptManager::onUpdate(entt::registry& registry) {
     auto view = registry.view<Script, Metadata>();
 
     for (auto [entity, script, metadata] : view.each()) {
-        if (script.name == "") {
+        if (script.name == "" || !script.env["update"].valid()) {
             continue;
         }
 
@@ -234,11 +234,7 @@ void ScriptManager::onInit(entt::registry& registry) {
     auto view = registry.view<Script, Metadata>();
 
     for (auto [entity, script, metadata] : view.each()) {
-        if (script.name == "") {
-            continue;
-        }
-
-        if (script.initialized) {
+        if (script.name == "" || script.initialized || !script.env["init"].valid()) {
             continue;
         }
 
@@ -247,6 +243,25 @@ void ScriptManager::onInit(entt::registry& registry) {
         if (!result.valid()) {
             sol::error err = result;
             fmt::println("onInit function failed {}: {}", metadata.uuid, err.what());
+        }
+
+        script.initialized = true;
+    }
+}
+
+void ScriptManager::onLateUpdate(entt::registry& registry) {
+    auto view = registry.view<Script, Metadata>();
+
+    for (auto [entity, script, metadata] : view.each()) {
+        if (script.name == "" || !script.env["late_update"].valid()) {
+            continue;
+        }
+
+        sol::protected_function_result result = script.env["late_update"]();
+
+        if (!result.valid()) {
+            sol::error err = result;
+            fmt::println("onLateUpdate function failed {}: {}", metadata.uuid, err.what());
         }
 
         script.initialized = true;

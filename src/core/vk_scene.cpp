@@ -4,6 +4,9 @@
 #include "vk_engine.h"
 #include <imgui.h>
 
+#include <glm/gtx/matrix_decompose.hpp>
+
+
 #include <memory>
 
 Scene3D::Scene3D(const std::filesystem::path& path, VulkanEngine& vkEngine) : mVkEngine(vkEngine), mAssetManager(mVkEngine.getAssetManager()) {
@@ -213,7 +216,9 @@ void Scene3D::update(float deltaTime, const Input& input) {
 
     mScriptManager->onInit(mRegistry);
     mScriptManager->onUpdate(mRegistry);
+    propagateTransform();
 
+    mScriptManager->onLateUpdate(mRegistry);
     propagateTransform();
 
     mSceneData.view = glm::mat4(1.f);
@@ -234,7 +239,6 @@ void Scene3D::update(float deltaTime, const Input& input) {
     mSceneData.viewProjection = mSceneData.projection * mSceneData.view;
 
     mSceneData.ambientColor = glm::vec4(.1f);
-    // mSceneData.sunlightColor = glm::vec4(1.f, 1.f, 1.f, 1.0f);
     mSceneData.sunlightDirection = glm::vec4(.2f, 1.0f, .5f, 1.f);
 
 

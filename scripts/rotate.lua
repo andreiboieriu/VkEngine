@@ -1,5 +1,5 @@
 Speed = 0.7
-RotationSpeed = 0
+RotationSpeed = 45
 
 function init()
 end

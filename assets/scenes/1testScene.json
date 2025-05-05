@@ -4,7 +4,7 @@
       "ChildrenUUIDs": [],
       "Components": {
         "GLTF": {
-          "Name": "CompareMetallic.glb"
+          "Name": "asteroid2.glb"
         },
         "Metadata": {
           "UUID": "asteroid1"
@@ -39,7 +39,7 @@
       "ChildrenUUIDs": [],
       "Components": {
         "GLTF": {
-          "Name": "CompareRoughness.glb"
+          "Name": "asteroid1.glb"
         },
         "Metadata": {
           "UUID": "asteroid0"
@@ -52,7 +52,7 @@
         },
         "Transform": {
           "Position": [
-            20.0,
+            15.0,
             0.0,
             -20.0
           ],
@@ -135,5 +135,5 @@
       "ParentUUID": ""
     }
   ],
-  "Skybox": "jupiter.hdr"
+  "Skybox": "sky.hdr"
 }
