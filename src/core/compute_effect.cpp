@@ -9,6 +9,7 @@
 #include "vk_pipelines.h"
 #include "vk_initializers.h"
 #include <imgui.h>
+#include <nlohmann/json.hpp>
 
 struct SpirvFile {
     std::vector<uint32_t> code;
@@ -51,27 +52,20 @@ ComputeEffect::ComputeEffect(const std::string& name, VulkanEngine& vkEngine, bo
     load(name, isEffect);
 }
 
-ComputeEffect::ComputeEffect(const std::string& name, const std::vector<ComputeEffect::EditableSubpassInfo>& info, VulkanEngine& vkEngine, bool isEffect) : ComputeEffect(name, vkEngine, isEffect) {
-    setSubpassInfo(info);
-}
-
 ComputeEffect::~ComputeEffect() {
     freeResources();
-}
-
-void ComputeEffect::setSubpassInfo(const std::vector<ComputeEffect::EditableSubpassInfo>& info) {
-    for (int i = 0; i < mSubpasses.size(); i++) {
-        mSubpasses[i].editableInfo = info[i];
-    }
 }
 
 void ComputeEffect::load(const std::string& name, bool isEffect) {
     int currPass = 0;
 
+    // TODO: embed non postfx shaders into the binary
+    std::string basePath = isEffect ? "assets/compute_effects/" : "shaders/compute/";
+    basePath += name;
+
     while (true) {
         // check if pass exists
-        std::string path = isEffect ? "assets/compute_effects/" : "shaders/compute/";
-        path += name + "_pass" + std::to_string(currPass++) + ".comp.spv";
+        std::string path = basePath + "_pass" + std::to_string(currPass++) + ".comp.spv";
 
         if (!std::filesystem::exists(path)) {
             fmt::println("Compute effect {} not found", path);
@@ -81,6 +75,10 @@ void ComputeEffect::load(const std::string& name, bool isEffect) {
         // create new subpass
         addSubpass(path);
     };
+
+    if (isEffect) {
+        parseConfig(basePath + ".json");
+    }
 
     // create buffer image
     if (mUseBufferImage) {
@@ -100,6 +98,168 @@ void ComputeEffect::load(const std::string& name, bool isEffect) {
             VK_CHECK(vkCreateImageView(mVkEngine.getDevice(), &viewInfo, nullptr, &mBufferImageMipViews[i]));
         }
     }
+}
+
+void ComputeEffect::parseConfig(const std::filesystem::path& path) {
+    std::ifstream file(path);
+
+    if (!file.is_open()) {
+        fmt::print("Error opening config file: {}\n", path.string());
+        return;
+    }
+
+    nlohmann::json effectJson;
+    file >> effectJson;
+
+    if (!effectJson.contains("subpasses") || !effectJson["subpasses"].is_array()) {
+        fmt::println("Error: 'subpasses' is missing or not an array in the JSON.");
+        return;
+    }
+
+    for (const auto& subpassJson : effectJson["subpasses"]) {
+        if (!subpassJson.contains("index") || !subpassJson["index"].is_number_integer()) {
+            fmt::println("Error: Subpass index is missing or not an integer.");
+            return;
+        }
+
+        int index = subpassJson["index"];
+
+        if (index >= mSubpasses.size() || index < 0) {
+            fmt::println("Error: Subpass index is out of bounds");
+        }
+
+        auto& subpass = mSubpasses[index];
+
+        if (subpassJson.contains("inheritFrom")) {
+            int inheritFrom = subpassJson["inheritFrom"];
+
+            if (inheritFrom >= index) {
+                fmt::print("Error: inheritFrom value must be lower than the current index.");
+                return;
+            }
+
+            subpass.editableInfo = mSubpasses[inheritFrom].editableInfo;
+        }
+
+        if (subpassJson.contains("values")) {
+            for (const auto& [k, v] : subpassJson["values"].items()) {
+                int valueIndex = std::stoi(k);
+
+                // make sure to not overwrite other fields in push constants
+                if (valueIndex > 4 || valueIndex < 0) {
+                    fmt::println("Error: value entry is out of bounds");
+                }
+
+                static const std::set<std::string> possibleFields{
+                    "x", "y", "z", "w"
+                };
+
+                for (const auto& [field, fieldJson] : v.items()) {
+                    if (!possibleFields.contains(field)) {
+                        fmt::print("Error: illegal value field {}\n", field);
+                        return;
+                    }
+
+                    if (!fieldJson.contains("default")) {
+                        fmt::print("Error: field doesn't contain a default value\n");
+                        return;
+                    }
+
+                    if (!fieldJson["default"].is_number()) {
+                        fmt::print("Error: default value is not a number\n");
+                        return;
+                    }
+
+                    float value = fieldJson["default"];
+                    uint32_t offset = sizeof(glm::vec4) * valueIndex;
+
+                    if (field == "x") {
+                        subpass.editableInfo.pushConstants[valueIndex].x = value;
+                    } else if (field == "y") {
+                        subpass.editableInfo.pushConstants[valueIndex].y = value;
+                        offset += sizeof(float);
+                    } else if (field == "z") {
+                        subpass.editableInfo.pushConstants[valueIndex].z = value;
+                        offset += 2 * sizeof(float);
+                    } else if (field == "w") {
+                        subpass.editableInfo.pushConstants[valueIndex].w = value;
+                        offset += 3 * sizeof(float);
+                    }
+
+                    if (fieldJson.contains("name")) {
+                        std::string name = fieldJson["name"];
+
+                        // check if another field with the same offset exists, and delete it
+                        std::string foundKey = "";
+                        for (const auto& [fieldName, fieldOffset] : subpass.editableInfo.namedValues) {
+                            if (fieldOffset == offset) {
+                                foundKey = fieldName;
+                                break;
+                            }
+                        }
+
+                        if (foundKey != "") {
+                            subpass.editableInfo.namedValues.erase(foundKey);
+                        }
+
+                        subpass.editableInfo.namedValues[name] = offset;
+                    }
+                }
+            }
+        }
+
+        // Access "dispatch" and ensure it has the required fields
+        if (subpassJson.contains("dispatch")) {
+            if (subpassJson["dispatch"].contains("useScreenSize")) {
+                if (!subpassJson["dispatch"]["useScreenSize"].is_boolean()) {
+                    fmt::println("Error: useScreenSize field should be true/false");
+                    return;
+                }
+
+                subpass.editableInfo.dispatchSize.useScreenSize = subpassJson["dispatch"]["useScreenSize"];
+            }
+
+            if (subpassJson["dispatch"].contains("screenSizeMultiplier")) {
+                if (!subpassJson["dispatch"]["screenSizeMultiplier"].is_number()) {
+                    fmt::println("Error: useScreenSize field should be a number");
+                    return;
+                }
+
+                float multiplier = subpassJson["dispatch"]["screenSizeMultiplier"];
+
+                if (multiplier < 0.f || multiplier > 1.f) {
+                    fmt::println("Error: screenSizeMultiplier should be between 0 and 1");
+                    return;
+                }
+
+                subpass.editableInfo.dispatchSize.useScreenSize = multiplier;
+            }
+
+            if (subpassJson["dispatch"].contains("customSize")) {
+                const auto& customSizeJson = subpassJson["dispatch"]["customSize"];
+
+                if (!customSizeJson.contains("x") || !customSizeJson.contains("y")) {
+                    fmt::println("Error: custom size should have both x and y fields");
+                    return;
+                }
+
+                if (!customSizeJson["x"].is_number() || !customSizeJson["y"].is_number()) {
+                    fmt::println("Error: custom size values should be numbers");
+                    return;
+                }
+
+                float x = customSizeJson["x"];
+                float y = customSizeJson["y"];
+
+                subpass.editableInfo.dispatchSize.customSize = glm::vec2(x, y);
+            }
+        }
+
+        // Here you can print or process the subpass data as needed, or leave empty.
+        fmt::print("Subpass {} parsed successfully\n", index);
+    }
+
+    fmt::print("{} config parsed successfully\n", path.stem().string());
 }
 
 // TODO: see about generalizing descriptor writes

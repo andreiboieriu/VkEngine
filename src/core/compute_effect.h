@@ -34,6 +34,8 @@ public:
     struct EditableSubpassInfo {
         std::array<glm::vec4, 8> pushConstants;
         DispatchSize dispatchSize;
+
+        std::unordered_map<std::string, uint32_t> namedValues; // the value represents the offset from the start of push constants
     };
 
     struct Subpass {
@@ -49,7 +51,6 @@ public:
     };
 
     ComputeEffect(const std::string& name, VulkanEngine& vkEngine, bool isEffect = false);
-    ComputeEffect(const std::string& name, const std::vector<ComputeEffect::EditableSubpassInfo>& info, VulkanEngine& vkEngine, bool isEffect = false);
 
     ~ComputeEffect();
 
@@ -61,7 +62,7 @@ protected:
     void synchronizeWithCompute(VkCommandBuffer commandBuffer);
 
     void load(const std::string& name, bool isEffect);
-    void setSubpassInfo(const std::vector<ComputeEffect::EditableSubpassInfo>& info);
+    void parseConfig(const std::filesystem::path& path);
     void addSubpass(const std::filesystem::path& path);
 
     void freeResources();
