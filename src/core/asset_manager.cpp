@@ -569,7 +569,7 @@ AllocatedImage createBrdfLut(VulkanEngine& vkEngine, VkSampler linear) {
         false
     );
 
-    ComputeEffect computeEffect("skybox_brdf_lut", vkEngine);
+    ComputeEffect computeEffect("shaders/brdf_lut", vkEngine);
 
     vkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
         vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);

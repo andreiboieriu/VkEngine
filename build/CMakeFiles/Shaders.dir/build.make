@@ -66,20 +66,20 @@ include CMakeFiles/Shaders.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/Shaders.dir/progress.make
 
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass0.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass1.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass2.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass3.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass4.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass5.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass6.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass7.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass8.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass9.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass0.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass1.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping_pass0.comp.spv
-CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/compute/skybox_brdf_lut_pass0.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass0.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass1.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass2.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass3.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass4.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass5.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass6.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass7.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass8.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass9.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass0.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass1.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping/pass0.comp.spv
+CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/brdf_lut/pass0.comp.spv
 CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/mesh.frag.spv
 CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/mesh.vert.spv
 CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/mesh_pbr.frag.spv
@@ -92,61 +92,61 @@ CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/skybox_prefilte
 CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/sprite.frag.spv
 CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/sprite.vert.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass0.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass0.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass0.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass0.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass0.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass0.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass0.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass0.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass0.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass0.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass1.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass1.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass1.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass1.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass1.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass1.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass1.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass1.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass1.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass1.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass2.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass2.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass2.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass2.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass2.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass2.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass2.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass2.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass2.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass2.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass3.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass3.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass3.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass3.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass3.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass3.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass3.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass3.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass3.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass3.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass4.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass4.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass4.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass4.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass4.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass4.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass4.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass4.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass4.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass4.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass5.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass5.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass5.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass5.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass5.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass5.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass5.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass5.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass5.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass5.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass6.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass6.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass6.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass6.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass6.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass6.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass6.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass6.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass6.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass6.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass7.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass7.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass7.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass7.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass7.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass7.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass7.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass7.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass7.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass7.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass8.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass8.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass8.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass8.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass8.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass8.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass8.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass8.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass8.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass8.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass9.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass9.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass9.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass9.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass9.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass9.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass9.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass9.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass9.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass9.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass0.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass0.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass0.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass0.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass0.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass0.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass0.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass0.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass0.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass0.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass1.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass1.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass1.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass1.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass1.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass1.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass1.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass1.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass1.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass1.comp.spv
 
-/home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping_pass0.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping_pass0.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping_pass0.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping_pass0.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping_pass0.comp.spv
+/home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping/pass0.comp.spv: /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping/pass0.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping/pass0.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping/pass0.comp -o /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping/pass0.comp.spv
 
-/home/unclegoga/Development/VkEngine/shaders/compute/skybox_brdf_lut_pass0.comp.spv: /home/unclegoga/Development/VkEngine/shaders/compute/skybox_brdf_lut_pass0.comp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating /home/unclegoga/Development/VkEngine/shaders/compute/skybox_brdf_lut_pass0.comp.spv"
-	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/compute/skybox_brdf_lut_pass0.comp -o /home/unclegoga/Development/VkEngine/shaders/compute/skybox_brdf_lut_pass0.comp.spv
+/home/unclegoga/Development/VkEngine/shaders/brdf_lut/pass0.comp.spv: /home/unclegoga/Development/VkEngine/shaders/brdf_lut/pass0.comp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating /home/unclegoga/Development/VkEngine/shaders/brdf_lut/pass0.comp.spv"
+	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/brdf_lut/pass0.comp -o /home/unclegoga/Development/VkEngine/shaders/brdf_lut/pass0.comp.spv
 
 /home/unclegoga/Development/VkEngine/shaders/mesh.frag.spv: /home/unclegoga/Development/VkEngine/shaders/mesh.frag
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating /home/unclegoga/Development/VkEngine/shaders/mesh.frag.spv"
@@ -192,21 +192,21 @@ CMakeFiles/Shaders: /home/unclegoga/Development/VkEngine/shaders/sprite.vert.spv
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/unclegoga/Development/VkEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating /home/unclegoga/Development/VkEngine/shaders/sprite.vert.spv"
 	/usr/bin/glslangValidator -V /home/unclegoga/Development/VkEngine/shaders/sprite.vert -o /home/unclegoga/Development/VkEngine/shaders/sprite.vert.spv
 
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass0.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass1.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass2.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass3.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass4.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass5.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass6.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass7.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass8.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom_pass9.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass0.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa_pass1.comp.spv
-Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping_pass0.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass0.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass1.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass2.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass3.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass4.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass5.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass6.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass7.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass8.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass9.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass0.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass1.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping/pass0.comp.spv
 Shaders: CMakeFiles/Shaders
-Shaders: /home/unclegoga/Development/VkEngine/shaders/compute/skybox_brdf_lut_pass0.comp.spv
+Shaders: /home/unclegoga/Development/VkEngine/shaders/brdf_lut/pass0.comp.spv
 Shaders: /home/unclegoga/Development/VkEngine/shaders/mesh.frag.spv
 Shaders: /home/unclegoga/Development/VkEngine/shaders/mesh.vert.spv
 Shaders: /home/unclegoga/Development/VkEngine/shaders/mesh_pbr.frag.spv

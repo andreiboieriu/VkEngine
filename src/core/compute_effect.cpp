@@ -48,41 +48,37 @@ SpirvFile loadSpirvFile(std::string path) {
     return newSpirvFile;
 }
 
-ComputeEffect::ComputeEffect(const std::string& name, VulkanEngine& vkEngine, bool isEffect) : mName(name), mVkEngine(vkEngine) {
-    load(name, isEffect);
+ComputeEffect::ComputeEffect(const std::filesystem::path& path, VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
+    load(path);
 }
 
 ComputeEffect::~ComputeEffect() {
     freeResources();
 }
 
-void ComputeEffect::load(const std::string& name, bool isEffect) {
-    int currPass = 0;
+void ComputeEffect::load(const std::filesystem::path& path) {
+    mName = path.stem();
 
-    // TODO: embed non postfx shaders into the binary
-    std::string basePath = isEffect ? "assets/compute_effects/" : "shaders/compute/";
-    basePath += name;
+    int currPass = 0;
 
     while (true) {
         // check if pass exists
-        std::string path = basePath + "_pass" + std::to_string(currPass++) + ".comp.spv";
+        std::string subpassPath = path.string() + "/pass" + std::to_string(currPass++) + ".comp.spv";
 
-        if (!std::filesystem::exists(path)) {
-            fmt::println("Compute effect {} not found", path);
+        if (!std::filesystem::exists(subpassPath)) {
+            fmt::println("Compute effect {} not found", subpassPath);
             break;
         }
 
         // create new subpass
-        addSubpass(path);
+        addSubpass(subpassPath);
     };
 
-    if (isEffect) {
-        parseConfig(basePath + ".json");
-    }
+    parseConfig(path.string() + "/config.json");
 
     // create buffer image
     if (mUseBufferImage) {
-        mBufferImage = mVkEngine.createImage(VkExtent3D{2560 * 2, 1440 * 2, 1}, VK_FORMAT_R16G16B16A16_SFLOAT, VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, true);
+        mBufferImage = mVkEngine.createImage(VkExtent3D{3840, 2160, 1}, VK_FORMAT_R16G16B16A16_SFLOAT, VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, true);
 
         mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
             vkutil::transitionImage(commandBuffer, mBufferImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
@@ -101,6 +97,11 @@ void ComputeEffect::load(const std::string& name, bool isEffect) {
 }
 
 void ComputeEffect::parseConfig(const std::filesystem::path& path) {
+    if (!std::filesystem::exists(path)) {
+        fmt::println("Missing config file for compute effect {}", mName);
+        return;
+    }
+
     std::ifstream file(path);
 
     if (!file.is_open()) {
@@ -384,8 +385,8 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
         // write push constants (image and buffer extent)
         mSubpasses[i].editableInfo.pushConstants[4].x = extent.width;
         mSubpasses[i].editableInfo.pushConstants[4].y = extent.height;
-        mSubpasses[i].editableInfo.pushConstants[4].z = 2560 * 2;
-        mSubpasses[i].editableInfo.pushConstants[4].w = 1440 * 2;
+        mSubpasses[i].editableInfo.pushConstants[4].z = 3840;
+        mSubpasses[i].editableInfo.pushConstants[4].w = 2160;
 
         vkCmdPushConstants(commandBuffer, mSubpasses[i].pipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, mSubpasses[i].pushConstantsSize, mSubpasses[i].editableInfo.pushConstants.data());
 

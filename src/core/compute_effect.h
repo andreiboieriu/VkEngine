@@ -50,8 +50,7 @@ public:
         glm::vec3 localSize;
     };
 
-    ComputeEffect(const std::string& name, VulkanEngine& vkEngine, bool isEffect = false);
-
+    ComputeEffect(const std::filesystem::path& path, VulkanEngine& vkEngine);
     ~ComputeEffect();
 
     void execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize, VkSampler sampler);
@@ -61,7 +60,7 @@ protected:
     void createPipelineLayout();
     void synchronizeWithCompute(VkCommandBuffer commandBuffer);
 
-    void load(const std::string& name, bool isEffect);
+    void load(const std::filesystem::path& path);
     void parseConfig(const std::filesystem::path& path);
     void addSubpass(const std::filesystem::path& path);
 
