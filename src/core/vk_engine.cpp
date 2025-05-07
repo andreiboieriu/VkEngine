@@ -65,6 +65,7 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
     initVulkan();
     initVMA();
     initSwapchain();
+    initImages();
     initCommands();
     initSyncStructs();
     initImGui();
@@ -407,19 +408,9 @@ void VulkanEngine::initVMA() {
 
 void VulkanEngine::initSwapchain() {
     mWindow->createSwapchain(VK_PRESENT_MODE_IMMEDIATE_KHR);
+}
 
-    // set draw image size to window size
-    VkExtent3D drawImageExtent = {
-        2560 * 2,
-        1440 * 2,
-        1
-    };
-
-    mDrawImage.imageExtent = drawImageExtent;
-
-    // set draw image format
-    mDrawImage.imageFormat = VK_FORMAT_R16G16B16A16_SFLOAT;
-
+void VulkanEngine::initImages() {
     VkImageUsageFlags drawImageUsages{};
     drawImageUsages |= VK_IMAGE_USAGE_TRANSFER_SRC_BIT |
                        VK_IMAGE_USAGE_TRANSFER_DST_BIT |
@@ -427,47 +418,21 @@ void VulkanEngine::initSwapchain() {
                        VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT |
                        VK_IMAGE_USAGE_SAMPLED_BIT;
 
-    VkImageCreateInfo imageCreateInfo = vkinit::image_create_info(mDrawImage.imageFormat, drawImageUsages, drawImageExtent);
+    mDrawImage = createImage(
+        VkExtent3D{MAX_IMAGE_WIDTH, MAX_IMAGE_HEIGHT, 1},
+        VK_FORMAT_R16G16B16A16_SFLOAT,
+        drawImageUsages
+    );
 
-    // allocate draw image from gpu local memory
-    VmaAllocationCreateInfo imageAllocInfo{};
-    imageAllocInfo.usage = VMA_MEMORY_USAGE_GPU_ONLY;
-    imageAllocInfo.requiredFlags = VkMemoryPropertyFlags(VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+    mDepthImage = createImage(
+        VkExtent3D{MAX_IMAGE_WIDTH, MAX_IMAGE_HEIGHT, 1},
+        VK_FORMAT_D32_SFLOAT,
+        VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT
+    );
 
-    // create image
-    vmaCreateImage(mAllocator, &imageCreateInfo, &imageAllocInfo, &mDrawImage.image, &mDrawImage.allocation, nullptr);
-
-    // create image view
-    VkImageViewCreateInfo imageViewInfo = vkinit::imageview_create_info(mDrawImage.imageFormat, mDrawImage.image, VK_IMAGE_ASPECT_COLOR_BIT);
-
-    VK_CHECK(vkCreateImageView(mDevice, &imageViewInfo, nullptr, &mDrawImage.imageView));
-
-    // add image and image view to deletion queue
-    mMainDeletionQueue.push([=, this]() {
-        vkDestroyImageView(mDevice, mDrawImage.imageView, nullptr);
-        vmaDestroyImage(mAllocator, mDrawImage.image, mDrawImage.allocation);
-    });
-
-    // initialize depth image
-    mDepthImage.imageFormat = VK_FORMAT_D32_SFLOAT;
-
-    VkExtent3D depthImageExtent = drawImageExtent;
-
-    mDepthImage.imageExtent = depthImageExtent;
-
-    VkImageUsageFlags depthImageUsages{};
-    depthImageUsages |= VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT;
-
-    VkImageCreateInfo depthImageInfo = vkinit::image_create_info(mDepthImage.imageFormat, depthImageUsages, drawImageExtent);
-
-    vmaCreateImage(mAllocator, &depthImageInfo, &imageAllocInfo, &mDepthImage.image, &mDepthImage.allocation, nullptr);
-
-    VkImageViewCreateInfo depthViewInfo = vkinit::imageview_create_info(mDepthImage.imageFormat, mDepthImage.image, VK_IMAGE_ASPECT_DEPTH_BIT);
-    VK_CHECK(vkCreateImageView(mDevice, &depthViewInfo, nullptr, &mDepthImage.imageView));
-
-    mMainDeletionQueue.push([=, this]() {
-        vkDestroyImageView(mDevice, mDepthImage.imageView, nullptr);
-        vmaDestroyImage(mAllocator, mDepthImage.image, mDepthImage.allocation);
+    mMainDeletionQueue.push([&, this]() {
+        destroyImage(mDrawImage);
+        destroyImage(mDepthImage);
     });
 }
 

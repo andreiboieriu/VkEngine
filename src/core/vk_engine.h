@@ -16,6 +16,8 @@
 #include <thread>
 
 constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
+constexpr uint32_t MAX_IMAGE_WIDTH = 3840;
+constexpr uint32_t MAX_IMAGE_HEIGHT = 2160;
 
 class Scene3D;
 
@@ -145,6 +147,7 @@ protected:
 	void initVulkan();
 	void initVMA();
 	void initSwapchain();
+	void initImages();
 	void initCommands();
 	void initSyncStructs();
 	void initImGui();
