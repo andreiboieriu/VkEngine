@@ -143,7 +143,6 @@ void EditorApp::drawGui() {
         ImGui::End();
     }
 
-
     if (!mWindow->isCursorLocked()) {
         ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
 
@@ -156,6 +155,7 @@ void EditorApp::drawGui() {
         }
 
         mScene->drawGui();
+        mComputeEffectsManager->drawGui();
         mWindow->drawGui();
     }
 

@@ -1,4 +1,5 @@
 #include "compute_effects_manager.h"
+#include <imgui.h>
 
 ComputeEffectsManager::ComputeEffectsManager(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
     loadDefaultEffects();
@@ -23,4 +24,14 @@ void ComputeEffectsManager::executeEffects(VkCommandBuffer commandBuffer, const 
     mEffects["bloom"]->execute(commandBuffer, image, extent, true, sampler);
     mEffects["tone_mapping"]->execute(commandBuffer, image, extent, true, sampler);
     mEffects["fxaa"]->execute(commandBuffer, image, extent, false, sampler);
+}
+
+void ComputeEffectsManager::drawGui() {
+    if (ImGui::TreeNode("Compute Effects")) {
+        for (auto& [k, v] : mEffects) {
+            v->drawGui();
+        }
+
+        ImGui::TreePop();
+    }
 }

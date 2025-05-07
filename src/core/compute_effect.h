@@ -54,8 +54,8 @@ public:
 
     ~ComputeEffect();
 
-    virtual void execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize, VkSampler sampler);
-    virtual void drawGui();
+    void execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize, VkSampler sampler);
+    void drawGui();
 
 protected:
     void createPipelineLayout();

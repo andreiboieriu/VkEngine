@@ -189,6 +189,8 @@ void ComputeEffect::parseConfig(const std::filesystem::path& path) {
                     if (fieldJson.contains("name")) {
                         std::string name = fieldJson["name"];
 
+                        fmt::print("Set offset {} for field {}", offset, name);
+
                         // check if another field with the same offset exists, and delete it
                         std::string foundKey = "";
                         for (const auto& [fieldName, fieldOffset] : subpass.editableInfo.namedValues) {
@@ -455,8 +457,8 @@ void ComputeEffect::drawGui() {
 
         for (int i = 0; i < mSubpasses.size(); i++) {
             if (ImGui::TreeNode(("subpass_" + std::to_string(i)).c_str())) {
-                for (int j = 0; j < 5; j++) {
-                    ImGui::InputFloat4(("values_" + std::to_string(j)).c_str(), (float*)&mSubpasses[i].editableInfo.pushConstants[j]);
+                for (auto& [k, v] : mSubpasses[i].editableInfo.namedValues) {
+                    ImGui::InputFloat(k.c_str(), (float*)((uint8_t*)&mSubpasses[i].editableInfo.pushConstants + v));
                 }
 
                 ImGui::Checkbox("use screen size", &mSubpasses[i].editableInfo.dispatchSize.useScreenSize);

@@ -20,3 +20,5 @@ Medium Priority:
 
 Low priority:
 - maybe find a better solution that stopping the app when minimized?
+
+https://www.froyok.fr/blog/2021-09-ue4-custom-lens-flare/
