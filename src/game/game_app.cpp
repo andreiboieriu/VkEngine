@@ -61,7 +61,7 @@ void GameApp::draw() {
         // get start time
         auto start = std::chrono::system_clock::now();
 
-        mComputeEffectsManager->executeEffects(commandBuffer, mDrawImage, mDrawExtent, *mAssetManager->getSampler("linear"));
+        mComputeEffectsManager->executeEffects(commandBuffer, getComputeContext());
 
         auto end = std::chrono::system_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);

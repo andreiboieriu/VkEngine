@@ -14,6 +14,16 @@ class VulkanEngine;
 class ComputeEffect {
 
 public:
+    struct Context {
+        const AllocatedImage& colorImage;
+        const AllocatedImage& depthImage;
+        const AllocatedImage& bufferImage;
+        VkExtent2D screenSize;
+        VkSampler linearSampler;
+
+        std::unordered_map<std::string, AllocatedImage>& additionalImages;
+    };
+
     struct PushConstantLocation {
         uint32_t subpass;
         uint32_t offset;
@@ -53,7 +63,7 @@ public:
     ComputeEffect(const std::filesystem::path& path, VulkanEngine& vkEngine);
     ~ComputeEffect();
 
-    void execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize, VkSampler sampler);
+    void execute(VkCommandBuffer commandBuffer, Context context, bool sync);
     void drawGui();
 
 protected:
@@ -69,12 +79,6 @@ protected:
     VulkanEngine& mVkEngine;
 
     std::vector<Subpass> mSubpasses;
-
-    // TODO: improve later
-    bool mUseBufferImage = false;
-    AllocatedImage mBufferImage;
-
-    std::vector<VkImageView> mBufferImageMipViews;
 
     std::string mName;
     bool mEnabled = true;

@@ -17,22 +17,26 @@ AssetManager::AssetManager(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
     loadDefaultSamplers();
     loadDefaultMeshes();
     loadDefaultImages();
+    loadComputeEffectTextures();
 }
 
 AssetManager::~AssetManager() {
     freeResources();
 }
 
-void AssetManager::loadImage(const std::string& name) {
-    if (mImages.contains(name)) {
+void AssetManager::loadImage(const std::filesystem::path& filename, VkFormat format, bool computeRelated) {
+    auto& target = computeRelated ? mComputeImages : mImages;
+
+    if (target.contains(filename.stem())) {
         return;
     }
 
-    std::filesystem::path filePath = SPRITES_PATH + name;
+    std::filesystem::path filePath = (computeRelated ? COMPUTE_IMAGES_PATH : SPRITES_PATH) + filename.string();
+    fmt::println("Trying to load cock: {}", filePath.string());
 
     // check if file exists
     if (!std::filesystem::exists(filePath)) {
-        fmt::println("Failed to find gltf file: {}", filePath.string());
+        fmt::println("Failed to find texture file: {}", filePath.string());
         return;
     }
 
@@ -46,15 +50,32 @@ void AssetManager::loadImage(const std::string& name) {
     }
 
     // create image resource
-    mImages[name] = mVkEngine.createImage(
+    target[filename.stem()] = mVkEngine.createImage(
         data,
         VkExtent3D{(uint32_t)width, (uint32_t)height, 1},
-        VK_FORMAT_R8G8B8A8_UNORM,
+        format,
         VK_IMAGE_USAGE_SAMPLED_BIT,
         false
     );
 
     stbi_image_free(data);
+}
+
+void AssetManager::loadComputeEffectTextures() {
+    static const std::filesystem::path path("assets/compute_effects/textures");
+
+    if (!std::filesystem::exists(path)) {
+        return;
+    }
+
+    for (const auto& entry : std::filesystem::directory_iterator(path)) {
+        fmt::println("Found cock entry: {}", entry.path().string());
+        loadImage(entry.path().filename(), VK_FORMAT_R8G8B8A8_UNORM, true);
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
+            vkutil::transitionImage(commandBuffer, mComputeImages[entry.path().stem()].image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
+        });
+    }
 }
 
 void AssetManager::loadGltf(const std::string& name) {
@@ -190,10 +211,6 @@ void AssetManager::renderToCubemap(
     mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
         vkutil::transitionImage(commandBuffer, dest.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
     });
-}
-
-void saveImageToFile() {
-
 }
 
 void AssetManager::saveSkyboxToFile(const SkyboxAsset& skybox) {
@@ -573,7 +590,12 @@ AllocatedImage createBrdfLut(VulkanEngine& vkEngine, VkSampler linear) {
 
     vkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
         vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
-        computeEffect.execute(commandBuffer, brdfLut, SkyboxAsset::BRDF_LUT_SIZE, true, linear);
+
+        ComputeEffect::Context context = vkEngine.getComputeContext(&brdfLut);
+        context.linearSampler = linear;
+        context.screenSize = SkyboxAsset::BRDF_LUT_SIZE;
+
+        computeEffect.execute(commandBuffer, context, true);
         vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
     });
 

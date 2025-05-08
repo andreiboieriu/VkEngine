@@ -75,25 +75,6 @@ void ComputeEffect::load(const std::filesystem::path& path) {
     };
 
     parseConfig(path.string() + "/config.json");
-
-    // create buffer image
-    if (mUseBufferImage) {
-        mBufferImage = mVkEngine.createImage(VkExtent3D{3840, 2160, 1}, VK_FORMAT_R16G16B16A16_SFLOAT, VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, true);
-
-        mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
-            vkutil::transitionImage(commandBuffer, mBufferImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
-        });
-
-        mBufferImageMipViews.resize(mBufferImage.mipLevels);
-
-        for (uint32_t i = 0; i < mBufferImage.mipLevels; i++) {
-            VkImageViewCreateInfo viewInfo = vkinit::imageview_create_info(VK_FORMAT_R16G16B16A16_SFLOAT, mBufferImage.image, VK_IMAGE_ASPECT_COLOR_BIT);
-            viewInfo.subresourceRange.levelCount = 1;
-            viewInfo.subresourceRange.baseMipLevel = i;
-
-            VK_CHECK(vkCreateImageView(mVkEngine.getDevice(), &viewInfo, nullptr, &mBufferImageMipViews[i]));
-        }
-    }
 }
 
 void ComputeEffect::parseConfig(const std::filesystem::path& path) {
@@ -299,10 +280,6 @@ void ComputeEffect::addSubpass(const std::filesystem::path& path) {
     for (uint32_t i = 0; i < reflSet.binding_count; i++) {
         const SpvReflectDescriptorBinding& reflBinding = *(reflSet.bindings[i]);
 
-        if (!mUseBufferImage && std::string(reflBinding.name).find("bufferImage") != std::string::npos) {
-            mUseBufferImage = true;
-        }
-
         newSubpass.bindings[reflBinding.binding] = {reflBinding.name, static_cast<VkDescriptorType>(reflBinding.descriptor_type)};
 
         layoutBuilder.addBinding(reflBinding.binding, static_cast<VkDescriptorType>(reflBinding.descriptor_type), module.shader_stage);
@@ -344,7 +321,7 @@ void ComputeEffect::addSubpass(const std::filesystem::path& path) {
     mSubpasses.push_back(newSubpass);
 }
 
-void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, bool synchronize, VkSampler sampler) {
+void ComputeEffect::execute(VkCommandBuffer commandBuffer, Context context, bool sync) {
     if (!mEnabled) {
         return;
     }
@@ -360,8 +337,8 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
             if (binding.name == "image") {
                 writer.writeImage(
                     j,
-                    image.imageView,
-                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? sampler : VK_NULL_HANDLE,
+                    context.colorImage.imageView,
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? context.linearSampler : VK_NULL_HANDLE,
                     VK_IMAGE_LAYOUT_GENERAL,
                     binding.descriptorType);
             } else if (binding.name.find("bufferImageMip") != std::string::npos) {
@@ -369,8 +346,15 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
 
                 writer.writeImage(
                     j,
-                    mBufferImageMipViews[mipLevel],
-                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? sampler : VK_NULL_HANDLE,
+                    context.bufferImage.mipViews[mipLevel],
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? context.linearSampler : VK_NULL_HANDLE,
+                    VK_IMAGE_LAYOUT_GENERAL,
+                    binding.descriptorType);
+            } else if (context.additionalImages.contains(binding.name)) {
+                writer.writeImage(
+                    j,
+                    context.additionalImages[binding.name].imageView,
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? context.linearSampler : VK_NULL_HANDLE,
                     VK_IMAGE_LAYOUT_GENERAL,
                     binding.descriptorType);
             } else {
@@ -383,17 +367,17 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
         vkCmdPushDescriptorSetKHR(commandBuffer, VK_PIPELINE_BIND_POINT_COMPUTE, mSubpasses[i].pipelineLayout, 0, (uint32_t)descriptorWrites.size(), descriptorWrites.data());
 
         // write push constants (image and buffer extent)
-        mSubpasses[i].editableInfo.pushConstants[4].x = extent.width;
-        mSubpasses[i].editableInfo.pushConstants[4].y = extent.height;
-        mSubpasses[i].editableInfo.pushConstants[4].z = 3840;
-        mSubpasses[i].editableInfo.pushConstants[4].w = 2160;
+        mSubpasses[i].editableInfo.pushConstants[4].x = context.screenSize.width;
+        mSubpasses[i].editableInfo.pushConstants[4].y = context.screenSize.height;
+        mSubpasses[i].editableInfo.pushConstants[4].z = context.colorImage.imageExtent.width;
+        mSubpasses[i].editableInfo.pushConstants[4].w = context.colorImage.imageExtent.height;
 
         vkCmdPushConstants(commandBuffer, mSubpasses[i].pipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, mSubpasses[i].pushConstantsSize, mSubpasses[i].editableInfo.pushConstants.data());
 
         glm::vec2 dispatchSize;
 
         if (mSubpasses[i].editableInfo.dispatchSize.useScreenSize) {
-            dispatchSize = glm::vec2(extent.width, extent.height);
+            dispatchSize = glm::vec2(context.screenSize.width, context.screenSize.height);
             dispatchSize *= mSubpasses[i].editableInfo.dispatchSize.screenSizeMultiplier;
         } else {
             dispatchSize = mSubpasses[i].editableInfo.dispatchSize.customSize;
@@ -411,7 +395,7 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, const AllocatedImage&
         }
     }
 
-    if (synchronize) {
+    if (sync) {
         synchronizeWithCompute(commandBuffer);
     }
 }
@@ -441,14 +425,6 @@ void ComputeEffect::freeResources() {
         vkDestroyDescriptorSetLayout(device, subpass.descriptorSetLayout, nullptr);
         vkDestroyPipelineLayout(device, subpass.pipelineLayout, nullptr);
         vkDestroyPipeline(device, subpass.pipeline, nullptr);
-    }
-
-    if (mUseBufferImage) {
-        mVkEngine.destroyImage(mBufferImage);
-
-        for (uint32_t i = 0; i < mBufferImageMipViews.size(); i++) {
-            vkDestroyImageView(device, mBufferImageMipViews[i], nullptr);
-        }
     }
 }
 

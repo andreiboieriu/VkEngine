@@ -110,13 +110,15 @@ public:
 		return mMaxSamplerAnisotropy;
 	}
 
+	ComputeEffect::Context getComputeContext(AllocatedImage* colorImage = nullptr);
+
 	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function, bool waitResult = false);
 
 	AllocatedBuffer createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage	memUsage);
 	void destroyBuffer(const AllocatedBuffer& buffer);
 	void *getDataFromBuffer(const AllocatedBuffer& buffer);
 
-	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
+	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false, bool createMipViews = false);
 	AllocatedImage createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
 	AllocatedImage createCubemap(VkExtent2D size, VkFormat format, VkImageUsageFlags usage, std::optional<glm::vec3> color = std::nullopt, bool mipMapped = false);
 
@@ -201,6 +203,7 @@ protected:
 	AllocatedImage mDrawImage;
 	VkExtent2D mDrawExtent;
 	AllocatedImage mDepthImage;
+	AllocatedImage mBufferImage;
 
 	// immediat submit structures
 	VkFence mImmFence;

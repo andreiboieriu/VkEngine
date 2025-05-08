@@ -13,8 +13,12 @@ public:
     ~AssetManager();
 
     void loadGltf(const std::string& name);
-    void loadImage(const std::string& name);
+    void loadImage(const std::filesystem::path& name, VkFormat format, bool computeRelated = false);
     void loadSkybox(const std::string& name);
+
+    std::unordered_map<std::string, AllocatedImage>& getComputeRelatedImages() {
+        return mComputeImages;
+    }
 
     LoadedGLTF *getGltf(const std::string& name) {
         if (!mLoadedGltfs.contains(name)) {
@@ -68,6 +72,8 @@ private:
     void loadDefaultMeshes();
     void loadDefaultImages();
     void loadDefaultSamplers();
+    void loadComputeEffectTextures();
+
     void renderToCubemap(AllocatedImage& src, AllocatedImage& dest, Pipeline *pipeline, VkExtent2D destSize, uint32_t mipLevel = 0, bool flipViewport = false);
     void freeResources();
 
@@ -77,10 +83,12 @@ private:
     const std::string GLTFS_PATH = "assets/gltfs/";
     const std::string SPRITES_PATH = "assets/sprites/";
     const std::string SKYBOXES_PATH = "assets/skyboxes/";
+    const std::string COMPUTE_IMAGES_PATH = "assets/compute_effects/textures/";
 
     // user loaded data
     std::unordered_map<std::string, std::unique_ptr<LoadedGLTF>> mLoadedGltfs;
     std::unordered_map<std::string, AllocatedImage> mImages;
+    std::unordered_map<std::string, AllocatedImage> mComputeImages;
     std::unordered_map<std::string, SkyboxAsset> mSkyboxes;
 
     // default data

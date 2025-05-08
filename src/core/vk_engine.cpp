@@ -65,11 +65,11 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
     initVulkan();
     initVMA();
     initSwapchain();
-    initImages();
     initCommands();
     initSyncStructs();
     initImGui();
     initECS();
+    initImages();
 
     mAssetManager = std::make_unique<AssetManager>(*this);
     mPipelineResourceManager = std::make_unique<PipelineResourceManager>(*this);
@@ -96,6 +96,19 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
             mScene = nullptr;
         });
     }).detach();
+}
+
+ComputeEffect::Context VulkanEngine::getComputeContext(AllocatedImage* colorImage) {
+    VkSampler linear = mAssetManager ? *mAssetManager->getSampler("linear") : VK_NULL_HANDLE;
+
+    return ComputeEffect::Context{
+        .colorImage = colorImage == nullptr ? mDrawImage : *colorImage,
+        .depthImage = mDepthImage,
+        .bufferImage = mBufferImage,
+        .screenSize = mDrawExtent,
+        .linearSampler = linear,
+        .additionalImages = mAssetManager->getComputeRelatedImages()
+    };
 }
 
 AllocatedBuffer VulkanEngine::createBuffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memUsage) {
@@ -430,9 +443,22 @@ void VulkanEngine::initImages() {
         VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT
     );
 
+    mBufferImage = createImage(
+        VkExtent3D{MAX_IMAGE_WIDTH, MAX_IMAGE_HEIGHT, 1},
+        VK_FORMAT_R16G16B16A16_SFLOAT,
+        VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_SAMPLED_BIT,
+        true,
+        true
+    );
+
+    immediateSubmit([&](VkCommandBuffer commandBuffer) {
+        vkutil::transitionImage(commandBuffer, mBufferImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
+    });
+
     mMainDeletionQueue.push([&, this]() {
         destroyImage(mDrawImage);
         destroyImage(mDepthImage);
+        destroyImage(mBufferImage);
     });
 }
 
@@ -901,7 +927,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     mStats.drawGeometryTimeBuffer += elapsed.count() / 1000.f;
 }
 
-AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped) {
+AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped, bool createMipViews) {
     AllocatedImage newImage;
     newImage.imageFormat = format;
     newImage.imageExtent = size;
@@ -934,6 +960,18 @@ AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkIma
     viewInfo.subresourceRange.levelCount = imageInfo.mipLevels;
 
     VK_CHECK(vkCreateImageView(mDevice, &viewInfo, nullptr, &newImage.imageView));
+
+    if (mipMapped && createMipViews) {
+        newImage.mipViews.resize(newImage.mipLevels);
+
+        for (uint32_t i = 0; i < newImage.mipLevels; i++) {
+            VkImageViewCreateInfo viewInfo = vkinit::imageview_create_info(VK_FORMAT_R16G16B16A16_SFLOAT, newImage.image, VK_IMAGE_ASPECT_COLOR_BIT);
+            viewInfo.subresourceRange.levelCount = 1;
+            viewInfo.subresourceRange.baseMipLevel = i;
+
+            VK_CHECK(vkCreateImageView(mDevice, &viewInfo, nullptr, &newImage.mipViews[i]));
+        }
+    }
 
     return newImage;
 }
@@ -1084,4 +1122,8 @@ AllocatedImage VulkanEngine::createImage(void* data, VkExtent3D size, VkFormat f
 void VulkanEngine::destroyImage(const AllocatedImage& image) {
     vkDestroyImageView(mDevice, image.imageView, nullptr);
     vmaDestroyImage(mAllocator, image.image, image.allocation);
+
+    for (int i = 0; i < image.mipViews.size(); i++) {
+        vkDestroyImageView(mDevice, image.mipViews[i], nullptr);
+    }
 }

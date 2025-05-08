@@ -22,6 +22,7 @@ struct AllocatedImage {
     VkExtent3D imageExtent;
     VkFormat imageFormat;
     uint32_t mipLevels;
+    std::vector<VkImageView> mipViews;
 };
 
 struct ComputePushConstants {

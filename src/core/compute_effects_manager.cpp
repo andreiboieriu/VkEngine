@@ -2,6 +2,7 @@
 #include <imgui.h>
 #include <fstream>
 #include <nlohmann/json.hpp>
+#include <set>
 
 ComputeEffectsManager::ComputeEffectsManager(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
     loadEffects();
@@ -9,9 +10,16 @@ ComputeEffectsManager::ComputeEffectsManager(VulkanEngine& vkEngine) : mVkEngine
 
 void ComputeEffectsManager::loadEffects() {
     static const std::filesystem::path root("assets/compute_effects/");
+    static const std::set<std::string> reservedNames{
+        "textures"
+    };
 
     for (const auto& entry : std::filesystem::directory_iterator(root)) {
         if (!entry.is_directory()) {
+            continue;
+        }
+
+        if (reservedNames.contains(entry.path().stem())) {
             continue;
         }
 
@@ -66,11 +74,11 @@ void ComputeEffectsManager::loadEffect(const std::filesystem::path& path) {
     fmt::println("Successfully loaded effect: {}", name);
 }
 
-void ComputeEffectsManager::executeEffects(VkCommandBuffer commandBuffer, const AllocatedImage& image, VkExtent2D extent, VkSampler sampler) {
+void ComputeEffectsManager::executeEffects(VkCommandBuffer commandBuffer, ComputeEffect::Context context) {
     for (uint32_t i = 0; i < mEffectOrder.size(); i++) {
         bool sync = i != mEffectOrder.size() - 1;
 
-        mEffects[mEffectOrder[i]]->execute(commandBuffer, image, extent, sync, sampler);
+        mEffects[mEffectOrder[i]]->execute(commandBuffer, context, sync);
     }
 }
 

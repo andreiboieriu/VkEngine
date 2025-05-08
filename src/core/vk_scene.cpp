@@ -5,8 +5,6 @@
 #include <imgui.h>
 
 #include <glm/gtx/matrix_decompose.hpp>
-
-
 #include <memory>
 
 Scene3D::Scene3D(const std::filesystem::path& path, VulkanEngine& vkEngine) : mVkEngine(vkEngine), mAssetManager(mVkEngine.getAssetManager()) {
@@ -102,9 +100,8 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
         auto view = mRegistry.view<Sprite>();
 
         for (auto [entity, sprite] : view.each()) {
-            fmt::println("creating sprite");
-            mAssetManager.loadImage(sprite.name);
-            sprite.image = mAssetManager.getImage(sprite.name);
+            mAssetManager.loadImage(sprite.name, VK_FORMAT_R8G8B8A8_SRGB);
+            sprite.image = mAssetManager.getImage(std::filesystem::path(sprite.name).stem());
         }
     }
 
@@ -132,12 +129,8 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
 
         for (auto [entity, transform, camera, metadata] : view.each()) {
             if (camera.enabled) {
-                fmt::println("Found camera: {}", metadata.uuid);
                 mCameraEntity = getEntity(metadata.uuid);
 
-                if (!mCameraEntity) {
-                    fmt::println("Camera is somehow null");
-                }
                 break;
             }
         }
