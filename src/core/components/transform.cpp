@@ -68,9 +68,7 @@ Transform componentFromJson(const nlohmann::json& j) {
     newTransform.position.z = position[2];
 
     auto rotation = j["Rotation"];
-    newTransform.rotation.x = rotation[0];
-    newTransform.rotation.y = rotation[1];
-    newTransform.rotation.z = rotation[2];
+    newTransform.rotation = glm::quat(glm::vec3(rotation[0], rotation[1], rotation[2]));
 
     auto scale = j["Scale"];
     newTransform.scale.x = scale[0];

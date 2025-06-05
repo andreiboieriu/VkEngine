@@ -132,7 +132,7 @@ void GameApp::drawGui() {
 
     ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
 
-    if (ImGui::Begin("Stats", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+    if (ImGui::Begin("Stats")) {
         ImGui::Text("fps %i", mStats.fps);
         ImGui::Text("frametime %f ms", mStats.frameTime);
         ImGui::Text("update time %f ms", mStats.updateTime);
@@ -152,14 +152,11 @@ void GameApp::drawGui() {
             ImGui::Checkbox("Enable frustum culling", &mEngineConfig.enableFrustumCulling);
             ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
             ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
-
-            // mBloomEffect->drawGui();
-            // mToneMappingEffect->drawGui();
-            // mFxaaEffect->drawGui();
             ImGui::End();
         }
-        mScene->drawGui();
+        // mScene->drawGui();
         mWindow->drawGui();
+        mComputeEffectsManager->drawGui();
     }
 
     // render ImGui

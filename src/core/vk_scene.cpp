@@ -239,6 +239,7 @@ void Scene3D::update(float deltaTime, const Input& input, int frameNumber) {
 
     mSceneData.ambientColor = glm::vec4(.1f);
     mSceneData.sunlightDirection = glm::vec4(.2f, 1.0f, .5f, 1.f);
+    mSceneData.sunlightColor = glm::vec4(0.f);
 
 
     *(SceneData*)mSceneDataUBOs[frameNumber].buffer.allocInfo.pMappedData = mSceneData;

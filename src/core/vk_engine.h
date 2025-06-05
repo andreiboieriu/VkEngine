@@ -62,7 +62,9 @@ public:
 	};
 
 	// initializes everything in the engine
-	void init(const std::vector<std::string>& cliArgs);
+	virtual void init(const std::vector<std::string>& cliArgs);
+	virtual void parseCliArgs(const std::vector<std::string>& cliArgs);
+
 
 	// shuts down the engine
 	void cleanup();
@@ -145,14 +147,13 @@ public:
 	}
 
 protected:
-    void parseCliArgs(const std::vector<std::string>& cliArgs);
 	void initVulkan();
 	void initVMA();
 	void initSwapchain();
 	void initImages();
 	void initCommands();
 	void initSyncStructs();
-	void initImGui();
+	virtual void initImGui();
 	void initECS();
 
 	// draw loop

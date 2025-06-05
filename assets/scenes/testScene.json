@@ -1,11 +1,11 @@
 {
-  "Skybox": "sky.hdr",
+  "Skybox": "jupiter.hdr",
   "Entities": [
     {
       "ChildrenUUIDs": [],
       "Components": {
         "Transform": {
-          "Position": [0.0, 0.0, 0.0],
+          "Position": [12.0, 0.0, 10.0],
           "Rotation": [0.0, 0.0, 0.0],
           "Scale": [10.0, 10.0, 10.0]
         },
@@ -17,6 +17,9 @@
         },
         "Metadata": {
           "UUID": "main_camera"
+        },
+        "Script": {
+          "Name": "scripts/main_camera.lua"
         }
       },
       "ParentUUID": ""
@@ -28,12 +31,12 @@
           "Name": "fighter_spaceship.glb"
         },
         "Transform": {
-          "Position": [0.0, 0.0, 0.0],
+          "Position": [48.0, 0.0, 0.0],
           "Rotation": [0.0, 0.0, 0.0],
           "Scale": [10.0, 10.0, 10.0]
         },
         "Script": {
-          "Name": "scripts/spaceship.lua"
+          "Name": "scripts/rotate.lua"
         },
         "Metadata": {
           "UUID": "fighter_spaceship"
@@ -45,15 +48,12 @@
       "ChildrenUUIDs": [],
       "Components": {
         "GLTF": {
-          "Name": "asteroid1.glb"
+          "Name": "CompareRoughness.glb"
         },
         "Transform": {
-          "Position": [15.0, 0.0, -20.0],
+          "Position": [12.0, 0.0, 0.0],
           "Rotation": [0.0, 0.0, 0.0],
-          "Scale": [10.0, 10.0, 10.0]
-        },
-        "Script": {
-          "Name": "scripts/rotate.lua"
+          "Scale": [4.0, 4.0, 4.0]
         },
         "SphereCollider": {
           "Radius": 0.0
@@ -68,21 +68,38 @@
       "ChildrenUUIDs": [],
       "Components": {
         "GLTF": {
-          "Name": "asteroid2.glb"
+          "Name": "CompareMetallic.glb"
         },
         "Transform": {
-          "Position": [6.0, 0.0, -2.0],
+          "Position": [24, 0.0, 0.0],
           "Rotation": [0.0, 0.0, 0.0],
-          "Scale": [10.0, 10.0, 10.0]
-        },
-        "Script": {
-          "Name": "scripts/rotate.lua"
+          "Scale": [4.0, 4.0, 4.0]
         },
         "SphereCollider": {
           "Radius": 0.0
         },
         "Metadata": {
           "UUID": "asteroid1"
+        }
+      },
+      "ParentUUID": ""
+    },
+    {
+      "ChildrenUUIDs": [],
+      "Components": {
+        "GLTF": {
+          "Name": "CompareAmbientOcclusion.glb"
+        },
+        "Transform": {
+          "Position": [36, 0.0, 0.0],
+          "Rotation": [0.0, 0.0, 0.0],
+          "Scale": [8.0, 8.0, 8.0]
+        },
+        "SphereCollider": {
+          "Radius": 0.0
+        },
+        "Metadata": {
+          "UUID": "emissive"
         }
       },
       "ParentUUID": ""

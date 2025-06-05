@@ -83,11 +83,11 @@ void ComputeEffectsManager::executeEffects(VkCommandBuffer commandBuffer, Comput
 }
 
 void ComputeEffectsManager::drawGui() {
-    if (ImGui::TreeNode("Compute Effects")) {
+    if (ImGui::Begin("Compute Effects")) {
         for (auto& [k, v] : mEffects) {
             v->drawGui();
         }
 
-        ImGui::TreePop();
+        ImGui::End();
     }
 }
