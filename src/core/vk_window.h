@@ -30,6 +30,26 @@ struct MouseInput {
 struct Input {
     std::unordered_map<int, InputState> keyStates;
     MouseInput mouse;
+
+    bool isKeyPressed(int scancode) const {
+        auto state = keyStates.at(scancode);
+        return state == InputState::PRESSED;
+    }
+
+    bool isKeyHeld(int scancode) const {
+        auto state = keyStates.at(scancode);
+        return state == InputState::HELD;
+    }
+
+    bool isKeyReleased(int scancode) const {
+        auto state = keyStates.at(scancode);
+        return state == InputState::RELEASED;
+    }
+
+    bool isKeyIdle(int scancode) const {
+        auto state = keyStates.at(scancode);
+        return state == InputState::IDLE;
+    }
 };
 
 class Window {
@@ -53,6 +73,9 @@ public:
     VkExtent2D getExtent() {
         return mExtent;
     }
+
+    void enableVsync();
+    void disableVsync();
 
     float getAspectRatio() {
         return (float)mExtent.width / (float)mExtent.height;
@@ -82,8 +105,6 @@ public:
 
     void drawGui();
 
-    // void toggleLockedCursor();
-
     bool isCursorLocked() {
         return mLockedCursor;
     }
@@ -92,7 +113,13 @@ public:
         return mInput;
     }
 
-    void resize(uint32_t width, uint32_t height);
+    void resize(uint32_t width, uint32_t height, bool manualResize = false);
+
+    void lockCursor();
+    void unlockCursor();
+    std::vector<std::string>& getDroppedPaths() {
+        return mDroppedPaths;
+    }
 
 private:
 
@@ -117,6 +144,10 @@ private:
     void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
     void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
     void framebufferSizeCallback(GLFWwindow* window, int width, int height);
+    void dropCallback(GLFWwindow* window, int count, const char** paths);
+    static void glfwErrorCallback(int error, const char* description) {
+        fmt::println("GLFW Error ({}): {}", error, description);
+    }
     void setCallbacks();
 
     void updateInput();
@@ -145,4 +176,6 @@ private:
     bool mShouldClose = false;
     bool mIsMinimized = false;
     bool mLockedCursor = false;
+
+    std::vector<std::string> mDroppedPaths;
 };

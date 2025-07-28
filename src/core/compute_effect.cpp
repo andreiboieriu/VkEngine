@@ -56,6 +56,16 @@ ComputeEffect::~ComputeEffect() {
     freeResources();
 }
 
+void ComputeEffect::setValue(const std::string& name, float value) {
+    if (!mNamedValues.contains(name)) return;
+
+    *(float*)((uint8_t*)&mSubpasses[0].editableInfo.pushConstants + mNamedValues[name]) = value;
+
+    for (int i = 1; i < mSubpasses.size(); i++) {
+        mSubpasses[i].editableInfo.pushConstants = mSubpasses[0].editableInfo.pushConstants;
+    }
+}
+
 void ComputeEffect::load(const std::filesystem::path& path) {
     mName = path.stem();
 
@@ -66,7 +76,7 @@ void ComputeEffect::load(const std::filesystem::path& path) {
         std::string subpassPath = path.string() + "/pass" + std::to_string(currPass++) + ".comp.spv";
 
         if (!std::filesystem::exists(subpassPath)) {
-            fmt::println("Compute effect {} not found", subpassPath);
+            // fmt::println("Compute effect {} not found", subpassPath);
             break;
         }
 
@@ -79,7 +89,7 @@ void ComputeEffect::load(const std::filesystem::path& path) {
 
 void ComputeEffect::parseConfig(const std::filesystem::path& path) {
     if (!std::filesystem::exists(path)) {
-        fmt::println("Missing config file for compute effect {}", mName);
+        // fmt::println("Missing config file for compute effect {}", mName);
         return;
     }
 
@@ -112,87 +122,6 @@ void ComputeEffect::parseConfig(const std::filesystem::path& path) {
 
         auto& subpass = mSubpasses[index];
 
-        if (subpassJson.contains("inheritFrom")) {
-            int inheritFrom = subpassJson["inheritFrom"];
-
-            if (inheritFrom >= index) {
-                fmt::print("Error: inheritFrom value must be lower than the current index.");
-                return;
-            }
-
-            subpass.editableInfo = mSubpasses[inheritFrom].editableInfo;
-        }
-
-        if (subpassJson.contains("values")) {
-            for (const auto& [k, v] : subpassJson["values"].items()) {
-                int valueIndex = std::stoi(k);
-
-                // make sure to not overwrite other fields in push constants
-                if (valueIndex > 4 || valueIndex < 0) {
-                    fmt::println("Error: value entry is out of bounds");
-                }
-
-                static const std::set<std::string> possibleFields{
-                    "x", "y", "z", "w"
-                };
-
-                for (const auto& [field, fieldJson] : v.items()) {
-                    if (!possibleFields.contains(field)) {
-                        fmt::print("Error: illegal value field {}\n", field);
-                        return;
-                    }
-
-                    if (!fieldJson.contains("default")) {
-                        fmt::print("Error: field doesn't contain a default value\n");
-                        return;
-                    }
-
-                    if (!fieldJson["default"].is_number()) {
-                        fmt::print("Error: default value is not a number\n");
-                        return;
-                    }
-
-                    float value = fieldJson["default"];
-                    uint32_t offset = sizeof(glm::vec4) * valueIndex;
-
-                    if (field == "x") {
-                        subpass.editableInfo.pushConstants[valueIndex].x = value;
-                    } else if (field == "y") {
-                        subpass.editableInfo.pushConstants[valueIndex].y = value;
-                        offset += sizeof(float);
-                    } else if (field == "z") {
-                        subpass.editableInfo.pushConstants[valueIndex].z = value;
-                        offset += 2 * sizeof(float);
-                    } else if (field == "w") {
-                        subpass.editableInfo.pushConstants[valueIndex].w = value;
-                        offset += 3 * sizeof(float);
-                    }
-
-                    if (fieldJson.contains("name")) {
-                        std::string name = fieldJson["name"];
-
-                        fmt::print("Set offset {} for field {}", offset, name);
-
-                        // check if another field with the same offset exists, and delete it
-                        std::string foundKey = "";
-                        for (const auto& [fieldName, fieldOffset] : subpass.editableInfo.namedValues) {
-                            if (fieldOffset == offset) {
-                                foundKey = fieldName;
-                                break;
-                            }
-                        }
-
-                        if (foundKey != "") {
-                            subpass.editableInfo.namedValues.erase(foundKey);
-                        }
-
-                        subpass.editableInfo.namedValues[name] = offset;
-                    }
-                }
-            }
-        }
-
-        // Access "dispatch" and ensure it has the required fields
         if (subpassJson.contains("dispatch")) {
             if (subpassJson["dispatch"].contains("useScreenSize")) {
                 if (!subpassJson["dispatch"]["useScreenSize"].is_boolean()) {
@@ -238,19 +167,80 @@ void ComputeEffect::parseConfig(const std::filesystem::path& path) {
                 subpass.editableInfo.dispatchSize.customSize = glm::vec2(x, y);
             }
         }
-
-        // Here you can print or process the subpass data as needed, or leave empty.
-        fmt::print("Subpass {} parsed successfully\n", index);
     }
 
-    fmt::print("{} config parsed successfully\n", path.stem().string());
+    if (effectJson.contains("values")) {
+        for (const auto& [k, v] : effectJson["values"].items()) {
+            int valueIndex = std::stoi(k);
+
+            // make sure to not overwrite other fields in push constants
+            if (valueIndex > 4 || valueIndex < 0) {
+                fmt::println("Error: value entry is out of bounds");
+            }
+
+            static const std::set<std::string> possibleFields{
+                "x", "y", "z", "w"
+            };
+
+            for (const auto& [field, fieldJson] : v.items()) {
+                if (!possibleFields.contains(field)) {
+                    fmt::print("Error: illegal value field {}\n", field);
+                    return;
+                }
+
+                if (!fieldJson.contains("default")) {
+                    fmt::print("Error: field doesn't contain a default value\n");
+                    return;
+                }
+
+                if (!fieldJson["default"].is_number()) {
+                    fmt::print("Error: default value is not a number\n");
+                    return;
+                }
+
+                if (!fieldJson.contains("name")) {
+                    fmt::print("Error: value field doesn't contain a name\n");
+                    return;
+                }
+
+                if (!fieldJson["name"].is_string()) {
+                    fmt::print("Error: value name is not a string\n");
+                    return;
+                }
+
+                float value = fieldJson["default"];
+                uint32_t offset = sizeof(glm::vec4) * valueIndex;
+
+                if (field == "x") {
+                    mSubpasses[0].editableInfo.pushConstants[valueIndex].x = value;
+                } else if (field == "y") {
+                    offset += sizeof(float);
+                    mSubpasses[0].editableInfo.pushConstants[valueIndex].y = value;
+                } else if (field == "z") {
+                    offset += 2 * sizeof(float);
+                    mSubpasses[0].editableInfo.pushConstants[valueIndex].z = value;
+                } else if (field == "w") {
+                    offset += 3 * sizeof(float);
+                    mSubpasses[0].editableInfo.pushConstants[valueIndex].w = value;
+                }
+
+                mNamedValues[fieldJson["name"]] = offset;
+            }
+        }
+
+        for (int i = 1; i < mSubpasses.size(); i++) {
+            mSubpasses[i].editableInfo.pushConstants = mSubpasses[0].editableInfo.pushConstants;
+        }
+    }
+
+    // fmt::print("{} config parsed successfully\n", path.stem().string());
 }
 
 // TODO: see about generalizing descriptor writes
 void ComputeEffect::addSubpass(const std::filesystem::path& path) {
     Subpass newSubpass{};
 
-    fmt::println("now loading subpass: {}", path.c_str());
+    // fmt::println("now loading subpass: {}", path.c_str());
 
     // load spirv file
     SpirvFile spirvFile = loadSpirvFile(path);
@@ -350,10 +340,24 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, Context context, bool
                     (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? context.linearSampler : VK_NULL_HANDLE,
                     VK_IMAGE_LAYOUT_GENERAL,
                     binding.descriptorType);
-            } else if (context.additionalImages.contains(binding.name)) {
+            } else if (context.additionalImages.contains(binding.name + ".jpg")) {
                 writer.writeImage(
                     j,
-                    context.additionalImages[binding.name].imageView,
+                    context.additionalImages[binding.name + ".jpg"].imageView,
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? context.linearSampler : VK_NULL_HANDLE,
+                    VK_IMAGE_LAYOUT_GENERAL,
+                    binding.descriptorType);
+            } else if (context.additionalImages.contains(binding.name + ".png")) {
+                writer.writeImage(
+                    j,
+                    context.additionalImages[binding.name + ".png"].imageView,
+                    (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? context.linearSampler : VK_NULL_HANDLE,
+                    VK_IMAGE_LAYOUT_GENERAL,
+                    binding.descriptorType);
+            } else if (binding.name == "depthImage") {
+                writer.writeImage(
+                    j,
+                    context.depthImage.imageView,
                     (binding.descriptorType == VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) ? context.linearSampler : VK_NULL_HANDLE,
                     VK_IMAGE_LAYOUT_GENERAL,
                     binding.descriptorType);
@@ -371,6 +375,7 @@ void ComputeEffect::execute(VkCommandBuffer commandBuffer, Context context, bool
         mSubpasses[i].editableInfo.pushConstants[4].y = context.screenSize.height;
         mSubpasses[i].editableInfo.pushConstants[4].z = context.colorImage.imageExtent.width;
         mSubpasses[i].editableInfo.pushConstants[4].w = context.colorImage.imageExtent.height;
+        mSubpasses[i].editableInfo.pushConstants[5] = context.sunScreenPos;
 
         vkCmdPushConstants(commandBuffer, mSubpasses[i].pipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT, 0, mSubpasses[i].pushConstantsSize, mSubpasses[i].editableInfo.pushConstants.data());
 
@@ -428,24 +433,55 @@ void ComputeEffect::freeResources() {
     }
 }
 
-void ComputeEffect::drawGui() {
-    if (ImGui::TreeNode(mName.c_str())) {
-        ImGui::Checkbox("enable", &mEnabled);
+void ComputeEffect::drawGui(ImGuiContext& context) {
+    ImGui::PushFont(context.normalFont);
+    ImGui::PushStyleColor(ImGuiCol_Text, BUTTON_TEXT_COLOR);
 
-        for (int i = 0; i < mSubpasses.size(); i++) {
-            if (ImGui::TreeNode(("subpass_" + std::to_string(i)).c_str())) {
-                for (auto& [k, v] : mSubpasses[i].editableInfo.namedValues) {
-                    ImGui::InputFloat(k.c_str(), (float*)((uint8_t*)&mSubpasses[i].editableInfo.pushConstants + v));
-                }
+    bool open = ImGui::CollapsingHeader(mName.c_str());
 
-                ImGui::Checkbox("use screen size", &mSubpasses[i].editableInfo.dispatchSize.useScreenSize);
-                ImGui::InputFloat("screen size multiplier", &mSubpasses[i].editableInfo.dispatchSize.screenSizeMultiplier);
-                ImGui::InputFloat2("custom size", (float *)&mSubpasses[i].editableInfo.dispatchSize.customSize);
+    ImGui::PopFont();
+    ImGui::PopStyleColor();
 
-                ImGui::TreePop();
+    if (open) {
+        ImGui::PushFont(context.font12);
+        ImGui::Indent();
+
+        std::string enableId = "enable_" + mName;
+        ImGui::PushID(enableId.c_str());
+        ImGui::Checkbox("Enable", &mEnabled);
+        ImGui::PopID();
+
+        bool modified = false;
+
+        for (auto& [k, v] : mNamedValues) {
+            if (ImGui::InputFloat(k.c_str(), (float*)((uint8_t*)&mSubpasses[0].editableInfo.pushConstants + v)), ImGuiInputTextFlags_EnterReturnsTrue) {
+                modified = true;
             }
         }
 
-        ImGui::TreePop();
+        for (int i = 0; i < mSubpasses.size(); i++) {
+            ImGui::PushStyleColor(ImGuiCol_Text, BUTTON_TEXT_COLOR);
+            std::string subpassName = "pass_" + std::to_string(i);
+            std::string subpassId = mName + subpassName;
+            ImGui::PushID(subpassId.c_str());
+            bool open = ImGui::CollapsingHeader(subpassName.c_str());
+            ImGui::PopID();
+            ImGui::PopStyleColor();
+
+            if (open) {
+                ImGui::Indent();
+                ImGui::Checkbox("Use screen size", &mSubpasses[i].editableInfo.dispatchSize.useScreenSize);
+                ImGui::InputFloat("Multiplier", &mSubpasses[i].editableInfo.dispatchSize.screenSizeMultiplier);
+                ImGui::InputFloat2("Custom size", (float *)&mSubpasses[i].editableInfo.dispatchSize.customSize);
+                ImGui::Unindent();
+            }
+
+            if (i > 0 && modified) {
+                mSubpasses[i].editableInfo.pushConstants = mSubpasses[0].editableInfo.pushConstants;
+            }
+        }
+
+        ImGui::Unindent();
+        ImGui::PopFont();
     }
 }

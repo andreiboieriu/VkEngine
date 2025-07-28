@@ -19,7 +19,8 @@ public:
         SKYBOX,
         EQUI_TO_CUBE,
         ENV_TO_IRR,
-        PREFILTER_ENV
+        PREFILTER_ENV,
+        DIR_SHADOW_MAP
     };
 
     enum class DescriptorSetLayoutType : uint8_t {
@@ -44,6 +45,7 @@ public:
     void bindDescriptorBuffers(VkCommandBuffer commandBuffer);
     VkDeviceSize createMaterialDescriptor(const MaterialResources& resources);
     VkDeviceSize createSceneDescriptor(VkDeviceAddress bufferAddress, VkDeviceSize size, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView, VkSampler sampler);
+    void updateSceneDescriptor(VkDeviceSize offset, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView, VkSampler sampler);
     MaterialInstance writeMaterial(VkDevice device, MaterialPass pass, const MaterialResources& resources);
 
 private:
@@ -63,6 +65,7 @@ private:
     void buildPhongPipeline(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
     void buildSpritePipeline(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
     void buildSkyboxPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
+    void buildShadowPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat);
 
     void freeResources();
 

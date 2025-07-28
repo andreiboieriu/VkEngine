@@ -5,6 +5,7 @@
 #include <span>
 #include <string>
 #include <filesystem>
+#include "colors.h"
 
 #include "spirv_reflect.h"
 
@@ -20,6 +21,7 @@ public:
         const AllocatedImage& bufferImage;
         VkExtent2D screenSize;
         VkSampler linearSampler;
+        glm::vec4 sunScreenPos;
 
         std::unordered_map<std::string, AllocatedImage>& additionalImages;
     };
@@ -44,8 +46,6 @@ public:
     struct EditableSubpassInfo {
         std::array<glm::vec4, 8> pushConstants;
         DispatchSize dispatchSize;
-
-        std::unordered_map<std::string, uint32_t> namedValues; // the value represents the offset from the start of push constants
     };
 
     struct Subpass {
@@ -53,7 +53,7 @@ public:
         VkPipelineLayout pipelineLayout;
         VkDescriptorSetLayout descriptorSetLayout;
 
-        static constexpr size_t pushConstantsSize = 80;
+        static constexpr size_t pushConstantsSize = 96;
 
         std::vector<BindingData> bindings;
         EditableSubpassInfo editableInfo;
@@ -64,7 +64,17 @@ public:
     ~ComputeEffect();
 
     void execute(VkCommandBuffer commandBuffer, Context context, bool sync);
-    void drawGui();
+    void drawGui(ImGuiContext& context);
+
+    void enable() {
+        mEnabled = true;
+    }
+
+    void disable() {
+        mEnabled = false;
+    }
+
+    void setValue(const std::string& name, float value);
 
 protected:
     void createPipelineLayout();
@@ -79,6 +89,7 @@ protected:
     VulkanEngine& mVkEngine;
 
     std::vector<Subpass> mSubpasses;
+    std::unordered_map<std::string, uint32_t> mNamedValues; // the value represents the offset from the start of push constants
 
     std::string mName;
     bool mEnabled = true;

@@ -12,14 +12,13 @@
 #include "entt.hpp"
 
 #include "vk_window.h"
+#include "scene_manager.h"
 
 #include <thread>
 
-constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 2;
+static constexpr unsigned int MAX_FRAMES_IN_FLIGHT = 3;
 constexpr uint32_t MAX_IMAGE_WIDTH = 3840;
 constexpr uint32_t MAX_IMAGE_HEIGHT = 2160;
-
-class Scene3D;
 
 class VulkanEngine {
 public:
@@ -59,12 +58,15 @@ public:
 		float renderScale = 1.0f;
 		bool enableFrustumCulling = true;
 		bool enableDrawSorting = true;
+		std::string entryPoint = "";
+		bool vsync = false;
 	};
 
 	// initializes everything in the engine
 	virtual void init(const std::vector<std::string>& cliArgs);
 	virtual void parseCliArgs(const std::vector<std::string>& cliArgs);
-
+	void parseConfig();
+	void saveConfigToFile();
 
 	// shuts down the engine
 	void cleanup();
@@ -96,6 +98,30 @@ public:
 		return *mAssetManager;
 	}
 
+	ScriptManager& getScriptManager() {
+	    return *mScriptManager;
+	}
+
+	SceneManager& getSceneManager() {
+	    return *mSceneManager;
+	}
+
+	Window& getWindow() {
+	    return *mWindow;
+	}
+
+	ComputeEffectsManager& getComputeEffectsManager() {
+	    return *mComputeEffectsManager;
+	}
+
+	ImGuiContext& getImGuiContext() {
+	    return mImGuiContext;
+	}
+
+	std::string getEntryPoint() {
+	    return mEngineConfig.entryPoint;
+	}
+
 	VkPhysicalDeviceDescriptorBufferPropertiesEXT getDescriptorBufferProperties() {
 		return mDescriptorBufferProperties;
 	}
@@ -112,6 +138,14 @@ public:
 		return mMaxSamplerAnisotropy;
 	}
 
+	glm::vec2 getDrawExtent() {
+	    return glm::vec2(mDrawExtent.width, mDrawExtent.height);
+	}
+
+	AllocatedImage& getShadowMap() {
+	    return mShadowDepthImage;
+	}
+
 	ComputeEffect::Context getComputeContext(AllocatedImage* colorImage = nullptr);
 
 	void immediateSubmit(std::function<void(VkCommandBuffer commandBuffer)>&& function, bool waitResult = false);
@@ -120,7 +154,7 @@ public:
 	void destroyBuffer(const AllocatedBuffer& buffer);
 	void *getDataFromBuffer(const AllocatedBuffer& buffer);
 
-	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false, bool createMipViews = false);
+	AllocatedImage createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false, bool createMipViews = false, bool msaa = false);
 	AllocatedImage createImage(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped = false);
 	AllocatedImage createCubemap(VkExtent2D size, VkFormat format, VkImageUsageFlags usage, std::optional<glm::vec3> color = std::nullopt, bool mipMapped = false);
 
@@ -154,12 +188,12 @@ protected:
 	void initCommands();
 	void initSyncStructs();
 	virtual void initImGui();
-	void initECS();
 
 	// draw loop
 	virtual void draw() = 0;
 	void drawImGui(VkCommandBuffer commandBuffer, VkImageView targetImageView);
 	void drawGeometry(VkCommandBuffer commandBuffer);
+	glm::mat4 renderShadowMap(VkCommandBuffer commandBuffer, uint32_t cascadeIndex, glm::mat4& lightView, glm::vec2 globalZ);
 
 	void drawLoadingScreen();
 
@@ -206,22 +240,33 @@ protected:
 	AllocatedImage mDepthImage;
 	AllocatedImage mBufferImage;
 
+	AllocatedImage mMsaaDrawImage;
+
+	const uint32_t SHADOW_CASCADES_COUNT = 4;
+	const uint32_t SHADOW_DEPTH_IMAGE_WIDTH = 2048;
+	const uint32_t SHADOW_DEPTH_IMAGE_HEIGHT = 2048;
+	AllocatedImage mShadowDepthImage;
+
 	// immediat submit structures
 	VkFence mImmFence;
 	VkCommandBuffer mImmCommandBuffer;
 	VkCommandPool mImmCommandPool;
 
+	std::filesystem::path mProjectPath = ".";
+
 	std::unique_ptr<PipelineResourceManager> mPipelineResourceManager;
 	std::unique_ptr<AssetManager> mAssetManager;
 	std::unique_ptr<ComputeEffectsManager> mComputeEffectsManager;
+	std::unique_ptr<SceneManager> mSceneManager;
+	std::unique_ptr<ScriptManager> mScriptManager;
 
 	RenderContext mRenderContext;
-
-	std::shared_ptr<Scene3D> mScene;
-	std::shared_ptr<Scene3D> mLoadingScene;
+	ImGuiContext mImGuiContext;
 
 	Stats mStats{};
 
 	VkPhysicalDeviceDescriptorBufferPropertiesEXT mDescriptorBufferProperties{};
 	float mMaxSamplerAnisotropy;
+
+	float mShadowDepth = 1100.f;
 };

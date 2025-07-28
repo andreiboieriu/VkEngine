@@ -6,9 +6,9 @@ struct Camera {
     float fov = 70.f;
     float aspectRatio;
     float near = 0.1f;
-    float far = 1000.f;
+    float far = 250.f;
 
-    bool enabled = false;
+    bool enabled = true;
 
     Camera();
     Camera(const Camera&) = default;

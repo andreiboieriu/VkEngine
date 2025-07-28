@@ -124,9 +124,9 @@ PipelineBuilder& PipelineBuilder::setCullMode(VkCullModeFlags cullMode, VkFrontF
     return *this;
 }
 
-PipelineBuilder& PipelineBuilder::setMultisampling() {
+PipelineBuilder& PipelineBuilder::setMultisampling(VkSampleCountFlagBits samples) {
     mMultisampling.sampleShadingEnable = VK_FALSE;
-    mMultisampling.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
+    mMultisampling.rasterizationSamples = samples;
     mMultisampling.minSampleShading = 1.0f;
     mMultisampling.pSampleMask = nullptr;
     mMultisampling.alphaToCoverageEnable = VK_FALSE;

@@ -48,13 +48,14 @@ void PipelineResourceManager::createDescriptorSetLayouts(VkDevice device) {
                         .addBinding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
                         .addBinding(2, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
                         .addBinding(3, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
+                        .addBinding(4, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
                         .build(device, nullptr, VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
         vkGetDescriptorSetLayoutSizeEXT(device, info.layout, &info.size);
         info.alignedSize = alignedSize(info.size, mDescriptorBufferProperties.descriptorBufferOffsetAlignment);
-        info.bindingOffsets.resize(4);
+        info.bindingOffsets.resize(5);
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             vkGetDescriptorSetLayoutBindingOffsetEXT(device, info.layout, i, &info.bindingOffsets[i]);
         }
 
@@ -120,8 +121,8 @@ void PipelineResourceManager::buildPBRPipelines(VkDevice device, VkFormat colorF
     mPipelines[PipelineType::PBR_OPAQUE_DOUBLE_SIDED].pipeline = pipelineBuilder.clear().setShaders(vertShader, fragShader)
                                               .setInputTopology(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST)
                                               .setPolygonMode(VK_POLYGON_MODE_FILL)
-                                              .setCullMode(VK_CULL_MODE_BACK_BIT, VK_FRONT_FACE_COUNTER_CLOCKWISE)
-                                              .setMultisampling()
+                                              .setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
+                                              .setMultisampling(VK_SAMPLE_COUNT_1_BIT)
                                               .disableBlending()
                                               .enableDepthTesting(true, VK_COMPARE_OP_GREATER)
                                               .setColorAttachmentFormat(colorFormat)
@@ -129,14 +130,15 @@ void PipelineResourceManager::buildPBRPipelines(VkDevice device, VkFormat colorF
                                               .setLayout(mPipelines[PipelineType::PBR_OPAQUE].layout)
                                               .buildPipeline(device,  VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
-    mPipelines[PipelineType::PBR_OPAQUE].pipeline = pipelineBuilder.setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
+    mPipelines[PipelineType::PBR_OPAQUE].pipeline = pipelineBuilder.setCullMode(VK_CULL_MODE_BACK_BIT, VK_FRONT_FACE_COUNTER_CLOCKWISE)
                                               .buildPipeline(device, VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
-    mPipelines[PipelineType::PBR_TRANSPARENT].pipeline = pipelineBuilder.enableBlendingAdditive()
-                                                   .enableDepthTesting(false, VK_COMPARE_OP_GREATER)
+    mPipelines[PipelineType::PBR_TRANSPARENT].pipeline = pipelineBuilder.enableBlendingAlphaBlend()
+                                                   .setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
+                                                   .enableDepthTesting(false, VK_COMPARE_OP_GREATER_OR_EQUAL)
                                                    .buildPipeline(device,  VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
-    mPipelines[PipelineType::PBR_TRANSPARENT_DOUBLE_SIDED].pipeline = pipelineBuilder.setCullMode(VK_CULL_MODE_BACK_BIT, VK_FRONT_FACE_COUNTER_CLOCKWISE)
+    mPipelines[PipelineType::PBR_TRANSPARENT_DOUBLE_SIDED].pipeline = pipelineBuilder
                                                          .buildPipeline(device, VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT);
 
     vkDestroyShaderModule(device, vertShader, nullptr);
@@ -178,10 +180,8 @@ void PipelineResourceManager::buildSpritePipeline(VkDevice device, VkFormat colo
                                               .setInputTopology(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST)
                                               .setPolygonMode(VK_POLYGON_MODE_FILL)
                                               .setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
-                                              .setMultisampling()
-                                            //   .enableBlendingAdditive()
+                                              .setMultisampling(VK_SAMPLE_COUNT_1_BIT)
                                               .enableBlendingAlphaBlend()
-                                              // .disableDepthTesting()
                                               .enableDepthTesting(false, VK_COMPARE_OP_GREATER) // ??
                                               .setColorAttachmentFormat(colorFormat)
                                               .setDepthFormat(depthFormat)
@@ -246,9 +246,9 @@ void PipelineResourceManager::buildSkyboxPipelines(VkDevice device, VkFormat col
                         .setInputTopology(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST)
                         .setPolygonMode(VK_POLYGON_MODE_FILL)
                         .setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
-                        .setMultisampling()
+                        .setMultisampling(VK_SAMPLE_COUNT_1_BIT)
                         .disableBlending()
-                        .enableDepthTesting(true, VK_COMPARE_OP_GREATER_OR_EQUAL)
+                        .enableDepthTesting(false, VK_COMPARE_OP_GREATER_OR_EQUAL)
                         .setColorAttachmentFormat(mVkEngine.getDrawImageFormat())
                         .setDepthFormat(mVkEngine.getDepthImageFormat())
                         .setLayout(mPipelines[PipelineType::SKYBOX].layout)
@@ -288,6 +288,49 @@ void PipelineResourceManager::buildSkyboxPipelines(VkDevice device, VkFormat col
     vkDestroyShaderModule(device, fragShader, nullptr);
 }
 
+void PipelineResourceManager::buildShadowPipelines(VkDevice device, VkFormat colorFormat, VkFormat depthFormat) {
+    std::vector<VkDescriptorSetLayout> setLayouts{};
+    std::vector<VkPushConstantRange> pushConstants(1);
+    pushConstants[0].offset = 0;
+    pushConstants[0].size = sizeof(DirShadowPushConstants);
+    pushConstants[0].stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+
+    // create pipeline layout
+    mPipelines[PipelineType::DIR_SHADOW_MAP].layout = vkutil::createPipelineLayout(
+        setLayouts,
+        pushConstants,
+        device
+    );
+
+    // load shaders
+    VkShaderModule vertShader;
+
+    if (!vkutil::loadShaderModule("shaders/dir_shadow.vert.spv", device, &vertShader)) {
+        fmt::println("Error when building shader: shaders/dir_shadow.vert.spv");
+    }
+
+    VkShaderModule fragShader;
+
+    if (!vkutil::loadShaderModule("shaders/dir_shadow.frag.spv", device, &fragShader)) {
+        fmt::println("Error when building shader: shaders/dir_shadow.frag.spv");
+    }
+
+    PipelineBuilder pipelineBuilder;
+    mPipelines[PipelineType::DIR_SHADOW_MAP].pipeline = pipelineBuilder.clear().setShaders(vertShader, fragShader)
+                                              .setInputTopology(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST)
+                                              .setPolygonMode(VK_POLYGON_MODE_FILL)
+                                              .setCullMode(VK_CULL_MODE_NONE, VK_FRONT_FACE_COUNTER_CLOCKWISE)
+                                              .setMultisampling(VK_SAMPLE_COUNT_1_BIT)
+                                              .disableBlending()
+                                              .enableDepthTesting(true, VK_COMPARE_OP_LESS)
+                                              .setDepthFormat(depthFormat)
+                                              .setLayout(mPipelines[PipelineType::DIR_SHADOW_MAP].layout)
+                                              .buildPipeline(device,  0);
+
+    vkDestroyShaderModule(device, vertShader, nullptr);
+    vkDestroyShaderModule(device, fragShader, nullptr);
+}
+
 void PipelineResourceManager::bindDescriptorBuffers(VkCommandBuffer commandBuffer) {
     VkDescriptorBufferBindingInfoEXT bindingInfo;
 
@@ -306,6 +349,7 @@ void PipelineResourceManager::init(VkDevice device, VkFormat colorFormat, VkForm
     buildPBRPipelines(device, colorFormat, depthFormat);
     buildSpritePipeline(device, colorFormat, depthFormat);
     buildSkyboxPipelines(device, colorFormat, depthFormat);
+    buildShadowPipelines(device, colorFormat, depthFormat);
 }
 
 void PipelineResourceManager::freeResources() {
@@ -345,6 +389,67 @@ MaterialInstance PipelineResourceManager::writeMaterial(VkDevice device, Materia
     materialInstance.descriptorOffset = createMaterialDescriptor(resources);
 
     return materialInstance;
+}
+
+void PipelineResourceManager::updateSceneDescriptor(VkDeviceSize offset, VkImageView irradianceMapView, VkImageView prefilteredEnvMapView, VkImageView brdflutView, VkSampler sampler) {
+    auto descriptorSetInfo = mDescriptorSetLayouts[DescriptorSetLayoutType::PBR_SCENE_DATA];
+
+    // create irradiance map descriptor
+    VkDescriptorImageInfo imageDescriptor{};
+
+    imageDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    imageDescriptor.imageView = irradianceMapView;
+    imageDescriptor.sampler = sampler;
+
+    VkDescriptorGetInfoEXT imageDescriptorInfo{};
+    imageDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    imageDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    imageDescriptorInfo.data.pCombinedImageSampler = &imageDescriptor;
+
+    vkGetDescriptorEXT(
+        mVkEngine.getDevice(),
+        &imageDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + offset + descriptorSetInfo.bindingOffsets[1]
+    );
+
+    // create prefiltered env map descriptor
+    VkDescriptorImageInfo prefilteredDescriptor{};
+
+    prefilteredDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    prefilteredDescriptor.imageView = prefilteredEnvMapView;
+    prefilteredDescriptor.sampler = sampler;
+
+    VkDescriptorGetInfoEXT prefilteredDescriptorInfo{};
+    prefilteredDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    prefilteredDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    prefilteredDescriptorInfo.data.pCombinedImageSampler = &prefilteredDescriptor;
+
+    vkGetDescriptorEXT(
+        mVkEngine.getDevice(),
+        &prefilteredDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + offset + descriptorSetInfo.bindingOffsets[2]
+    );
+
+    // create brdf lut descriptor
+    VkDescriptorImageInfo brdflutDescriptor{};
+
+    brdflutDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    brdflutDescriptor.imageView = brdflutView;
+    brdflutDescriptor.sampler = sampler;
+
+    VkDescriptorGetInfoEXT brdflutDescriptorInfo{};
+    brdflutDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    brdflutDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    brdflutDescriptorInfo.data.pCombinedImageSampler = &brdflutDescriptor;
+
+    vkGetDescriptorEXT(
+        mVkEngine.getDevice(),
+        &brdflutDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + offset + descriptorSetInfo.bindingOffsets[3]
+    );
 }
 
 VkDeviceSize PipelineResourceManager::createSceneDescriptor(
@@ -431,6 +536,25 @@ VkDeviceSize PipelineResourceManager::createSceneDescriptor(
         &brdflutDescriptorInfo,
         mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
         (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + descriptorSetInfo.bindingOffsets[3]
+    );
+
+    // create shadow map descriptor
+    VkDescriptorImageInfo shadowMapDescriptor{};
+
+    shadowMapDescriptor.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    shadowMapDescriptor.imageView = mVkEngine.getShadowMap().imageView;
+    shadowMapDescriptor.sampler = sampler;
+
+    VkDescriptorGetInfoEXT shadowMapDescriptorInfo{};
+    shadowMapDescriptorInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT;
+    shadowMapDescriptorInfo.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    shadowMapDescriptorInfo.data.pCombinedImageSampler = &shadowMapDescriptor;
+
+    vkGetDescriptorEXT(
+        mVkEngine.getDevice(),
+        &shadowMapDescriptorInfo,
+        mDescriptorBufferProperties.combinedImageSamplerDescriptorSize,
+        (char*)mDescriptorBuffer.allocInfo.pMappedData + mCurrentOffset + descriptorSetInfo.bindingOffsets[4]
     );
 
     VkDeviceSize retOffset = mCurrentOffset;

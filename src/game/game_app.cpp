@@ -5,10 +5,6 @@
 #include "vk_images.h"
 #include "vk_scene.h"
 
-#include <imgui.h>
-#include <imgui_impl_glfw.h>
-#include <imgui_impl_vulkan.h>
-
 void GameApp::draw() {
     // get start time
     auto start = std::chrono::system_clock::now();
@@ -16,7 +12,6 @@ void GameApp::draw() {
     // wait until gpu finishes rendering last frame
     VK_CHECK(vkWaitForFences(mDevice, 1, &getCurrentFrame().renderFence, VK_TRUE, UINT64_MAX));
     VK_CHECK(vkResetFences(mDevice, 1, &getCurrentFrame().renderFence));
-
 
     // flush deletion queue of current frame
     getCurrentFrame().deletionQueue.flush();
@@ -34,9 +29,10 @@ void GameApp::draw() {
     VkExtent2D windowExtent = mWindow->getExtent();
 
     // set draw extent
-    mDrawExtent.width = std::min(windowExtent.width, mDrawImage.imageExtent.width) * mEngineConfig.renderScale;
-    mDrawExtent.height = std::min(windowExtent.height, mDrawImage.imageExtent.height) * mEngineConfig.renderScale;
+    mDrawExtent.width = std::min(windowExtent.width * mEngineConfig.renderScale, 1.f * mDrawImage.imageExtent.width);
+    mDrawExtent.height = std::min(windowExtent.height * mEngineConfig.renderScale, 1.f * mDrawImage.imageExtent.height);
 
+    mRenderContext.drawExtent = glm::vec2(mDrawExtent.width, mDrawExtent.height);
 
     // get command buffer from current frame
     VkCommandBuffer commandBuffer = getCurrentFrame().mainCommandBuffer;
@@ -49,12 +45,13 @@ void GameApp::draw() {
     VK_CHECK(vkBeginCommandBuffer(commandBuffer, &commandBufferBeginInfo));
 
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
-    vkutil::transitionImage(commandBuffer, mDepthImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
+    vkutil::transitionImage(commandBuffer, mDepthImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL, VK_IMAGE_ASPECT_DEPTH_BIT);
 
     drawGeometry(commandBuffer);
 
     // transition draw image to general layout for adding post-processing
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
+    vkutil::transitionImage(commandBuffer, mDepthImage.image, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_ASPECT_DEPTH_BIT);
 
     // execute post processing effects
     {
@@ -70,19 +67,14 @@ void GameApp::draw() {
 
     // transition draw and swapchain image into transfer layouts
     vkutil::transitionImage(commandBuffer, mDrawImage.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+    // vkutil::transitionImage(commandBuffer, mDepthImage.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
     vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
 
     // copy draw image to swapchain image
     vkutil::copyImageToImage(commandBuffer, mDrawImage.image, swapchainImage, mDrawExtent, windowExtent);
 
-    // transition swapchain image to Attachment Optimal so we can draw directly to it
-    vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
-
-    // draw ImGui into the swapchain image
-    drawImGui(commandBuffer, mWindow->getCurrentSwapchainImageView());
-
     // transition swapchain image into a presentable layout
-    vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_PRESENT_SRC_KHR);
+    vkutil::transitionImage(commandBuffer, swapchainImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_PRESENT_SRC_KHR);
 
     // finalize command buffer
     VK_CHECK(vkEndCommandBuffer(commandBuffer));
@@ -114,8 +106,8 @@ void GameApp::update() {
     // get start time
     auto start = std::chrono::system_clock::now();
 
-    mScene->update(mDeltaTime, mWindow->getInput(), mFrameNumber);
-    mScene->render(mRenderContext);
+    mSceneManager->getActiveScene().update(mDeltaTime, mWindow->getInput());
+    mSceneManager->getActiveScene().render(mRenderContext);
 
     // get end time
     auto end = std::chrono::system_clock::now();
@@ -125,40 +117,5 @@ void GameApp::update() {
 }
 
 void GameApp::drawGui() {
-    // imgui new frame
-    ImGui_ImplVulkan_NewFrame();
-    ImGui_ImplGlfw_NewFrame();
-    ImGui::NewFrame();
 
-    ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
-
-    if (ImGui::Begin("Stats")) {
-        ImGui::Text("fps %i", mStats.fps);
-        ImGui::Text("frametime %f ms", mStats.frameTime);
-        ImGui::Text("update time %f ms", mStats.updateTime);
-        ImGui::Text("draw time %f ms", mStats.drawTime);
-        ImGui::Text("draw geometry time %f ms", mStats.drawGeometryTime);
-        ImGui::Text("post effects time %f ms", mStats.postEffectsTime);
-        ImGui::Text("triangles %i", mStats.triangleCount);
-        ImGui::Text("draws %i", mStats.drawCallCount);
-        ImGui::End();
-    }
-
-
-    if (!mWindow->isCursorLocked()) {
-        ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
-
-        if (ImGui::Begin("Engine Config", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
-            ImGui::Checkbox("Enable frustum culling", &mEngineConfig.enableFrustumCulling);
-            ImGui::Checkbox("Enable draw sorting", &mEngineConfig.enableDrawSorting);
-            ImGui::SliderFloat("Render Scale", &mEngineConfig.renderScale, 0.3f, 2.f);
-            ImGui::End();
-        }
-        // mScene->drawGui();
-        mWindow->drawGui();
-        mComputeEffectsManager->drawGui();
-    }
-
-    // render ImGui
-    ImGui::Render();
 }

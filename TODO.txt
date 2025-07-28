@@ -1,24 +1,9 @@
-- pre compute skybox maps
+- add naming for new scenes/scripts
+- point/spot lights
 
-High Priority:
-- continue developing the editor
-    - project selection screen
-    - simple editor ui containing scene hierarchy and component view
-    - ability to add objects to the scene
+sug pulaaaaaaaaaaa
 
 - embed default shaders into the binary using xxd (think about structuring them)
 - load all compute shaders when the program starts, then activate them per scene
-
-- see segfault with loading thread
-- scene manager should be added
-- script manager should be global
-- add ability to buffer scenes
-- add ability to switch scenes
-
-Medium Priority:
+- see segfault with loading thread (fixed?)
 - Multithreaded resource loading? (almost done)
-
-Low priority:
-- maybe find a better solution that stopping the app when minimized?
-
-https://www.froyok.fr/blog/2021-09-ue4-custom-lens-flare/

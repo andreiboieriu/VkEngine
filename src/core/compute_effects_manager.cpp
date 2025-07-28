@@ -5,11 +5,10 @@
 #include <set>
 
 ComputeEffectsManager::ComputeEffectsManager(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
-    loadEffects();
 }
 
 void ComputeEffectsManager::loadEffects() {
-    static const std::filesystem::path root("assets/compute_effects/");
+    static const std::filesystem::path root(mProjectPath + "/assets/compute_effects/");
     static const std::set<std::string> reservedNames{
         "textures"
     };
@@ -30,7 +29,7 @@ void ComputeEffectsManager::loadEffects() {
 }
 
 void ComputeEffectsManager::parseGlobalConfig() {
-    static const std::filesystem::path path("assets/compute_effects/global_config.json");
+    static const std::filesystem::path path(mProjectPath + "/assets/compute_effects/global_config.json");
 
     if (!std::filesystem::exists(path)) {
         fmt::print("Error: Missing compute effects global config\n");
@@ -63,6 +62,8 @@ void ComputeEffectsManager::parseGlobalConfig() {
 }
 
 void ComputeEffectsManager::loadEffect(const std::filesystem::path& path) {
+    fmt::println("Loading post-processing effect: {}", path.stem().c_str());
+
     std::string name = path.stem();
 
     if (mEffects.contains(name)) {
@@ -71,7 +72,6 @@ void ComputeEffectsManager::loadEffect(const std::filesystem::path& path) {
     }
 
     mEffects[name] = std::make_unique<ComputeEffect>(path, mVkEngine);
-    fmt::println("Successfully loaded effect: {}", name);
 }
 
 void ComputeEffectsManager::executeEffects(VkCommandBuffer commandBuffer, ComputeEffect::Context context) {
@@ -82,12 +82,14 @@ void ComputeEffectsManager::executeEffects(VkCommandBuffer commandBuffer, Comput
     }
 }
 
-void ComputeEffectsManager::drawGui() {
-    if (ImGui::Begin("Compute Effects")) {
-        for (auto& [k, v] : mEffects) {
-            v->drawGui();
-        }
+void ComputeEffectsManager::drawGui(ImGuiContext& context) {
+    ImGui::PushStyleColor(ImGuiCol_Header, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_HeaderActive, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_HeaderHovered, HOVERED_BUTTON_COLOR);
 
-        ImGui::End();
+    for (auto& [k, v] : mEffects) {
+        v->drawGui(context);
     }
+
+    ImGui::PopStyleColor(3);
 }

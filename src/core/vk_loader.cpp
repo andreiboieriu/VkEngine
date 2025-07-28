@@ -167,10 +167,10 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         samplerInfo.anisotropyEnable = VK_TRUE;
         samplerInfo.maxAnisotropy = mVkEngine.getMaxSamplerAnisotropy();
 
-        samplerInfo.magFilter = extractFilter(sampler.magFilter.value_or(fastgltf::Filter::Nearest));
-        samplerInfo.minFilter = extractFilter(sampler.minFilter.value_or(fastgltf::Filter::Nearest));
+        samplerInfo.magFilter = extractFilter(sampler.magFilter.value_or(fastgltf::Filter::Linear));
+        samplerInfo.minFilter = extractFilter(sampler.minFilter.value_or(fastgltf::Filter::Linear));
 
-        samplerInfo.mipmapMode = extractMipmapMode(sampler.minFilter.value_or(fastgltf::Filter::Nearest));
+        samplerInfo.mipmapMode = extractMipmapMode(sampler.minFilter.value_or(fastgltf::Filter::Linear));
 
         VkSampler newSampler;
         vkCreateSampler(mVkEngine.getDevice(), &samplerInfo, nullptr, &newSampler);
@@ -236,7 +236,6 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         // get textures from gltf file
         if (material.pbrData.baseColorTexture.has_value()) {
             size_t image = asset.textures[material.pbrData.baseColorTexture.value().textureIndex].imageIndex.value();
-            fmt::println("Base color index {}", image);
 
             auto sampler = asset.textures[material.pbrData.baseColorTexture.value().textureIndex].samplerIndex;
 
@@ -250,7 +249,6 @@ void LoadedGLTF::load(std::filesystem::path filePath) {
         if (material.pbrData.metallicRoughnessTexture.has_value()) {
             size_t image = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].imageIndex.value();
             auto sampler = asset.textures[material.pbrData.metallicRoughnessTexture.value().textureIndex].samplerIndex;
-            fmt::println("Metal Rough index {}", image);
 
             if (sampler.has_value()) {
                 materialResources.metalRoughSampler = samplers[sampler.value()];
@@ -507,7 +505,7 @@ void GLTFNode::draw(const glm::mat4& transform, RenderContext& context) {
             object.transform = nodeTransform;
             object.vertexBufferAddress = mMesh->meshBuffers.vertexBufferAddress;
 
-            if (surface.material->materialInstance.passType == MaterialPass::Opaque) {
+            if (surface.material->materialInstance.passType == MaterialPass::Opaque || surface.material->materialInstance.passType == MaterialPass::OpaqueDoubleSided) {
                 context.opaqueObjects.push_back(object);
             } else {
                 context.transparentObjects.push_back(object);

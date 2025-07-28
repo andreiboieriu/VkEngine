@@ -93,3 +93,10 @@ add_library(lua STATIC IMPORTED GLOBAL)
 set_target_properties(lua PROPERTIES
                       IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/lua/liblua.a"
                       INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/lua/include")
+
+# ktx
+add_library(ktx SHARED IMPORTED GLOBAL)
+set_target_properties(ktx PROPERTIES
+    IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/ktx/libktx.so.4.4.0"
+    INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/ktx/include"
+)

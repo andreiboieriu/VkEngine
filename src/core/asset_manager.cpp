@@ -13,26 +13,76 @@
 #include "glm/trigonometric.hpp"
 #include <glm/gtc/packing.hpp>
 
+#include <imgui_impl_vulkan.h>
+#include <ktx.h>
+#include <ktxvulkan.h>
+
 AssetManager::AssetManager(VulkanEngine& vkEngine) : mVkEngine(vkEngine) {
     loadDefaultSamplers();
     loadDefaultMeshes();
     loadDefaultImages();
-    loadComputeEffectTextures();
+    loadImguiTextures();
+
+    std::filesystem::path path = mProjectPath + "/assets/compute_effects/textures";
+
+    for (const auto& entry : std::filesystem::directory_iterator(path)) {
+        loadImage(entry.path().filename(), VK_FORMAT_R8G8B8A8_UNORM, ImageType::COMPUTE);
+    }
 }
 
 AssetManager::~AssetManager() {
     freeResources();
 }
 
-void AssetManager::loadImage(const std::filesystem::path& filename, VkFormat format, bool computeRelated) {
-    auto& target = computeRelated ? mComputeImages : mImages;
+void AssetManager::loadAllAssets() {
+    std::filesystem::path path = mProjectPath + "/assets/sprites";
 
-    if (target.contains(filename.stem())) {
+    for (const auto& entry : std::filesystem::directory_iterator(path)) {
+        loadImage(entry.path().filename(), VK_FORMAT_R8G8B8A8_SRGB, ImageType::SPRITE);
+    }
+
+    path = mProjectPath + "/assets/compute_effects/textures";
+
+    for (const auto& entry : std::filesystem::directory_iterator(path)) {
+        loadImage(entry.path().filename(), VK_FORMAT_R8G8B8A8_UNORM, ImageType::COMPUTE);
+    }
+
+    path = mProjectPath + "/assets/gltfs";
+
+    for (const auto& entry : std::filesystem::directory_iterator(path)) {
+        loadGltf(entry.path().filename());
+    }
+
+    loadBrdfLut();
+
+    path = mProjectPath + "/assets/skyboxes";
+
+    for (const auto& entry : std::filesystem::directory_iterator(path)) {
+        if (std::filesystem::is_directory(entry.path()) || !entry.path().has_extension() || entry.path().extension() != ".hdr") {
+            continue;
+        }
+
+        loadSkybox(entry.path().filename());
+    }
+}
+
+void AssetManager::loadImage(const std::filesystem::path& filename, VkFormat format, ImageType type) {
+    std::filesystem::path filePath = mProjectPath + SPRITES_PATH;
+    auto* target = &mImages;
+
+    if (type == ImageType::COMPUTE) {
+        target = &mComputeImages;
+        filePath = mProjectPath + COMPUTE_IMAGES_PATH;
+    } else if (type == ImageType::IMGUI) {
+        filePath = IMGUI_PATH;
+    }
+
+    if (target->contains(filename)) {
         return;
     }
 
-    std::filesystem::path filePath = (computeRelated ? COMPUTE_IMAGES_PATH : SPRITES_PATH) + filename.string();
-    fmt::println("Trying to load cock: {}", filePath.string());
+    filePath += filename.string();
+    fmt::println("Loading image: {}", filename.c_str());
 
     // check if file exists
     if (!std::filesystem::exists(filePath)) {
@@ -50,7 +100,7 @@ void AssetManager::loadImage(const std::filesystem::path& filename, VkFormat for
     }
 
     // create image resource
-    target[filename.stem()] = mVkEngine.createImage(
+    auto newImage = mVkEngine.createImage(
         data,
         VkExtent3D{(uint32_t)width, (uint32_t)height, 1},
         format,
@@ -59,22 +109,51 @@ void AssetManager::loadImage(const std::filesystem::path& filename, VkFormat for
     );
 
     stbi_image_free(data);
+
+    if (type == ImageType::COMPUTE) {
+        mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
+            vkutil::transitionImage(commandBuffer, newImage.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
+        }, true);
+    }
+
+    if (type == ImageType::IMGUI) {
+        ImTextureID id = ImGui_ImplVulkan_AddTexture(
+            mDefaultSamplers["linear"],
+            newImage.imageView,
+            VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL
+        );
+
+        mImguiImages[filename] = {newImage, id};
+    } else {
+        (*target)[filename] = newImage;
+    }
 }
 
 void AssetManager::loadComputeEffectTextures() {
-    static const std::filesystem::path path("assets/compute_effects/textures");
+    static const std::filesystem::path path(mProjectPath + "/assets/compute_effects/textures");
 
     if (!std::filesystem::exists(path)) {
         return;
     }
 
     for (const auto& entry : std::filesystem::directory_iterator(path)) {
-        fmt::println("Found cock entry: {}", entry.path().string());
-        loadImage(entry.path().filename(), VK_FORMAT_R8G8B8A8_UNORM, true);
+        loadImage(entry.path().filename(), VK_FORMAT_R8G8B8A8_UNORM, ImageType::COMPUTE);
 
         mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
-            vkutil::transitionImage(commandBuffer, mComputeImages[entry.path().stem()].image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
+            vkutil::transitionImage(commandBuffer, mComputeImages[entry.path().stem()].image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_GENERAL);
         });
+    }
+}
+
+void AssetManager::loadImguiTextures() {
+    static const std::filesystem::path path("assets/imgui");
+
+    if (!std::filesystem::exists(path)) {
+        return;
+    }
+
+    for (const auto& entry : std::filesystem::directory_iterator(path)) {
+        loadImage(entry.path().filename(), VK_FORMAT_R8G8B8A8_SRGB, ImageType::IMGUI);
     }
 }
 
@@ -83,7 +162,7 @@ void AssetManager::loadGltf(const std::string& name) {
         return;
     }
 
-    std::filesystem::path filePath = GLTFS_PATH + name;
+    std::filesystem::path filePath = mProjectPath + GLTFS_PATH + name;
 
     // check if file exists
     if (!std::filesystem::exists(filePath)) {
@@ -91,7 +170,7 @@ void AssetManager::loadGltf(const std::string& name) {
         return;
     }
 
-    fmt::println("Loading GLTF: {}", filePath.string());
+    fmt::println("Loading GLTF: {}", name);
 
     mLoadedGltfs[name] = std::make_unique<LoadedGLTF>(filePath, mVkEngine);
 }
@@ -125,8 +204,6 @@ void AssetManager::renderToCubemap(
     // modify size according to mip level
     destSize.width >>= mipLevel;
     destSize.height >>= mipLevel;
-
-    fmt::println("dest size: {} {}, mip: {}", destSize.width, destSize.height, mipLevel);
 
     auto cubeMesh = mMeshes["cube"];
 
@@ -211,6 +288,249 @@ void AssetManager::renderToCubemap(
     mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
         vkutil::transitionImage(commandBuffer, dest.image, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
     });
+}
+
+void AssetManager::saveSkyboxKtx(const std::string& name) {
+    if (!mSkyboxes.contains(name)) {
+        fmt::println("Error: attempting to save non-loaded skybox {} to ktx file.", name);
+        return;
+    }
+
+    auto& skybox = mSkyboxes[name];
+
+    if (!std::filesystem::exists(mProjectPath + "/assets/skyboxes/brdf_lut.ktx2")) {
+        auto& image = skybox.brdfLut;
+
+        ktxTexture2* texture;
+        ktxTextureCreateInfo createInfo = {};
+        createInfo.vkFormat = VK_FORMAT_R16G16B16A16_SFLOAT;
+        createInfo.baseWidth = image.imageExtent.width;
+        createInfo.baseHeight = image.imageExtent.height;
+        createInfo.baseDepth = 1;
+        createInfo.numLevels = image.mipLevels;
+        createInfo.numLayers = 1;
+        createInfo.numFaces = 1;
+        createInfo.isArray = false;
+        createInfo.numDimensions = 2;
+        ktxTexture2_Create(&createInfo, KTX_TEXTURE_CREATE_ALLOC_STORAGE, &texture);
+
+        uint32_t size = vkutil::getPixelSize(image.imageFormat) * image.imageExtent.width * image.imageExtent.height;
+        AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+
+            VkBufferImageCopy copyRegion = {};
+            copyRegion.bufferOffset = 0;
+            copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+            copyRegion.imageSubresource.mipLevel = 0;
+            copyRegion.imageSubresource.baseArrayLayer = 0;
+            copyRegion.imageSubresource.layerCount = 1;
+            copyRegion.imageExtent.width = image.imageExtent.width;
+            copyRegion.imageExtent.height = image.imageExtent.height;
+            copyRegion.imageExtent.depth = 1;
+            vkCmdCopyImageToBuffer(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }, true);
+
+        void* data = mVkEngine.getDataFromBuffer(staging);
+        memcpy(texture->pData, data, size);
+
+        mVkEngine.destroyBuffer(staging);
+
+        std::string path = mProjectPath + "/assets/skyboxes/brdf_lut.ktx2";
+        ktxTexture2_WriteToNamedFile(texture, path.c_str());
+        ktxTexture2_Destroy(texture);
+    }
+
+    std::string stem = std::filesystem::path(name).stem();
+
+    if (!std::filesystem::exists(mProjectPath + "/assets/skyboxes/" + stem)) {
+        std::filesystem::create_directory(mProjectPath + "/assets/skyboxes/" + stem);
+    }
+
+    if (!std::filesystem::exists(mProjectPath + "/assets/skyboxes/" + stem + "/irradiance.ktx2")) {
+        auto& image = skybox.irrMap;
+
+        ktxTexture2* texture;
+        ktxTextureCreateInfo createInfo = {};
+        createInfo.vkFormat = VK_FORMAT_R16G16B16A16_SFLOAT;
+        createInfo.baseWidth = image.imageExtent.width;
+        createInfo.baseHeight = image.imageExtent.height;
+        createInfo.baseDepth = 1;
+        createInfo.numLevels = image.mipLevels;
+        createInfo.numLayers = 6;
+        createInfo.numFaces = 1;
+        createInfo.isArray = true;
+        createInfo.numDimensions = 2;
+
+        if (ktxTexture2_Create(&createInfo, KTX_TEXTURE_CREATE_ALLOC_STORAGE, &texture) != KTX_SUCCESS) {
+            fmt::println("Error: Failed to create ktx irr texture {}", image.mipLevels);
+            return;
+        }
+
+        uint32_t faceSize = vkutil::getPixelSize(image.imageFormat) * image.imageExtent.width * image.imageExtent.height;
+        uint32_t size = faceSize * 6;
+        AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+            VkBufferImageCopy copyRegion = {};
+            copyRegion.bufferOffset = 0;
+            copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+            copyRegion.imageSubresource.mipLevel = 0;
+            copyRegion.imageSubresource.baseArrayLayer = 0;
+            copyRegion.imageSubresource.layerCount = 6;
+            copyRegion.imageExtent.width = image.imageExtent.width;
+            copyRegion.imageExtent.height = image.imageExtent.height;
+            copyRegion.imageExtent.depth = 1;
+            vkCmdCopyImageToBuffer(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+            vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }, true);
+
+
+        for (int face = 0; face < 6; face++) {
+            ktx_size_t offset;
+            ktxTexture2_GetImageOffset(texture, 0, face, 0, &offset);
+            void* data = static_cast<uint8_t*>(texture->pData) + offset;
+            void* stagingData = static_cast<uint8_t*>(mVkEngine.getDataFromBuffer(staging)) + faceSize * face;
+
+            memcpy(data, stagingData, faceSize);
+        }
+
+        mVkEngine.destroyBuffer(staging);
+
+        std::string path = mProjectPath + "/assets/skyboxes/" + stem + "/irradiance.ktx2";
+        ktxTexture2_WriteToNamedFile(texture, path.c_str());
+        ktxTexture_Destroy(ktxTexture(texture));
+    }
+
+    if (!std::filesystem::exists(mProjectPath + "/assets/skyboxes/" + stem + "/environment.ktx2")) {
+        auto& image = skybox.envMap;
+
+        ktxTexture2* texture;
+        ktxTextureCreateInfo createInfo = {};
+        createInfo.vkFormat = VK_FORMAT_R16G16B16A16_SFLOAT;
+        createInfo.baseWidth = image.imageExtent.width;
+        createInfo.baseHeight = image.imageExtent.height;
+        createInfo.baseDepth = 1;
+        createInfo.numLevels = image.mipLevels;
+        createInfo.numLayers = 6;
+        createInfo.numFaces = 1;
+        createInfo.isArray = true;
+        createInfo.numDimensions = 2;
+
+        if (ktxTexture2_Create(&createInfo, KTX_TEXTURE_CREATE_ALLOC_STORAGE, &texture) != KTX_SUCCESS) {
+            fmt::println("Error: Failed to create ktx irr texture {}", image.mipLevels);
+            return;
+        }
+
+        uint32_t faceSize = vkutil::getPixelSize(image.imageFormat) * image.imageExtent.width * image.imageExtent.height;
+        uint32_t size = faceSize * 6;
+        AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+        for (int mip = 0; mip < image.mipLevels; mip++) {
+            mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+                if (mip == 0)
+                    vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+
+                VkBufferImageCopy copyRegion = {};
+                copyRegion.bufferOffset = 0;
+                copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+                copyRegion.imageSubresource.mipLevel = mip;
+                copyRegion.imageSubresource.baseArrayLayer = 0;
+                copyRegion.imageSubresource.layerCount = 6;
+                copyRegion.imageExtent.width = image.imageExtent.width >> mip;
+                copyRegion.imageExtent.height = image.imageExtent.height >> mip;
+                copyRegion.imageExtent.depth = 1;
+                vkCmdCopyImageToBuffer(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+
+                if (mip == image.mipLevels - 1)
+                    vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+            }, true);
+
+            for (int face = 0; face < 6; face++) {
+                size_t adjustedFaceSize = faceSize >> (2 * mip);
+
+                ktx_size_t offset;
+                ktxTexture2_GetImageOffset(texture, mip, face, 0, &offset);
+                void* data = static_cast<uint8_t*>(texture->pData) + offset;
+                void* stagingData = static_cast<uint8_t*>(mVkEngine.getDataFromBuffer(staging)) + adjustedFaceSize * face;
+
+                memcpy(data, stagingData, adjustedFaceSize);
+            }
+        }
+
+        mVkEngine.destroyBuffer(staging);
+
+        std::string path = mProjectPath + "/assets/skyboxes/" + stem + "/environment.ktx2";
+        ktxTexture2_WriteToNamedFile(texture, path.c_str());
+        ktxTexture_Destroy(ktxTexture(texture));
+    }
+
+    if (!std::filesystem::exists(mProjectPath + "/assets/skyboxes/" + stem + "/prefiltered.ktx2")) {
+        auto& image = skybox.prefilteredEnvMap;
+
+        ktxTexture2* texture;
+        ktxTextureCreateInfo createInfo = {};
+        createInfo.vkFormat = VK_FORMAT_R16G16B16A16_SFLOAT;
+        createInfo.baseWidth = image.imageExtent.width;
+        createInfo.baseHeight = image.imageExtent.height;
+        createInfo.baseDepth = 1;
+        createInfo.numLevels = 5;
+        createInfo.numLayers = 6;
+        createInfo.numFaces = 1;
+        createInfo.isArray = true;
+        createInfo.numDimensions = 2;
+
+        if (ktxTexture2_Create(&createInfo, KTX_TEXTURE_CREATE_ALLOC_STORAGE, &texture) != KTX_SUCCESS) {
+            fmt::println("Error: Failed to create ktx irr texture {}", image.mipLevels);
+            return;
+        }
+
+        uint32_t faceSize = vkutil::getPixelSize(image.imageFormat) * image.imageExtent.width * image.imageExtent.height;
+        uint32_t size = faceSize * 6;
+        AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+        for (int mip = 0; mip < 5; mip++) {
+            mVkEngine.immediateSubmit([&](VkCommandBuffer cmd) {
+                if (mip == 0)
+                    vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+
+                VkBufferImageCopy copyRegion = {};
+                copyRegion.bufferOffset = 0;
+                copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+                copyRegion.imageSubresource.mipLevel = mip;
+                copyRegion.imageSubresource.baseArrayLayer = 0;
+                copyRegion.imageSubresource.layerCount = 6;
+                copyRegion.imageExtent.width = image.imageExtent.width >> mip;
+                copyRegion.imageExtent.height = image.imageExtent.height >> mip;
+                copyRegion.imageExtent.depth = 1;
+                vkCmdCopyImageToBuffer(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+
+                if (mip == 4)
+                    vkutil::transitionImage(cmd, image.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+            }, true);
+
+            for (int face = 0; face < 6; face++) {
+                size_t adjustedFaceSize = faceSize >> (2 * mip);
+
+                ktx_size_t offset;
+                ktxTexture2_GetImageOffset(texture, mip, face, 0, &offset);
+                void* data = static_cast<uint8_t*>(texture->pData) + offset;
+                void* stagingData = static_cast<uint8_t*>(mVkEngine.getDataFromBuffer(staging)) + adjustedFaceSize * face;
+
+                memcpy(data, stagingData, adjustedFaceSize);
+            }
+        }
+
+        mVkEngine.destroyBuffer(staging);
+
+        std::string path = mProjectPath + "/assets/skyboxes/" + stem + "/prefiltered.ktx2";
+        ktxTexture2_WriteToNamedFile(texture, path.c_str());
+        ktxTexture_Destroy(ktxTexture(texture));
+    }
 }
 
 void AssetManager::saveSkyboxToFile(const SkyboxAsset& skybox) {
@@ -428,37 +748,48 @@ void AssetManager::loadSkybox(const std::string& name) {
         return;
     }
 
-    std::filesystem::path filePath = SKYBOXES_PATH + name;
+    if (!mDefaultImages.contains("brdflut")) {
+        loadBrdfLut();
+    }
+
+    fmt::println("Loading skybox: {}", name);
+    std::filesystem::path filePath = mProjectPath + SKYBOXES_PATH + name;
+
+    std::filesystem::path precomputedPath = mProjectPath + SKYBOXES_PATH + filePath.stem().string();
+    bool precomputed = std::filesystem::exists(precomputedPath) && std::filesystem::is_directory(precomputedPath);
+
     SkyboxAsset skybox{};
     skybox.name = name;
 
-    if (!std::filesystem::exists(filePath)) {
-        fmt::println("failed to find skybox file: {}", filePath.string());
-        return;
-    }
-
-    if (!filePath.filename().string().ends_with(".hdr")) {
-        fmt::println("unsupported skybox format: {}", filePath.string());
-        return;
-    }
-
-    // load hdr image using stb
-    int width, height, nrChannels;
-    float* data = stbi_loadf(filePath.string().c_str(), &width, &height, &nrChannels, 4);
-
-    if (!data) {
-        fmt::println("failed to load skybox file using stb: {}", filePath.string());
-        return;
-    }
-
     // create hdr image
-    skybox.hdrImage = mVkEngine.createImage(
-        data,
-        VkExtent3D{static_cast<uint32_t>(width), static_cast<uint32_t>(height), 1},
-        VK_FORMAT_R32G32B32A32_SFLOAT,
-        VK_IMAGE_USAGE_SAMPLED_BIT,
-        false
-    );
+    if (!precomputed) {
+        if (!std::filesystem::exists(filePath)) {
+            fmt::println("failed to find skybox file: {}", filePath.string());
+            return;
+        }
+
+        if (!filePath.filename().string().ends_with(".hdr")) {
+            fmt::println("unsupported skybox format: {}", filePath.string());
+            return;
+        }
+
+        // load hdr image using stb
+        int width, height, nrChannels;
+        float* data = stbi_loadf(filePath.string().c_str(), &width, &height, &nrChannels, 4);
+
+        if (!data) {
+            fmt::println("failed to load skybox file using stb: {}", filePath.string());
+            return;
+        }
+
+        skybox.hdrImage = mVkEngine.createImage(
+            data,
+            VkExtent3D{static_cast<uint32_t>(width), static_cast<uint32_t>(height), 1},
+            VK_FORMAT_R32G32B32A32_SFLOAT,
+            VK_IMAGE_USAGE_SAMPLED_BIT,
+            false
+        );
+    }
 
     // create environment map
     skybox.envMap = mVkEngine.createCubemap(
@@ -469,15 +800,81 @@ void AssetManager::loadSkybox(const std::string& name) {
         true
     );
 
-    for (int i = 0; i < skybox.envMap.mipLevels; i++) {
-        renderToCubemap(
-            skybox.hdrImage,
-            skybox.envMap,
-            mVkEngine.getPipelineResourceManager().getPipeline(PipelineResourceManager::PipelineType::EQUI_TO_CUBE),
-            SkyboxAsset::ENV_MAP_SIZE,
-            i,
-            true
-        );
+    if (precomputed) {
+        std::string path = precomputedPath.string() + "/environment.ktx2";
+        ktxTexture2* texture;
+        KTX_error_code result = ktxTexture2_CreateFromNamedFile(path.c_str(), KTX_TEXTURE_CREATE_LOAD_IMAGE_DATA_BIT, &texture);
+
+        if (result != KTX_SUCCESS) {
+            fmt::println("Failed to load environment map from ktx2 file.");
+            return;
+        }
+
+        uint32_t faceSize = vkutil::getPixelSize(skybox.envMap.imageFormat) * skybox.envMap.imageExtent.width * skybox.envMap.imageExtent.height;
+        uint32_t size = faceSize * 6;
+
+        AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
+
+        for (int mip = 0; mip < skybox.envMap.mipLevels; mip++) {
+            for (int face = 0; face < 6; face++) {
+                size_t adjustedFaceSize = faceSize >> (2 * mip);
+
+                ktx_size_t offset;
+                ktxTexture2_GetImageOffset(texture, mip, face, 0, &offset);
+                void* data = static_cast<uint8_t*>(texture->pData) + offset;
+
+                void* stagingData = static_cast<uint8_t*>(mVkEngine.getDataFromBuffer(staging)) + adjustedFaceSize * face;
+                memcpy(stagingData, data, adjustedFaceSize);
+            }
+
+            mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
+                if (mip == 0)
+                    vkutil::transitionImage(commandBuffer, skybox.envMap.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
+
+                VkBufferImageCopy copyRegion{};
+                copyRegion.bufferOffset = 0;
+                copyRegion.bufferRowLength = 0; // Tightly packed
+                copyRegion.bufferImageHeight = 0;
+
+                copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+                copyRegion.imageSubresource.mipLevel = mip;
+                copyRegion.imageSubresource.baseArrayLayer = 0;
+                copyRegion.imageSubresource.layerCount = 6;
+
+                copyRegion.imageOffset = {0, 0, 0};
+                copyRegion.imageExtent = {
+                    static_cast<uint32_t>(texture->baseWidth >> mip),
+                    static_cast<uint32_t>(texture->baseHeight >> mip),
+                    1
+                };
+
+                vkCmdCopyBufferToImage(
+                    commandBuffer,
+                    staging.buffer,
+                    skybox.envMap.image,
+                    VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+                    1,
+                    &copyRegion
+                );
+
+                if (mip == skybox.envMap.mipLevels - 1)
+                    vkutil::transitionImage(commandBuffer, skybox.envMap.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+            }, true);
+        }
+
+        mVkEngine.destroyBuffer(staging);
+        ktxTexture2_Destroy(texture);
+    } else {
+        for (int i = 0; i < skybox.envMap.mipLevels; i++) {
+            renderToCubemap(
+                skybox.hdrImage,
+                skybox.envMap,
+                mVkEngine.getPipelineResourceManager().getPipeline(PipelineResourceManager::PipelineType::EQUI_TO_CUBE),
+                SkyboxAsset::ENV_MAP_SIZE,
+                i,
+                true
+            );
+        }
     }
 
     // create irradiance cube map
@@ -487,12 +884,72 @@ void AssetManager::loadSkybox(const std::string& name) {
         VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT
     );
 
-    renderToCubemap(
-        skybox.envMap,
-        skybox.irrMap,
-        mVkEngine.getPipelineResourceManager().getPipeline(PipelineResourceManager::PipelineType::ENV_TO_IRR),
-        SkyboxAsset::IRR_MAP_SIZE
-    );
+    if (precomputed) {
+        std::string path = precomputedPath.string() + "/irradiance.ktx2";
+        ktxTexture2* texture;
+        KTX_error_code result = ktxTexture2_CreateFromNamedFile(path.c_str(), KTX_TEXTURE_CREATE_LOAD_IMAGE_DATA_BIT, &texture);
+
+        if (result != KTX_SUCCESS) {
+            fmt::println("Failed to load irradiance map from ktx2 file.");
+            return;
+        }
+
+        uint32_t faceSize = vkutil::getPixelSize(skybox.irrMap.imageFormat) * skybox.irrMap.imageExtent.width * skybox.irrMap.imageExtent.height;
+        uint32_t size = faceSize * 6;
+
+        AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
+
+        for (int face = 0; face < 6; face++) {
+            ktx_size_t offset;
+            ktxTexture2_GetImageOffset(texture, 0, face, 0, &offset);
+            void* data = static_cast<uint8_t*>(texture->pData) + offset;
+
+            void* stagingData = static_cast<uint8_t*>(mVkEngine.getDataFromBuffer(staging)) + faceSize * face;
+            memcpy(stagingData, data, faceSize);
+        }
+
+        mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
+            vkutil::transitionImage(commandBuffer, skybox.irrMap.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
+
+            VkBufferImageCopy copyRegion{};
+            copyRegion.bufferOffset = 0;
+            copyRegion.bufferRowLength = 0; // Tightly packed
+            copyRegion.bufferImageHeight = 0;
+
+            copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+            copyRegion.imageSubresource.mipLevel = 0;
+            copyRegion.imageSubresource.baseArrayLayer = 0;
+            copyRegion.imageSubresource.layerCount = 6;
+
+            copyRegion.imageOffset = {0, 0, 0};
+            copyRegion.imageExtent = {
+                static_cast<uint32_t>(texture->baseWidth),
+                static_cast<uint32_t>(texture->baseHeight),
+                1
+            };
+
+            vkCmdCopyBufferToImage(
+                commandBuffer,
+                staging.buffer,
+                skybox.irrMap.image,
+                VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+                1,
+                &copyRegion
+            );
+
+            vkutil::transitionImage(commandBuffer, skybox.irrMap.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+        }, true);
+
+        mVkEngine.destroyBuffer(staging);
+        ktxTexture2_Destroy(texture);
+    } else {
+        renderToCubemap(
+            skybox.envMap,
+            skybox.irrMap,
+            mVkEngine.getPipelineResourceManager().getPipeline(PipelineResourceManager::PipelineType::ENV_TO_IRR),
+            SkyboxAsset::IRR_MAP_SIZE
+        );
+    }
 
     // create prefiltered environment map
     skybox.prefilteredEnvMap = mVkEngine.createCubemap(
@@ -503,22 +960,185 @@ void AssetManager::loadSkybox(const std::string& name) {
         true
     );
 
-    for (uint32_t mip = 0; mip < 5; mip++) {
-        renderToCubemap(
-            skybox.envMap,
-            skybox.prefilteredEnvMap,
-            mVkEngine.getPipelineResourceManager().getPipeline(PipelineResourceManager::PipelineType::PREFILTER_ENV),
-            SkyboxAsset::PREFILTERED_ENV_MAP_SIZE,
-            mip
-        );
+    if (precomputed) {
+        std::string path = precomputedPath.string() + "/prefiltered.ktx2";
+        ktxTexture2* texture;
+        KTX_error_code result = ktxTexture2_CreateFromNamedFile(path.c_str(), KTX_TEXTURE_CREATE_LOAD_IMAGE_DATA_BIT, &texture);
+
+        if (result != KTX_SUCCESS) {
+            fmt::println("Failed to load prefiltered map from ktx2 file.");
+            return;
+        }
+
+        uint32_t faceSize = vkutil::getPixelSize(skybox.prefilteredEnvMap.imageFormat) * skybox.prefilteredEnvMap.imageExtent.width * skybox.prefilteredEnvMap.imageExtent.height;
+        uint32_t size = faceSize * 6;
+
+        AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
+
+        for (int mip = 0; mip < 5; mip++) {
+            for (int face = 0; face < 6; face++) {
+                size_t adjustedFaceSize = faceSize >> (2 * mip);
+
+                ktx_size_t offset;
+                ktxTexture2_GetImageOffset(texture, mip, face, 0, &offset);
+                void* data = static_cast<uint8_t*>(texture->pData) + offset;
+
+                void* stagingData = static_cast<uint8_t*>(mVkEngine.getDataFromBuffer(staging)) + adjustedFaceSize * face;
+                memcpy(stagingData, data, adjustedFaceSize);
+            }
+
+            mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
+                if (mip == 0)
+                    vkutil::transitionImage(commandBuffer, skybox.prefilteredEnvMap.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
+
+                VkBufferImageCopy copyRegion{};
+                copyRegion.bufferOffset = 0;
+                copyRegion.bufferRowLength = 0; // Tightly packed
+                copyRegion.bufferImageHeight = 0;
+
+                copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+                copyRegion.imageSubresource.mipLevel = mip;
+                copyRegion.imageSubresource.baseArrayLayer = 0;
+                copyRegion.imageSubresource.layerCount = 6;
+
+                copyRegion.imageOffset = {0, 0, 0};
+                copyRegion.imageExtent = {
+                    static_cast<uint32_t>(texture->baseWidth >> mip),
+                    static_cast<uint32_t>(texture->baseHeight >> mip),
+                    1
+                };
+
+                vkCmdCopyBufferToImage(
+                    commandBuffer,
+                    staging.buffer,
+                    skybox.prefilteredEnvMap.image,
+                    VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+                    1,
+                    &copyRegion
+                );
+
+                if (mip == 4)
+                    vkutil::transitionImage(commandBuffer, skybox.prefilteredEnvMap.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+            }, true);
+        }
+
+        mVkEngine.destroyBuffer(staging);
+        ktxTexture2_Destroy(texture);
+    } else {
+        for (uint32_t mip = 0; mip < 5; mip++) {
+            renderToCubemap(
+                skybox.envMap,
+                skybox.prefilteredEnvMap,
+                mVkEngine.getPipelineResourceManager().getPipeline(PipelineResourceManager::PipelineType::PREFILTER_ENV),
+                SkyboxAsset::PREFILTERED_ENV_MAP_SIZE,
+                mip
+            );
+        }
     }
 
     // set brdf lut image
     skybox.brdfLut = mDefaultImages["brdflut"];
 
+    if (!std::filesystem::exists(precomputedPath.string() + "/metadata.json")) {
+        computeDefaultDirectionalLight(skybox);
+
+        std::ofstream file(precomputedPath.string() + "/metadata.json");
+
+        nlohmann::json j{};
+        j["lightDir"] = std::vector<float> {
+            skybox.defaultDirectionalLight.x,
+            skybox.defaultDirectionalLight.y,
+            skybox.defaultDirectionalLight.z
+        };
+
+        file << j.dump(2);
+        file.close();
+    } else {
+        std::ifstream file(precomputedPath.string() + "/metadata.json");
+        nlohmann::json j{};
+        file >> j;
+
+        skybox.defaultDirectionalLight.x = j["lightDir"][0];
+        skybox.defaultDirectionalLight.y = j["lightDir"][1];
+        skybox.defaultDirectionalLight.z = j["lightDir"][2];
+
+        file.close();
+    }
+
     mSkyboxes[name] = skybox;
 
     // saveSkyboxToFile(skybox);
+    saveSkyboxKtx(name);
+}
+
+void AssetManager::computeDefaultDirectionalLight(SkyboxAsset& skybox) {
+    uint32_t mipLevel = 2;
+    uint32_t faceWidth = skybox.envMap.imageExtent.width >> mipLevel;
+    uint32_t faceHeight = skybox.envMap.imageExtent.height >> mipLevel;
+
+    uint32_t faceSize = vkutil::getPixelSize(skybox.envMap.imageFormat) * faceWidth * faceHeight;
+    uint32_t size = faceSize * 6;
+
+    AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_ONLY);
+
+    mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
+        vkutil::transitionImage(commandBuffer, skybox.envMap.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
+
+        VkBufferImageCopy copyRegion = {};
+        copyRegion.bufferOffset = 0;
+        copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+        copyRegion.imageSubresource.mipLevel = 2;
+        copyRegion.imageSubresource.baseArrayLayer = 0;
+        copyRegion.imageSubresource.layerCount = 6;
+        copyRegion.imageExtent.width = faceWidth;
+        copyRegion.imageExtent.height = faceHeight;
+        copyRegion.imageExtent.depth = 1;
+        vkCmdCopyImageToBuffer(commandBuffer, skybox.envMap.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, staging.buffer, 1, &copyRegion);
+
+        vkutil::transitionImage(commandBuffer, skybox.envMap.image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+    }, true);
+
+    void* data = mVkEngine.getDataFromBuffer(staging);
+    float maxLuminance = 0.f;
+
+    for (int face = 0; face < 6; face++) {
+        for (int i = 0; i < faceWidth; i++) {
+            for (int j = 0; j < faceHeight; j++) {
+                uint32_t curr = (i * faceHeight + j) * 4 + 4 * (face * faceHeight * faceWidth);
+                float x = glm::unpackHalf1x16(((uint16_t*)data)[curr]);
+                float y = glm::unpackHalf1x16(((uint16_t*)data)[curr + 1]);
+                float z = glm::unpackHalf1x16(((uint16_t*)data)[curr + 2]);
+
+                float luminance = glm::sqrt(0.2126f * x + 0.7152f * y + 0.0722f * z);
+
+                if (luminance > maxLuminance) {
+                    float s = (i + 0.5f) / faceWidth * 2.0f - 1.0f;
+                    float t = (j + 0.5f) / faceHeight * 2.0f - 1.0f;
+                    // t = -t;
+
+                    glm::vec3 lightDir;
+
+                    switch (face) {
+                        case 0: lightDir = glm::vec3( 1, -t, -s); break; // +X
+                        case 1: lightDir = glm::vec3(-1, -t,  s); break; // -X
+                        case 2: lightDir = glm::vec3( s,  1,  t); break; // +Y
+                        case 3: lightDir = glm::vec3( s, -1, -t); break; // -Y
+                        case 4: lightDir = glm::vec3( s, -t,  1); break; // +Z
+                        case 5: lightDir = glm::vec3(-s, -t, -1); break; // -Z
+                    }
+
+                    lightDir = glm::normalize(lightDir);
+                    skybox.defaultDirectionalLight = lightDir;
+
+                    maxLuminance = luminance;
+                }
+            }
+        }
+    }
+
+    fmt::println("Default light dir for skybox {}: {} {} {}", skybox.name, skybox.defaultDirectionalLight.x, skybox.defaultDirectionalLight.y, skybox.defaultDirectionalLight.z);
+
+    mVkEngine.destroyBuffer(staging);
 }
 
 MeshAsset createQuadMesh(VulkanEngine& engine) {
@@ -576,35 +1196,82 @@ void AssetManager::loadDefaultMeshes() {
     mMeshes["cube"] = createCubeMesh(mVkEngine);
 }
 
-AllocatedImage createBrdfLut(VulkanEngine& vkEngine, VkSampler linear) {
+void AssetManager::loadBrdfLut() {
+    std::string path = mProjectPath + "/assets/skyboxes/brdf_lut.ktx2";
+    fmt::println("Loading brdf lut");
+
+    if (!std::filesystem::exists(path)) {
+        fmt::println("Error: precomputed brdf lut not found");
+        return;
+    }
+
+    ktxTexture2* texture;
+    KTX_error_code result = ktxTexture2_CreateFromNamedFile(path.c_str(), KTX_TEXTURE_CREATE_LOAD_IMAGE_DATA_BIT, &texture);
+
+    if (result != KTX_SUCCESS) {
+        fmt::println("Failed to load brdf lut from ktx2 file.");
+        return;
+    }
+
+    VkSampler linear = mDefaultSamplers["linear"];
     AllocatedImage brdfLut{};
 
-    brdfLut = vkEngine.createImage(
+    brdfLut = mVkEngine.createImage(
         VkExtent3D{SkyboxAsset::BRDF_LUT_SIZE.width, SkyboxAsset::BRDF_LUT_SIZE.height, 1},
         VK_FORMAT_R16G16B16A16_SFLOAT,
-        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT,
+        VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT,
         false
     );
 
-    ComputeEffect computeEffect("shaders/brdf_lut", vkEngine);
+    uint32_t size = vkutil::getPixelSize(brdfLut.imageFormat) * brdfLut.imageExtent.width * brdfLut.imageExtent.height;
+    AllocatedBuffer staging = mVkEngine.createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU);
 
-    vkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
-        vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
+    mVkEngine.immediateSubmit([&](VkCommandBuffer commandBuffer) {
+        vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
 
-        ComputeEffect::Context context = vkEngine.getComputeContext(&brdfLut);
-        context.linearSampler = linear;
-        context.screenSize = SkyboxAsset::BRDF_LUT_SIZE;
+        ktx_size_t offset;
+        ktxTexture2_GetImageOffset(texture, 0, 0, 0, &offset);
+        void* data = static_cast<uint8_t*>(texture->pData) + offset;
 
-        computeEffect.execute(commandBuffer, context, true);
-        vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_GENERAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
-    });
+        void* stagingData = mVkEngine.getDataFromBuffer(staging);
+        memcpy(stagingData, data, size);
 
-    return brdfLut;
+        VkBufferImageCopy copyRegion{};
+        copyRegion.bufferOffset = 0;
+        copyRegion.bufferRowLength = 0; // Tightly packed
+        copyRegion.bufferImageHeight = 0;
+
+        copyRegion.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+        copyRegion.imageSubresource.mipLevel = 0;
+        copyRegion.imageSubresource.baseArrayLayer = 0;
+        copyRegion.imageSubresource.layerCount = 1;
+
+        copyRegion.imageOffset = {0, 0, 0};
+        copyRegion.imageExtent = {
+            static_cast<uint32_t>(texture->baseWidth),
+            static_cast<uint32_t>(texture->baseHeight),
+            1
+        };
+
+        vkCmdCopyBufferToImage(
+            commandBuffer,
+            staging.buffer,
+            brdfLut.image,
+            VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+            1,
+            &copyRegion
+        );
+
+        vkutil::transitionImage(commandBuffer, brdfLut.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+    }, true);
+
+    mVkEngine.destroyBuffer(staging);
+    ktxTexture2_Destroy(texture);
+
+    mDefaultImages["brdflut"] = brdfLut;
 }
 
 void AssetManager::loadDefaultImages() {
-    mDefaultImages["brdflut"] = createBrdfLut(mVkEngine, mDefaultSamplers["linear"]);
-
     uint32_t white = glm::packUnorm4x8(glm::vec4(1, 1, 1, 1));
 	mDefaultImages["white"] = mVkEngine.createImage(
 	    (void*)&white,
@@ -691,7 +1358,6 @@ void AssetManager::loadDefaultSamplers() {
     sampl.maxLod = VK_LOD_CLAMP_NONE;
     sampl.mipLodBias = 0.0f;
 
-
     {
         VkSampler nearest;
         vkCreateSampler(mVkEngine.getDevice(), &sampl, nullptr, &nearest);
@@ -710,10 +1376,6 @@ void AssetManager::loadDefaultSamplers() {
 }
 
 void AssetManager::freeResources() {
-    // for (auto& [k, v] : mLoadedGltfs) {
-    //     v = nullptr;
-    // }
-
     for (auto& [k, v] : mImages) {
         mVkEngine.destroyImage(v);
     }
@@ -737,4 +1399,193 @@ void AssetManager::freeResources() {
     for (auto& [k, v] : mDefaultSamplers) {
         mVkEngine.destroySampler(v);
     }
+}
+
+void AssetManager::drawSkyboxAssets(ImGuiContext& context) {
+    const uint32_t maxTextLength = 15;
+
+    ImGui::PushFont(context.font12);
+    ImGui::PushStyleColor(ImGuiCol_Text, WHITE);
+
+    auto drawList = ImGui::GetWindowDrawList();
+    auto& hdrIcon = mImguiImages["hdr-icon.png"];
+
+    ImVec2 p0 = ImGui::GetCursorScreenPos();
+
+    uint32_t itemsPerRow = 9;
+    uint32_t row = 0;
+    uint32_t col = 0;
+
+    ImVec2 spacing = context.spacing;
+    float iconWidth = (1000.f - (itemsPerRow + 1) * spacing.x) / itemsPerRow;
+    ImVec2 iconSize = ImVec2(iconWidth, iconWidth);
+    float textHeight = ImGui::CalcTextSize("dummy.hdr").y;
+
+    for (auto& [k, v] : mSkyboxes) {
+        ImVec2 min = ImVec2(p0.x + col * (iconSize.x + spacing.x), p0.y + row * (iconSize.y + spacing.y));
+        ImVec2 max = ImVec2(min.x + iconSize.x, min.y + iconSize.y);
+
+        std::string text = k;
+        if (text.length() > maxTextLength) {
+            text = text.substr(0, maxTextLength - 3) + "...";
+        }
+
+        ImVec2 textSize = ImGui::CalcTextSize(text.c_str());
+        float textOffset = (iconSize.x - textSize.x) * 0.5f;
+
+        ImGui::SetCursorScreenPos(min);
+
+        ImGui::BeginGroup();
+        ImGui::Image(hdrIcon.id, iconSize);
+        ImGui::SetCursorPosX(ImGui::GetCursorPosX() + textOffset);
+        ImGui::SetCursorPosY(ImGui::GetCursorPosY() - textHeight);
+        ImGui::Text(text.c_str());
+        ImGui::EndGroup();
+
+        if (ImGui::BeginDragDropSource(ImGuiDragDropFlags_SourceAllowNullID)) {
+            ImGui::SetDragDropPayload("SKYBOX_PAYLOAD", k.c_str(), k.size() + 1);
+
+            ImGui::Image(hdrIcon.id, iconSize);
+            ImGui::Text(k.c_str());
+
+            ImGui::EndDragDropSource();
+        }
+
+        if (++col == itemsPerRow) {
+            row++;
+            col = 0;
+        }
+    }
+
+    ImGui::PopStyleColor();
+    ImGui::PopFont();
+}
+
+void AssetManager::drawSpriteAssets(ImGuiContext& context) {
+    const uint32_t maxTextLength = 15;
+
+    ImGui::PushFont(context.font12);
+    ImGui::PushStyleColor(ImGuiCol_Text, WHITE);
+
+    auto drawList = ImGui::GetWindowDrawList();
+    auto& pngIcon = mImguiImages["png-icon.png"];
+    auto& jpgIcon = mImguiImages["jpg-icon.png"];
+
+    ImVec2 p0 = ImGui::GetCursorScreenPos();
+
+    uint32_t itemsPerRow = 9;
+    uint32_t row = 0;
+    uint32_t col = 0;
+
+    ImVec2 spacing = context.spacing;
+    float iconWidth = (1000.f - (itemsPerRow + 1) * spacing.x) / itemsPerRow;
+    ImVec2 iconSize = ImVec2(iconWidth, iconWidth);
+    float textHeight = ImGui::CalcTextSize("dummy.jpg").y;
+
+    for (auto& [k, v] : mImages) {
+        ImVec2 min = ImVec2(p0.x + col * (iconSize.x + spacing.x), p0.y + row * (iconSize.y + spacing.y));
+        ImVec2 max = ImVec2(min.x + iconSize.x, min.y + iconSize.y);
+
+        std::string text = k;
+        if (text.length() > maxTextLength) {
+            text = text.substr(0, maxTextLength - 3) + "...";
+        }
+
+        ImVec2 textSize = ImGui::CalcTextSize(text.c_str());
+        float textOffset = (iconSize.x - textSize.x) * 0.5f;
+
+        ImGui::SetCursorScreenPos(min);
+
+        ImGui::BeginGroup();
+        if (k.ends_with(".jpg"))
+            ImGui::Image(jpgIcon.id, iconSize);
+        else
+            ImGui::Image(pngIcon.id, iconSize);
+
+        ImGui::SetCursorPosX(ImGui::GetCursorPosX() + textOffset);
+        ImGui::SetCursorPosY(ImGui::GetCursorPosY() - textHeight);
+        ImGui::Text(text.c_str());
+        ImGui::EndGroup();
+
+        if (ImGui::BeginDragDropSource(ImGuiDragDropFlags_SourceAllowNullID)) {
+            ImGui::SetDragDropPayload("SPRITE_PAYLOAD", k.c_str(), k.size() + 1);
+
+            if (k.ends_with(".jpg"))
+                ImGui::Image(jpgIcon.id, iconSize);
+            else
+                ImGui::Image(pngIcon.id, iconSize);
+
+            ImGui::Text(k.c_str());
+
+            ImGui::EndDragDropSource();
+        }
+
+        if (++col == itemsPerRow) {
+            row++;
+            col = 0;
+        }
+    }
+
+    ImGui::PopStyleColor();
+    ImGui::PopFont();
+}
+
+void AssetManager::drawGltfAssets(ImGuiContext& context) {
+    const uint32_t maxTextLength = 15;
+
+    ImGui::PushFont(context.font12);
+    ImGui::PushStyleColor(ImGuiCol_Text, WHITE);
+
+    auto drawList = ImGui::GetWindowDrawList();
+    auto& glbIcon = mImguiImages["glb-icon.png"];
+
+    ImVec2 p0 = ImGui::GetCursorScreenPos();
+
+    uint32_t itemsPerRow = 9;
+    uint32_t row = 0;
+    uint32_t col = 0;
+
+    ImVec2 spacing = context.spacing;
+    float iconWidth = (1000.f - (itemsPerRow + 1) * spacing.x) / itemsPerRow;
+    ImVec2 iconSize = ImVec2(iconWidth, iconWidth);
+    float textHeight = ImGui::CalcTextSize("dummy.glb").y;
+
+    for (auto& [k, v] : mLoadedGltfs) {
+        ImVec2 min = ImVec2(p0.x + col * (iconSize.x + spacing.x), p0.y + row * (iconSize.y + spacing.y));
+        ImVec2 max = ImVec2(min.x + iconSize.x, min.y + iconSize.y);
+
+        std::string text = k;
+        if (text.length() > maxTextLength) {
+            text = text.substr(0, maxTextLength - 3) + "...";
+        }
+
+        ImVec2 textSize = ImGui::CalcTextSize(text.c_str());
+        float textOffset = (iconSize.x - textSize.x) * 0.5f;
+
+        ImGui::SetCursorScreenPos(min);
+
+        ImGui::BeginGroup();
+        ImGui::Image(glbIcon.id, iconSize);
+        ImGui::SetCursorPosX(ImGui::GetCursorPosX() + textOffset);
+        ImGui::SetCursorPosY(ImGui::GetCursorPosY() - textHeight);
+        ImGui::Text(text.c_str());
+        ImGui::EndGroup();
+
+        if (ImGui::BeginDragDropSource(ImGuiDragDropFlags_SourceAllowNullID)) {
+            ImGui::SetDragDropPayload("GLTF_PAYLOAD", k.c_str(), k.size() + 1);
+
+            ImGui::Image(glbIcon.id, iconSize);
+            ImGui::Text(k.c_str());
+
+            ImGui::EndDragDropSource();
+        }
+
+        if (++col == itemsPerRow) {
+            row++;
+            col = 0;
+        }
+    }
+
+    ImGui::PopStyleColor();
+    ImGui::PopFont();
 }

@@ -19,7 +19,7 @@
           "UUID": "main_camera"
         },
         "Script": {
-          "Name": "scripts/main_camera.lua"
+          "Name": "main_camera.lua"
         }
       },
       "ParentUUID": ""
@@ -36,7 +36,7 @@
           "Scale": [10.0, 10.0, 10.0]
         },
         "Script": {
-          "Name": "scripts/rotate.lua"
+          "Name": "rotate.lua"
         },
         "Metadata": {
           "UUID": "fighter_spaceship"

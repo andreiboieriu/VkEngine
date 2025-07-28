@@ -9,7 +9,8 @@
 #include "vk_window.h"
 #include "script_manager.h"
 #include "asset_manager.h"
-#include "vk_engine.h"
+#include "colors.h"
+#include "editor_camera.h"
 
 // forward reference
 class VulkanEngine;
@@ -18,38 +19,59 @@ class Entity;
 class Scene3D {
 
 public:
-    Scene3D(const std::filesystem::path& path, VulkanEngine& VkEngine);
+    Scene3D(std::filesystem::path path, VulkanEngine& VkEngine);
+    Scene3D(VulkanEngine& vkEngine);
+
     ~Scene3D();
 
-    void update(float deltaTime, const Input& input, int frameNumber);
+    void update(float deltaTime, const Input& input);
     void render(RenderContext& renderContext);
-    void drawGui();
+    void drawHierarchy(ImGuiContext& context);
+    void drawConfig(ImGuiContext& context);
+    void drawInspector(ImGuiContext& context);
+
+    void refreshScripts();
 
     void setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout, int frameNumber);
 
     const glm::mat4 getViewProj();
-    void saveToFile();
+    void saveToFile(const std::filesystem::path& filePath);
 
-    void loadFromFile(const std::filesystem::path& filePath);
+    void loadFromFile(std::filesystem::path filePath);
     nlohmann::json toJson();
 
     Entity* createEntity(Metadata meta);
     Entity* createEntity(const nlohmann::json& metaJson);
-    Entity* createEntity();
+    Entity* createEntity(const std::string& name);
 
     Entity* getEntity(const std::string& name);
-    void destroyEntity(const std::string& name);
+    void deleteEntity(const std::string& name);
+    void moveEntity(const std::string& name, const std::string& parent);
 
     // systems
     void propagateTransform();
     void cleanupEntities();
+    void initSceneDataBuffers();
+
+    void editorModeUpdate(EditorCamera& camera);
+    void updateUBO(int frameNumber);
+
+    SceneData& getSceneData() {
+        return mSceneData;
+    }
+
+    glm::vec4 getSunScreenPos() {
+        return mSunScreenPos;
+    }
 
 private:
     void init();
+    void computeSunScreenPos();
     void freeResources();
 
     VulkanEngine& mVkEngine;
     AssetManager& mAssetManager;
+    ScriptManager& mScriptManager;
 
     DeletionQueue mDeletionQueue;
 
@@ -58,13 +80,11 @@ private:
         VkDeviceSize globalDescriptorOffset;
     };
 
-    std::array<SceneDataUBO, MAX_FRAMES_IN_FLIGHT> mSceneDataUBOs;
+    std::array<SceneDataUBO, 3> mSceneDataUBOs;
 
     SceneData mSceneData;
 
-    std::string mName;
     SkyboxAsset *mSkybox = nullptr;
-    std::unique_ptr<ScriptManager> mScriptManager = nullptr;
 
     entt::registry mRegistry;
 
@@ -72,8 +92,12 @@ private:
     std::unordered_map<std::string, std::unique_ptr<Entity>> mEntities;
     Entity *mCameraEntity = nullptr;
 
-    uint64_t mNextEntityID = 1;
-
     friend class Entity;
     friend class Script;
+
+    float mCameraFov;
+    float mNear;
+    float mFar;
+    glm::vec4 mSunScreenPos; // x = x coord, y = y coord, z = 0.0 if not in view, else 1.0
+    bool mAddingEntity = false;
 };

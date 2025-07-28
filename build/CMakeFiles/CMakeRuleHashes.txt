@@ -11,8 +11,12 @@ acf41fc396cb3e71439acccfbaac77a6 /home/unclegoga/Development/VkEngine/assets/com
 6df4a0c386e37e6eafffb3c534587084 /home/unclegoga/Development/VkEngine/assets/compute_effects/bloom/pass9.comp.spv
 ef4112ab51f3ed64d61bc69bbe53e33c /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass0.comp.spv
 ec42b9350a17272205c4062a771a452b /home/unclegoga/Development/VkEngine/assets/compute_effects/fxaa/pass1.comp.spv
+19744863ef9d8c74c87a6ee4229ef223 /home/unclegoga/Development/VkEngine/assets/compute_effects/glitch/pass0.comp.spv
+223d4532490c19e1f306bc229e8cad7f /home/unclegoga/Development/VkEngine/assets/compute_effects/lens_flare/pass0.comp.spv
 f79518a07ef41f138e352450bab83521 /home/unclegoga/Development/VkEngine/assets/compute_effects/tone_mapping/pass0.comp.spv
 d87fcf4c920a04807c1fb3c90bbe6cf9 /home/unclegoga/Development/VkEngine/shaders/brdf_lut/pass0.comp.spv
+27b1dba589d65a8675cb897943074055 /home/unclegoga/Development/VkEngine/shaders/dir_shadow.frag.spv
+f37f36c2b45ccc551ed64f7b33ebaf8a /home/unclegoga/Development/VkEngine/shaders/dir_shadow.vert.spv
 cbf8afb85ae47d6f3e4cfa0b2c257807 /home/unclegoga/Development/VkEngine/shaders/mesh.frag.spv
 1683b2066e5acc0f7184e0c40e1a62cf /home/unclegoga/Development/VkEngine/shaders/mesh.vert.spv
 8e1a694c7d0ea65d121c695849313f8c /home/unclegoga/Development/VkEngine/shaders/mesh_pbr.frag.spv

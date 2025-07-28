@@ -180,13 +180,13 @@ void Window::keyCallback(GLFWwindow* window, int key, int scancode, int action, 
 {
     switch (action) {
         case GLFW_PRESS:
-            mInput.keyStates[scancode] = InputState::PRESSED;
-            mInputCache.pressedKeys.push_front(scancode);
+            mInput.keyStates[key] = InputState::PRESSED;
+            mInputCache.pressedKeys.push_front(key);
             break;
 
         case GLFW_RELEASE:
-            mInput.keyStates[scancode] = InputState::RELEASED;
-            mInputCache.releasedKeys.push_front(scancode);
+            mInput.keyStates[key] = InputState::RELEASED;
+            mInputCache.releasedKeys.push_front(key);
             break;
     }
 }
@@ -220,6 +220,14 @@ void Window::scrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 void Window::framebufferSizeCallback(GLFWwindow* window, int width, int height)
 {
     resize(width, height);
+}
+
+void Window::dropCallback(GLFWwindow* window, int count, const char** paths) {
+    mDroppedPaths.clear();
+
+    for (int i = 0; i < count; i++) {
+        mDroppedPaths.emplace_back(paths[i]);
+    }
 }
 
 void Window::setCallbacks() {
@@ -280,6 +288,34 @@ void Window::setCallbacks() {
             );
         }
     );
+
+    glfwSetDropCallback(
+        mHandle,
+        [](GLFWwindow* window, int count, const char** paths) {
+        static_cast<Window*>(glfwGetWindowUserPointer(window))->dropCallback(
+            window,
+            count,
+            paths
+        );
+    });
+
+    glfwSetErrorCallback(Window::glfwErrorCallback);
+}
+
+void Window::lockCursor() {
+    if (mLockedCursor) return;
+
+    glfwSetInputMode(mHandle, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+    mLockedCursor = true;
+}
+
+void Window::unlockCursor() {
+    if (!mLockedCursor) return;
+
+    glfwSetInputMode(mHandle, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+
+    mLockedCursor = false;
 }
 
 void Window::updateInput() {
@@ -294,12 +330,12 @@ void Window::updateInput() {
     }
 
     // update the newly pressed mouse buttons's state to HELD
-    for (const int button : mInputCache.pressedKeys) {
+    for (const int button : mInputCache.pressedMouseButtons) {
         mInput.mouse.buttonStates[button] = InputState::HELD;
     }
 
     // update the newly pressed mouse buttons's state to IDLE
-    for (const int button : mInputCache.releasedKeys) {
+    for (const int button : mInputCache.releasedMouseButtons) {
         mInput.mouse.buttonStates[button] = InputState::IDLE;
     }
 
@@ -316,9 +352,14 @@ void Window::pollEvents() {
     glfwPollEvents();
 }
 
-void Window::resize(uint32_t width, uint32_t height) {
+void Window::resize(uint32_t width, uint32_t height, bool manualResize) {
     // wait for gpu to finish tasks
     vkDeviceWaitIdle(mVkEngine.getDevice());
+
+    if (manualResize) {
+        fmt::println("Resizing window to {}x{}", width, height);
+        glfwSetWindowSize(mHandle, width, height);
+    }
 
     // update extent
     mExtent = {width, height};
@@ -344,6 +385,29 @@ void Window::presentSwapchainImage(VkQueue graphicsQueue, VkSemaphore waitSemaph
     }
 }
 
+void Window::enableVsync() {
+    if (mAvailablePresentModes[mSelectedPresentMode] == VK_PRESENT_MODE_FIFO_KHR) return;
+
+    auto it = std::find(mAvailablePresentModes.begin(), mAvailablePresentModes.end(), VK_PRESENT_MODE_FIFO_KHR);
+    mSelectedPresentMode = it - mAvailablePresentModes.begin();
+    resize(mExtent.width, mExtent.height);
+}
+
+void Window::disableVsync() {
+    if (mAvailablePresentModes[mSelectedPresentMode] == VK_PRESENT_MODE_IMMEDIATE_KHR) return;
+
+    auto it = std::find(mAvailablePresentModes.begin(), mAvailablePresentModes.end(), VK_PRESENT_MODE_IMMEDIATE_KHR);
+
+    if (it == mAvailablePresentModes.end()) {
+        fmt::println("Error: failed to disable vsync, no immediate present mode available");
+        return;
+    }
+
+    mSelectedPresentMode = it - mAvailablePresentModes.begin();
+    resize(mExtent.width, mExtent.height);
+}
+
+
 void Window::drawGui() {
     if (ImGui::Begin("Window Config", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
         if (ImGui::SliderInt(
@@ -358,15 +422,3 @@ void Window::drawGui() {
         ImGui::End();
     }
 }
-
-// void Window::toggleLockedCursor() {
-//     mLockedCursor = !mLockedCursor;
-
-//     if (mLockedCursor) {
-//         SDL_SetRelativeMouseMode(SDL_TRUE);
-//         SDL_ShowCursor(SDL_DISABLE);
-//     } else {
-//         SDL_SetRelativeMouseMode(SDL_FALSE);
-//         SDL_ShowCursor(SDL_ENABLE);
-//     }
-// }

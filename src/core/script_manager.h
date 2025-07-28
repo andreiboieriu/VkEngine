@@ -7,27 +7,42 @@
 #include <entt.hpp>
 #include "entity.h"
 #include "vk_window.h"
+#include "colors.h"
 
 #include <components/components.h>
+
+class VulkanEngine;
+class SceneManager;
 
 class ScriptManager {
 
 public:
-    ScriptManager();
+    ScriptManager(VulkanEngine& vkEngine);
     ~ScriptManager();
 
-    void loadScript(const std::string& filePath);
+    void loadScript(const std::string& name);
     void bindScript(const std::string& scriptName, Entity& entity);
 
-    void update(float deltaTime, const Input& input, Entity *camera);
+    void refreshScripts();
+
+    void update(float deltaTime, const Input& input);
 
     void onInit(entt::registry& registry);
     void onUpdate(entt::registry& registry);
     void onLateUpdate(entt::registry& registry);
-    void onDestroy();
+    void onDestroy(entt::registry& registry);
+    void onCollision(entt::registry& registry);
+
+    void setProjectPath(const std::string& projectPath) {
+        mProjectPath = projectPath;
+    }
+
+    void loadAllScripts();
+    void drawScriptAssets(ImGuiContext& context);
 
 private:
 
+    std::string getNewScriptName();
     struct ScriptData {
         sol::bytecode bytecode;
         std::unordered_map<std::string, sol::type> symbols;
@@ -37,10 +52,12 @@ private:
     std::unordered_map<std::string, sol::type> getSymbols(const sol::bytecode& bytecode);
 
     sol::state mLua;
-    // inline static bool mIsInitialized = false;
 
     Input mInput;
-    Entity *mCamera = nullptr;
+
+    VulkanEngine& mVkEngine;
+    SceneManager& mSceneManager;
 
     std::unordered_map<std::string, ScriptData> mLoadedScripts;
+    std::string mProjectPath = ".";
 };

@@ -49,13 +49,49 @@ void VulkanEngine::parseCliArgs(const std::vector<std::string>& cliArgs) {
     }
 }
 
+void VulkanEngine::parseConfig() {
+    std::ifstream file(mProjectPath.string() + "/engine_config.json");
+    if (!file) {
+        fmt::println("Could not open engine config file.\n");
+        return;
+    }
+
+    nlohmann::json j;
+    file >> j;
+
+    mEngineConfig.entryPoint.resize(100);
+
+    if (j.contains("entryPoint") && j["entryPoint"].is_string()) {
+        mEngineConfig.entryPoint = j["entryPoint"];
+    } else {
+        fmt::println("Engine config error: entryPoint field missing or not a string.\n");
+    }
+
+    if (j.contains("frustumCulling") && j["frustumCulling"].is_boolean()) {
+        mEngineConfig.enableFrustumCulling = j["frustumCulling"];
+    }
+
+    if (j.contains("drawSorting") && j["drawSorting"].is_boolean()) {
+        mEngineConfig.enableDrawSorting = j["drawSorting"];
+    }
+
+    if (j.contains("vsync") && j["vsync"].is_boolean()) {
+        mEngineConfig.vsync = j["vsync"];
+    }
+
+    if (j.contains("renderScale") && j["renderScale"].is_number()) {
+        mEngineConfig.renderScale = j["renderScale"];
+    }
+}
+
 void VulkanEngine::init(const std::vector<std::string>& cliArgs)
 {
     // parse cli args
     parseCliArgs(cliArgs);
+    parseConfig();
 
     // create window
-    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{1600, 900}, *this);
+    mWindow = std::make_unique<Window>("Vulkan Engine", VkExtent2D{2560, 1440}, *this);
 
     mMainDeletionQueue.push([&]() {
         mWindow = nullptr;
@@ -67,35 +103,26 @@ void VulkanEngine::init(const std::vector<std::string>& cliArgs)
     initSwapchain();
     initCommands();
     initSyncStructs();
-    initImGui();
-    initECS();
     initImages();
 
     mAssetManager = std::make_unique<AssetManager>(*this);
     mPipelineResourceManager = std::make_unique<PipelineResourceManager>(*this);
     mComputeEffectsManager = std::make_unique<ComputeEffectsManager>(*this);
+    mComputeEffectsManager->loadEffects();
+
+    mAssetManager->loadBrdfLut();
+
+    mSceneManager = std::make_unique<SceneManager>(*this);
+    mScriptManager = std::make_unique<ScriptManager>(*this);
+    mSceneManager->init();
 
     mMainDeletionQueue.push([&]() {
+        mSceneManager = nullptr;
         mPipelineResourceManager = nullptr;
         mAssetManager = nullptr;
         mComputeEffectsManager = nullptr;
+        mScriptManager = nullptr;
     });
-
-    mScene = std::make_shared<Scene3D>("assets/scenes/loadingScene.json", *this);
-    mMainDeletionQueue.push([&]() {
-        mScene = nullptr;
-    });
-
-    // render loading screen
-    std::thread([&](){
-        mLoadingScene = std::make_shared<Scene3D>("assets/scenes/testScene.json", *this);
-        mScene = mLoadingScene;
-        mLoadingScene = nullptr;
-
-        mMainDeletionQueue.push([&]() {
-            mScene = nullptr;
-        });
-    }).detach();
 }
 
 ComputeEffect::Context VulkanEngine::getComputeContext(AllocatedImage* colorImage) {
@@ -107,7 +134,8 @@ ComputeEffect::Context VulkanEngine::getComputeContext(AllocatedImage* colorImag
         .bufferImage = mBufferImage,
         .screenSize = mDrawExtent,
         .linearSampler = linear,
-        .additionalImages = mAssetManager->getComputeRelatedImages()
+        .additionalImages = mAssetManager->getComputeRelatedImages(),
+        .sunScreenPos = mSceneManager->getActiveScene().getSunScreenPos()
     };
 }
 
@@ -420,7 +448,7 @@ void VulkanEngine::initVMA() {
 }
 
 void VulkanEngine::initSwapchain() {
-    mWindow->createSwapchain(VK_PRESENT_MODE_IMMEDIATE_KHR);
+    mWindow->createSwapchain(mEngineConfig.vsync ? VK_PRESENT_MODE_FIFO_KHR : VK_PRESENT_MODE_IMMEDIATE_KHR);
 }
 
 void VulkanEngine::initImages() {
@@ -440,7 +468,7 @@ void VulkanEngine::initImages() {
     mDepthImage = createImage(
         VkExtent3D{MAX_IMAGE_WIDTH, MAX_IMAGE_HEIGHT, 1},
         VK_FORMAT_D32_SFLOAT,
-        VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT
+        VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT | VK_IMAGE_USAGE_SAMPLED_BIT
     );
 
     mBufferImage = createImage(
@@ -451,6 +479,12 @@ void VulkanEngine::initImages() {
         true
     );
 
+    mShadowDepthImage = createImage(
+        VkExtent3D{SHADOW_DEPTH_IMAGE_WIDTH * SHADOW_CASCADES_COUNT, SHADOW_DEPTH_IMAGE_HEIGHT, 1},
+        VK_FORMAT_D32_SFLOAT,
+        VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT | VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT
+    );
+
     immediateSubmit([&](VkCommandBuffer commandBuffer) {
         vkutil::transitionImage(commandBuffer, mBufferImage.image, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
     });
@@ -459,6 +493,7 @@ void VulkanEngine::initImages() {
         destroyImage(mDrawImage);
         destroyImage(mDepthImage);
         destroyImage(mBufferImage);
+        destroyImage(mShadowDepthImage);
     });
 }
 
@@ -582,10 +617,6 @@ void VulkanEngine::initImGui() {
     });
 }
 
-void VulkanEngine::initECS() {
-
-}
-
 void VulkanEngine::cleanup() {
     if (!mIsInitialized) {
         return;
@@ -707,8 +738,8 @@ bool isVisible(const GLTFRenderObject& obj, const glm::mat4& viewProj) {
 
     glm::mat4 matrix = viewProj * obj.transform;
 
-    glm::vec3 min = { 1.5, 1.5, 1.5 };
-    glm::vec3 max = { -1.5, -1.5, -1.5 };
+    glm::vec3 min = { 1.2, 1.2, 1.2 };
+    glm::vec3 max = { -1.2, -1.2, -1.2 };
 
     for (int c = 0; c < 8; c++) {
         // project each corner into clip space
@@ -729,6 +760,127 @@ bool isVisible(const GLTFRenderObject& obj, const glm::mat4& viewProj) {
     } else {
         return true;
     }
+}
+
+glm::mat4 VulkanEngine::renderShadowMap(VkCommandBuffer commandBuffer, uint32_t cascadeIndex, glm::mat4& lightView, glm::vec2 globalZ) {
+    auto& planes = mSceneManager->getActiveScene().getSceneData().cascadePlanes;
+    const std::array<float, 3> cascadePlanes = {planes[0], planes[1], planes[2]};
+
+    VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mShadowDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
+    if (cascadeIndex != 0) {
+        depthAttachment.loadOp = VK_ATTACHMENT_LOAD_OP_LOAD;
+    }
+
+    depthAttachment.clearValue.depthStencil.depth = 1.f;
+    VkRenderingInfo renderInfo = vkinit::rendering_info(VkExtent2D{SHADOW_DEPTH_IMAGE_WIDTH * SHADOW_CASCADES_COUNT, SHADOW_DEPTH_IMAGE_HEIGHT}, nullptr, &depthAttachment);
+    vkCmdBeginRendering(commandBuffer, &renderInfo);
+
+    // set dynamic viewport and scissor
+    VkViewport viewport{};
+    viewport.x = float(cascadeIndex * SHADOW_DEPTH_IMAGE_WIDTH);
+    viewport.y = SHADOW_DEPTH_IMAGE_HEIGHT;
+    viewport.width = SHADOW_DEPTH_IMAGE_WIDTH;
+    viewport.height = -(float)(SHADOW_DEPTH_IMAGE_HEIGHT);
+    viewport.minDepth = 0.0f;
+    viewport.maxDepth = 1.0f;
+
+    vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
+
+    VkRect2D scissor{};
+    scissor.offset.x = cascadeIndex * SHADOW_DEPTH_IMAGE_WIDTH;
+    scissor.offset.y = 0;
+    scissor.extent.width = SHADOW_DEPTH_IMAGE_WIDTH;
+    scissor.extent.height = SHADOW_DEPTH_IMAGE_HEIGHT;
+
+    vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
+
+    float near = cascadeIndex == 0 ? mRenderContext.near : cascadePlanes[cascadeIndex - 1];
+    float far = cascadeIndex == 3 ? mRenderContext.far : cascadePlanes[cascadeIndex];
+
+    glm::mat4 projection = glm::perspective(glm::radians(mRenderContext.fov), getWindowAspectRatio(), near, far);
+
+    glm::mat4 invVP = glm::inverse(projection * mRenderContext.sceneData.view);
+    std::vector<glm::vec3> frustumCorners;
+    for (int x = 0; x < 2; ++x) {
+        for (int y = 0; y < 2; ++y) {
+            for (int z = 0; z < 2; ++z) {
+                glm::vec4 pt = invVP * glm::vec4(
+                    2.0f * x - 1.0f,
+                    2.0f * y - 1.0f,
+                    (z == 0) ? 0.0 : 1.0,
+                    1.0f);
+                pt /= pt.w;
+                frustumCorners.push_back(glm::vec3(pt));
+            }
+        }
+    }
+
+    glm::vec3 frustumCenter(0.0f);
+    for (const auto& corner : frustumCorners)
+        frustumCenter += corner;
+    frustumCenter /= frustumCorners.size();
+
+    float sphereRadius = 0.0f;
+    for (const auto& corner : frustumCorners) {
+        float distance = glm::length(corner - frustumCenter);
+        sphereRadius = std::max(sphereRadius, distance);
+    }
+
+    glm::vec3 sphereCenterLightSpace = glm::vec3(lightView * glm::vec4(frustumCenter, 1.0));
+
+    // --- Start of New/Corrected Logic ---
+
+    // 1. Define the initial, un-snapped projection bounds from the sphere
+    glm::vec3 minBounds = sphereCenterLightSpace - sphereRadius;
+    glm::vec3 maxBounds = sphereCenterLightSpace + sphereRadius;
+
+    // 2. Calculate the size of the orthographic box
+    glm::vec3 boundsSize = maxBounds - minBounds;
+
+    // 3. CORRECTED Texel Size Calculation
+    //    We divide by the width of a SINGLE cascade, not the entire atlas.
+    float texelSizeX = boundsSize.x / (SHADOW_DEPTH_IMAGE_WIDTH * SHADOW_CASCADES_COUNT);
+    float texelSizeY = boundsSize.y / SHADOW_DEPTH_IMAGE_HEIGHT;
+
+    // 4. Snap the projection's minimum corner to the nearest texel boundary
+    //    This is done by dividing by the texel size, flooring the result, and multiplying back.
+    minBounds.x = floor(minBounds.x / texelSizeX) * texelSizeX;
+    minBounds.y = floor(minBounds.y / texelSizeY) * texelSizeY;
+
+    // 5. Recalculate the maximum corner based on the snapped minimum corner.
+    //    This ensures the projection box size remains constant, preventing shimmering.
+    maxBounds.x = minBounds.x + boundsSize.x;
+    maxBounds.y = minBounds.y + boundsSize.y;
+
+    glm::mat4 lightProjection = glm::ortho(
+        minBounds.x, maxBounds.x,
+        minBounds.y, maxBounds.y,
+        globalZ.x, globalZ.y
+    );
+
+    glm::mat4 lightSpaceMatrix = lightProjection * lightView;
+
+    auto pipeline = mPipelineResourceManager->getPipeline(PipelineResourceManager::PipelineType::DIR_SHADOW_MAP);
+
+    auto draw = [&](const GLTFRenderObject& object) {
+        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline->pipeline);
+        vkCmdBindIndexBuffer(commandBuffer, object.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
+
+        DirShadowPushConstants pushConstants;
+        pushConstants.worldMatrix = lightSpaceMatrix * object.transform;
+        pushConstants.vertexBuffer = object.vertexBufferAddress;
+
+        vkCmdPushConstants(commandBuffer, pipeline->layout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(DirShadowPushConstants), &pushConstants);
+        vkCmdDrawIndexed(commandBuffer, object.indexCount, 1, object.firstIndex, 0, 0);
+    };
+
+    for (auto& object : mRenderContext.opaqueObjects) {
+        draw(object);
+    }
+
+    vkCmdEndRendering(commandBuffer);
+
+    return lightSpaceMatrix;
 }
 
 void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
@@ -781,8 +933,30 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         });
     }
 
+    glm::vec3 cameraPos = glm::vec3(mRenderContext.sceneData.viewPosition);
+    glm::vec3 lightDir = glm::vec3(mRenderContext.sceneData.sunlightDirection);
+
+    glm::mat4 stableLightView = glm::lookAt(
+        cameraPos + lightDir * 500.0f, // Position the light's "camera" far behind the player
+        cameraPos,                     // Make it look directly at the player
+        glm::vec3(0.0f, 1.0f, 0.0f)    // Use the world's 'up' vector to keep it from rolling
+    );
+
+    float globalMinZ = -mShadowDepth;
+    float globalMaxZ = mShadowDepth;
+
+    float lightDepthRange = globalMaxZ - globalMinZ;
+    mSceneManager->getActiveScene().getSceneData().shadowConfig.w = lightDepthRange;
+
+    for (int c = 0; c < SHADOW_CASCADES_COUNT; ++c) {
+        mSceneManager->getActiveScene().getSceneData().lightSpace[c] = renderShadowMap(commandBuffer, c, stableLightView, glm::vec2(globalMinZ, globalMaxZ));
+    }
+
+    mSceneManager->getActiveScene().updateUBO(mFrameNumber);
+
     VkClearValue clearValue{};
-    clearValue.color = {1.0, 1.0, 0.0, 1.0};
+    glm::vec4 clearColor = mRenderContext.sceneData.clearColor;
+    clearValue.color = {clearColor.x, clearColor.y, clearColor.z, 1.0};
     VkRenderingAttachmentInfo colorAttachment = vkinit::attachment_info(mDrawImage.imageView, &clearValue, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
     VkRenderingAttachmentInfo depthAttachment = vkinit::depth_attachment_info(mDepthImage.imageView, VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL);
 
@@ -827,7 +1001,7 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
 
                 vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->pipeline);
 
-                mScene->setGlobalDescriptorOffset(commandBuffer, object.material->pipeline->layout, mFrameNumber);
+                mSceneManager->getActiveScene().setGlobalDescriptorOffset(commandBuffer, object.material->pipeline->layout, mFrameNumber);
             }
 
             vkCmdSetDescriptorBufferOffsetsEXT(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, object.material->pipeline->layout, 1, 1, &bufferIndex, &object.material->descriptorOffset);
@@ -859,14 +1033,6 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
         draw(mRenderContext.opaqueObjects[index]);
     }
 
-    // draw transparent objects after opaque ones
-    for (auto& index : transparentObjectIndices) {
-        if (mEngineConfig.enableFrustumCulling && !isVisible(mRenderContext.transparentObjects[index], mRenderContext.sceneData.viewProjection))
-            continue;
-
-        draw(mRenderContext.transparentObjects[index]);
-    }
-
     auto linearSampler = *mAssetManager->getSampler("linear");
 
     if (mRenderContext.skybox != nullptr) {
@@ -887,6 +1053,14 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
 
         vkCmdPushConstants(commandBuffer, pipeline->layout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(SkyboxPushConstants), &pushConstants);
         vkCmdDrawIndexed(commandBuffer, cubeMesh->surfaces[0].count, 1, cubeMesh->surfaces[0].startIndex, 0, 0);
+    }
+
+    // draw transparent objects after opaque ones
+    for (auto& index : transparentObjectIndices) {
+        if (mEngineConfig.enableFrustumCulling && !isVisible(mRenderContext.transparentObjects[index], mRenderContext.sceneData.viewProjection))
+            continue;
+
+        draw(mRenderContext.transparentObjects[index]);
     }
 
     auto spritePipeline = mPipelineResourceManager->getPipeline(PipelineResourceManager::PipelineType::SPRITE);
@@ -927,12 +1101,16 @@ void VulkanEngine::drawGeometry(VkCommandBuffer commandBuffer) {
     mStats.drawGeometryTimeBuffer += elapsed.count() / 1000.f;
 }
 
-AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped, bool createMipViews) {
+AllocatedImage VulkanEngine::createImage(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipMapped, bool createMipViews, bool msaa) {
     AllocatedImage newImage;
     newImage.imageFormat = format;
     newImage.imageExtent = size;
 
     VkImageCreateInfo imageInfo = vkinit::image_create_info(format, usage, size);
+
+    if (msaa) {
+        imageInfo.samples = VK_SAMPLE_COUNT_8_BIT;
+    }
 
     if (mipMapped) {
         imageInfo.mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(size.width, size.height)))) + 1;
@@ -987,6 +1165,7 @@ AllocatedImage VulkanEngine::createCubemap(
     AllocatedImage cubemap{};
     cubemap.imageFormat = format;
     cubemap.imageExtent = {size.width, size.height, 1};
+    cubemap.mipLevels = 1;
 
     VkImageCreateInfo cubemapInfo{};
     cubemapInfo.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;
@@ -1065,6 +1244,7 @@ AllocatedImage VulkanEngine::createCubemap(
 
         if (mipMapped) {
             vkutil::generateMipmaps(commandBuffer, cubemap.image, VkExtent2D{cubemap.imageExtent.width, cubemap.imageExtent.height});
+            cubemap.mipLevels = int(std::floor(std::log2(std::max(cubemap.imageExtent.width, cubemap.imageExtent.height)))) + 1;
         } else {
             vkutil::transitionImage(commandBuffer, cubemap.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
         }
@@ -1126,4 +1306,22 @@ void VulkanEngine::destroyImage(const AllocatedImage& image) {
     for (int i = 0; i < image.mipViews.size(); i++) {
         vkDestroyImageView(mDevice, image.mipViews[i], nullptr);
     }
+}
+
+void VulkanEngine::saveConfigToFile() {
+    std::filesystem::path filePath = mProjectPath.string() + "/engine_config.json";
+    fmt::println("Saving engine config to {}", filePath.c_str());
+
+    std::ofstream outFile(filePath);
+
+    nlohmann::json j;
+    j["renderScale"] = mEngineConfig.renderScale;
+    j["frustumCulling"] = mEngineConfig.enableFrustumCulling;
+    j["drawSorting"] = mEngineConfig.enableDrawSorting;
+    j["vsync"] = mEngineConfig.vsync;
+    j["entryPoint"] = mEngineConfig.entryPoint;
+
+    outFile << j.dump(2);
+
+    outFile.close();
 }

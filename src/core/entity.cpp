@@ -6,13 +6,10 @@
 Entity::Entity(const Metadata& meta, entt::registry& registry) : mRegistry(registry) {
     mHandle = mRegistry.create();
     addComponent<Metadata>(meta);
+    mUUID = meta.uuid;
 }
 
 Entity::~Entity() {
-    if (hasComponent<Script>()) {
-        // getComponent<Script>().script->onDestroy();
-    }
-
     mRegistry.destroy(mHandle);
 }
 
@@ -28,18 +25,23 @@ void Entity::deferredDestroy() {
     addComponent<Destroy>();
 }
 
-void Entity::propagateTransform(const glm::mat4& parentMatrix) {
+void Entity::propagateTransform(const glm::mat4& parentMatrix, glm::vec2 drawExtent) {
     glm::mat4 globalMatrix = parentMatrix;
 
     if (hasComponent<Transform>()) {
         Transform& transform = getComponent<Transform>();
 
-        transform.update(parentMatrix);
+        if (hasComponent<Sprite>()) {
+            transform.update(parentMatrix, true, drawExtent);
+        } else {
+            transform.update(parentMatrix);
+        }
+
         globalMatrix = transform.globalMatrix;
     }
 
     for (auto child : mChildren) {
-        child->propagateTransform(globalMatrix);
+        child->propagateTransform(globalMatrix, drawExtent);
     }
 }
 
@@ -84,34 +86,74 @@ nlohmann::json Entity::toJson() {
     return j;
 }
 
-void Entity::drawGUI() {
-    // bool isOpen = ImGui::TreeNode(mUUID.toString().c_str());
+void Entity::drawHierarchy(ImGuiContext& context) {
+    bool isLeaf = mChildren.empty();
+    ImGuiTreeNodeFlags flags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_SpanAvailWidth;
 
-    // if (ImGui::BeginPopupContextItem((mUUID.toString() + "popup").c_str())) {
-    //     if (ImGui::Selectable("Add new entity")) {
-    //         mScene.createEntity().setParent(mUUID);
-    //     }
+    if (mUUID == context.selectedEntity)
+        flags |= ImGuiTreeNodeFlags_Selected;
 
-    //     if (ImGui::Selectable("Delete entity")) {
-    //         deferredDestroy();
-    //     }
+    if (isLeaf)
+        flags |= ImGuiTreeNodeFlags_Leaf | ImGuiTreeNodeFlags_NoTreePushOnOpen;
 
-    //     ImGui::EndPopup();
-    // }
+    // Set colors
+    ImVec4 headerColor = HOVERED_BUTTON_COLOR;
+    headerColor.w = 0.7;
 
-    // if (isOpen) {
-    //     for (auto& childUUID : mChildrenUUIDs) {
-    //         mScene.getEntity(childUUID).drawGUI();
-    //     }
+    ImVec4 headerHoveredColor = BUTTON_COLOR;
+    headerHoveredColor.w = 0.7;
 
-    //     // if (ImGui::Button("Add new entity")) {
-    //     //     Entity& newEntity = createEntity();
-    //     //     mRootEntityUUIDs.push_back(newEntity.mUUID);
-    //     // }
-    //     // ImGui::OpenPopupOnItemClick("entityPopup", ImGuiPopupFlags_MouseButtonRight);
+    ImGui::PushStyleColor(ImGuiCol_Header, headerColor);
+    ImGui::PushStyleColor(ImGuiCol_HeaderHovered, headerHoveredColor);
 
-    //     ImGui::TreePop();
-    // }
+    ImVec2 currPos = ImGui::GetCursorScreenPos();
+    bool open = ImGui::TreeNodeEx(mUUID.c_str(), flags);
 
+    if (ImGui::BeginDragDropSource(ImGuiDragDropFlags_SourceAllowNullID)) {
+        ImGui::SetDragDropPayload("ENTITY_PAYLOAD", mUUID.c_str(), mUUID.size());
 
+        ImGui::Text(mUUID.c_str());
+
+        ImGui::EndDragDropSource();
+    }
+
+    if (ImGui::BeginDragDropTarget()) {
+        if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("ENTITY_PAYLOAD")) {
+            // Handle dropped data here
+            std::string movedUUID((char*)payload->Data);
+            context.movedEntity = true;
+            context.newParent = mUUID;
+            context.entityName = movedUUID;
+        }
+
+        ImGui::EndDragDropTarget();
+    }
+
+    if (ImGui::IsItemClicked()) {
+        context.selectedEntity = mUUID;
+    }
+
+    std::string popupName = "entity_popup" + mUUID;
+    if (ImGui::BeginPopupContextItem(popupName.c_str())) {
+        if (ImGui::MenuItem("Delete")) {
+            context.deletedEntity = true;
+            context.entityName = mUUID;
+
+            if (context.selectedEntity == mUUID) {
+                context.selectedEntity = "";
+            }
+        }
+
+        ImGui::EndPopup();
+    }
+
+    // Only recurse if it has children and is open
+    if (!isLeaf && open) {
+        for (auto child : mChildren) {
+            child->drawHierarchy(context);
+        }
+        ImGui::TreePop();
+    }
+
+    ImGui::PopStyleColor(2);
 }

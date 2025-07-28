@@ -3,6 +3,7 @@
 #include "entt.hpp"
 #include <nlohmann/json.hpp>
 #include "components/components.h"
+#include "colors.h"
 
 class Entity {
 
@@ -35,6 +36,10 @@ public:
         return mRegistry.all_of<T>(mHandle);
     }
 
+    Entity* getParent() {
+        return mParent;
+    }
+
     void setParent(Entity* parent) {
         mParent = parent;
     }
@@ -44,8 +49,9 @@ public:
 
     void deferredDestroy();
 
-    void drawGUI();
-    void propagateTransform(const glm::mat4& parentMatrix);
+    void drawHierarchy(ImGuiContext& context);
+
+    void propagateTransform(const glm::mat4& parentMatrix, glm::vec2 drawExtent);
 
     const std::string& getUUID() {
         return mRegistry.get<Metadata>(mHandle).uuid;
@@ -55,15 +61,25 @@ public:
         return mHandle;
     }
 
+    std::vector<Entity*>& getChildren() {
+        return mChildren;
+    }
+
+    bool hasParent() {
+        return mParent != nullptr;
+    }
+
     nlohmann::json toJson();
 
     operator entt::entity() const { return mHandle; }
 
 private:
-
+    std::string mUUID;
     entt::entity mHandle;
     entt::registry& mRegistry;
 
     Entity* mParent = nullptr;
     std::vector<Entity*> mChildren;
+
+    bool mRenaming = false;
 };

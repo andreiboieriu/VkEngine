@@ -2,6 +2,8 @@
 
 #include <nlohmann/json.hpp>
 #include <cxxabi.h>
+#include <colors.h>
+#include <imgui.h>
 
 template<typename T>
 nlohmann::json componentToJson(const T& component);
@@ -42,3 +44,7 @@ struct Sprite;
 
 using AllComponents = ComponentList<GLTF, Transform, Script, Destroy, SphereCollider, Camera, Metadata, Sprite>;
 using SerializableComponents = ComponentList<GLTF, Transform, Script, SphereCollider, Camera, Metadata, Sprite>;
+using UIComponents = ComponentList<GLTF, Transform, Script, SphereCollider, Camera, Sprite>;
+
+template<typename T>
+void drawComponent(T& component, ImGuiContext& context);

@@ -49,3 +49,34 @@ nlohmann::json componentToJson(const Camera& component) {
 
     return j;
 }
+
+template<>
+void drawComponent(Camera& component, ImGuiContext& context) {
+    ImGui::PushFont(context.normalFont);
+    ImGui::PushStyleColor(ImGuiCol_Text, BUTTON_TEXT_COLOR);
+
+    bool open = ImGui::CollapsingHeader("Camera", ImGuiTreeNodeFlags_DefaultOpen);
+
+    ImGui::PopFont();
+    ImGui::PopStyleColor();
+
+    if (ImGui::BeginPopupContextItem("camera_popup")) {
+        if (ImGui::MenuItem("Delete")) {
+            context.deletedComponent = true;
+            context.componentName = getTypeName<Camera>();
+        }
+        ImGui::EndPopup();
+    }
+
+    if (open) {
+        ImGui::PushFont(context.font12);
+
+        ImGui::Indent();
+        ImGui::InputFloat("Fov", &component.fov);
+        ImGui::InputFloat("Near", &component.near);
+        ImGui::InputFloat("Far", &component.far);
+        ImGui::Unindent();
+
+        ImGui::PopFont();
+    }
+}

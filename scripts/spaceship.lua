@@ -1,13 +1,11 @@
 Speed = 7
 RotationSpeed = 45
 
----@return nil
 function init()
     transform = getTransform()
     transform:Rotate(Vec3.new(0, 1, 0), 180.0)
 end
 
----@return nil
 function update()
     -- transform = getTransform()
 
@@ -34,7 +32,6 @@ function update()
     -- cameraTransform:LookAt(transform.position)
 end
 
----@return nil
 function late_update()
 
 end

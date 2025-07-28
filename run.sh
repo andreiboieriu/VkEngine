@@ -3,7 +3,7 @@
 EDITOR_PATH="/bin/editor"
 GAME_PATH="/bin/game"
 
-ENV_VARS="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR"
+ENV_VARS=""
 ARGS=""
 
 while [[ "$#" -gt 0 ]]; do

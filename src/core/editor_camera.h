@@ -1,8 +1,11 @@
+#pragma once
+
 #include "vk_types.h"
 #include "vk_window.h"
 
 class EditorCamera {
 public:
+    EditorCamera(float aspectRatio);
 
     glm::mat4 getViewMatrix();
     glm::mat4 getRotationMatrix();
@@ -12,18 +15,22 @@ public:
         return mPosition;
     }
 
-    void update(float dt, float aspectRatio);
+    void update(float dt, float aspectRatio, const Input& input);
 
     void drawGui();
-
-private:
-    glm::vec3 mVelocity{};
-    glm::vec3 mPosition{};
+    void reset();
+    void resetVelocity() {
+        mVelocity = glm::vec3(0.f);
+    }
 
     float mFov = 70.f;
     float mAspectRatio;
     float mNear = 0.1f;
-    float mFar = 1000.f;
+    float mFar = 250.f;
+
+private:
+    glm::vec3 mVelocity{};
+    glm::vec3 mPosition{};
 
     float mSpeed = 5.f;
 

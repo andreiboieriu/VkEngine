@@ -6,14 +6,15 @@
 
 #include <glm/gtx/matrix_decompose.hpp>
 #include <memory>
+#include <entt.hpp>
 
-Scene3D::Scene3D(const std::filesystem::path& path, VulkanEngine& vkEngine) : mVkEngine(vkEngine), mAssetManager(mVkEngine.getAssetManager()) {
+Scene3D::Scene3D(std::filesystem::path path, VulkanEngine& vkEngine) : mVkEngine(vkEngine), mAssetManager(mVkEngine.getAssetManager()), mScriptManager(mVkEngine.getScriptManager()) {
     init();
     loadFromFile(path);
+}
 
-    mSceneData.sunlightColor = glm::vec4(1.0f);
-
-    saveToFile();
+Scene3D::Scene3D(VulkanEngine& vkEngine) : mVkEngine(vkEngine), mAssetManager(mVkEngine.getAssetManager()), mScriptManager(mVkEngine.getScriptManager()) {
+    init();
 }
 
 Scene3D::~Scene3D() {
@@ -34,6 +35,18 @@ void Scene3D::init() {
         );
     }
 
+    // create scene data descriptors
+    for (unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        mSceneDataUBOs[i].globalDescriptorOffset = mVkEngine.getPipelineResourceManager().createSceneDescriptor(
+            mSceneDataUBOs[i].buffer.deviceAddress,
+            sizeof(SceneData),
+            mAssetManager.getDefaultImage("black_cube")->imageView,
+            mAssetManager.getDefaultImage("black_cube")->imageView,
+            mAssetManager.getDefaultImage("brdflut")->imageView,
+            *mAssetManager.getSampler("linear")
+        );
+    }
+
     // add scene data buffer to deletion queue
     mDeletionQueue.push([&]() {
         for (unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
@@ -41,19 +54,25 @@ void Scene3D::init() {
         }
     });
 
-    mScriptManager = std::make_unique<ScriptManager>();
-
     mDeletionQueue.push([&]() {
         mEntities.clear();
-
-        mScriptManager = nullptr;
     });
+
+    mSceneData.sunlightColor = glm::vec4(1.0f);
+    mSceneData.sunlightDirection = glm::vec4(0.f);
+    mSceneData.clearColor = glm::vec4(0.2f, 0.2f, 0.2f, 0.2f);
+    mSceneData.cascadePlanes = glm::vec4(20.f, 55.f, 112.f, 0.f);
+    mSceneData.shadowConfig = glm::vec4(0.5f, 1.0f, 0.2f, 0.f);
 }
 
-void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
-    mName = filePath.stem();
+void Scene3D::loadFromFile(std::filesystem::path filePath) {
+    mSkybox = nullptr;
+    mRootEntities.clear();
+    mEntities.clear();
+    mRegistry.clear();
 
     // get json from file
+    // fmt::println("Loading scene from json file: {}", filePath.c_str());
     std::ifstream file(filePath);
     nlohmann::json sceneJson = nlohmann::json::parse(file);
 
@@ -63,11 +82,14 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
         mSkybox = mAssetManager.getSkybox(sceneJson["Skybox"]);
     }
 
+    if (mSkybox) {
+        mSceneData.sunlightDirection = glm::vec4(mSkybox->defaultDirectionalLight, 1.f);
+    }
+
     // create scene data descriptor
     for (unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
-        mSceneDataUBOs[i].globalDescriptorOffset = mVkEngine.getPipelineResourceManager().createSceneDescriptor(
-            mSceneDataUBOs[i].buffer.deviceAddress,
-            sizeof(SceneData),
+        mVkEngine.getPipelineResourceManager().updateSceneDescriptor(
+            mSceneDataUBOs[i].globalDescriptorOffset,
             mSkybox ? mSkybox->irrMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
             mSkybox ? mSkybox->prefilteredEnvMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
             mSkybox ? mSkybox->brdfLut.imageView : mAssetManager.getDefaultImage("brdflut")->imageView,
@@ -89,7 +111,7 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
                 return;
             }
 
-            fmt::println("Adding {} component to {}", std::string(typeName), std::string(componentJsons["Metadata"]["UUID"]));
+            // fmt::println("Adding {} component to {}", std::string(typeName), std::string(componentJsons["Metadata"]["UUID"]));
 
             newEntity->addComponent<T>(componentFromJson<T>(entityJson["Components"][typeName]));
         });
@@ -100,8 +122,10 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
         auto view = mRegistry.view<Sprite>();
 
         for (auto [entity, sprite] : view.each()) {
+            if (sprite.name == "None" || sprite.name == "") continue;
+
             mAssetManager.loadImage(sprite.name, VK_FORMAT_R8G8B8A8_SRGB);
-            sprite.image = mAssetManager.getImage(std::filesystem::path(sprite.name).stem());
+            sprite.image = mAssetManager.getImage(sprite.name);
         }
     }
 
@@ -109,6 +133,8 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
         auto view = mRegistry.view<GLTF>();
 
         for (auto [entity, gltf] : view.each()) {
+            if (gltf.name == "None" || gltf.name == "") continue;
+
             mAssetManager.loadGltf(gltf.name);
             gltf.gltf = mAssetManager.getGltf(gltf.name);
         }
@@ -118,21 +144,20 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
         auto view = mRegistry.view<Script, Metadata>();
 
         for (auto [entity, script, metadata] : view.each()) {
-            mScriptManager->loadScript(script.name);
-            mScriptManager->bindScript(script.name, *getEntity(metadata.uuid));
+            if (script.name == "None" || script.name == "") continue;
+
+            mScriptManager.loadScript(script.name);
+            mScriptManager.bindScript(script.name, *getEntity(metadata.uuid));
         }
     }
 
     // assign main camera
     {
-        auto view = mRegistry.view<Transform, Camera, Metadata>();
+        auto view = mRegistry.view<Camera, Metadata>();
 
-        for (auto [entity, transform, camera, metadata] : view.each()) {
-            if (camera.enabled) {
-                mCameraEntity = getEntity(metadata.uuid);
-
-                break;
-            }
+        for (auto [entity, camera, metadata] : view.each()) {
+            mCameraEntity = getEntity(metadata.uuid);
+            break;
         }
     }
 
@@ -154,29 +179,68 @@ void Scene3D::loadFromFile(const std::filesystem::path& filePath) {
         }
     }
 
-    fmt::println("Finished loading scene!");
+    if (sceneJson.contains("Config")) {
+        auto lightDirection = sceneJson["Config"]["lightDirection"];
+        mSceneData.sunlightDirection.x = lightDirection[0];
+        mSceneData.sunlightDirection.y = lightDirection[1];
+        mSceneData.sunlightDirection.z = lightDirection[2];
+
+        auto clearColor = sceneJson["Config"]["clearColor"];
+        mSceneData.clearColor.x = clearColor[0];
+        mSceneData.clearColor.y = clearColor[1];
+        mSceneData.clearColor.z = clearColor[2];
+
+        auto lightColor = sceneJson["Config"]["lightColor"];
+        mSceneData.sunlightColor.x = lightColor[0];
+        mSceneData.sunlightColor.y = lightColor[1];
+        mSceneData.sunlightColor.z = lightColor[2];
+
+        if (sceneJson["Config"].contains("cascadePlanes")) {
+            auto cascadePlanes = sceneJson["Config"]["cascadePlanes"];
+            mSceneData.cascadePlanes.x = cascadePlanes[0];
+            mSceneData.cascadePlanes.y = cascadePlanes[1];
+            mSceneData.cascadePlanes.z = cascadePlanes[2];
+        }
+
+        if (sceneJson["Config"].contains("shadowConfig")) {
+            auto shadowConfig = sceneJson["Config"]["shadowConfig"];
+            mSceneData.shadowConfig.x = shadowConfig[0];
+            mSceneData.shadowConfig.y = shadowConfig[1];
+            mSceneData.shadowConfig.z = shadowConfig[2];
+        }
+    }
+
+    propagateTransform();
+    initSceneDataBuffers();
 }
 
 void Scene3D::cleanupEntities() {
-    // auto view = mRegistry.view<Destroy>();
+    auto view = mRegistry.view<Destroy, Metadata>();
 
-    // std::vector<entt::entity> entities;
+    std::vector<entt::entity> entities;
 
-    // for (auto [entity] : view.each()) {
-    //     std::string& uuid = mRegistry.get<UUIDComponent>(entity).uuid;
+    for (auto [entity, metadata] : view.each()) {
+        std::string& uuid = metadata.uuid;
+        auto newEnd = std::remove(mRootEntities.begin(), mRootEntities.end(), getEntity(metadata.uuid));
+        mRootEntities.erase(newEnd, mRootEntities.end());
 
-    //     mEntities.erase(uuid);
-    // }
+        mEntities.erase(uuid);
+    }
 }
 
 void Scene3D::propagateTransform() {
     for (auto& entity : mRootEntities) {
-        entity->propagateTransform(glm::mat4(1.f));
+        entity->propagateTransform(glm::mat4(1.f), mVkEngine.getDrawExtent());
     }
 }
 
 void Scene3D::render(RenderContext& renderContext) {
     renderContext = RenderContext{};
+    renderContext.fov = mCameraFov;
+    renderContext.near = mNear;
+    renderContext.far = mFar;
+    renderContext.sceneData = mSceneData;
+    renderContext.skybox = mSkybox;
 
     {
         auto view = mRegistry.view<Transform, GLTF>();
@@ -201,29 +265,13 @@ void Scene3D::render(RenderContext& renderContext) {
             renderContext.sprites.push_back(SpriteRenderObject{.image = sprite.image, .transform = transform.globalMatrix});
         }
     }
-
-    renderContext.sceneData = mSceneData;
-    renderContext.skybox = mSkybox;
 }
 
-void Scene3D::update(float deltaTime, const Input& input, int frameNumber) {
-    // systems
-    mScriptManager->update(deltaTime, input, mCameraEntity);
-
-    // mScriptManager->onDestroy();
-    cleanupEntities();
-
-    mScriptManager->onInit(mRegistry);
-    mScriptManager->onUpdate(mRegistry);
-    propagateTransform();
-
-    mScriptManager->onLateUpdate(mRegistry);
-    propagateTransform();
-
+void Scene3D::initSceneDataBuffers() {
     mSceneData.view = glm::mat4(1.f);
     mSceneData.projection = glm::mat4(1.f);
 
-    if (mCameraEntity) {
+    if (mCameraEntity && mCameraEntity->hasComponent<Transform>()) {
         Camera& camera = mCameraEntity->getComponent<Camera>();
         Transform& cameraTransform = mCameraEntity->getComponent<Transform>();
 
@@ -237,11 +285,84 @@ void Scene3D::update(float deltaTime, const Input& input, int frameNumber) {
 
     mSceneData.viewProjection = mSceneData.projection * mSceneData.view;
 
-    mSceneData.ambientColor = glm::vec4(.1f);
-    mSceneData.sunlightDirection = glm::vec4(.2f, 1.0f, .5f, 1.f);
-    mSceneData.sunlightColor = glm::vec4(0.f);
+    *(SceneData*)mSceneDataUBOs[0].buffer.allocInfo.pMappedData = mSceneData;
+    *(SceneData*)mSceneDataUBOs[1].buffer.allocInfo.pMappedData = mSceneData;
+}
 
+void Scene3D::computeSunScreenPos() {
+    float distance = mFar - 2.0;
+    glm::vec3 sunWorldPos = mSceneData.viewPosition + mSceneData.sunlightDirection * distance;
 
+    glm::vec4 lightClipPos = mSceneData.viewProjection * glm::vec4(sunWorldPos, 1.0f);
+    glm::vec3 lightNDC = glm::vec3(lightClipPos) / lightClipPos.w;
+
+    bool inView = lightNDC.x >= -1.2f && lightNDC.x <= 1.2f &&
+                  lightNDC.y >= -1.2f && lightNDC.y <= 1.2f &&
+                  lightClipPos.z >= 0.0f && lightClipPos.z <= lightClipPos.w;
+
+    glm::vec2 drawExtent = mVkEngine.getDrawExtent();
+    glm::vec2 screenPos = (glm::vec2(lightNDC) * 0.5f + 0.5f) * drawExtent;
+    screenPos.y = drawExtent.y - screenPos.y;
+
+    mSunScreenPos = glm::vec4(screenPos, inView ? 1.0f : 0.0f, 0.0f);
+}
+
+void Scene3D::editorModeUpdate(EditorCamera& camera) {
+    propagateTransform();
+
+    mSceneData.viewPosition = glm::vec4(camera.getPosition(), 0.0f);
+    mSceneData.view = camera.getViewMatrix();
+    mSceneData.projection = camera.getProjectionMatrix();
+
+    mSceneData.viewProjection = mSceneData.projection * mSceneData.view;
+    computeSunScreenPos();
+
+    mCameraFov = camera.mFov;
+    mNear = camera.mNear;
+    mFar = camera.mFar;
+}
+
+void Scene3D::update(float deltaTime, const Input& input) {
+    // systems
+    mScriptManager.update(deltaTime, input);
+
+    mScriptManager.onDestroy(mRegistry);
+    cleanupEntities();
+
+    mScriptManager.onInit(mRegistry);
+    mScriptManager.onUpdate(mRegistry);
+    propagateTransform();
+
+    mScriptManager.onLateUpdate(mRegistry);
+    propagateTransform();
+
+    mScriptManager.onCollision(mRegistry);
+    propagateTransform();
+
+    mSceneData.view = glm::mat4(1.f);
+    mSceneData.projection = glm::mat4(1.f);
+
+    if (mCameraEntity && mCameraEntity->hasComponent<Transform>()) {
+        Camera& camera = mCameraEntity->getComponent<Camera>();
+        Transform& cameraTransform = mCameraEntity->getComponent<Transform>();
+
+        camera.aspectRatio = mVkEngine.getWindowAspectRatio();
+        camera.updateMatrices(cameraTransform);
+
+        mSceneData.viewPosition = glm::vec4(camera.globalPosition, 0.0f);
+        mSceneData.view = camera.viewMatrix;
+        mSceneData.projection = camera.projectionMatrix;
+
+        mCameraFov = camera.fov;
+        mNear = camera.near;
+        mFar = camera.far;
+    }
+
+    mSceneData.viewProjection = mSceneData.projection * mSceneData.view;
+    computeSunScreenPos();
+}
+
+void Scene3D::updateUBO(int frameNumber) {
     *(SceneData*)mSceneDataUBOs[frameNumber].buffer.allocInfo.pMappedData = mSceneData;
 }
 
@@ -255,9 +376,14 @@ Entity* Scene3D::createEntity(Metadata meta) {
     return mEntities[meta.uuid].get();
 }
 
-Entity* Scene3D::createEntity() {
+Entity* Scene3D::createEntity(const std::string& name) {
+    if (mEntities.contains(name)) {
+        fmt::println("Error: An entity named {} already exists", name);
+        return nullptr;
+    }
+
     Metadata meta;
-    meta.uuid = "Entity_" + std::to_string(mNextEntityID++);
+    meta.uuid = name;
 
     return createEntity(meta);
 }
@@ -270,53 +396,337 @@ Entity* Scene3D::getEntity(const std::string& name) {
     return mEntities[name].get();
 }
 
-void Scene3D::destroyEntity(const std::string& name) {
+void Scene3D::deleteEntity(const std::string& name) {
+    mRootEntities.erase(std::remove_if(mRootEntities.begin(), mRootEntities.end(),
+        [name](Entity* entity) {
+            return entity->getUUID() == name;
+        }),
+        mRootEntities.end()
+    );
+
+    if (mCameraEntity && mCameraEntity->getUUID() == name) {
+        mCameraEntity = nullptr;
+    }
+
     mEntities.erase(name);
 }
 
-void Scene3D::drawGui() {
-    ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiCond_FirstUseEver);
+void Scene3D::moveEntity(const std::string& name, const std::string& parent) {
+    Entity* entity = getEntity(name);
+    Entity* oldParent = entity->getParent();
 
-    if (ImGui::Begin("Scene", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
-        // camera
-        // mCamera.drawGui();
-        if (ImGui::TreeNode("Camera")) {
-            ImGui::InputFloat3("position", (float*)&mCameraEntity->getComponent<Transform>().position);
-            ImGui::InputFloat3("rotation", (float*)&mCameraEntity->getComponent<Transform>().rotation);
-
-            ImGui::TreePop();
+    // add to root
+    if (parent == "") {
+        if (oldParent != nullptr) {
+            oldParent->removeChild(entity);
         }
 
-        if (ImGui::TreeNode("Hierarchy")) {
-            for (auto& entity : mRootEntities) {
-                entity->drawGUI();
+        entity->setParent(nullptr);
+        if (std::find(mRootEntities.begin(), mRootEntities.end(), entity) == mRootEntities.end()) {
+            mRootEntities.push_back(entity);
+        }
+
+        return;
+    }
+
+    // remove from root
+    if (oldParent == nullptr) {
+        mRootEntities.erase(std::remove(mRootEntities.begin(), mRootEntities.end(), entity), mRootEntities.end());
+    } else {
+        oldParent->removeChild(entity);
+    }
+
+    Entity* newParent = getEntity(parent);
+    newParent->addChild(entity);
+    entity->setParent(newParent);
+}
+
+void Scene3D::drawConfig(ImGuiContext& context) {
+    ImGui::PushFont(context.font12);
+
+    ImGui::PushStyleColor(ImGuiCol_Header, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_HeaderActive, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_HeaderHovered, HOVERED_BUTTON_COLOR);
+
+    ImGui::PushFont(context.normalFont);
+    ImGui::PushStyleColor(ImGuiCol_Text, BUTTON_TEXT_COLOR);
+
+    bool open = ImGui::CollapsingHeader("Config", ImGuiTreeNodeFlags_DefaultOpen);
+
+    ImGui::PopFont();
+    ImGui::PopStyleColor();
+
+    if (open) {
+        ImGui::PushFont(context.font12);
+        ImGui::Indent();
+
+        ImGui::InputFloat3("Light direction", &mSceneData.sunlightDirection.x);
+        ImGui::InputFloat3("Light color", &mSceneData.sunlightColor.x);
+        ImGui::InputFloat3("Clear color", &mSceneData.clearColor.x);
+        ImGui::InputFloat3("Cascade planes", &mSceneData.cascadePlanes.x);
+        ImGui::InputFloat2("Shadow bias", &mSceneData.shadowConfig.x);
+        ImGui::InputFloat("Shadow N offset", &mSceneData.shadowConfig.z);
+
+        ImGui::Unindent();
+        ImGui::PopFont();
+    }
+
+    ImGui::PushFont(context.normalFont);
+    ImGui::PushStyleColor(ImGuiCol_Text, BUTTON_TEXT_COLOR);
+
+    open = ImGui::CollapsingHeader("Skybox", ImGuiTreeNodeFlags_DefaultOpen);
+
+    ImGui::PopFont();
+    ImGui::PopStyleColor();
+
+    if (open) {
+        ImGui::PushFont(context.font12);
+
+        ImGui::Indent();
+
+        ImVec2 size = ImVec2(227, 0); // width, height = 0 for auto
+        ImGui::PushStyleColor(ImGuiCol_Button, ImGui::GetStyle().Colors[ImGuiCol_FrameBg]);
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImGui::GetStyle().Colors[ImGuiCol_FrameBgHovered]);
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImGui::GetStyle().Colors[ImGuiCol_FrameBgActive]);
+
+        if (ImGui::Button(mSkybox ? mSkybox->name.c_str() : "None", size)) {
+            // optional click behavior
+        }
+
+        if (ImGui::IsItemClicked(ImGuiMouseButton_Right)) {
+            mSkybox = nullptr;
+            for (unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+                mVkEngine.getPipelineResourceManager().updateSceneDescriptor(
+                    mSceneDataUBOs[i].globalDescriptorOffset,
+                    mSkybox ? mSkybox->irrMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
+                    mSkybox ? mSkybox->prefilteredEnvMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
+                    mSkybox ? mSkybox->brdfLut.imageView : mAssetManager.getDefaultImage("brdflut")->imageView,
+                    *mAssetManager.getSampler("linear")
+                );
+            }
+        }
+
+        ImGui::PopStyleColor(3);
+
+        ImGui::PushStyleColor(ImGuiCol_DragDropTarget, BUTTON_COLOR);
+
+        // Drag-and-drop target
+        if (ImGui::BeginDragDropTarget()) {
+            if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("SKYBOX_PAYLOAD")) {
+                // Handle dropped data here
+                std::string newSkybox((char*)payload->Data);
+                mSkybox = mAssetManager.getSkybox(newSkybox);
+                mSceneData.sunlightDirection = glm::vec4(mSkybox->defaultDirectionalLight, 1.0f);
+
+                for (unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+                    mVkEngine.getPipelineResourceManager().updateSceneDescriptor(
+                        mSceneDataUBOs[i].globalDescriptorOffset,
+                        mSkybox ? mSkybox->irrMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
+                        mSkybox ? mSkybox->prefilteredEnvMap.imageView : mAssetManager.getDefaultImage("black_cube")->imageView,
+                        mSkybox ? mSkybox->brdfLut.imageView : mAssetManager.getDefaultImage("brdflut")->imageView,
+                        *mAssetManager.getSampler("linear")
+                    );
+                }
             }
 
-            if (ImGui::Button("Add new entity")) {
-                Entity* newEntity = createEntity();
+            ImGui::EndDragDropTarget();
+        }
+
+        ImGui::PopStyleColor();
+
+        ImGui::Unindent();
+
+        ImGui::PopFont();
+    }
+
+    ImGui::PopStyleColor(3);
+    ImGui::PopFont();
+}
+
+void Scene3D::drawInspector(ImGuiContext& context) {
+    if (context.selectedEntity == "") return;
+
+    auto& entity = *mEntities[context.selectedEntity];
+
+    context.changedGLTF = false;
+    context.changedScript = false;
+    context.changedSprite = false;
+
+    ImGui::PushStyleColor(ImGuiCol_Header, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_HeaderActive, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_HeaderHovered, HOVERED_BUTTON_COLOR);
+
+    UIComponents::forEach([&](auto type) {
+        using T = typename decltype(type)::type;
+
+        if (!entity.hasComponent<T>()) {
+            return;
+        }
+
+        drawComponent<T>(entity.getComponent<T>(), context);
+    });
+
+    ImGui::PopStyleColor(3);
+
+    if (context.changedGLTF) {
+        auto& component = entity.getComponent<GLTF>();
+        component.gltf = mAssetManager.getGltf(component.name);
+    }
+
+    if (context.changedSprite) {
+        auto& component = entity.getComponent<Sprite>();
+        component.image = mAssetManager.getImage(component.name);
+    }
+
+    if (context.changedScript) {
+        auto& component = entity.getComponent<Script>();
+        mVkEngine.getScriptManager().bindScript(component.name, entity);
+    }
+
+    if (context.deletedComponent) {
+        UIComponents::forEach([&](auto type) {
+            using T = typename decltype(type)::type;
+
+            if (!entity.hasComponent<T>()) {
+                return;
+            }
+
+            if (context.componentName != getTypeName<T>()) {
+                return;
+            }
+
+            if (context.componentName == getTypeName<Camera>()) {
+                mCameraEntity = nullptr;
+            }
+
+            entity.removeComponent<T>();
+        });
+
+        context.componentName = "";
+        context.deletedComponent = false;
+    }
+
+    ImGui::PushFont(context.normalFont);
+    ImGui::PushStyleColor(ImGuiCol_Button, BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_Text, BUTTON_TEXT_COLOR);
+
+    bool clicked = ImGui::Button("Add component", ImVec2(350 - context.spacing.x * 2, 25));
+
+    if (clicked) {
+        ImGui::OpenPopup("AddComponentPopup");
+    }
+
+    if (ImGui::BeginPopup("AddComponentPopup")) {
+        ImGui::PushStyleColor(ImGuiCol_Text, WHITE);
+        UIComponents::forEach([&](auto type) {
+            using T = typename decltype(type)::type;
+
+            if (entity.hasComponent<T>()) {
+                return;
+            }
+
+            // allow only one camera per scene
+            if (getTypeName<T>() == getTypeName<Camera>() && mCameraEntity != nullptr) {
+                return;
+            }
+
+            if (ImGui::MenuItem(getTypeName<T>().c_str())) {
+                entity.addComponent<T>(T());
+
+                if (getTypeName<T>() == getTypeName<Camera>()) mCameraEntity = &entity;
+            }
+        });
+
+        ImGui::PopStyleColor();
+        ImGui::EndPopup();
+    }
+
+    ImGui::PopFont();
+    ImGui::PopStyleColor(4);
+}
+
+void Scene3D::drawHierarchy(ImGuiContext& context) {
+    ImGui::PushFont(context.normalFont);
+    ImGui::PushStyleColor(ImGuiCol_DragDropTarget, BUTTON_COLOR);
+
+    for (auto& entity : mRootEntities) {
+        entity->drawHierarchy(context);
+    }
+
+    ImGui::PushFont(context.normalFont);
+    ImGui::PushStyleColor(ImGuiCol_Button, BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, HOVERED_BUTTON_COLOR);
+    ImGui::PushStyleColor(ImGuiCol_Text, BUTTON_TEXT_COLOR);
+
+    ImVec2 buttonSize = ImVec2(250 - 2 * context.spacing.x, 25);
+
+    static char newNameBuf[100] = {};
+
+    if (mAddingEntity) {
+        ImGui::PushStyleColor(ImGuiCol_Text, WHITE);
+        ImGui::PushItemWidth(250 - 2 * context.spacing.x);
+
+        ImGui::SetKeyboardFocusHere();
+        if (ImGui::InputText("##NewEntityName", newNameBuf, 100, ImGuiInputTextFlags_EnterReturnsTrue | ImGuiInputTextFlags_AutoSelectAll)) {
+            std::string newName = std::string(newNameBuf);
+            auto newEntity = newName == "" ? nullptr : createEntity(newName);
+
+            if (newEntity != nullptr)
                 mRootEntities.push_back(newEntity);
-            }
 
-            ImGui::TreePop();
+            mAddingEntity = false;
+            newNameBuf[0] = 0;
         }
 
-        ImGui::InputFloat("light color", &mSceneData.sunlightColor.x);
-        mSceneData.sunlightColor.y = mSceneData.sunlightColor.x;
-        mSceneData.sunlightColor.z = mSceneData.sunlightColor.x;
+        if (!ImGui::IsItemActive() && !ImGui::IsItemHovered()) {
+            mAddingEntity = false;
+            newNameBuf[0] = 0;
+        }
 
-        if (ImGui::Button("Save to file")) {
-            saveToFile();
+        ImGui::PopItemWidth();
+        ImGui::PopStyleColor();
+    }
+
+    if (ImGui::Button("Add entity", buttonSize) && !mAddingEntity) {
+        mAddingEntity = true;
+    }
+
+    ImGui::Spacing();
+    ImGui::InvisibleButton("##DropTarget", ImGui::GetContentRegionAvail());
+
+    if (ImGui::BeginDragDropTarget()) {
+        if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("ENTITY_PAYLOAD")) {
+            // Handle dropped data here
+            std::string movedUUID((char*)payload->Data);
+            context.movedEntity = true;
+            context.newParent = "";
+            context.entityName = movedUUID;
         }
     }
 
-    auto view = mRegistry.view<Script>();
+    if (context.deletedEntity) {
+        context.selectedEntity = "";
+        deleteEntity(context.entityName);
 
-    for (auto [entity, scriptable] : view.each()) {
-        // if (scriptable.script)
-        //     scriptable.script->onDrawGUI();
+        context.deletedEntity = false;
+        context.entityName = "";
     }
 
-    ImGui::End();
+    if (context.movedEntity) {
+        moveEntity(context.entityName, context.newParent);
+
+        context.movedEntity = false;
+        context.entityName = "";
+        context.newParent = "";
+    }
+
+    ImGui::PopFont();
+    ImGui::PopStyleColor(5);
+
+    ImGui::PopFont();
 }
 
 void Scene3D::setGlobalDescriptorOffset(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout, int frameNumber) {
@@ -340,15 +750,51 @@ nlohmann::json Scene3D::toJson() {
         sceneJson["Skybox"] = mSkybox->name;
     }
 
+    sceneJson["Config"]["lightDirection"] = std::vector<float> {
+        mSceneData.sunlightDirection.x,
+        mSceneData.sunlightDirection.y,
+        mSceneData.sunlightDirection.z
+    };
+
+    sceneJson["Config"]["lightColor"] = std::vector<float> {
+        mSceneData.sunlightColor.x,
+        mSceneData.sunlightColor.y,
+        mSceneData.sunlightColor.z
+    };
+
+    sceneJson["Config"]["clearColor"] = std::vector<float> {
+        mSceneData.clearColor.x,
+        mSceneData.clearColor.y,
+        mSceneData.clearColor.z
+    };
+
+    sceneJson["Config"]["cascadePlanes"] = std::vector<float> {
+        mSceneData.cascadePlanes.x,
+        mSceneData.cascadePlanes.y,
+        mSceneData.cascadePlanes.z
+    };
+
+    sceneJson["Config"]["shadowConfig"] = std::vector<float> {
+        mSceneData.shadowConfig.x,
+        mSceneData.shadowConfig.y,
+        mSceneData.shadowConfig.z
+    };
+
     return sceneJson;
 }
 
-void Scene3D::saveToFile() {
-    std::filesystem::path filePath = "assets/scenes/1" + mName + ".json";
-
+void Scene3D::saveToFile(const std::filesystem::path& filePath) {
     std::ofstream outFile(filePath);
 
     outFile << toJson().dump(2);
 
     outFile.close();
+}
+
+void Scene3D::refreshScripts() {
+    auto view = mRegistry.view<Script, Metadata>();
+
+    for (auto [entity, script, metadata] : view.each()) {
+        mScriptManager.bindScript(script.name, *getEntity(metadata.uuid));
+    }
 }

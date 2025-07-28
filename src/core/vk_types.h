@@ -74,6 +74,11 @@ struct SkyboxPushConstants {
     VkDeviceAddress vertexBuffer;
 };
 
+struct DirShadowPushConstants {
+    glm::mat4 worldMatrix;
+    VkDeviceAddress vertexBuffer;
+};
+
 struct SkyboxLoadPushConstants {
     glm::mat4 projViewMatrix;
     VkDeviceAddress vertexBuffer;
@@ -164,6 +169,8 @@ struct SkyboxAsset {
     AllocatedImage prefilteredEnvMap;
     AllocatedImage brdfLut;
 
+    glm::vec3 defaultDirectionalLight;
+
     static constexpr VkExtent2D ENV_MAP_SIZE = {1024, 1024};
     static constexpr VkExtent2D IRR_MAP_SIZE = {32, 32};
     static constexpr VkExtent2D PREFILTERED_ENV_MAP_SIZE = {512, 512};
@@ -174,11 +181,13 @@ struct SceneData {
     glm::mat4 view;
     glm::mat4 projection;
     glm::mat4 viewProjection;
-    glm::vec4 ambientColor;
+    glm::mat4 lightSpace[4];
     glm::vec4 sunlightDirection;
     glm::vec4 sunlightColor;
     glm::vec4 viewPosition;
-    glm::vec4 data;
+    glm::vec4 clearColor;
+    glm::vec4 cascadePlanes;
+    glm::vec4 shadowConfig; // x = bias min, y = bias max, z = zmult
 };
 
 struct RenderContext {
@@ -188,6 +197,11 @@ struct RenderContext {
 
     SceneData sceneData;
     SkyboxAsset *skybox = nullptr;
+    glm::vec2 drawExtent;
+
+    float fov;
+    float near;
+    float far;
 };
 
 struct GLTFMaterial {

@@ -26,7 +26,7 @@ Swapchain::~Swapchain() {
 
 void Swapchain::init(VkPresentModeKHR presentMode, VkSurfaceKHR surface) {
     // set swapchain image format
-    mImageFormat = VK_FORMAT_B8G8R8A8_UNORM;
+    mImageFormat = VK_FORMAT_B8G8R8A8_SRGB;
 
     // build swapchain using vkb
     vkb::SwapchainBuilder vkbSwapchainBuilder{
@@ -43,7 +43,7 @@ void Swapchain::init(VkPresentModeKHR presentMode, VkSurfaceKHR surface) {
         .set_desired_format(surfaceFormat)
         .set_desired_present_mode(presentMode) // vsync present mode
         // .set_desired_present_mode(VK_PRESENT_MODE_MAILBOX_KHR)
-        .set_desired_min_image_count(vkb::SwapchainBuilder::DOUBLE_BUFFERING)
+        .set_desired_min_image_count(vkb::SwapchainBuilder::TRIPLE_BUFFERING)
         .set_desired_extent(mExtent.width, mExtent.height)
         .add_image_usage_flags(VK_IMAGE_USAGE_TRANSFER_DST_BIT)
         .build()
@@ -75,7 +75,7 @@ VkImage Swapchain::getNextImage(VkSemaphore& semaphore) {
         return VK_NULL_HANDLE;
     } else if (e != VK_SUCCESS) {
         fmt::println("Failed to acquire swapchain image\n");
-        exit(EXIT_FAILURE);
+        return VK_NULL_HANDLE;
     }
 
     return mImages[mCurrentImageIndex];
@@ -91,7 +91,7 @@ bool Swapchain::presentImage(VkQueue graphicsQueue, VkSemaphore waitSemaphore) {
         return false;
     } else if (e != VK_SUCCESS)  {
         fmt::println("Failed to present swapchain image\n");
-        exit(EXIT_FAILURE);
+        return false;
     }
 
     return true;

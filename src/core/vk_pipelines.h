@@ -22,7 +22,7 @@ public:
     PipelineBuilder& setInputTopology(VkPrimitiveTopology topology);
     PipelineBuilder& setPolygonMode(VkPolygonMode polygonMode);
     PipelineBuilder& setCullMode(VkCullModeFlags cullMode, VkFrontFace frontFace);
-    PipelineBuilder& setMultisampling();
+    PipelineBuilder& setMultisampling(VkSampleCountFlagBits samples);
     PipelineBuilder& disableBlending();
     PipelineBuilder& enableBlendingAdditive();
     PipelineBuilder& enableBlendingAlphaBlend();

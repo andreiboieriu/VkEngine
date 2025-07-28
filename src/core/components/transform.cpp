@@ -5,10 +5,16 @@ glm::mat4 Transform::getRotationMatrix() {
     return glm::toMat4(rotation);
 }
 
-void Transform::update(glm::mat4 parentMatrix) {
-    localMatrix = glm::translate(glm::mat4(1.f), position) *
-                  getRotationMatrix() *
-                  glm::scale(glm::mat4(1.f), scale);
+void Transform::update(glm::mat4 parentMatrix, bool isSprite, glm::vec2 drawExtent) {
+    if (isSprite) {
+        localMatrix = glm::translate(glm::mat4(1.f), position * glm::vec3(drawExtent, 1.f)) *
+                        getRotationMatrix() *
+                        glm::scale(glm::mat4(1.f), scale * glm::vec3(drawExtent, 1.f));
+    } else {
+        localMatrix = glm::translate(glm::mat4(1.f), position) *
+                        getRotationMatrix() *
+                        glm::scale(glm::mat4(1.f), scale);
+    }
 
     globalMatrix = parentMatrix * localMatrix;
 
@@ -44,9 +50,9 @@ nlohmann::json componentToJson<Transform>(const Transform& component) {
     };
 
     j[type]["Rotation"] = std::vector<float> {
-        component.rotation.x,
-        component.rotation.y,
-        component.rotation.z
+        component.eulerRotation.x,
+        component.eulerRotation.y,
+        component.eulerRotation.z
     };
 
     j[type]["Scale"] = std::vector<float> {
@@ -68,7 +74,8 @@ Transform componentFromJson(const nlohmann::json& j) {
     newTransform.position.z = position[2];
 
     auto rotation = j["Rotation"];
-    newTransform.rotation = glm::quat(glm::vec3(rotation[0], rotation[1], rotation[2]));
+    newTransform.eulerRotation = glm::vec3(rotation[0], rotation[1], rotation[2]);
+    newTransform.rotation = glm::quat(glm::radians(newTransform.eulerRotation));
 
     auto scale = j["Scale"];
     newTransform.scale.x = scale[0];
@@ -76,4 +83,39 @@ Transform componentFromJson(const nlohmann::json& j) {
     newTransform.scale.z = scale[2];
 
     return newTransform;
+}
+
+template<>
+void drawComponent(Transform& component, ImGuiContext& context) {
+    ImGui::PushFont(context.normalFont);
+    ImGui::PushStyleColor(ImGuiCol_Text, BUTTON_TEXT_COLOR);
+
+    bool open = ImGui::CollapsingHeader("Transform", ImGuiTreeNodeFlags_DefaultOpen);
+
+    ImGui::PopFont();
+    ImGui::PopStyleColor();
+
+    if (ImGui::BeginPopupContextItem("transform_popup")) {
+        if (ImGui::MenuItem("Delete")) {
+            context.deletedComponent = true;
+            context.componentName = getTypeName<Transform>();
+        }
+        ImGui::EndPopup();
+    }
+
+    if (open) {
+        ImGui::PushFont(context.font12);
+
+        ImGui::Indent();
+        ImGui::DragFloat3("Position", &component.position.x);
+
+        if (ImGui::DragFloat3("Rotation", &component.eulerRotation.x)) {
+            component.rotation = glm::quat(glm::radians(component.eulerRotation));
+        }
+
+        ImGui::DragFloat3("Scale", &component.scale.x);
+        ImGui::Unindent();
+
+        ImGui::PopFont();
+    }
 }

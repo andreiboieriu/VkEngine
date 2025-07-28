@@ -65,7 +65,7 @@ uint32_t vkutil::getPixelSize(VkFormat format) {
     }
 }
 
-void vkutil::transitionImage(VkCommandBuffer commandBuffer, VkImage image, VkImageLayout currentLayout, VkImageLayout newLayout) {
+void vkutil::transitionImage(VkCommandBuffer commandBuffer, VkImage image, VkImageLayout currentLayout, VkImageLayout newLayout, VkImageAspectFlagBits aspect) {
     VkImageMemoryBarrier2 imageBarrier{};
     imageBarrier.sType = VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER_2;
     imageBarrier.pNext = nullptr;
@@ -79,7 +79,7 @@ void vkutil::transitionImage(VkCommandBuffer commandBuffer, VkImage image, VkIma
     imageBarrier.oldLayout = currentLayout;
     imageBarrier.newLayout = newLayout;
 
-    VkImageAspectFlags aspectMask = (newLayout == VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL) ? VK_IMAGE_ASPECT_DEPTH_BIT : VK_IMAGE_ASPECT_COLOR_BIT;
+    VkImageAspectFlags aspectMask = aspect;
     imageBarrier.subresourceRange = vkinit::image_subresource_range(aspectMask);
     imageBarrier.image = image;
 
@@ -93,10 +93,18 @@ void vkutil::transitionImage(VkCommandBuffer commandBuffer, VkImage image, VkIma
     vkCmdPipelineBarrier2(commandBuffer, &depInfo);
 }
 
-void vkutil::copyImageToImage(VkCommandBuffer commandBuffer, VkImage src, VkImage dst, VkExtent2D srcExtent, VkExtent2D dstExtent) {
+void vkutil::copyImageToImage(VkCommandBuffer commandBuffer, VkImage src, VkImage dst, VkExtent2D srcExtent, VkExtent2D dstExtent, VkExtent2D srcStart, VkExtent2D dstStart, VkImageAspectFlagBits aspect) {
     VkImageBlit2 blitRegion{};
     blitRegion.sType = VK_STRUCTURE_TYPE_IMAGE_BLIT_2;
     blitRegion.pNext = nullptr;
+
+    blitRegion.srcOffsets[0].x = srcStart.width;
+    blitRegion.srcOffsets[0].y = srcStart.height;
+    blitRegion.srcOffsets[0].z = 0;
+
+    blitRegion.dstOffsets[0].x = dstStart.width;
+    blitRegion.dstOffsets[0].y = dstStart.height;
+    blitRegion.dstOffsets[0].z = 0;
 
     blitRegion.srcOffsets[1].x = srcExtent.width;
     blitRegion.srcOffsets[1].y = srcExtent.height;
@@ -106,12 +114,12 @@ void vkutil::copyImageToImage(VkCommandBuffer commandBuffer, VkImage src, VkImag
     blitRegion.dstOffsets[1].y = dstExtent.height;
     blitRegion.dstOffsets[1].z = 1;
 
-	blitRegion.srcSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	blitRegion.srcSubresource.aspectMask = aspect;
 	blitRegion.srcSubresource.baseArrayLayer = 0;
 	blitRegion.srcSubresource.layerCount = 1;
 	blitRegion.srcSubresource.mipLevel = 0;
 
-	blitRegion.dstSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	blitRegion.dstSubresource.aspectMask = aspect;
 	blitRegion.dstSubresource.baseArrayLayer = 0;
 	blitRegion.dstSubresource.layerCount = 1;
 	blitRegion.dstSubresource.mipLevel = 0;
@@ -138,6 +146,9 @@ void vkutil::generateMipmaps(VkCommandBuffer commandBuffer, VkImage image, VkExt
         VkExtent2D halfSize = imageExtent;
         halfSize.width /= 2;
         halfSize.height /= 2;
+
+        halfSize.width = std::max(1u, halfSize.width);
+        halfSize.height = std::max(1u, halfSize.height);
 
         VkImageMemoryBarrier2 imageBarrier{};
         imageBarrier.sType = VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER_2;

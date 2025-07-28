@@ -3,6 +3,7 @@
 struct Transform {
     glm::vec3 position{};
     glm::quat rotation = glm::quat(glm::vec3(0.f, 0.f, 0.f));
+    glm::vec3 eulerRotation = glm::vec3(0.f);
     glm::vec3 scale{1.f};
 
     glm::mat4 localMatrix{1.f};
@@ -16,7 +17,7 @@ struct Transform {
     Transform(glm::vec3 position, glm::vec3 rotation, glm::vec3 scale);
 
     glm::mat4 getRotationMatrix();
-    void update(glm::mat4 parentMatrix);
+    void update(glm::mat4 parentMatrix, bool isSprite = false, glm::vec2 drawExtent = glm::vec2(0.f));
     void translate(glm::vec3 direction, float distance);
     void rotate(glm::vec3 axis, float degrees);
 };
